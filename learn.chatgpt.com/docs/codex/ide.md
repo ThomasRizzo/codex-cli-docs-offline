@@ -62,11 +62,11 @@ Stay close to the code while Codex explains, edits, reviews, and delegates.
 
 - [Use the context already open](../prompting.html#use-editor-context): Add an open file, a selection, or a recent chat to the composer, then ask Codex to explain or edit the code with that context already attached.
 - [Review changes beside your code](../prompting.html): Review a concise summary and the changed lines without an extra navigation pane. Inspect the two affected files, keep the edits you want, and ask for a follow-up from the same view.
-- [Delegate when the task gets bigger](../cloud.md#delegate-from-the-ide-extension): Choose local work for fast, hands-on iteration, or connect Codex web to delegate a longer task. The chat stays available when you return to review the result.
+- [Delegate when the task gets bigger](../cloud.html#delegate-from-the-ide-extension): Choose local work for fast, hands-on iteration, or connect Codex web to delegate a longer task. The chat stays available when you return to review the result.
 
 ## Use Codex IDE extension when…
 
 - [You are making focused edits](../prompting.html#use-editor-context): Keep the relevant files and Codex in the same view.
 - [You are learning unfamiliar code](../prompting.html#use-editor-context): Ask about the files and symbols already open in the editor.
 - [You want to review changes in place](../prompting.html): Inspect and apply edits alongside the source.
-- [You want to delegate a larger task](../cloud.md#delegate-from-the-ide-extension): Start cloud work from the IDE and return to the result.
+- [You want to delegate a larger task](../cloud.html#delegate-from-the-ide-extension): Start cloud work from the IDE and return to the result.

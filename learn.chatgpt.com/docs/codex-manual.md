@@ -1737,7 +1737,7 @@ tips to maximize your limits:
   separate required work from optional improvements.
 - **Reduce the size of your AGENTS.md.** If you work on a larger project, you
   can control how much context you inject through AGENTS.md files by [nesting
-  them within your repository](agent-configuration/agents-md.html#layer-project-instructions).
+  them within your repository](agent-configuration/agents-md.md#layer-project-instructions).
 - **Limit the number of MCP servers you use.** Every
   [MCP](extend/mcp.html) server adds more context to your messages and uses
   more of your limit. Disable MCP servers when you don’t need them.
@@ -1897,7 +1897,7 @@ A few approaches work well:
 
 #### Make guidance reusable with `AGENTS.md`
 
-Once a prompting pattern works, the next step is to stop repeating it manually. That's where [AGENTS.md](agent-configuration/agents-md.html) comes in.
+Once a prompting pattern works, the next step is to stop repeating it manually. That's where [AGENTS.md](agent-configuration/agents-md.md) comes in.
 
 Think of `AGENTS.md` as an open-format README for agents. It loads into context automatically and is the best place to encode how you and your team want Codex to work in a repository.
 
@@ -5782,12 +5782,12 @@ This page walks you from initial access to reviewed findings and remediation
 pull requests in Codex Security cloud.
 
 Confirm you've set up Codex cloud first. If not, see [Codex
-cloud](cloud.md) to get started.
+cloud](cloud.html) to get started.
 
 #### 1. Access and environment
 
 Codex Security cloud scans GitHub repositories connected through
-[Codex cloud](cloud.md).
+[Codex cloud](cloud.html).
 
 - Confirm your workspace has access to Codex Security cloud.
 - Confirm the repository you want to scan is available in Codex cloud.
@@ -8155,7 +8155,7 @@ npx @openai/codex-security bulk-scan repositories.csv \
 `--workers` controls concurrent repository scans and defaults to `4`. It does
 not set the number of independent standard-scan workers within each deep scan;
 configure those limits through
-[`[deep_scan]`](codex/security/cli/reference.html#configure-deep-scans). Use `--mode
+[`[deep_scan]`](security/cli/reference.html#configure-deep-scans). Use `--mode
 deep` to select deep scanning for rows without their own `mode`. Each CSV row
 can still choose its own scan mode and repository scope.
 
@@ -9150,7 +9150,7 @@ part of its general review, so you may see occasional overlap between findings.
 To configure automatic Codex Security Review, you need:
 
 - Codex Security Review research preview access for your workspace
-- [Codex cloud](cloud.md) set up with a connected GitHub repository
+- [Codex cloud](cloud.html) set up with a connected GitHub repository
 - GitHub push or admin permission for the repository settings
 
 An existing Codex Security scan is optional.
@@ -12026,7 +12026,7 @@ You can find the latest JSON schema for `config.toml` [here](config-schema.json)
 To get autocompletion and diagnostics when editing `config.toml` in VS Code or Cursor, you can install the [Even Better TOML](https://marketplace.visualstudio.com/items?itemName=tamasfe.even-better-toml) extension and add this line to the top of your `config.toml`:
 
 ```toml
-#:schema codex/config-schema.json
+#:schema ../config-schema.json
 ```
 
 Note: Rename `experimental_instructions_file` to `model_instructions_file`. Codex deprecates the old key; update existing configs to the new name.
@@ -13072,7 +13072,7 @@ Codex reads `AGENTS.md` (and related files) and includes a limited amount of pro
 - `project_doc_max_bytes`: how much to read from each `AGENTS.md` file
 - `project_doc_fallback_filenames`: additional filenames to try when `AGENTS.md` is missing at a directory level
 
-For a detailed walkthrough, see [Custom instructions with AGENTS.md](agent-configuration/agents-md.html).
+For a detailed walkthrough, see [Custom instructions with AGENTS.md](agent-configuration/agents-md.md).
 
 #### Desktop
 
@@ -15172,7 +15172,7 @@ Control models, tools, environments, and defaults with configuration files and v
 
 Shape how agents collaborate and follow project guidance.
 
-- [AGENTS.md](agent-configuration/agents-md.html): Give Codex durable instructions for a repository.
+- [AGENTS.md](agent-configuration/agents-md.md): Give Codex durable instructions for a repository.
 
 - [Subagents](agent-configuration/subagents.html): Delegate focused tasks to specialized agents.
 
@@ -15225,7 +15225,7 @@ chats, such as your preferred response style. In Codex, these personal
 instructions are stored in your global `AGENTS.md` file. Projects and
 repositories can also provide their own instructions.
 
-[Learn how `AGENTS.md` instructions work](agent-configuration/agents-md.html).
+[Learn how `AGENTS.md` instructions work](agent-configuration/agents-md.md).
 
 #### Match your writing style in Work
 
@@ -15812,7 +15812,7 @@ Check for and apply a Codex CLI update when the installed release supports self-
 - [Codex CLI overview](codex/cli.html): installation, upgrades, and quick tips.
 - [Config basics](config-file/config-basic.html): persist defaults like the model and provider.
 - [Advanced Config](config-file/config-advanced.html): profiles, providers, sandbox tuning, and integrations.
-- [AGENTS.md](agent-configuration/agents-md.html): conceptual overview of Codex agent capabilities and best practices.
+- [AGENTS.md](agent-configuration/agents-md.md): conceptual overview of Codex agent capabilities and best practices.
 
 ### Agent internet access
 
@@ -16723,7 +16723,7 @@ Choose **Friendly**, **Pragmatic**, or **None** as your default personality. Use
 **None** to disable personality instructions. You can update this at any time.
 
 You can also add your own custom instructions. Editing custom instructions updates your
-[personal instructions in `AGENTS.md`](agent-configuration/agents-md.html).
+[personal instructions in `AGENTS.md`](agent-configuration/agents-md.md).
 
 #### Suggested prompts
 
@@ -23669,7 +23669,7 @@ Pair `AGENTS.md` with infrastructure that enforces those rules: pre-commit hooks
 Codex can load guidance from multiple locations: a global file in your Codex home directory (for you as a developer) and repo-specific files that teams can check in. Files closer to the working directory take precedence.
 Use the global file to shape how Codex communicates with you (for example, review style, verbosity, and defaults), and keep repo files focused on team and codebase rules.
 
-[Custom instructions with AGENTS.md](agent-configuration/agents-md.html)
+[Custom instructions with AGENTS.md](agent-configuration/agents-md.md)
 
 #### Skills
 
@@ -23766,7 +23766,7 @@ If a skill depends on MCP, declare that dependency in `agents/openai.yaml` so Co
 
 Build in this order:
 
-1. [Custom instructions with AGENTS.md](agent-configuration/agents-md.html) so Codex follows your repo conventions. Add pre-commit hooks and linters to enforce those rules.
+1. [Custom instructions with AGENTS.md](agent-configuration/agents-md.md) so Codex follows your repo conventions. Add pre-commit hooks and linters to enforce those rules.
 2. Install a [plugin](plugins.html) when a reusable workflow already exists. Otherwise, create a [skill](build-skills.html) and package it as a plugin when you want to share it.
 3. [MCP](extend/mcp.html) when workflows need external systems (Linear, GitHub, docs servers, design tools).
 4. [Subagents](agent-configuration/subagents.html) when you're ready to delegate noisy or specialized tasks to subagents.
@@ -29436,7 +29436,7 @@ potential security issues in a pull request.
 
 Make sure you have:
 
-- [Codex cloud](cloud.md) set up for the repository you want to review.
+- [Codex cloud](cloud.html) set up for the repository you want to review.
 - Access to [Codex code review settings](https://chatgpt.com/codex/settings/code-review).
 - An `AGENTS.md` file if you want Codex to follow repository-specific review guidance.
 
@@ -29445,7 +29445,7 @@ Make sure you have:
 To configure automatic reviews, you need a connected GitHub repository and
 GitHub push or admin permission for its settings.
 
-1. Set up [Codex cloud](cloud.md).
+1. Set up [Codex cloud](cloud.html).
 2. Go to [Codex settings](https://chatgpt.com/codex/settings/code-review).
 3. Turn on **Code review** for your repository.
 
@@ -29529,7 +29529,7 @@ Review findings.
 For more detailed setup instructions and configuration options, see [Security
 Review](security/security-review.html).
 
-1. Set up [Codex cloud](cloud.md).
+1. Set up [Codex cloud](cloud.html).
 2. Go to [Codex settings](https://chatgpt.com/codex/settings/code-review).
 3. Under **Repository preferences**, choose which pull requests get Security
    Review and when it runs. Select **Whenever code review runs** to run it
@@ -29559,7 +29559,7 @@ back to the branch when it has permission to do so.
 
 #### Give Codex other tasks
 
-If you mention `@codex` in a comment with anything other than `review`, Codex starts a [cloud chat](cloud.md) using your pull request as context.
+If you mention `@codex` in a comment with anything other than `review`, Codex starts a [cloud chat](cloud.html) using your pull request as context.
 
 ```md
 @codex fix the CI failures
@@ -29570,7 +29570,7 @@ If you mention `@codex` in a comment with anything other than `review`, Codex st
 If Codex doesn't react or post a review:
 
 - Confirm you turned on **Code review** for the repository in [Codex settings](https://chatgpt.com/codex/settings/code-review).
-- Confirm the pull request belongs to a repository with [Codex cloud](cloud.md) set up.
+- Confirm the pull request belongs to a repository with [Codex cloud](cloud.html) set up.
 - Use the exact trigger `@codex review` in a pull request comment.
 - For automatic reviews, check that you turned on **Automatic reviews** and that
   the pull request event matches your review trigger settings.
@@ -29770,14 +29770,14 @@ another comment:
 @codex fix the P1 issue
 ```
 
-Codex starts a [cloud chat](cloud.md) with the merge request as context and
+Codex starts a [cloud chat](cloud.html) with the merge request as context and
 can push a fix back to the branch when it has permission to do so.
 
 #### Give Codex other tasks
 
 Other coding tasks also require a **configured project environment**; group
 activity alone supports reviews. If you mention `@codex` in a comment with
-anything other than `review`, Codex starts a [cloud chat](cloud.md) using
+anything other than `review`, Codex starts a [cloud chat](cloud.html) using
 your merge request as context.
 
 ```md
@@ -30851,7 +30851,7 @@ If you're on an Enterprise plan, ask your ChatGPT workspace admin to turn on Cod
 
 #### Set up the Linear integration
 
-1. Set up [Codex cloud chats](cloud.md) by connecting GitHub in [Codex](https://chatgpt.com/codex) and creating an [environment](environments/cloud-environment.html) for the repository you want Codex to work in.
+1. Set up [Codex cloud chats](cloud.html) by connecting GitHub in [Codex](https://chatgpt.com/codex) and creating an [environment](environments/cloud-environment.html) for the repository you want Codex to work in.
 2. Go to [Codex settings](https://chatgpt.com/codex/settings/connectors) and install **Codex for Linear** for your workspace.
 3. Link your Linear account by mentioning `@Codex` in a comment thread on a Linear issue.
 
@@ -30948,7 +30948,7 @@ Use Codex in Slack to kick off coding work from channels and threads. Mention `@
 
 #### Set up the Slack app
 
-1. Set up [Codex cloud chats](cloud.md). You need a Plus, Pro, Business, Enterprise, or Edu plan (see [ChatGPT pricing](https://chatgpt.com/pricing)), a connected GitHub account, and at least one [environment](environments/cloud-environment.html).
+1. Set up [Codex cloud chats](cloud.html). You need a Plus, Pro, Business, Enterprise, or Edu plan (see [ChatGPT pricing](https://chatgpt.com/pricing)), a connected GitHub account, and at least one [environment](environments/cloud-environment.html).
 2. Go to [Codex settings](https://chatgpt.com/codex/settings/connectors) and install the Slack app for your workspace. Depending on your Slack workspace policies, an admin may need to approve the install.
 3. Add `@Codex` to a channel. If you haven't added it yet, Slack prompts you when you mention it.
 
@@ -31049,7 +31049,7 @@ When you import, ChatGPT:
 
 | Imported item                     | Destination                                             |
 | --------------------------------- | ------------------------------------------------------- |
-| Instruction files                 | [`AGENTS.md`](agent-configuration/agents-md.html)     |
+| Instruction files                 | [`AGENTS.md`](agent-configuration/agents-md.md)     |
 | `settings.json`                   | [`config.toml`](config-file/config-basic.html)        |
 | Skills                            | [Skills](build-skills.html)                           |
 | Plugins                           | Plugins                                                 |
@@ -39810,7 +39810,7 @@ For the complete administration model, see
 | ------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | ChatGPT workspace                                                                          | The workspace plan, member access, workspace settings, and supported role permissions                 | [ChatGPT Enterprise and Edu models and limits](https://help.openai.com/en/articles/11165333-chatgpt-enterprise-models-limits) |
 | Codex in the ChatGPT desktop app, Codex CLI, and IDE extension with ChatGPT sign-in        | Models supported by the specific client and the access available to the signed-in ChatGPT identity    | [Codex models](models.html) and current workspace guidance                                                                  |
-| Codex cloud                                                                                | Models supported by hosted Codex workflows and the access available to the signed-in ChatGPT identity | [Codex models](models.html) and [Codex cloud](cloud.md)                                                                 |
+| Codex cloud                                                                                | Models supported by hosted Codex workflows and the access available to the signed-in ChatGPT identity | [Codex models](models.html) and [Codex cloud](cloud.html)                                                                 |
 | Codex in the ChatGPT desktop app, Codex CLI, and IDE extension with API-key authentication | The OpenAI API organization and project associated with the key                                       | [Authentication](auth.html) and the [OpenAI API Platform](https://platform.openai.com/docs/overview)                        |
 
 Check the current source for the surface the user is actually using. Don't

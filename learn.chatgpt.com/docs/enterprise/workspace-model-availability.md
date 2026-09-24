@@ -1,0 +1,146 @@
+# Workspace model availability
+
+> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+
+The models available to someone depend on the product surface and how they
+signed in. A model setting in your ChatGPT workspace doesn't automatically
+apply to Codex in the ChatGPT desktop app, Codex CLI, the IDE extension, Codex
+cloud, or the OpenAI API.
+
+For the complete administration model, see
+[Roles and workspace permissions](roles-and-workspace-permissions.html).
+
+## Identify the model boundary
+
+| Product or authentication boundary                                                         | Model access follows                                                                                  | Current source                                                                                                                |
+| ------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| ChatGPT workspace                                                                          | The workspace plan, member access, workspace settings, and supported role permissions                 | [ChatGPT Enterprise and Edu models and limits](https://help.openai.com/en/articles/11165333-chatgpt-enterprise-models-limits) |
+| Codex in the ChatGPT desktop app, Codex CLI, and IDE extension with ChatGPT sign-in        | Models supported by the specific client and the access available to the signed-in ChatGPT identity    | [Codex models](../models.html) and current workspace guidance                                                                  |
+| Codex cloud                                                                                | Models supported by hosted Codex workflows and the access available to the signed-in ChatGPT identity | [Codex models](../models.html) and [Codex cloud](../cloud.html)                                                                 |
+| Codex in the ChatGPT desktop app, Codex CLI, and IDE extension with API-key authentication | The OpenAI API organization and project associated with the key                                       | [Authentication](../auth.html) and the [OpenAI API Platform](https://platform.openai.com/docs/overview)                        |
+
+Check the current source for the surface the user is actually using. Don't
+copy a model catalog or assume that a ChatGPT model-picker setting has the same
+effect for Codex in the ChatGPT desktop app, Codex CLI, IDE extension, Codex
+cloud, and the API Platform.
+
+## Set a clear starting experience for employees
+
+Review [Models settings](https://help.openai.com/en/articles/8411955) for your
+workspace before inviting a pilot group. Workspace owners and admins can
+configure separate starting defaults for Chat and for Work and Codex. Where
+supported, choose a starting model, reasoning level, speed, and new-chat
+behavior for Chat, Work, and local Codex surfaces.
+
+Treat these choices as defaults, not permissions. Available models still depend
+on the member's seat, role, workspace or API identity, enforced workspace
+requirements, and the specific surface they're using. Starting defaults don't
+grant access to unavailable models or override those requirements. Codex cloud
+doesn't support changing its default model.
+
+Fast mode availability depends on the workspace, product surface, and any
+enforced `features.fast_mode` setting in
+[`requirements.toml`](../config-file/config-reference.html#requirementstoml).
+This setting can pin Fast mode on or off for managed local Codex clients; it
+isn't a starting default and can't override workspace or product availability.
+
+## GPT-6 Sol and Luna in Enterprise
+
+GPT-6 Sol and GPT-6 Luna are off by default in Enterprise workspaces at
+launch. An administrator must enable each model before members can select
+it. Review your [workspace model settings](https://help.openai.com/en/articles/8411955)
+and confirm access on each client. Choosing a model in local configuration
+doesn't override workspace controls.
+
+## GPT-6 Astra in Enterprise
+
+During the initial rollout, your organization must have Daybreak access before
+an administrator can enable Astra. Astra is off by default for ChatGPT
+Enterprise for the first two weeks after launch. Administrators in eligible
+workspaces can enable Astra for users or groups
+across Chat, Work, and Codex. Existing product eligibility still applies. Review your
+[workspace model settings](https://help.openai.com/en/articles/8411955) and
+confirm availability on each client used by your pilot group.
+
+Enabling access and choosing a starting model are separate decisions. Check the
+applicable seat, role, and billing arrangement before setting Astra as a default.
+See [pricing](../pricing.html) for allowance and billing
+guidance and [safety monitoring](../agent-approvals-security.html#safety-monitoring-and-paused-tasks)
+for tasks that pause for review.
+
+For API-key sign-in, Astra access follows the API organization and project
+associated with the key. Enabling Astra in a ChatGPT workspace doesn't grant
+API access. Early access with an API key also requires client configuration;
+ask your OpenAI account team for setup instructions. Selecting a
+model or changing local configuration doesn't grant access by itself.
+
+## Prepare for the GPT-5.5 retirement
+
+On October 14, 2026, GPT-5.5 will retire from ChatGPT, ChatGPT Work, and Codex
+on all plans, including consumer, Business, Enterprise, and Edu plans. This
+retirement does not apply to the OpenAI API.
+
+Before October 14, review workspace defaults for ChatGPT, ChatGPT Work, and
+Codex and choose an available replacement for each surface. For Work and Codex
+with ChatGPT sign-in, choose `gpt-6-sol` (GPT-6 Sol) once an administrator has
+enabled it for the affected users. Replace `gpt-5.5` in workspace defaults,
+saved model settings, managed configurations, custom agents, and scheduled
+tasks. Check scripts and commands that explicitly select `gpt-5.5` too.
+
+Changing a default doesn't grant model access. Confirm that the replacement
+is available to the affected users on each client. See
+[Codex models](../models.html#gpt-55-retirement) and
+[managed configuration](managed-configuration.html)
+for migration guidance.
+
+## Prepare for the GPT-5.4 retirement
+
+GPT-5.4 and GPT-5.4 mini retired from Codex for users signed in with ChatGPT
+on August 31, 2026. Update any remaining workspace defaults, saved model
+settings, managed configurations, custom agents, and scheduled tasks with
+models available to the affected users' plans and clients:
+
+- Replace `gpt-5.4` with `gpt-6-sol` (GPT-6 Sol) when available.
+- Replace `gpt-5.4-mini` with `gpt-6-luna` (GPT-6 Luna) when available. In
+  Enterprise and Edu, an administrator must enable Luna first.
+
+The OpenAI API and Codex authenticated with your own API key aren't affected.
+See [Codex models](../models.html#deprecated-codex-models) and
+[managed configuration](managed-configuration.html)
+for migration details.
+
+## Separate access from runtime permissions
+
+Model access determines whether a model is available to the authenticated user
+on a supported surface. Local permission profiles and managed requirements
+determine what an agent can do after a local run starts, such as which files it
+can change or which network destinations it can reach.
+
+A permission profile can't grant model access. Model access also can't weaken
+the sandbox, approval policy, network controls, or source-system permissions
+that apply to a run.
+
+## Troubleshoot model access
+
+If a user can't select an expected model:
+
+- Confirm the product surface and sign-in method.
+- Confirm the ChatGPT workspace or Platform API organization and project.
+- Review the current access controls for that authentication boundary.
+- Check whether the selected local client or Codex cloud supports the model.
+
+## Current sources
+
+- [ChatGPT Enterprise and Edu models and limits](https://help.openai.com/en/articles/11165333-chatgpt-enterprise-models-limits)
+- [Manage workspace settings](https://help.openai.com/en/articles/8411955)
+- [Role-based access control](https://help.openai.com/en/articles/11750701-rbac)
+- [Codex models](../models.html)
+- [Codex feature availability by plan](../pricing.html#feature-availability)
+- [Authentication](../auth.html)
+
+## Related docs
+
+- [Admin rollout guide](admin-setup.html)
+- [Groups and provisioning](groups-and-provisioning.html)
+- [Roles and workspace permissions](roles-and-workspace-permissions.html)
+- [Managed configuration](managed-configuration.html)

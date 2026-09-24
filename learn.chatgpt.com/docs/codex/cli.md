@@ -129,7 +129,7 @@ Learn about the CLI features you can use to resume sessions, add visual and web 
 - [**Bring visual context into the prompt**](../image-inputs.html) — `codex --image`: Pass an error screenshot, architecture diagram, or design reference with the first prompt, or paste an image into the interactive composer.
 - [**Split up a larger investigation**](../agent-configuration/subagents.html) — `subagents`: Ask Codex to delegate focused work to specialized agents, then bring their findings back into the main terminal session.
 - [**Search for current context**](../web-search.html) — `codex --search`: Switch a run to live web search when a task depends on current releases, documentation, or external behavior. Search activity stays visible in the transcript.
-- [**Move work to Codex cloud**](../cloud.md#use-codex-cloud-from-the-cli) — `codex cloud`: Browse active and completed chats, submit work to a configured environment, and apply the result to your local repository from the terminal.
+- [**Move work to Codex cloud**](../cloud.html#use-codex-cloud-from-the-cli) — `codex cloud`: Browse active and completed chats, submit work to a configured environment, and apply the result to your local repository from the terminal.
 - [**Connect external tools with MCP**](../extend/mcp.html) — `codex mcp`: Add local or remote MCP servers, authenticate when needed, and inspect the tools available to the current session before Codex uses them.
 - [**Set the boundaries for each run**](../agent-approvals-security.html) — `/permissions`: Choose when Codex can edit files or run commands without asking, and inspect the active sandbox and writable roots before you continue.
 - [**Fit Codex to your terminal**](../cli-customization.html) — `codex completion`: Generate completions for your shell, choose a syntax theme, and open longer prompts in the editor configured by VISUAL or EDITOR.
@@ -139,4 +139,4 @@ Learn about the CLI features you can use to resume sessions, add visual and web 
 - [You work from the terminal](../developer-commands.html): Explore, edit, and run a repository in one focused loop.
 - [You need scripting or CI](../non-interactive-mode.html): Run a non-interactive command in a repeatable workflow.
 - [You want a local code review](../code-review.html): Inspect changes before you commit or open a pull request.
-- [You want to hand work to the cloud](../cloud.md#use-codex-cloud-from-the-cli): Launch a cloud chat and return to the terminal later.
+- [You want to hand work to the cloud](../cloud.html#use-codex-cloud-from-the-cli): Launch a cloud chat and return to the terminal later.

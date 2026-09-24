@@ -746,7 +746,7 @@ Codex reads `AGENTS.md` (and related files) and includes a limited amount of pro
 - `project_doc_max_bytes`: how much to read from each `AGENTS.md` file
 - `project_doc_fallback_filenames`: additional filenames to try when `AGENTS.md` is missing at a directory level
 
-For a detailed walkthrough, see [Custom instructions with AGENTS.md](../agent-configuration/agents-md.html).
+For a detailed walkthrough, see [Custom instructions with AGENTS.md](../agent-configuration/agents-md.md).
 
 ## Desktop
 

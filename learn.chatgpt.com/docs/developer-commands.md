@@ -360,7 +360,7 @@ Check for and apply a Codex CLI update when the installed release supports self-
 - [Codex CLI overview](codex/cli.html): installation, upgrades, and quick tips.
 - [Config basics](config-file/config-basic.html): persist defaults like the model and provider.
 - [Advanced Config](config-file/config-advanced.html): profiles, providers, sandbox tuning, and integrations.
-- [AGENTS.md](agent-configuration/agents-md.html): conceptual overview of Codex agent capabilities and best practices.
+- [AGENTS.md](agent-configuration/agents-md.md): conceptual overview of Codex agent capabilities and best practices.
 
 Slash commands give you fast, keyboard-first control over Codex. Type `/` in
 the composer to open the slash popup, choose a command, and Codex will perform

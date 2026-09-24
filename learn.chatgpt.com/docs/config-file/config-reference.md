@@ -1753,7 +1753,7 @@ You can find the latest JSON schema for `config.toml` [here](../config-schema.js
 To get autocompletion and diagnostics when editing `config.toml` in VS Code or Cursor, you can install the [Even Better TOML](https://marketplace.visualstudio.com/items?itemName=tamasfe.even-better-toml) extension and add this line to the top of your `config.toml`:
 
 ```toml
-#:schema ../codex/config-schema.json
+#:schema ../../config-schema.json
 ```
 
 Note: Rename `experimental_instructions_file` to `model_instructions_file`. Codex deprecates the old key; update existing configs to the new name.
