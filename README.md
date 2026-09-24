@@ -44,6 +44,21 @@ Markdown twins (`*.md`) sit next to many HTML pages for text-only / LLM ingestio
 - Prefer `python3 -m http.server` so relative `_astro` CSS paths resolve.
 - Re-run the GitHub Action **Build offline Codex docs mirror** (`workflow_dispatch`) to refresh from learn.chatgpt.com.
 
+
+## Relative URLs (IIS / static hosts)
+
+Absolute `learn.chatgpt.com` (and mapped `developers.openai.com/codex|docs`) links are rewritten to **relative** paths so IIS or any static file host keeps navigation on the local mirror—no outbound URL rewrite module required for Learn links.
+
+After a fresh mirror or local content update, re-run:
+
+```bash
+./scripts/make-urls-relative.sh
+# or: python3 scripts/make-urls-relative.py
+# optional: --dry-run  /  --root PATH
+```
+
+The GitHub Action **Build offline Codex docs mirror** runs this automatically after `wget`.
+
 ## License / attribution
 
 Content © OpenAI / ChatGPT Learn documentation. This repository is an unofficial offline mirror for personal/offline reference; it is not affiliated with OpenAI.
