@@ -15,91 +15,20 @@ jobs:
       - name: Install tools
         run: sudo apt-get update -qq && sudo apt-get install -y -qq wget
 
+      - name: Build seed list from live llms.txt + nav (canonical destinations)
+        # Seeds every llms.txt page plus sidebar/nav targets; /codex/* aliases are
+        # resolved through their live 308s (e.g. /codex/resources -> /resources,
+        # /codex/auth -> /docs/auth). Never invents docs/codex/... paths.
+        # Also writes scripts/codex-redirects.json for the URL rewriter.
+        run: python3 scripts/build-seeds.py .
+
       - name: Mirror Codex docs from learn.chatgpt.com
         run: |
           set -euo pipefail
           rm -rf learn.chatgpt.com staging
           mkdir -p staging
-
-          # Derive seed URLs from live llms.txt (canonical destinations).
-          # Follow /codex/* → /docs/... or top-level redirects by seeding those
-          # destinations — never invent docs/codex/... paths that 404 live.
-          curl -fsSL https://learn.chatgpt.com/llms.txt -o /tmp/llms.txt
-          python3 << 'PY'
-          import re
-          from pathlib import Path
-          from urllib.parse import urlsplit, urlunsplit
-
-          text = Path("/tmp/llms.txt").read_text(encoding="utf-8")
-          raw_urls = set(
-              re.findall(r"https://learn\.chatgpt\.com(/[^\s\)\"'<>\]]+)", text)
-          )
-
-          # Out of scope: api / ads / blog / chatgpt marketing.
-          SKIP_PREFIXES = (
-              "/api/",
-              "/ads/",
-              "/blog/",
-              "/chatgpt",
-          )
-
-          seeds: set[str] = set()
-
-          def add(path: str) -> None:
-              path = path.strip()
-              if not path:
-                  return
-              # Drop query/fragment for wget seeds
-              parts = urlsplit("https://learn.chatgpt.com" + path)
-              clean = urlunsplit(("https", "learn.chatgpt.com", parts.path or "/", "", ""))
-              p = parts.path or "/"
-              if any(p == sp.rstrip("/") or p.startswith(sp) for sp in SKIP_PREFIXES):
-                  return
-              seeds.add(clean)
-              # HTML twin for Markdown pages
-              if p.endswith(".md"):
-                  twin = p[: -len(".md")] or "/"
-                  seeds.add(urlunsplit(("https", "learn.chatgpt.com", twin, "", "")))
-
-          for path in raw_urls:
-              add(path)
-
-          # Always-on anchors + top-level pages that /codex/* 308s onto.
-          for path in (
-              "/llms.txt",
-              "/docs/llms-full.txt",
-              "/docs/codex-manual.md",
-              "/docs",
-              "/docs.md",
-              "/docs/codex",
-              "/docs/codex.md",
-              # Live under docs/codex/ (cli/ide); most other /codex/X → /docs/X.
-              "/docs/codex/cli",
-              "/docs/codex/cli.md",
-              "/docs/codex/ide",
-              "/docs/codex/ide.md",
-              "/resources",
-              "/resources.md",
-              "/use-cases",
-              "/use-cases/llms.txt",
-              "/videos",
-              "/videos.md",
-              "/guides/best-practices",
-              "/guides/best-practices.md",
-              "/guides/build-ai-native-engineering-team",
-              "/guides/build-ai-native-engineering-team.md",
-              "/favicon.png",
-          ):
-              add(path)
-
-          out = Path("/tmp/urls.txt")
-          out.write_text("\n".join(sorted(seeds)) + "\n", encoding="utf-8")
-          print(f"seed_count={len(seeds)}")
-          for u in sorted(seeds)[:20]:
-              print(" ", u)
-          print("  ...")
-          PY
-
+          # Pages without an extension are rejected by -A during recursion, so the
+          # crawl stays limited to the seeded pages plus their assets.
           wget --mirror --convert-links --adjust-extension --page-requisites --no-parent \
             --domains=learn.chatgpt.com \
             -e robots=off \
@@ -107,10 +36,14 @@ jobs:
             --exclude-directories=/api,/ads,/blog \
             -A 'html,css,js,png,jpg,jpeg,svg,woff,woff2,gif,webp,ico,txt,xml,md' \
             -i /tmp/urls.txt \
-            -P staging || true
+            -P staging -nv || true
+          # wget saves extensionless seeds as *.tmp.html and --convert-links points
+          # hrefs at those names; rename the files AND fix the hrefs.
           find staging -name '*.tmp.html' -print0 | while IFS= read -r -d '' f; do
             mv "$f" "${f%.tmp.html}.html"
           done
+          find staging -type f \( -name '*.html' -o -name '*.css' -o -name '*.js' -o -name '*.md' -o -name '*.txt' \) -print0 \
+            | xargs -0 -r sed -i 's/\.tmp\.html/.html/g'
           if [ -d staging/learn.chatgpt.com ]; then
             rm -rf learn.chatgpt.com
             mv staging/learn.chatgpt.com .
@@ -122,9 +55,8 @@ jobs:
           echo "=== Mirror stats ==="
           find learn.chatgpt.com -type f 2>/dev/null | wc -l
           du -sh learn.chatgpt.com 2>/dev/null || true
-          ls learn.chatgpt.com/docs/codex/ || true
           ls learn.chatgpt.com/docs/auth.html learn.chatgpt.com/docs/quickstart.html \
-            learn.chatgpt.com/docs/administration.html \
+            learn.chatgpt.com/docs/administration.html learn.chatgpt.com/docs/changelog.html \
             learn.chatgpt.com/resources.html learn.chatgpt.com/use-cases.html \
             learn.chatgpt.com/videos.html 2>/dev/null || true
 
