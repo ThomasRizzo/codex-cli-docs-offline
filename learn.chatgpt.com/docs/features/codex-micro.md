@@ -1,6 +1,6 @@
 # Codex Micro
 
-> For the complete documentation index, see [llms.txt](https://learn.chatgpt.com/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Codex Micro is a limited-run collaboration between Codex and Work Louder. It
 works with the ChatGPT desktop app, giving you a quick way to check on chats,
