@@ -1,6 +1,6 @@
 # Codex IDE extension
 
-> For the complete documentation index, see [llms.txt](https://learn.chatgpt.com/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 ## Build with the context already in your editor
 
@@ -48,25 +48,25 @@ Choose your IDE. VS Code and compatible editors use the Codex extension; Xcode a
 
 Open a project and ask Codex to explain the codebase, make a focused change, or help you debug an issue. Create Git checkpoints before and after a task so you can revert changes.
 
-[Read the best practices](https://learn.chatgpt.com/guides/best-practices)
+[Read the best practices](../../guides/best-practices.html)
 
 ### Next steps
 
-- [Prompt with editor context](https://learn.chatgpt.com/docs/prompting#use-editor-context)
-- [Explore IDE commands](https://learn.chatgpt.com/docs/developer-commands?surface=ide)
-- [Configure the extension](https://learn.chatgpt.com/docs/developer-settings?surface=ide)
+- [Prompt with editor context](../prompting.html#use-editor-context)
+- [Explore IDE commands](../developer-commands.html)
+- [Configure the extension](../developer-settings.html)
 
 ## See what Codex can do in your IDE
 
 Stay close to the code while Codex explains, edits, reviews, and delegates.
 
-- [Use the context already open](https://learn.chatgpt.com/docs/prompting#use-editor-context): Add an open file, a selection, or a recent chat to the composer, then ask Codex to explain or edit the code with that context already attached.
-- [Review changes beside your code](https://learn.chatgpt.com/docs/prompting): Review a concise summary and the changed lines without an extra navigation pane. Inspect the two affected files, keep the edits you want, and ask for a follow-up from the same view.
-- [Delegate when the task gets bigger](https://learn.chatgpt.com/docs/cloud#delegate-from-the-ide-extension): Choose local work for fast, hands-on iteration, or connect Codex web to delegate a longer task. The chat stays available when you return to review the result.
+- [Use the context already open](../prompting.html#use-editor-context): Add an open file, a selection, or a recent chat to the composer, then ask Codex to explain or edit the code with that context already attached.
+- [Review changes beside your code](../prompting.html): Review a concise summary and the changed lines without an extra navigation pane. Inspect the two affected files, keep the edits you want, and ask for a follow-up from the same view.
+- [Delegate when the task gets bigger](../cloud.md#delegate-from-the-ide-extension): Choose local work for fast, hands-on iteration, or connect Codex web to delegate a longer task. The chat stays available when you return to review the result.
 
 ## Use Codex IDE extension when…
 
-- [You are making focused edits](https://learn.chatgpt.com/docs/prompting#use-editor-context): Keep the relevant files and Codex in the same view.
-- [You are learning unfamiliar code](https://learn.chatgpt.com/docs/prompting#use-editor-context): Ask about the files and symbols already open in the editor.
-- [You want to review changes in place](https://learn.chatgpt.com/docs/prompting): Inspect and apply edits alongside the source.
-- [You want to delegate a larger task](https://learn.chatgpt.com/docs/cloud#delegate-from-the-ide-extension): Start cloud work from the IDE and return to the result.
+- [You are making focused edits](../prompting.html#use-editor-context): Keep the relevant files and Codex in the same view.
+- [You are learning unfamiliar code](../prompting.html#use-editor-context): Ask about the files and symbols already open in the editor.
+- [You want to review changes in place](../prompting.html): Inspect and apply edits alongside the source.
+- [You want to delegate a larger task](../cloud.md#delegate-from-the-ide-extension): Start cloud work from the IDE and return to the result.
