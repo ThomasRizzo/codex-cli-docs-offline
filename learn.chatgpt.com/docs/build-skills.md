@@ -1,6 +1,6 @@
 # Build skills
 
-> For the complete documentation index, see [llms.txt](https://learn.chatgpt.com/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Use agent skills to extend ChatGPT and Codex with task-specific capabilities. A
 skill packages instructions, resources, and optional scripts so either product
@@ -102,7 +102,7 @@ so a host can still match the skill if descriptions are shortened.
 ## Create a skill
 
 If you already know the workflow and it's easier to show than describe, use
-[Record & Replay](https://learn.chatgpt.com/docs/extend/record-and-replay). The recorder captures the
+[Record & Replay](extend/record-and-replay.html). The recorder captures the
 workflow, inspects the steps, and drafts a reusable skill from the
 demonstration.
 
@@ -189,7 +189,7 @@ Restart Codex after changing `~/.codex/config.toml`.
 
 ## Optional metadata
 
-Add `agents/openai.yaml` to configure UI metadata in the [ChatGPT desktop app](https://learn.chatgpt.com/docs/app), to set invocation policy, and to declare tool dependencies for a more seamless experience with using the skill.
+Add `agents/openai.yaml` to configure UI metadata in the [ChatGPT desktop app](app.html), to set invocation policy, and to declare tool dependencies for a more seamless experience with using the skill.
 
 ```yaml
 interface:
