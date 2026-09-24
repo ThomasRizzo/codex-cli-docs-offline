@@ -8,17 +8,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Require all 33 parts
+      - name: Require all 161 parts
         run: |
           count=$(ls learn.chatgpt.com/docs/codex/_rebuild/cli.html.part* 2>/dev/null | wc -l)
           echo "parts=$count"
-          test "$count" -eq 33
+          test "$count" -eq 161
       - run: python3 scripts/rebuild-cli-html.py
       - name: Verify size
         run: |
           size=$(wc -c < learn.chatgpt.com/docs/codex/cli.html)
           echo "size=$size"
           test "$size" -gt 300000
+          ! grep -q 'https://learn.chatgpt.com' learn.chatgpt.com/docs/codex/cli.html
       - name: Commit
         run: |
           git config user.name "github-actions[bot]"
