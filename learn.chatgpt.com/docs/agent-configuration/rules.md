@@ -1,6 +1,6 @@
 # Rules
 
-> For the complete documentation index, see [llms.txt](https://learn.chatgpt.com/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Use rules to control which commands Codex can run outside the sandbox.
 
@@ -39,7 +39,7 @@ Rules are experimental and may change.
 
 3. Restart Codex.
 
-Codex scans `rules/` under every active config layer at startup, including [Team Config](https://learn.chatgpt.com/docs/enterprise/admin-setup#step-4-standardize-local-configuration-with-team-config) locations and the user layer at `~/.codex/rules/`. Project-local rules under `<repo>/.codex/rules/` load only when the project `.codex/` layer is trusted.
+Codex scans `rules/` under every active config layer at startup, including [Team Config](../enterprise/admin-setup.html#step-4-standardize-local-configuration-with-team-config) locations and the user layer at `~/.codex/rules/`. Project-local rules under `<repo>/.codex/rules/` load only when the project `.codex/` layer is trusted.
 
 When you add a command to the allow list in the TUI, Codex writes to the user layer at `~/.codex/rules/default.rules` so future runs can skip the prompt.
 
@@ -48,7 +48,7 @@ When Smart approvals are enabled (the default), Codex may propose a
 carefully before accepting it.
 
 Admins can also enforce restrictive `prefix_rule` entries from
-[`requirements.toml`](https://learn.chatgpt.com/docs/enterprise/managed-configuration#admin-enforced-requirements-requirementstoml).
+[`requirements.toml`](../enterprise/managed-configuration.html#admin-enforced-requirements-requirementstoml).
 
 ## Understand rule fields
 
