@@ -1,0 +1,20 @@
+name: rebuild-cli-html
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "learn.chatgpt.com/docs/codex/_rebuild/**"
+permissions:
+  contents: write
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/rebuild-cli-html.py
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add learn.chatgpt.com/docs/codex/cli.html
+          git diff --cached --quiet || (git commit -m "docs: assemble rewritten cli.html" && git push)
