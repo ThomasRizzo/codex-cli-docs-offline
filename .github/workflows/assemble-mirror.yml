@@ -20,77 +20,91 @@ jobs:
           set -euo pipefail
           rm -rf learn.chatgpt.com staging
           mkdir -p staging
-          cat > /tmp/urls.txt << 'EOF'
-          https://learn.chatgpt.com/llms.txt
-          https://learn.chatgpt.com/docs/llms-full.txt
-          https://learn.chatgpt.com/docs/codex-manual.md
-          https://learn.chatgpt.com/docs/codex
-          https://learn.chatgpt.com/docs/codex.md
-          https://learn.chatgpt.com/docs/codex/cli
-          https://learn.chatgpt.com/docs/codex/cli.md
-          https://learn.chatgpt.com/docs/codex/ide
-          https://learn.chatgpt.com/docs/codex/ide.md
-          https://learn.chatgpt.com/docs/config-file/config-basic
-          https://learn.chatgpt.com/docs/config-file/config-basic.md
-          https://learn.chatgpt.com/docs/config-file/config-advanced
-          https://learn.chatgpt.com/docs/config-file/config-advanced.md
-          https://learn.chatgpt.com/docs/config-file/config-reference
-          https://learn.chatgpt.com/docs/config-file/config-reference.md
-          https://learn.chatgpt.com/docs/config-file/config-sample
-          https://learn.chatgpt.com/docs/config-file/config-sample.md
-          https://learn.chatgpt.com/docs/config-file/environment-variables
-          https://learn.chatgpt.com/docs/config-file/environment-variables.md
-          https://learn.chatgpt.com/docs/cli-customization
-          https://learn.chatgpt.com/docs/cli-customization.md
-          https://learn.chatgpt.com/docs/non-interactive-mode
-          https://learn.chatgpt.com/docs/non-interactive-mode.md
-          https://learn.chatgpt.com/docs/developer-commands
-          https://learn.chatgpt.com/docs/developer-commands.md
-          https://learn.chatgpt.com/docs/developer-settings
-          https://learn.chatgpt.com/docs/developer-settings.md
-          https://learn.chatgpt.com/docs/hooks
-          https://learn.chatgpt.com/docs/hooks.md
-          https://learn.chatgpt.com/docs/codex-sdk
-          https://learn.chatgpt.com/docs/codex-sdk.md
-          https://learn.chatgpt.com/docs/app-server
-          https://learn.chatgpt.com/docs/app-server.md
-          https://learn.chatgpt.com/docs/github-action
-          https://learn.chatgpt.com/docs/github-action.md
-          https://learn.chatgpt.com/docs/agent-approvals-security
-          https://learn.chatgpt.com/docs/agent-approvals-security.md
-          https://learn.chatgpt.com/docs/agent-configuration/agents-md
-          https://learn.chatgpt.com/docs/agent-configuration/agents-md.md
-          https://learn.chatgpt.com/docs/agent-configuration/rules
-          https://learn.chatgpt.com/docs/agent-configuration/rules.md
-          https://learn.chatgpt.com/docs/agent-configuration/speed
-          https://learn.chatgpt.com/docs/agent-configuration/speed.md
-          https://learn.chatgpt.com/docs/agent-configuration/subagents
-          https://learn.chatgpt.com/docs/agent-configuration/subagents.md
-          https://learn.chatgpt.com/docs/extend/mcp
-          https://learn.chatgpt.com/docs/extend/mcp.md
-          https://learn.chatgpt.com/docs/extend/record-and-replay
-          https://learn.chatgpt.com/docs/extend/record-and-replay.md
-          https://learn.chatgpt.com/docs/build-skills
-          https://learn.chatgpt.com/docs/build-skills.md
-          https://learn.chatgpt.com/docs/skills-and-plugins
-          https://learn.chatgpt.com/docs/skills-and-plugins.md
-          https://learn.chatgpt.com/docs/features/codex-micro
-          https://learn.chatgpt.com/docs/features/codex-micro.md
-          https://learn.chatgpt.com/docs/configuration
-          https://learn.chatgpt.com/docs/configuration.md
-          https://learn.chatgpt.com/docs/cloud
-          https://learn.chatgpt.com/docs/cloud.md
-          https://learn.chatgpt.com/docs/cloud/internet-access
-          https://learn.chatgpt.com/docs/cloud/internet-access.md
-          https://learn.chatgpt.com/docs/customization/overview
-          https://learn.chatgpt.com/docs/customization/overview.md
-          https://learn.chatgpt.com/favicon.png
-          EOF
-          sed -i 's/^[[:space:]]*//' /tmp/urls.txt
+
+          # Derive seed URLs from live llms.txt (canonical destinations).
+          # Follow /codex/* → /docs/... or top-level redirects by seeding those
+          # destinations — never invent docs/codex/... paths that 404 live.
+          curl -fsSL https://learn.chatgpt.com/llms.txt -o /tmp/llms.txt
+          python3 << 'PY'
+          import re
+          from pathlib import Path
+          from urllib.parse import urlsplit, urlunsplit
+
+          text = Path("/tmp/llms.txt").read_text(encoding="utf-8")
+          raw_urls = set(
+              re.findall(r"https://learn\.chatgpt\.com(/[^\s\)\"'<>\]]+)", text)
+          )
+
+          # Out of scope: api / ads / blog / chatgpt marketing.
+          SKIP_PREFIXES = (
+              "/api/",
+              "/ads/",
+              "/blog/",
+              "/chatgpt",
+          )
+
+          seeds: set[str] = set()
+
+          def add(path: str) -> None:
+              path = path.strip()
+              if not path:
+                  return
+              # Drop query/fragment for wget seeds
+              parts = urlsplit("https://learn.chatgpt.com" + path)
+              clean = urlunsplit(("https", "learn.chatgpt.com", parts.path or "/", "", ""))
+              p = parts.path or "/"
+              if any(p == sp.rstrip("/") or p.startswith(sp) for sp in SKIP_PREFIXES):
+                  return
+              seeds.add(clean)
+              # HTML twin for Markdown pages
+              if p.endswith(".md"):
+                  twin = p[: -len(".md")] or "/"
+                  seeds.add(urlunsplit(("https", "learn.chatgpt.com", twin, "", "")))
+
+          for path in raw_urls:
+              add(path)
+
+          # Always-on anchors + top-level pages that /codex/* 308s onto.
+          for path in (
+              "/llms.txt",
+              "/docs/llms-full.txt",
+              "/docs/codex-manual.md",
+              "/docs",
+              "/docs.md",
+              "/docs/codex",
+              "/docs/codex.md",
+              # Live under docs/codex/ (cli/ide); most other /codex/X → /docs/X.
+              "/docs/codex/cli",
+              "/docs/codex/cli.md",
+              "/docs/codex/ide",
+              "/docs/codex/ide.md",
+              "/resources",
+              "/resources.md",
+              "/use-cases",
+              "/use-cases/llms.txt",
+              "/videos",
+              "/videos.md",
+              "/guides/best-practices",
+              "/guides/best-practices.md",
+              "/guides/build-ai-native-engineering-team",
+              "/guides/build-ai-native-engineering-team.md",
+              "/favicon.png",
+          ):
+              add(path)
+
+          out = Path("/tmp/urls.txt")
+          out.write_text("\n".join(sorted(seeds)) + "\n", encoding="utf-8")
+          print(f"seed_count={len(seeds)}")
+          for u in sorted(seeds)[:20]:
+              print(" ", u)
+          print("  ...")
+          PY
+
           wget --mirror --convert-links --adjust-extension --page-requisites --no-parent \
             --domains=learn.chatgpt.com \
             -e robots=off \
             --timeout=30 --tries=3 --wait=0.1 \
+            --exclude-directories=/api,/ads,/blog \
             -A 'html,css,js,png,jpg,jpeg,svg,woff,woff2,gif,webp,ico,txt,xml,md' \
             -i /tmp/urls.txt \
             -P staging || true
@@ -109,6 +123,10 @@ jobs:
           find learn.chatgpt.com -type f 2>/dev/null | wc -l
           du -sh learn.chatgpt.com 2>/dev/null || true
           ls learn.chatgpt.com/docs/codex/ || true
+          ls learn.chatgpt.com/docs/auth.html learn.chatgpt.com/docs/quickstart.html \
+            learn.chatgpt.com/docs/administration.html \
+            learn.chatgpt.com/resources.html learn.chatgpt.com/use-cases.html \
+            learn.chatgpt.com/videos.html 2>/dev/null || true
 
       - name: Rewrite Learn URLs to relative paths
         run: bash scripts/make-urls-relative.sh
