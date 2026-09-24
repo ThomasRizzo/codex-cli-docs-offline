@@ -1,6 +1,6 @@
 # Environment variables
 
-> For the complete documentation index, see [llms.txt](https://learn.chatgpt.com/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Codex uses `config.toml` for durable settings. Use environment variables for
 shell-scoped overrides, automation secrets, installer behavior, or diagnostics.
@@ -8,7 +8,7 @@ shell-scoped overrides, automation secrets, installer behavior, or diagnostics.
 This page lists stable public environment variables that Codex reads directly.
 It does not list internal development variables, test variables, or
 provider-specific secret names you choose yourself with
-[`env_key`](https://learn.chatgpt.com/docs/config-file/config-advanced#custom-model-providers).
+[`env_key`](config-advanced.html#custom-model-providers).
 
 ## Core locations
 
@@ -18,7 +18,7 @@ provider-specific secret names you choose yourself with
 | `CODEX_SQLITE_HOME` | CLI and app-server state                   | `CODEX_HOME` | Sets where SQLite-backed state is stored. The `sqlite_home` config option takes precedence. Relative paths resolve from the current working directory.           |
 
 For more about the files stored under `CODEX_HOME`, see
-[Config and state locations](https://learn.chatgpt.com/docs/config-file/config-advanced#config-and-state-locations).
+[Config and state locations](config-advanced.html#config-and-state-locations).
 
 ## Installer variables
 
@@ -29,7 +29,7 @@ These variables apply to the standalone install scripts served from
 | Variable                | Default                                                                              | Description                                                                                                                                                     |
 | ----------------------- | ------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `CODEX_NON_INTERACTIVE` | `false`                                                                              | Set to `1`, `true`, or `yes` to skip installer prompts. Prompts use their default response, so use this for scripted installs and updates, not first-run setup. |
-| `CODEX_INSTALL_DIR`     | `~/.local/bin` on macOS/Linux; `%LOCALAPPDATA%\Programs\OpenAI\Codex\bin` on Windows | Changes where the visible `codex` command is installed. The standalone package cache still lives under `CODEX_HOME/packages/standalone`.                        |
+| `CODEX_INSTALL_DIR`     | `~/.local/bin` on macOS/Linux; `%LOCALAPPDATA%\\Programs\\OpenAI\\Codex\\bin` on Windows | Changes where the visible `codex` command is installed. The standalone package cache still lives under `CODEX_HOME/packages/standalone`.                        |
 
 For unattended installs, set `CODEX_NON_INTERACTIVE=1` on the shell that runs
 the downloaded installer:
@@ -55,13 +55,13 @@ $env:CODEX_NON_INTERACTIVE=1; irm https://chatgpt.com/codex/install.ps1 | iex
 | `SSL_CERT_FILE`                    | HTTPS, login, and WebSocket clients              | Fallback PEM CA bundle path when `CODEX_CA_CERTIFICATE` is unset.                                                                               |
 
 For provider API keys, set
-[`env_key`](https://learn.chatgpt.com/docs/config-file/config-advanced#custom-model-providers) in the model provider
+[`env_key`](config-advanced.html#custom-model-providers) in the model provider
 configuration. Codex reads the variable named by that config, so the variable
 name itself is not a fixed Codex environment variable.
 
 For automation secret handling, see
-[Use API key auth](https://learn.chatgpt.com/docs/non-interactive-mode#use-api-key-auth).
-For access token setup, see [Access tokens](https://learn.chatgpt.com/docs/enterprise/access-tokens).
+[Use API key auth](../non-interactive-mode.html#use-api-key-auth).
+For access token setup, see [Access tokens](../enterprise/access-tokens.html).
 
 ## Diagnostics
 
