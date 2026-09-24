@@ -110,6 +110,9 @@ jobs:
           du -sh learn.chatgpt.com 2>/dev/null || true
           ls learn.chatgpt.com/docs/codex/ || true
 
+      - name: Rewrite Learn URLs to relative paths
+        run: ./scripts/make-urls-relative.sh
+
       - name: Commit and push mirror
         run: |
           set -euo pipefail
