@@ -1,6 +1,6 @@
 # Config basics
 
-> For the complete documentation index, see [llms.txt](https://learn.chatgpt.com/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Codex reads configuration details from more than one location. Your personal defaults live in `~/.codex/config.toml`, and you can add project overrides with `.codex/config.toml` files. For security, Codex loads project `.codex/` layers only when you trust the project.
 
@@ -13,8 +13,8 @@ To open the configuration file from the Codex IDE extension, select the gear ico
 The CLI and IDE extension share the same configuration layers. You can use them to:
 
 - Set the default model and provider.
-- Configure [approval policies and sandbox settings](https://learn.chatgpt.com/docs/agent-approvals-security#sandbox-and-approvals).
-- Configure [MCP servers](https://learn.chatgpt.com/docs/extend/mcp).
+- Configure [approval policies and sandbox settings](../agent-approvals-security.html#sandbox-and-approvals).
+- Configure [MCP servers](../extend/mcp.html).
 
 ## Configuration precedence
 
@@ -22,27 +22,27 @@ Codex resolves values in this order (highest precedence first):
 
 1. CLI flags and `--config` overrides
 2. Project config files: `.codex/config.toml`, ordered from the project root down to your current working directory (closest wins; trusted projects only)
-3. [Profile](https://learn.chatgpt.com/docs/config-file/config-advanced#profiles) files selected with `--profile profile-name` (`~/.codex/profile-name.config.toml`)
+3. [Profile](config-advanced.html#profiles) files selected with `--profile profile-name` (`~/.codex/profile-name.config.toml`)
 4. User config: `~/.codex/config.toml`
 5. Cloud-managed `config.toml` defaults, when delivered for the signed-in workspace
 6. System config (if present): `/etc/codex/config.toml` on Unix
 7. Built-in defaults
 
-Use that precedence to set shared defaults in `config.toml` and keep [profile files](https://learn.chatgpt.com/docs/config-file/config-advanced#profiles) focused on the values that differ.
+Use that precedence to set shared defaults in `config.toml` and keep [profile files](config-advanced.html#profiles) focused on the values that differ.
 
 Cloud-managed and system configuration can define plugin marketplaces and set
 whether plugins are enabled by default. These are separate from enforced `requirements.toml`
-policies. See [Configure plugin marketplaces and defaults](https://learn.chatgpt.com/docs/enterprise/managed-configuration#configure-plugin-marketplaces-and-defaults).
+policies. See [Configure plugin marketplaces and defaults](../enterprise/managed-configuration.html#configure-plugin-marketplaces-and-defaults).
 
 If you mark a project as untrusted, Codex skips project-scoped `.codex/` layers, including project-local config, hooks, and rules. User and system config still load, including user/global hooks and rules.
 
-For one-off overrides via `-c`/`--config` (including TOML quoting rules), see [Advanced Config](https://learn.chatgpt.com/docs/config-file/config-advanced#one-off-overrides-from-the-cli).
+For one-off overrides via `-c`/`--config` (including TOML quoting rules), see [Advanced Config](config-advanced.html#one-off-overrides-from-the-cli).
 
 On managed machines, your organization may also enforce constraints via
   `requirements.toml` (for example, disallowing `approval_policy = "never"` or
   `sandbox_mode = "danger-full-access"`). See [Managed
-  configuration](https://learn.chatgpt.com/docs/enterprise/managed-configuration) and [Admin-enforced
-  requirements](https://learn.chatgpt.com/docs/enterprise/managed-configuration#admin-enforced-requirements-requirementstoml).
+  configuration](../enterprise/managed-configuration.html) and [Admin-enforced
+  requirements](../enterprise/managed-configuration.html#admin-enforced-requirements-requirementstoml).
 
 ## Common configuration options
 
@@ -65,7 +65,7 @@ Control when Codex pauses to ask before running generated commands.
 approval_policy = "on-request"
 ```
 
-For behavior differences between `on-request` and `never`, see [Run without approval prompts](https://learn.chatgpt.com/docs/agent-approvals-security#run-without-approval-prompts) and [Common sandbox and approval combinations](https://learn.chatgpt.com/docs/agent-approvals-security#common-sandbox-and-approval-combinations). If an existing configuration uses `approval_policy = "untrusted"`, see [Migrate from the retired `untrusted` approval policy](https://learn.chatgpt.com/docs/agent-approvals-security#migrate-from-the-retired-untrusted-approval-policy).
+For behavior differences between `on-request` and `never`, see [Run without approval prompts](../agent-approvals-security.html#run-without-approval-prompts) and [Common sandbox and approval combinations](../agent-approvals-security.html#common-sandbox-and-approval-combinations). If an existing configuration uses `approval_policy = "untrusted"`, see [Migrate from the retired `untrusted` approval policy](../agent-approvals-security.html#migrate-from-the-retired-untrusted-approval-policy).
 
 #### Sandbox level
 
@@ -75,14 +75,14 @@ Adjust how much filesystem and network access Codex has while executing commands
 sandbox_mode = "workspace-write"
 ```
 
-For mode-by-mode behavior (including protected `.git`/`.codex` paths and network defaults), see [Sandbox and approvals](https://learn.chatgpt.com/docs/agent-approvals-security#sandbox-and-approvals), [Protected paths in writable roots](https://learn.chatgpt.com/docs/agent-approvals-security#protected-paths-in-writable-roots), and [Network access](https://learn.chatgpt.com/docs/agent-approvals-security#network-access).
+For mode-by-mode behavior (including protected `.git`/`.codex` paths and network defaults), see [Sandbox and approvals](../agent-approvals-security.html#sandbox-and-approvals), [Protected paths in writable roots](../agent-approvals-security.html#protected-paths-in-writable-roots), and [Network access](../agent-approvals-security.html#network-access).
 
 #### Permission profiles
 
 Codex also supports named permission profiles for reusable filesystem and
 network policies. Built-in profiles are `:read-only`, `:workspace`, and
 `:danger-full-access`. Custom profiles use `[permissions.<name>]` tables and a
-matching `default_permissions` value. See [Permissions](https://learn.chatgpt.com/docs/permissions).
+matching `default_permissions` value. See [Permissions](../permissions.html).
 
 #### Windows sandbox mode
 
@@ -96,7 +96,7 @@ sandbox = "elevated"   # Recommended
 
 #### Web search mode
 
-Codex enables web search by default for local chats and serves results from a web search cache. The cache is an OpenAI-maintained index of web results, so cached mode returns pre-indexed results instead of fetching live pages. This reduces exposure to prompt injection from arbitrary live content, but you should still treat web results as untrusted. If you are using `--yolo` or another [full access sandbox setting](https://learn.chatgpt.com/docs/agent-approvals-security#common-sandbox-and-approval-combinations), web search defaults to live results. Choose a mode with `web_search`:
+Codex enables web search by default for local chats and serves results from a web search cache. The cache is an OpenAI-maintained index of web results, so cached mode returns pre-indexed results instead of fetching live pages. This reduces exposure to prompt injection from arbitrary live content, but you should still treat web results as untrusted. If you are using `--yolo` or another [full access sandbox setting](../agent-approvals-security.html#common-sandbox-and-approval-combinations), web search defaults to live results. Choose a mode with `web_search`:
 
 - `"cached"` (default) serves results from the web search cache.
 - `"indexed"` permits external web access only when the search index gates the request.
@@ -161,7 +161,7 @@ ignore_default_excludes = false
 for variable names containing `KEY`, `SECRET`, or `TOKEN`. Set it to `false`
 when you want that automatic filtering. For exclusion rules, precedence, and
 legacy configuration, see [Shell environment
-policy](https://learn.chatgpt.com/docs/config-file/config-advanced#shell-environment-policy).
+policy](config-advanced.html#shell-environment-policy).
 
 #### Log directory
 
@@ -188,9 +188,9 @@ Use the `[features]` table in `config.toml` to toggle optional and experimental 
 | -------------------- | :-------------------: | ------------ | ---------------------------------------------------------------------------------------- |
 | `apps`               |         true          | Stable       | Enable app (connector) integrations                                                      |
 | `goals`              |         true          | Stable       | Enable persisted goals and automatic continuation                                        |
-| `hooks`              |         true          | Stable       | Enable lifecycle hooks from `hooks.json` or inline `[hooks]`. See [Hooks](https://learn.chatgpt.com/docs/hooks). |
+| `hooks`              |         true          | Stable       | Enable lifecycle hooks from `hooks.json` or inline `[hooks]`. See [Hooks](../hooks.html). |
 | `fast_mode`          |         true          | Stable       | Enable Fast mode selection and the `service_tier = "fast"` path                          |
-| `memories`           |         false         | Experimental | Enable [Memories](https://learn.chatgpt.com/docs/customization/memories)                                         |
+| `memories`           |         false         | Experimental | Enable [Memories](../customization/memories.html)                                         |
 | `multi_agent`        |         true          | Stable       | Enable subagent collaboration tools                                                      |
 | `personality`        |         true          | Stable       | Enable personality selection controls                                                    |
 | `remote_plugin`      |         true          | Stable       | Enable the remote plugin catalog                                                         |
@@ -204,11 +204,11 @@ Use the `[features]` table in `config.toml` to toggle optional and experimental 
 This table lists common user-facing flags, not every internal or
   under-development feature. The Maturity column uses labels such as
   Experimental, Beta, and Stable. See [Feature
-  Maturity](https://learn.chatgpt.com/docs/feature-maturity) for how to interpret these labels.
+  Maturity](../feature-maturity.html) for how to interpret these labels.
 
 Omit feature keys to keep their defaults.
 
-For lifecycle hook configuration, see [Hooks](https://learn.chatgpt.com/docs/hooks).
+For lifecycle hook configuration, see [Hooks](../hooks.html).
 
 ### Enabling features
 
