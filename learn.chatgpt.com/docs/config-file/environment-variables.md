@@ -29,7 +29,7 @@ These variables apply to the standalone install scripts served from
 | Variable                | Default                                                                              | Description                                                                                                                                                     |
 | ----------------------- | ------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `CODEX_NON_INTERACTIVE` | `false`                                                                              | Set to `1`, `true`, or `yes` to skip installer prompts. Prompts use their default response, so use this for scripted installs and updates, not first-run setup. |
-| `CODEX_INSTALL_DIR`     | `~/.local/bin` on macOS/Linux; `%LOCALAPPDATA%\\Programs\\OpenAI\\Codex\\bin` on Windows | Changes where the visible `codex` command is installed. The standalone package cache still lives under `CODEX_HOME/packages/standalone`.                        |
+| `CODEX_INSTALL_DIR`     | `~/.local/bin` on macOS/Linux; `%LOCALAPPDATA%\Programs\OpenAI\Codex\bin` on Windows | Changes where the visible `codex` command is installed. The standalone package cache still lives under `CODEX_HOME/packages/standalone`.                        |
 
 For unattended installs, set `CODEX_NON_INTERACTIVE=1` on the shell that runs
 the downloaded installer:
