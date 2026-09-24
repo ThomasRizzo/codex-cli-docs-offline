@@ -1,6 +1,6 @@
 # Subagents
 
-> For the complete documentation index, see [llms.txt](https://learn.chatgpt.com/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 ChatGPT Work and Codex can run subagent workflows by spawning specialized
 agents in parallel and then collecting their results in one response. This can
@@ -188,7 +188,7 @@ selected model supports.
 - **`medium`**: Balances speed and depth; the starting point for GPT-6 Sol.
 - **`low`**: Use when the task is straightforward and speed matters most.
 
-Higher reasoning effort increases response time and token usage, but it can improve quality for complex work. For details, see [Models](https://learn.chatgpt.com/docs/models), [Config basics](https://learn.chatgpt.com/docs/config-file/config-basic), and [Configuration Reference](https://learn.chatgpt.com/docs/config-file/config-reference).
+Higher reasoning effort increases response time and token usage, but it can improve quality for complex work. For details, see [Models](../models.html), [Config basics](../config-file/config-basic.html), and [Configuration Reference](../config-file/config-reference.html).
 
 </ContentModeSwitch>
 
@@ -365,7 +365,7 @@ them.
 
 ### Global settings
 
-Global subagent settings still live under `[agents]` in your [configuration](https://learn.chatgpt.com/docs/config-file/config-basic#configuration-precedence).
+Global subagent settings still live under `[agents]` in your [configuration](../config-file/config-basic.html#configuration-precedence).
 
 | Field                                       | Type    | Required | Purpose                                                             |
 | ------------------------------------------- | ------- | :------: | ------------------------------------------------------------------- |

@@ -1,6 +1,6 @@
 # Model Context Protocol
 
-> For the complete documentation index, see [llms.txt](https://learn.chatgpt.com/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Model Context Protocol (MCP) connects models to tools and context. Use it to
 give ChatGPT or Codex access to third-party documentation, or to let it
@@ -62,7 +62,7 @@ to view connected servers.
 
 ## Use MCP-backed tools in ChatGPT web
 
-In a hosted ChatGPT Work chat, install a [plugin](https://learn.chatgpt.com/docs/plugins) to use its
+In a hosted ChatGPT Work chat, install a [plugin](../plugins.html) to use its
 bundled connectors and remote MCP tools. After installation, Chat and Work can
 use those tools. Workspace administrators can control which plugins and tools
 are available.
@@ -121,7 +121,7 @@ Select **Authenticate** when an OAuth server requires sign-in.
 ### Configure with config.toml
 
 For more fine-grained control, edit `~/.codex/config.toml` or a project-scoped
-`.codex/config.toml`. See the [configuration reference](https://learn.chatgpt.com/docs/config-file/config-reference)
+`.codex/config.toml`. See the [configuration reference](../config-file/config-reference.html)
 for a searchable list of every supported MCP option.
 
 Configure each MCP server with a `[mcp_servers.<server-name>]` table in the configuration file.

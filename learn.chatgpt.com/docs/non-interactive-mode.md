@@ -1,11 +1,11 @@
 # Non-interactive mode
 
-> For the complete documentation index, see [llms.txt](https://learn.chatgpt.com/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Non-interactive mode lets you run Codex from scripts (for example, continuous integration (CI) jobs) without opening the interactive TUI.
 You invoke it with `codex exec`.
 
-For flag-level details, see [`codex exec`](https://learn.chatgpt.com/docs/developer-commands?surface=cli#cli-codex-exec).
+For flag-level details, see [`codex exec`](developer-commands.html#cli-codex-exec).
 
 ## When to use `codex exec`
 
@@ -85,7 +85,7 @@ Sample JSON stream (each line is a JSON object):
 {"type":"turn.completed","usage":{"input_tokens":24763,"cached_input_tokens":24448,"output_tokens":122,"reasoning_output_tokens":0}}
 ```
 
-If you only need the final message, write it to a file with `-o <path>`/`--output-last-message <path>`. This writes the final message to the file and still prints it to `stdout` (see [`codex exec`](https://learn.chatgpt.com/docs/developer-commands?surface=cli#cli-codex-exec) for details).
+If you only need the final message, write it to a file with `-o <path>`/`--output-last-message <path>`. This writes the final message to the file and still prints it to `stdout` (see [`codex exec`](developer-commands.html#cli-codex-exec) for details).
 
 ## Create structured outputs with a schema
 
@@ -132,7 +132,7 @@ Example final output (stdout):
 
 ### Use API key auth
 
-For GitHub Actions, use the [Codex GitHub Action](https://learn.chatgpt.com/docs/github-action) instead of installing and authenticating the CLI yourself. The action is designed to reduce API key exposure by installing Codex, starting a Responses API proxy, and running Codex with a configurable safety strategy.
+For GitHub Actions, use the [Codex GitHub Action](github-action.html) instead of installing and authenticating the CLI yourself. The action is designed to reduce API key exposure by installing Codex, starting a Responses API proxy, and running Codex with a configurable safety strategy.
 
 Do not set `OPENAI_API_KEY` or `CODEX_API_KEY` as a job-level environment variable in workflows that check out or run repository-controlled code. Build scripts, tests, dependency lifecycle hooks, or a compromised action in the same job can read those environment variables.
 
@@ -166,7 +166,7 @@ is not an option on the runner, seed `auth.json` through secure storage, run
 Codex on the runner so Codex refreshes it in place, and persist the updated file
 between runs.
 
-See [Maintain Codex account auth in CI/CD (advanced)](https://learn.chatgpt.com/docs/auth/ci-cd-auth).
+See [Maintain Codex account auth in CI/CD (advanced)](auth/ci-cd-auth.html).
 
 </ToggleSection>
 

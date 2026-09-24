@@ -1,10 +1,10 @@
 # Advanced Configuration
 
-> For the complete documentation index, see [llms.txt](https://learn.chatgpt.com/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
-Use these options when you need more control over providers, policies, and integrations. For a quick start, see [Config basics](https://learn.chatgpt.com/docs/config-file/config-basic).
+Use these options when you need more control over providers, policies, and integrations. For a quick start, see [Config basics](config-basic.html).
 
-For background on project guidance, reusable capabilities, custom slash commands, subagent workflows, and integrations, see [Customization](https://learn.chatgpt.com/docs/customization/overview). For configuration keys, see [Configuration Reference](https://learn.chatgpt.com/docs/config-file/config-reference).
+For background on project guidance, reusable capabilities, custom slash commands, subagent workflows, and integrations, see [Customization](../customization/overview.html). For configuration keys, see [Configuration Reference](config-reference.html).
 
 ## Profiles
 
@@ -77,9 +77,9 @@ Common files you may see there:
 - `history.jsonl` (if history persistence is enabled)
 - Other per-user state such as logs and caches
 
-For authentication details (including credential storage modes), see [Authentication](https://learn.chatgpt.com/docs/auth). For the full list of configuration keys, see [Configuration Reference](https://learn.chatgpt.com/docs/config-file/config-reference).
+For authentication details (including credential storage modes), see [Authentication](../auth.html). For the full list of configuration keys, see [Configuration Reference](config-reference.html).
 
-For shared defaults, rules, and skills checked into repos or system paths, see [Team Config](https://learn.chatgpt.com/docs/enterprise/admin-setup#step-4-standardize-local-configuration-with-team-config).
+For shared defaults, rules, and skills checked into repos or system paths, see [Team Config](../enterprise/admin-setup.html#step-4-standardize-local-configuration-with-team-config).
 
 If you just need to point the built-in OpenAI provider at an LLM proxy, router, or data-residency enabled project, set `openai_base_url` in `config.toml` instead of defining a new provider. This changes the base URL for the built-in `openai` provider without requiring a separate `model_providers.<id>` entry.
 
@@ -138,11 +138,11 @@ If a single layer contains both `hooks.json` and inline `[hooks]`, Codex loads
 both and warns. Prefer one representation per layer.
 
 For the current event list, input fields, output behavior, and limitations, see
-[Hooks](https://learn.chatgpt.com/docs/hooks).
+[Hooks](../hooks.html).
 
 ## Agent roles (`[agents]` in `config.toml`)
 
-For subagent role configuration (`[agents]` in `config.toml`), see [Subagents](https://learn.chatgpt.com/docs/agent-configuration/subagents).
+For subagent role configuration (`[agents]` in `config.toml`), see [Subagents](../agent-configuration/subagents.html).
 
 ## Project root detection
 
@@ -197,7 +197,7 @@ The setting defaults to `false` for custom providers. Standalone web search is
 under development and off by default. Setting the provider capability to `true`
 doesn't enable it: the provider must support a compatible endpoint,
 and the selected model and runtime must support standalone search. The
-configured [`web_search` mode](https://learn.chatgpt.com/docs/web-search) and
+configured [`web_search` mode](../web-search.html) and
 managed search restrictions still apply.
 
 Add request headers when needed:
@@ -245,7 +245,7 @@ If you omit `profile`, Codex uses the standard AWS credential chain. Set
 
 For the full setup flow, authentication options, supported models, and feature
 availability, see [Use ChatGPT Work and Codex with Amazon
-Bedrock](https://learn.chatgpt.com/docs/amazon-bedrock).
+Bedrock](../amazon-bedrock.html).
 
 ## OSS mode (local providers)
 
@@ -301,13 +301,13 @@ model_context_window = 128000             # Context window size
 
 Pick approval strictness (affects when Codex pauses) and sandbox level (affects file/network access).
 
-For operational details to keep in mind while editing `config.toml`, see [Common sandbox and approval combinations](https://learn.chatgpt.com/docs/agent-approvals-security#common-sandbox-and-approval-combinations), [Protected paths in writable roots](https://learn.chatgpt.com/docs/agent-approvals-security#protected-paths-in-writable-roots), and [Network access](https://learn.chatgpt.com/docs/agent-approvals-security#network-access).
+For operational details to keep in mind while editing `config.toml`, see [Common sandbox and approval combinations](../agent-approvals-security.html#common-sandbox-and-approval-combinations), [Protected paths in writable roots](../agent-approvals-security.html#protected-paths-in-writable-roots), and [Network access](../agent-approvals-security.html#network-access).
 
 Codex and ChatGPT Work no longer support `approval_policy = "untrusted"`. See
-[Migrate from the retired `untrusted` approval policy](https://learn.chatgpt.com/docs/agent-approvals-security#migrate-from-the-retired-untrusted-approval-policy)
+[Migrate from the retired `untrusted` approval policy](../agent-approvals-security.html#migrate-from-the-retired-untrusted-approval-policy)
 for supported settings and stricter project-derived approvals.
 
-For beta permission profiles that configure filesystem and network access together, see [Permissions](https://learn.chatgpt.com/docs/permissions).
+For beta permission profiles that configure filesystem and network access together, see [Permissions](../permissions.html).
 
 You can also use a granular approval policy (`approval_policy = { granular = { ... } }`) to allow or auto-reject individual prompt categories. This is useful when you want normal interactive approvals for some cases but want others, such as `request_permissions` or skill-script prompts, to fail closed automatically.
 
@@ -348,18 +348,18 @@ Use your organization's automatic review policy.
 ### Named permission profiles
 
 For built-in profiles, custom profile syntax, and the full filesystem and
-network configuration model, see [Permissions](https://learn.chatgpt.com/docs/permissions).
+network configuration model, see [Permissions](../permissions.html).
 
 For the complete key list and requirements constraints, see
-[Configuration Reference](https://learn.chatgpt.com/docs/config-file/config-reference) and
-[Managed configuration](https://learn.chatgpt.com/docs/enterprise/managed-configuration).
+[Configuration Reference](config-reference.html) and
+[Managed configuration](../enterprise/managed-configuration.html).
 
 In workspace-write mode, some environments keep `.git/` and `.codex/`
   read-only even when the rest of the workspace is writable. This is why
   commands like `git commit` may still require approval to run outside the
   sandbox. If you want Codex to skip specific commands (for example, block `git
   commit` outside the sandbox), use
-  [rules](https://learn.chatgpt.com/docs/agent-configuration/rules).
+  [rules](../agent-configuration/rules.html).
 
 Disable sandboxing entirely (use only if your environment already isolates processes):
 
@@ -407,7 +407,7 @@ rejects that combination.
 
 ## MCP servers
 
-See the dedicated [MCP documentation](https://learn.chatgpt.com/docs/extend/mcp) for configuration details.
+See the dedicated [MCP documentation](../extend/mcp.html) for configuration details.
 
 ## Observability and telemetry
 
@@ -439,7 +439,7 @@ exporter = { otlp-grpc = {
 }}
 ```
 
-If `exporter = "none"` Codex records events but sends nothing. Exporters batch asynchronously and flush on shutdown. Event metadata includes service name, CLI version, env tag, conversation id, model, sandbox/approval settings, and per-event fields (see [Config Reference](https://learn.chatgpt.com/docs/config-file/config-reference)).
+If `exporter = "none"` Codex records events but sends nothing. Exporters batch asynchronously and flush on shutdown. Event metadata includes service name, CLI version, env tag, conversation id, model, sandbox/approval settings, and per-event fields (see [Config Reference](config-reference.html)).
 
 ### What gets emitted
 
@@ -472,7 +472,7 @@ Each metric below also includes default metadata tags: `auth_mode`, `originator`
 | `codex.tool.call`                     | counter   | `tool`, `success`   | Tool invocation count by tool name and success/failure.           |
 | `codex.tool.call.duration_ms`         | histogram | `tool`, `success`   | Tool execution duration in milliseconds by tool name and outcome. |
 
-For more security and privacy guidance around telemetry, see [Security](https://learn.chatgpt.com/docs/agent-approvals-security#monitoring-and-telemetry).
+For more security and privacy guidance around telemetry, see [Security](../agent-approvals-security.html#monitoring-and-telemetry).
 
 ### Metrics
 
@@ -711,7 +711,7 @@ Place the script somewhere on disk and point `notify` to it.
 
 In `auto` mode, Codex prefers OSC 9 notifications (a terminal escape sequence some terminals interpret as a desktop notification) and falls back to BEL (`\x07`) otherwise.
 
-See [Configuration Reference](https://learn.chatgpt.com/docs/config-file/config-reference) for the exact keys.
+See [Configuration Reference](config-reference.html) for the exact keys.
 
 ## History persistence
 
@@ -746,7 +746,7 @@ Codex reads `AGENTS.md` (and related files) and includes a limited amount of pro
 - `project_doc_max_bytes`: how much to read from each `AGENTS.md` file
 - `project_doc_fallback_filenames`: additional filenames to try when `AGENTS.md` is missing at a directory level
 
-For a detailed walkthrough, see [Custom instructions with AGENTS.md](https://learn.chatgpt.com/docs/agent-configuration/agents-md).
+For a detailed walkthrough, see [Custom instructions with AGENTS.md](../agent-configuration/agents-md.html).
 
 ## Desktop
 
@@ -850,4 +850,4 @@ Running `codex` with no subcommand launches the interactive terminal UI (TUI). C
 
 `tui.notification_method` defaults to `auto`. In `auto` mode, Codex prefers OSC 9 notifications (a terminal escape sequence some terminals interpret as a desktop notification) when the terminal appears to support them, and falls back to BEL (`\x07`) otherwise.
 
-See [Configuration Reference](https://learn.chatgpt.com/docs/config-file/config-reference) for the full key list.
+See [Configuration Reference](config-reference.html) for the full key list.

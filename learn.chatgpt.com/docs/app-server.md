@@ -1,11 +1,11 @@
 # Codex App Server
 
-> For the complete documentation index, see [llms.txt](https://learn.chatgpt.com/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
-Codex app-server is the interface Codex uses to power rich clients (for example, the Codex VS Code extension). Use it when you want a deep integration inside your own product: authentication, conversation history, approvals, and streamed agent events. The app-server implementation is open source in the Codex GitHub repository ([openai/codex/codex-rs/app-server](https://github.com/openai/codex/tree/main/codex-rs/app-server)). See the [Open Source](https://learn.chatgpt.com/docs/open-source) page for the full list of open-source Codex components.
+Codex app-server is the interface Codex uses to power rich clients (for example, the Codex VS Code extension). Use it when you want a deep integration inside your own product: authentication, conversation history, approvals, and streamed agent events. The app-server implementation is open source in the Codex GitHub repository ([openai/codex/codex-rs/app-server](https://github.com/openai/codex/tree/main/codex-rs/app-server)). See the [Open Source](open-source.html) page for the full list of open-source Codex components.
 
 If you are automating jobs or running Codex in CI, use the
-  [Codex SDK](https://learn.chatgpt.com/docs/codex-sdk) instead.
+  [Codex SDK](codex-sdk.html) instead.
 
 ## Connect the CLI terminal UI
 
@@ -1226,7 +1226,7 @@ Use `configRequirements/read` to inspect the effective admin requirements loaded
 } }
 ```
 
-`result.requirements` is `null` when no requirements are configured. See the docs on [`requirements.toml`](https://learn.chatgpt.com/docs/config-file/config-reference#requirementstoml) for details on supported keys and values.
+`result.requirements` is `null` when no requirements are configured. See the docs on [`requirements.toml`](config-file/config-reference.html#requirementstoml) for details on supported keys and values.
 
 ### Windows sandbox setup (`windowsSandbox/setupStart`)
 

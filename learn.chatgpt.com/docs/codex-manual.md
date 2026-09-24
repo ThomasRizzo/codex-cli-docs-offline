@@ -3,7 +3,7 @@ title: "Codex Manual"
 hidden: true
 ---
 
-> For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 ## Find By Topic
 
@@ -24,93 +24,93 @@ Entry points, plans, supported surfaces, maturity, and high-level product framin
 
 ### ChatGPT on the web
 
-Source: [ChatGPT on the web](https://learn.chatgpt.com/docs/web.md)
+Source: [ChatGPT on the web](web.md)
 
 Use ChatGPT on the web to research, analyze, and create files.
 
 ### Features
 
-Source: [Features](https://learn.chatgpt.com/docs/features.md)
+Source: [Features](features.md)
 
 Explore workflows, capabilities, commands, and settings for working in ChatGPT.
 
 ChatGPT brings projects and long-running chats together with web browsing, files, images, and plugins. Commands, settings, and troubleshooting references round out these workflows, from choosing the right workflow to giving each chat the context and tools it needs.
 
-[Explore projects and chats](https://learn.chatgpt.com/docs/projects)
+[Explore projects and chats](projects.html)
 
 #### Workflows
 
 Ways to organize, delegate, and review work.
 
-- [Projects and chats](https://learn.chatgpt.com/docs/projects): Keep related chats, context, and work together.
+- [Projects and chats](projects.html): Keep related chats, context, and work together.
 
-- [Codex Remote](https://learn.chatgpt.com/docs/remote): Start tasks, approve actions, and review work from your phone.
+- [Codex Remote](remote.html): Start tasks, approve actions, and review work from your phone.
 
-- [Sites](https://learn.chatgpt.com/docs/sites): Create, save, and publish interactive websites and apps in ChatGPT.
+- [Sites](sites.html): Create, save, and publish interactive websites and apps in ChatGPT.
 
-- [Visualizations](https://learn.chatgpt.com/docs/visualizations): Turn ideas and information into interactive visual explanations.
+- [Visualizations](visualizations.html): Turn ideas and information into interactive visual explanations.
 
-- [Scheduled tasks](https://learn.chatgpt.com/docs/automations): Schedule recurring work and review completed results.
+- [Scheduled tasks](automations.html): Schedule recurring work and review completed results.
 
-- [Long-running work](https://learn.chatgpt.com/docs/long-running-work): Let ChatGPT continue working while you step away.
+- [Long-running work](long-running-work.html): Let ChatGPT continue working while you step away.
 
-- [Notifications](https://learn.chatgpt.com/docs/notifications): Choose how ChatGPT tells you when work needs attention.
+- [Notifications](notifications.html): Choose how ChatGPT tells you when work needs attention.
 
-- [Pets](https://learn.chatgpt.com/docs/pets): Choose a companion, start chats, and follow activity.
+- [Pets](pets.html): Choose a companion, start chats, and follow activity.
 
-- [Codex Micro](https://learn.chatgpt.com/docs/features/codex-micro): Monitor and control ChatGPT chats from a Work Louder keyboard.
+- [Codex Micro](features/codex-micro.html): Monitor and control ChatGPT chats from a Work Louder keyboard.
 
 #### Capabilities
 
 Tools ChatGPT can use to understand, create, and take action.
 
-- [Browser](https://learn.chatgpt.com/docs/browser): Let ChatGPT browse websites and take action while you stay in control.
+- [Browser](browser.html): Let ChatGPT browse websites and take action while you stay in control.
 
-- [Computer use](https://learn.chatgpt.com/docs/computer-use): Let ChatGPT interact with apps through the visual interface.
+- [Computer use](computer-use.html): Let ChatGPT interact with apps through the visual interface.
 
-- [ChatGPT Voice](https://learn.chatgpt.com/docs/features/voice): Try voice in Chat, Work, and Codex in the ChatGPT desktop app.
+- [ChatGPT Voice](features/voice.html): Try voice in Chat, Work, and Codex in the ChatGPT desktop app.
 
-- [Plugins](https://learn.chatgpt.com/docs/plugins): Install reusable workflows, connected tools, and shared context.
+- [Plugins](plugins.html): Install reusable workflows, connected tools, and shared context.
 
-- [Web search](https://learn.chatgpt.com/docs/web-search): Find current information and bring sources into a task.
+- [Web search](web-search.html): Find current information and bring sources into a task.
 
-- [Image generation](https://learn.chatgpt.com/docs/image-generation): Create and edit images as part of your work.
+- [Image generation](image-generation.html): Create and edit images as part of your work.
 
-- [Image inputs](https://learn.chatgpt.com/docs/image-inputs): Use screenshots and images as context for ChatGPT.
+- [Image inputs](image-inputs.html): Use screenshots and images as context for ChatGPT.
 
-- [Appshots](https://learn.chatgpt.com/docs/appshots): Capture app state for visual inspection and debugging.
+- [Appshots](appshots.html): Capture app state for visual inspection and debugging.
 
-- [Browser extension](https://learn.chatgpt.com/docs/chrome-extension): Use Chrome, Edge, Brave, Opera, or Vivaldi with ChatGPT.
+- [Browser extension](chrome-extension.html): Use Chrome, Edge, Brave, Opera, or Vivaldi with ChatGPT.
 
-- [Work with files](https://learn.chatgpt.com/docs/artifacts-viewer): Create, preview, and refine documents and other generated files.
+- [Work with files](artifacts-viewer.html): Create, preview, and refine documents and other generated files.
 
 #### Reference
 
 Find commands and settings for the ChatGPT desktop app.
 
-- [Commands](https://learn.chatgpt.com/docs/reference/commands): Use app commands, keyboard shortcuts, and deep links.
+- [Commands](reference/commands.html): Use app commands, keyboard shortcuts, and deep links.
 
-- [Slash commands](https://learn.chatgpt.com/docs/reference/slash-commands): Use shortcuts for common interactive actions.
+- [Slash commands](reference/slash-commands.html): Use shortcuts for common interactive actions.
 
-- [Settings](https://learn.chatgpt.com/docs/reference/settings): Configure ChatGPT desktop app preferences.
+- [Settings](reference/settings.html): Configure ChatGPT desktop app preferences.
 
-- [Troubleshooting](https://learn.chatgpt.com/docs/reference/troubleshooting): Resolve common issues in the ChatGPT desktop app.
+- [Troubleshooting](reference/troubleshooting.html): Resolve common issues in the ChatGPT desktop app.
 
 ### Glossary
 
-Source: [Glossary](https://learn.chatgpt.com/docs/glossary.md)
+Source: [Glossary](glossary.md)
 
 Use this glossary as a quick reference for Codex terms across the app, CLI, IDE extension, cloud, SDK, and related integrations.
 
 ### Resources
 
-Source: [Resources](https://learn.chatgpt.com/resources.md)
+Source: [Resources](../resources.md)
 
 Find Codex videos, community programs, and OpenAI resources
 
 ### Use ChatGPT
 
-Source: [Use ChatGPT](https://learn.chatgpt.com/docs/use-chatgpt.md)
+Source: [Use ChatGPT](use-chatgpt.md)
 
 {/_ vale alex.Condescending = NO _/}
 
@@ -149,7 +149,7 @@ select **Quick chat** when that option is available.
 
 When you need a finished, reviewable result, switch to **Work** and describe
 what it should include. See [Get started with ChatGPT
-Work](https://learn.chatgpt.com/docs/get-started-with-work) for example tasks, prompts, and best
+Work](get-started-with-work.html) for example tasks, prompts, and best
 practices.
 
 #### What ChatGPT Work can do
@@ -162,38 +162,38 @@ Ask it to:
 - **Research and analyze information.** Search the web, browse websites,
   compare sources, read files, analyze data, and summarize findings.
 - **Use your files and tools.** Bring in uploaded files,
-  [projects](https://learn.chatgpt.com/docs/projects), memories, ChatGPT Library, and installed
-  [plugins](https://learn.chatgpt.com/docs/plugins). Plugins can provide connected information, reusable
+  [projects](projects.html), memories, ChatGPT Library, and installed
+  [plugins](plugins.html). Plugins can provide connected information, reusable
   workflows, and supported actions.
 - **Create finished files.** Draft and refine [documents, presentations,
-  spreadsheets, and PDF files](https://learn.chatgpt.com/docs/artifacts-viewer). Review the result, ask
+  spreadsheets, and PDF files](artifacts-viewer.html). Review the result, ask
   for specific changes, and download the completed file.
 - **Create visual and interactive work.** Generate or edit
-  [images](https://learn.chatgpt.com/docs/image-generation), make interactive
-  [visualizations](https://learn.chatgpt.com/docs/visualizations), and build or share websites and apps
-  with [Sites](https://learn.chatgpt.com/docs/sites).
-- **Work across websites and apps.** Use the [browser](https://learn.chatgpt.com/docs/browser) to
+  [images](image-generation.html), make interactive
+  [visualizations](visualizations.html), and build or share websites and apps
+  with [Sites](sites.html).
+- **Work across websites and apps.** Use the [browser](browser.html) to
   research and interact with websites. In the desktop app, use the
-  [browser extension](https://learn.chatgpt.com/docs/chrome-extension),
-  [Computer Use](https://learn.chatgpt.com/docs/computer-use), and [appshots](https://learn.chatgpt.com/docs/appshots) when
+  [browser extension](chrome-extension.html),
+  [Computer Use](computer-use.html), and [appshots](appshots.html) when
   those features are available.
 - **Run code and review technical work.** Run code and shell commands, analyze
-  data, inspect files, [review code](https://learn.chatgpt.com/docs/code-review), and work with
+  data, inspect files, [review code](code-review.html), and work with
   repositories your selected environment can access.
 - **Delegate and continue longer tasks.** Split independent work across
-  [subagents](https://learn.chatgpt.com/docs/agent-configuration/subagents), follow their progress, and
-  keep [long-running work](https://learn.chatgpt.com/docs/long-running-work) active.
+  [subagents](agent-configuration/subagents.html), follow their progress, and
+  keep [long-running work](long-running-work.html) active.
 - **Repeat useful workflows.** Set up [scheduled
-  tasks](https://learn.chatgpt.com/docs/automations) for recurring work and use
-  [skills](https://learn.chatgpt.com/docs/skills-and-plugins) to reuse a workflow.
+  tasks](automations.html) for recurring work and use
+  [skills](skills-and-plugins.html) to reuse a workflow.
 - **Talk through a task.** On supported plans in the desktop app, use
-  [ChatGPT Voice](https://learn.chatgpt.com/docs/features/voice) to start work, check progress, or
+  [ChatGPT Voice](features/voice.html) to start work, check progress, or
   change direction.
 
 Features depend on your plan, platform, region, rollout, and workspace
 settings. Your workspace administrator can control access to ChatGPT Work,
 plugins, browser use, and network access. ChatGPT Work and Codex share [usage
-limits](https://learn.chatgpt.com/docs/pricing).
+limits](pricing.html).
 
 #### Choose cloud or local work
 
@@ -243,7 +243,7 @@ You can continue with simple directions such as:
 - “What assumptions are you making?”
 - “Ask me questions before you continue.”
 
-Learn more about [prompting](https://learn.chatgpt.com/docs/prompting), or take the
+Learn more about [prompting](prompting.html), or take the
 [AI Foundations course](https://academy.openai.com/home/courses/ai-foundations-juzjs)
 for guided practice.
 
@@ -258,7 +258,7 @@ good result looks like.
 Projects help you organize ChatGPT around a topic, goal, or ongoing body of
 work. Keep related chats, files, and instructions in one project
 when the work will continue over time or depend on the same context. [Learn more
-about projects.](https://learn.chatgpt.com/docs/projects)
+about projects.](projects.html)
 
 #### Attach files
 
@@ -272,7 +272,7 @@ and data exports. Use them when you want ChatGPT to:
 
 When ChatGPT creates a file, open the preview and check its contents. You can
 then ask for changes without starting over. Learn more about
-[working with files](https://learn.chatgpt.com/docs/artifacts-viewer).
+[working with files](artifacts-viewer.html).
 
 #### Connect tools with plugins
 
@@ -282,7 +282,7 @@ on information outside the chat, actions in another system, or a
 repeatable workflow.
 
 Plugin availability depends on your plan, workspace settings, and the plugin
-itself. Learn more about [skills and plugins](https://learn.chatgpt.com/docs/skills-and-plugins).
+itself. Learn more about [skills and plugins](skills-and-plugins.html).
 
 #### Share a read-only snapshot of a Codex thread
 
@@ -363,27 +363,27 @@ a]:min-w-0 [&>a]:no-underline">
 
       Start using ChatGPT with a guided first task.
 
-](https://learn.chatgpt.com/docs/quickstart)
+](quickstart.html)
 
 [
 
     Write useful prompts for questions, finished work, and coding tasks.
 
-](https://learn.chatgpt.com/docs/prompting)
+](prompting.html)
 
 [
 
       Set preferences and carry useful context across chats.
 
-](https://learn.chatgpt.com/docs/personalize)
+](personalize.html)
 
 ### What's new
 
-Source: [What's new](https://learn.chatgpt.com/docs/whats-new.md)
+Source: [What's new](whats-new.md)
 
 This weekly digest highlights ChatGPT and Codex features that can change how you
 work, with examples and links to learn more. For every versioned update, bug fix,
-and minor improvement, see the [Codex changelog](https://learn.chatgpt.com/docs/changelog).
+and minor improvement, see the [Codex changelog](changelog.html).
 
 #### September 21–25, 2026
 
@@ -394,8 +394,8 @@ their GPT-5.6 predecessors. Start with **Sol Medium** for everyday and complex
 coding, or **Luna High** for focused, repeatable tasks. Availability depends
 on your plan, client, and workspace settings.
 
-See [Models](https://learn.chatgpt.com/docs/models) for model selection, [Pricing](https://learn.chatgpt.com/docs/pricing) for
-usage and credit rates, and the [launch announcement](https://learn.chatgpt.com/docs/changelog#codex-2026-09-22-gpt-6-sol-luna)
+See [Models](models.html) for model selection, [Pricing](pricing.html) for
+usage and credit rates, and the [launch announcement](changelog.html#codex-2026-09-22-gpt-6-sol-luna)
 for availability details.
 
 #### September 14–18, 2026
@@ -408,7 +408,7 @@ across all plans. The OpenAI API isn't affected.
 For Codex with ChatGPT sign-in, switch to **GPT-5.6 Sol** (`gpt-5.6-sol`).
 Update saved model settings, workspace defaults, custom agents, scheduled
 tasks, and scripts that still select GPT-5.5 before the retirement date.
-[Read the retirement notice](https://learn.chatgpt.com/docs/changelog#codex-2026-09-14-gpt-55-retirement)
+[Read the retirement notice](changelog.html#codex-2026-09-14-gpt-55-retirement)
 for details.
 
 #### September 7–11, 2026
@@ -416,7 +416,7 @@ for details.
 #### Start a quick chat from your pet
 
 Type a request or start a voice conversation from the floating
-[Pets controls](https://learn.chatgpt.com/docs/pets?surface=app) in the ChatGPT desktop app on macOS
+[Pets controls](pets.html) in the ChatGPT desktop app on macOS
 and Windows. Keep working in another app while you follow progress, then open
 the full conversation when you need it.
 
@@ -427,7 +427,7 @@ Windows to show the controls and focus Quick Chat. Use `@` to add context and
 
 #### Share an app window on Windows
 
-[Appshots](https://learn.chatgpt.com/docs/appshots?surface=app) bring a screenshot and available text
+[Appshots](appshots.html) bring a screenshot and available text
 from the frontmost Windows app into ChatGPT. Press both **Alt** keys at the
 same time, then ask a question about the window or describe what you want to
 do. Windows Appshots open in the main ChatGPT app.
@@ -440,21 +440,21 @@ in the main app first.
 Update the desktop app to use these features. Availability depends on rollout
 and workspace settings.
 
-[Read the September 11 release notes](https://learn.chatgpt.com/docs/changelog#codex-2026-09-11-app)
+[Read the September 11 release notes](changelog.html#codex-2026-09-11-app)
 for the full update and smaller improvements.
 
 #### August 31–September 4, 2026
 
 #### Take on demanding work with GPT-6 Astra
 
-[GPT-6 Astra](https://learn.chatgpt.com/docs/models#gpt-6-astra) combines advanced reasoning, computer
+[GPT-6 Astra](models.html#gpt-6-astra) combines advanced reasoning, computer
 use, and stronger judgment for complex work across code, apps, and research in
 Codex and ChatGPT Work. Use it to carry out a workflow, check the result, and
 produce a document, spreadsheet, or presentation that fits your templates and
 task.
 
 Once Astra is available to your account, choose it from the model selector.
-See [usage and pricing](https://learn.chatgpt.com/docs/pricing) before starting a large task.
+See [usage and pricing](pricing.html) before starting a large task.
 Enterprise access requires both rollout eligibility and an administrator to
 enable it.
 
@@ -462,12 +462,12 @@ enable it.
 
 #### Work with more websites
 
-- **Use your browser:** Work in [Edge, Brave, Opera, or Vivaldi](https://learn.chatgpt.com/docs/chrome-extension)
+- **Use your browser:** Work in [Edge, Brave, Opera, or Vivaldi](chrome-extension.html)
   as well as Chrome from the ChatGPT desktop app. Bring an open tab into a
   ChatGPT Work or Codex chat and work with the website where you're already
   signed in. Opera supports browser control but doesn't have side chat.
 
-- **Use a website's tools:** With [Site tools (WebMCP)](https://learn.chatgpt.com/docs/webmcp), ChatGPT
+- **Use a website's tools:** With [Site tools (WebMCP)](webmcp.html), ChatGPT
   Work and Codex can use actions offered by a website in the desktop app's
   built-in browser. For example, a document editor can provide tools to find
   a section or add a comment. Update the desktop app and use GPT-5.6 Sol or
@@ -476,7 +476,7 @@ enable it.
 
 - **Sign in through the cloud browser:** On eligible plans, continue a task
   that needs a website account in ChatGPT Work on the web, iOS, or Android.
-  Follow the [sign-in request](https://learn.chatgpt.com/docs/browser?surface=web#web-sign-in-to-a-website)
+  Follow the [sign-in request](browser.html#web-sign-in-to-a-website)
   and enter your details in the sign-in flow, not in the chat. This doesn't
   connect your local browser profile. Website sign-in isn't available for
   Enterprise or Edu workspaces.
@@ -484,11 +484,11 @@ enable it.
 Availability depends on rollout and workspace settings.
 
 [Read the August 25 browser release
-notes](https://learn.chatgpt.com/docs/changelog#codex-2026-08-25-browser).
+notes](changelog.html#codex-2026-08-25-browser).
 
 #### Run scheduled tasks from app events
 
-[Scheduled tasks](https://learn.chatgpt.com/docs/automations?surface=web#web-trigger-tasks-from-app-events) can now
+[Scheduled tasks](automations.html#web-trigger-tasks-from-app-events) can now
 start when a supported event occurs in Gmail, Slack, or GitHub. Use an event
 trigger to triage new email, summarize channel activity, or act on pull request
 feedback without polling on a fixed cadence.
@@ -502,29 +502,29 @@ prompt={`When one of my pull requests in / receives new review feedback, summari
 />
 
 [Read the August 25 release
-notes](https://learn.chatgpt.com/docs/changelog#codex-2026-08-25-event-triggers).
+notes](changelog.html#codex-2026-08-25-event-triggers).
 
 #### August 17–21, 2026
 
 #### Work with more of your apps and content
 
-- **Apple Messages:** [Find chats, summarize messages, prepare replies, and send through Messages on your Mac](https://learn.chatgpt.com/docs/plugins?surface=app#app-use-apple-messages-from-codex). The plugin is available on all plans in the ChatGPT desktop app for macOS. Use it in ChatGPT Work and Codex, not in regular ChatGPT chats. By default, ChatGPT sends messages only after you approve the message and its recipients.
+- **Apple Messages:** [Find chats, summarize messages, prepare replies, and send through Messages on your Mac](plugins.html#app-use-apple-messages-from-codex). The plugin is available on all plans in the ChatGPT desktop app for macOS. Use it in ChatGPT Work and Codex, not in regular ChatGPT chats. By default, ChatGPT sends messages only after you approve the message and its recipients.
 
-- **Site co-editing:** Where available, [invite active members of your workspace as editors](https://learn.chatgpt.com/docs/sites#collaborate-on-a-site). Editors can refine the Site and publish updates after its owner publishes it for the first time. Invited editors can read the Site's live database data; owners retain control of sharing and settings.
+- **Site co-editing:** Where available, [invite active members of your workspace as editors](sites.html#collaborate-on-a-site). Editors can refine the Site and publish updates after its owner publishes it for the first time. Invited editors can read the Site's live database data; owners retain control of sharing and settings.
 
-- **Editable Site URLs:** Where available, [choose a new ChatGPT-hosted address for an existing Site](https://learn.chatgpt.com/docs/sites#change-a-site-url) without redeploying it. The previous address redirects to the new one.
+- **Editable Site URLs:** Where available, [choose a new ChatGPT-hosted address for an existing Site](sites.html#change-a-site-url) without redeploying it. The previous address redirects to the new one.
 
-- **Computer History in Europe:** Use [Computer History](https://learn.chatgpt.com/docs/customization/computer-history) in the EEA, Switzerland, and the United Kingdom. It remains off by default for ChatGPT Pro, Business, and Enterprise users on macOS. Business and Enterprise administrators must enable access first.
+- **Computer History in Europe:** Use [Computer History](customization/computer-history.html) in the EEA, Switzerland, and the United Kingdom. It remains off by default for ChatGPT Pro, Business, and Enterprise users on macOS. Business and Enterprise administrators must enable access first.
 
-- **Shared thread snapshots:** [Share a read-only snapshot of a local Codex thread](https://learn.chatgpt.com/docs/use-chatgpt#share-a-read-only-snapshot-of-a-codex-thread) from the ChatGPT desktop app for macOS. Personal-account links are viewable by anyone with the link; workspace-account links are limited to the originating workspace. Codex redacts known secret patterns, but review the snapshot before sharing because sensitive content may remain.
+- **Shared thread snapshots:** [Share a read-only snapshot of a local Codex thread](use-chatgpt.html#share-a-read-only-snapshot-of-a-codex-thread) from the ChatGPT desktop app for macOS. Personal-account links are viewable by anyone with the link; workspace-account links are limited to the originating workspace. Codex redacts known secret patterns, but review the snapshot before sharing because sensitive content may remain.
 
-- **Unified pinned threads:** Keep your [pinned chats](https://learn.chatgpt.com/docs/projects?surface=app#app-organize-projects-and-chats) in sync between desktop and iOS.
+- **Unified pinned threads:** Keep your [pinned chats](projects.html#app-organize-projects-and-chats) in sync between desktop and iOS.
 
-[Read the August 20 release notes](https://learn.chatgpt.com/docs/changelog#codex-2026-08-20-app).
+[Read the August 20 release notes](changelog.html#codex-2026-08-20-app).
 
 #### Work with GitLab projects in Codex cloud
 
-[GitLab support](https://learn.chatgpt.com/docs/third-party/gitlab) is available in beta on all ChatGPT
+[GitLab support](third-party/gitlab.html) is available in beta on all ChatGPT
 plans. Connect a project, create a cloud environment, start tasks from issues
 or merge requests with `@codex`, and request one-off or automatic merge request
 reviews.
@@ -535,7 +535,7 @@ webhook. GitLab Self-Managed and GitLab Dedicated connections require
 workspace admin setup; webhook activity requires GitLab 19.0 or later.
 
 [Read the August 19 GitLab release
-notes](https://learn.chatgpt.com/docs/changelog#codex-2026-08-19-gitlab).
+notes](changelog.html#codex-2026-08-19-gitlab).
 
 #### Export public plugin metadata for review
 
@@ -551,13 +551,13 @@ plugins created for the workspace. The export isn't available in FedRAMP
 workspaces.
 
 [Read the August 17 admin export release
-notes](https://learn.chatgpt.com/docs/changelog#codex-2026-08-17-admin-csv).
+notes](changelog.html#codex-2026-08-17-admin-csv).
 
 #### August 10–14, 2026
 
 #### Find earlier work with Computer History
 
-[Computer History](https://learn.chatgpt.com/docs/customization/computer-history) turns activity across
+[Computer History](customization/computer-history.html) turns activity across
 your apps and websites into a searchable timeline and memories that ChatGPT
 and Codex can use. Turn it on only if you want to share that context, then
 choose which apps and websites contribute, pause collection, and review or
@@ -570,7 +570,7 @@ European Union, Switzerland, and the United Kingdom.
 
 #### Use the ChatGPT desktop app on Linux
 
-The [ChatGPT desktop app for Linux](https://learn.chatgpt.com/docs/linux/linux-app) is now available in
+The [ChatGPT desktop app for Linux](linux/linux-app.html) is now available in
 preview. Install a `.deb` package on supported Ubuntu or Debian distributions,
 or an `.rpm` package on Fedora. Packages are available for both x64 and ARM64
 processors.
@@ -582,7 +582,7 @@ Linux preview.
 #### Bring your existing agent setup and work with you
 
 [Import instructions, settings, skills, plugins, projects, and recent
-work](https://learn.chatgpt.com/docs/import) from **Claude Code**, Claude Cowork, or
+work](import.html) from **Claude Code**, Claude Cowork, or
 **Cursor** into the ChatGPT desktop app. Turn on automatic updates in
 **Settings > Import** to keep your imported work in sync.
 
@@ -590,7 +590,7 @@ In Codex CLI, use `/import` to bring supported setup and recent chats from
 Claude Code or Cursor into your local session.
 
 [Read the August 11 desktop and CLI release
-notes](https://learn.chatgpt.com/docs/changelog#codex-2026-08-11-app).
+notes](changelog.html#codex-2026-08-11-app).
 
 #### Choose the right access for defensive security work
 
@@ -600,24 +600,24 @@ patch validation. **Daybreak Red** requires its own approval and provides
 access to purpose-trained models for authorized security assessments.
 
 Access requires [Trusted Access for
-Cyber](https://learn.chatgpt.com/docs/cyber-safety#trusted-access-for-cyber) and applies only to the
+Cyber](cyber-safety.html#trusted-access-for-cyber) and applies only to the
 approved identity, workspace or organization, model, and product surface.
 
 [Read the August 10 Daybreak
-announcement](https://learn.chatgpt.com/docs/changelog#codex-2026-08-10-daybreak).
+announcement](changelog.html#codex-2026-08-10-daybreak).
 
 #### August 3–7, 2026
 
 #### Talk through files and projects with ChatGPT Voice
 
-[ChatGPT Voice](https://learn.chatgpt.com/docs/features/voice) now supports uploaded files and
-[ChatGPT Projects](https://learn.chatgpt.com/docs/projects). Ask questions about a document during a
+[ChatGPT Voice](features/voice.html) now supports uploaded files and
+[ChatGPT Projects](projects.html). Ask questions about a document during a
 voice conversation, or continue a project using its recent chats, sources, and
 instructions.
 
 #### Study and teach with dedicated education plugins
 
-Three new [plugins](https://learn.chatgpt.com/docs/plugins) bring classroom-specific workflows to
+Three new [plugins](plugins.html) bring classroom-specific workflows to
 ChatGPT Work and Codex. **College Student** creates study guides, practice
 quizzes, flashcards, and interactive explanations. **College Educator** helps
 develop course plans, materials, and assessments. **K–12 Educator** supports
@@ -648,7 +648,7 @@ notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes).
 Eligible users on personal plans and ChatGPT Business can check their remaining
 ChatGPT Work usage directly in the web sidebar. Available credit options depend
 on your account and workspace permissions. ChatGPT Work and Codex continue to
-share the same [usage limits and credits](https://learn.chatgpt.com/docs/pricing).
+share the same [usage limits and credits](pricing.html).
 
 #### Choose how GPT-5.6 responds in ChatGPT
 
@@ -666,11 +666,11 @@ notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes).
 [Codex CLI 0.147.0](https://github.com/openai/codex/releases/tag/rust-v0.147.0)
 adds persistent, manually ordered chat sections and portable Agent Plugins.
 Search across local, personal, workspace, and remote plugin catalogs, or
-[import Cursor and Claude Code setup](https://learn.chatgpt.com/docs/import) without duplicating
+[import Cursor and Claude Code setup](import.html) without duplicating
 synced conversations.
 
 Use `--approve-for-me` to enable [automatic approval
-review](https://learn.chatgpt.com/docs/sandboxing/auto-review) for eligible requests without expanding
+review](sandboxing/auto-review.html) for eligible requests without expanding
 filesystem or network permissions. Amazon Bedrock sessions also gain cached
 web search and remote conversation compaction.
 
@@ -681,15 +681,15 @@ progress, measured token usage, resumable deep scans, and configurable
 discovery limits. The latest release also supports Amazon Bedrock
 authentication for repository scans and their delegated workers.
 
-Use the [Codex Security workbench](https://learn.chatgpt.com/docs/security/plugin/workbench) to review
+Use the [Codex Security workbench](security/plugin/workbench.html) to review
 scan progress and findings, or [configure a deep
-scan](https://learn.chatgpt.com/docs/security/plugin/deep-scans) when you need a more thorough
-assessment. Check the [plugin changelog](https://learn.chatgpt.com/docs/security/plugin/changelog) to
+scan](security/plugin/deep-scans.html) when you need a more thorough
+assessment. Check the [plugin changelog](security/plugin/changelog.html) to
 confirm which features your installed version supports.
 
 #### Review GitHub pull requests for security risks
 
-[Codex Security Review](https://learn.chatgpt.com/docs/security/security-review) analyzes pull-request
+[Codex Security Review](security/security-review.html) analyzes pull-request
 changes alongside repository context, threat models, and security guidance.
 Configure automatic reviews when a pull request opens or receives new
 commits, or request one directly with `@codex security review`.
@@ -704,17 +704,17 @@ can apply.
 
 GPT-5.6 Terra now costs 20% less, and GPT-5.6 Luna costs 80% less. Input,
 cached input, and output rates decreased by the same proportions. The updated
-[usage limits and rates](https://learn.chatgpt.com/docs/pricing) make Terra a stronger fit for everyday
+[usage limits and rates](pricing.html) make Terra a stronger fit for everyday
 work and Luna especially useful for focused coding and high-volume tasks.
 
 #### Find useful context across your browser and open tabs
 
-In the ChatGPT desktop app, the [built-in browser](https://learn.chatgpt.com/docs/browser) can find
+In the ChatGPT desktop app, the [built-in browser](browser.html) can find
 pages from your browsing history or search Google directly from its address
 bar. ChatGPT can also search your browsing history when a task needs earlier
 context.
 
-The [Chrome extension](https://learn.chatgpt.com/docs/chrome-extension) lets you mention open tabs,
+The [Chrome extension](chrome-extension.html) lets you mention open tabs,
 bring selected page text into a side chat, ask questions about YouTube videos,
 or select **Ask ChatGPT** from a page's context menu. Review and approve
 requests to use browser history before ChatGPT includes that information in a
@@ -723,7 +723,7 @@ task.
 #### Review changes across repositories
 
 When a [local project contains more than one
-folder](https://learn.chatgpt.com/docs/projects#use-local-projects-for-folders-and-codebases), the
+folder](projects.html#use-local-projects-for-folders-and-codebases), the
 desktop app shows every repository and the lines changed in each one. Select
 **Review** to inspect their diffs together without switching between separate
 review views.
@@ -733,7 +733,7 @@ review views.
 Open a generated image in the expanded viewer, then switch between
 **Focused view** and **Canvas view**. Add comments across images, select the
 versions you want to keep, and ask for targeted edits without leaving the chat.
-Learn more about [image generation](https://learn.chatgpt.com/docs/image-generation).
+Learn more about [image generation](image-generation.html).
 
 #### Find chats that need your attention
 
@@ -742,7 +742,7 @@ engaged with and work that needs your attention. Select the bell in the sidebar
 to open the view.
 
 [Read the July 30 desktop release
-notes](https://learn.chatgpt.com/docs/changelog#codex-2026-07-30-app).
+notes](changelog.html#codex-2026-07-30-app).
 
 #### Connect partner tools with Sign in with ChatGPT
 
@@ -754,7 +754,7 @@ working with that service in ChatGPT or Codex.
 Partners receive only your name, email address, and profile picture when
 available. Each plugin's requested access still requires a separate review
 and approval. Read the [July 29 sign-in
-announcement](https://learn.chatgpt.com/docs/changelog#codex-2026-07-29).
+announcement](changelog.html#codex-2026-07-29).
 
 #### Collaborate in a dedicated academic research workspace
 
@@ -779,7 +779,7 @@ installed plugins and their skills consistently with the desktop app.
 The release also improves pause and resume controls for goals, inline tables
 and visual themes, large workspace diffs, selected-text references, and model
 restoration. Read the [July 27 iOS release
-notes](https://learn.chatgpt.com/docs/changelog#codex-2026-07-27-mobile).
+notes](changelog.html#codex-2026-07-27-mobile).
 
 #### Compare security scans and manage findings
 
@@ -789,22 +789,22 @@ and finding histories. You can select findings for tracking in Linear or GitHub
 Issues, with Codex reviewing the proposed action before you approve it.
 
 Use the existing [Codex Security
-workbench](https://learn.chatgpt.com/docs/security/plugin/workbench) to review saved scans, findings,
+workbench](security/plugin/workbench.html) to review saved scans, findings,
 repository history, and remediation in the desktop app. The hosted plugin
 catalog offers version `0.1.15`, while the public CLI plugin marketplace
 offers version `0.1.11`. Check the [Codex Security plugin
-changelog](https://learn.chatgpt.com/docs/security/plugin/changelog) before relying on a new feature.
+changelog](security/plugin/changelog.html) before relying on a new feature.
 
 #### Run security scans from the terminal, CI, or TypeScript
 
 The public `@openai/codex-security` CLI and TypeScript SDK reached version
 `0.1.5`, with release numbers separate from the Codex Security plugin. Use the
-package to [run scans from the CLI](https://learn.chatgpt.com/docs/security/cli), review pull-request
-changes and upload SARIF results in [CI](https://learn.chatgpt.com/docs/security/cli/ci), or run
-resumable [bulk scans](https://learn.chatgpt.com/docs/security/cli/bulk-scans) across GitHub
+package to [run scans from the CLI](security/cli.html), review pull-request
+changes and upload SARIF results in [CI](security/cli/ci.html), or run
+resumable [bulk scans](security/cli/bulk-scans.html) across GitHub
 repositories or a pinned CSV inventory.
 
-The [Codex Security TypeScript SDK](https://learn.chatgpt.com/docs/security/sdk) also lets you build
+The [Codex Security TypeScript SDK](security/sdk.html) also lets you build
 scanning, progress reporting, cost controls, and cancellation into your own
 tools. The package is public, but running scans still requires Codex Security
 access. Some full-repository scans also require Trusted Access for Cyber.
@@ -818,17 +818,17 @@ It also adds temporary conversation forks, standalone web search for compatible
 custom model providers, executor-provided skills, and support for Agent Plugins
 manifests, workspace plugin publishing, and other plugin marketplaces.
 
-For custom clients, the [app server](https://learn.chatgpt.com/docs/app-server) can filter pinned
+For custom clients, the [app server](app-server.html) can filter pinned
 threads, create in-memory forks, inspect installed connector state, and read
 connector metadata. Experimental WebSocket support also connects app-server to
 remote Code Mode hosts. Review the
-[app-server security requirements](https://learn.chatgpt.com/docs/app-server#connect-the-cli-terminal-ui)
+[app-server security requirements](app-server.html#connect-the-cli-terminal-ui)
 before exposing a remote connection. The release also improves proxy support,
 MCP reconnection, terminal responsiveness, and Windows sandbox reliability.
 
 #### Use GPT-5.6 Sol for hosted Codex work
 
-[GPT-5.6 Sol](https://learn.chatgpt.com/docs/models#recommended-models) now powers Codex cloud code
+[GPT-5.6 Sol](models.html#recommended-models) now powers Codex cloud code
 review and quality assurance for eligible customers. Sol is the flagship
 GPT-5.6 model for complex coding, research, computer use, and security work.
 Codex cloud selects its model automatically; Terra and Luna remain available on
@@ -842,25 +842,25 @@ with `gpt-5.6-luna` in workspace defaults, saved model settings, managed
 configurations, custom agents, and scheduled tasks.
 
 The OpenAI API and Codex sessions authenticated with an API key are not
-affected. Review the [deprecated Codex models](https://learn.chatgpt.com/docs/models#deprecated-codex-models)
+affected. Review the [deprecated Codex models](models.html#deprecated-codex-models)
 and [workspace model
-availability](https://learn.chatgpt.com/docs/enterprise/workspace-model-availability) before the
+availability](enterprise/workspace-model-availability.html) before the
 cutoff.
 
 #### July 20–24, 2026
 
 #### Talk through work with ChatGPT Voice
 
-[ChatGPT Voice](https://learn.chatgpt.com/docs/features/voice), powered by GPT-Live, lets you talk
+[ChatGPT Voice](features/voice.html), powered by GPT-Live, lets you talk
 through work and coordinate tasks in Chat, Work, and Codex in the ChatGPT desktop
 app. Start a new chat or task in voice mode, then ask ChatGPT to start, check, or
 steer work in other threads.
 
-On macOS, say, “Take a look at this” to share an [appshot](https://learn.chatgpt.com/docs/appshots) of
+On macOS, say, “Take a look at this” to share an [appshot](appshots.html) of
 your frontmost window when **Screen context** is on.
 
 Voice is available with Plus, Pro, Business, Edu, and Enterprise plans in the
-desktop app and through [Remote on iOS](https://learn.chatgpt.com/docs/remote-connections#set-up-mobile-access).
+desktop app and through [Remote on iOS](remote-connections.html#set-up-mobile-access).
 
 #### Work across multiple folders in one local project
 
@@ -870,9 +870,9 @@ discovery of `AGENTS.md`, skills, and `config.toml`. Secondary folders remain
 available for file search, reading, and editing.
 
 Open **Edit project** to [add folders and choose the primary
-folder](https://learn.chatgpt.com/docs/projects#use-local-projects-for-folders-and-codebases).
+folder](projects.html#use-local-projects-for-folders-and-codebases).
 
-[Read the July 23 release notes](https://learn.chatgpt.com/docs/changelog#codex-2026-07-23-app).
+[Read the July 23 release notes](changelog.html#codex-2026-07-23-app).
 
 #### July 13–17, 2026
 
@@ -885,13 +885,13 @@ in the desktop app. Codex keeps its dedicated view and separate history for
 developer workflows.
 
 [Compare ChatGPT Work and Codex on
-desktop](https://learn.chatgpt.com/docs/use-chatgpt#compare-chatgpt-work-and-codex-on-desktop) to choose the
+desktop](use-chatgpt.html#compare-chatgpt-work-and-codex-on-desktop) to choose the
 view that fits your task.
 
 #### Control parallel Codex work with Codex Micro
 
 On July 15, OpenAI and Work Louder launched
-[Codex Micro](https://learn.chatgpt.com/docs/features/codex-micro), a limited-run physical control
+[Codex Micro](features/codex-micro.html), a limited-run physical control
 surface for Codex in the ChatGPT desktop app. Its Agent Keys show the status of
 up to six chats and switch between them. Customizable Command Keys, an analog
 stick, and a dial can trigger common actions or skills, start push-to-talk, and
@@ -901,7 +901,7 @@ adjust reasoning effort without leaving the keyboard.
 
 GPT-5.6 Sol, Terra, and Luna reached general availability through Amazon
 Bedrock. Local ChatGPT Work and Codex surfaces can use the built-in
-[`amazon-bedrock` provider](https://learn.chatgpt.com/docs/amazon-bedrock) with a Bedrock API key or the
+[`amazon-bedrock` provider](amazon-bedrock.html) with a Bedrock API key or the
 AWS SDK credential chain. This includes Work and Codex in the ChatGPT desktop
 app, Codex CLI, the IDE extension, and the Codex SDK.
 
@@ -910,27 +910,27 @@ app, Codex CLI, the IDE extension, and the Codex SDK.
 ChatGPT for iOS 1.2026.188 added inline visualizations to Codex tasks and
 improved creating and managing tasks from conversations, including reliable
 links to newly created tasks. Read the
-[July 13 iOS release notes](https://learn.chatgpt.com/docs/changelog#codex-2026-07-13-mobile).
+[July 13 iOS release notes](changelog.html#codex-2026-07-13-mobile).
 
 #### July 6–10, 2026
 
 #### Take on ambitious work in ChatGPT
 
-[ChatGPT Work](https://learn.chatgpt.com/docs/get-started-with-work) in ChatGPT can gather context from
-your files and [plugins](https://learn.chatgpt.com/docs/plugins),
+[ChatGPT Work](get-started-with-work.html) in ChatGPT can gather context from
+your files and [plugins](plugins.html),
 take action across workflows, and create reviewable documents, presentations,
 spreadsheets, Sites, and other finished work. Powered by
-[GPT-5.6](https://learn.chatgpt.com/docs/models), it can break a goal into steps and work for hours while
+[GPT-5.6](models.html), it can break a goal into steps and work for hours while
 you follow its progress, answer questions, change direction, and approve
 important actions.
 
-[Scheduled tasks](https://learn.chatgpt.com/docs/automations) can keep that work moving when you're away
+[Scheduled tasks](automations.html) can keep that work moving when you're away
 by running once, on a schedule, when an event occurs, or while monitoring for
 changes.
 
 #### Choose the right GPT-5.6 model
 
-The [GPT-5.6 family](https://learn.chatgpt.com/docs/models#recommended-models) offers three recommended
+The [GPT-5.6 family](models.html#recommended-models) offers three recommended
 models across ChatGPT Work, the ChatGPT desktop app, Codex CLI, and the Codex IDE
 extension. Sol is the flagship for complex coding, computer use, research, and
 security work. Terra balances capability and cost for everyday work, while Luna
@@ -940,10 +940,10 @@ medium reasoning.
 #### Use Codex in the ChatGPT desktop app
 
 On July 9, the Codex app merged into the
-[ChatGPT desktop app](https://learn.chatgpt.com/docs/app) for macOS and Windows. Codex keeps its
+[ChatGPT desktop app](app.html) for macOS and Windows. Codex keeps its
 dedicated coding experience alongside ChatGPT's Chat and Work. The Codex
 experience includes inline editing in diffs, pull request review in the side panel, faster
-[Computer Use](https://learn.chatgpt.com/docs/computer-use) powered by GPT-5.6, and multi-repository
+[Computer Use](computer-use.html) powered by GPT-5.6, and multi-repository
 projects.
 
 Existing Codex app users can update as usual. You can make Codex the default
@@ -955,7 +955,7 @@ ChatGPT plan, including Free.
 
 #### Turn demonstrated workflows into reusable skills
 
-[Record & Replay](https://learn.chatgpt.com/docs/extend/record-and-replay) lets you show ChatGPT or
+[Record & Replay](extend/record-and-replay.html) lets you show ChatGPT or
 Codex a workflow on macOS and turn the demonstration into a reusable skill. Use
 it for repetitive tasks that are easier to show than describe, then refine the
 generated skill and replay it with new inputs. Initial availability excludes
@@ -963,7 +963,7 @@ the EEA, the United Kingdom, and Switzerland, and requires Computer Use.
 
 #### Continue a chat on another host
 
-[Chat handoff](https://learn.chatgpt.com/docs/remote-connections#hand-off-a-chat-between-hosts)
+[Chat handoff](remote-connections.html#hand-off-a-chat-between-hosts)
 moves a chat and its Git state between your local computer and a connected
 remote host. Codex can create or reuse a worktree on the destination, transfer
 the chat, and continue from the matching project.
@@ -982,15 +982,15 @@ rolling out to the EEA, the United Kingdom, and Switzerland. Memories remain
 off by default in those regions, and Chronicle is an opt-in research preview
 for ChatGPT Pro subscribers on macOS.
 
-Read the [June 15 iOS](https://learn.chatgpt.com/docs/changelog#codex-2026-06-15-mobile),
-[June 16 availability](https://learn.chatgpt.com/docs/changelog#codex-2026-06-16-app), and
-[June 18 app](https://learn.chatgpt.com/docs/changelog#codex-2026-06-18-app) release notes.
+Read the [June 15 iOS](changelog.html#codex-2026-06-15-mobile),
+[June 16 availability](changelog.html#codex-2026-06-16-app), and
+[June 18 app](changelog.html#codex-2026-06-18-app) release notes.
 
 #### June 8–12, 2026
 
 #### Debug web apps with Browser Developer mode
 
-[Developer mode](https://learn.chatgpt.com/docs/browser?surface=app#app-developer-mode) gives Codex controlled
+[Developer mode](browser.html#app-developer-mode) gives Codex controlled
 access to Chrome DevTools Protocol capabilities in Chrome and the built-in
 browser. Codex can inspect network traffic, console output, runtime errors, and
 page state while it profiles or debugs your app. Under **Developer mode** in
@@ -1012,15 +1012,15 @@ summaries.
 Remote on iOS can now choose a branch, create a worktree, run an environment
 setup script, manage goals, and add inline review comments.
 
-Read the [June 9 app](https://learn.chatgpt.com/docs/changelog#codex-2026-06-09-app),
-[June 9 iOS](https://learn.chatgpt.com/docs/changelog#codex-2026-06-09-mobile), and
-[June 11 app](https://learn.chatgpt.com/docs/changelog#codex-2026-06-11-app) release notes.
+Read the [June 9 app](changelog.html#codex-2026-06-09-app),
+[June 9 iOS](changelog.html#codex-2026-06-09-mobile), and
+[June 11 app](changelog.html#codex-2026-06-11-app) release notes.
 
 #### June 1–5, 2026
 
 #### Build and deploy websites with Sites
 
-[Sites](https://learn.chatgpt.com/docs/sites) lets ChatGPT create, save, deploy, and inspect websites,
+[Sites](sites.html) lets ChatGPT create, save, deploy, and inspect websites,
 dashboards, internal tools, web apps, and games hosted by OpenAI. Sites has a
 dedicated entry point in ChatGPT on the web and desktop, where you can return to
 projects and manage hosted environment values and secrets without assembling a
@@ -1028,20 +1028,20 @@ separate deployment stack.
 
 #### Use Codex with Amazon Bedrock
 
-You can [use Codex with Amazon Bedrock](https://learn.chatgpt.com/docs/amazon-bedrock) for local
+You can [use Codex with Amazon Bedrock](amazon-bedrock.html) for local
 workflows with AWS-managed authentication, account controls, and billing.
 Remote on iOS also added an optional in-app lock, follow-up behavior settings,
 line wrapping for diffs, and SSH connections to Windows machines. The desktop
 app added terminal placement controls and activity insights in the profile
 view.
 
-[Read all June 2026 release notes](https://learn.chatgpt.com/docs/changelog#month-2026-06).
+[Read all June 2026 release notes](changelog.html#month-2026-06).
 
 #### May 25–29, 2026
 
 #### Use Windows apps and control Codex remotely
 
-[Computer use](https://learn.chatgpt.com/docs/computer-use#windows-foreground-use) added support for
+[Computer use](computer-use.html#windows-foreground-use) added support for
 seeing, clicking, and typing in Windows desktop apps. Install the Computer Use
 plugin before starting. On Windows, Codex uses the active desktop and takes
 over the foreground while the task runs. Remote connections also support
@@ -1055,28 +1055,28 @@ added chat coordination for local projects and worktrees, content and
 branch-name search for past chats, and consistent visual identifiers for
 background subagents.
 
-Read the [May 25 iOS](https://learn.chatgpt.com/docs/changelog#codex-2026-05-25-mobile) and
-[May 29 app](https://learn.chatgpt.com/docs/changelog#codex-2026-05-28-app) release notes.
+Read the [May 25 iOS](changelog.html#codex-2026-05-25-mobile) and
+[May 29 app](changelog.html#codex-2026-05-28-app) release notes.
 
 #### May 18–22, 2026
 
 #### Give Codex context from any Mac app with Appshots
 
-[Appshots](https://learn.chatgpt.com/docs/appshots) send the frontmost app window to Codex with a
+[Appshots](appshots.html) send the frontmost app window to Codex with a
 screenshot and available text when you press both Command keys. Codex gets
 working context from design tools, dashboards, documents, and other apps
 without requiring you to copy, paste, or describe what's on screen.
 
 #### Follow long-running goals
 
-[Goal mode](https://learn.chatgpt.com/docs/prompting#goal-mode) left experimental status and is
+[Goal mode](prompting.html#goal-mode) left experimental status and is
 available in the Codex app, IDE extension, and CLI for objectives that can take
-hours or days. [Locked use](https://learn.chatgpt.com/docs/computer-use#locked-use) lets Codex
+hours or days. [Locked use](computer-use.html#locked-use) lets Codex
 continue approved computer-use work after a Mac locks, including through
 **Remote** in the ChatGPT mobile app. ChatGPT Business workspaces can also
 [share reusable plugin bundles with workspace members](https://developers.openai.com/plugins/build/plugins#share-a-local-plugin-with-your-workspace).
 
-[Read the May 21 launch notes](https://learn.chatgpt.com/docs/changelog#codex-2026-05-21).
+[Read the May 21 launch notes](changelog.html#codex-2026-05-21).
 
 #### May 11–15, 2026
 
@@ -1085,73 +1085,73 @@ continue approved computer-use work after a Mac locks, including through
 In the ChatGPT mobile app, **Remote** connects to a Mac running the ChatGPT
 desktop app. Because work runs on the connected host, your projects, files,
 credentials, plugins, skills, and configuration remain available when you
-continue from your phone. See [Remote connections](https://learn.chatgpt.com/docs/remote-connections)
+continue from your phone. See [Remote connections](remote-connections.html)
 to set up a host and pick up work from another device.
 
 #### Automate trusted workflows
 
 Hooks reached general availability for running custom commands at key points in
 the agent lifecycle. ChatGPT Enterprise admins can also enable
-[Codex access tokens](https://learn.chatgpt.com/docs/enterprise/access-tokens) for trusted scripts,
+[Codex access tokens](enterprise/access-tokens.html) for trusted scripts,
 schedulers, and private CI runners. Enterprise guidance expanded to cover
 managed setup and controls for Codex.
 
-[Read the May 14 launch notes](https://learn.chatgpt.com/docs/changelog#codex-2026-05-13-app).
+[Read the May 14 launch notes](changelog.html#codex-2026-05-13-app).
 
 #### May 4–8, 2026
 
 #### Work across browser tabs with the Chrome extension
 
-The [Chrome extension](https://learn.chatgpt.com/docs/chrome-extension) can work in
+The [Chrome extension](chrome-extension.html) can work in
 parallel across tabs in the background without taking over your browser. You
 control which websites Codex can use, making it practical to combine research,
 data entry, and verification across web apps in one task.
 
 The Codex app also added dictation cleanup and a custom dictionary for names,
 file paths, and code symbols. ChatGPT Enterprise workspace owners can allow
-members to create [Codex access tokens](https://learn.chatgpt.com/docs/enterprise/access-tokens) for
+members to create [Codex access tokens](enterprise/access-tokens.html) for
 trusted, non-interactive local workflows.
 
-Read the [May 5 app](https://learn.chatgpt.com/docs/changelog#codex-2026-05-05-app),
-[May 5 access-token](https://learn.chatgpt.com/docs/changelog#codex-2026-05-05), and
-[Codex for Chrome](https://learn.chatgpt.com/docs/changelog#codex-2026-05-07) launch notes.
+Read the [May 5 app](changelog.html#codex-2026-05-05-app),
+[May 5 access-token](changelog.html#codex-2026-05-05), and
+[Codex for Chrome](changelog.html#codex-2026-05-07) launch notes.
 
 #### April 20–24, 2026
 
 #### Use GPT-5.5 for complex work
 
-[GPT-5.5](https://learn.chatgpt.com/docs/models) arrived in Codex as the recommended model for most
+[GPT-5.5](models.html) arrived in Codex as the recommended model for most
 tasks, with strengths across implementation, debugging, testing, computer use,
 research, and finished knowledge-work outputs.
 
 #### Let Codex operate the browser and review approvals
 
-[Computer Use in the built-in browser](https://learn.chatgpt.com/docs/browser?surface=app#app-computer-use-in-the-browser)
+[Computer Use in the built-in browser](browser.html#app-computer-use-in-the-browser)
 lets Codex click through local development servers and file-backed pages to
 reproduce issues and verify fixes. Eligible approval requests can also go
-through [automatic approval review](https://learn.chatgpt.com/docs/sandboxing/auto-review),
+through [automatic approval review](sandboxing/auto-review.html),
 which shows the review status and risk before the action runs.
 
-[Read the April 23 launch notes](https://learn.chatgpt.com/docs/changelog#codex-2026-04-23).
+[Read the April 23 launch notes](changelog.html#codex-2026-04-23).
 
 #### April 13–17, 2026
 
 #### Preview and operate work in one place
 
-The [built-in browser](https://learn.chatgpt.com/docs/browser?surface=app) added live previews and page
-comments, while [Computer Use](https://learn.chatgpt.com/docs/computer-use) let Codex see and
+The [built-in browser](browser.html) added live previews and page
+comments, while [Computer Use](computer-use.html) let Codex see and
 operate macOS apps. Together, they made visual implementation and end-to-end
 verification part of the same task as the code change.
 
 #### Start with a chat and keep it moving
 
-[Standalone chats](https://learn.chatgpt.com/docs/projects#start-without-a-project) made it
+[Standalone chats](projects.html#start-without-a-project) made it
 possible to begin without choosing a project folder. The same release added
-[scheduled tasks inside a chat](https://learn.chatgpt.com/docs/automations#schedule-a-task-inside-a-chat),
-pull-request context, richer file previews, and [Memories](https://learn.chatgpt.com/docs/customization/memories) for
+[scheduled tasks inside a chat](automations.html#schedule-a-task-inside-a-chat),
+pull-request context, richer file previews, and [Memories](customization/memories.html) for
 work that spans chats.
 
-[Read the April 16 Codex app release notes](https://learn.chatgpt.com/docs/changelog#codex-2026-04-16-app).
+[Read the April 16 Codex app release notes](changelog.html#codex-2026-04-16-app).
 
 #### April 6–10, 2026
 
@@ -1162,22 +1162,22 @@ review modes, and clearer Git and source context. Pull-request activity,
 comments, and push choices then moved into the app alongside workspace file
 tabs, so you could inspect a change and respond without switching tools.
 
-Read the [April 9](https://learn.chatgpt.com/docs/changelog#codex-2026-04-09-app) and
-[April 10](https://learn.chatgpt.com/docs/changelog#codex-2026-04-10-app) Codex app release notes, or
-learn how to [review changes in the app](https://learn.chatgpt.com/docs/code-review?surface=app).
+Read the [April 9](changelog.html#codex-2026-04-09-app) and
+[April 10](changelog.html#codex-2026-04-10-app) Codex app release notes, or
+learn how to [review changes in the app](code-review.html).
 
 #### March 23–27, 2026
 
 #### Package workflows as plugins
 
-[Plugins](https://learn.chatgpt.com/docs/plugins) launched as installable bundles of skills,
+[Plugins](plugins.html) launched as installable bundles of skills,
 connectors, and MCP servers. They made complete workflows easier to discover,
 install, and share, while redesigned plugin and skill pages made their contents
 and status clearer. Search for past chats also arrived that week.
 
-Read the [task search](https://learn.chatgpt.com/docs/changelog#codex-2026-03-24-app),
-[plugins launch](https://learn.chatgpt.com/docs/changelog#codex-2026-03-25), and
-[Codex app](https://learn.chatgpt.com/docs/changelog#codex-2026-03-25-app) release notes.
+Read the [task search](changelog.html#codex-2026-03-24-app),
+[plugins launch](changelog.html#codex-2026-03-25), and
+[Codex app](changelog.html#codex-2026-03-25-app) release notes.
 
 #### March 16–20, 2026
 
@@ -1188,46 +1188,46 @@ approach without losing the original path. Model and reasoning commands became
 available while drafting, enabled skills appeared in the `@` menu, and GPT-5.4
 mini added a faster option for lighter tasks and subagents.
 
-Read the [GPT-5.4 mini](https://learn.chatgpt.com/docs/changelog#codex-2026-03-17),
-[chat control](https://learn.chatgpt.com/docs/changelog#codex-2026-03-18-app), and
-[skill menu](https://learn.chatgpt.com/docs/changelog#codex-2026-03-19-app) release notes.
+Read the [GPT-5.4 mini](changelog.html#codex-2026-03-17),
+[chat control](changelog.html#codex-2026-03-18-app), and
+[skill menu](changelog.html#codex-2026-03-19-app) release notes.
 
 #### March 9–13, 2026
 
 #### Schedule work with the right environment
 
-[Scheduled tasks](https://learn.chatgpt.com/docs/automations) could run locally or in a worktree
+[Scheduled tasks](automations.html) could run locally or in a worktree
 with an explicit model and reasoning level. Reusable templates made common
 tasks faster to configure, and custom themes made the workspace easier to
 personalize.
 
 #### Let Codex inspect terminal output
 
-Codex also learned to read the [integrated terminal](https://learn.chatgpt.com/docs/integrated-terminal#run-and-validate-your-project)
+Codex also learned to read the [integrated terminal](integrated-terminal.html#run-and-validate-your-project)
 for the current chat. It could inspect a running development server or build
 output directly instead of asking you to paste it.
 
-Read the [March 11](https://learn.chatgpt.com/docs/changelog#codex-2026-03-11-app) and
-[March 12](https://learn.chatgpt.com/docs/changelog#codex-2026-03-12-app) Codex app release notes.
+Read the [March 11](changelog.html#codex-2026-03-11-app) and
+[March 12](changelog.html#codex-2026-03-12-app) Codex app release notes.
 
 #### March 2–6, 2026
 
 #### Run Codex natively on Windows
 
-The Codex app launched on [Windows](https://learn.chatgpt.com/docs/windows/windows-app) with native PowerShell
+The Codex app launched on [Windows](windows/windows-app.html) with native PowerShell
 and sandbox support, plus worktrees, scheduled tasks, and skills. WSL remained
 available for developers who preferred a Linux environment.
 
 #### Move chats between Local and Worktree
 
-[Local and Worktree handoff](https://learn.chatgpt.com/docs/environments/git-worktrees#working-between-local-and-worktree)
+[Local and Worktree handoff](environments/git-worktrees.html#working-between-local-and-worktree)
 made it possible to move an active chat while preserving its context. GPT-5.4
 also arrived in Codex that week for coding, computer use, and longer-context
 workflows.
 
-Read the [Windows launch](https://learn.chatgpt.com/docs/changelog#codex-2026-03-04-app),
-[worktree handoff](https://learn.chatgpt.com/docs/changelog#codex-2026-03-03-app), and
-[GPT-5.4](https://learn.chatgpt.com/docs/changelog#codex-2026-03-05) release notes.
+Read the [Windows launch](changelog.html#codex-2026-03-04-app),
+[worktree handoff](changelog.html#codex-2026-03-03-app), and
+[GPT-5.4](changelog.html#codex-2026-03-05) release notes.
 
 #### February 9–13, 2026
 
@@ -1238,9 +1238,9 @@ real-time coding iteration. The app also added chat forking and a
 floating, always-on-top chat window, so you could explore another approach or
 keep Codex beside an editor or browser.
 
-Read the [Spark](https://learn.chatgpt.com/docs/changelog#codex-2026-02-12) and
-[Codex app](https://learn.chatgpt.com/docs/changelog#codex-2026-02-12-app) release notes, or see the
-current [model guide](https://learn.chatgpt.com/docs/models).
+Read the [Spark](changelog.html#codex-2026-02-12) and
+[Codex app](changelog.html#codex-2026-02-12-app) release notes, or see the
+current [model guide](models.html).
 
 #### February 2–6, 2026
 
@@ -1248,27 +1248,27 @@ current [model guide](https://learn.chatgpt.com/docs/models).
 
 The Codex app launched as a desktop workspace for parallel project chats,
 built-in Git review, worktrees, skills, scheduled tasks, and voice dictation.
-Those capabilities now live in Codex in the [ChatGPT desktop app](https://learn.chatgpt.com/docs/app).
+Those capabilities now live in Codex in the [ChatGPT desktop app](app.html).
 
 #### Steer active work and add files
 
 Mid-turn steering made it possible to redirect Codex without stopping an
 active response, and file attachments expanded beyond images. These patterns
-became the foundation for [steering and queuing](https://learn.chatgpt.com/docs/prompting#steering-and-queuing)
+became the foundation for [steering and queuing](prompting.html#steering-and-queuing)
 follow-ups with the context Codex needs.
 
-Read the [Codex app launch notes](https://learn.chatgpt.com/docs/changelog#codex-2026-02-02) and
-[February 5 app release notes](https://learn.chatgpt.com/docs/changelog#codex-2026-02-05-app).
+Read the [Codex app launch notes](changelog.html#codex-2026-02-02) and
+[February 5 app release notes](changelog.html#codex-2026-02-05-app).
 
 ### ChatGPT
 
-Source: [ChatGPT](https://learn.chatgpt.com/docs.md)
+Source: [ChatGPT](../docs.md)
 
 Use ChatGPT for ambitious work and software development
 
 ### Feature Maturity
 
-Source: [Feature Maturity](https://learn.chatgpt.com/docs/feature-maturity.md)
+Source: [Feature Maturity](feature-maturity.md)
 
 Some ChatGPT and Codex features ship behind a maturity label so you can understand how reliable each one is, what might change, and what level of support to expect.
 
@@ -1282,14 +1282,14 @@ Some ChatGPT and Codex features ship behind a maturity label so you can understa
 
 ### Pricing
 
-Source: [Pricing](https://learn.chatgpt.com/docs/pricing.md)
+Source: [Pricing](pricing.md)
 
 ChatGPT Work and Codex share usage. ChatGPT Work usage inside
 ChatGPT uses the same pricing, credits, and usage limits as Codex.
 
 GPT-5.5 retires from ChatGPT, ChatGPT Work, and Codex on all plans on
 October 14, 2026. The OpenAI API isn't affected. See
-[GPT-5.5 retirement](https://learn.chatgpt.com/docs/models#gpt-55-retirement) for migration guidance.
+[GPT-5.5 retirement](models.html#gpt-55-retirement) for migration guidance.
 
 Pricing options
 
@@ -1346,7 +1346,7 @@ Great for automation in shared environments like CI.
 - Model availability follows the API models available to your key
 - Pay for Codex usage based on [API pricing](https://developers.openai.com/api/docs/pricing)
 
-[Learn more](https://learn.chatgpt.com/docs/auth)
+[Learn more](auth.html)
 
 **Business** ($20 / user / month\*):
 
@@ -1418,7 +1418,7 @@ Tasks that look similar can consume different amounts of your allowance. Model
 choice, context, reasoning, tool use, retrieval, and caching all affect usage,
 so prompt length alone isn't a reliable estimate.
 
-For model recommendations, see [Models](https://learn.chatgpt.com/docs/models).
+For model recommendations, see [Models](models.html).
 
 The estimates below show local messages per five-hour period. Cloud chats on
 ChatGPT plans use GPT-5.6 Sol and may use more of your allowance than local
@@ -1527,13 +1527,13 @@ Excel](https://help.openai.com/articles/20001063) on Plus and Pro.
 
 Speed configurations increase credit consumption for all applicable models, so
 they also use included limits faster. Fast mode consumes credits at a higher
-rate for supported models. See [Speed](https://learn.chatgpt.com/docs/agent-configuration/speed) for supported models and
+rate for supported models. See [Speed](agent-configuration/speed.html) for supported models and
 rates. Image generations also use included limits ~3-5x faster on average,
 depending on image quality and size.
 
 #### How much does Sites cost?
 
-[Sites](https://learn.chatgpt.com/docs/sites) is included with eligible ChatGPT plans during public
+[Sites](sites.html) is included with eligible ChatGPT plans during public
 beta. Availability depends on your plan, region, and workspace settings.
 
 #### How much does Voice cost?
@@ -1703,7 +1703,7 @@ sales](https://chatgpt.com/contact-sales?utm_internal_source=openai_developers_c
           other models.
 
           Daybreak access requires [Trusted Access for
-          Cyber](https://learn.chatgpt.com/docs/cyber-safety#trusted-access-for-cyber) approval.
+          Cyber](cyber-safety.html#trusted-access-for-cyber) approval.
           Daybreak Blue uses GPT-5.6 Sol credit rates. Daybreak Red requires
           separate approval and provisioning.
 
@@ -1715,7 +1715,7 @@ Pro.](https://help.openai.com/en/articles/12642688)
 [Learn more about credits in ChatGPT Business, Enterprise, and
 Edu.](https://help.openai.com/en/articles/11487671-flexible-pricing-for-the-enterprise-edu-and-business-plans)
 
-For Business and Enterprise/Edu credit billing, use the credit-based rate card. If your Enterprise agreement specifies usage-based billing in USD, use the Enterprise USD rate card and your agreement instead. Workspace administrators can also review [ChatGPT Work usage and cost](https://learn.chatgpt.com/docs/enterprise/chatgpt-work-usage-and-cost#understand-tokens-and-credits).
+For Business and Enterprise/Edu credit billing, use the credit-based rate card. If your Enterprise agreement specifies usage-based billing in USD, use the Enterprise USD rate card and your agreement instead. Workspace administrators can also review [ChatGPT Work usage and cost](enterprise/chatgpt-work-usage-and-cost.html#understand-tokens-and-credits).
 
 #### What counts as Code Review usage?
 
@@ -1737,13 +1737,13 @@ tips to maximize your limits:
   separate required work from optional improvements.
 - **Reduce the size of your AGENTS.md.** If you work on a larger project, you
   can control how much context you inject through AGENTS.md files by [nesting
-  them within your repository](https://learn.chatgpt.com/docs/agent-configuration/agents-md#layer-project-instructions).
+  them within your repository](agent-configuration/agents-md.html#layer-project-instructions).
 - **Limit the number of MCP servers you use.** Every
-  [MCP](https://learn.chatgpt.com/docs/extend/mcp) server adds more context to your messages and uses
+  [MCP](extend/mcp.html) server adds more context to your messages and uses
   more of your limit. Disable MCP servers when you don’t need them.
 
 For guidance on choosing and scoping tasks, see [Use Work
-efficiently](https://learn.chatgpt.com/docs/prompting#use-work-efficiently).
+efficiently](prompting.html#use-work-efficiently).
 
 #### Feature availability
 
@@ -1754,16 +1754,16 @@ efficiently](https://learn.chatgpt.com/docs/prompting#use-work-efficiently).
 
 ### Quickstart
 
-Source: [Quickstart](https://learn.chatgpt.com/docs/quickstart.md)
+Source: [Quickstart](quickstart.md)
 
 #### Where to use ChatGPT
 
 ChatGPT is available across different surfaces, including the
-[ChatGPT desktop app](https://learn.chatgpt.com/docs/app) and [ChatGPT on the web](https://learn.chatgpt.com/docs/web). Choose
+[ChatGPT desktop app](app.html) and [ChatGPT on the web](web.html). Choose
 the option that fits your work.
 
 If you're a developer and want to use Codex in your terminal or code editor,
-try [Codex CLI](https://learn.chatgpt.com/docs/codex/cli) or the [Codex IDE extension](https://learn.chatgpt.com/docs/codex/ide).
+try [Codex CLI](codex/cli.html) or the [Codex IDE extension](codex/ide.html).
 
 #### Setup
 
@@ -1772,7 +1772,7 @@ try [Codex CLI](https://learn.chatgpt.com/docs/codex/cli) or the [Codex IDE exte
 The ChatGPT desktop app is available for macOS, Windows, and Linux. Use it for
 projects, local files, longer tasks, and quick chats. For supported Linux
 distributions and package installation, see the
-[Linux desktop app guide](https://learn.chatgpt.com/docs/linux/linux-app).
+[Linux desktop app guide](linux/linux-app.html).
 
 1.  Install the ChatGPT desktop app
 
@@ -1781,12 +1781,12 @@ distributions and package installation, see the
 
     Open the app, then sign in with your ChatGPT account.
 
-    You may also use Codex with an API key. [Some features might not be available](https://learn.chatgpt.com/docs/pricing#feature-availability).
+    You may also use Codex with an API key. [Some features might not be available](pricing.html#feature-availability).
 
 2.  Select where ChatGPT should work
 
     Start a chat, create a project, or open a folder. ChatGPT can read and modify
-    files in the folder you choose. [Learn more about chats and projects](https://learn.chatgpt.com/docs/projects).
+    files in the folder you choose. [Learn more about chats and projects](projects.html).
 
 3.  Start a chat
 
@@ -1799,13 +1799,13 @@ distributions and package installation, see the
                   in the switcher at the top of the new chat page, above the composer. In
                   Codex, point to **New chat**, then select the **Quick chat** icon on its right.
 
-                Learn more about [using ChatGPT](https://learn.chatgpt.com/docs/use-chatgpt).
+                Learn more about [using ChatGPT](use-chatgpt.html).
 
 4.  Send your first message
 
     Describe your goal and add any files or context ChatGPT needs. Try an example:
 
-    Explore more [use cases](https://learn.chatgpt.com/use-cases).
+    Explore more [use cases](../use-cases.html).
 
 ChatGPT is available on the web and includes Chat and ChatGPT Work.
 
@@ -1820,7 +1820,7 @@ Go to [chatgpt.com](https://chatgpt.com) and sign in with your ChatGPT account.
                 - Select **Work** to research, analyze information, and create documents,
                   presentations, spreadsheets, Sites, or other finished work.
 
-                Learn more about [using ChatGPT](https://learn.chatgpt.com/docs/use-chatgpt).
+                Learn more about [using ChatGPT](use-chatgpt.html).
 
 3.  Select where ChatGPT should work
 
@@ -1836,12 +1836,12 @@ Go to [chatgpt.com](https://chatgpt.com) and sign in with your ChatGPT account.
 
     Use the ChatGPT desktop app to work with your local projects.
 
-](https://learn.chatgpt.com/docs/app)
+](app.html)
 [
 
     Bring supported setup, projects, and recent work into ChatGPT.
 
-](https://learn.chatgpt.com/docs/import)
+](import.html)
 
 ## Execution Model and Workflows
 
@@ -1851,9 +1851,9 @@ How Codex reasons through work, tasks, prompting, speed, and multi-agent coordin
 
 ### Best practices
 
-Source: [Best practices](https://learn.chatgpt.com/guides/best-practices.md)
+Source: [Best practices](../guides/best-practices.md)
 
-If you’re new to Codex or coding agents in general, this guide will help you get better results faster. It covers the core habits that make Codex more effective across the [CLI](https://learn.chatgpt.com/docs/codex/cli), [IDE extension](https://learn.chatgpt.com/docs/codex/ide), and the [ChatGPT desktop app](https://learn.chatgpt.com/docs/app), from prompting and planning to validation, MCP, skills, and scheduled tasks.
+If you’re new to Codex or coding agents in general, this guide will help you get better results faster. It covers the core habits that make Codex more effective across the [CLI](codex/cli.html), [IDE extension](codex/ide.html), and the [ChatGPT desktop app](app.html), from prompting and planning to validation, MCP, skills, and scheduled tasks.
 
 Codex works best when you treat it less like a one-off assistant and more like a teammate you configure and improve over time.
 
@@ -1861,7 +1861,7 @@ A useful way to think about this: start with the right context for the task, use
 
 #### Strong first use: Context and prompts
 
-Codex is already strong enough to be useful even when your prompt isn't perfect. You can often hand it a hard problem with minimal setup and still get a strong result. Clear [prompting](https://learn.chatgpt.com/docs/prompting) isn't required to get value, but it does make results more reliable, especially in larger codebases or higher-stakes tasks.
+Codex is already strong enough to be useful even when your prompt isn't perfect. You can often hand it a hard problem with minimal setup and still get a strong result. Clear [prompting](prompting.html) isn't required to get value, but it does make results more reliable, especially in larger codebases or higher-stakes tasks.
 
 If you work in a large or complex repository, the biggest unlock is giving Codex the right context for the task and a clear structure for what you want done.
 
@@ -1874,7 +1874,7 @@ A good default is to include four things in your prompt:
 
 This helps Codex stay scoped, make fewer assumptions, and produce work that's easier to review.
 
-Start with **Medium** for GPT-6 Sol, **High** for GPT-6 Luna, or **Light** for GPT-6 Astra (`low` in configuration). Adjust based on the task and the result. See [Models](https://learn.chatgpt.com/docs/models) for available reasoning levels.
+Start with **Medium** for GPT-6 Sol, **High** for GPT-6 Luna, or **Light** for GPT-6 Astra (`low` in configuration). Adjust based on the task and the result. See [Models](models.html) for available reasoning levels.
 
 - Low for faster, well-scoped tasks
 - Medium or High for more complex changes or debugging
@@ -1897,7 +1897,7 @@ A few approaches work well:
 
 #### Make guidance reusable with `AGENTS.md`
 
-Once a prompting pattern works, the next step is to stop repeating it manually. That's where [AGENTS.md](https://learn.chatgpt.com/docs/agent-configuration/agents-md) comes in.
+Once a prompting pattern works, the next step is to stop repeating it manually. That's where [AGENTS.md](agent-configuration/agents-md.html) comes in.
 
 Think of `AGENTS.md` as an open-format README for agents. It loads into context automatically and is the best place to encode how you and your team want Codex to work in a repository.
 
@@ -1931,13 +1931,13 @@ A good starting pattern is:
 - Keep repo-specific behavior in `.codex/config.toml`
 - Use command-line overrides only for one-off situations (if you use the CLI)
 
-[`config.toml`](https://learn.chatgpt.com/docs/config-file/config-basic) is where you define durable preferences such as MCP servers, multi-agent setup, and feature flags. Profile-specific overrides live in separate `$CODEX_HOME/profile-name.config.toml` files.
+[`config.toml`](config-file/config-basic.html) is where you define durable preferences such as MCP servers, multi-agent setup, and feature flags. Profile-specific overrides live in separate `$CODEX_HOME/profile-name.config.toml` files.
 
 Codex ships with operating level sandboxing and has two key knobs that you can control. Approval mode determines when Codex asks for your permission to run a command and sandbox mode determines if Codex can read or write in the directory and what files the agent can access.
 
 If you're new to coding agents, start with the default permissions. Keep approval and sandboxing tight by default, then loosen permissions only for trusted repos or specific workflows once the need is clear.
 
-Note that the CLI, IDE extension, and ChatGPT desktop app all share the same configuration layers. Learn more on the [sample configuration](https://learn.chatgpt.com/docs/config-file/config-sample) page.
+Note that the CLI, IDE extension, and ChatGPT desktop app all share the same configuration layers. Learn more on the [sample configuration](config-file/config-sample.html) page.
 
 Configure Codex for your real environment early. Many quality issues are
 really setup issues, like the wrong working directory, missing write access,
@@ -1958,7 +1958,7 @@ That can include:
 - Reviewing the diff for bugs, regressions, or risky patterns
 
 Toggle the diff panel in the ChatGPT desktop app to directly [review
-changes](https://learn.chatgpt.com/docs/code-review?surface=app) locally. Click on a specific row to
+changes](code-review.html) locally. Click on a specific row to
 provide feedback that gets fed as context to the next Codex turn.
 
 A useful option here is the slash command `/review`, which gives you a few ways to review code:
@@ -1972,13 +1972,13 @@ If you and your team have a `code_review.md` file and reference it from `AGENTS.
 
 Codex shouldn't just generate code. With the right instructions, it can also help **test it, check it, and review it**.
 
-If you use GitHub Cloud, you can set up Codex to run [code reviews for your PRs](https://learn.chatgpt.com/docs/third-party/github). At OpenAI, Codex reviews 100% of PRs. You can enable automatic reviews or have Codex reactively review when you @Codex.
+If you use GitHub Cloud, you can set up Codex to run [code reviews for your PRs](third-party/github.html). At OpenAI, Codex reviews 100% of PRs. You can enable automatic reviews or have Codex reactively review when you @Codex.
 
 #### Use MCPs for external context
 
 Use MCPs when the context Codex needs lives outside the repo. It lets Codex connect to the tools and systems you already use, so you don't have to keep copying and pasting live information into prompts.
 
-[Model Context Protocol](https://learn.chatgpt.com/docs/extend/mcp), or MCP, is an open standard for connecting Codex to external tools and systems.
+[Model Context Protocol](extend/mcp.html), or MCP, is an open standard for connecting Codex to external tools and systems.
 
 Use MCP when:
 
@@ -1997,7 +1997,7 @@ loop you already do often, then expand from there.
 
 #### Turn repeatable work into skills
 
-Once a workflow becomes repeatable, stop relying on long prompts or repeated back-and-forth. Use a [skill](https://learn.chatgpt.com/docs/build-skills) to package the instructions in a `SKILL.md` file, context, and supporting logic Codex should apply consistently. Skills work across the CLI, IDE extension, and ChatGPT desktop app.
+Once a workflow becomes repeatable, stop relying on long prompts or repeated back-and-forth. Use a [skill](build-skills.html) to package the instructions in a `SKILL.md` file, context, and supporting logic Codex should apply consistently. Skills work across the CLI, IDE extension, and ChatGPT desktop app.
 
 Keep each skill scoped to one job. Start with 2 to 3 concrete use cases, define clear inputs and outputs, and write the description so it says what the skill does and when to use it. Include the kinds of trigger phrases a user would actually say.
 
@@ -2022,12 +2022,12 @@ helpful for onboarding new teammates.
 
 #### Use scheduled tasks for repeated work
 
-Once a workflow is stable, you can schedule Codex to run it in the background for you. In the ChatGPT desktop app, [scheduled tasks](https://learn.chatgpt.com/docs/automations) let you choose the project, prompt, cadence, and execution environment for recurring work.
+Once a workflow is stable, you can schedule Codex to run it in the background for you. In the ChatGPT desktop app, [scheduled tasks](automations.html) let you choose the project, prompt, cadence, and execution environment for recurring work.
 
 Create a scheduled task from the **Scheduled** page. Choose the project, prompt,
 cadence, and whether the task runs in a dedicated Git worktree or in your local
 environment. The prompt can invoke skills. Learn more about
-[Git worktrees](https://learn.chatgpt.com/docs/environments/git-worktrees).
+[Git worktrees](environments/git-worktrees.html).
 
 Good candidates include:
 
@@ -2049,7 +2049,7 @@ or workflow setup over time.
 Chats accumulate context, decisions, and actions over time, so managing them well has a big impact on quality.
 
 The ChatGPT desktop app lets you pin chats and create worktrees. If you use the
-CLI, these [slash commands](https://learn.chatgpt.com/docs/developer-commands?surface=cli) are especially useful:
+CLI, these [slash commands](developer-commands.html) are especially useful:
 
 - `/experimental` to toggle experimental features and add to your `config.toml`
 - `/resume` to resume a saved chat
@@ -2064,7 +2064,7 @@ Keep one chat per coherent unit of work. If the work is still part of the same
 problem, staying in the same chat is often better because it preserves the
 reasoning trail. Fork only when the work truly branches.
 
-Use Codex’s [subagent](https://learn.chatgpt.com/docs/agent-configuration/subagents) workflows to
+Use Codex’s [subagent](agent-configuration/subagents.html) workflows to
 offload bounded work from the main thread. Keep the main agent focused on the
 core problem, and use subagents for tasks like exploration, tests, or triage.
 
@@ -2083,7 +2083,7 @@ A few common mistakes to avoid when first using Codex:
 
 ### Multi-agent operations
 
-Source: [Subagents](https://learn.chatgpt.com/docs/agent-configuration/subagents.md)
+Source: [Subagents](agent-configuration/subagents.md)
 
 ChatGPT Work and Codex can run subagent workflows by spawning specialized
 agents in parallel and then collecting their results in one response. This can
@@ -2231,7 +2231,7 @@ selected model supports.
 - **`medium`**: Balances speed and depth; the starting point for GPT-6 Sol.
 - **`low`**: Use when the task is straightforward and speed matters most.
 
-Higher reasoning effort increases response time and token usage, but it can improve quality for complex work. For details, see [Models](https://learn.chatgpt.com/docs/models), [Config basics](https://learn.chatgpt.com/docs/config-file/config-basic), and [Configuration Reference](https://learn.chatgpt.com/docs/config-file/config-reference).
+Higher reasoning effort increases response time and token usage, but it can improve quality for complex work. For details, see [Models](models.html), [Config basics](config-file/config-basic.html), and [Configuration Reference](config-file/config-reference.html).
 
 #### Orchestration and thread controls
 
@@ -2348,7 +2348,7 @@ them.
 
 #### Global settings
 
-Global subagent settings still live under `[agents]` in your [configuration](https://learn.chatgpt.com/docs/config-file/config-basic#configuration-precedence).
+Global subagent settings still live under `[agents]` in your [configuration](config-file/config-basic.html#configuration-precedence).
 
 | Field                                       | Type    | Required | Purpose                                                             |
 | ------------------------------------------- | ------- | :------: | ------------------------------------------------------------------- |
@@ -2524,7 +2524,7 @@ Investigate why the settings modal fails to save. Have browser_debugger reproduc
 
 ### Projects and chats
 
-Source: [Projects and chats](https://learn.chatgpt.com/docs/projects.md)
+Source: [Projects and chats](projects.md)
 
 Use a project to organize related chats and give ChatGPT the context it needs.
 The **Projects** view in the ChatGPT desktop app includes ChatGPT projects and
@@ -2665,15 +2665,15 @@ unrelated work or when each chat should access only one part of a repository.
 This keeps the working context focused. Remote projects currently support one
 folder.
 
-Use [local environments](https://learn.chatgpt.com/docs/environments/local-environment) to define setup
+Use [local environments](environments/local-environment.html) to define setup
 actions and common commands for a project. The [review
-pane](https://learn.chatgpt.com/docs/code-review?surface=app) can show changes across repositories
+pane](code-review.html) can show changes across repositories
 attached to the same project. Pull request and
-[worktree](https://learn.chatgpt.com/docs/environments/git-worktrees) actions target the primary
+[worktree](environments/git-worktrees.html) actions target the primary
 repository. When you start a chat in a worktree, the other folders remain
 attached.
 
-Projects and worktrees organize work, but the [sandbox](https://learn.chatgpt.com/docs/sandboxing)
+Projects and worktrees organize work, but the [sandbox](sandboxing.html)
 enforces what local commands can read, change, or access over the network.
 
 #### Start a chat without a project
@@ -2706,59 +2706,59 @@ chat.
 
 #### Bring in other tools and context
 
-- Attach files or [image inputs](https://learn.chatgpt.com/docs/image-inputs) directly to a chat
+- Attach files or [image inputs](image-inputs.html) directly to a chat
   when they apply only to that request.
-- Install [plugins](https://learn.chatgpt.com/docs/plugins) to bring in context and actions from other
+- Install [plugins](plugins.html) to bring in context and actions from other
   services.
-- Configure [MCP](https://learn.chatgpt.com/docs/extend/mcp) servers when your organization or developer setup
+- Configure [MCP](extend/mcp.html) servers when your organization or developer setup
   exposes tools through Model Context Protocol.
-- Use [memories](https://learn.chatgpt.com/docs/customization/memories), where available, to carry useful context from
+- Use [memories](customization/memories.html), where available, to carry useful context from
   past work into future chats.
 
-- Pass [image inputs](https://learn.chatgpt.com/docs/image-inputs) to a chat when visual context applies
+- Pass [image inputs](image-inputs.html) to a chat when visual context applies
   only to that request.
-- Install [plugins](https://learn.chatgpt.com/docs/plugins) to bring in context and actions from other
+- Install [plugins](plugins.html) to bring in context and actions from other
   services.
-- Configure [MCP](https://learn.chatgpt.com/docs/extend/mcp) servers when your organization or developer setup
+- Configure [MCP](extend/mcp.html) servers when your organization or developer setup
   exposes tools through Model Context Protocol.
-- Use [memories](https://learn.chatgpt.com/docs/customization/memories), where available, to carry useful context from
+- Use [memories](customization/memories.html), where available, to carry useful context from
   past work into future chats.
 
 - Reference open files or select code in the editor to add context for the
   current turn.
-- Configure [MCP](https://learn.chatgpt.com/docs/extend/mcp) servers when your organization or developer setup
+- Configure [MCP](extend/mcp.html) servers when your organization or developer setup
   exposes tools through Model Context Protocol.
-- Use [memories](https://learn.chatgpt.com/docs/customization/memories) from the connected Codex host, where
+- Use [memories](customization/memories.html) from the connected Codex host, where
   available, to carry useful context into future chats.
 
 - Add files and connected sources to the project's **Sources** section when they
   should be available across its chats.
-- Attach files or [image inputs](https://learn.chatgpt.com/docs/image-inputs) directly to a chat when
+- Attach files or [image inputs](image-inputs.html) directly to a chat when
   they apply only to that chat.
-- In ChatGPT Work, install [plugins](https://learn.chatgpt.com/docs/plugins) to bring in context and
+- In ChatGPT Work, install [plugins](plugins.html) to bring in context and
   actions from other services.
-- Use [memories](https://learn.chatgpt.com/docs/customization/memories), where available, to carry useful context from
+- Use [memories](customization/memories.html), where available, to carry useful context from
   past work into future chats.
 
 #### Next steps
 
-- [Learn how to write and refine prompts](https://learn.chatgpt.com/docs/prompting)
-- [Learn how to use ChatGPT](https://learn.chatgpt.com/docs/use-chatgpt)
-- [Continue long-running work](https://learn.chatgpt.com/docs/long-running-work)
+- [Learn how to write and refine prompts](prompting.html)
+- [Learn how to use ChatGPT](use-chatgpt.html)
+- [Continue long-running work](long-running-work.html)
 
 ### Speed
 
-Source: [Speed](https://learn.chatgpt.com/docs/agent-configuration/speed.md)
+Source: [Speed](agent-configuration/speed.md)
 
 ChatGPT Work and Codex share usage. Both use the same
-pricing, credits, and usage limits. See [Codex pricing](https://learn.chatgpt.com/docs/pricing) for
+pricing, credits, and usage limits. See [Codex pricing](pricing.html) for
 details.
 
 #### Fast mode
 
 GPT-5.5 retires from ChatGPT, ChatGPT Work, and Codex on all plans on
 October 14, 2026. The OpenAI API isn't affected. See
-[GPT-5.5 retirement](https://learn.chatgpt.com/docs/models#gpt-55-retirement) for migration guidance.
+[GPT-5.5 retirement](models.html#gpt-55-retirement) for migration guidance.
 
 Codex offers the ability to increase the speed of the model for increased
 credit consumption.
@@ -2768,8 +2768,8 @@ GPT-5.6 and GPT-5.5 consume credits at 2.5x the Standard rate; GPT-5.4 consumes
 credits at 2x the Standard rate.
 
 For GPT-6 Astra, GPT-6 Sol, and GPT-6 Luna, Fast mode consumes credits at
-2.5x the Standard rate where available. See [Models](https://learn.chatgpt.com/docs/models) for model availability and
-[Pricing](https://learn.chatgpt.com/docs/pricing#token-rates) for token rates.
+2.5x the Standard rate where available. See [Models](models.html) for model availability and
+[Pricing](pricing.html#token-rates) for token rates.
 
 Use `/fast on`, `/fast off`, or `/fast status` in the CLI to change or inspect
 the current setting. You can also persist the default with `service_tier =
@@ -2782,83 +2782,83 @@ apply. API Priority processing has its own billing rate; for GPT-5.6, it costs
 
 ### Developers
 
-Source: [Developers](https://learn.chatgpt.com/docs/developers.md)
+Source: [Developers](developers.md)
 
 Use Codex with codebases, development environments, automation, and your team's tools.
 
 Codex supports everyday code work and deeper integrations across local and cloud environments. Its developer workflows span code review, the integrated terminal, reusable skills and plugins, automation with the SDK and App Server, team tools, and reference material for each surface.
 
-[Explore workflows](https://learn.chatgpt.com/docs/code-review?surface=app)
+[Explore workflows](code-review.html)
 
 #### Development workflows
 
 Review changes and work with development tools in ChatGPT.
 
-- [Code review](https://learn.chatgpt.com/docs/code-review): Review changes and address feedback before you ship.
+- [Code review](code-review.html): Review changes and address feedback before you ship.
 
-- [Integrated terminal](https://learn.chatgpt.com/docs/integrated-terminal): Run commands and inspect output inside the ChatGPT desktop app.
+- [Integrated terminal](integrated-terminal.html): Run commands and inspect output inside the ChatGPT desktop app.
 
 #### Extend and automate
 
 Package development workflows and run deterministic automation.
 
-- [Build skills](https://learn.chatgpt.com/docs/build-skills): Package instructions and resources for repeatable tasks in ChatGPT and Codex.
+- [Build skills](build-skills.html): Package instructions and resources for repeatable tasks in ChatGPT and Codex.
 
-- [Build plugins](https://learn.chatgpt.com/docs/build-plugins): Package skills and MCP servers for ChatGPT and Codex.
+- [Build plugins](build-plugins.html): Package skills and MCP servers for ChatGPT and Codex.
 
-- [Site tools (WebMCP)](https://learn.chatgpt.com/docs/webmcp): Use WebMCP to give AI agents a direct way to work with your website.
+- [Site tools (WebMCP)](webmcp.html): Use WebMCP to give AI agents a direct way to work with your website.
 
-- [Hooks](https://learn.chatgpt.com/docs/hooks): Run custom commands when Codex emits lifecycle events.
+- [Hooks](hooks.html): Run custom commands when Codex emits lifecycle events.
 
 #### Environments
 
 Choose where development work runs and how it is isolated.
 
-- [Environments](https://learn.chatgpt.com/docs/environments/modes): Compare local, cloud, and other ways to run a task.
+- [Environments](environments/modes.html): Compare local, cloud, and other ways to run a task.
 
-- [Local environments](https://learn.chatgpt.com/docs/environments/local-environment): Configure setup scripts and actions for projects and worktrees.
+- [Local environments](environments/local-environment.html): Configure setup scripts and actions for projects and worktrees.
 
-- [Cloud environment](https://learn.chatgpt.com/docs/environments/cloud-environment): Delegate work to a configured cloud environment.
+- [Cloud environment](environments/cloud-environment.html): Delegate work to a configured cloud environment.
 
-- [Git worktrees](https://learn.chatgpt.com/docs/environments/git-worktrees): Isolate parallel changes in separate working trees.
+- [Git worktrees](environments/git-worktrees.html): Isolate parallel changes in separate working trees.
 
 #### Build with Codex
 
 Add Codex to products, systems, and automated workflows.
 
-- [Codex SDK](https://learn.chatgpt.com/docs/codex-sdk): Control Codex programmatically from your application.
+- [Codex SDK](codex-sdk.html): Control Codex programmatically from your application.
 
-- [App Server](https://learn.chatgpt.com/docs/app-server): Integrate with the protocol that powers Codex clients.
+- [App Server](app-server.html): Integrate with the protocol that powers Codex clients.
 
-- [GitHub Action](https://learn.chatgpt.com/docs/github-action): Run Codex from GitHub Actions workflows.
+- [GitHub Action](github-action.html): Run Codex from GitHub Actions workflows.
 
-- [Non-interactive mode](https://learn.chatgpt.com/docs/non-interactive-mode): Run Codex from scripts and other automated systems.
+- [Non-interactive mode](non-interactive-mode.html): Run Codex from scripts and other automated systems.
 
 #### Third-party integrations
 
 Delegate and track work from tools your team already uses.
 
-- [GitHub](https://learn.chatgpt.com/docs/third-party/github): Assign work, review changes, and move toward a pull request.
+- [GitHub](third-party/github.html): Assign work, review changes, and move toward a pull request.
 
-- [GitLab (Beta)](https://learn.chatgpt.com/docs/third-party/gitlab): Connect projects, delegate work, and review merge requests.
+- [GitLab (Beta)](third-party/gitlab.html): Connect projects, delegate work, and review merge requests.
 
-- [Slack](https://learn.chatgpt.com/docs/third-party/slack): Start Codex chats from external discussions and return results.
+- [Slack](third-party/slack.html): Start Codex chats from external discussions and return results.
 
-- [Linear](https://learn.chatgpt.com/docs/third-party/linear): Assign issues to Codex and follow work through delivery.
+- [Linear](third-party/linear.html): Assign issues to Codex and follow work through delivery.
 
 #### Reference
 
 Find commands, settings, and plugin submission errors for developer surfaces.
 
-- [CLI customization](https://learn.chatgpt.com/docs/cli-customization): Adjust syntax highlighting, themes, and shell behavior.
+- [CLI customization](cli-customization.html): Adjust syntax highlighting, themes, and shell behavior.
 
-- [Developer commands](https://learn.chatgpt.com/docs/developer-commands?surface=app): Use commands and slash commands in the desktop app, Codex CLI, and IDE extension.
+- [Developer commands](developer-commands.html): Use commands and slash commands in the desktop app, Codex CLI, and IDE extension.
 
-- [Developer settings](https://learn.chatgpt.com/docs/developer-settings?surface=app): Configure the desktop app, Codex CLI, and IDE extension for development.
+- [Developer settings](developer-settings.html): Configure the desktop app, Codex CLI, and IDE extension for development.
 
 ### Get started with ChatGPT Work
 
-Source: [Get started with ChatGPT Work](https://learn.chatgpt.com/docs/get-started-with-work.md)
+Source: [Get started with ChatGPT Work](get-started-with-work.md)
 
 #### Introducing ChatGPT Work
 
@@ -2867,14 +2867,14 @@ ChatGPT Work is a way to delegate real work to ChatGPT.
 Use Chat when you want an answer, explanation, brainstorm, or short draft.
 Use ChatGPT Work when you want ChatGPT to complete a task with a clear outcome, such as a
 brief, deck, analysis, recurring update, workflow, or file you can review and
-use. Learn more about [using Chat and ChatGPT Work together](https://learn.chatgpt.com/docs/use-chatgpt).
+use. Learn more about [using Chat and ChatGPT Work together](use-chatgpt.html).
 
 ChatGPT Work can use your files, plugins, and approved tools to retrieve information,
 create finished files, run workflows, and complete work that is ready for you to
 review. You can follow progress, answer questions, change direction, and
 approve important actions.
 
-On the [desktop app](https://learn.chatgpt.com/docs/app), ChatGPT Work can also use local files, apps, and the
+On the [desktop app](app.html), ChatGPT Work can also use local files, apps, and the
 browser when those tools are available.
 
 If you have used Codex for non-coding work, you can stay in Codex or use
@@ -2915,7 +2915,7 @@ options and helps you make a decision.
 Use scheduled tasks when you want ChatGPT Work to repeat, monitor, or refresh something
 over time.
 
-Learn more about [scheduled tasks](https://learn.chatgpt.com/docs/automations?surface=app).
+Learn more about [scheduled tasks](automations.html).
 
 #### Best practices for using ChatGPT Work
 
@@ -2933,7 +2933,7 @@ review or approval.
 
 **Instead of:** Make me a presentation about our customer research.
 
-Learn more about [prompting for ChatGPT Work](https://learn.chatgpt.com/docs/prompting#prompting-for-work).
+Learn more about [prompting for ChatGPT Work](prompting.html#prompting-for-work).
 
 #### Add plugins for more context and better outputs
 
@@ -2945,14 +2945,14 @@ project trackers.
 - Install the plugins most relevant to your work.
 - To point ChatGPT to a specific tool, type `@` and the plugin name in your prompt.
 
-Learn more about [plugins](https://learn.chatgpt.com/docs/plugins).
+Learn more about [plugins](plugins.html).
 
 #### Use ChatGPT Work efficiently
 
-Choose [GPT-6 Astra](https://learn.chatgpt.com/docs/models#gpt-6-astra) for demanding work that needs
+Choose [GPT-6 Astra](models.html#gpt-6-astra) for demanding work that needs
 careful reasoning, visual judgment, or a polished final file. For simpler tasks,
 consider Sol or Luna. Select from the models
-available in your model selector and check [plan usage](https://learn.chatgpt.com/docs/pricing)
+available in your model selector and check [plan usage](pricing.html)
 before starting a large task.
 
 ChatGPT Work is best for substantial tasks that involve multiple steps, sources, or
@@ -2967,10 +2967,10 @@ anything.”
 Use Chat instead for quick questions, short rewrites, and decisions where you
 only need advice.
 
-Learn more about [working efficiently](https://learn.chatgpt.com/docs/prompting#prompting-for-work).
+Learn more about [working efficiently](prompting.html#prompting-for-work).
 
 If a task pauses for a safety review, follow the notice and review any available
-findings before continuing. See [safety monitoring and paused tasks](https://learn.chatgpt.com/docs/agent-approvals-security#safety-monitoring-and-paused-tasks).
+findings before continuing. See [safety monitoring and paused tasks](agent-approvals-security.html#safety-monitoring-and-paused-tasks).
 
 #### More use cases
 
@@ -2978,7 +2978,7 @@ Explore practical ChatGPT Work workflows for common teams and tasks.
 
 ### Long-running work
 
-Source: [Long-running work](https://learn.chatgpt.com/docs/long-running-work.md)
+Source: [Long-running work](long-running-work.md)
 
 For work that may take many steps, give ChatGPT a clear outcome, constraints,
 and definition of done. Keep related work in the same chat so
@@ -2995,7 +2995,7 @@ Continue in the same web chat to add context, change constraints, or
 ask for a status update. Use separate chats when independent tasks can run in
 parallel, and avoid giving two tasks write access to the same connected source.
 For related work, keep the chats and source files together in a
-[project](https://learn.chatgpt.com/docs/projects).
+[project](projects.html).
 
 In an interactive Codex CLI session, enter `/goal` to start Goal mode. Continue
 the same session to steer the work or ask for a status update.
@@ -3059,38 +3059,38 @@ Continue in the same IDE chat to add context, adjust constraints, or ask for a
 status recap. Keep the workspace available while the goal is running.
 
 Starting a goal doesn't grant ChatGPT broader access. It keeps the same
-[sandbox and approval policy](https://learn.chatgpt.com/docs/sandboxing) and pauses when it
+[sandbox and approval policy](sandboxing.html) and pauses when it
 needs a decision. With [automatic approval
-reviews](https://learn.chatgpt.com/docs/sandboxing/auto-review), a separate reviewer can
+reviews](sandboxing/auto-review.html), a separate reviewer can
 evaluate eligible requests without expanding those boundaries.
 
 #### Run goals in parallel
 
 Each chat keeps its own context, messages, results, and goal. Run chats
 concurrently, but avoid letting two chats change the same files. Use
-[worktrees](https://learn.chatgpt.com/docs/environments/git-worktrees) to give parallel coding chats separate
+[worktrees](environments/git-worktrees.html) to give parallel coding chats separate
 checkouts.
 
 For local work, turn on **Prevent sleep while running** in settings so your Mac
-stays awake. Use [Pets](https://learn.chatgpt.com/docs/pets?surface=app) or [system
-notifications](https://learn.chatgpt.com/docs/notifications?surface=app) to see when a chat needs input
+stays awake. Use [Pets](pets.html) or [system
+notifications](notifications.html) to see when a chat needs input
 or is ready for review.
 
 #### Related docs
 
-- [Projects and chats](https://learn.chatgpt.com/docs/projects)
-- [Goal mode and prompting](https://learn.chatgpt.com/docs/prompting#goal-mode)
-- [Git worktrees](https://learn.chatgpt.com/docs/environments/git-worktrees)
+- [Projects and chats](projects.html)
+- [Goal mode and prompting](prompting.html#goal-mode)
+- [Git worktrees](environments/git-worktrees.html)
 
 #### Related docs
 
-- [Projects and chats](https://learn.chatgpt.com/docs/projects)
-- [Scheduled tasks](https://learn.chatgpt.com/docs/automations)
-- [Sandbox and permissions](https://learn.chatgpt.com/docs/sandboxing)
+- [Projects and chats](projects.html)
+- [Scheduled tasks](automations.html)
+- [Sandbox and permissions](sandboxing.html)
 
 ### Model selection
 
-Source: [Model selection](https://learn.chatgpt.com/docs/model-selection.md)
+Source: [Model selection](model-selection.md)
 
 import {
 ModelOverview,
@@ -3100,7 +3100,7 @@ ModelRecommender,
 #### Meet the models
 
 Availability, tools, reasoning settings, and usage limits differ by product and
-model version. Check the [models available in ChatGPT](https://learn.chatgpt.com/docs/models) or the
+model version. Check the [models available in ChatGPT](models.html) or the
 [API model catalog](https://developers.openai.com/api/docs/models).
 
 #### Find the right model for your workflow
@@ -3141,7 +3141,7 @@ lightest setting that meets your quality bar.
 
 ### Prompting
 
-Source: [Prompting](https://learn.chatgpt.com/docs/prompting.md)
+Source: [Prompting](prompting.md)
 
 #### Prompting overview
 
@@ -3182,13 +3182,13 @@ Share the information that could change the result. Add only the sources that
 matter, and explain what ChatGPT should take from each one.
 
 - Attach documents, spreadsheets, presentations, or PDF files when you want
-  ChatGPT to summarize, compare, transform, or [create files for review](https://learn.chatgpt.com/docs/artifacts-viewer).
-- Add a screenshot, diagram, or other [image input](https://learn.chatgpt.com/docs/image-inputs) when the
+  ChatGPT to summarize, compare, transform, or [create files for review](artifacts-viewer.html).
+- Add a screenshot, diagram, or other [image input](image-inputs.html) when the
   task depends on visual context. Point out the area that matters instead of
   relying on the image alone.
-- Ask ChatGPT to use [web search](https://learn.chatgpt.com/docs/web-search) when the answer depends on
+- Ask ChatGPT to use [web search](web-search.html) when the answer depends on
   current information, and ask for sources when you need to check the result.
-- Use a [project](https://learn.chatgpt.com/docs/projects) when related chats should share files,
+- Use a [project](projects.html) when related chats should share files,
   sources, or a local folder.
 
 #### Use connected sources
@@ -3216,7 +3216,7 @@ in the composer to choose a specific plugin.
 
     Find, install, and use plugins in ChatGPT and Codex.
 
-](https://learn.chatgpt.com/docs/plugins)
+](plugins.html)
 
 #### Personalize ChatGPT
 
@@ -3228,7 +3228,7 @@ prompt.
 
     Set a default personality, custom instructions, and other app preferences.
 
-](https://learn.chatgpt.com/docs/reference/settings#personalization)
+](reference/settings.html#personalization)
 
 #### Set boundaries that prevent real problems
 
@@ -3285,14 +3285,14 @@ the current run to finish:
   wait until the current work finishes.
 
 In the ChatGPT desktop app, choose the default under
-[**Settings > General > Follow-up behavior**](https://learn.chatgpt.com/docs/reference/settings#general).
+[**Settings > General > Follow-up behavior**](reference/settings.html#general).
 Queued messages appear above the composer, where you can edit, reorder, send, or
 delete them. The setting also shows the shortcut for using the other behavior
 for one message without changing your default.
 
 In Codex CLI, press Enter while Codex is working to steer the current
 turn, or press Tab to queue the message for the next turn. See the
-[interactive shortcuts](https://learn.chatgpt.com/docs/developer-commands?surface=cli#cli-interactive-shortcuts)
+[interactive shortcuts](developer-commands.html#cli-interactive-shortcuts)
 for details.
 
 #### Put the pieces together
@@ -3413,7 +3413,7 @@ for launch day. Flag any missing decisions before producing the final files.
 ```
 
 For recurring work, first refine the prompt in a normal chat. After the output is
-reliable, [schedule a task inside that chat](https://learn.chatgpt.com/docs/automations#schedule-a-task-inside-a-chat).
+reliable, [schedule a task inside that chat](automations.html#schedule-a-task-inside-a-chat).
 Create a standalone scheduled task instead when each scheduled run should start
 a new chat.
 
@@ -3425,9 +3425,9 @@ reproduction steps, preserves important constraints, and says how to verify the
 change.
 
 For a multi-step task, enter `/plan` in the app composer when you want Codex to
-investigate and propose an approach before editing. When [Goal mode](https://learn.chatgpt.com/docs/long-running-work)
+investigate and propose an approach before editing. When [Goal mode](long-running-work.html)
 is available, use `/goal` after the plan to set a persistent goal. See the [app slash
-commands](https://learn.chatgpt.com/docs/reference/slash-commands)
+commands](reference/slash-commands.html)
 for the current command list.
 
 #### How to read these examples
@@ -3441,7 +3441,7 @@ Each workflow includes:
 
 > **Note:** The IDE extension automatically includes your open files as context. In the CLI, mention paths explicitly, or attach files with `/mention` and `@` path autocomplete.
 
-Codex runs local commands inside a [sandbox](https://learn.chatgpt.com/docs/sandboxing)
+Codex runs local commands inside a [sandbox](sandboxing.html)
 that limits file and network access. If a task needs to cross that boundary,
 Codex follows your approval policy before continuing.
 
@@ -3714,7 +3714,7 @@ Context notes:
 
 #### Cloud delegation (IDE → Cloud)
 
-1. If you haven't already done so, set up a [Codex cloud environment](https://learn.chatgpt.com/docs/environments/cloud-environment).
+1. If you haven't already done so, set up a [Codex cloud environment](environments/cloud-environment.html).
 2. Click on the cloud icon beneath the prompt composer and select your cloud environment.
 3. When you enter the next prompt, Codex creates a new chat in the cloud that carries over the existing chat context (including the plan and any local source changes).
 
@@ -3730,7 +3730,7 @@ Context notes:
 
 Tasks delegated to the cloud run in isolated environments. Internet access is
 off during the agent phase unless you enable it for the environment. Learn more
-about [cloud internet access](https://learn.chatgpt.com/docs/cloud/internet-access).
+about [cloud internet access](cloud/internet-access.html).
 
 #### Do a local code review
 
@@ -3764,7 +3764,7 @@ Verification:
 
 Use this when you want review feedback without pulling the branch locally.
 
-Before you can use this, enable Codex **Code review** on your repository. See [Code review](https://learn.chatgpt.com/docs/third-party/github).
+Before you can use this, enable Codex **Code review** on your repository. See [Code review](third-party/github.html).
 
 #### GitHub workflow (comment-driven)
 
@@ -3808,11 +3808,11 @@ Sandbox behavior, approvals, cyber-safety, and security-specific guidance.
 
 ### Codex Security CLI FAQ
 
-Source: [Codex Security CLI FAQ](https://learn.chatgpt.com/docs/security/cli/faq.md)
+Source: [Codex Security CLI FAQ](security/cli/faq.md)
 
 Find answers to common questions about scanning repositories and managing
 security findings from the terminal. For installation and a first scan, start
-with the [CLI quickstart](https://learn.chatgpt.com/docs/security/cli).
+with the [CLI quickstart](security/cli.html).
 
 #### Repository scans
 
@@ -3845,7 +3845,7 @@ npx @openai/codex-security scan . --auth api-key
 
 To make your stored credentials the automatic default, run
 `unset OPENAI_API_KEY CODEX_API_KEY`. For all supported authentication modes,
-see the [CLI reference](https://learn.chatgpt.com/docs/security/cli/reference#select-scan-authentication).
+see the [CLI reference](security/cli/reference.html#select-scan-authentication).
 
 #### How does bulk repository scanning work
 
@@ -3869,7 +3869,7 @@ npx @openai/codex-security bulk-scan repositories.csv \
   --workers 4
 ```
 
-See [Run bulk security scans](https://learn.chatgpt.com/docs/security/cli/bulk-scans) for GitHub
+See [Run bulk security scans](security/cli/bulk-scans.html) for GitHub
 discovery, the CSV format, campaign results, and available options.
 
 #### Can an interrupted bulk scan resume
@@ -3903,7 +3903,7 @@ npx @openai/codex-security scan . \
 
 Codex Security uses these documents as context for the current scan. For
 supported file types and directory behavior, see [Add security
-context](https://learn.chatgpt.com/docs/security/cli/reference#add-security-context).
+context](security/cli/reference.html#add-security-context).
 
 #### Findings and coverage
 
@@ -3923,7 +3923,7 @@ npx @openai/codex-security scans show SCAN_ID
 
 Each completed scan keeps its report, findings, coverage, and supporting
 artifacts together. See [Scan
-artifacts](https://learn.chatgpt.com/docs/security/cli/reference#scan-artifacts) for the full layout.
+artifacts](security/cli/reference.html#scan-artifacts) for the full layout.
 
 To inspect saved scan and worker events, run `scans logs SCAN_ID`. These logs
 aren't redacted and can contain source code or credentials.
@@ -3980,7 +3980,7 @@ still independently check the current source, controls, and reachability. A
 dismissal doesn't suppress a rule, path, or vulnerability class.
 
 For command details, see the [findings
-reference](https://learn.chatgpt.com/docs/security/cli/reference#codex-security-findings).
+reference](security/cli/reference.html#codex-security-findings).
 
 #### Why can repeat scans return different findings
 
@@ -4059,7 +4059,7 @@ CLI returns exit code `2`.
 
 For persistent settings or bulk campaigns, set `max_time_hours` under
 `[deep_scan]` in the [deep-scan
-configuration](https://learn.chatgpt.com/docs/security/cli/reference#configure-deep-scans).
+configuration](security/cli/reference.html#configure-deep-scans).
 
 #### How do scan cost limits work
 
@@ -4093,18 +4093,18 @@ npx @openai/codex-security scan . \
 ```
 
 A complete scan returns exit code `1` when it finds an issue at or above the
-selected severity. See [Run scans in CI](https://learn.chatgpt.com/docs/security/cli/ci) for the
+selected severity. See [Run scans in CI](security/cli/ci.html) for the
 complete GitHub Actions workflow, artifact handling, and SARIF export.
 
 #### Can another application run scans directly
 
-Yes. Use the [TypeScript SDK](https://learn.chatgpt.com/docs/security/sdk) to start scans, select
+Yes. Use the [TypeScript SDK](security/sdk.html) to start scans, select
 targets, inspect findings and coverage, track progress, and apply cost controls
 from an application or developer tool.
 
 ### Codex Security CLI quickstart
 
-Source: [Codex Security CLI quickstart](https://learn.chatgpt.com/docs/security/cli.md)
+Source: [Codex Security CLI quickstart](security/cli.md)
 
 Codex Security helps security and engineering teams find, confirm, and fix
 vulnerabilities. Use its command-line interface (CLI) to scan
@@ -4113,15 +4113,15 @@ and check changes before they land.
 
 The `@openai/codex-security` package is public. Running scans requires Codex
 Security access. For an interactive scan in Codex, start with the [Codex
-Security plugin quickstart](https://learn.chatgpt.com/docs/security/plugin). For connected GitHub
-repositories, see [Codex Security cloud setup](https://learn.chatgpt.com/docs/security/setup).
+Security plugin quickstart](security/plugin.html). For connected GitHub
+repositories, see [Codex Security cloud setup](security/setup.html).
 
 #### Check the prerequisites
 
 The CLI requires Node.js 22 (22.13.0 or later), 24, or 26. Scans, bulk scans,
 exports, scan history, and saved findings also require Python 3.10 or later.
 For more detail, see [Authentication and
-prerequisites](https://learn.chatgpt.com/docs/security/cli/reference#authentication-and-prerequisites).
+prerequisites](security/cli/reference.html#authentication-and-prerequisites).
 
 #### Set up and verify the CLI
 
@@ -4146,7 +4146,7 @@ List the available commands:
 npx @openai/codex-security --help
 ```
 
-See also [CLI reference](https://learn.chatgpt.com/docs/security/cli/reference).
+See also [CLI reference](security/cli/reference.html).
 
 #### Sign in
 
@@ -4169,8 +4169,8 @@ export OPENAI_API_KEY="<your-api-key>"
 ```
 
 For AWS credentials, see [Amazon Bedrock
-setup](https://learn.chatgpt.com/docs/security/cli/reference#use-amazon-bedrock). For [OpenRouter or
-Fireworks](https://learn.chatgpt.com/docs/security/cli/reference#use-openrouter-or-fireworks), set the
+setup](security/cli/reference.html#use-amazon-bedrock). For [OpenRouter or
+Fireworks](security/cli/reference.html#use-openrouter-or-fireworks), set the
 provider's API key and select a model with `--provider` and `--model`.
 
 To use your ChatGPT sign-in when an API key is also set, select it explicitly:
@@ -4194,7 +4194,7 @@ Choose a repository you trust and have permission to assess. Scans use your
 local operating-system permissions and don't pause for approval. Scan
 processes can inherit your environment, so remove unrelated credentials before
 you start. See [Local scan
-permissions](https://learn.chatgpt.com/docs/security/cli/reference#local-scan-permissions).
+permissions](security/cli/reference.html#local-scan-permissions).
 
 Choose a directory outside the repository for the scan results:
 
@@ -4261,7 +4261,7 @@ npx @openai/codex-security scan "$REPOSITORY" --output-dir "$SCAN_DIR" --json
 
 Scans are report-only by default, so findings remain available for local
 review. You may want to add a severity threshold when you are ready to [run scans in
-CI](https://learn.chatgpt.com/docs/security/cli/ci).
+CI](security/cli/ci.html).
 
 #### Choose a model and reasoning effort
 
@@ -4302,7 +4302,7 @@ codex-security-results/
 
 Coverage can be `complete`, `partial`, or `unknown`. Read any deferred areas or
 open questions before treating the scan as evidence of review.
-The [CLI reference](https://learn.chatgpt.com/docs/security/cli/reference#scan-artifacts) describes
+The [CLI reference](security/cli/reference.html#scan-artifacts) describes
 the full artifact and output contract.
 
 #### Review and patch findings
@@ -4321,7 +4321,7 @@ npx @openai/codex-security scan "$REPOSITORY" \
 Add `--create-pr` to commit verified patches and open a GitHub pull request.
 
 You can also patch saved findings or import Linear issues. See the
-[`validate` and `patch` reference](https://learn.chatgpt.com/docs/security/cli/reference#codex-security-validate-and-codex-security-patch).
+[`validate` and `patch` reference](security/cli/reference.html#codex-security-validate-and-codex-security-patch).
 
 #### Choose the next scan
 
@@ -4459,7 +4459,7 @@ skips completed repositories. Add `--max-attempts 3` when you want to retry
 temporary repository or scan errors.
 
 For GitHub discovery, CSV preparation, campaign results, and Docker setup, see
-[Run bulk security scans](https://learn.chatgpt.com/docs/security/cli/bulk-scans).
+[Run bulk security scans](security/cli/bulk-scans.html).
 
 #### Run bulk scans in Docker
 
@@ -4540,28 +4540,28 @@ The comparison automatically matches findings by root cause and reuses saved
 matches.
 
 For the bulk-scan CSV format, scan-history filters, and command options, see
-the [CLI reference](https://learn.chatgpt.com/docs/security/cli/reference).
+the [CLI reference](security/cli/reference.html).
 
 Continue with the workflow that fits your goal:
 
-- [Run bulk security scans](https://learn.chatgpt.com/docs/security/cli/bulk-scans) to discover GitHub
+- [Run bulk security scans](security/cli/bulk-scans.html) to discover GitHub
   repositories or scan a pinned CSV inventory.
-- [Read the CLI FAQ](https://learn.chatgpt.com/docs/security/cli/faq) for answers about scan history,
+- [Read the CLI FAQ](security/cli/faq.html) for answers about scan history,
   false-positive feedback, coverage, and fix verification.
-- [Run scans in CI](https://learn.chatgpt.com/docs/security/cli/ci) to review pull requests, preserve
+- [Run scans in CI](security/cli/ci.html) to review pull requests, preserve
   results, and set a severity policy.
-- [Use the CLI reference](https://learn.chatgpt.com/docs/security/cli/reference) to check every flag,
+- [Use the CLI reference](security/cli/reference.html) to check every flag,
   output format, artifact, and exit code.
-- [Integrate the TypeScript SDK](https://learn.chatgpt.com/docs/security/sdk) to run scans from an
+- [Integrate the TypeScript SDK](security/sdk.html) to run scans from an
   application or developer tool.
 
 ### Codex Security CLI reference
 
-Source: [Codex Security CLI reference](https://learn.chatgpt.com/docs/security/cli/reference.md)
+Source: [Codex Security CLI reference](security/cli/reference.md)
 
 Use this reference to check the supported `codex-security` commands, flags,
 output formats, and exit behavior. For a guided first scan, start with the
-[CLI quickstart](https://learn.chatgpt.com/docs/security/cli).
+[CLI quickstart](security/cli.html).
 
 The `@openai/codex-security` package is public. Running scans requires Codex
 Security access. Scans use your local permissions and don't pause for
@@ -5010,7 +5010,7 @@ repository CSV:
 
 For a complete guide to GitHub discovery, CSV inventories, campaign results,
 and containerized scans, see [Run bulk security
-scans](https://learn.chatgpt.com/docs/security/cli/bulk-scans).
+scans](security/cli/bulk-scans.html).
 
 ```text
 usage: codex-security bulk-scan [input] [--output-dir DIR]
@@ -5068,7 +5068,7 @@ Run the same command again to resume from an existing output directory. The CLI
 skips completed scans, including scans with incomplete coverage.
 
 For containerized campaigns, see [Run bulk scans in
-Docker](https://learn.chatgpt.com/docs/security/cli/bulk-scans#run-bulk-scans-in-docker).
+Docker](security/cli/bulk-scans.html#run-bulk-scans-in-docker).
 
 #### `codex-security scans`
 
@@ -5654,16 +5654,16 @@ exports, scan history, and saved findings also require Python 3.10 or later.
 Python 3.10 also requires `tomli`. Use `--python` with `scan`, `bulk-scan`, or
 `export`, or set `PYTHON` for any Python-backed command.
 
-Continue with the [CLI quickstart](https://learn.chatgpt.com/docs/security/cli), [bulk-scan
-guide](https://learn.chatgpt.com/docs/security/cli/bulk-scans), [CLI FAQ](https://learn.chatgpt.com/docs/security/cli/faq), [CI
-guide](https://learn.chatgpt.com/docs/security/cli/ci), or [TypeScript SDK guide](https://learn.chatgpt.com/docs/security/sdk).
+Continue with the [CLI quickstart](security/cli.html), [bulk-scan
+guide](security/cli/bulk-scans.html), [CLI FAQ](security/cli/faq.html), [CI
+guide](security/cli/ci.html), or [TypeScript SDK guide](security/sdk.html).
 
 ### Codex Security cloud FAQ
 
-Source: [Codex Security cloud FAQ](https://learn.chatgpt.com/docs/security/faq.md)
+Source: [Codex Security cloud FAQ](security/faq.md)
 
 This FAQ covers Codex Security cloud. For local scans and workflows that run in
-a Codex task, see the [Codex Security plugin quickstart](https://learn.chatgpt.com/docs/security/plugin).
+a Codex task, see the [Codex Security plugin quickstart](security/plugin.html).
 
 {/_ vale Microsoft.Auto = NO _/}
 {/_ vale Vale.Spelling = NO _/}
@@ -5723,7 +5723,7 @@ No. The proposed patch is a recommended remediation. Users can review it and pus
 
 #### Does the project need to be built for scanning?
 
-No. Codex Security can produce findings from repository and commit context without a compile step. During auto-validation, it may try to build the project inside the container if that helps reproduce the issue. For environment setup details, see [Codex cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environment).
+No. Codex Security can produce findings from repository and commit context without a compile step. During auto-validation, it may try to build the project inside the container if that helps reproduce the issue. For environment setup details, see [Codex cloud environments](environments/cloud-environment.html).
 
 #### How does Codex Security reduce false positives and avoid broken patches?
 
@@ -5735,7 +5735,7 @@ Initial scan time depends on repository size, build time, and how many findings 
 
 #### What is a threat model?
 
-A threat model is the scan-time security context for a repository. It combines a concise project overview with attack-surface details such as entry points, trust boundaries, auth assumptions, and risky components. For more detail, see [Improving the threat model](https://learn.chatgpt.com/docs/security/threat-model).
+A threat model is the scan-time security context for a repository. It combines a concise project overview with attack-surface details such as entry points, trust boundaries, auth assumptions, and risky components. For more detail, see [Improving the threat model](security/threat-model.html).
 
 #### How is a threat model generated?
 
@@ -5747,11 +5747,11 @@ No. Codex Security accelerates review and helps rank findings, but it does not r
 
 #### Can I edit the threat model?
 
-Yes. Codex Security creates the initial threat model, and you can update it as the architecture, risks, and business context change. For the editing workflow, see [Improving the threat model](https://learn.chatgpt.com/docs/security/threat-model).
+Yes. Codex Security creates the initial threat model, and you can update it as the architecture, risks, and business context change. For the editing workflow, see [Improving the threat model](security/threat-model.html).
 
 #### Do I need to configure a scan before using threat modeling?
 
-Yes. Threat-model guidance is tied to how and what you scan, so you need to configure the repository first. See [Codex Security setup](https://learn.chatgpt.com/docs/security/setup).
+Yes. Threat-model guidance is tied to how and what you scan, so you need to configure the repository first. See [Codex Security setup](security/setup.html).
 
 #### What does the proposed patch contain?
 
@@ -5776,18 +5776,18 @@ The finding remains unvalidated. Logs and reports still capture what was attempt
 
 ### Codex Security cloud setup
 
-Source: [Codex Security cloud setup](https://learn.chatgpt.com/docs/security/setup.md)
+Source: [Codex Security cloud setup](security/setup.md)
 
 This page walks you from initial access to reviewed findings and remediation
 pull requests in Codex Security cloud.
 
 Confirm you've set up Codex cloud first. If not, see [Codex
-cloud](https://learn.chatgpt.com/docs/cloud) to get started.
+cloud](cloud.md) to get started.
 
 #### 1. Access and environment
 
 Codex Security cloud scans GitHub repositories connected through
-[Codex cloud](https://learn.chatgpt.com/docs/cloud).
+[Codex cloud](cloud.md).
 
 - Confirm your workspace has access to Codex Security cloud.
 - Confirm the repository you want to scan is available in Codex cloud.
@@ -5836,7 +5836,7 @@ updated scope, priorities, and assumptions.
 After initial findings appear, revisit the model so scan guidance stays aligned with current priorities.
 Keeping it current helps Codex Security produce better suggestions.
 
-For a deeper explanation of threat models and how they affect criticality and triage, see [Improving the threat model](https://learn.chatgpt.com/docs/security/threat-model).
+For a deeper explanation of threat models and how they affect criticality and triage, see [Improving the threat model](security/threat-model.html).
 
 #### 5. Review findings and patch
 
@@ -5864,13 +5864,13 @@ You can review each finding and create a PR directly from the finding detail pag
 
 #### Security setup references
 
-- [Codex Security](https://learn.chatgpt.com/docs/security) gives the product overview.
-- [Codex Security cloud FAQ](https://learn.chatgpt.com/docs/security/faq) covers common cloud questions.
-- [Improving the threat model](https://learn.chatgpt.com/docs/security/threat-model) explains how to improve scan context and finding prioritization.
+- [Codex Security](security.html) gives the product overview.
+- [Codex Security cloud FAQ](security/faq.html) covers common cloud questions.
+- [Improving the threat model](security/threat-model.html) explains how to improve scan context and finding prioritization.
 
 ### Codex Security plugin changelog
 
-Source: [Codex Security plugin changelog](https://learn.chatgpt.com/docs/security/plugin/changelog.md)
+Source: [Codex Security plugin changelog](security/plugin/changelog.md)
 
 Use this changelog to see what changed in the Codex Security plugin.
 
@@ -6003,7 +6003,7 @@ package and bundled plugin versions together.
 - Use four concurrent workers by default, stop after four consecutive completed
   scans add no new findings, and limit a deep scan to 40 worker runs. Existing
   `workers = "auto"` settings now resolve to four workers. See
-  [Configure deep-scan runtime](https://learn.chatgpt.com/docs/security/plugin/deep-scans#configure-deep-scan-runtime).
+  [Configure deep-scan runtime](security/plugin/deep-scans.html#configure-deep-scan-runtime).
 - Resume workers that finished source review but lost their final draft instead
   of repeating the complete audit.
 
@@ -6379,7 +6379,7 @@ package and bundled plugin versions together.
 
 ### Codex Security plugin quickstart
 
-Source: [Codex Security plugin quickstart](https://learn.chatgpt.com/docs/security/plugin.md)
+Source: [Codex Security plugin quickstart](security/plugin.md)
 
 Codex Security scans your code for vulnerabilities and validates plausible
 findings. For each reportable issue, it gives you the evidence and remediation
@@ -6391,11 +6391,11 @@ of a local repository in Codex.
 
 This page covers the Codex Security plugin in the desktop app or Codex CLI. To
 scan a connected GitHub repository in Codex cloud, see [Codex Security cloud
-setup](https://learn.chatgpt.com/docs/security/setup).
+setup](security/setup.html).
 
 #### Install the plugin
 
-1. Open [Codex in the ChatGPT desktop app](https://learn.chatgpt.com/docs/app).
+1. Open [Codex in the ChatGPT desktop app](app.html).
 2. Open **Plugins**, search for **Codex Security**, or use the button below:
 
 Install the Codex Security plugin
@@ -6415,7 +6415,7 @@ Install the Codex Security plugin
 To install Codex Security for a local repository, use the ChatGPT desktop app
 or Codex CLI.
 
-Check the [plugin changelog](https://learn.chatgpt.com/docs/security/plugin/changelog) before you rely
+Check the [plugin changelog](security/plugin/changelog.html) before you rely
 on a feature or start a long-running scan. If **Security** doesn't appear in
 the desktop-app sidebar, update the app and plugin and confirm that the plugin
 is enabled.
@@ -6507,35 +6507,35 @@ links from `report.md` continue to work.
 
 #### Choose your next workflow
 
-- [Use the Security workbench](https://learn.chatgpt.com/docs/security/plugin/workbench) to manage
+- [Use the Security workbench](security/plugin/workbench.html) to manage
   saved scans, findings, repositories, and scan activity in the desktop app.
-- [Run a scan from the CLI](https://learn.chatgpt.com/docs/security/cli) if you have beta access and
+- [Run a scan from the CLI](security/cli.html) if you have beta access and
   need a repeatable terminal workflow with structured results.
-- [Run a standard or scoped scan](https://learn.chatgpt.com/docs/security/plugin/scans) to review a
+- [Run a standard or scoped scan](security/plugin/scans.html) to review a
   repository or one folder with the default workflow.
-- [Assess a first scan](https://learn.chatgpt.com/docs/security/plugin/scans#assess-a-first-scan)
+- [Assess a first scan](security/plugin/scans.html#assess-a-first-scan)
   to check the results against known issues and decide when to scan again.
-- [Run a deep scan](https://learn.chatgpt.com/docs/security/plugin/deep-scans) for a more thorough scan
+- [Run a deep scan](security/plugin/deep-scans.html) for a more thorough scan
   when you can allow for a longer runtime.
-- [Review code changes](https://learn.chatgpt.com/docs/security/plugin/code-changes) to assess a pull
+- [Review code changes](security/plugin/code-changes.html) to assess a pull
   request, commit, branch range, or working-tree patch.
-- [Triage a backlog](https://learn.chatgpt.com/docs/security/plugin/triage-backlog) to review existing
+- [Triage a backlog](security/plugin/triage-backlog.html) to review existing
   security findings.
-- [Fix and verify a finding](https://learn.chatgpt.com/docs/security/plugin/fix-findings) after you
+- [Fix and verify a finding](security/plugin/fix-findings.html) after you
   accept one finding for remediation.
-- [Export or track findings](https://learn.chatgpt.com/docs/security/plugin/export-findings) to create
+- [Export or track findings](security/plugin/export-findings.html) to create
   JSON, CSV, SARIF, an approval-gated Linear, GitHub, or Jira issue, or a private
   draft GitHub Security Advisory.
-- [Write vulnerability reports](https://learn.chatgpt.com/docs/security/plugin/vulnerability-reports)
+- [Write vulnerability reports](security/plugin/vulnerability-reports.html)
   to turn supplied findings, disclosure notes, source, and PoCs into
   self-contained reports.
-- [Propose security hardening](https://learn.chatgpt.com/docs/security/plugin/security-hardening) to
+- [Propose security hardening](security/plugin/security-hardening.html) to
   consider structural or architectural options based on scan results or other
   security evidence.
 
 ### Codex Security TypeScript SDK
 
-Source: [Codex Security TypeScript SDK](https://learn.chatgpt.com/docs/security/sdk.md)
+Source: [Codex Security TypeScript SDK](security/sdk.md)
 
 Use the Codex Security TypeScript SDK to run security scans on repositories and
 code changes from your application or developer tool. The SDK returns typed
@@ -6549,8 +6549,8 @@ Python 3.10 also requires the `tomli` package.
 The Codex Security SDK is [publicly available on
 GitHub](https://github.com/openai/codex-security). Running scans requires
 Codex Security access. For general coding agents, see the [Codex SDK
-guide](https://learn.chatgpt.com/docs/codex-sdk). For terminal and CI workflows, see the [Codex
-Security CLI quickstart](https://learn.chatgpt.com/docs/security/cli).
+guide](codex-sdk.html). For terminal and CI workflows, see the [Codex
+Security CLI quickstart](security/cli.html).
 
 #### Set up the SDK
 
@@ -6576,7 +6576,7 @@ Scan only repositories you trust and have permission to assess. The SDK runs
 with your local operating-system permissions and never pauses for approval.
 Scan processes can inherit your environment, so remove unrelated credentials
 before you start. See [Local scan
-permissions](https://learn.chatgpt.com/docs/security/cli/reference#local-scan-permissions).
+permissions](security/cli/reference.html#local-scan-permissions).
 
 Create one `CodexSecurity` client, run a standard repository scan, and close
 the client when the work completes. Pass `outputDir` to choose a private
@@ -6968,12 +6968,12 @@ plugin interpreter. `codexOverrides` merges supported values into the isolated
 Codex configuration. Scans use `gpt-5.6-sol` with extra-high reasoning effort
 by default. Set `model` and `model_reasoning_effort` in `codexOverrides` to use
 a different model or reasoning effort. To use [Amazon
-Bedrock](https://learn.chatgpt.com/docs/security/cli/reference#use-amazon-bedrock), set
+Bedrock](security/cli/reference.html#use-amazon-bedrock), set
 `model_provider` and `model` in `codexOverrides`.
 
 `codexOverrides` can't restrict the scan's filesystem access or change its
 approval policy. See [Local scan
-permissions](https://learn.chatgpt.com/docs/security/cli/reference#local-scan-permissions).
+permissions](security/cli/reference.html#local-scan-permissions).
 
 For OpenRouter or Fireworks, also provide the matching API key and a complete
 provider configuration in `codexOverrides`. For example, set
@@ -7047,13 +7047,13 @@ take:
 | `ContractValidationError`        | A completed scan returned a structured-contract error.             |
 | `ScanInterruptedError`           | An interruption stopped the scan and may have left partial output. |
 
-Continue with the [CLI quickstart](https://learn.chatgpt.com/docs/security/cli), [CI
-guide](https://learn.chatgpt.com/docs/security/cli/ci), or [CLI
-reference](https://learn.chatgpt.com/docs/security/cli/reference).
+Continue with the [CLI quickstart](security/cli.html), [CI
+guide](security/cli/ci.html), or [CLI
+reference](security/cli/reference.html).
 
 ### Export and track security findings
 
-Source: [Export and track security findings](https://learn.chatgpt.com/docs/security/plugin/export-findings.md)
+Source: [Export and track security findings](security/plugin/export-findings.md)
 
 Use a completed Codex Security scan for either of these handoffs:
 
@@ -7066,7 +7066,7 @@ Neither workflow changes the sealed scan bundle.
 
 Available artifact links and export formats depend on your Codex surface and
 installed plugin version. Check the [plugin
-changelog](https://learn.chatgpt.com/docs/security/plugin/changelog) before you use a format in
+changelog](security/plugin/changelog.html) before you use a format in
 automation.
 
 #### Export a portable artifact
@@ -7190,12 +7190,12 @@ reuse is complete only after Codex reads the exact issue back and verifies its
 binding identifiers and content.
 
 Keep the returned canonical issue or advisory URL with your triage record.
-Continue with [Fix and verify a finding](https://learn.chatgpt.com/docs/security/plugin/fix-findings)
+Continue with [Fix and verify a finding](security/plugin/fix-findings.html)
 when the owner accepts the item for remediation.
 
 ### Fix and verify security findings
 
-Source: [Fix and verify security findings](https://learn.chatgpt.com/docs/security/plugin/fix-findings.md)
+Source: [Fix and verify security findings](security/plugin/fix-findings.md)
 
 Use Codex Security to turn an accepted security finding into a focused,
 verified patch. You can work in the Security workbench or run the remediation
@@ -7293,7 +7293,7 @@ remediation with `--sandbox workspace-write`. The scan needs that permission
 to save temporary artifacts, but its prompt must still require `Do not modify
 the checkout`. Remediation needs the same permission to write the focused
 patch and verification evidence. See [Permissions and
-safety](https://learn.chatgpt.com/docs/non-interactive-mode#permissions-and-safety).
+safety](non-interactive-mode.html#permissions-and-safety).
 
 For each scan and accepted finding:
 
@@ -7326,11 +7326,11 @@ Repeat the second command in an independent task or job for each remaining
 accepted finding. After verification, merge each patch through your normal
 code-review and release process. To hand findings to another team before
 remediation, see [Export or track
-findings](https://learn.chatgpt.com/docs/security/plugin/export-findings).
+findings](security/plugin/export-findings.html).
 
 ### Improving the threat model
 
-Source: [Improving the threat model](https://learn.chatgpt.com/docs/security/threat-model.md)
+Source: [Improving the threat model](security/threat-model.md)
 
 Learn what a threat model is and how editing it improves Codex Security's suggestions.
 
@@ -7367,13 +7367,13 @@ To review or update the threat model, go to [Codex Security scans](https://chatg
 
 #### Threat model references
 
-- [Codex Security cloud setup](https://learn.chatgpt.com/docs/security/setup) covers repository setup and findings review.
-- [Codex Security](https://learn.chatgpt.com/docs/security) gives the product overview.
-- [Codex Security cloud FAQ](https://learn.chatgpt.com/docs/security/faq) covers common cloud questions.
+- [Codex Security cloud setup](security/setup.html) covers repository setup and findings review.
+- [Codex Security](security.html) gives the product overview.
+- [Codex Security cloud FAQ](security/faq.html) covers common cloud questions.
 
 ### Propose security hardening
 
-Source: [Propose security hardening](https://learn.chatgpt.com/docs/security/plugin/security-hardening.md)
+Source: [Propose security hardening](security/plugin/security-hardening.md)
 
 Use `$codex-security:propose-security-hardening` to turn a collection of
 security evidence into structural or architectural hardening options. The
@@ -7437,18 +7437,18 @@ or diagrams under `hardening/`. The scan links the portfolio from `report.md`.
 
 Keep the full scan directory together so those links remain usable. To review
 the individual reports that inform the portfolio, see [Write vulnerability
-reports](https://learn.chatgpt.com/docs/security/plugin/vulnerability-reports).
+reports](security/plugin/vulnerability-reports.html).
 
 ### Review code changes for security
 
-Source: [Review code changes for security](https://learn.chatgpt.com/docs/security/plugin/code-changes.md)
+Source: [Review code changes for security](security/plugin/code-changes.md)
 
 Run a security change review to find regressions in one Git-backed change set.
 Codex reviews each changed source-like file and its directly supporting code.
 It doesn't expand the review into a full repository audit.
 
 To scan an entire repository instead of a specific change, see [Run a security
-scan](https://learn.chatgpt.com/docs/security/plugin/scans).
+scan](security/plugin/scans.html).
 
 #### Run a manual review
 
@@ -7490,13 +7490,13 @@ provide a locally available base and head.
 #### Act on findings
 
 After reviewing the results, [fix and verify an accepted
-finding](https://learn.chatgpt.com/docs/security/plugin/fix-findings) or [export and track
-findings](https://learn.chatgpt.com/docs/security/plugin/export-findings).
+finding](security/plugin/fix-findings.html) or [export and track
+findings](security/plugin/export-findings.html).
 
 #### Automate reviews in CI/CD
 
 If you have access to the beta standalone CLI, see [Run Codex Security in
-CI](https://learn.chatgpt.com/docs/security/cli/ci) for structured JSON, a severity policy, and SARIF
+CI](security/cli/ci.html) for structured JSON, a severity policy, and SARIF
 upload. Continue with this section to invoke the installed plugin skill
 through `codex exec`.
 
@@ -7515,7 +7515,7 @@ codex plugin add codex-security@openai-curated
 ```
 
 The install command uses the public Codex CLI plugin marketplace. Check the
-[plugin changelog](https://learn.chatgpt.com/docs/security/plugin/changelog) before you depend on a
+[plugin changelog](security/plugin/changelog.html) before you depend on a
 specific plugin version or feature in CI.
 
 Next, provide an OpenAI API key from your CI secret store as
@@ -7769,20 +7769,20 @@ manifest, coverage, and `report.md` together, along with any requested
 coverage and runtime before making the job a required check.
 
 For API-key handling and sandbox controls, see [Non-interactive
-mode](https://learn.chatgpt.com/docs/non-interactive-mode). If your organization permits the [Codex
-GitHub Action](https://learn.chatgpt.com/docs/github-action), it can install the CLI at runtime, but
+mode](non-interactive-mode.html). If your organization permits the [Codex
+GitHub Action](github-action.html), it can install the CLI at runtime, but
 you must still install the plugin first and point the action's `codex-home`
 input at the same `CODEX_HOME`.
 
 ### Run a Codex Security scan
 
-Source: [Run a Codex Security scan](https://learn.chatgpt.com/docs/security/plugin/scans.md)
+Source: [Run a Codex Security scan](security/plugin/scans.md)
 
 Start with a standard Codex Security scan for an initial review or a routine
 repository or component assessment. It runs the full scan workflow once.
 
 For a more thorough assessment, review the results and then run a [deep
-scan](https://learn.chatgpt.com/docs/security/plugin/deep-scans). Deep scans take longer and search
+scan](security/plugin/deep-scans.html). Deep scans take longer and search
 more extensively.
 
 #### Choose the scan area
@@ -7890,13 +7890,13 @@ to address findings. Scan at these points:
 - **Baseline:** Run a standard scan when you onboard a repository, take
   ownership of a component, or need a starting point for a new threat model.
 - **Code changes:** [Review code
-  changes](https://learn.chatgpt.com/docs/security/plugin/code-changes) when a pull request or commit
+  changes](security/plugin/code-changes.html) when a pull request or commit
   changes security-sensitive code or an external integration.
 - **Regular review:** Set a recurring review interval based on your system's
   exposure and how often the code changes. Adjust it to your team's capacity to
   address findings.
 - **After a fix:** [Fix and verify the
-  finding](https://learn.chatgpt.com/docs/security/plugin/fix-findings). Confirm that the issue no
+  finding](security/plugin/fix-findings.html). Confirm that the issue no
   longer reproduces and keep the original scan for comparison.
 
 These scan triggers don't create an automated schedule.
@@ -7922,23 +7922,23 @@ and `coverage.json` for automation and integrations. You normally don't need to
 open these files yourself.
 
 For portable artifacts or external issue tracking, see [Export or track
-findings](https://learn.chatgpt.com/docs/security/plugin/export-findings).
+findings](security/plugin/export-findings.html).
 
 #### Next step
 
 After you accept a finding, use [Fix and verify a
-finding](https://learn.chatgpt.com/docs/security/plugin/fix-findings) to generate and review one
+finding](security/plugin/fix-findings.html) to generate and review one
 bounded patch. Don't ask Codex to fix every finding from a scan in one chat.
 
 ### Run a deep security scan
 
-Source: [Run a deep security scan](https://learn.chatgpt.com/docs/security/plugin/deep-scans.md)
+Source: [Run a deep security scan](security/plugin/deep-scans.md)
 
 Run a deep scan when you need a more thorough review and can allow for a longer
 runtime. Deep scans search a repository more extensively and can reduce
 variability between runs.
 
-Start with a [standard scan](https://learn.chatgpt.com/docs/security/plugin/scans) to check your scope
+Start with a [standard scan](security/plugin/scans.html) to check your scope
 and results. Then use a deep scan when you need a more thorough assessment.
 
 #### Choose between standard and deep scans
@@ -7986,7 +7986,7 @@ finishes source review before the deadline, the report records partial
 coverage.
 
 The `max_time_hours` setting requires plugin version `0.1.19` or later. See the
-[plugin changelog](https://learn.chatgpt.com/docs/security/plugin/changelog) for release details.
+[plugin changelog](security/plugin/changelog.html) for release details.
 
 #### Start the deep scan
 
@@ -8026,7 +8026,7 @@ Deep scan workers inherit your selected model and reasoning settings. Each
 worker runs a complete standard scan, and Codex Security aggregates the
 completed results. Follow the saved scan from **Scans**, or select **View
 activity** to inspect its Codex task. Check the [plugin
-changelog](https://learn.chatgpt.com/docs/security/plugin/changelog) before you update the plugin or
+changelog](security/plugin/changelog.html) before you update the plugin or
 start a long-running scan.
 
     Track the active deep-scan phase and inspect its Codex activity before
@@ -8044,15 +8044,15 @@ sharing or archiving the result.
 Review the coverage summary before the findings. Even a deep scan has limits,
 so check deferred surfaces and remaining proof gaps before drawing a
 conclusion. For a finding you accept, continue with [Fix and verify a
-finding](https://learn.chatgpt.com/docs/security/plugin/fix-findings).
+finding](security/plugin/fix-findings.html).
 
 To review a pull request, commit, branch range, or local patch, use [Review code
-changes](https://learn.chatgpt.com/docs/security/plugin/code-changes). A deep scan never substitutes
+changes](security/plugin/code-changes.html). A deep scan never substitutes
 for the diff-focused workflow.
 
 ### Run bulk security scans
 
-Source: [Run bulk security scans](https://learn.chatgpt.com/docs/security/cli/bulk-scans.md)
+Source: [Run bulk security scans](security/cli/bulk-scans.md)
 
 Use `npx @openai/codex-security bulk-scan` to review repositories in one
 campaign. Discover repositories from your personal GitHub account or an
@@ -8060,7 +8060,7 @@ organization, or provide a CSV that pins every repository to an exact Git
 revision.
 
 The `@openai/codex-security` package is public. Running scans requires Codex
-Security access. Follow the [CLI quickstart](https://learn.chatgpt.com/docs/security/cli) to install
+Security access. Follow the [CLI quickstart](security/cli.html) to install
 the CLI and sign in.
 
 #### Choose a repository source
@@ -8155,7 +8155,7 @@ npx @openai/codex-security bulk-scan repositories.csv \
 `--workers` controls concurrent repository scans and defaults to `4`. It does
 not set the number of independent standard-scan workers within each deep scan;
 configure those limits through
-[`[deep_scan]`](/codex/security/cli/reference#configure-deep-scans). Use `--mode
+[`[deep_scan]`](codex/security/cli/reference.html#configure-deep-scans). Use `--mode
 deep` to select deep scanning for rows without their own `mode`. Each CSV row
 can still choose its own scan mode and repository scope.
 
@@ -8219,8 +8219,8 @@ Supported effort levels are `minimal`, `low`, `medium`, `high`, and `xhigh`.
 To use OpenRouter or Fireworks, set `OPENROUTER_API_KEY` or `FIREWORKS_API_KEY`,
 respectively, and specify `--provider` and `--model`. For credentials and
 examples, see [OpenRouter or Fireworks
-setup](https://learn.chatgpt.com/docs/security/cli/reference#use-openrouter-or-fireworks) or [Amazon
-Bedrock setup](https://learn.chatgpt.com/docs/security/cli/reference#use-amazon-bedrock).
+setup](security/cli/reference.html#use-openrouter-or-fireworks) or [Amazon
+Bedrock setup](security/cli/reference.html#use-amazon-bedrock).
 
 #### Review campaign results
 
@@ -8338,13 +8338,13 @@ Use the same mounted CSV and output directory to resume the campaign. For
 GitHub Enterprise Server, set `CODEX_SECURITY_GIT_HOST` to your GitHub host.
 
 For every available flag, see the [bulk-scan command
-reference](https://learn.chatgpt.com/docs/security/cli/reference#codex-security-bulk-scan). For common
+reference](security/cli/reference.html#codex-security-bulk-scan). For common
 questions about scan coverage and findings, see the [CLI
-FAQ](https://learn.chatgpt.com/docs/security/cli/faq).
+FAQ](security/cli/faq.html).
 
 ### Run Codex Security in CI
 
-Source: [Run Codex Security in CI](https://learn.chatgpt.com/docs/security/cli/ci.md)
+Source: [Run Codex Security in CI](security/cli/ci.md)
 
 Run the Codex Security CLI in CI to review the exact changes in a pull request
 or merge request, keep findings and coverage, and optionally fail the check at
@@ -8520,7 +8520,7 @@ short retention window appropriate for your repository.
 For a production workflow with protected default-branch scans, opt-in scheduled
 deep scans, separate SARIF policy gating, and optional verified draft merge
 requests, use [Run Codex Security in GitLab
-CI/CD](https://learn.chatgpt.com/docs/security/cli/ci/gitlab).
+CI/CD](security/cli/ci/gitlab.html).
 
 GitLab can ingest
 [SARIF 2.1.0 reports](https://docs.gitlab.com/ci/yaml/artifacts_reports/#artifactsreportssarif)
@@ -8746,12 +8746,12 @@ The command archives the earlier results and starts with an empty scan directory
   the job uploads a SARIF 2.1.0 file through `artifacts:reports:sarif`.
 
 For every command, flag, artifact, and output field, see the [CLI
-reference](https://learn.chatgpt.com/docs/security/cli/reference). For an interactive plugin-based CI
-review, see [Review code changes for security](https://learn.chatgpt.com/docs/security/plugin/code-changes#automate-reviews-in-cicd).
+reference](security/cli/reference.html). For an interactive plugin-based CI
+review, see [Review code changes for security](security/plugin/code-changes.html#automate-reviews-in-cicd).
 
 ### Run Codex Security in GitLab CI/CD
 
-Source: [Run Codex Security in GitLab CI/CD](https://learn.chatgpt.com/docs/security/cli/ci/gitlab.md)
+Source: [Run Codex Security in GitLab CI/CD](security/cli/ci/gitlab.md)
 
 Run Codex Security in GitLab CI/CD to scan committed changes and protected
 branches, publish findings to GitLab Security, and optionally propose verified
@@ -8882,7 +8882,7 @@ The minimal example intentionally omits full scans and remediation.
 
 #### Adopt the production pipeline
 
-1. [Download the complete GitLab pipeline](https://learn.chatgpt.com/docs/security/cli/ci/gitlab.yml)
+1. [Download the complete GitLab pipeline](security/cli/ci/gitlab.yml)
    and save it as `.gitlab-ci.yml` in the repository root. If your repository
    already has a pipeline, merge the example's stages, hidden templates, and
    jobs into the existing file.
@@ -9110,7 +9110,7 @@ a hard billing cap.
 
 Start with report-only scans. Add `--fail-on-severity` after your team has
 reviewed representative findings, coverage, cost, and runtime. See [Run Codex
-Security in CI](https://learn.chatgpt.com/docs/security/cli/ci) for severity policies and exit-code
+Security in CI](security/cli/ci.html) for severity policies and exit-code
 details.
 
 When a job fails:
@@ -9125,11 +9125,11 @@ When a job fails:
   environment restriction.
 
 For every command, flag, and artifact, see the [Codex Security CLI
-reference](https://learn.chatgpt.com/docs/security/cli/reference).
+reference](security/cli/reference.html).
 
 ### Security Review
 
-Source: [Security Review](https://learn.chatgpt.com/docs/security/security-review.md)
+Source: [Security Review](security/security-review.md)
 
 Codex Security Review is available in research preview.
 It is available to ChatGPT Enterprise, Business, Edu, and Pro customers; it is
@@ -9140,7 +9140,7 @@ Codex Security Review is an additional review for customers that want to
 pay particular attention to security issues in pull requests.
 
 Codex Security Review goes deeper than [Code
-Review](https://learn.chatgpt.com/docs/third-party/github) on security-specific risks by analyzing the
+Review](third-party/github.html) on security-specific risks by analyzing the
 pull request diff, supporting repository context, and configured threat models
 or security guidance. Code Review can also identify security-related issues as
 part of its general review, so you may see occasional overlap between findings.
@@ -9150,7 +9150,7 @@ part of its general review, so you may see occasional overlap between findings.
 To configure automatic Codex Security Review, you need:
 
 - Codex Security Review research preview access for your workspace
-- [Codex cloud](https://learn.chatgpt.com/docs/cloud) set up with a connected GitHub repository
+- [Codex cloud](cloud.md) set up with a connected GitHub repository
 - GitHub push or admin permission for the repository settings
 
 An existing Codex Security scan is optional.
@@ -9210,14 +9210,14 @@ post findings to the pull request.
 
 #### Related docs
 
-- [Review GitHub pull requests with Codex](https://learn.chatgpt.com/docs/third-party/github) explains Code Review and the GitHub integration.
-- [Codex Security](https://learn.chatgpt.com/docs/security) gives the product overview.
-- [Codex Security cloud setup](https://learn.chatgpt.com/docs/security/setup) explains repository scans and findings review.
-- [Improving the threat model](https://learn.chatgpt.com/docs/security/threat-model) explains how to tune repository context.
+- [Review GitHub pull requests with Codex](third-party/github.html) explains Code Review and the GitHub integration.
+- [Codex Security](security.html) gives the product overview.
+- [Codex Security cloud setup](security/setup.html) explains repository scans and findings review.
+- [Improving the threat model](security/threat-model.html) explains how to tune repository context.
 
 ### Triage a backlog
 
-Source: [Triage a backlog](https://learn.chatgpt.com/docs/security/plugin/triage-backlog.md)
+Source: [Triage a backlog](security/plugin/triage-backlog.md)
 
 Use `$codex-security:triage-finding` to review existing security findings
 against the current repository. This workflow performs a read-only static
@@ -9243,7 +9243,7 @@ existing backlog. Use validation when runtime evidence could resolve a finding
 that static evidence leaves uncertain.
 
 Backlog triage starts from existing findings. To search the repository for new
-vulnerabilities, [run a security scan](https://learn.chatgpt.com/docs/security/plugin/scans). Triage
+vulnerabilities, [run a security scan](security/plugin/scans.html). Triage
 doesn't modify the repository or implement fixes.
 
 #### Choose the findings to triage
@@ -9339,7 +9339,7 @@ For each finding, review:
 - the affected location and component
 - the product surface and source trust level
 - the recommended next step
-- the [`$codex-security:fix-finding`](https://learn.chatgpt.com/docs/security/plugin/fix-findings)
+- the [`$codex-security:fix-finding`](security/plugin/fix-findings.html)
   handoff, when the finding is `confirmed`
 
 Triage is complete when every supplied finding has one result, Codex preserves
@@ -9350,7 +9350,7 @@ reviewing the triage results.
 #### Next steps
 
 - `confirmed`: After a person accepts the finding for remediation, use
-  [`$codex-security:fix-finding`](https://learn.chatgpt.com/docs/security/plugin/fix-findings) to fix and
+  [`$codex-security:fix-finding`](security/plugin/fix-findings.html) to fix and
   verify it. Triage prepares a prompt-ready handoff but doesn't invoke the skill
   automatically.
 - `needs_review`: If running code can resolve the proof gap, use
@@ -9365,25 +9365,25 @@ reviewing the triage results.
   Unlike triage, validation may build or run code, create a focused test or
   proof of concept, or exercise a real interface. Review the proposed commands
   before approving them and keep [Codex approval and security
-  policies](https://learn.chatgpt.com/docs/agent-approvals-security) in place.
+  policies](agent-approvals-security.html) in place.
 
 - `needs_review`: If the finding depends on product policy or deployment
   context, answer the listed open questions before changing code.
 - `not_actionable`: Keep the evidence with your triage record. Codex doesn't
   automatically close or update the source ticket.
 - To look for vulnerabilities beyond the supplied backlog, [run a security
-  scan](https://learn.chatgpt.com/docs/security/plugin/scans).
+  scan](security/plugin/scans.html).
 
 ### Use the Codex Security workbench
 
-Source: [Use the Codex Security workbench](https://learn.chatgpt.com/docs/security/plugin/workbench.md)
+Source: [Use the Codex Security workbench](security/plugin/workbench.md)
 
 The Security workbench brings your scans, findings, and repositories together
 in the Codex desktop app. Codex performs scan analysis in a regular task, while
 the workbench keeps the scan and its results available when you return.
 
 In the ChatGPT desktop app, open the ChatGPT dropdown and select **Codex**.
-Install and enable the [Codex Security plugin](https://learn.chatgpt.com/docs/security/plugin), then
+Install and enable the [Codex Security plugin](security/plugin.html), then
 select **Security** in the sidebar.
 
 If **Security** doesn't appear, confirm that **Codex** is selected and the
@@ -9410,9 +9410,9 @@ with `xhigh` reasoning effort.
 
    Choose a repository and configure a scan in the Security workbench.
 
-See [Run a security scan](https://learn.chatgpt.com/docs/security/plugin/scans), [Run a deep security
-scan](https://learn.chatgpt.com/docs/security/plugin/deep-scans), or [Review code changes for
-security](https://learn.chatgpt.com/docs/security/plugin/code-changes) for details about each scan
+See [Run a security scan](security/plugin/scans.html), [Run a deep security
+scan](security/plugin/deep-scans.html), or [Review code changes for
+security](security/plugin/code-changes.html) for details about each scan
 type.
 
 #### Follow scan progress
@@ -9439,11 +9439,11 @@ evidence, validation, and impact.
 
 Use **Summary** for the finding details and **Patch** when you want to generate,
 review, apply, or verify a focused fix. See [Fix and verify security
-findings](https://learn.chatgpt.com/docs/security/plugin/fix-findings) for the remediation workflow.
+findings](security/plugin/fix-findings.html) for the remediation workflow.
 
 The **Findings** tab shows findings from saved Codex Security scans. Imported
 tickets and other existing security issues remain part of the separate
-[backlog triage workflow](https://learn.chatgpt.com/docs/security/plugin/triage-backlog).
+[backlog triage workflow](security/plugin/triage-backlog.html).
 
 #### Inspect repository history
 
@@ -9462,11 +9462,11 @@ conversation. Scans that use the shared plugin workbench appear in **Scans**,
 so you can return to their progress and results from the Security workbench.
 
 For terminal-based scans and automation, see the [Codex Security CLI
-quickstart](https://learn.chatgpt.com/docs/security/cli).
+quickstart](security/cli.html).
 
 ### Write vulnerability reports
 
-Source: [Write vulnerability reports](https://learn.chatgpt.com/docs/security/plugin/vulnerability-reports.md)
+Source: [Write vulnerability reports](security/plugin/vulnerability-reports.md)
 
 Use `$codex-security:vulnerability-writeup` to create a self-contained report
 for each distinct vulnerability. You can start from Codex Security scan results
@@ -9527,22 +9527,22 @@ scans. When you request them, Codex writes each report to
 
 Keep the complete scan directory together when sharing or archiving a scan. To
 look for improvements that address patterns across the reports, continue
-with [Propose security hardening](https://learn.chatgpt.com/docs/security/plugin/security-hardening).
+with [Propose security hardening](security/plugin/security-hardening.html).
 
 ### Agent approvals & security
 
-Source: [Agent approvals & security](https://learn.chatgpt.com/docs/agent-approvals-security.md)
+Source: [Agent approvals & security](agent-approvals-security.md)
 
 Codex helps protect your code and data and reduces the risk of misuse.
 
 This page covers how to operate Codex safely, including sandboxing, approvals,
 and network access. If you are looking for Codex Security, the product for
-scanning connected GitHub repositories, see [Codex Security](https://learn.chatgpt.com/docs/security).
+scanning connected GitHub repositories, see [Codex Security](security.html).
 
 By default, the agent runs with network access turned off. Locally, Codex uses an OS-enforced sandbox that limits what it can touch (typically to the current workspace), plus an approval policy that controls when it must stop and ask you before acting.
 
 For a high-level explanation of how sandboxing works across the ChatGPT desktop app,
-Codex CLI, and IDE extension, see [sandboxing](https://learn.chatgpt.com/docs/sandboxing).
+Codex CLI, and IDE extension, see [sandboxing](sandboxing.html).
 For a broader enterprise security overview, see the [Codex security white paper](https://trust.openai.com/?itemUid=382f924d-54f3-43a8-a9df-c39e6c959958&source=click).
 
 #### Migrate from the retired `untrusted` approval policy
@@ -9613,13 +9613,13 @@ surface.
 | Zero data retention, Modified Abuse Monitoring, or non-US data storage residency                        | Full findings and resume aren't available. The task ends. |
 
 Safety monitoring evaluates model behavior during a task.
-[Automatic approval review](https://learn.chatgpt.com/docs/sandboxing/auto-review) evaluates individual actions that
+[Automatic approval review](sandboxing/auto-review.html) evaluates individual actions that
 already require approval before those actions run. An action approved by
 automatic approval review can still be part of a task that monitoring later pauses.
 
 #### Network access
 
-For Codex cloud, see [agent internet access](https://learn.chatgpt.com/docs/cloud/internet-access) to enable full internet access or a domain allow list.
+For Codex cloud, see [agent internet access](cloud/internet-access.html) to enable full internet access or a domain allow list.
 
 For the ChatGPT desktop app, Codex CLI, or IDE extension, the default `workspace-write` sandbox mode keeps network access turned off unless you enable it in your configuration:
 
@@ -9666,7 +9666,7 @@ network access by itself. Use `sandbox_workspace_write.network_access` with
 - Network on + `network_proxy` on: network stays on, and outbound traffic is
   constrained by the configured network policy.
 
-The proxy feature also applies to [permission profiles](https://learn.chatgpt.com/docs/permissions#network-permissions).
+The proxy feature also applies to [permission profiles](permissions.html#network-permissions).
 A profile's `network.enabled = true` grants command network access, while
 `features.network_proxy = true` activates enforcement of that profile's domain
 rules:
@@ -9693,7 +9693,7 @@ access and the `api.openai.com` allow rule does not restrict their destinations.
 Admin-managed `experimental_network` requirements are separate from the user
 feature toggle. They can configure and start sandboxed networking without
 `features.network_proxy`, but they do not turn on network access when the active
-sandbox keeps it off. See [Managed configuration](https://learn.chatgpt.com/docs/enterprise/managed-configuration#configure-network-access-requirements)
+sandbox keeps it off. See [Managed configuration](enterprise/managed-configuration.html#configure-network-access-requirements)
 for the administrator-side `requirements.toml` shape.
 
 #### Network policy
@@ -9772,12 +9772,12 @@ policies, or environment controls.
 Browser tools separately check managed network denies and exclusive allowlists
 before accessing an origin. Browser origin policies can further restrict site
 access, uploads, downloads, and developer tools. See
-[managed browser controls](https://learn.chatgpt.com/docs/enterprise/managed-configuration#control-browser-and-computer-use).
+[managed browser controls](enterprise/managed-configuration.html#control-browser-and-computer-use).
 
 For managed users, combine command network policy with controls such as
 `allowed_web_search_modes`, approved `mcp_servers`, and feature requirements
 for apps, plugins, browsers, or Computer Use. See
-[Managed configuration](https://learn.chatgpt.com/docs/enterprise/managed-configuration).
+[Managed configuration](enterprise/managed-configuration.html).
 
 You can also control the [web search tool](https://platform.openai.com/docs/guides/tools-web-search) without granting full network access to spawned commands. Codex defaults to using a web search cache to access results. The cache is an OpenAI-maintained index of web results, so cached mode returns pre-indexed results instead of fetching live pages. This reduces exposure to prompt injection from arbitrary live content, but you should still treat web results as untrusted. If you are using `--yolo` or another [full access sandbox setting](#common-sandbox-and-approval-combinations), web search defaults to live results. Use `--search` or set `web_search = "live"` to allow live browsing, or set it to `"disabled"` to turn the tool off:
 
@@ -9843,7 +9843,7 @@ approvals_reviewer = "auto_review"
 
 For the full reviewer lifecycle, trigger conditions, configuration precedence,
 and failure behavior, see
-[Auto-review](https://learn.chatgpt.com/docs/sandboxing/auto-review).
+[Auto-review](sandboxing/auto-review.html).
 
 The reviewer evaluates only actions that already need approval, such as sandbox
 escalations, blocked network requests, `request_permissions` prompts, or
@@ -9862,7 +9862,7 @@ is in the open-source Codex repository. Enterprises can replace its
 tenant-specific section with `guardian_policy_config` in managed requirements.
 Local `[auto_review].policy` text is also supported, but managed requirements
 take precedence. For setup details, see
-[Managed configuration](https://learn.chatgpt.com/docs/enterprise/managed-configuration#configure-automatic-review-policy).
+[Managed configuration](enterprise/managed-configuration.html#configure-automatic-review-policy).
 
 In the ChatGPT desktop app, these reviews appear as automatic review items with a status
 such as Reviewing, Approved, Denied, Aborted, or Timed out. They can also
@@ -9886,7 +9886,7 @@ For non-interactive runs, use `codex exec --sandbox workspace-write`; Codex keep
 
 #### Configuration in `config.toml`
 
-For the broader configuration workflow, see [Config basics](https://learn.chatgpt.com/docs/config-file/config-basic), [Advanced Config](https://learn.chatgpt.com/docs/config-file/config-advanced#approval-policies-and-sandbox-modes), and the [Configuration Reference](https://learn.chatgpt.com/docs/config-file/config-reference).
+For the broader configuration workflow, see [Config basics](config-file/config-basic.html), [Advanced Config](config-file/config-advanced.html#approval-policies-and-sandbox-modes), and the [Configuration Reference](config-file/config-reference.html).
 
 ```toml
 # Interactive approvals with a read-only sandbox
@@ -9908,7 +9908,7 @@ network_access = true
 # } }
 ```
 
-You can also save presets as [profile files](https://learn.chatgpt.com/docs/config-file/config-advanced#profiles), then select them with `codex --profile profile-name`:
+You can also save presets as [profile files](config-file/config-advanced.html#profiles), then select them with `codex --profile profile-name`:
 
 ```toml
 # ~/.codex/full_auto.config.toml
@@ -9943,7 +9943,7 @@ Codex enforces the sandbox differently depending on your OS:
 
 - **macOS** uses Seatbelt policies and runs commands using `sandbox-exec` with a profile (`-p`) that corresponds to the `--sandbox` mode you selected. When restricted read access enables platform defaults, Codex appends a curated macOS platform policy (instead of broadly allowing `/System`) to preserve common tool compatibility.
 - **Linux** uses `bwrap` plus `seccomp` by default.
-- **Windows** uses the Linux sandbox implementation when running in [Windows Subsystem for Linux 2 (WSL2)](https://learn.chatgpt.com/docs/windows/wsl). WSL1 was supported through Codex `0.114`; starting in `0.115`, the Linux sandbox moved to `bwrap`, so WSL1 is no longer supported. When running natively on Windows, Codex uses a [Windows sandbox](https://learn.chatgpt.com/docs/windows/windows-sandbox#windows-sandbox) implementation.
+- **Windows** uses the Linux sandbox implementation when running in [Windows Subsystem for Linux 2 (WSL2)](windows/wsl.html). WSL1 was supported through Codex `0.114`; starting in `0.115`, the Linux sandbox moved to `bwrap`, so WSL1 is no longer supported. When running natively on Windows, Codex uses a [Windows sandbox](windows/windows-sandbox.html#windows-sandbox) implementation.
 
 If you use the Codex IDE extension on Windows, it supports WSL2 directly. Set the following in your VS Code settings to keep the agent inside WSL2 whenever it's available:
 
@@ -9953,7 +9953,7 @@ If you use the Codex IDE extension on Windows, it supports WSL2 directly. Set th
 }
 ```
 
-This ensures the IDE extension inherits Linux sandbox semantics for commands, approvals, and filesystem access even when the host OS is Windows. Learn more in the [WSL guide](https://learn.chatgpt.com/docs/windows/wsl).
+This ensures the IDE extension inherits Linux sandbox semantics for commands, approvals, and filesystem access even when the host OS is Windows. Learn more in the [WSL guide](windows/wsl.html).
 
 When running natively on Windows, configure the native sandbox mode in `config.toml`:
 
@@ -9963,7 +9963,7 @@ sandbox = "unelevated" # or "elevated"
 # sandbox_private_desktop = true  # default; set false only for compatibility
 ```
 
-See the [Windows setup guide](https://learn.chatgpt.com/docs/windows/windows-sandbox#windows-sandbox) for details.
+See the [Windows setup guide](windows/windows-sandbox.html#windows-sandbox) for details.
 
 When you run Linux in a containerized environment such as Docker, the sandbox may not work if the host or container configuration blocks the namespace, setuid `bwrap`, or `seccomp` operations that Codex needs.
 
@@ -10088,7 +10088,7 @@ For the full event catalog and configuration reference, see the [Codex configura
 - Keep `log_user_prompt = false` unless policy explicitly permits storing prompt contents. Prompts can include source code and sensitive data.
 - Route telemetry only to collectors you control; apply retention limits and access controls aligned with your compliance requirements.
 - Treat tool arguments and outputs as sensitive. Favor redaction at the collector or SIEM when possible.
-- Review local data retention settings (for example, `history.persistence` / `history.max_bytes`) if you don't want Codex to save session transcripts under `CODEX_HOME`. See [Advanced Config](https://learn.chatgpt.com/docs/config-file/config-advanced#history-persistence) and [Configuration Reference](https://learn.chatgpt.com/docs/config-file/config-reference).
+- Review local data retention settings (for example, `history.persistence` / `history.max_bytes`) if you don't want Codex to save session transcripts under `CODEX_HOME`. See [Advanced Config](config-file/config-advanced.html#history-persistence) and [Configuration Reference](config-file/config-reference.html).
 - If you run the CLI with network access turned off, OTel export can't reach your collector. To export, allow network access in `workspace-write` mode for the OTel endpoint, or export from Codex cloud with the collector domain on your approved list.
 - Review events periodically for approval/sandbox changes and unexpected tool executions.
 
@@ -10096,11 +10096,11 @@ OTel is optional and designed to complement, not replace, the sandbox and approv
 
 #### Managed configuration
 
-Enterprise admins can configure Codex security settings for their workspace in [Managed configuration](https://learn.chatgpt.com/docs/enterprise/managed-configuration). See that page for setup and policy details.
+Enterprise admins can configure Codex security settings for their workspace in [Managed configuration](enterprise/managed-configuration.html). See that page for setup and policy details.
 
 ### Auto-review
 
-Source: [Auto-review](https://learn.chatgpt.com/docs/sandboxing/auto-review.md)
+Source: [Auto-review](sandboxing/auto-review.md)
 
 Auto-review replaces manual approval at the sandbox boundary with a separate
 reviewer agent. The main Codex agent still runs inside the same sandbox, with
@@ -10175,7 +10175,7 @@ The exact policy lives in the open-source Codex repository:
 and
 [policy.md](https://github.com/openai/codex/blob/main/codex-rs/core/src/guardian/policy.md).
 That policy can be customized per enterprise with `guardian_policy_config` or
-per user with local [`[auto_review].policy`](/codex/config-file/config-advanced#approval-policies-and-sandbox-modes).
+per user with local [`[auto_review].policy`](config-file/config-advanced.html#approval-policies-and-sandbox-modes).
 
 #### What the reviewer sees
 
@@ -10226,14 +10226,14 @@ denial.
 #### Configuration
 
 For setup details, see
-[Managed configuration](https://learn.chatgpt.com/docs/enterprise/managed-configuration#configure-automatic-review-policy).
+[Managed configuration](enterprise/managed-configuration.html#configure-automatic-review-policy).
 
 The default reviewer policy is in the open-source Codex repository:
 [core/src/guardian/policy.md](https://github.com/openai/codex/blob/main/codex-rs/core/src/guardian/policy.md).
 Enterprises can replace its tenant-specific section with
 `guardian_policy_config` in managed requirements. Individual users can also set
 a local
-[`[auto_review].policy`](/codex/config-file/config-advanced#approval-policies-and-sandbox-modes)
+[`[auto_review].policy`](config-file/config-advanced.html#approval-policies-and-sandbox-modes)
 in their `config.toml`, but managed requirements take precedence:
 
 ```toml
@@ -10249,7 +10249,7 @@ iterate based on your individual risk profile.
 #### Configure an authorized cybersecurity engagement
 
 For authorized security work, combine automatic review with a written
-engagement scope and a least-privilege [permission profile](https://learn.chatgpt.com/docs/permissions).
+engagement scope and a least-privilege [permission profile](permissions.html).
 Use an approved lab target, document the actions and engagement window, and
 keep production systems, unrelated hosts, credentials, and persistent changes
 out of scope unless explicitly authorized.
@@ -10332,13 +10332,13 @@ With `approval_policy = "never"`, `:danger-full-access`, or `--yolo`, an action
 can avoid creating the boundary-crossing approval request that review requires.
 
 A network destination on the allowlist doesn't trigger review by itself. Add
-explicit [command rules](https://learn.chatgpt.com/docs/agent-configuration/rules) with
+explicit [command rules](agent-configuration/rules.html) with
 `decision = "prompt"`, or configure sensitive MCP tools to require approval,
 when actions inside the sandbox must still reach the reviewer.
 
-See [Models and Trusted Access](https://learn.chatgpt.com/docs/cyber-safety) and [recommended
-configuration](https://learn.chatgpt.com/docs/cyber-safety/recommended-configuration) for model access,
-engagement setup, and custom agent workflows. See [Managed configuration](https://learn.chatgpt.com/docs/enterprise/managed-configuration#configure-automatic-review-policy)
+See [Models and Trusted Access](cyber-safety.html) and [recommended
+configuration](cyber-safety/recommended-configuration.html) for model access,
+engagement setup, and custom agent workflows. See [Managed configuration](enterprise/managed-configuration.html#configure-automatic-review-policy)
 for enterprise precedence and supported client versions. For custom API or
 Agents SDK harnesses, use [Guardrails and human review](https://developers.openai.com/api/docs/guides/agents/guardrails-approvals#review-cybersecurity-actions-before-execution).
 
@@ -10351,9 +10351,9 @@ instead of teaching the reviewer to approve noisy escalations forever.
 In practice, the highest-leverage changes are:
 
 - Add narrow
-  [`writable_roots`](https://learn.chatgpt.com/docs/config-file/config-advanced#approval-policies-and-sandbox-modes)
+  [`writable_roots`](config-file/config-advanced.html#approval-policies-and-sandbox-modes)
   for scratch directories or neighboring repos you intentionally use.
-- Add narrowly scoped [prefix rules](https://learn.chatgpt.com/docs/agent-configuration/rules). Prefer precise command
+- Add narrowly scoped [prefix rules](agent-configuration/rules.html). Prefer precise command
   prefixes such as `["cargo", "test"]` or `["pnpm", "run", "lint"]` over broad
   patterns such as `["python"]` or `["curl"]`. Broad rules often erase the very
   boundary Auto-review is meant to guard.
@@ -10377,7 +10377,7 @@ For the research rationale and published evaluation results, see the
 
 ### Models and Trusted Access
 
-Source: [Models and Trusted Access](https://learn.chatgpt.com/docs/cyber-safety.md)
+Source: [Models and Trusted Access](cyber-safety.md)
 
 OpenAI Daybreak helps approved users perform authorized defensive cybersecurity work. Daybreak Blue provides access to flagship models with reduced refusals for authorized defensive workflows. Daybreak Red provides separately approved access to specialist cyber models for more advanced security research.
 
@@ -10429,11 +10429,11 @@ All users remain subject to the [Usage Policies](https://openai.com/policies/usa
 
 Trusted Access governs approved model access, but it doesn't configure your environment, enforce limits on approved systems and actions, or review proposed actions.
 
-- [Use the recommended configuration](https://learn.chatgpt.com/docs/cyber-safety/recommended-configuration) for isolation, least-privilege permissions, clearly defined boundaries, and guardrails for sensitive actions.
+- [Use the recommended configuration](cyber-safety/recommended-configuration.html) for isolation, least-privilege permissions, clearly defined boundaries, and guardrails for sensitive actions.
 
 ### Permissions
 
-Source: [Permissions](https://learn.chatgpt.com/docs/permission-modes.md)
+Source: [Permissions](permission-modes.md)
 
 {/_ vale Microsoft.FirstPerson = NO _/}
 
@@ -10476,12 +10476,12 @@ Use the permissions control below the composer in the ChatGPT desktop app or
 IDE extension.
 
 In the CLI, enter `/permissions`. For technical details, see
-[Sandbox](https://learn.chatgpt.com/docs/sandboxing), [automatic review](https://learn.chatgpt.com/docs/sandboxing/auto-review), or
-[permission profiles](https://learn.chatgpt.com/docs/permissions).
+[Sandbox](sandboxing.html), [automatic review](sandboxing/auto-review.html), or
+[permission profiles](permissions.html).
 
 ### Permissions
 
-Source: [Permissions](https://learn.chatgpt.com/docs/permissions.md)
+Source: [Permissions](permissions.md)
 
 Beta. Permission profiles are under active development and may change.
 
@@ -10519,7 +10519,7 @@ Local permission profiles are supported on macOS, Linux, WSL, and native
 Windows. See [Scope and enforcement](#scope-and-enforcement) for platform-specific
 details and caveats.
 
-For Codex cloud network settings, see [Internet Access](https://learn.chatgpt.com/docs/cloud/internet-access).
+For Codex cloud network settings, see [Internet Access](cloud/internet-access.html).
 
 #### Define and select a profile
 
@@ -10539,7 +10539,7 @@ Enterprise administrators can define profiles and restrict which profiles
 users may select through managed `requirements.toml`. Once
 `allowed_permission_profiles` is present, omitted profiles are denied,
 including omitted built-ins and profiles added in future Codex versions. See
-[Control available permission profiles](https://learn.chatgpt.com/docs/enterprise/managed-configuration#control-available-permission-profiles)
+[Control available permission profiles](enterprise/managed-configuration.html#control-available-permission-profiles)
 for the recommended managed configuration.
 
 Custom profiles use two related concepts:
@@ -10843,7 +10843,7 @@ Adding `[permissions..network.domains]` or setting
 `permissions..network.enabled = true` does not enable
 `features.network_proxy`. As an alternative, administrators can enable the
 proxy with `[experimental_network]` in `requirements.toml`. See
-[Managed configuration](https://learn.chatgpt.com/docs/enterprise/managed-configuration#configure-network-access-requirements).
+[Managed configuration](enterprise/managed-configuration.html#configure-network-access-requirements).
 
 When active, the network sandbox proxy binds to local listeners by default:
 
@@ -10920,7 +10920,7 @@ Suggested starting points:
 
 Profiles describe the local default posture for a session. Organization-managed
 requirements can still add restrictions that user configuration should not
-broaden. See [Managed configuration](https://learn.chatgpt.com/docs/enterprise/managed-configuration)
+broaden. See [Managed configuration](enterprise/managed-configuration.html)
 for admin-enforced filesystem and network constraints.
 
 #### Scope and enforcement
@@ -10967,7 +10967,7 @@ sandbox. It does not apply the profile's domain allowlist to:
 - **Codex service traffic:** Model, authentication, and other client service
   requests use the client's separate HTTP and system-proxy settings.
 - **Codex cloud:** These tasks use their environment's own
-  [internet access settings](https://learn.chatgpt.com/docs/cloud/internet-access).
+  [internet access settings](cloud/internet-access.html).
 
 To limit these surfaces, configure each capability directly. A command network
 allowlist is not a global network policy for every action Codex can perform.
@@ -10983,7 +10983,7 @@ allowlist is not a global network policy for every action Codex can perform.
   enforcement path depends on user namespaces and kernel support; restricted
   container hosts can force compatibility paths, and unsupported split policies
   are refused.
-- On native Windows, [`elevated` sandboxing](https://learn.chatgpt.com/docs/windows/windows-sandbox#windows-sandbox)
+- On native Windows, [`elevated` sandboxing](windows/windows-sandbox.html#windows-sandbox)
   is strongest because it can use dedicated lower-privilege sandbox users,
   filesystem permission boundaries, and firewall rules. `unelevated`
   sandboxing is a fallback with weaker network isolation and cannot enforce
@@ -11088,7 +11088,7 @@ access. Deny rules can narrow a broad allowlist.
 
 ### Recommended configuration
 
-Source: [Recommended configuration](https://learn.chatgpt.com/docs/cyber-safety/recommended-configuration.md)
+Source: [Recommended configuration](cyber-safety/recommended-configuration.md)
 
 The security controls appropriate for a cybersecurity workflow depend on the model, the actions it can take, the systems it can access, and the sensitivity of the data involved.
 
@@ -11125,7 +11125,7 @@ Before the model starts, document the systems, tools, actions, and time limits a
 
 Give the agent these approved boundaries as task context. Documentation alone doesn't enforce them: apply independent filesystem, network, identity, and tool controls to make unauthorized actions impossible whenever practical.
 
-Use Codex [permission profiles](https://learn.chatgpt.com/docs/permissions) to create a least-privilege boundary. Choose `:read-only` when the task doesn't require changes, or extend `:workspace` when the work requires workspace edits. For example:
+Use Codex [permission profiles](permissions.html) to create a least-privilege boundary. Choose `:read-only` when the task doesn't require changes, or extend `:workspace` when the work requires workspace edits. For example:
 
 ```toml
 approval_policy = "on-request"
@@ -11161,9 +11161,9 @@ does not restrict destinations. Web search, apps, connectors, MCP servers,
 browser activity, and Codex cloud use separate controls; restrict or turn off
 each surface that your approved workflow does not require.
 
-Replace `lab.example.com` with an approved target. The bounded filesystem scan is designed to avoid searching the entire workspace on Linux, WSL, and Windows; increase the depth or use exact deny paths if sensitive files appear deeper. Don't combine permission profiles with legacy `sandbox_mode` settings; follow the [permission-profile configuration guidance](https://learn.chatgpt.com/docs/permissions#define-and-select-a-profile).
+Replace `lab.example.com` with an approved target. The bounded filesystem scan is designed to avoid searching the entire workspace on Linux, WSL, and Windows; increase the depth or use exact deny paths if sensitive files appear deeper. Don't combine permission profiles with legacy `sandbox_mode` settings; follow the [permission-profile configuration guidance](permissions.html#define-and-select-a-profile).
 
-If the approved lab host resolves to a private address, Codex blocks it by default even when the host is on the allowlist. Set `allow_local_binding = true` only for explicitly approved private-network work, keep the destination allowlist narrow, and review the [local and private network guidance](https://learn.chatgpt.com/docs/permissions#local-and-private-networks). You can also allowlist the exact approved private IP address.
+If the approved lab host resolves to a private address, Codex blocks it by default even when the host is on the allowlist. Set `allow_local_binding = true` only for explicitly approved private-network work, keep the destination allowlist narrow, and review the [local and private network guidance](permissions.html#local-and-private-networks). You can also allowlist the exact approved private IP address.
 
 Block open-internet and production-network access by default. If external access is necessary, route it through an independently enforced gateway or proxy with narrow allowlists, request inspection, and logging. Apply the same restrictions to indirect connections through package managers, webhooks, URL-fetching services, redirects, cloud APIs, and connected tools. Load dependencies before the run or use dependencies that an administrator approves.
 
@@ -11173,15 +11173,15 @@ Keep reusable API keys, cloud credentials, passwords, and service-account tokens
 
 Provide only the data required for the approved task. Remove unnecessary sensitive information, block access to cloud metadata and credential endpoints, and treat model-generated files as untrusted.
 
-Avoid `:danger-full-access` and `--yolo` for cybersecurity workflows. Full Access removes the enforceable sandbox boundary that automatic review depends on. Managed organizations can exclude `:danger-full-access` and `--yolo`, limit allowed approval policies, and require automatic review through [enterprise-managed configuration](https://learn.chatgpt.com/docs/enterprise/managed-configuration#configure-automatic-review-policy).
+Avoid `:danger-full-access` and `--yolo` for cybersecurity workflows. Full Access removes the enforceable sandbox boundary that automatic review depends on. Managed organizations can exclude `:danger-full-access` and `--yolo`, limit allowed approval policies, and require automatic review through [enterprise-managed configuration](enterprise/managed-configuration.html#configure-automatic-review-policy).
 
-Before enabling **Full Access** for an approved security model, the ChatGPT desktop app shows a model-specific warning about dangerous actions. The warning recommends **Approve for me** instead and links to [reviewer-policy configuration](https://learn.chatgpt.com/docs/sandboxing/auto-review#configuration). The warning doesn't restore the sandbox boundary or override organization policy.
+Before enabling **Full Access** for an approved security model, the ChatGPT desktop app shows a model-specific warning about dangerous actions. The warning recommends **Approve for me** instead and links to [reviewer-policy configuration](sandboxing/auto-review.html#configuration). The warning doesn't restore the sandbox boundary or override organization policy.
 
 Guardrails add policy-based review to a controlled cybersecurity workflow. They don't replace environment isolation, least-privilege permissions, clearly defined boundaries, monitoring, or human oversight.
 
 #### Review sensitive Codex actions
 
-[Auto-review](https://learn.chatgpt.com/docs/sandboxing/auto-review) routes eligible sandbox-boundary approval requests to a separate reviewer before the proposed action runs. The reviewer considers the proposed action, bounded task context, and applicable policy, then allows or denies the request. Organizations can customize that policy for their approved targets, prohibited actions, and required human-review conditions.
+[Auto-review](sandboxing/auto-review.html) routes eligible sandbox-boundary approval requests to a separate reviewer before the proposed action runs. The reviewer considers the proposed action, bounded task context, and applicable policy, then allows or denies the request. Organizations can customize that policy for their approved targets, prohibited actions, and required human-review conditions.
 
 Require explicit human approval for actions that affect production, external systems, sensitive data, privilege escalation, persistent access, or irreversible changes. Treat instructions embedded in websites, repositories, documents, and tool outputs as untrusted; they can't expand the authorized scope or override access controls.
 
@@ -11193,7 +11193,7 @@ For automatic review to run, keep all three controls in place:
 2. Set `approvals_reviewer = "auto_review"`.
 3. Keep an enforceable sandbox or permission-profile boundary.
 
-Requests to a target on the network allowlist stay inside the network boundary and don't automatically trigger Auto-review. To review a sensitive command even when its destination is on the allowlist, create an explicit [command rule](https://learn.chatgpt.com/docs/agent-configuration/rules) under `~/.codex/rules/`:
+Requests to a target on the network allowlist stay inside the network boundary and don't automatically trigger Auto-review. To review a sensitive command even when its destination is on the allowlist, create an explicit [command rule](agent-configuration/rules.html) under `~/.codex/rules/`:
 
 ```python
 prefix_rule(
@@ -11203,11 +11203,11 @@ prefix_rule(
 )
 ```
 
-Restart Codex after adding the rule. With `approvals_reviewer = "auto_review"`, matching commands go to the reviewer before execution. Add corresponding prompt rules for every sensitive command, or use `approval_mode = "prompt"` for individual [MCP tools](https://learn.chatgpt.com/docs/extend/mcp). Actions that require a person's decision still need explicit human approval.
+Restart Codex after adding the rule. With `approvals_reviewer = "auto_review"`, matching commands go to the reviewer before execution. Add corresponding prompt rules for every sensitive command, or use `approval_mode = "prompt"` for individual [MCP tools](extend/mcp.html). Actions that require a person's decision still need explicit human approval.
 
 Auto-review doesn't inspect routine actions that are already permitted inside the sandbox. With `approval_policy = "never"` or Full Access, a sensitive action might not create a reviewable approval request. Automatic review can make mistakes and doesn't replace isolation, clearly defined boundaries, monitoring, or explicit human oversight.
 
-For a scoped policy and organization-wide enforcement, see [Configure an authorized cybersecurity workflow](https://learn.chatgpt.com/docs/sandboxing/auto-review#configure-an-authorized-cybersecurity-engagement).
+For a scoped policy and organization-wide enforcement, see [Configure an authorized cybersecurity workflow](sandboxing/auto-review.html#configure-an-authorized-cybersecurity-engagement).
 
 #### Monitor independently and fail closed
 
@@ -11235,7 +11235,7 @@ Confirm the approved systems and actions, appropriate model, isolated environmen
 
 ### Sandbox
 
-Source: [Sandbox](https://learn.chatgpt.com/docs/sandboxing.md)
+Source: [Sandbox](sandboxing.md)
 
 The sandbox is the boundary that lets the agent act autonomously without giving it
 unrestricted access to your machine. When a local chat runs commands in the
@@ -11283,7 +11283,7 @@ On **macOS**, sandboxing works out of the box using the built-in Seatbelt
 framework.
 
 On **Windows**, Codex uses the native [Windows
-sandbox](https://learn.chatgpt.com/docs/windows/windows-sandbox#windows-sandbox) when you run in PowerShell and the
+sandbox](windows/windows-sandbox.html#windows-sandbox) when you run in PowerShell and the
 Linux sandbox implementation when you run in WSL2.
 
 On **Linux and WSL2**, install `bubblewrap` with your package manager first:
@@ -11368,7 +11368,7 @@ Depending on your configuration, the menu can include **Ask for approval**,
 custom permissions profiles.
 
 In the CLI, enter
-[`/permissions`](https://learn.chatgpt.com/docs/developer-commands?surface=cli#cli-update-permissions-with-permissions)
+[`/permissions`](developer-commands.html#cli-update-permissions-with-permissions)
 to open the permissions picker and change the active permissions profile.
 
 In the IDE extension, use the permissions control beneath the composer.
@@ -11379,8 +11379,8 @@ custom permissions profiles.
 #### Configure defaults
 
 To start with the same behavior every time, set defaults in `config.toml`.
-[Config basics](https://learn.chatgpt.com/docs/config-file/config-basic) explains how it works, and the
-[Configuration reference](https://learn.chatgpt.com/docs/config-file/config-reference) documents the exact keys for
+[Config basics](config-file/config-basic.html) explains how it works, and the
+[Configuration reference](config-file/config-reference.html) documents the exact keys for
 `sandbox_mode`, `approval_policy`, `approvals_reviewer`, and
 `sandbox_workspace_write.writable_roots`. Use those settings to decide how much
 autonomy the agent gets by default, which directories it can write to, when it
@@ -11406,14 +11406,14 @@ The common approval policies are:
 Codex and ChatGPT Work no longer support `untrusted` as a selectable approval
 policy. If an existing configuration uses that value, see [Migrate from the
 retired `untrusted` approval
-policy](https://learn.chatgpt.com/docs/agent-approvals-security#migrate-from-the-retired-untrusted-approval-policy).
+policy](agent-approvals-security.html#migrate-from-the-retired-untrusted-approval-policy).
 
 When approvals are interactive, you can also choose who reviews them with
 `approvals_reviewer`:
 
 - `user`: approval prompts surface to the user. This is the default.
 - `auto_review`: eligible approval prompts go to a reviewer agent (see
-  [automatic review](https://learn.chatgpt.com/docs/sandboxing/auto-review)).
+  [automatic review](sandboxing/auto-review.html)).
 
 Full access means using `sandbox_mode = "danger-full-access"` together with
 `approval_policy = "never"`. By contrast, the lower-risk local automation
@@ -11428,10 +11428,10 @@ you extend the places it can modify without removing the sandbox entirely. If
 you need a broader or narrower trust boundary, adjust the default sandbox mode
 and approval policy instead of relying on one-off exceptions.
 
-When a workflow needs a specific exception, use [rules](https://learn.chatgpt.com/docs/agent-configuration/rules). Rules
+When a workflow needs a specific exception, use [rules](agent-configuration/rules.html). Rules
 let you allow, prompt, or forbid command prefixes outside the sandbox, which is
 often a better fit than broadly expanding access. For IDE-specific settings
-entry points, see [Codex IDE extension settings](https://learn.chatgpt.com/docs/developer-settings?surface=ide).
+entry points, see [Codex IDE extension settings](developer-settings.html).
 
 Automatic review, when available, doesn't change the sandbox boundary. It's
 one possible `approvals_reviewer` for approval requests at that boundary, such
@@ -11439,12 +11439,12 @@ as sandbox escalations, blocked network access, or side-effecting tool calls
 that still need approval. Actions already allowed inside the sandbox run
 without extra review. For the reviewer lifecycle, trigger types, denial
 semantics, and configuration details, see
-[automatic review](https://learn.chatgpt.com/docs/sandboxing/auto-review).
+[automatic review](sandboxing/auto-review.html).
 
 Platform details live in the platform-specific docs. For native Windows setup,
-behavior, and troubleshooting, see [Windows](https://learn.chatgpt.com/docs/windows/windows-sandbox). For admin
+behavior, and troubleshooting, see [Windows](windows/windows-sandbox.html). For admin
 requirements and organization-level constraints on sandboxing and approvals, see
-[Agent approvals & security](https://learn.chatgpt.com/docs/agent-approvals-security).
+[Agent approvals & security](agent-approvals-security.html).
 
 ### Security & Privacy
 
@@ -11517,7 +11517,7 @@ Security and privacy are foundational to user trust. Bake them into your plannin
 
 ### Codex Security
 
-Source: [Codex Security](https://learn.chatgpt.com/docs/security/index.md)
+Source: [Codex Security](security/index.md)
 
 Codex Security is an application security agent that helps security and
 engineering teams find, confirm, and fix vulnerabilities. Use it in
@@ -11527,7 +11527,7 @@ repositories.
 [Install plugin in ChatGPT](https://chatgpt.com/plugins/share/676aca3811d54fa7bcdef5255236b3c4)
 
 For a prescriptive first local scan, start with the [Codex Security plugin
-quickstart](https://learn.chatgpt.com/docs/security/plugin).
+quickstart](security/plugin.html).
 
 #### Use Codex Security in the desktop app
 
@@ -11540,25 +11540,25 @@ one place while Codex runs each scan in a task.
 - Use **Findings** to inspect issues and evidence across completed scans.
 - Use **Repositories** to review repository history and open findings.
 
-See [Use the Security workbench](https://learn.chatgpt.com/docs/security/plugin/workbench) for the
+See [Use the Security workbench](security/plugin/workbench.html) for the
 complete desktop-app workflow.
 
 #### Explore plugin use cases
 
-- [Run a security scan](https://learn.chatgpt.com/docs/security/plugin/scans) for a repository or one scoped folder.
-- [Run a deep security scan](https://learn.chatgpt.com/docs/security/plugin/deep-scans) when you need broader review and can wait longer for it to finish.
-- [Review code changes](https://learn.chatgpt.com/docs/security/plugin/code-changes) before you merge a pull request or branch.
-- [Triage a backlog](https://learn.chatgpt.com/docs/security/plugin/triage-backlog) when you have existing security findings to review.
-- [Fix and verify findings](https://learn.chatgpt.com/docs/security/plugin/fix-findings) with bounded patches for approved findings.
-- [Export or track findings](https://learn.chatgpt.com/docs/security/plugin/export-findings) as portable artifacts or approval-gated tracking destinations.
-- [Write vulnerability reports](https://learn.chatgpt.com/docs/security/plugin/vulnerability-reports) from supplied findings, disclosure notes, source, and PoCs.
-- [Propose security hardening](https://learn.chatgpt.com/docs/security/plugin/security-hardening) from scan results or other security evidence.
-- [See what's new](https://learn.chatgpt.com/docs/security/plugin/changelog) in the Codex Security plugin.
+- [Run a security scan](security/plugin/scans.html) for a repository or one scoped folder.
+- [Run a deep security scan](security/plugin/deep-scans.html) when you need broader review and can wait longer for it to finish.
+- [Review code changes](security/plugin/code-changes.html) before you merge a pull request or branch.
+- [Triage a backlog](security/plugin/triage-backlog.html) when you have existing security findings to review.
+- [Fix and verify findings](security/plugin/fix-findings.html) with bounded patches for approved findings.
+- [Export or track findings](security/plugin/export-findings.html) as portable artifacts or approval-gated tracking destinations.
+- [Write vulnerability reports](security/plugin/vulnerability-reports.html) from supplied findings, disclosure notes, source, and PoCs.
+- [Propose security hardening](security/plugin/security-hardening.html) from scan results or other security evidence.
+- [See what's new](security/plugin/changelog.html) in the Codex Security plugin.
 
 The desktop Security workbench and Codex CLI use the Codex Security plugin.
 Codex Security cloud scans connected GitHub repositories through Codex cloud.
 For Codex sandboxing, approvals, network controls, and admin settings, see
-[Agent approvals & security](https://learn.chatgpt.com/docs/agent-approvals-security).
+[Agent approvals & security](agent-approvals-security.html).
 
 #### Codex Security CLI and SDK
 
@@ -11580,17 +11580,17 @@ policies, set an estimated cost limit, or run checks in CI and before commits.
 Use the TypeScript SDK to build scanning, progress reporting, and cost controls
 into an application or developer tool.
 
-- [Start with the CLI quickstart](https://learn.chatgpt.com/docs/security/cli) to set up the CLI,
+- [Start with the CLI quickstart](security/cli.html) to set up the CLI,
   preflight a repository, and run a local scan.
-- [Run bulk security scans](https://learn.chatgpt.com/docs/security/cli/bulk-scans) to discover GitHub
+- [Run bulk security scans](security/cli/bulk-scans.html) to discover GitHub
   repositories or run a resumable campaign from a CSV inventory.
-- [Run scans in CI](https://learn.chatgpt.com/docs/security/cli/ci) to review pull-request changes,
+- [Run scans in CI](security/cli/ci.html) to review pull-request changes,
   preserve artifacts, upload SARIF, and set a severity policy.
-- [Read the CLI FAQ](https://learn.chatgpt.com/docs/security/cli/faq) for answers about scan history,
+- [Read the CLI FAQ](security/cli/faq.html) for answers about scan history,
   false-positive feedback, coverage, and fix verification.
-- [Use the CLI reference](https://learn.chatgpt.com/docs/security/cli/reference) to check supported
+- [Use the CLI reference](security/cli/reference.html) to check supported
   commands, flags, output formats, artifacts, and exit codes.
-- [Integrate the TypeScript SDK](https://learn.chatgpt.com/docs/security/sdk) to select targets,
+- [Integrate the TypeScript SDK](security/sdk.html) to select targets,
   inspect results, track progress, and cancel scans from code.
 
 #### Codex Security cloud
@@ -11623,68 +11623,68 @@ Codex cloud workspace or contact your OpenAI account team.
 
 #### Security overview references
 
-- [Codex Security plugin quickstart](https://learn.chatgpt.com/docs/security/plugin) walks through installation and a first local scan.
-- [Security workbench](https://learn.chatgpt.com/docs/security/plugin/workbench) explains saved scans, findings, repositories, and scan activity in the desktop app.
-- [Codex Security CLI quickstart](https://learn.chatgpt.com/docs/security/cli) walks through setup, preflight, and a first terminal scan.
-- [Run bulk security scans](https://learn.chatgpt.com/docs/security/cli/bulk-scans) explains GitHub discovery, CSV inventories, campaign results, and resume behavior.
-- [Codex Security CLI FAQ](https://learn.chatgpt.com/docs/security/cli/faq) answers common questions about scans, findings, coverage, and costs.
-- [Codex Security TypeScript SDK](https://learn.chatgpt.com/docs/security/sdk) explains how to run scans from an application or developer tool.
-- [Codex Security cloud setup](https://learn.chatgpt.com/docs/security/setup) details setup, scanning, and findings review.
-- [Security Review](https://learn.chatgpt.com/docs/security/security-review) explains how to run in-depth security reviews on GitHub pull requests.
-- [Improving the threat model](https://learn.chatgpt.com/docs/security/threat-model) explains how to tune scope, entry points, and criticality assumptions.
-- [Codex Security cloud FAQ](https://learn.chatgpt.com/docs/security/faq) covers common cloud product questions.
+- [Codex Security plugin quickstart](security/plugin.html) walks through installation and a first local scan.
+- [Security workbench](security/plugin/workbench.html) explains saved scans, findings, repositories, and scan activity in the desktop app.
+- [Codex Security CLI quickstart](security/cli.html) walks through setup, preflight, and a first terminal scan.
+- [Run bulk security scans](security/cli/bulk-scans.html) explains GitHub discovery, CSV inventories, campaign results, and resume behavior.
+- [Codex Security CLI FAQ](security/cli/faq.html) answers common questions about scans, findings, coverage, and costs.
+- [Codex Security TypeScript SDK](security/sdk.html) explains how to run scans from an application or developer tool.
+- [Codex Security cloud setup](security/setup.html) details setup, scanning, and findings review.
+- [Security Review](security/security-review.html) explains how to run in-depth security reviews on GitHub pull requests.
+- [Improving the threat model](security/threat-model.html) explains how to tune scope, entry points, and criticality assumptions.
+- [Codex Security cloud FAQ](security/faq.html) covers common cloud product questions.
 
 ### Security
 
-Source: [Security](https://learn.chatgpt.com/docs/security-administration.md)
+Source: [Security](security-administration.md)
 
 Control what ChatGPT and Codex developer tools can access, understand how work is isolated, and apply safeguards for security-sensitive tasks.
 
 Security controls define what ChatGPT and Codex developer tools can access and how sensitive actions are reviewed. Permissions, sandboxing, approvals, and network access establish trust boundaries. Codex Security helps find and remediate vulnerabilities, and cyber safety guidance explains how security-sensitive work is handled.
 
-[Explore permissions](https://learn.chatgpt.com/docs/permissions)
+[Explore permissions](permissions.html)
 
 #### Permissions
 
 Control filesystem, network, command, approval, and review behavior.
 
-- [Permissions](https://learn.chatgpt.com/docs/permissions): Choose a profile for filesystem, command, and network access.
+- [Permissions](permissions.html): Choose a profile for filesystem, command, and network access.
 
-- [Sandboxing](https://learn.chatgpt.com/docs/sandboxing): Understand how Codex isolates commands and file changes.
+- [Sandboxing](sandboxing.html): Understand how Codex isolates commands and file changes.
 
-- [Auto-review](https://learn.chatgpt.com/docs/sandboxing/auto-review): Review actions automatically against your configured policy.
+- [Auto-review](sandboxing/auto-review.html): Review actions automatically against your configured policy.
 
-- [Agent approvals and security](https://learn.chatgpt.com/docs/agent-approvals-security): Decide when Codex must ask before taking an action.
+- [Agent approvals and security](agent-approvals-security.html): Decide when Codex must ask before taking an action.
 
-- [Internet access](https://learn.chatgpt.com/docs/cloud/internet-access): Control which domains cloud chats can reach.
+- [Internet access](cloud/internet-access.html): Control which domains cloud chats can reach.
 
 #### Codex Security
 
 Find, understand, and remediate vulnerabilities.
 
-- [Codex Security overview](https://learn.chatgpt.com/docs/security): Assess code and turn reviewed findings into focused fixes.
+- [Codex Security overview](security.html): Assess code and turn reviewed findings into focused fixes.
 
-- [Codex Security plugin](https://learn.chatgpt.com/docs/security/plugin): Run security workflows from the ChatGPT desktop app and Codex CLI.
+- [Codex Security plugin](security/plugin.html): Run security workflows from the ChatGPT desktop app and Codex CLI.
 
-- [Codex Security CLI](https://learn.chatgpt.com/docs/security/cli): Run local security scans and automate repository reviews.
+- [Codex Security CLI](security/cli.html): Run local security scans and automate repository reviews.
 
-- [Codex Security TypeScript SDK](https://learn.chatgpt.com/docs/security/sdk): Integrate security scanning and progress reporting into developer tools.
+- [Codex Security TypeScript SDK](security/sdk.html): Integrate security scanning and progress reporting into developer tools.
 
-- [Codex Security cloud setup](https://learn.chatgpt.com/docs/security/setup): Connect repositories and configure cloud security scans.
+- [Codex Security cloud setup](security/setup.html): Connect repositories and configure cloud security scans.
 
-- [Security Review](https://learn.chatgpt.com/docs/security/security-review): Run in-depth security reviews on GitHub pull requests.
+- [Security Review](security/security-review.html): Run in-depth security reviews on GitHub pull requests.
 
-- [Threat model](https://learn.chatgpt.com/docs/security/threat-model): Review and improve the threat model for your codebase.
+- [Threat model](security/threat-model.html): Review and improve the threat model for your codebase.
 
-- [Codex Security cloud FAQ](https://learn.chatgpt.com/docs/security/faq): Get answers about cloud scans, findings, privacy, and access.
+- [Codex Security cloud FAQ](security/faq.html): Get answers about cloud scans, findings, privacy, and access.
 
 #### Cyber safety
 
 Choose approved models and configure safe engagements.
 
-- [Models & Trusted Access](https://learn.chatgpt.com/docs/cyber-safety): Choose a cybersecurity model and request Trusted Access.
+- [Models & Trusted Access](cyber-safety.html): Choose a cybersecurity model and request Trusted Access.
 
-- [Recommended configuration](https://learn.chatgpt.com/docs/cyber-safety/recommended-configuration): Isolate the environment, enforce scope, and review sensitive actions.
+- [Recommended configuration](cyber-safety/recommended-configuration.html): Isolate the environment, enforce scope, and review sensitive actions.
 
 ## Configuration, Authentication, and Models
 
@@ -11694,9 +11694,9 @@ Config files, auth flows, model selection, and configuration reference material.
 
 ### Configuration Reference
 
-Source: [Configuration Reference](https://learn.chatgpt.com/docs/config-file/config-reference.md)
+Source: [Configuration Reference](config-file/config-reference.md)
 
-Use this page as a searchable reference for Codex configuration files. For conceptual guidance and examples, start with [Config basics](https://learn.chatgpt.com/docs/config-file/config-basic) and [Advanced Config](https://learn.chatgpt.com/docs/config-file/config-advanced).
+Use this page as a searchable reference for Codex configuration files. For conceptual guidance and examples, start with [Config basics](config-file/config-basic.html) and [Advanced Config](config-file/config-advanced.html).
 
 #### `config.toml`
 
@@ -11709,16 +11709,16 @@ or telemetry routing keys. Codex ignores `openai_base_url`,
 `model_providers`, `notify`, `profile`, `profiles`,
 `experimental_realtime_ws_base_url`, and `otel` when they appear in a
 project-local `.codex/config.toml`; put provider, notification, and telemetry
-keys in user-level config instead. Config [profile files](https://learn.chatgpt.com/docs/config-file/config-advanced#profiles) live next to
+keys in user-level config instead. Config [profile files](config-file/config-advanced.html#profiles) live next to
 `config.toml` as `$CODEX_HOME/profile-name.config.toml`; select one with
 `--profile profile-name`.
 
-For sandbox and approval keys (`approval_policy`, `sandbox_mode`, and `sandbox_workspace_write.*`), pair this reference with [Sandbox and approvals](https://learn.chatgpt.com/docs/agent-approvals-security#sandbox-and-approvals), [Protected paths in writable roots](https://learn.chatgpt.com/docs/agent-approvals-security#protected-paths-in-writable-roots), and [Network access](https://learn.chatgpt.com/docs/agent-approvals-security#network-access). For beta permission profiles, see [Permissions](https://learn.chatgpt.com/docs/permissions).
+For sandbox and approval keys (`approval_policy`, `sandbox_mode`, and `sandbox_workspace_write.*`), pair this reference with [Sandbox and approvals](agent-approvals-security.html#sandbox-and-approvals), [Protected paths in writable roots](agent-approvals-security.html#protected-paths-in-writable-roots), and [Network access](agent-approvals-security.html#network-access). For beta permission profiles, see [Permissions](permissions.html).
 
 Codex and ChatGPT Work no longer support `approval_policy = "untrusted"`.
 Remove the setting or choose a supported policy. Project entries with
 `trust_level = "untrusted"` in user-level `~/.codex/config.toml` remain supported. See
-[Migrate from the retired `untrusted` approval policy](https://learn.chatgpt.com/docs/agent-approvals-security#migrate-from-the-retired-untrusted-approval-policy)
+[Migrate from the retired `untrusted` approval policy](agent-approvals-security.html#migrate-from-the-retired-untrusted-approval-policy)
 for examples and approval tradeoffs.
 
 | Key                                                           | Type / Values                                                                                                                                                 | Default | Details                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
@@ -11769,7 +11769,7 @@ for examples and approval tradeoffs.
 | `computer_use.windows.aumids`                                 | `map`                                                                                                                                                         |         | Packaged Windows app access keyed by Application User Model ID (AUMID).                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | `computer_use.windows.exes`                                   | `array`                                                                                                                                                       |         | Windows executable access rules. Each rule requires `publisher_name`, `product_name`, and `access` (`allow` or `deny`); `binary_name` is optional.                                                                                                                                                                                                                                                                                                                                          |
 | `default_permissions`                                         | `string`                                                                                                                                                      |         | Name of the default permissions profile to apply to sandboxed tool calls. Built-ins are `:read-only`, `:workspace`, and `:danger-full-access`; custom profile names require matching `[permissions.]` tables. Don't combine with `sandbox_mode` or `[sandbox_workspace_write]`.                                                                                                                                                                                                             |
-| `desktop.custom_file_handlers.`                               | `table`                                                                                                                                                       |         | User-level only. Defines an additional **Open in** target for the ChatGPT desktop app. See [Add custom file handlers](https://learn.chatgpt.com/docs/config-file/config-advanced#add-custom-file-handlers) for examples and handler ID constraints.                                                                                                                                                                                                                                                                 |
+| `desktop.custom_file_handlers.`                               | `table`                                                                                                                                                       |         | User-level only. Defines an additional **Open in** target for the ChatGPT desktop app. See [Add custom file handlers](config-file/config-advanced.html#add-custom-file-handlers) for examples and handler ID constraints.                                                                                                                                                                                                                                                                 |
 | `desktop.custom_file_handlers..args`                          | `array`                                                                                                                                                       |         | Arguments inserted between the command and file input (default: `[]`).                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | `desktop.custom_file_handlers..command`                       | `string`                                                                                                                                                      |         | Executable path or command name to detect and launch. Required.                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | `desktop.custom_file_handlers..icon`                          | `string`                                                                                                                                                      |         | Bundled asset path, Base64-encoded `data:image/...` URL, file URI, or absolute local path for the handler icon. Required; unsupported sources use the default VS Code icon.                                                                                                                                                                                                                                                                                                                 |
@@ -11789,7 +11789,7 @@ for examples and approval tradeoffs.
 | `features.fast_mode`                                          | `boolean`                                                                                                                                                     |         | Enable model-catalog service tier selection in the TUI, including Fast-tier commands when the active model advertises them (stable; on by default).                                                                                                                                                                                                                                                                                                                                         |
 | `features.goals`                                              | `boolean`                                                                                                                                                     |         | Enable persisted goals and automatic continuation (stable; on by default).                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | `features.hooks`                                              | `boolean`                                                                                                                                                     |         | Enable lifecycle hooks loaded from `hooks.json` or inline `[hooks]` config. `features.codex_hooks` is a deprecated alias.                                                                                                                                                                                                                                                                                                                                                                   |
-| `features.memories`                                           | `boolean`                                                                                                                                                     |         | Enable [Memories](https://learn.chatgpt.com/docs/customization/memories) (off by default).                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| `features.memories`                                           | `boolean`                                                                                                                                                     |         | Enable [Memories](customization/memories.html) (off by default).                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | `features.multi_agent`                                        | `boolean`                                                                                                                                                     |         | Enable multi-agent collaboration tools (`spawn_agent`, `send_input`, `resume_agent`, `wait_agent`, and `close_agent`) (stable; on by default).                                                                                                                                                                                                                                                                                                                                              |
 | `features.network_proxy`                                      | `boolean \| table`                                                                                                                                            |         | Start the network proxy for sandboxed commands (experimental; off by default). Required to enforce permission-profile domain rules unless enabled administrator-managed `experimental_network` requirements start the proxy. Use a table when setting feature-level policy options such as `domains`. Does not filter web search, apps, MCP, or other hosted tools.                                                                                                                         |
 | `features.network_proxy.allow_local_binding`                  | `boolean`                                                                                                                                                     |         | Allow broader local/private-network access. Defaults to `false`; exact local IP literal or `localhost` allow rules can still permit specific local targets.                                                                                                                                                                                                                                                                                                                                 |
@@ -11828,8 +11828,8 @@ for examples and approval tradeoffs.
 | `hooks`                                                       | `table`                                                                                                                                                       |         | Lifecycle hooks configured inline in `config.toml`. Uses the same event schema as `hooks.json`; see the Hooks guide for examples and supported events.                                                                                                                                                                                                                                                                                                                                      |
 | `hooks.`                                                      | `array`                                                                                                                                                       |         | Matcher groups for hook events such as `PreToolUse`, `PermissionRequest`, `PostToolUse`, `PreCompact`, `PostCompact`, `SessionStart`, `SessionEnd`, `SubagentStart`, `SubagentStop`, `UserPromptSubmit`, `Stop`, or `Interrupt`.                                                                                                                                                                                                                                                            |
 | `hooks.[].hooks`                                              | `array`                                                                                                                                                       |         | Hook handlers for a matcher group. Command and MCP tool hooks are supported while prompt and agent hook handlers are parsed but skipped.                                                                                                                                                                                                                                                                                                                                                    |
-| `hooks.[].hooks[].additionalContextLimit`                     | `integer`                                                                                                                                                     |         | Approximate per-handler token threshold for saving oversized `additionalContext` to disk and showing the model a shorter preview. Defaults to `2500`; `0` passes the full context directly to the model. See [Large hook output](https://learn.chatgpt.com/docs/hooks#large-hook-output).                                                                                                                                                                                                                           |
-| `hooks.[].hooks[].async`                                      | `boolean`                                                                                                                                                     |         | Run a command hook in the background without delaying the triggering operation. Defaults to `false`; `SessionEnd` always runs synchronously. See [Run hooks in the background](https://learn.chatgpt.com/docs/hooks#run-hooks-in-the-background).                                                                                                                                                                                                                                                                   |
+| `hooks.[].hooks[].additionalContextLimit`                     | `integer`                                                                                                                                                     |         | Approximate per-handler token threshold for saving oversized `additionalContext` to disk and showing the model a shorter preview. Defaults to `2500`; `0` passes the full context directly to the model. See [Large hook output](hooks.html#large-hook-output).                                                                                                                                                                                                                           |
+| `hooks.[].hooks[].async`                                      | `boolean`                                                                                                                                                     |         | Run a command hook in the background without delaying the triggering operation. Defaults to `false`; `SessionEnd` always runs synchronously. See [Run hooks in the background](hooks.html#run-hooks-in-the-background).                                                                                                                                                                                                                                                                   |
 | `hooks.[].hooks[].commandWindows`                             | `string`                                                                                                                                                      |         | Windows-only command override for command hooks. The TOML alias `command_windows` is also accepted.                                                                                                                                                                                                                                                                                                                                                                                         |
 | `instructions`                                                | `string`                                                                                                                                                      |         | Reserved for future use; prefer `model_instructions_file` or `AGENTS.md`.                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | `log_dir`                                                     | `string (path)`                                                                                                                                               |         | Directory where Codex writes log files; defaults to `$CODEX_HOME/log`. Setting this explicitly also enables the opt-in plaintext TUI log, `codex-tui.log`, in that directory.                                                                                                                                                                                                                                                                                                               |
@@ -12021,19 +12021,19 @@ for examples and approval tradeoffs.
 | `windows.sandbox`                                             | `unelevated \| elevated`                                                                                                                                      |         | Windows-only native sandbox mode when running Codex natively on Windows.                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | `windows.sandbox_private_desktop`                             | `boolean`                                                                                                                                                     |         | Run the final sandboxed child process on a private desktop by default on native Windows. Set `false` only for compatibility with the older `Winsta0\\Default` behavior.                                                                                                                                                                                                                                                                                                                     |
 
-You can find the latest JSON schema for `config.toml` [here](https://learn.chatgpt.com/docs/config-schema.json).
+You can find the latest JSON schema for `config.toml` [here](config-schema.json).
 
 To get autocompletion and diagnostics when editing `config.toml` in VS Code or Cursor, you can install the [Even Better TOML](https://marketplace.visualstudio.com/items?itemName=tamasfe.even-better-toml) extension and add this line to the top of your `config.toml`:
 
 ```toml
-#:schema https://developers.openai.com/codex/config-schema.json
+#:schema codex/config-schema.json
 ```
 
 Note: Rename `experimental_instructions_file` to `model_instructions_file`. Codex deprecates the old key; update existing configs to the new name.
 
 #### `requirements.toml`
 
-`requirements.toml` is an admin-enforced configuration file that constrains security-sensitive settings users can't override. For details, locations, and examples, see [Admin-enforced requirements](https://learn.chatgpt.com/docs/enterprise/managed-configuration#admin-enforced-requirements-requirementstoml).
+`requirements.toml` is an admin-enforced configuration file that constrains security-sensitive settings users can't override. For details, locations, and examples, see [Admin-enforced requirements](enterprise/managed-configuration.html#admin-enforced-requirements-requirementstoml).
 
 For ChatGPT Business and Enterprise users, Codex can also apply cloud-fetched
 requirements. See the security page for precedence details.
@@ -12171,8 +12171,8 @@ from either one wins.
 | `hooks`                                                      | `table`                                |         | Admin-enforced managed lifecycle hooks. Requires a managed hook directory and uses the same event schema as inline `[hooks]` in `config.toml`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | `hooks.`                                                     | `array`                                |         | Matcher groups for a hook event such as `PreToolUse`, `PermissionRequest`, `PostToolUse`, `PreCompact`, `PostCompact`, `SessionStart`, `SessionEnd`, `SubagentStart`, `SubagentStop`, `UserPromptSubmit`, or `Stop`.                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | `hooks.[].hooks`                                             | `array`                                |         | Hook handlers for a matcher group. Command and MCP tool hooks are supported while prompt and agent hook handlers are parsed but skipped.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| `hooks.[].hooks[].additionalContextLimit`                    | `integer`                              |         | Approximate per-handler token threshold for saving oversized `additionalContext` to disk and showing the model a shorter preview. Defaults to `2500`; `0` passes the full context directly to the model. See [Large hook output](https://learn.chatgpt.com/docs/hooks#large-hook-output).                                                                                                                                                                                                                                                                                                                                                                       |
-| `hooks.[].hooks[].async`                                     | `boolean`                              |         | Run a command hook in the background without delaying the triggering operation. Defaults to `false`; `SessionEnd` always runs synchronously. See [Run hooks in the background](https://learn.chatgpt.com/docs/hooks#run-hooks-in-the-background).                                                                                                                                                                                                                                                                                                                                                                                                               |
+| `hooks.[].hooks[].additionalContextLimit`                    | `integer`                              |         | Approximate per-handler token threshold for saving oversized `additionalContext` to disk and showing the model a shorter preview. Defaults to `2500`; `0` passes the full context directly to the model. See [Large hook output](hooks.html#large-hook-output).                                                                                                                                                                                                                                                                                                                                                                       |
+| `hooks.[].hooks[].async`                                     | `boolean`                              |         | Run a command hook in the background without delaying the triggering operation. Defaults to `false`; `SessionEnd` always runs synchronously. See [Run hooks in the background](hooks.html#run-hooks-in-the-background).                                                                                                                                                                                                                                                                                                                                                                                                               |
 | `hooks.[].hooks[].commandWindows`                            | `string`                               |         | Windows-only command override for command hooks. The TOML alias `command_windows` is also accepted.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | `hooks.managed_dir`                                          | `string (absolute path)`               |         | Directory containing managed hook scripts on macOS and Linux. Codex validates that it is absolute and exists before loading managed hooks.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | `hooks.windows_managed_dir`                                  | `string (absolute path)`               |         | Directory containing managed hook scripts on Windows. Codex validates that it is absolute and exists before loading managed hooks.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
@@ -12239,7 +12239,7 @@ from either one wins.
 
 ### Environment variables
 
-Source: [Environment variables](https://learn.chatgpt.com/docs/config-file/environment-variables.md)
+Source: [Environment variables](config-file/environment-variables.md)
 
 Codex uses `config.toml` for durable settings. Use environment variables for
 shell-scoped overrides, automation secrets, installer behavior, or diagnostics.
@@ -12247,7 +12247,7 @@ shell-scoped overrides, automation secrets, installer behavior, or diagnostics.
 This page lists stable public environment variables that Codex reads directly.
 It does not list internal development variables, test variables, or
 provider-specific secret names you choose yourself with
-[`env_key`](https://learn.chatgpt.com/docs/config-file/config-advanced#custom-model-providers).
+[`env_key`](config-file/config-advanced.html#custom-model-providers).
 
 #### Core locations
 
@@ -12257,7 +12257,7 @@ provider-specific secret names you choose yourself with
 | `CODEX_SQLITE_HOME` | CLI and app-server state                   | `CODEX_HOME` | Sets where SQLite-backed state is stored. The `sqlite_home` config option takes precedence. Relative paths resolve from the current working directory.           |
 
 For more about the files stored under `CODEX_HOME`, see
-[Config and state locations](https://learn.chatgpt.com/docs/config-file/config-advanced#config-and-state-locations).
+[Config and state locations](config-file/config-advanced.html#config-and-state-locations).
 
 #### Installer variables
 
@@ -12294,13 +12294,13 @@ $env:CODEX_NON_INTERACTIVE=1; irm https://chatgpt.com/codex/install.ps1 | iex
 | `SSL_CERT_FILE`                    | HTTPS, login, and WebSocket clients              | Fallback PEM CA bundle path when `CODEX_CA_CERTIFICATE` is unset.                                                                               |
 
 For provider API keys, set
-[`env_key`](https://learn.chatgpt.com/docs/config-file/config-advanced#custom-model-providers) in the model provider
+[`env_key`](config-file/config-advanced.html#custom-model-providers) in the model provider
 configuration. Codex reads the variable named by that config, so the variable
 name itself is not a fixed Codex environment variable.
 
 For automation secret handling, see
-[Use API key auth](https://learn.chatgpt.com/docs/non-interactive-mode#use-api-key-auth).
-For access token setup, see [Access tokens](https://learn.chatgpt.com/docs/enterprise/access-tokens).
+[Use API key auth](non-interactive-mode.html#use-api-key-auth).
+For access token setup, see [Access tokens](enterprise/access-tokens.html).
 
 #### Diagnostics
 
@@ -12326,11 +12326,11 @@ to a separate TUI log file.
 
 ### Advanced Configuration
 
-Source: [Advanced Configuration](https://learn.chatgpt.com/docs/config-file/config-advanced.md)
+Source: [Advanced Configuration](config-file/config-advanced.md)
 
-Use these options when you need more control over providers, policies, and integrations. For a quick start, see [Config basics](https://learn.chatgpt.com/docs/config-file/config-basic).
+Use these options when you need more control over providers, policies, and integrations. For a quick start, see [Config basics](config-file/config-basic.html).
 
-For background on project guidance, reusable capabilities, custom slash commands, subagent workflows, and integrations, see [Customization](https://learn.chatgpt.com/docs/customization/overview). For configuration keys, see [Configuration Reference](https://learn.chatgpt.com/docs/config-file/config-reference).
+For background on project guidance, reusable capabilities, custom slash commands, subagent workflows, and integrations, see [Customization](customization/overview.html). For configuration keys, see [Configuration Reference](config-file/config-reference.html).
 
 #### Profiles
 
@@ -12403,9 +12403,9 @@ Common files you may see there:
 - `history.jsonl` (if history persistence is enabled)
 - Other per-user state such as logs and caches
 
-For authentication details (including credential storage modes), see [Authentication](https://learn.chatgpt.com/docs/auth). For the full list of configuration keys, see [Configuration Reference](https://learn.chatgpt.com/docs/config-file/config-reference).
+For authentication details (including credential storage modes), see [Authentication](auth.html). For the full list of configuration keys, see [Configuration Reference](config-file/config-reference.html).
 
-For shared defaults, rules, and skills checked into repos or system paths, see [Team Config](https://learn.chatgpt.com/docs/enterprise/admin-setup#step-4-standardize-local-configuration-with-team-config).
+For shared defaults, rules, and skills checked into repos or system paths, see [Team Config](enterprise/admin-setup.html#step-4-standardize-local-configuration-with-team-config).
 
 If you just need to point the built-in OpenAI provider at an LLM proxy, router, or data-residency enabled project, set `openai_base_url` in `config.toml` instead of defining a new provider. This changes the base URL for the built-in `openai` provider without requiring a separate `model_providers.` entry.
 
@@ -12464,11 +12464,11 @@ If a single layer contains both `hooks.json` and inline `[hooks]`, Codex loads
 both and warns. Prefer one representation per layer.
 
 For the current event list, input fields, output behavior, and limitations, see
-[Hooks](https://learn.chatgpt.com/docs/hooks).
+[Hooks](hooks.html).
 
 #### Agent roles (`[agents]` in `config.toml`)
 
-For subagent role configuration (`[agents]` in `config.toml`), see [Subagents](https://learn.chatgpt.com/docs/agent-configuration/subagents).
+For subagent role configuration (`[agents]` in `config.toml`), see [Subagents](agent-configuration/subagents.html).
 
 #### Project root detection
 
@@ -12523,7 +12523,7 @@ The setting defaults to `false` for custom providers. Standalone web search is
 under development and off by default. Setting the provider capability to `true`
 doesn't enable it: the provider must support a compatible endpoint,
 and the selected model and runtime must support standalone search. The
-configured [`web_search` mode](https://learn.chatgpt.com/docs/web-search) and
+configured [`web_search` mode](web-search.html) and
 managed search restrictions still apply.
 
 Add request headers when needed:
@@ -12571,7 +12571,7 @@ If you omit `profile`, Codex uses the standard AWS credential chain. Set
 
 For the full setup flow, authentication options, supported models, and feature
 availability, see [Use ChatGPT Work and Codex with Amazon
-Bedrock](https://learn.chatgpt.com/docs/amazon-bedrock).
+Bedrock](amazon-bedrock.html).
 
 #### OSS mode (local providers)
 
@@ -12627,13 +12627,13 @@ model_context_window = 128000             # Context window size
 
 Pick approval strictness (affects when Codex pauses) and sandbox level (affects file/network access).
 
-For operational details to keep in mind while editing `config.toml`, see [Common sandbox and approval combinations](https://learn.chatgpt.com/docs/agent-approvals-security#common-sandbox-and-approval-combinations), [Protected paths in writable roots](https://learn.chatgpt.com/docs/agent-approvals-security#protected-paths-in-writable-roots), and [Network access](https://learn.chatgpt.com/docs/agent-approvals-security#network-access).
+For operational details to keep in mind while editing `config.toml`, see [Common sandbox and approval combinations](agent-approvals-security.html#common-sandbox-and-approval-combinations), [Protected paths in writable roots](agent-approvals-security.html#protected-paths-in-writable-roots), and [Network access](agent-approvals-security.html#network-access).
 
 Codex and ChatGPT Work no longer support `approval_policy = "untrusted"`. See
-[Migrate from the retired `untrusted` approval policy](https://learn.chatgpt.com/docs/agent-approvals-security#migrate-from-the-retired-untrusted-approval-policy)
+[Migrate from the retired `untrusted` approval policy](agent-approvals-security.html#migrate-from-the-retired-untrusted-approval-policy)
 for supported settings and stricter project-derived approvals.
 
-For beta permission profiles that configure filesystem and network access together, see [Permissions](https://learn.chatgpt.com/docs/permissions).
+For beta permission profiles that configure filesystem and network access together, see [Permissions](permissions.html).
 
 You can also use a granular approval policy (`approval_policy = { granular = { ... } }`) to allow or auto-reject individual prompt categories. This is useful when you want normal interactive approvals for some cases but want others, such as `request_permissions` or skill-script prompts, to fail closed automatically.
 
@@ -12674,11 +12674,11 @@ Use your organization's automatic review policy.
 #### Named permission profiles
 
 For built-in profiles, custom profile syntax, and the full filesystem and
-network configuration model, see [Permissions](https://learn.chatgpt.com/docs/permissions).
+network configuration model, see [Permissions](permissions.html).
 
 For the complete key list and requirements constraints, see
-[Configuration Reference](https://learn.chatgpt.com/docs/config-file/config-reference) and
-[Managed configuration](https://learn.chatgpt.com/docs/enterprise/managed-configuration).
+[Configuration Reference](config-file/config-reference.html) and
+[Managed configuration](enterprise/managed-configuration.html).
 
 In workspace-write mode, some environments keep `.git/` and `.codex/`
 read-only even when the rest of the workspace is writable. This is why
@@ -12733,7 +12733,7 @@ rejects that combination.
 
 #### MCP servers
 
-See the dedicated [MCP documentation](https://learn.chatgpt.com/docs/extend/mcp) for configuration details.
+See the dedicated [MCP documentation](extend/mcp.html) for configuration details.
 
 #### Observability and telemetry
 
@@ -12765,7 +12765,7 @@ exporter = { otlp-grpc = {
 }}
 ```
 
-If `exporter = "none"` Codex records events but sends nothing. Exporters batch asynchronously and flush on shutdown. Event metadata includes service name, CLI version, env tag, conversation id, model, sandbox/approval settings, and per-event fields (see [Config Reference](https://learn.chatgpt.com/docs/config-file/config-reference)).
+If `exporter = "none"` Codex records events but sends nothing. Exporters batch asynchronously and flush on shutdown. Event metadata includes service name, CLI version, env tag, conversation id, model, sandbox/approval settings, and per-event fields (see [Config Reference](config-file/config-reference.html)).
 
 #### What gets emitted
 
@@ -12798,7 +12798,7 @@ Each metric below also includes default metadata tags: `auth_mode`, `originator`
 | `codex.tool.call`                     | counter   | `tool`, `success`   | Tool invocation count by tool name and success/failure.           |
 | `codex.tool.call.duration_ms`         | histogram | `tool`, `success`   | Tool execution duration in milliseconds by tool name and outcome. |
 
-For more security and privacy guidance around telemetry, see [Security](https://learn.chatgpt.com/docs/agent-approvals-security#monitoring-and-telemetry).
+For more security and privacy guidance around telemetry, see [Security](agent-approvals-security.html#monitoring-and-telemetry).
 
 #### Metrics
 
@@ -13037,7 +13037,7 @@ Place the script somewhere on disk and point `notify` to it.
 
 In `auto` mode, Codex prefers OSC 9 notifications (a terminal escape sequence some terminals interpret as a desktop notification) and falls back to BEL (`\x07`) otherwise.
 
-See [Configuration Reference](https://learn.chatgpt.com/docs/config-file/config-reference) for the exact keys.
+See [Configuration Reference](config-file/config-reference.html) for the exact keys.
 
 #### History persistence
 
@@ -13072,7 +13072,7 @@ Codex reads `AGENTS.md` (and related files) and includes a limited amount of pro
 - `project_doc_max_bytes`: how much to read from each `AGENTS.md` file
 - `project_doc_fallback_filenames`: additional filenames to try when `AGENTS.md` is missing at a directory level
 
-For a detailed walkthrough, see [Custom instructions with AGENTS.md](https://learn.chatgpt.com/docs/agent-configuration/agents-md).
+For a detailed walkthrough, see [Custom instructions with AGENTS.md](agent-configuration/agents-md.html).
 
 #### Desktop
 
@@ -13176,11 +13176,11 @@ Running `codex` with no subcommand launches the interactive terminal UI (TUI). C
 
 `tui.notification_method` defaults to `auto`. In `auto` mode, Codex prefers OSC 9 notifications (a terminal escape sequence some terminals interpret as a desktop notification) when the terminal appears to support them, and falls back to BEL (`\x07`) otherwise.
 
-See [Configuration Reference](https://learn.chatgpt.com/docs/config-file/config-reference) for the full key list.
+See [Configuration Reference](config-file/config-reference.html) for the full key list.
 
 ### Authentication and sessions
 
-Source: [Authentication](https://learn.chatgpt.com/docs/auth.md)
+Source: [Authentication](auth.md)
 
 #### OpenAI authentication
 
@@ -13205,8 +13205,8 @@ membership and provisioning determine who can sign in, while seats and
 workspace roles determine which product surfaces and features they can use.
 For local work in the ChatGPT desktop app, Codex CLI, or IDE extension,
 permission profiles constrain what the agent can do on the device. See
-[Groups and provisioning](https://learn.chatgpt.com/docs/enterprise/groups-and-provisioning)
-and [Roles and workspace permissions](https://learn.chatgpt.com/docs/enterprise/roles-and-workspace-permissions)
+[Groups and provisioning](enterprise/groups-and-provisioning.html)
+and [Roles and workspace permissions](enterprise/roles-and-workspace-permissions.html)
 to plan those controls.
 
 #### Sign in with ChatGPT
@@ -13260,12 +13260,12 @@ OpenAI bills API key usage through your OpenAI Platform account at standard API 
 API key authentication supports local Codex workflows, but some features that
 rely on ChatGPT workspace access or cloud services are limited or unavailable.
 Compare support by plan in
-[Feature availability](https://learn.chatgpt.com/docs/pricing#feature-availability).
+[Feature availability](pricing.html#feature-availability).
 
 In Codex CLI and Codex in the ChatGPT desktop app, API key authentication
 includes access to supported OpenAI-curated plugins. Some plugins aren't
 available because their connection flows require unsupported OAuth
-capabilities. See [Use plugins](https://learn.chatgpt.com/docs/plugins#api-key-availability).
+capabilities. See [Use plugins](plugins.html#api-key-availability).
 
 When you sign in with an API key, Codex uses standard API pricing instead of
 included ChatGPT plan credits.
@@ -13301,7 +13301,7 @@ Access tokens are intended for trusted scripts, schedulers, and private CI
 runners. For general OpenAI API calls, continue to use Platform API keys.
 
 For setup steps, permissions, rotation, and revocation guidance, see
-[Access tokens](https://learn.chatgpt.com/docs/enterprise/access-tokens).
+[Access tokens](enterprise/access-tokens.html).
 
 If your environment already provides a Codex access token, pipe it to the CLI:
 
@@ -13349,11 +13349,11 @@ cli_auth_credentials_store = "keyring"
 - `auto` uses the OS credential store when available, otherwise falls back to `auth.json`.
 - `ephemeral` keeps credentials in memory only for the current process.
 
-See the [configuration reference](https://learn.chatgpt.com/docs/config-file/config-reference) for the complete
+See the [configuration reference](config-file/config-reference.html) for the complete
 `config.toml` schema.
 
 Admins can enforce `cli_auth_credentials_store` and `chatgpt_base_url` through
-[local authentication requirements](https://learn.chatgpt.com/docs/enterprise/managed-configuration#manage-authentication-locally).
+[local authentication requirements](enterprise/managed-configuration.html#manage-authentication-locally).
 Users can't override those requirements through `config.toml` or CLI overrides.
 
 If you use file-based storage, treat `~/.codex/auth.json` like a password: it
@@ -13376,7 +13376,7 @@ If the active credentials don't match the configured restrictions, Codex logs th
 
 These settings can also be supplied through legacy managed configuration.
 For admin-enforced login restrictions, see
-[Manage authentication locally](https://learn.chatgpt.com/docs/enterprise/managed-configuration#manage-authentication-locally).
+[Manage authentication locally](enterprise/managed-configuration.html#manage-authentication-locally).
 
 #### Login diagnostics
 
@@ -13428,7 +13428,7 @@ If you can complete the login flow on a machine with a browser, you can copy you
 Treat `~/.codex/auth.json` like a password: it contains access tokens. Don't commit it, paste it into tickets, or share it in chat.
 
 If your OS stores credentials in a credential store instead of `~/.codex/auth.json`, this method may not apply. See
-[Credential storage](https://learn.chatgpt.com/docs/auth#credential-storage) for how to configure file-based storage.
+[Credential storage](auth.html#credential-storage) for how to configure file-based storage.
 
 Copy to a remote machine over SSH:
 
@@ -13453,7 +13453,7 @@ docker cp ~/.codex/auth.json MY_CONTAINER:"$CONTAINER_HOME/.codex/auth.json"
 ```
 
 For a more advanced version of this same pattern on trusted CI/CD runners, see
-[Maintain Codex account auth in CI/CD (advanced)](https://learn.chatgpt.com/docs/auth/ci-cd-auth).
+[Maintain Codex account auth in CI/CD (advanced)](auth/ci-cd-auth.html).
 That guide explains how to let Codex refresh `auth.json` during normal runs and
 then keep the updated file for the next job. API keys are still the recommended
 default for automation.
@@ -13472,7 +13472,7 @@ ssh -L 1455:localhost:1455 user@remote
 
 #### Alternative model providers
 
-When you define a [custom model provider](https://learn.chatgpt.com/docs/config-file/config-advanced#custom-model-providers) in your configuration file, you can choose one of these authentication methods:
+When you define a [custom model provider](config-file/config-advanced.html#custom-model-providers) in your configuration file, you can choose one of these authentication methods:
 
 - **OpenAI authentication**: Set `requires_openai_auth = true` to use OpenAI authentication. You can then sign in with ChatGPT or an API key. This is useful when you access OpenAI models through an LLM proxy server. When `requires_openai_auth = true`, Codex ignores `env_key`.
 - **Environment variable authentication**: Set `env_key = "<ENV_VARIABLE_NAME>"` to use a provider-specific API key from the local environment variable named `<ENV_VARIABLE_NAME>`.
@@ -13480,7 +13480,7 @@ When you define a [custom model provider](https://learn.chatgpt.com/docs/config-
 
 ### Config basics
 
-Source: [Config basics](https://learn.chatgpt.com/docs/config-file/config-basic.md)
+Source: [Config basics](config-file/config-basic.md)
 
 Codex reads configuration details from more than one location. Your personal defaults live in `~/.codex/config.toml`, and you can add project overrides with `.codex/config.toml` files. For security, Codex loads project `.codex/` layers only when you trust the project.
 
@@ -13493,8 +13493,8 @@ To open the configuration file from the Codex IDE extension, select the gear ico
 The CLI and IDE extension share the same configuration layers. You can use them to:
 
 - Set the default model and provider.
-- Configure [approval policies and sandbox settings](https://learn.chatgpt.com/docs/agent-approvals-security#sandbox-and-approvals).
-- Configure [MCP servers](https://learn.chatgpt.com/docs/extend/mcp).
+- Configure [approval policies and sandbox settings](agent-approvals-security.html#sandbox-and-approvals).
+- Configure [MCP servers](extend/mcp.html).
 
 #### Configuration precedence
 
@@ -13502,27 +13502,27 @@ Codex resolves values in this order (highest precedence first):
 
 1. CLI flags and `--config` overrides
 2. Project config files: `.codex/config.toml`, ordered from the project root down to your current working directory (closest wins; trusted projects only)
-3. [Profile](https://learn.chatgpt.com/docs/config-file/config-advanced#profiles) files selected with `--profile profile-name` (`~/.codex/profile-name.config.toml`)
+3. [Profile](config-file/config-advanced.html#profiles) files selected with `--profile profile-name` (`~/.codex/profile-name.config.toml`)
 4. User config: `~/.codex/config.toml`
 5. Cloud-managed `config.toml` defaults, when delivered for the signed-in workspace
 6. System config (if present): `/etc/codex/config.toml` on Unix
 7. Built-in defaults
 
-Use that precedence to set shared defaults in `config.toml` and keep [profile files](https://learn.chatgpt.com/docs/config-file/config-advanced#profiles) focused on the values that differ.
+Use that precedence to set shared defaults in `config.toml` and keep [profile files](config-file/config-advanced.html#profiles) focused on the values that differ.
 
 Cloud-managed and system configuration can define plugin marketplaces and set
 whether plugins are enabled by default. These are separate from enforced `requirements.toml`
-policies. See [Configure plugin marketplaces and defaults](https://learn.chatgpt.com/docs/enterprise/managed-configuration#configure-plugin-marketplaces-and-defaults).
+policies. See [Configure plugin marketplaces and defaults](enterprise/managed-configuration.html#configure-plugin-marketplaces-and-defaults).
 
 If you mark a project as untrusted, Codex skips project-scoped `.codex/` layers, including project-local config, hooks, and rules. User and system config still load, including user/global hooks and rules.
 
-For one-off overrides via `-c`/`--config` (including TOML quoting rules), see [Advanced Config](https://learn.chatgpt.com/docs/config-file/config-advanced#one-off-overrides-from-the-cli).
+For one-off overrides via `-c`/`--config` (including TOML quoting rules), see [Advanced Config](config-file/config-advanced.html#one-off-overrides-from-the-cli).
 
 On managed machines, your organization may also enforce constraints via
 `requirements.toml` (for example, disallowing `approval_policy = "never"` or
 `sandbox_mode = "danger-full-access"`). See [Managed
-configuration](https://learn.chatgpt.com/docs/enterprise/managed-configuration) and [Admin-enforced
-requirements](https://learn.chatgpt.com/docs/enterprise/managed-configuration#admin-enforced-requirements-requirementstoml).
+configuration](enterprise/managed-configuration.html) and [Admin-enforced
+requirements](enterprise/managed-configuration.html#admin-enforced-requirements-requirementstoml).
 
 #### Common configuration options
 
@@ -13544,7 +13544,7 @@ Control when Codex pauses to ask before running generated commands.
 approval_policy = "on-request"
 ```
 
-For behavior differences between `on-request` and `never`, see [Run without approval prompts](https://learn.chatgpt.com/docs/agent-approvals-security#run-without-approval-prompts) and [Common sandbox and approval combinations](https://learn.chatgpt.com/docs/agent-approvals-security#common-sandbox-and-approval-combinations). If an existing configuration uses `approval_policy = "untrusted"`, see [Migrate from the retired `untrusted` approval policy](https://learn.chatgpt.com/docs/agent-approvals-security#migrate-from-the-retired-untrusted-approval-policy).
+For behavior differences between `on-request` and `never`, see [Run without approval prompts](agent-approvals-security.html#run-without-approval-prompts) and [Common sandbox and approval combinations](agent-approvals-security.html#common-sandbox-and-approval-combinations). If an existing configuration uses `approval_policy = "untrusted"`, see [Migrate from the retired `untrusted` approval policy](agent-approvals-security.html#migrate-from-the-retired-untrusted-approval-policy).
 
 #### Sandbox level
 
@@ -13554,14 +13554,14 @@ Adjust how much filesystem and network access Codex has while executing commands
 sandbox_mode = "workspace-write"
 ```
 
-For mode-by-mode behavior (including protected `.git`/`.codex` paths and network defaults), see [Sandbox and approvals](https://learn.chatgpt.com/docs/agent-approvals-security#sandbox-and-approvals), [Protected paths in writable roots](https://learn.chatgpt.com/docs/agent-approvals-security#protected-paths-in-writable-roots), and [Network access](https://learn.chatgpt.com/docs/agent-approvals-security#network-access).
+For mode-by-mode behavior (including protected `.git`/`.codex` paths and network defaults), see [Sandbox and approvals](agent-approvals-security.html#sandbox-and-approvals), [Protected paths in writable roots](agent-approvals-security.html#protected-paths-in-writable-roots), and [Network access](agent-approvals-security.html#network-access).
 
 #### Permission profiles
 
 Codex also supports named permission profiles for reusable filesystem and
 network policies. Built-in profiles are `:read-only`, `:workspace`, and
 `:danger-full-access`. Custom profiles use `[permissions.]` tables and a
-matching `default_permissions` value. See [Permissions](https://learn.chatgpt.com/docs/permissions).
+matching `default_permissions` value. See [Permissions](permissions.html).
 
 #### Windows sandbox mode
 
@@ -13575,7 +13575,7 @@ sandbox = "elevated"   # Recommended
 
 #### Web search mode
 
-Codex enables web search by default for local chats and serves results from a web search cache. The cache is an OpenAI-maintained index of web results, so cached mode returns pre-indexed results instead of fetching live pages. This reduces exposure to prompt injection from arbitrary live content, but you should still treat web results as untrusted. If you are using `--yolo` or another [full access sandbox setting](https://learn.chatgpt.com/docs/agent-approvals-security#common-sandbox-and-approval-combinations), web search defaults to live results. Choose a mode with `web_search`:
+Codex enables web search by default for local chats and serves results from a web search cache. The cache is an OpenAI-maintained index of web results, so cached mode returns pre-indexed results instead of fetching live pages. This reduces exposure to prompt injection from arbitrary live content, but you should still treat web results as untrusted. If you are using `--yolo` or another [full access sandbox setting](agent-approvals-security.html#common-sandbox-and-approval-combinations), web search defaults to live results. Choose a mode with `web_search`:
 
 - `"cached"` (default) serves results from the web search cache.
 - `"indexed"` permits external web access only when the search index gates the request.
@@ -13640,7 +13640,7 @@ ignore_default_excludes = false
 for variable names containing `KEY`, `SECRET`, or `TOKEN`. Set it to `false`
 when you want that automatic filtering. For exclusion rules, precedence, and
 legacy configuration, see [Shell environment
-policy](https://learn.chatgpt.com/docs/config-file/config-advanced#shell-environment-policy).
+policy](config-file/config-advanced.html#shell-environment-policy).
 
 #### Log directory
 
@@ -13667,9 +13667,9 @@ Use the `[features]` table in `config.toml` to toggle optional and experimental 
 | -------------------- | :-------------------: | ------------ | ---------------------------------------------------------------------------------------- |
 | `apps`               |         true          | Stable       | Enable app (connector) integrations                                                      |
 | `goals`              |         true          | Stable       | Enable persisted goals and automatic continuation                                        |
-| `hooks`              |         true          | Stable       | Enable lifecycle hooks from `hooks.json` or inline `[hooks]`. See [Hooks](https://learn.chatgpt.com/docs/hooks). |
+| `hooks`              |         true          | Stable       | Enable lifecycle hooks from `hooks.json` or inline `[hooks]`. See [Hooks](hooks.html). |
 | `fast_mode`          |         true          | Stable       | Enable Fast mode selection and the `service_tier = "fast"` path                          |
-| `memories`           |         false         | Experimental | Enable [Memories](https://learn.chatgpt.com/docs/customization/memories)                                         |
+| `memories`           |         false         | Experimental | Enable [Memories](customization/memories.html)                                         |
 | `multi_agent`        |         true          | Stable       | Enable subagent collaboration tools                                                      |
 | `personality`        |         true          | Stable       | Enable personality selection controls                                                    |
 | `remote_plugin`      |         true          | Stable       | Enable the remote plugin catalog                                                         |
@@ -13683,11 +13683,11 @@ Use the `[features]` table in `config.toml` to toggle optional and experimental 
 This table lists common user-facing flags, not every internal or
 under-development feature. The Maturity column uses labels such as
 Experimental, Beta, and Stable. See [Feature
-Maturity](https://learn.chatgpt.com/docs/feature-maturity) for how to interpret these labels.
+Maturity](feature-maturity.html) for how to interpret these labels.
 
 Omit feature keys to keep their defaults.
 
-For lifecycle hook configuration, see [Hooks](https://learn.chatgpt.com/docs/hooks).
+For lifecycle hook configuration, see [Hooks](hooks.html).
 
 #### Enabling features
 
@@ -13698,7 +13698,7 @@ For lifecycle hook configuration, see [Hooks](https://learn.chatgpt.com/docs/hoo
 
 ### Model selection
 
-Source: [Models](https://learn.chatgpt.com/docs/models.md)
+Source: [Models](models.md)
 
 #### GPT-5.5 retirement
 
@@ -13717,7 +13717,7 @@ October 14:
 Replace `gpt-5.5` in workspace defaults, saved model settings, managed
 configurations, custom agents, scheduled tasks, and scripts that select a model.
 
-See [workspace model availability](https://learn.chatgpt.com/docs/enterprise/workspace-model-availability#prepare-for-the-gpt-55-retirement)
+See [workspace model availability](enterprise/workspace-model-availability.html#prepare-for-the-gpt-55-retirement)
 for administrator guidance.
 
 #### Choose a model
@@ -13731,7 +13731,7 @@ the task needs deeper planning or analysis.
 
 Ultra mode goes
 beyond a single-agent run. It uses
-[subagents](https://learn.chatgpt.com/docs/agent-configuration/subagents) to accelerate complex work,
+[subagents](agent-configuration/subagents.html) to accelerate complex work,
 making it useful for larger tasks that can be split across subagents.
 
 #### Choose a model
@@ -13746,7 +13746,7 @@ the task needs deeper planning or analysis.
 
 Ultra mode goes
 beyond a single-agent run. It uses
-[subagents](https://learn.chatgpt.com/docs/agent-configuration/subagents) to accelerate complex work,
+[subagents](agent-configuration/subagents.html) to accelerate complex work,
 making it useful for larger tasks that can be split across subagents.
 
 #### Choose a model
@@ -13771,7 +13771,7 @@ the task needs deeper planning or analysis.
 
 Ultra mode goes
 beyond a single-agent run. It uses
-[subagents](https://learn.chatgpt.com/docs/agent-configuration/subagents) to accelerate complex work,
+[subagents](agent-configuration/subagents.html) to accelerate complex work,
 making it useful for larger tasks that can be split across subagents.
 
 #### Choose a model
@@ -13785,7 +13785,7 @@ the task needs deeper planning or analysis.
 
 Ultra mode goes
 beyond a single-agent run. It uses
-[subagents](https://learn.chatgpt.com/docs/agent-configuration/subagents) to accelerate complex work,
+[subagents](agent-configuration/subagents.html) to accelerate complex work,
 making it useful for larger tasks that can be split across subagents.
 
 #### Recommended models
@@ -13802,8 +13802,8 @@ GPT-5.6 Sol, GPT-5.6 Terra, and GPT-5.6 Luna remain available during the rollout
 new model doesn't change workspace permissions or grant access to it.
 
 Availability depends on the rollout, your sign-in method, and your client.
-See [pricing](https://learn.chatgpt.com/docs/pricing) for plan access and usage, and
-[workspace model availability](https://learn.chatgpt.com/docs/enterprise/workspace-model-availability)
+See [pricing](pricing.html) for plan access and usage, and
+[workspace model availability](enterprise/workspace-model-availability.html)
 for Enterprise access.
 
 Start with the default Power setting available to your account. Move toward
@@ -13824,8 +13824,8 @@ This experiment is off by default and isn't available with Business, Enterprise,
 API-key sign-in at launch.
 
 To opt in, set `features.context_management.experimental_mode = true` in your
-`config.toml`, then start a new task. See the [configuration reference](https://learn.chatgpt.com/docs/config-file/config-reference)
-for the setting and [configuration basics](https://learn.chatgpt.com/docs/config-file/config-basic)
+`config.toml`, then start a new task. See the [configuration reference](config-file/config-reference.html)
+for the setting and [configuration basics](config-file/config-basic.html)
 for the file location. Workspace requirements still apply.
 
 #### Choosing Astra, Sol, and Luna
@@ -13870,7 +13870,7 @@ at a lower setting and adjust based on the result.
 for the hardest problems, when depth matters more than speed or usage. If you
 don't see Max in your options, you'll have to enable it in your app settings.
 
-**Ultra** uses [subagents](https://learn.chatgpt.com/docs/agent-configuration/subagents) to handle
+**Ultra** uses [subagents](agent-configuration/subagents.html) to handle
 separate parts of a complex task in parallel. Choose it when you can divide the
 work into meaningful parts. Most tasks do not need Max or Ultra.
 
@@ -13895,7 +13895,7 @@ future releases of Codex.
 
 GPT-5.5 retires from Codex with ChatGPT sign-in on October 14, 2026. Replace
 `gpt-5.5` with a model available to your account and client. See
-[GPT-5.5 retirement](https://learn.chatgpt.com/docs/models#gpt-55-retirement) for plan-specific
+[GPT-5.5 retirement](models.html#gpt-55-retirement) for plan-specific
 replacements and the migration checklist.
 
 The `gpt-5.4` and `gpt-5.4-mini` models retired from Codex with ChatGPT sign-in
@@ -13916,7 +13916,7 @@ by the GPT-5.4 retirement. For current API model availability, see the
 #### Configure your default local model
 
 The ChatGPT desktop app, Codex CLI, and IDE extension use the same `config.toml`
-[configuration file](https://learn.chatgpt.com/docs/config-file/config-basic). To specify a model, add a
+[configuration file](config-file/config-basic.html). To specify a model, add a
 `model` entry to your configuration file. If you don't specify a model, the
 ChatGPT desktop app, Codex CLI, or IDE extension uses a recommended model.
 
@@ -13930,17 +13930,17 @@ Currently, you can't change the default model for Codex cloud chats.
 
 ### Sample Configuration
 
-Source: [Sample Configuration](https://learn.chatgpt.com/docs/config-file/config-sample.md)
+Source: [Sample Configuration](config-file/config-sample.md)
 
 Use this example configuration as a starting point. It includes most keys Codex reads from `config.toml`, along with default behaviors, recommended values where helpful, and short notes.
 
 For explanations and guidance, see:
 
-- [Config basics](https://learn.chatgpt.com/docs/config-file/config-basic)
-- [Advanced Config](https://learn.chatgpt.com/docs/config-file/config-advanced)
-- [Config Reference](https://learn.chatgpt.com/docs/config-file/config-reference)
-- [Sandbox and approvals](https://learn.chatgpt.com/docs/agent-approvals-security#sandbox-and-approvals)
-- [Managed configuration](https://learn.chatgpt.com/docs/enterprise/managed-configuration)
+- [Config basics](config-file/config-basic.html)
+- [Advanced Config](config-file/config-advanced.html)
+- [Config Reference](config-file/config-reference.html)
+- [Sandbox and approvals](agent-approvals-security.html#sandbox-and-approvals)
+- [Managed configuration](enterprise/managed-configuration.html)
 
 Use the snippet below as a reference. Copy only the keys and sections you need into `~/.codex/config.toml` (or into a project-scoped `.codex/config.toml`), then adjust values for your setup.
 
@@ -15136,77 +15136,77 @@ sandbox = "unelevated"
 
 ### Configuration
 
-Source: [Configuration](https://learn.chatgpt.com/docs/configuration.md)
+Source: [Configuration](configuration.md)
 
 Set defaults, add durable context, and customize how ChatGPT and Codex developer tools work.
 
 Configuration shapes how ChatGPT and Codex developer tools behave across chats, repositories, and machines. Durable context, config files, repository guidance, subagents, external connections, and Linux and Windows setup work together to keep those workflows consistent for individuals and teams.
 
-[Explore customization](https://learn.chatgpt.com/docs/customization/overview)
+[Explore customization](customization/overview.html)
 
 #### Customization
 
 Adapt the experience and carry useful context between chats.
 
-- [Customization overview](https://learn.chatgpt.com/docs/customization/overview): Customize ChatGPT and Codex with guidance, skills, MCP, and subagents.
+- [Customization overview](customization/overview.html): Customize ChatGPT and Codex with guidance, skills, MCP, and subagents.
 
-- [Memories](https://learn.chatgpt.com/docs/customization/memories): Let ChatGPT retain useful context across chats.
+- [Memories](customization/memories.html): Let ChatGPT retain useful context across chats.
 
-- [Computer History](https://learn.chatgpt.com/docs/customization/computer-history): Use recent computer activity as context and manage what is included.
+- [Computer History](customization/computer-history.html): Use recent computer activity as context and manage what is included.
 
 #### Config file
 
 Control models, tools, environments, and defaults with configuration files and variables.
 
-- [Config basics](https://learn.chatgpt.com/docs/config-file/config-basic): Understand configuration layers and create a config file.
+- [Config basics](config-file/config-basic.html): Understand configuration layers and create a config file.
 
-- [Advanced config](https://learn.chatgpt.com/docs/config-file/config-advanced): Use profiles, providers, policies, and advanced options.
+- [Advanced config](config-file/config-advanced.html): Use profiles, providers, policies, and advanced options.
 
-- [Config reference](https://learn.chatgpt.com/docs/config-file/config-reference): Look up every supported configuration key.
+- [Config reference](config-file/config-reference.html): Look up every supported configuration key.
 
-- [Environment variables](https://learn.chatgpt.com/docs/config-file/environment-variables): Set values that change across systems and sessions.
+- [Environment variables](config-file/environment-variables.html): Set values that change across systems and sessions.
 
-- [Sample config](https://learn.chatgpt.com/docs/config-file/config-sample): Start from a complete, annotated configuration example.
+- [Sample config](config-file/config-sample.html): Start from a complete, annotated configuration example.
 
 #### Agent configuration
 
 Shape how agents collaborate and follow project guidance.
 
-- [AGENTS.md](https://learn.chatgpt.com/docs/agent-configuration/agents-md): Give Codex durable instructions for a repository.
+- [AGENTS.md](agent-configuration/agents-md.html): Give Codex durable instructions for a repository.
 
-- [Subagents](https://learn.chatgpt.com/docs/agent-configuration/subagents): Delegate focused tasks to specialized agents.
+- [Subagents](agent-configuration/subagents.html): Delegate focused tasks to specialized agents.
 
-- [Speed](https://learn.chatgpt.com/docs/agent-configuration/speed): Control how quickly and deeply Codex works.
+- [Speed](agent-configuration/speed.html): Control how quickly and deeply Codex works.
 
-- [Rules](https://learn.chatgpt.com/docs/agent-configuration/rules): Define commands Codex can run automatically.
+- [Rules](agent-configuration/rules.html): Define commands Codex can run automatically.
 
 #### Extend ChatGPT and Codex
 
 Package knowledge, connect services, and add capabilities.
 
-- [Record & Replay](https://learn.chatgpt.com/docs/extend/record-and-replay): Show ChatGPT or Codex a workflow and turn it into a reusable skill.
+- [Record & Replay](extend/record-and-replay.html): Show ChatGPT or Codex a workflow and turn it into a reusable skill.
 
-- [MCP](https://learn.chatgpt.com/docs/extend/mcp): Connect Codex developer tools to external tools and context.
+- [MCP](extend/mcp.html): Connect Codex developer tools to external tools and context.
 
 #### Linux
 
 Install and update ChatGPT on a supported Linux desktop.
 
-- [ChatGPT desktop app](https://learn.chatgpt.com/docs/linux/linux-app): Install the Linux preview on Ubuntu, Debian, Fedora, or Arch Linux.
+- [ChatGPT desktop app](linux/linux-app.html): Install the Linux preview on Ubuntu, Debian, Fedora, or Arch Linux.
 
 #### Windows
 
 Run Codex natively on Windows or inside WSL.
 
-- [ChatGPT desktop app](https://learn.chatgpt.com/docs/windows/windows-app): Use the ChatGPT desktop app with PowerShell or WSL workflows.
+- [ChatGPT desktop app](windows/windows-app.html): Use the ChatGPT desktop app with PowerShell or WSL workflows.
 
-- [Windows sandbox](https://learn.chatgpt.com/docs/windows/windows-sandbox): Run Codex with native filesystem and command isolation.
+- [Windows sandbox](windows/windows-sandbox.html): Run Codex with native filesystem and command isolation.
 
-- [WSL](https://learn.chatgpt.com/docs/windows/wsl): Use Codex in a Linux environment managed by Windows.
+- [WSL](windows/wsl.html): Use Codex in a Linux environment managed by Windows.
 
 ### Personalize ChatGPT
 
-Source: [Personalize ChatGPT](https://learn.chatgpt.com/docs/personalize.md)
+Source: [Personalize ChatGPT](personalize.md)
 
 Personalize ChatGPT so its responses and working style better match your
 preferences. You control which personalization features are enabled and can
@@ -15225,7 +15225,7 @@ chats, such as your preferred response style. In Codex, these personal
 instructions are stored in your global `AGENTS.md` file. Projects and
 repositories can also provide their own instructions.
 
-[Learn how `AGENTS.md` instructions work](https://learn.chatgpt.com/docs/agent-configuration/agents-md).
+[Learn how `AGENTS.md` instructions work](agent-configuration/agents-md.html).
 
 #### Match your writing style in Work
 
@@ -15245,7 +15245,7 @@ section.
 
 #### Carry context forward with memories
 
-[Memories](https://learn.chatgpt.com/docs/customization/memories) let ChatGPT carry useful context from earlier chats
+[Memories](customization/memories.html) let ChatGPT carry useful context from earlier chats
 into future work. They can include stable preferences, recurring workflows,
 project conventions, and other context you would otherwise need to repeat.
 
@@ -15254,7 +15254,7 @@ must always apply in `AGENTS.md` or checked-in project documentation.
 
 #### Add recent activity with Computer History
 
-[Computer History](https://learn.chatgpt.com/docs/customization/computer-history) is an opt-in macOS
+[Computer History](customization/computer-history.html) is an opt-in macOS
 desktop feature that can turn activity across allowed apps and websites into
 memories and a timeline. It uses interaction events, along with text and other
 context available through macOS accessibility features. It does not include
@@ -15268,7 +15268,7 @@ clear recent or all history at any time.
 
 Open [**Settings**](codex://settings) to update your personality, custom
 instructions, memories, and other available personalization controls. See
-[ChatGPT desktop app settings](https://learn.chatgpt.com/docs/reference/settings) for an overview of
+[ChatGPT desktop app settings](reference/settings.html) for an overview of
 everyday preferences.
 
 ## CLI, IDE, App, and Cloud Behavior
@@ -15279,7 +15279,7 @@ Surface-specific commands, settings, worktree behavior, internet access, and ope
 
 ### CLI command reference
 
-Source: [Command line options](https://learn.chatgpt.com/docs/developer-commands.md?surface=cli)
+Source: [Command line options](developer-commands.md)
 
 #### How to read this reference
 
@@ -15288,7 +15288,7 @@ This page catalogs every documented Codex CLI command and flag. Use the interact
 The CLI inherits most defaults from ~/.codex/config.toml. Any
 -c key=value overrides you pass at the command line take
 precedence for that invocation. See [Config
-basics](https://learn.chatgpt.com/docs/config-file/config-basic#configuration-precedence) for more
+basics](config-file/config-basic.html#configuration-precedence) for more
 information.
 
 #### Global flags
@@ -15324,38 +15324,38 @@ applies `--oss` to `exec`.
 #### Command overview
 
 The Maturity column uses feature maturity labels such as Experimental, Beta,
-Stable, and Deprecated. See [Feature Maturity](https://learn.chatgpt.com/docs/feature-maturity) for
+Stable, and Deprecated. See [Feature Maturity](feature-maturity.html) for
 how to interpret these labels.
 
 | Key                                                                                                                          | Maturity       | Default | Details                                                                                                                                   |
 | ---------------------------------------------------------------------------------------------------------------------------- | -------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| [`codex`](https://learn.chatgpt.com/docs/developer-commands?surface=cli#cli-codex-interactive)                                                       | `stable`       |         | Launch the terminal UI. Accepts the global flags above plus an optional prompt or image attachments.                                      |
-| [`codex app`](https://learn.chatgpt.com/docs/developer-commands?surface=cli#cli-codex-app)                                                           | `stable`       |         | Launch the ChatGPT desktop app on macOS or Windows. On macOS, Codex can open a workspace path; on Windows, Codex prints the path to open. |
-| [`codex app-server`](https://learn.chatgpt.com/docs/developer-commands?surface=cli#cli-codex-app-server)                                             | `experimental` |         | Launch the Codex app server for local development or debugging over stdio, WebSocket, or a Unix socket.                                   |
-| [`codex apply`](https://learn.chatgpt.com/docs/developer-commands?surface=cli#cli-codex-apply)                                                       | `stable`       |         | Apply the latest diff generated by a Codex cloud chat to your local working tree. Alias: `codex a`.                                       |
-| [`codex archive`](https://learn.chatgpt.com/docs/developer-commands?surface=cli#cli-codex-archive-and-codex-unarchive)                               | `stable`       |         | Archive a saved interactive session by session ID or session name.                                                                        |
-| [`codex cloud`](https://learn.chatgpt.com/docs/developer-commands?surface=cli#cli-codex-cloud)                                                       | `experimental` |         | Browse or execute Codex cloud chats from the terminal without opening the TUI. Alias: `codex cloud-tasks`.                                |
-| [`codex completion`](https://learn.chatgpt.com/docs/developer-commands?surface=cli#cli-codex-completion)                                             | `stable`       |         | Generate shell completion scripts for Bash, Zsh, Fish, or PowerShell.                                                                     |
-| [`codex debug app-server send-message-v2`](https://learn.chatgpt.com/docs/developer-commands?surface=cli#cli-codex-debug-app-server-send-message-v2) | `experimental` |         | Debug app-server by sending a single V2 message through the built-in test client.                                                         |
-| [`codex debug models`](https://learn.chatgpt.com/docs/developer-commands?surface=cli#cli-codex-debug-models)                                         | `experimental` |         | Print the raw model catalog Codex sees, including an option to inspect only the bundled catalog.                                          |
-| [`codex debug prompt-input`](https://learn.chatgpt.com/docs/developer-commands?surface=cli#cli-codex-debug-prompt-input)                             | `experimental` |         | Render the model-visible prompt input list as JSON, optionally with a prompt and images.                                                  |
-| [`codex delete`](https://learn.chatgpt.com/docs/developer-commands?surface=cli#cli-codex-delete)                                                     | `stable`       |         | Permanently delete a saved interactive session by session ID or session name.                                                             |
-| [`codex doctor`](https://learn.chatgpt.com/docs/developer-commands?surface=cli#cli-codex-doctor)                                                     | `stable`       |         | Generate a diagnostic report for local installation, config, auth, runtime, Git, terminal, app-server, and thread inventory issues.       |
-| [`codex exec`](https://learn.chatgpt.com/docs/developer-commands?surface=cli#cli-codex-exec)                                                         | `stable`       |         | Run Codex non-interactively. Alias: `codex e`. Stream results to stdout or JSONL and optionally resume previous sessions.                 |
-| [`codex execpolicy`](https://learn.chatgpt.com/docs/developer-commands?surface=cli#cli-codex-execpolicy)                                             | `experimental` |         | Evaluate execpolicy rule files and see whether a command would be allowed, prompted, or blocked.                                          |
-| [`codex features`](https://learn.chatgpt.com/docs/developer-commands?surface=cli#cli-codex-features)                                                 | `stable`       |         | List feature flags and persistently enable or disable them in `config.toml`.                                                              |
-| [`codex fork`](https://learn.chatgpt.com/docs/developer-commands?surface=cli#cli-codex-fork)                                                         | `stable`       |         | Fork a previous interactive session into a new chat, preserving the original transcript.                                                  |
-| [`codex login`](https://learn.chatgpt.com/docs/developer-commands?surface=cli#cli-codex-login)                                                       | `stable`       |         | Authenticate Codex using ChatGPT OAuth, device auth, an API key, or an access token piped over stdin.                                     |
-| [`codex logout`](https://learn.chatgpt.com/docs/developer-commands?surface=cli#cli-codex-logout)                                                     | `stable`       |         | Remove stored authentication credentials.                                                                                                 |
-| [`codex mcp`](https://learn.chatgpt.com/docs/developer-commands?surface=cli#cli-codex-mcp)                                                           | `stable`       |         | Manage Model Context Protocol servers (list, add, remove, authenticate).                                                                  |
-| [`codex plugin`](https://learn.chatgpt.com/docs/developer-commands?surface=cli#cli-codex-plugin)                                                     | `stable`       |         | Install, list, and remove plugins from configured marketplace sources.                                                                    |
-| [`codex plugin marketplace`](https://learn.chatgpt.com/docs/developer-commands?surface=cli#cli-codex-plugin-marketplace)                             | `stable`       |         | Add, list, upgrade, or remove plugin marketplaces from Git or local sources.                                                              |
-| [`codex remote-control`](https://learn.chatgpt.com/docs/developer-commands?surface=cli#cli-codex-remote-control)                                     | `experimental` |         | Run or manage remote control for the local app-server, or create a short-lived pairing code.                                              |
-| [`codex resume`](https://learn.chatgpt.com/docs/developer-commands?surface=cli#cli-codex-resume)                                                     | `stable`       |         | Continue a previous interactive session by ID or resume the most recent chat.                                                             |
-| [`codex review`](https://learn.chatgpt.com/docs/developer-commands?surface=cli#cli-codex-review)                                                     | `stable`       |         | Run a non-interactive review of uncommitted changes, a base branch diff, a commit, or custom review instructions.                         |
-| [`codex sandbox`](https://learn.chatgpt.com/docs/developer-commands?surface=cli#cli-codex-sandbox)                                                   | `stable`       |         | Run arbitrary commands inside Codex-provided macOS, Linux, or Windows sandboxes.                                                          |
-| [`codex unarchive`](https://learn.chatgpt.com/docs/developer-commands?surface=cli#cli-codex-archive-and-codex-unarchive)                             | `stable`       |         | Restore an archived interactive session by session ID or session name.                                                                    |
-| [`codex update`](https://learn.chatgpt.com/docs/developer-commands?surface=cli#cli-codex-update)                                                     | `stable`       |         | Check for and apply a Codex CLI update when the installed release supports self-update.                                                   |
+| [`codex`](developer-commands.html#cli-codex-interactive)                                                       | `stable`       |         | Launch the terminal UI. Accepts the global flags above plus an optional prompt or image attachments.                                      |
+| [`codex app`](developer-commands.html#cli-codex-app)                                                           | `stable`       |         | Launch the ChatGPT desktop app on macOS or Windows. On macOS, Codex can open a workspace path; on Windows, Codex prints the path to open. |
+| [`codex app-server`](developer-commands.html#cli-codex-app-server)                                             | `experimental` |         | Launch the Codex app server for local development or debugging over stdio, WebSocket, or a Unix socket.                                   |
+| [`codex apply`](developer-commands.html#cli-codex-apply)                                                       | `stable`       |         | Apply the latest diff generated by a Codex cloud chat to your local working tree. Alias: `codex a`.                                       |
+| [`codex archive`](developer-commands.html#cli-codex-archive-and-codex-unarchive)                               | `stable`       |         | Archive a saved interactive session by session ID or session name.                                                                        |
+| [`codex cloud`](developer-commands.html#cli-codex-cloud)                                                       | `experimental` |         | Browse or execute Codex cloud chats from the terminal without opening the TUI. Alias: `codex cloud-tasks`.                                |
+| [`codex completion`](developer-commands.html#cli-codex-completion)                                             | `stable`       |         | Generate shell completion scripts for Bash, Zsh, Fish, or PowerShell.                                                                     |
+| [`codex debug app-server send-message-v2`](developer-commands.html#cli-codex-debug-app-server-send-message-v2) | `experimental` |         | Debug app-server by sending a single V2 message through the built-in test client.                                                         |
+| [`codex debug models`](developer-commands.html#cli-codex-debug-models)                                         | `experimental` |         | Print the raw model catalog Codex sees, including an option to inspect only the bundled catalog.                                          |
+| [`codex debug prompt-input`](developer-commands.html#cli-codex-debug-prompt-input)                             | `experimental` |         | Render the model-visible prompt input list as JSON, optionally with a prompt and images.                                                  |
+| [`codex delete`](developer-commands.html#cli-codex-delete)                                                     | `stable`       |         | Permanently delete a saved interactive session by session ID or session name.                                                             |
+| [`codex doctor`](developer-commands.html#cli-codex-doctor)                                                     | `stable`       |         | Generate a diagnostic report for local installation, config, auth, runtime, Git, terminal, app-server, and thread inventory issues.       |
+| [`codex exec`](developer-commands.html#cli-codex-exec)                                                         | `stable`       |         | Run Codex non-interactively. Alias: `codex e`. Stream results to stdout or JSONL and optionally resume previous sessions.                 |
+| [`codex execpolicy`](developer-commands.html#cli-codex-execpolicy)                                             | `experimental` |         | Evaluate execpolicy rule files and see whether a command would be allowed, prompted, or blocked.                                          |
+| [`codex features`](developer-commands.html#cli-codex-features)                                                 | `stable`       |         | List feature flags and persistently enable or disable them in `config.toml`.                                                              |
+| [`codex fork`](developer-commands.html#cli-codex-fork)                                                         | `stable`       |         | Fork a previous interactive session into a new chat, preserving the original transcript.                                                  |
+| [`codex login`](developer-commands.html#cli-codex-login)                                                       | `stable`       |         | Authenticate Codex using ChatGPT OAuth, device auth, an API key, or an access token piped over stdin.                                     |
+| [`codex logout`](developer-commands.html#cli-codex-logout)                                                     | `stable`       |         | Remove stored authentication credentials.                                                                                                 |
+| [`codex mcp`](developer-commands.html#cli-codex-mcp)                                                           | `stable`       |         | Manage Model Context Protocol servers (list, add, remove, authenticate).                                                                  |
+| [`codex plugin`](developer-commands.html#cli-codex-plugin)                                                     | `stable`       |         | Install, list, and remove plugins from configured marketplace sources.                                                                    |
+| [`codex plugin marketplace`](developer-commands.html#cli-codex-plugin-marketplace)                             | `stable`       |         | Add, list, upgrade, or remove plugin marketplaces from Git or local sources.                                                              |
+| [`codex remote-control`](developer-commands.html#cli-codex-remote-control)                                     | `experimental` |         | Run or manage remote control for the local app-server, or create a short-lived pairing code.                                              |
+| [`codex resume`](developer-commands.html#cli-codex-resume)                                                     | `stable`       |         | Continue a previous interactive session by ID or resume the most recent chat.                                                             |
+| [`codex review`](developer-commands.html#cli-codex-review)                                                     | `stable`       |         | Run a non-interactive review of uncommitted changes, a base branch diff, a commit, or custom review instructions.                         |
+| [`codex sandbox`](developer-commands.html#cli-codex-sandbox)                                                   | `stable`       |         | Run arbitrary commands inside Codex-provided macOS, Linux, or Windows sandboxes.                                                          |
+| [`codex unarchive`](developer-commands.html#cli-codex-archive-and-codex-unarchive)                             | `stable`       |         | Restore an archived interactive session by session ID or session name.                                                                    |
+| [`codex update`](developer-commands.html#cli-codex-update)                                                     | `stable`       |         | Check for and apply a Codex CLI update when the installed release supports self-update.                                                   |
 
 #### Command details
 
@@ -15714,7 +15714,7 @@ with `name`, `root`, and optional `marketplaceSource`; upgrade JSON includes
 #### `codex mcp-server`
 
 The `codex mcp-server` command and standalone `codex-mcp-server` binary have
-been removed. Use the [Codex app server](https://learn.chatgpt.com/docs/app-server) instead.
+been removed. Use the [Codex app server](app-server.html) instead.
 
 #### `codex resume`
 
@@ -15722,7 +15722,7 @@ Continue an interactive session by ID or resume the most recent chat. `codex res
 
 If the current working directory differs from the session's saved directory,
 Codex asks which directory to use. Set
-[`tui.resume_cwd`](https://learn.chatgpt.com/docs/config-file/config-reference) to `"current"` or
+[`tui.resume_cwd`](config-file/config-reference.html) to `"current"` or
 `"session"` to reuse that choice without a prompt. An explicit `--cd` (`-C`)
 override takes precedence over `tui.resume_cwd`.
 
@@ -15809,14 +15809,14 @@ Check for and apply a Codex CLI update when the installed release supports self-
 
 #### Related resources
 
-- [Codex CLI overview](https://learn.chatgpt.com/docs/codex/cli): installation, upgrades, and quick tips.
-- [Config basics](https://learn.chatgpt.com/docs/config-file/config-basic): persist defaults like the model and provider.
-- [Advanced Config](https://learn.chatgpt.com/docs/config-file/config-advanced): profiles, providers, sandbox tuning, and integrations.
-- [AGENTS.md](https://learn.chatgpt.com/docs/agent-configuration/agents-md): conceptual overview of Codex agent capabilities and best practices.
+- [Codex CLI overview](codex/cli.html): installation, upgrades, and quick tips.
+- [Config basics](config-file/config-basic.html): persist defaults like the model and provider.
+- [Advanced Config](config-file/config-advanced.html): profiles, providers, sandbox tuning, and integrations.
+- [AGENTS.md](agent-configuration/agents-md.html): conceptual overview of Codex agent capabilities and best practices.
 
 ### Agent internet access
 
-Source: [Agent internet access](https://learn.chatgpt.com/docs/cloud/internet-access.md)
+Source: [Agent internet access](cloud/internet-access.md)
 
 By default, Codex blocks internet access during the agent phase. Setup scripts still run with internet access so you can install dependencies. You can enable agent internet access per environment when you need it.
 
@@ -15958,7 +15958,7 @@ yarnpkg.com
 
 ### Browser
 
-Source: [Browser](https://learn.chatgpt.com/docs/browser.md)
+Source: [Browser](browser.md)
 
 Browser isn't available in Codex CLI or the Codex IDE extension. Open the
 ChatGPT desktop app to use the built-in browser.
@@ -15969,14 +15969,14 @@ on a website, or review a page you're building.
 
 Browser is available in ChatGPT on the web and in the ChatGPT desktop app.
 
-[GPT-6 Astra](https://learn.chatgpt.com/docs/models#gpt-6-astra) improves visual judgment for tasks such
+[GPT-6 Astra](models.html#gpt-6-astra) improves visual judgment for tasks such
 as checking a page against a screenshot or completing a workflow across sites.
 Choose it when available in your model selector, and describe how to verify the
 finished result.
 
 For managed desktop environments, administrators can restrict browser origins,
 uploads, downloads, and developer access. See
-[managed browser controls](https://learn.chatgpt.com/docs/enterprise/managed-configuration#control-browser-and-computer-use).
+[managed browser controls](enterprise/managed-configuration.html#control-browser-and-computer-use).
 
 Treat page content as untrusted context. Review the site and proposed action
 before sharing sensitive information or allowing ChatGPT to act.
@@ -15995,7 +15995,7 @@ Browser downloads go to your system Downloads folder by default. In **Settings >
 Browser**, you can choose another download location, reset it to the system
 default, or turn on **Ask where to save downloads**.
 
-Use the [browser extension](https://learn.chatgpt.com/docs/chrome-extension) instead when ChatGPT needs
+Use the [browser extension](chrome-extension.html) instead when ChatGPT needs
 to work in an existing Chrome, Edge, Brave, Opera, or Vivaldi tab or use your
 regular browser profile.
 
@@ -16054,7 +16054,7 @@ trustworthy or approve every action.
 
 #### Preview a page
 
-1. Start your app's development server in the [integrated terminal](https://learn.chatgpt.com/docs/integrated-terminal) or with a [local environment action](https://learn.chatgpt.com/docs/environments/local-environment#actions).
+1. Start your app's development server in the [integrated terminal](integrated-terminal.html) or with a [local environment action](environments/local-environment.html#actions).
 2. Open the local route, file-backed page, or public page by clicking a URL or
    navigating manually in the browser.
 3. Review the rendered state alongside the code diff.
@@ -16108,7 +16108,7 @@ Keep each browser task small enough to review in one pass.
 - Ask ChatGPT to start or check the development server before it opens a local
   page.
 
-For repository changes, use the [review pane](https://learn.chatgpt.com/docs/code-review?surface=app) to
+For repository changes, use the [review pane](code-review.html) to
 inspect the changes and leave comments.
 
 #### Developer mode
@@ -16122,7 +16122,7 @@ To enable it, open [**Settings > Browser**](codex://settings/browser-use) and,
 under **Developer mode**, turn on **Enable full CDP access**. If your
 organization has disabled this setting, you can't enable it locally. Admins can
 set `browser_use_full_cdp_access = false` under `[features]` in
-[`requirements.toml`](https://learn.chatgpt.com/docs/enterprise/managed-configuration#pin-feature-flags)
+[`requirements.toml`](enterprise/managed-configuration.html#pin-feature-flags)
 to disable full CDP access and prevent users from enabling the corresponding
 setting in the ChatGPT desktop app.
 
@@ -16131,7 +16131,7 @@ explicit approval before it uses full CDP to inspect a website. Review the
 site, task, and requested access before approving it.
 
 Use `@Browser` for the built-in browser. To use Developer mode in Chrome,
-[set up the Chrome extension](https://learn.chatgpt.com/docs/chrome-extension) and invoke `@Chrome`.
+[set up the Chrome extension](chrome-extension.html) and invoke `@Chrome`.
 
 For example:
 
@@ -16229,7 +16229,7 @@ During rollout, the browser might not appear immediately even when your plan sup
 
 ### Browser extension
 
-Source: [Browser extension](https://learn.chatgpt.com/docs/chrome-extension.md)
+Source: [Browser extension](chrome-extension.md)
 
 Use the ChatGPT browser extension to work in Google Chrome, Microsoft Edge,
 Brave, Opera, or Vivaldi from the ChatGPT desktop app. ChatGPT can read or act
@@ -16436,7 +16436,7 @@ After you change the setting, start the Chrome task again.
 
 ### ChatGPT desktop app commands
 
-Source: [ChatGPT desktop app commands](https://learn.chatgpt.com/docs/reference/commands.md)
+Source: [ChatGPT desktop app commands](reference/commands.md)
 
 Use these commands and keyboard shortcuts to navigate the app.
 
@@ -16448,7 +16448,7 @@ and press the shortcut you want to find. Appshots use a separate global shortcut
 under **Settings > Appshots**.
 
 On Linux, experimental native Wayland can affect shortcut support. See the
-[Linux desktop app guide](https://learn.chatgpt.com/docs/linux/linux-app#wayland-support).
+[Linux desktop app guide](linux/linux-app.html#wayland-support).
 
 #### Search past chats and find in a chat
 
@@ -16461,7 +16461,7 @@ branch names, so you can search for a phrase from the chat or a branch such as
 Use **Find in chat** after opening a chat to find text within it. It doesn't
 search across other chats.
 
-For actions that start with `/`, see [Slash commands](https://learn.chatgpt.com/docs/reference/slash-commands).
+For actions that start with `/`, see [Slash commands](reference/slash-commands.html).
 
 #### Deep links
 
@@ -16531,7 +16531,7 @@ installed plugin in that chat. If the plugin isn't installed but is available
 to the user, Codex asks the user to install it and connect any required connectors.
 After setup, the user can select **Continue** to resume the same chat. Workspace
 settings can limit which plugins a user can install. For plugin installation
-and permission details, see [Plugins](https://learn.chatgpt.com/docs/plugins).
+and permission details, see [Plugins](plugins.html).
 
 #### Settings
 
@@ -16572,7 +16572,7 @@ Use these links when you need to open **Scheduled**.
 
 #### Plugins
 
-Plugin links use different forms depending on whether you are installing from a marketplace, opening a plugin, or working from a local `marketplace.json`. For plugin basics, see [Plugins](https://learn.chatgpt.com/docs/plugins). For local or repo marketplace setup, see [Build plugins](https://developers.openai.com/plugins/build/plugins#build-your-own-curated-plugin-list).
+Plugin links use different forms depending on whether you are installing from a marketplace, opening a plugin, or working from a local `marketplace.json`. For plugin basics, see [Plugins](plugins.html). For local or repo marketplace setup, see [Build plugins](https://developers.openai.com/plugins/build/plugins#build-your-own-curated-plugin-list).
 
 #### Plugin install
 
@@ -16639,13 +16639,13 @@ to do nothing.
 
 #### App commands references
 
-- [Features](https://learn.chatgpt.com/docs/features)
-- [Settings](https://learn.chatgpt.com/docs/reference/settings)
-- [Slash commands](https://learn.chatgpt.com/docs/reference/slash-commands)
+- [Features](features.html)
+- [Settings](reference/settings.html)
+- [Slash commands](reference/slash-commands.html)
 
 ### ChatGPT desktop app settings
 
-Source: [ChatGPT desktop app settings](https://learn.chatgpt.com/docs/reference/settings.md)
+Source: [ChatGPT desktop app settings](reference/settings.md)
 
 Use the settings panel to personalize the app and manage everyday preferences.
 Open [**Settings**](codex://settings) from the app menu or press
@@ -16670,7 +16670,7 @@ ChatGPT plans.
 Eligible users can also send Codex invitations from the profile menu. Choose
 **Invite a friend** on an eligible personal plan or **Invite a coworker** in an
 eligible Business workspace. See
-[Invite friends and coworkers](https://learn.chatgpt.com/docs/pricing#invite-friends-and-coworkers) for
+[Invite friends and coworkers](pricing.html#invite-friends-and-coworkers) for
 current rewards, limits, and eligibility.
 
 #### Keyboard shortcuts
@@ -16698,17 +16698,17 @@ choose a built-in or custom pet, then use `/pet`, **Show pet**, or **Hide pet**
 to control the floating overlay. Choose **Mini** to keep the chat controls
 visible without a pet.
 
-    See [Pets](https://learn.chatgpt.com/docs/pets?surface=app) to start chats, use voice, follow
+    See [Pets](pets.html) to start chats, use voice, follow
     activity, or create your own pet.
 
 #### Browser
 
 Use these settings to install or enable the bundled Browser plugin, set up the
-[browser extension](https://learn.chatgpt.com/docs/chrome-extension), and manage allowed and blocked
+[browser extension](chrome-extension.html), and manage allowed and blocked
 websites. ChatGPT asks before using a website unless you've allowed it. Removing
 a blocked site lets ChatGPT ask again before using it in the browser.
 
-See [Built-in browser](https://learn.chatgpt.com/docs/browser?surface=app) for browser preview, comment, and
+See [Built-in browser](browser.html) for browser preview, comment, and
 Computer Use workflows.
 
 #### Computer Use
@@ -16723,7 +16723,7 @@ Choose **Friendly**, **Pragmatic**, or **None** as your default personality. Use
 **None** to disable personality instructions. You can update this at any time.
 
 You can also add your own custom instructions. Editing custom instructions updates your
-[personal instructions in `AGENTS.md`](https://learn.chatgpt.com/docs/agent-configuration/agents-md).
+[personal instructions in `AGENTS.md`](agent-configuration/agents-md.html).
 
 #### Suggested prompts
 
@@ -16733,7 +16733,7 @@ start or return to ChatGPT.
 #### Memories
 
 Enable Memories, where available, to let ChatGPT carry useful context from past
-chats into future work. See [Memories](https://learn.chatgpt.com/docs/customization/memories)
+chats into future work. See [Memories](customization/memories.html)
 for setup, storage, and controls for individual chats.
 
 #### Archived chats
@@ -16749,7 +16749,7 @@ you want the chat to remain visible while you work in another app.
 
 ### ChatGPT Voice
 
-Source: [ChatGPT Voice](https://learn.chatgpt.com/docs/features/voice.md)
+Source: [ChatGPT Voice](features/voice.md)
 
 Powered by GPT-Live, ChatGPT Voice lets you talk through ideas and coordinate
 tasks in Chat, Work, and Codex in the ChatGPT desktop app. Start work, check
@@ -16759,9 +16759,9 @@ ChatGPT Voice is available in the ChatGPT desktop app with ChatGPT Plus,
 Pro, Business, Edu, and Enterprise plans. Enterprise and Edu availability
 begins with a two-week early-access period before the feature becomes available
 by default. You can also use ChatGPT Voice through
-[Remote on iOS](https://learn.chatgpt.com/docs/remote-connections#set-up-mobile-access) after pairing
+[Remote on iOS](remote-connections.html#set-up-mobile-access) after pairing
 your phone with a desktop host. Availability also depends on rollout status and
-workspace settings. See [feature availability](https://learn.chatgpt.com/docs/pricing#feature-availability).
+workspace settings. See [feature availability](pricing.html#feature-availability).
 
 #### Start talking
 
@@ -16781,7 +16781,7 @@ its progress or change direction without starting another task.
 If **Start voice chat** isn't available in an existing task, update the desktop
 app and the Codex host running the task. Availability also depends on your
 account and workspace. You can still start a new voice chat where supported,
-or use [voice dictation](https://learn.chatgpt.com/docs/prompting#use-voice-dictation) to enter prompt
+or use [voice dictation](prompting.html#use-voice-dictation) to enter prompt
 text. To resume an earlier voice chat, open it and select **Start voice chat**.
 
 You can set a shortcut in **Settings > Voice > Voice chat hotkey**.
@@ -16809,14 +16809,14 @@ previous one. For example, say, “Let me talk to the task reviewing the tests,�
 then, “Take me back to the previous task.” The destination task must support
 voice and be available on a connected host.
 
-ChatGPT Voice follows the same [permissions](https://learn.chatgpt.com/docs/permission-modes) as
+ChatGPT Voice follows the same [permissions](permission-modes.html) as
 the tasks it directs in Chat, Work, and Codex in the ChatGPT desktop app.
 
 #### Show ChatGPT what you see
 
 On macOS, turn on **Screen context** in **Settings > Voice**, then say, “Take a
 look at this.” ChatGPT can take an
-[appshot](https://learn.chatgpt.com/docs/appshots#permissions-and-safety) of your frontmost window and
+[appshot](appshots.html#permissions-and-safety) of your frontmost window and
 use it as context. Your organization can disable this capability.
 
 An appshot can include the window's image and accessible text, including content
@@ -16827,7 +16827,7 @@ contain sensitive information, including text outside the visible scroll area.
 #### ChatGPT Voice and voice dictation
 
 Use ChatGPT Voice for a live conversation with ChatGPT. Use [voice
-dictation](https://learn.chatgpt.com/docs/prompting#use-voice-dictation) when you only want to turn
+dictation](prompting.html#use-voice-dictation) when you only want to turn
 speech into prompt text before sending it.
 
 #### Limits and troubleshooting
@@ -16836,7 +16836,7 @@ Only one voice chat can be active across the ChatGPT desktop app at a time. If y
 
 ### CLI customization
 
-Source: [CLI customization](https://learn.chatgpt.com/docs/cli-customization.md)
+Source: [CLI customization](cli-customization.md)
 
 The Codex CLI provides terminal-specific options for how interactive sessions
 look and how you enter commands and prompts.
@@ -16881,11 +16881,11 @@ the editor configured by `VISUAL`, or `EDITOR` when `VISUAL` isn't set. Save
 and close the editor to return the text to the composer before sending it.
 
 For interactive keyboard controls and the full command and option list, see
-[Commands](https://learn.chatgpt.com/docs/developer-commands?surface=cli#cli-interactive-shortcuts).
+[Commands](developer-commands.html#cli-interactive-shortcuts).
 
 ### Cloud environments
 
-Source: [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environment.md)
+Source: [Cloud environments](environments/cloud-environment.md)
 
 Use environments to control what Codex installs and runs during cloud chats. For example, you can add dependencies, install tools like linters and formatters, and set environment variables.
 
@@ -16897,7 +16897,7 @@ Here's what happens when you submit a prompt:
 
 1. Codex creates a container and checks out your repo at the selected branch or commit SHA.
 2. Codex runs your setup script, plus an optional maintenance script when a cached container is resumed.
-3. Codex applies your internet access settings. Setup scripts run with internet access. Agent internet access is off by default, but you can enable limited or unrestricted access if needed. See [agent internet access](https://learn.chatgpt.com/docs/cloud/internet-access).
+3. Codex applies your internet access settings. Setup scripts run with internet access. Agent internet access is off by default, but you can enable limited or unrestricted access if needed. See [agent internet access](cloud/internet-access.html).
 4. The agent runs terminal commands in a loop. It edits code, runs checks, and tries to validate its work. If your repo includes `AGENTS.md`, the agent uses it to find project-specific lint and test commands.
 5. When the agent finishes, it shows its answer and a diff of any files it changed. You can open a PR or ask follow-up questions.
 
@@ -16965,20 +16965,20 @@ environment in your workspace.
 
 #### Internet access and network proxy
 
-Internet access is available during the setup script phase to install dependencies. During the agent phase, internet access is off by default, but you can configure limited or unrestricted access. See [agent internet access](https://learn.chatgpt.com/docs/cloud/internet-access).
+Internet access is available during the setup script phase to install dependencies. During the agent phase, internet access is off by default, but you can configure limited or unrestricted access. See [agent internet access](cloud/internet-access.html).
 
 Environments run behind an HTTP/HTTPS network proxy for security and abuse prevention purposes. All outbound internet traffic passes through this proxy.
 
 ### Code review
 
-Source: [Code review](https://learn.chatgpt.com/docs/code-review.md)
+Source: [Code review](code-review.md)
 
 Use ChatGPT or Codex to inspect code changes before you commit or push them.
 
 #### Start a review
 
 In ChatGPT Work, upload the code you want reviewed or make it available through
-an installed source [plugin](https://learn.chatgpt.com/docs/plugins). In your prompt, identify the pull
+an installed source [plugin](plugins.html). In your prompt, identify the pull
 request, branch, commit, files, and review criteria.
 
 #### Review in the app
@@ -17022,7 +17022,7 @@ base branch, or **Last turn** for the most recent assistant turn.
 
 #### Review multiple repositories
 
-When a [local project includes multiple folders](https://learn.chatgpt.com/docs/projects#use-local-projects-for-folders-and-codebases)
+When a [local project includes multiple folders](projects.html#use-local-projects-for-folders-and-codebases)
 backed by different Git repositories, the review pane can show changes from each
 repository. Open the repository selector in the review header to inspect
 another repository and see the lines added or removed without leaving the
@@ -17056,7 +17056,7 @@ Review findings appear as inline comments in the review pane.
 
 Reviews run in the current chat by default. Under **Settings** > **General** >
 **Code review**, choose **Detached** to start a separate review chat. See
-[developer settings](https://learn.chatgpt.com/docs/developer-settings?surface=app#app-code-review).
+[developer settings](developer-settings.html#app-code-review).
 
 The review appears as a turn in the transcript. Set `review_model` in
 `config.toml` when you want reviews to use a different model from the current
@@ -17064,18 +17064,18 @@ session.
 
 By default, the review runs in the current chat. Set `chatgpt.reviewDelivery` to
 `detached` when you want `/review` to start a separate review chat. See the
-[IDE extension settings reference](https://learn.chatgpt.com/docs/developer-settings?surface=ide#ide-editor-settings-reference).
+[IDE extension settings reference](developer-settings.html#ide-editor-settings-reference).
 
 If you ask ChatGPT to prepare revised files, the tools and workspace
 permissions available to the chat still apply.
 
 If you ask Codex to apply the fixes it finds, your normal [sandbox and approval
-settings](https://learn.chatgpt.com/docs/sandboxing) apply.
+settings](sandboxing.html) apply.
 
 #### Navigating the review pane
 
 - Clicking a file name typically opens that file in your chosen editor. You
-  can choose the default editor in [developer settings](https://learn.chatgpt.com/docs/developer-settings?surface=app#app-project-and-terminal-behavior).
+  can choose the default editor in [developer settings](developer-settings.html#app-project-and-terminal-behavior).
 - Clicking the file name background expands or collapses the diff.
 - Clicking a single line while holding Cmd pressed opens the line in your chosen editor.
 - If you're happy with a change, you can [stage it or revert changes](#staging-and-reverting-files) you don't want.
@@ -17121,7 +17121,7 @@ Use this flow when you want to keep the full fix loop in one place:
 4. Inspect the resulting diff in the review pane.
 5. Stage, commit, and push the changes to the pull request branch when you're ready.
 
-For GitHub-triggered reviews, see [Use Codex in GitHub](https://learn.chatgpt.com/docs/third-party/github).
+For GitHub-triggered reviews, see [Use Codex in GitHub](third-party/github.html).
 
 #### Staging and reverting files
 
@@ -17145,22 +17145,22 @@ behavior.
 
 ### Codex environments
 
-Source: [Codex environments](https://learn.chatgpt.com/docs/environments/modes.md)
+Source: [Codex environments](environments/modes.md)
 
 In the ChatGPT desktop app, open the ChatGPT dropdown and select **Codex**.
 When starting a Codex chat, choose where it runs:
 
 - **Local**: work directly in your current project directory.
-- **Worktree**: isolate changes in a Git worktree. [Learn more](https://learn.chatgpt.com/docs/environments/git-worktrees).
+- **Worktree**: isolate changes in a Git worktree. [Learn more](environments/git-worktrees.html).
 - **Cloud**: run remotely in a configured cloud environment.
 
 Both **Local** and **Worktree** chats run on your computer.
 
-For the full glossary and concepts, explore the [concepts section](https://learn.chatgpt.com/docs/prompting).
+For the full glossary and concepts, explore the [concepts section](prompting.html).
 
 ### Codex IDE extension commands
 
-Source: [Codex IDE extension commands](https://learn.chatgpt.com/docs/developer-commands.md?surface=ide)
+Source: [Codex IDE extension commands](developer-commands.md)
 
 Use these commands to control Codex from the VS Code Command Palette. You can also bind them to keyboard shortcuts.
 
@@ -17187,7 +17187,7 @@ To assign or change a key binding for a Codex command:
 
 ### Codex IDE extension settings
 
-Source: [Codex IDE extension settings](https://learn.chatgpt.com/docs/developer-settings.md?surface=ide)
+Source: [Codex IDE extension settings](developer-settings.md)
 
 The Codex IDE extension has two settings layers:
 
@@ -17205,8 +17205,8 @@ the settings panel for common agent controls, or select **Open config.toml** to
 edit the active configuration layer directly.
 
 For the configuration layer order and common keys, see [Config
-basics](https://learn.chatgpt.com/docs/config-file/config-basic). For every supported `config.toml` key, see the
-[Configuration reference](https://learn.chatgpt.com/docs/config-file/config-reference).
+basics](config-file/config-basic.html). For every supported `config.toml` key, see the
+[Configuration reference](config-file/config-reference.html).
 
 #### Change an editor setting
 
@@ -17235,12 +17235,12 @@ The extension also honors VS Code's built-in chat font settings for Codex chat s
 
 The `chatgpt.*` keys above belong to the IDE extension and don't go in
 `config.toml`. For shared agent settings, use [Config
-basics](https://learn.chatgpt.com/docs/config-file/config-basic), [Advanced configuration](https://learn.chatgpt.com/docs/config-file/config-advanced),
-and the [Configuration reference](https://learn.chatgpt.com/docs/config-file/config-reference).
+basics](config-file/config-basic.html), [Advanced configuration](config-file/config-advanced.html),
+and the [Configuration reference](config-file/config-reference.html).
 
 ### Codex IDE extension slash commands
 
-Source: [Codex IDE extension slash commands](https://learn.chatgpt.com/docs/developer-commands.md?surface=ide)
+Source: [Codex IDE extension slash commands](developer-commands.md)
 
 Slash commands let you control Codex without leaving the composer. Use them to check status, switch between local and cloud mode, or send feedback.
 
@@ -17279,7 +17279,7 @@ Slash commands let you control Codex without leaving the composer. Use them to c
 
 ### Codex Micro
 
-Source: [Codex Micro](https://learn.chatgpt.com/docs/features/codex-micro.md)
+Source: [Codex Micro](features/codex-micro.md)
 
 Codex Micro is a limited-run collaboration between Codex and Work Louder. It
 works with the ChatGPT desktop app, giving you a quick way to check on chats,
@@ -17506,7 +17506,7 @@ directly from Work Louder.
 
 ### Computer Use
 
-Source: [Computer Use](https://learn.chatgpt.com/docs/computer-use.md)
+Source: [Computer Use](computer-use.md)
 
 In supported regions, Computer Use in the ChatGPT desktop app is available on
 macOS and Windows with ChatGPT Work and Codex. Install the Computer Use
@@ -17547,7 +17547,7 @@ On macOS, grant:
 #### When to use Computer Use
 
 For difficult tasks that depend on screenshots or visual judgment, choose
-[GPT-6 Astra](https://learn.chatgpt.com/docs/models#gpt-6-astra) when it is available in your model
+[GPT-6 Astra](models.html#gpt-6-astra) when it is available in your model
 selector. The same plugin setup, operating-system permissions, and app access
 controls apply.
 
@@ -17568,7 +17568,7 @@ Good fits include:
 - Executing a workflow that spans more than one app.
 
 For web apps you are building locally, use the
-[built-in browser](https://learn.chatgpt.com/docs/browser?surface=app) first.
+[built-in browser](browser.html) first.
 
 #### Windows foreground use
 
@@ -17578,7 +17578,7 @@ move the pointer, type, and take over the foreground while the task runs.
 
 For Windows tasks that should continue while you step away, keep the Windows
 device unlocked and connected to the internet. Use
-[remote control](https://learn.chatgpt.com/docs/remote-connections) from your phone to check progress
+[remote control](remote-connections.html) from your phone to check progress
 or send follow-up instructions, or run the ChatGPT desktop app inside a Windows virtual
 machine so Computer Use takes over the VM instead of your main desktop.
 
@@ -17605,7 +17605,7 @@ Computer Use when ChatGPT needs to inspect or operate the app visually.
 
 Workspace administrators can restrict which apps Computer Use can access and
 whether approvals can be saved. See
-[managed browser and Computer Use controls](https://learn.chatgpt.com/docs/enterprise/managed-configuration#control-browser-and-computer-use).
+[managed browser and Computer Use controls](enterprise/managed-configuration.html#control-browser-and-computer-use).
 
 System permissions for Computer Use are separate from app approvals in ChatGPT.
 On macOS, Screen Recording and Accessibility permissions let ChatGPT see and
@@ -17728,7 +17728,7 @@ by Computer Use.
 
 ### Integrated terminal
 
-Source: [Integrated terminal](https://learn.chatgpt.com/docs/integrated-terminal.md)
+Source: [Integrated terminal](integrated-terminal.md)
 
 Each chat in the ChatGPT desktop app includes a terminal scoped to its current project or
 worktree. Open it from the terminal icon in the top-right corner of the app, or
@@ -17750,7 +17750,7 @@ Common commands include:
 
 #### Create reusable actions
 
-If you run a command regularly, define an action in your [local environment](https://learn.chatgpt.com/docs/environments/local-environment#actions).
+If you run a command regularly, define an action in your [local environment](environments/local-environment.html#actions).
 Actions appear as shortcuts in the ChatGPT desktop app and run in the integrated
 terminal.
 
@@ -17759,7 +17759,7 @@ terminal. To clear the terminal, press Ctrl+L.
 
 ### Local environments
 
-Source: [Local environments](https://learn.chatgpt.com/docs/environments/local-environment.md)
+Source: [Local environments](environments/local-environment.md)
 
 Local environments let you configure setup steps for worktrees as well as common actions for a project.
 
@@ -17789,7 +17789,7 @@ If your setup is platform-specific, define setup scripts for macOS, Windows, or 
 
 #### Actions
 
-Use actions to define common tasks like starting your app's development server or running your test suite. These actions appear in the ChatGPT desktop app top bar for quick access. The actions run within the app's [integrated terminal](https://learn.chatgpt.com/docs/integrated-terminal).
+Use actions to define common tasks like starting your app's development server or running your test suite. These actions appear in the ChatGPT desktop app top bar for quick access. The actions run within the app's [integrated terminal](integrated-terminal.html).
 
 Actions are helpful to keep you from typing common actions like triggering a build for your project or starting a development server. For one-off quick debugging you can use the integrated terminal directly.
 
@@ -17811,13 +17811,13 @@ and lets you add inline comments for Codex to address. You can stage or revert i
 chunks, stage or revert entire files, commit changes, push a branch, and create
 a pull request without leaving the app.
 
-Use the [integrated terminal](https://learn.chatgpt.com/docs/integrated-terminal) for Git
+Use the [integrated terminal](integrated-terminal.html) for Git
 operations that aren't exposed in the app. To isolate concurrent changes from
-your local checkout, start the task in a [worktree](https://learn.chatgpt.com/docs/environments/git-worktrees).
+your local checkout, start the task in a [worktree](environments/git-worktrees.html).
 
 ### Remote connections
 
-Source: [Remote connections](https://learn.chatgpt.com/docs/remote-connections.md)
+Source: [Remote connections](remote-connections.md)
 
 import {
 Desktop,
@@ -17925,7 +17925,7 @@ connected. With the lid closed, connect an external display as well. Choosing
 **Sleep** still stops remote access.
 
 On a Windows host, keep the session unlocked and available for tasks that use
-[Computer Use](https://learn.chatgpt.com/docs/computer-use). Computer Use on Windows runs in the
+[Computer Use](computer-use.html). Computer Use on Windows runs in the
 foreground, so remote control is best for starting or checking work while you
 dedicate the host desktop to the task.
 
@@ -18092,17 +18092,17 @@ admin to confirm that they've enabled Remote Control access.
 
 #### See also
 
-- [ChatGPT desktop app](https://learn.chatgpt.com/docs/app)
-- [Features](https://learn.chatgpt.com/docs/features)
-- [ChatGPT desktop app settings](https://learn.chatgpt.com/docs/reference/settings)
-- [Computer Use](https://learn.chatgpt.com/docs/computer-use)
-- [Chrome extension](https://learn.chatgpt.com/docs/chrome-extension)
-- [Command line options](https://learn.chatgpt.com/docs/developer-commands?surface=cli)
-- [Authentication](https://learn.chatgpt.com/docs/auth)
+- [ChatGPT desktop app](app.html)
+- [Features](features.html)
+- [ChatGPT desktop app settings](reference/settings.html)
+- [Computer Use](computer-use.html)
+- [Chrome extension](chrome-extension.html)
+- [Command line options](developer-commands.html)
+- [Authentication](auth.html)
 
 ### Slash commands in Codex CLI
 
-Source: [Slash commands in Codex CLI](https://learn.chatgpt.com/docs/developer-commands.md?surface=cli)
+Source: [Slash commands in Codex CLI](developer-commands.md)
 
 Slash commands give you fast, keyboard-first control over Codex. Type `/` in
 the composer to open the slash popup, choose a command, and Codex will perform
@@ -18294,7 +18294,7 @@ Run `/import` from a local TUI session. It's unavailable while a task is running
 in remote sessions, and while connected to the local app-server daemon.
 
 For the desktop app workflow and supported artifact types, see [Import from
-another agent](https://learn.chatgpt.com/docs/import).
+another agent](import.html).
 
 #### Clear the terminal and start a new chat with `/clear`
 
@@ -18668,7 +18668,7 @@ Expected: Codex exits immediately. Save or commit any important work first.
 
 ### Troubleshooting
 
-Source: [Troubleshooting](https://learn.chatgpt.com/docs/reference/troubleshooting.md)
+Source: [Troubleshooting](reference/troubleshooting.md)
 
 #### Frequently Asked Questions
 
@@ -18684,7 +18684,7 @@ staged, and compare your branch with main.
 If you want to see only the changes of your last Codex turn, switch the diff
 pane to the **Last turn** view.
 
-[Learn more about how to use the review pane](https://learn.chatgpt.com/docs/code-review?surface=app).
+[Learn more about how to use the review pane](code-review.html).
 
 #### Remove a project from the sidebar
 
@@ -18711,10 +18711,10 @@ missing chats, select the filter icon next to **Chats**, then select
 Worktrees are created in a different directory and inherit files checked into
 Git by default. Depending on how you manage dependencies and tooling for your
 project, you might have to run setup scripts on your worktree using a
-[local environment](https://learn.chatgpt.com/docs/environments/local-environment) or copy ignored setup files
-with [`.worktreeinclude`](https://learn.chatgpt.com/docs/environments/git-worktrees#copy-ignored-local-files-into-managed-worktrees).
+[local environment](environments/local-environment.html) or copy ignored setup files
+with [`.worktreeinclude`](environments/git-worktrees.html#copy-ignored-local-files-into-managed-worktrees).
 Alternatively, you can check out the changes in your regular local project. See
-the [worktrees documentation](https://learn.chatgpt.com/docs/environments/git-worktrees) to learn more.
+the [worktrees documentation](environments/git-worktrees.html) to learn more.
 
 #### App doesn't pick up a teammate's shared local environment
 
@@ -18810,24 +18810,24 @@ Codex uses the same font for the review pane, integrated terminal and any other 
 
 ### Windows app
 
-Source: [ChatGPT desktop app for Windows](https://learn.chatgpt.com/docs/windows/windows-app.md)
+Source: [ChatGPT desktop app for Windows](windows/windows-app.md)
 
 The [ChatGPT desktop app for Windows](https://get.microsoft.com/installer/download/9PLM9XGG6VKS?cid=website_cta_psi) gives you one interface for
 working across projects, running parallel chats, and reviewing results.
 The Windows app supports core workflows such as worktrees, scheduled tasks, Git
 functionality, the built-in browser, file previews, plugins, and skills.
 It runs natively on Windows using PowerShell and the
-[Windows sandbox](https://learn.chatgpt.com/docs/windows/windows-sandbox#windows-sandbox), or you can configure it to
+[Windows sandbox](windows/windows-sandbox.html#windows-sandbox), or you can configure it to
 run in [Windows Subsystem for Linux 2 (WSL2)](#windows-subsystem-for-linux-wsl).
 
 #### Download the ChatGPT desktop app
 
 Download the [ChatGPT desktop app](https://get.microsoft.com/installer/download/9PLM9XGG6VKS?cid=website_cta_psi) for Windows.
 
-Then follow the [quickstart](https://learn.chatgpt.com/docs/quickstart?setup=app) to get started.
+Then follow the [quickstart](quickstart.html) to get started.
 
 For enterprise installation and update options, see
-[Deploy the Windows app](https://learn.chatgpt.com/docs/enterprise/windows-deployment).
+[Deploy the Windows app](enterprise/windows-deployment.html).
 
 If you prefer a command-line install path, run:
 
@@ -18837,16 +18837,16 @@ winget install --id 9PLM9XGG6VKS -s msstore
 
 #### Native sandbox
 
-The ChatGPT desktop app on Windows supports a native [Windows sandbox](https://learn.chatgpt.com/docs/windows/windows-sandbox#windows-sandbox) when the agent runs in PowerShell, and uses Linux sandboxing when you run the agent in [Windows Subsystem for Linux 2 (WSL2)](#windows-subsystem-for-linux-wsl). To apply sandbox protections in either mode, select **Ask for approval** beneath the composer before sending messages to Codex.
+The ChatGPT desktop app on Windows supports a native [Windows sandbox](windows/windows-sandbox.html#windows-sandbox) when the agent runs in PowerShell, and uses Linux sandboxing when you run the agent in [Windows Subsystem for Linux 2 (WSL2)](#windows-subsystem-for-linux-wsl). To apply sandbox protections in either mode, select **Ask for approval** beneath the composer before sending messages to Codex.
 
 Running Codex in full access mode means Codex is not limited to your project
 directory and might perform unintentional destructive actions that can lead to
 data loss. Keep sandbox boundaries in place and use
-[rules](https://learn.chatgpt.com/docs/agent-configuration/rules) for targeted exceptions, or set your
+[rules](agent-configuration/rules.html) for targeted exceptions, or set your
 [approval policy to
-never](https://learn.chatgpt.com/docs/agent-approvals-security#run-without-approval-prompts) to have
+never](agent-approvals-security.html#run-without-approval-prompts) to have
 Codex attempt to solve problems without asking for escalated permissions,
-based on your [approval and security setup](https://learn.chatgpt.com/docs/agent-approvals-security).
+based on your [approval and security setup](agent-approvals-security.html).
 
 #### Customize for your dev setup
 
@@ -18914,7 +18914,7 @@ Codex works best when a few common developer tools are already installed:
 - **GitHub CLI**: Powers GitHub-specific functionality in the ChatGPT desktop app.
 
 Install them with the default Windows package manager `winget` by pasting this
-into the [integrated terminal](https://learn.chatgpt.com/docs/integrated-terminal) or
+into the [integrated terminal](integrated-terminal.html) or
 asking Codex to install them:
 
 ```powershell
@@ -18967,7 +18967,7 @@ before changing the policy.
 
 #### Local environment scripts on Windows
 
-If your [local environment](https://learn.chatgpt.com/docs/environments/local-environment) uses cross-platform
+If your [local environment](environments/local-environment.html) uses cross-platform
 commands such as `npm` scripts, you can keep one shared setup script or
 set of actions for every platform.
 
@@ -19020,11 +19020,11 @@ restart Codex or reboot.
 
 ### Worktrees
 
-Source: [Worktrees](https://learn.chatgpt.com/docs/environments/git-worktrees.md)
+Source: [Worktrees](environments/git-worktrees.md)
 
-Worktrees let Codex run multiple independent chats in the same project without interfering with each other. The repository, worktree, and commands remain on the computer or remote development environment that contains the project. You can work directly in the ChatGPT desktop app, or use [Remote](https://learn.chatgpt.com/docs/remote) in the ChatGPT mobile app to start, guide, approve, and review worktree chats on a connected computer.
+Worktrees let Codex run multiple independent chats in the same project without interfering with each other. The repository, worktree, and commands remain on the computer or remote development environment that contains the project. You can work directly in the ChatGPT desktop app, or use [Remote](remote.html) in the ChatGPT mobile app to start, guide, approve, and review worktree chats on a connected computer.
 
-For Git repositories, [scheduled tasks](https://learn.chatgpt.com/docs/automations) can run on dedicated background worktrees so they don't conflict with your ongoing work. In non-version-controlled projects, scheduled tasks run directly in the project directory. You can also start chats in a worktree manually and use Handoff to move a chat between Local and Worktree.
+For Git repositories, [scheduled tasks](automations.html) can run on dedicated background worktrees so they don't conflict with your ongoing work. In non-version-controlled projects, scheduled tasks run directly in the project directory. You can also start chats in a worktree manually and use Handoff to move a chat between Local and Worktree.
 
 Worktrees don't run locally on your phone. With Remote, the mobile app
 controls Codex on your connected computer, where the repository and worktree
@@ -19054,7 +19054,7 @@ Worktrees require a Git repository. Make sure the project you selected lives in 
 1.  Select "Worktree"
 
     In the new chat view, select **Worktree** under the composer.
-    Optionally, choose a [local environment](https://learn.chatgpt.com/docs/environments/local-environment) to run setup scripts for the worktree.
+    Optionally, choose a [local environment](environments/local-environment.html) to run setup scripts for the worktree.
 
 2.  Select the starting branch
 
@@ -19076,7 +19076,7 @@ Under the hood, Handoff handles the Git operations required to move work between
 
 In practice, there are two common paths:
 
-1. [Work exclusively on the worktree](#option-1-working-on-the-worktree). This path works best when you can verify changes directly on the worktree, for example because you have dependencies and tools installed using a [local environment setup script](https://learn.chatgpt.com/docs/environments/local-environment).
+1. [Work exclusively on the worktree](#option-1-working-on-the-worktree). This path works best when you can verify changes directly on the worktree, for example because you have dependencies and tools installed using a [local environment setup script](environments/local-environment.html).
 2. [Hand the chat off to Local](#option-2-handing-a-chat-off-to-local). Use this when you want to bring the chat into the foreground, for example because you want to inspect changes in your usual IDE or can run only one instance of your app.
 
 #### Option 1: Working on the worktree
@@ -19194,7 +19194,7 @@ chats.
 
 ### Appshots
 
-Source: [Appshots](https://learn.chatgpt.com/docs/appshots.md)
+Source: [Appshots](appshots.md)
 
 Appshots let you send the frontmost app window to a chat in ChatGPT. Use them when
 you're actively working in another app on your computer and want to provide
@@ -19247,7 +19247,7 @@ Choose **Current chat** or **New chat** to set a destination, or keep
 
 #### Use appshots from the floating controls
 
-On macOS, when the [floating pet controls](https://learn.chatgpt.com/docs/pets?surface=app#app-send-appshots-to-your-pet)
+On macOS, when the [floating pet controls](pets.html#app-send-appshots-to-your-pet)
 are open and the main ChatGPT window is in the background, **Automatic** starts
 a new chat from those controls with the appshot. This also works when you select
 **Mini** as your pet. Complete Appshots permission setup in the main app
@@ -19291,13 +19291,13 @@ permissions:
 
 ### Codex Remote
 
-Source: [Codex Remote](https://learn.chatgpt.com/docs/remote.md)
+Source: [Codex Remote](remote.md)
 
 Start, guide, approve, and review Codex tasks on a connected computer from your phone.
 
 ### Image generation
 
-Source: [Image generation](https://learn.chatgpt.com/docs/image-generation.md)
+Source: [Image generation](image-generation.md)
 
 Ask ChatGPT to generate or edit images. Use image generation for UI assets,
 banners, backgrounds, illustrations, sprite sheets, and placeholders you want
@@ -19412,10 +19412,10 @@ the asset in a design tool when needed.
 
 #### Related docs
 
-- [Codex pricing](https://learn.chatgpt.com/docs/pricing#image-generation-usage-limits)
-- [Image inputs](https://learn.chatgpt.com/docs/image-inputs)
+- [Codex pricing](pricing.html#image-generation-usage-limits)
+- [Image inputs](image-inputs.html)
 - [Image generation API guide](https://developers.openai.com/api/docs/guides/image-generation)
-- [Work with files](https://learn.chatgpt.com/docs/artifacts-viewer)
+- [Work with files](artifacts-viewer.html)
 - [Creating images with ChatGPT](https://openai.com/academy/image-generation/)
 
 [
@@ -19424,9 +19424,9 @@ the asset in a design tool when needed.
 
 ](https://developers.openai.com/api/docs/guides/image-generation?gallery=open)
 
-- [Image inputs](https://learn.chatgpt.com/docs/image-inputs)
+- [Image inputs](image-inputs.html)
 - [Image generation API guide](https://developers.openai.com/api/docs/guides/image-generation)
-- [Work with files](https://learn.chatgpt.com/docs/artifacts-viewer)
+- [Work with files](artifacts-viewer.html)
 - [Creating images with ChatGPT](https://openai.com/academy/image-generation/)
 
 [
@@ -19435,10 +19435,10 @@ the asset in a design tool when needed.
 
 ](https://developers.openai.com/api/docs/guides/image-generation?gallery=open)
 
-- [Codex pricing](https://learn.chatgpt.com/docs/pricing#image-generation-usage-limits)
-- [Image inputs](https://learn.chatgpt.com/docs/image-inputs)
+- [Codex pricing](pricing.html#image-generation-usage-limits)
+- [Image inputs](image-inputs.html)
 - [Image generation API guide](https://developers.openai.com/api/docs/guides/image-generation)
-- [Work with files](https://learn.chatgpt.com/docs/artifacts-viewer)
+- [Work with files](artifacts-viewer.html)
 
 [
 
@@ -19448,7 +19448,7 @@ the asset in a design tool when needed.
 
 ### Image inputs
 
-Source: [Image inputs](https://learn.chatgpt.com/docs/image-inputs.md)
+Source: [Image inputs](image-inputs.md)
 
 Add images to a prompt when the task depends on visual context, such as an error
 screenshot, interface design, architecture diagram, or existing asset. Explain
@@ -19492,12 +19492,12 @@ do not change behavior. Verify the result with a new screenshot.
 #### Use the right image feature
 
 Use an image input when you want ChatGPT to inspect a visual reference. Use
-[image generation](https://learn.chatgpt.com/docs/image-generation) when you want ChatGPT to
+[image generation](image-generation.html) when you want ChatGPT to
 create or edit an image.
 
 ### Notifications
 
-Source: [Notifications](https://learn.chatgpt.com/docs/notifications.md)
+Source: [Notifications](notifications.md)
 
 Notifications let you know when work needs attention. Their controls and
 delivery channels vary by surface.
@@ -19527,7 +19527,7 @@ In the ChatGPT desktop app, a floating pet is another way to follow chat
 activity while you work in other apps. It can show when a chat is **Running**,
 **Needs input**, **Ready**, or **Blocked**.
 
-See [Pets](https://learn.chatgpt.com/docs/pets?surface=app) to choose a pet, understand its status, or
+See [Pets](pets.html) to choose a pet, understand its status, or
 create your own.
 
 #### Configure web notifications
@@ -19540,7 +19540,7 @@ notification settings to open **Scheduled**.
 #### Configure CLI notifications
 
 For terminal and external notifications, see
-[Notifications](https://learn.chatgpt.com/docs/config-file/config-advanced#notifications) in the
+[Notifications](config-file/config-advanced.html#notifications) in the
 advanced configuration guide. You can choose when the TUI emits a notification
 and whether Codex runs an external program when a turn completes.
 
@@ -19549,18 +19549,18 @@ and whether Codex runs an external program when a turn completes.
 The IDE extension doesn't provide separate notification controls. Keep the
 chat open to follow its activity. To run an external program when a turn
 completes, configure `notify` on the connected Codex host. See
-[Notifications](https://learn.chatgpt.com/docs/config-file/config-advanced#notifications) in the
+[Notifications](config-file/config-advanced.html#notifications) in the
 advanced configuration guide.
 
 #### Related docs
 
-- [Long-running work](https://learn.chatgpt.com/docs/long-running-work)
-- [Scheduled tasks](https://learn.chatgpt.com/docs/automations)
-- [Pets](https://learn.chatgpt.com/docs/pets)
+- [Long-running work](long-running-work.html)
+- [Scheduled tasks](automations.html)
+- [Pets](pets.html)
 
 ### Pets
 
-Source: [Pets](https://learn.chatgpt.com/docs/pets.md)
+Source: [Pets](pets.md)
 
 Pets are optional animated companions for following work. Where a pet appears
 and what it shows depend on the interface you use. Choosing a pet changes its
@@ -19619,7 +19619,7 @@ A chat started from these controls is outside a project. To use a project's
 context, start the chat from that project in the main app.
 
 To speak instead, select the voice icon. See
-[ChatGPT Voice](https://learn.chatgpt.com/docs/features/voice) for voice availability and controls.
+[ChatGPT Voice](features/voice.html) for voice availability and controls.
 
 #### Understand pet status
 
@@ -19636,12 +19636,12 @@ show your threads, then choose a thread to open its conversation. Select the
 chevron to collapse your threads.
 
 The activity tray is separate from [system
-notifications](https://learn.chatgpt.com/docs/notifications?surface=app#app-configure-desktop-notifications).
+notifications](notifications.html#app-configure-desktop-notifications).
 
 #### Send Appshots to your pet
 
 On macOS, press both **Command** keys at the same time while using an app to
-take an [Appshot](https://learn.chatgpt.com/docs/appshots). If your pet is visible and the main ChatGPT
+take an [Appshot](appshots.html). If your pet is visible and the main ChatGPT
 window is in the background, the appshot goes to your pet and starts a new chat.
 This also works when **Mini** is selected.
 
@@ -19652,7 +19652,7 @@ On Windows, Appshots open in the main ChatGPT app.
 
 #### Follow Computer Use
 
-On macOS, the [Computer Use](https://learn.chatgpt.com/docs/computer-use) picture-in-picture window can
+On macOS, the [Computer Use](computer-use.html) picture-in-picture window can
 attach to your pet. Move the pet, and the window follows. If your pet is hidden,
 sending the picture-in-picture window to it shows the pet automatically.
 
@@ -19711,13 +19711,13 @@ Use the ChatGPT desktop app or Codex CLI when you want to use your own pet.
 
 #### Related docs
 
-- [Notifications](https://learn.chatgpt.com/docs/notifications)
-- [Long-running work](https://learn.chatgpt.com/docs/long-running-work)
-- [ChatGPT desktop app settings](https://learn.chatgpt.com/docs/reference/settings#pets)
+- [Notifications](notifications.html)
+- [Long-running work](long-running-work.html)
+- [ChatGPT desktop app settings](reference/settings.html#pets)
 
 ### Sites
 
-Source: [Sites](https://learn.chatgpt.com/docs/sites.md)
+Source: [Sites](sites.md)
 
 Sites is in public beta and is available with ChatGPT Plus, Pro, Business,
 Enterprise and Edu plans. Plan-specific usage limits apply across all Sites
@@ -19845,8 +19845,8 @@ Sites handles the sign-in and sign-out flows through platform-provided paths,
 then returns the visitor to your Site:
 
 ```html
-<a href="/signin-with-chatgpt">Sign in with ChatGPT</a>
-<a href="/signout-with-chatgpt">Sign out</a>
+<a href="../signin-with-chatgpt.html">Sign in with ChatGPT</a>
+<a href="../signout-with-chatgpt.html">Sign out</a>
 ```
 
 After a visitor signs in, Sites forwards their identity to the server through
@@ -20086,7 +20086,7 @@ Before you share a Site:
 - Open the shared Site and confirm that the intended audience can visit it.
 
 For a Site built from a local project, also review the source changes and any
-database migrations in the Codex [review pane](https://learn.chatgpt.com/docs/code-review?surface=app).
+database migrations in the Codex [review pane](code-review.html).
 
 #### Take down or delete a Site
 
@@ -20131,26 +20131,26 @@ for the current limits and policy links.
 
 #### Related documentation
 
-- [ChatGPT desktop app](https://learn.chatgpt.com/docs/app) introduces app navigation, projects, and chats.
-- [Review and ship changes](https://learn.chatgpt.com/docs/code-review?surface=app) explains how to inspect source
+- [ChatGPT desktop app](app.html) introduces app navigation, projects, and chats.
+- [Review and ship changes](code-review.html) explains how to inspect source
   changes before publishing them.
 
-- [Projects and chats](https://learn.chatgpt.com/docs/projects) explains how folder and workspace
+- [Projects and chats](projects.html) explains how folder and workspace
   context carries across chats.
-- [Review and ship changes](https://learn.chatgpt.com/docs/code-review) explains the review workflow for
+- [Review and ship changes](code-review.html) explains the review workflow for
   each Codex client.
-- [Sandboxing](https://learn.chatgpt.com/docs/sandboxing) explains the local execution boundary.
+- [Sandboxing](sandboxing.html) explains the local execution boundary.
 
 - [Open Sites in ChatGPT](https://chatgpt.com/sites) to return to Sites you've
   created.
-- [Projects and chats](https://learn.chatgpt.com/docs/projects?surface=web) explains how to keep
+- [Projects and chats](projects.html) explains how to keep
   related chats and source files together.
-- [Work with files](https://learn.chatgpt.com/docs/artifacts-viewer?surface=web) explains how to review
+- [Work with files](artifacts-viewer.html) explains how to review
   generated files in ChatGPT web.
 
 ### Visualizations
 
-Source: [Visualizations](https://learn.chatgpt.com/docs/visualizations.md)
+Source: [Visualizations](visualizations.md)
 
 Visualizations turn questions, ideas, and information into charts, maps,
 diagrams, calculators, simulations, and interactive explanations you can explore
@@ -20207,7 +20207,7 @@ Ask for the smallest format that fits the job:
 - Use a map for geographic information.
 - Use an interactive visualization when inputs, time, motion, or spatial
   relationships should change.
-- Use a [Site](https://learn.chatgpt.com/docs/sites) when you need a durable hosted application with a
+- Use a [Site](sites.html) when you need a durable hosted application with a
   shareable URL, permissions, or persistent data.
 
 #### Prompt with an outcome and controls
@@ -20278,14 +20278,14 @@ the full chat before you share it.
 
 #### Related docs
 
-- [Sites](https://learn.chatgpt.com/docs/sites)
-- [Projects and chats](https://learn.chatgpt.com/docs/projects)
-- [Work with files](https://learn.chatgpt.com/docs/artifacts-viewer)
-- [Image generation](https://learn.chatgpt.com/docs/image-generation)
+- [Sites](sites.html)
+- [Projects and chats](projects.html)
+- [Work with files](artifacts-viewer.html)
+- [Image generation](image-generation.html)
 
 ### Web search
 
-Source: [Web search](https://learn.chatgpt.com/docs/web-search.md)
+Source: [Web search](web-search.md)
 
 ChatGPT includes a first-party web search tool. Treat all web results as
 untrusted input.
@@ -20298,7 +20298,7 @@ search activity with the other tool calls in the transcript.
 Use the Deep research plugin in the desktop app for an investigation across
 multiple sources and a report you can review.
 
-1. Switch to **Work** and open [**Plugins**](https://learn.chatgpt.com/docs/plugins?surface=app).
+1. Switch to **Work** and open [**Plugins**](plugins.html).
 2. Select **Deep research**. Install or enable it if needed, then select
    **Try now** to start a Work chat.
 3. Describe the question, scope, and result you need. Include relevant files
@@ -20356,7 +20356,7 @@ Use live search when your task depends on the latest information. Set
 `web_search = "live"` in `config.toml`. Set `web_search = "disabled"` to turn
 the tool off. The `"indexed"` mode permits external web access only when the
 search index gates the request. When Codex runs with full access, web search
-defaults to live results. See [Config basics](https://learn.chatgpt.com/docs/config-file/config-basic)
+defaults to live results. See [Config basics](config-file/config-basic.html)
 for config file locations and precedence.
 
 #### Search with a custom model provider
@@ -20382,11 +20382,11 @@ selected model, and runtime must also support standalone search. Workspace and
 managed search restrictions still apply.
 
 For network boundaries that apply to Codex cloud environments, see [Internet
-access](https://learn.chatgpt.com/docs/cloud/internet-access).
+access](cloud/internet-access.html).
 
 ### Work with files
 
-Source: [Work with files](https://learn.chatgpt.com/docs/artifacts-viewer.md)
+Source: [Work with files](artifacts-viewer.md)
 
 When a task produces a file, give ChatGPT the source data, expected file type,
 structure, and review criteria that matter for the task. The preview and review
@@ -20459,29 +20459,29 @@ the structure, data, layout, or validation that needs another pass.
 
 #### Related docs
 
-- [Image generation](https://learn.chatgpt.com/docs/image-generation)
+- [Image generation](image-generation.html)
 
 ### ChatGPT desktop app
 
-Source: [ChatGPT desktop app](https://learn.chatgpt.com/docs/app.md)
+Source: [ChatGPT desktop app](app.md)
 
 Use the ChatGPT desktop app for projects, files, and long-running work.
 
 ### Codex CLI
 
-Source: [Codex CLI](https://learn.chatgpt.com/docs/codex/cli.md)
+Source: [Codex CLI](codex/cli.md)
 
 Use Codex from your terminal and scripts.
 
 ### Codex cloud
 
-Source: [Codex cloud](https://learn.chatgpt.com/docs/cloud.md)
+Source: [Codex cloud](cloud.md)
 
 Delegate work to Codex in isolated cloud environments.
 
 ### Codex IDE extension
 
-Source: [Codex IDE extension](https://learn.chatgpt.com/docs/codex/ide.md)
+Source: [Codex IDE extension](codex/ide.md)
 
 Use Codex beside your code and editor context.
 
@@ -22439,7 +22439,7 @@ register an MCP Apps resource and associate it with selected tools.
 
 ### Build plugins
 
-Source: [Build plugins](https://learn.chatgpt.com/docs/build-plugins.md)
+Source: [Build plugins](build-plugins.md)
 
 To build or submit a plugin, use the complete
 [builder documentation on developers.openai.com](https://developers.openai.com/plugins).
@@ -22456,7 +22456,7 @@ products. During development, use a local marketplace to test the package
 before submitting it to the universal directory.
 
 For workspace distribution through GitHub, see
-[Plugin management](https://learn.chatgpt.com/docs/enterprise/plugin-management).
+[Plugin management](enterprise/plugin-management.html).
 
 Start with a skill when you are still iterating on one personal workflow.
 Build a plugin when you want to share that workflow, package related skills,
@@ -22556,11 +22556,11 @@ For complete builder documentation, use the
 - [Submitting and publishing](https://developers.openai.com/plugins/deploy/submission)
 
 To browse, install, enable, or remove plugins, see [Use
-plugins](https://learn.chatgpt.com/docs/plugins).
+plugins](plugins.html).
 
 ### Build skills
 
-Source: [Build skills](https://learn.chatgpt.com/docs/build-skills.md)
+Source: [Build skills](build-skills.md)
 
 Use agent skills to extend ChatGPT and Codex with task-specific capabilities. A
 skill packages instructions, resources, and optional scripts so either product
@@ -22613,7 +22613,7 @@ so a host can still match the skill if descriptions are shortened.
 #### Create a skill
 
 If you already know the workflow and it's easier to show than describe, use
-[Record & Replay](https://learn.chatgpt.com/docs/extend/record-and-replay). The recorder captures the
+[Record & Replay](extend/record-and-replay.html). The recorder captures the
 workflow, inspects the steps, and drafts a reusable skill from the
 demonstration.
 
@@ -22703,7 +22703,7 @@ Restart Codex after changing `~/.codex/config.toml`.
 
 #### Optional metadata
 
-Add `agents/openai.yaml` to configure UI metadata in the [ChatGPT desktop app](https://learn.chatgpt.com/docs/app), to set invocation policy, and to declare tool dependencies for a more seamless experience with using the skill.
+Add `agents/openai.yaml` to configure UI metadata in the [ChatGPT desktop app](app.html), to set invocation policy, and to declare tool dependencies for a more seamless experience with using the skill.
 
 ```yaml
 interface:
@@ -22907,13 +22907,13 @@ MCP server mapping, local testing, and distribution flow.
 
 ### Computer History
 
-Source: [Computer History](https://learn.chatgpt.com/docs/customization/computer-history.md)
+Source: [Computer History](customization/computer-history.md)
 
 Computer History is **off by default** for ChatGPT Pro, Business, and
 Enterprise users in the ChatGPT desktop app on macOS. Pro users can choose to
 turn it on. For Business and Enterprise workspaces, an administrator must
 explicitly grant access before each member can choose to turn it on. Computer
-History also requires [Memories](https://learn.chatgpt.com/docs/customization/memories) and is not
+History also requires [Memories](customization/memories.html) and is not
 available with an API key or Amazon Bedrock. It's available in supported
 regions, including the European Economic Area (EEA), Switzerland, and the
 United Kingdom.
@@ -22997,7 +22997,7 @@ memories, and the apps or websites included in your history:
 - **Personal opt-in:** Granting workspace access only lets a member choose to
   turn on Computer History. It does not turn on the feature for anyone. Each
   person must opt in individually, including ChatGPT Pro users.
-- **Memories:** Computer History also requires [Memories](https://learn.chatgpt.com/docs/customization/memories).
+- **Memories:** Computer History also requires [Memories](customization/memories.html).
   Use `/memories` to control whether an individual chat can use local memories
   or contribute to future memories.
 - **Apps and websites:** Your app and website permissions determine which
@@ -23117,7 +23117,7 @@ and interaction events may be included as context. This chat content may be
 used to improve OpenAI models if allowed by your
 [ChatGPT data controls](https://help.openai.com/en/articles/7730893-data-controls-faq).
 Memories also follow the same
-[chat-level controls as other Codex memories](https://learn.chatgpt.com/docs/customization/memories#control-memories-per-chat).
+[chat-level controls as other Codex memories](customization/memories.html#control-memories-per-chat).
 
 #### Prompt injection risk
 
@@ -23399,7 +23399,7 @@ Keep formatting and other mechanical checks in CI. Save repository rules for the
 
 #### Getting started
 
-If your repository already has Codex Code Review enabled, add two or three rules to the applicable `AGENTS.md` file and open a representative pull request. If you are new to Code Review, the [Code Review quickstart](https://learn.chatgpt.com/docs/third-party/github) explains how to turn it on for a GitHub repository. You can also request a review directly with `@codex review`.
+If your repository already has Codex Code Review enabled, add two or three rules to the applicable `AGENTS.md` file and open a representative pull request. If you are new to Code Review, the [Code Review quickstart](third-party/github.html) explains how to turn it on for a GitHub repository. You can also request a review directly with `@codex review`.
 
 Start with an explanation reviewers keep repeating or a repository-specific mistake that would be consequential to miss. Try one change that should trigger the rule, one safe counterexample, and one unrelated change. Check that the first produces a useful finding and the others do not create noise, then refine the guidance from what you see.
 
@@ -23409,7 +23409,7 @@ If you find yourself spending more time reviewing changes than writing them, sta
 
 ### Custom instructions with AGENTS.md
 
-Source: [Custom instructions with AGENTS.md](https://learn.chatgpt.com/docs/agent-configuration/agents-md.md)
+Source: [Custom instructions with AGENTS.md](agent-configuration/agents-md.md)
 
 Codex reads `AGENTS.md` files before doing any work. By layering global guidance with project-specific overrides, you can start each task with consistent expectations, no matter which repository you open.
 
@@ -23421,7 +23421,7 @@ Codex builds an instruction chain when it starts (once per run; in the TUI this 
 2. **Project scope:** Starting at the project root (typically the Git root), Codex walks down to your current working directory. If Codex cannot find a project root, it only checks the current directory. In each directory along the path, it checks for `AGENTS.override.md`, then `AGENTS.md`, then any fallback names in `project_doc_fallback_filenames`. Codex includes at most one file per directory.
 3. **Merge order:** Codex concatenates files from the root down, joining them with blank lines. Files closer to your current directory override earlier guidance because they appear later in the combined prompt.
 
-Codex skips empty files and stops adding files once the combined size reaches the limit defined by `project_doc_max_bytes` (32 KiB by default). For details on these knobs, see [Project instructions discovery](https://learn.chatgpt.com/docs/config-file/config-advanced#project-instructions-discovery). Raise the limit or split instructions across nested directories when you hit the cap.
+Codex skips empty files and stops adding files once the combined size reaches the limit defined by `project_doc_max_bytes` (32 KiB by default). For details on these knobs, see [Project instructions discovery](config-file/config-advanced.html#project-instructions-discovery). Raise the limit or split instructions across nested directories when you hit the cap.
 
 #### Create global guidance
 
@@ -23495,7 +23495,7 @@ Here is a sample repository after you add a global file and a payments-specific 
 
 #### Add code review rules
 
-For [Codex code review in GitHub](https://learn.chatgpt.com/docs/third-party/github#customize-what-codex-reviews),
+For [Codex code review in GitHub](third-party/github.html#customize-what-codex-reviews),
 add a `## Code Review Rules` section to the `AGENTS.md` closest to the code the
 rules govern. Put repository-wide checks at the root and service-specific
 checks in a nested file.
@@ -23511,7 +23511,7 @@ checks in a nested file.
 
 Keep rules concise, explain the behavior to flag and any safe path or
 exception, and reserve formatting and lint checks for CI. See [Customize what
-Codex reviews](https://learn.chatgpt.com/docs/third-party/github#customize-what-codex-reviews) for
+Codex reviews](third-party/github.html#customize-what-codex-reviews) for
 setup and rule-writing guidance.
 
 #### Customize fallback filenames
@@ -23558,18 +23558,18 @@ Expected: The output lists files relative to the custom `.codex` directory.
 #### Next steps
 
 - Visit the official [AGENTS.md](https://agents.md) website for more information.
-- Review [Prompting Codex](https://learn.chatgpt.com/docs/prompting) for conversational patterns that pair well with persistent guidance.
+- Review [Prompting Codex](prompting.html) for conversational patterns that pair well with persistent guidance.
 
 ### Custom Prompts
 
-Source: [Custom Prompts](https://learn.chatgpt.com/docs/custom-prompts.md)
+Source: [Custom Prompts](custom-prompts.md)
 
-Custom prompts are deprecated. Use [skills](https://learn.chatgpt.com/docs/build-skills) for reusable
+Custom prompts are deprecated. Use [skills](build-skills.html) for reusable
 instructions that Codex can invoke explicitly or implicitly.
 
 Custom prompts (deprecated) let you turn Markdown files into reusable prompts that you can invoke as slash commands in both the Codex CLI and the Codex IDE extension.
 
-Custom prompts require explicit invocation and live in your local Codex home directory (for example, `~/.codex`), so they're not shared through your repository. If you want to share a prompt (or want Codex to implicitly invoke it), [use skills](https://learn.chatgpt.com/docs/build-skills).
+Custom prompts require explicit invocation and live in your local Codex home directory (for example, `~/.codex`), so they're not shared through your repository. If you want to share a prompt (or want Codex to implicitly invoke it), [use skills](build-skills.html).
 
 1. Create the prompts directory:
 
@@ -23625,21 +23625,21 @@ Manage prompts by editing or deleting files under `~/.codex/prompts/`. Codex sca
 
 ### Customization
 
-Source: [Customization](https://learn.chatgpt.com/docs/customization/overview.md)
+Source: [Customization](customization/overview.md)
 
 Customization is how you make Codex work the way your team works.
 
 In Codex, customization comes from a few layers that work together:
 
 - **Project guidance (`AGENTS.md`)** for persistent instructions
-- **[Memories](https://learn.chatgpt.com/docs/customization/memories)** for useful context learned from prior work
+- **[Memories](customization/memories.html)** for useful context learned from prior work
 - **Skills** for reusable workflows and domain expertise
-- **[MCP](https://learn.chatgpt.com/docs/extend/mcp)** for access to external tools and shared systems
-- **[Subagents](https://learn.chatgpt.com/docs/agent-configuration/subagents)** for delegating work to specialized subagents
+- **[MCP](extend/mcp.html)** for access to external tools and shared systems
+- **[Subagents](agent-configuration/subagents.html)** for delegating work to specialized subagents
 
 These are complementary, not competing. `AGENTS.md` shapes behavior, memories
 carry local context forward, skills package repeatable processes, and
-[MCP](https://learn.chatgpt.com/docs/extend/mcp) connects Codex to systems outside the local workspace.
+[MCP](extend/mcp.html) connects Codex to systems outside the local workspace.
 
 #### AGENTS Guidance
 
@@ -23662,14 +23662,14 @@ When the agent makes incorrect assumptions about your codebase, correct them in 
 - **Too much reading**: If it finds the right files but reads too many documents, add routing guidance (which directories/files to prioritize).
 - **Recurring PR feedback**: If you leave the same feedback more than once, codify it.
 - **In GitHub**: In a pull request comment, tag `@codex` with a request (for example, `@codex add this to AGENTS.md`) to delegate the update to a cloud chat.
-- **Automate drift checks**: Use [scheduled tasks](https://learn.chatgpt.com/docs/automations) to run recurring checks (for example, daily) that look for guidance gaps and suggest what to add to `AGENTS.md`.
+- **Automate drift checks**: Use [scheduled tasks](automations.html) to run recurring checks (for example, daily) that look for guidance gaps and suggest what to add to `AGENTS.md`.
 
 Pair `AGENTS.md` with infrastructure that enforces those rules: pre-commit hooks, linters, and type checkers catch issues before you see them, so the system gets smarter about preventing recurring mistakes.
 
 Codex can load guidance from multiple locations: a global file in your Codex home directory (for you as a developer) and repo-specific files that teams can check in. Files closer to the working directory take precedence.
 Use the global file to shape how Codex communicates with you (for example, review style, verbosity, and defaults), and keep repo files focused on team and codebase rules.
 
-[Custom instructions with AGENTS.md](https://learn.chatgpt.com/docs/agent-configuration/agents-md)
+[Custom instructions with AGENTS.md](agent-configuration/agents-md.html)
 
 #### Skills
 
@@ -23680,12 +23680,12 @@ Skills are loaded and visible to the agent (at least their metadata), so Codex c
 Use skill folders to author and iterate on workflows locally. If a plugin
 already exists for the workflow, install it first to reuse a proven setup. When
 you want to distribute your own workflow across teams or bundle it with
-connectors, package it as a [plugin](https://learn.chatgpt.com/docs/build-plugins). Skills remain the
+connectors, package it as a [plugin](build-plugins.html). Skills remain the
 authoring format; plugins are the installable distribution unit.
 
 A skill is typically a `SKILL.md` file plus optional scripts, references, and assets.
 
-The skill directory can include a `scripts/` folder with CLI scripts that Codex invokes as part of the workflow (for example, seed data or run validations). When the workflow needs external systems (issue trackers, design tools, docs servers), pair the skill with [MCP](https://learn.chatgpt.com/docs/extend/mcp).
+The skill directory can include a `scripts/` folder with CLI scripts that Codex invokes as part of the workflow (for example, seed data or run validations). When the workflow needs external systems (issue trackers, design tools, docs servers), pair the skill with [MCP](extend/mcp.html).
 
 Example `SKILL.md`:
 
@@ -23722,7 +23722,7 @@ Codex uses progressive disclosure for skills:
 
 Skills can be invoked explicitly, and Codex can also choose them implicitly when the task matches the skill description. Clear skill descriptions improve triggering reliability.
 
-[Build skills](https://learn.chatgpt.com/docs/build-skills)
+[Build skills](build-skills.html)
 
 #### MCP
 
@@ -23749,27 +23749,27 @@ In practice, MCP is often most useful when paired with skills:
 
 - A skill defines the workflow and names the MCP tools to use
 
-[Model Context Protocol](https://learn.chatgpt.com/docs/extend/mcp)
+[Model Context Protocol](extend/mcp.html)
 
 #### Subagents
 
 You can create different agents with different roles and prompt them to use tools differently. For example, one agent might run specific testing commands and configurations, while another has MCP servers that fetch production logs for debugging. Each subagent stays focused and uses the right tools for its job.
 
-[Subagents](https://learn.chatgpt.com/docs/agent-configuration/subagents)
+[Subagents](agent-configuration/subagents.html)
 
 #### Skills + MCP together
 
 Skills plus MCP is where it all comes together: skills define repeatable workflows, and MCP connects them to external tools and systems.
-If a skill depends on MCP, declare that dependency in `agents/openai.yaml` so Codex can install and wire it automatically (see [Build skills](https://learn.chatgpt.com/docs/build-skills)).
+If a skill depends on MCP, declare that dependency in `agents/openai.yaml` so Codex can install and wire it automatically (see [Build skills](build-skills.html)).
 
 #### Next step
 
 Build in this order:
 
-1. [Custom instructions with AGENTS.md](https://learn.chatgpt.com/docs/agent-configuration/agents-md) so Codex follows your repo conventions. Add pre-commit hooks and linters to enforce those rules.
-2. Install a [plugin](https://learn.chatgpt.com/docs/plugins) when a reusable workflow already exists. Otherwise, create a [skill](https://learn.chatgpt.com/docs/build-skills) and package it as a plugin when you want to share it.
-3. [MCP](https://learn.chatgpt.com/docs/extend/mcp) when workflows need external systems (Linear, GitHub, docs servers, design tools).
-4. [Subagents](https://learn.chatgpt.com/docs/agent-configuration/subagents) when you're ready to delegate noisy or specialized tasks to subagents.
+1. [Custom instructions with AGENTS.md](agent-configuration/agents-md.html) so Codex follows your repo conventions. Add pre-commit hooks and linters to enforce those rules.
+2. Install a [plugin](plugins.html) when a reusable workflow already exists. Otherwise, create a [skill](build-skills.html) and package it as a plugin when you want to share it.
+3. [MCP](extend/mcp.html) when workflows need external systems (Linear, GitHub, docs servers, design tools).
+4. [Subagents](agent-configuration/subagents.html) when you're ready to delegate noisy or specialized tasks to subagents.
 
 ### Define tools
 
@@ -23894,7 +23894,7 @@ behalf.
 
 #### Quickstart
 
-You can connect Codex to [MCP servers](https://learn.chatgpt.com/docs/extend/mcp) in the [CLI](https://learn.chatgpt.com/docs/codex/cli) or [IDE extension](https://learn.chatgpt.com/docs/codex/ide). The configuration is shared between both so you only have to set it up once.
+You can connect Codex to [MCP servers](extend/mcp.html) in the [CLI](codex/cli.html) or [IDE extension](codex/ide.html). The configuration is shared between both so you only have to set it up once.
 
     Add the server using the Codex CLI:
 
@@ -24035,7 +24035,7 @@ optional UI.
 
 ### Hooks
 
-Source: [Hooks](https://learn.chatgpt.com/docs/hooks.md)
+Source: [Hooks](hooks.md)
 
 Hooks are an extensibility framework for Codex. They let you run scripts or MCP
 tools during the agentic loop, enabling features such as:
@@ -25840,7 +25840,7 @@ users](https://developers.openai.com/plugins/build/auth) when needed, and
 
 ### Memories
 
-Source: [Memories](https://learn.chatgpt.com/docs/customization/memories.md)
+Source: [Memories](customization/memories.md)
 
 Memories let ChatGPT and Codex carry useful context from earlier work into
 future work.
@@ -25868,7 +25868,7 @@ The IDE extension uses the connected Codex host's local memory store. When
 memories are enabled for that host, use the same chat-level controls as Codex
 CLI.
 
-[Computer History](https://learn.chatgpt.com/docs/customization/computer-history) is a macOS desktop
+[Computer History](customization/computer-history.html) is a macOS desktop
 feature that turns activity across allowed apps and websites into memories and
 a timeline that ChatGPT and Codex can reference.
 
@@ -25890,7 +25890,7 @@ quota when you're near a limit.
 #### Local memory storage
 
 Codex stores memories under your Codex home directory. By default, that's
-`~/.codex`. See [Config and state locations](https://learn.chatgpt.com/docs/config-file/config-advanced#config-and-state-locations)
+`~/.codex`. See [Config and state locations](config-file/config-advanced.html#config-and-state-locations)
 for how Codex uses `CODEX_HOME`.
 
 The main memory files live under `~/.codex/memories/` and include summaries,
@@ -25928,8 +25928,8 @@ memories = true
 ```
 
 For config file locations and the full list of memory-related settings, see
-[Config basics](https://learn.chatgpt.com/docs/config-file/config-basic) and the [configuration
-reference](https://learn.chatgpt.com/docs/config-file/config-reference).
+[Config basics](config-file/config-basic.html) and the [configuration
+reference](config-file/config-reference.html).
 
 Common memory-specific settings include:
 
@@ -25950,7 +25950,7 @@ Common memory-specific settings include:
 
 ### Model Context Protocol
 
-Source: [Model Context Protocol](https://learn.chatgpt.com/docs/extend/mcp.md)
+Source: [Model Context Protocol](extend/mcp.md)
 
 Model Context Protocol (MCP) connects models to tools and context. Use it to
 give ChatGPT or Codex access to third-party documentation, or to let it
@@ -26000,7 +26000,7 @@ to view connected servers.
 
 #### Use MCP-backed tools in ChatGPT web
 
-In a hosted ChatGPT Work chat, install a [plugin](https://learn.chatgpt.com/docs/plugins) to use its
+In a hosted ChatGPT Work chat, install a [plugin](plugins.html) to use its
 bundled connectors and remote MCP tools. After installation, Chat and Work can
 use those tools. Workspace administrators can control which plugins and tools
 are available.
@@ -26047,7 +26047,7 @@ Select **Authenticate** when an OAuth server requires sign-in.
 #### Configure with config.toml
 
 For more fine-grained control, edit `~/.codex/config.toml` or a project-scoped
-`.codex/config.toml`. See the [configuration reference](https://learn.chatgpt.com/docs/config-file/config-reference)
+`.codex/config.toml`. See the [configuration reference](config-file/config-reference.html)
 for a searchable list of every supported MCP option.
 
 Configure each MCP server with a `[mcp_servers.]` table in the configuration file.
@@ -26391,8 +26391,8 @@ It includes:
 
 If you are new to Codex, start here before installing the plugin:
 
-1. [Download the ChatGPT desktop app](https://learn.chatgpt.com/docs/app#getting-started) for macOS or Windows.
-2. Follow the [Codex quickstart](https://learn.chatgpt.com/docs/quickstart) to sign in, choose a
+1. [Download the ChatGPT desktop app](app.html#getting-started) for macOS or Windows.
+2. Follow the [Codex quickstart](quickstart.html) to sign in, choose a
    project, and send your first message.
 
 #### Install the plugin
@@ -26967,7 +26967,7 @@ configured marketplace snapshots.
 Administrators can also define local or Git marketplaces in system
 `config.toml` or cloud-managed configuration. These sources use the same
 marketplace catalog format. See [Configure plugin marketplaces and
-defaults](https://learn.chatgpt.com/docs/enterprise/managed-configuration#configure-plugin-marketplaces-and-defaults)
+defaults](enterprise/managed-configuration.html#configure-plugin-marketplaces-and-defaults)
 for managed setup guidance and links to the configuration reference.
 
 #### Create a plugin manually
@@ -27108,13 +27108,13 @@ authentication.
 
 Codex loads project `.codex/config.toml` only for trusted projects. Project
 settings override user, cloud-managed, and system defaults, subject to enforced
-requirements. See [Configuration precedence](https://learn.chatgpt.com/docs/config-file/config-basic#configuration-precedence).
+requirements. See [Configuration precedence](config-file/config-basic.html#configuration-precedence).
 
 These settings apply to local-marketplace plugins in supported local clients,
 including Codex CLI and Codex in the ChatGPT desktop app. They don't change
 workspace installation policies for plugins imported through **Admin** >
 **Plugins**. Those plugins use their workspace-managed enabled state, even when
-their source is a GitHub repository. See [Plugin management](https://learn.chatgpt.com/docs/enterprise/plugin-management).
+their source is a GitHub repository. See [Plugin management](enterprise/plugin-management.html).
 
 #### Publish a local plugin to your workspace
 
@@ -27288,7 +27288,7 @@ You can enable or disable each local-marketplace plugin individually. The
 plugin browser saves user-level choices in `~/.codex/config.toml`; repo,
 cloud-managed, and system configuration can also supply plugin settings. See
 [Enable or disable a plugin for a repo](#enable-or-disable-a-plugin-for-a-repo)
-and [Configure plugin marketplaces and defaults](https://learn.chatgpt.com/docs/enterprise/managed-configuration#configure-plugin-marketplaces-and-defaults).
+and [Configure plugin marketplaces and defaults](enterprise/managed-configuration.html#configure-plugin-marketplaces-and-defaults).
 
 #### Package and distribute plugins
 
@@ -27521,7 +27521,7 @@ also sets `CLAUDE_PLUGIN_ROOT` and `CLAUDE_PLUGIN_DATA` for compatibility with
 existing plugin hooks.
 
 Plugin hooks use the same event schema as regular hooks. See
-[Hooks on Learn](https://learn.chatgpt.com/docs/hooks) for supported events,
+[Hooks on Learn](hooks.html) for supported events,
 inputs, outputs, trust review, and current limitations.
 
 #### Publish official public plugins
@@ -28496,7 +28496,7 @@ submission portal](https://developers.openai.com/plugins/deploy/submission).
 
 ### Record & Replay
 
-Source: [Record & Replay](https://learn.chatgpt.com/docs/extend/record-and-replay.md)
+Source: [Record & Replay](extend/record-and-replay.md)
 
 Record & Replay is available on macOS. Computer Use must also be available and
 enabled.
@@ -29424,7 +29424,7 @@ reviews.
 
 ### Review GitHub pull requests with Codex
 
-Source: [Review GitHub pull requests with Codex](https://learn.chatgpt.com/docs/third-party/github.md)
+Source: [Review GitHub pull requests with Codex](third-party/github.md)
 
 Use Codex code review to get another high-signal review pass on GitHub pull
 requests. Codex reviews the pull request diff, follows your repository guidance,
@@ -29436,7 +29436,7 @@ potential security issues in a pull request.
 
 Make sure you have:
 
-- [Codex cloud](https://learn.chatgpt.com/docs/cloud) set up for the repository you want to review.
+- [Codex cloud](cloud.md) set up for the repository you want to review.
 - Access to [Codex code review settings](https://chatgpt.com/codex/settings/code-review).
 - An `AGENTS.md` file if you want Codex to follow repository-specific review guidance.
 
@@ -29445,7 +29445,7 @@ Make sure you have:
 To configure automatic reviews, you need a connected GitHub repository and
 GitHub push or admin permission for its settings.
 
-1. Set up [Codex cloud](https://learn.chatgpt.com/docs/cloud).
+1. Set up [Codex cloud](cloud.md).
 2. Go to [Codex settings](https://chatgpt.com/codex/settings/code-review).
 3. Turn on **Code review** for your repository.
 
@@ -29527,9 +29527,9 @@ Review findings.
 #### Set up Security Review
 
 For more detailed setup instructions and configuration options, see [Security
-Review](https://learn.chatgpt.com/docs/security/security-review).
+Review](security/security-review.html).
 
-1. Set up [Codex cloud](https://learn.chatgpt.com/docs/cloud).
+1. Set up [Codex cloud](cloud.md).
 2. Go to [Codex settings](https://chatgpt.com/codex/settings/code-review).
 3. Under **Repository preferences**, choose which pull requests get Security
    Review and when it runs. Select **Whenever code review runs** to run it
@@ -29559,7 +29559,7 @@ back to the branch when it has permission to do so.
 
 #### Give Codex other tasks
 
-If you mention `@codex` in a comment with anything other than `review`, Codex starts a [cloud chat](https://learn.chatgpt.com/docs/cloud) using your pull request as context.
+If you mention `@codex` in a comment with anything other than `review`, Codex starts a [cloud chat](cloud.md) using your pull request as context.
 
 ```md
 @codex fix the CI failures
@@ -29570,14 +29570,14 @@ If you mention `@codex` in a comment with anything other than `review`, Codex st
 If Codex doesn't react or post a review:
 
 - Confirm you turned on **Code review** for the repository in [Codex settings](https://chatgpt.com/codex/settings/code-review).
-- Confirm the pull request belongs to a repository with [Codex cloud](https://learn.chatgpt.com/docs/cloud) set up.
+- Confirm the pull request belongs to a repository with [Codex cloud](cloud.md) set up.
 - Use the exact trigger `@codex review` in a pull request comment.
 - For automatic reviews, check that you turned on **Automatic reviews** and that
   the pull request event matches your review trigger settings.
 
 ### Review GitLab merge requests with Codex
 
-Source: [Review GitLab merge requests with Codex](https://learn.chatgpt.com/docs/third-party/gitlab.md)
+Source: [Review GitLab merge requests with Codex](third-party/gitlab.md)
 
 Use Codex code review to get another high-signal review pass on GitLab merge
 requests. Codex reviews the merge request diff, follows your repository
@@ -29770,14 +29770,14 @@ another comment:
 @codex fix the P1 issue
 ```
 
-Codex starts a [cloud chat](https://learn.chatgpt.com/docs/cloud) with the merge request as context and
+Codex starts a [cloud chat](cloud.md) with the merge request as context and
 can push a fix back to the branch when it has permission to do so.
 
 #### Give Codex other tasks
 
 Other coding tasks also require a **configured project environment**; group
 activity alone supports reviews. If you mention `@codex` in a comment with
-anything other than `review`, Codex starts a [cloud chat](https://learn.chatgpt.com/docs/cloud) using
+anything other than `review`, Codex starts a [cloud chat](cloud.md) using
 your merge request as context.
 
 ```md
@@ -29813,7 +29813,7 @@ If Codex doesn't react or post a review:
 
 ### Rules
 
-Source: [Rules](https://learn.chatgpt.com/docs/agent-configuration/rules.md)
+Source: [Rules](agent-configuration/rules.md)
 
 Use rules to control which commands Codex can run outside the sandbox.
 
@@ -29852,7 +29852,7 @@ Rules are experimental and may change.
 
 3. Restart Codex.
 
-Codex scans `rules/` under every active config layer at startup, including [Team Config](https://learn.chatgpt.com/docs/enterprise/admin-setup#step-4-standardize-local-configuration-with-team-config) locations and the user layer at `~/.codex/rules/`. Project-local rules under `/.codex/rules/` load only when the project `.codex/` layer is trusted.
+Codex scans `rules/` under every active config layer at startup, including [Team Config](enterprise/admin-setup.html#step-4-standardize-local-configuration-with-team-config) locations and the user layer at `~/.codex/rules/`. Project-local rules under `/.codex/rules/` load only when the project `.codex/` layer is trusted.
 
 When you add a command to the allow list in the TUI, Codex writes to the user layer at `~/.codex/rules/default.rules` so future runs can skip the prompt.
 
@@ -29861,7 +29861,7 @@ When Smart approvals are enabled (the default), Codex may propose a
 carefully before accepting it.
 
 Admins can also enforce restrictive `prefix_rule` entries from
-[`requirements.toml`](https://learn.chatgpt.com/docs/enterprise/managed-configuration#admin-enforced-requirements-requirementstoml).
+[`requirements.toml`](enterprise/managed-configuration.html#admin-enforced-requirements-requirementstoml).
 
 #### Understand rule fields
 
@@ -29949,7 +29949,7 @@ The `.rules` file format uses `Starlark` (see the [language spec](https://github
 
 ### Site tools
 
-Source: [Site tools](https://learn.chatgpt.com/docs/webmcp.md)
+Source: [Site tools](webmcp.md)
 
 Site tools are ChatGPT's implementation of the proposed
 [WebMCP standard](https://webmachinelearning.github.io/webmcp/). With WebMCP,
@@ -29957,7 +29957,7 @@ a website can offer useful actions directly to an AI agent alongside the
 interface people already use. You and the agent can work with the same live
 page and signed-in session.
 
-In the [built-in browser](https://learn.chatgpt.com/docs/browser) in the ChatGPT desktop app, ChatGPT
+In the [built-in browser](browser.html) in the ChatGPT desktop app, ChatGPT
 Work and Codex can discover and use these tools when they are available.
 
 Use GPT-5.6 Sol or GPT-6 Sol for site tools. GPT-5.6 Luna currently has WebMCP
@@ -29979,7 +29979,7 @@ server or set up another connection to use those capabilities.
 
 This approach is useful when you and the agent need to see the same thing, such as
 when editing a canvas or exploring a dashboard. A
-[plugin with an MCP server](https://learn.chatgpt.com/docs/build-plugins) can provide an integration
+[plugin with an MCP server](build-plugins.html) can provide an integration
 that works independently of an open page. A website can support both.
 
 #### How it works in the browser
@@ -30066,7 +30066,7 @@ APIs, including features that aren't currently supported in the built-in browser
 #### Add WebMCP to your website
 
 You can ask Codex to add WebMCP support to the web app or
-[Site](https://learn.chatgpt.com/docs/sites) you're working on. Describe what an agent should be able
+[Site](sites.html) you're working on. Describe what an agent should be able
 to do, and ask Codex to reuse the application's existing logic and permissions.
 
 Start with an operation your application already supports. For example:
@@ -30841,17 +30841,17 @@ Accessibility should be a core consideration when you are building apps for Chat
 
 ### Use Codex in Linear
 
-Source: [Use Codex in Linear](https://learn.chatgpt.com/docs/third-party/linear.md)
+Source: [Use Codex in Linear](third-party/linear.md)
 
 Use Codex in Linear to delegate work from issues. Assign an issue to Codex or mention `@Codex` in a comment, and Codex creates a cloud chat and replies with progress and results.
 
-Codex in Linear is available on paid plans (see [Pricing](https://learn.chatgpt.com/docs/pricing)).
+Codex in Linear is available on paid plans (see [Pricing](pricing.html)).
 
 If you're on an Enterprise plan, ask your ChatGPT workspace admin to turn on Codex cloud chats in [workspace settings](https://chatgpt.com/admin/settings) and enable **Codex for Linear** in [connector settings](https://chatgpt.com/admin/ca).
 
 #### Set up the Linear integration
 
-1. Set up [Codex cloud chats](https://learn.chatgpt.com/docs/cloud) by connecting GitHub in [Codex](https://chatgpt.com/codex) and creating an [environment](https://learn.chatgpt.com/docs/environments/cloud-environment) for the repository you want Codex to work in.
+1. Set up [Codex cloud chats](cloud.md) by connecting GitHub in [Codex](https://chatgpt.com/codex) and creating an [environment](environments/cloud-environment.html) for the repository you want Codex to work in.
 2. Go to [Codex settings](https://chatgpt.com/codex/settings/connectors) and install **Codex for Linear** for your workspace.
 3. Link your Linear account by mentioning `@Codex` in a comment thread on a Linear issue.
 
@@ -30899,7 +30899,7 @@ When you use triage rules, Codex runs chats using the account of the issue creat
 
 When you mention `@Codex` or assign an issue to it, Codex receives your issue content to understand your request and create a chat.
 Data handling follows OpenAI's [Privacy Policy](https://openai.com/privacy), [Terms of Use](https://openai.com/terms/), and other applicable [policies](https://openai.com/policies).
-For more on security, see the [Codex security documentation](https://learn.chatgpt.com/docs/agent-approvals-security).
+For more on security, see the [Codex security documentation](agent-approvals-security.html).
 
 Codex uses large language models that can make mistakes. Always review answers and diffs.
 
@@ -30942,13 +30942,13 @@ url = "https://mcp.linear.app/mcp"
 
 ### Use Codex in Slack
 
-Source: [Use Codex in Slack](https://learn.chatgpt.com/docs/third-party/slack.md)
+Source: [Use Codex in Slack](third-party/slack.md)
 
 Use Codex in Slack to kick off coding work from channels and threads. Mention `@Codex` with a prompt, and Codex creates a cloud chat and replies with the results.
 
 #### Set up the Slack app
 
-1. Set up [Codex cloud chats](https://learn.chatgpt.com/docs/cloud). You need a Plus, Pro, Business, Enterprise, or Edu plan (see [ChatGPT pricing](https://chatgpt.com/pricing)), a connected GitHub account, and at least one [environment](https://learn.chatgpt.com/docs/environments/cloud-environment).
+1. Set up [Codex cloud chats](cloud.md). You need a Plus, Pro, Business, Enterprise, or Edu plan (see [ChatGPT pricing](https://chatgpt.com/pricing)), a connected GitHub account, and at least one [environment](environments/cloud-environment.html).
 2. Go to [Codex settings](https://chatgpt.com/codex/settings/connectors) and install the Slack app for your workspace. Depending on your Slack workspace policies, an admin may need to approve the install.
 3. Add `@Codex` to a channel. If you haven't added it yet, Slack prompts you when you mention it.
 
@@ -30973,7 +30973,7 @@ To prevent this, an Enterprise admin can clear **Allow Codex Slack app to post a
 
 When you mention `@Codex`, Codex receives your message and thread history to understand your request and create a chat.
 Data handling follows OpenAI's [Privacy Policy](https://openai.com/privacy), [Terms of Use](https://openai.com/terms/), and other applicable [policies](https://openai.com/policies).
-For more on security, see the Codex [security documentation](https://learn.chatgpt.com/docs/agent-approvals-security).
+For more on security, see the Codex [security documentation](agent-approvals-security.html).
 
 Codex uses large language models that can make mistakes. Always review answers and diffs.
 
@@ -30987,7 +30987,7 @@ Codex uses large language models that can make mistakes. Always review answers a
 
 ### Import from another agent
 
-Source: [Import from another agent](https://learn.chatgpt.com/docs/import.md)
+Source: [Import from another agent](import.md)
 
 Use the import flow to bring instructions, settings, skills, plugins, projects,
 and recent work from another agent into the ChatGPT desktop app or Codex CLI.
@@ -31029,7 +31029,7 @@ review your import history from the same settings section.
 Codex CLI imports up to 50 chats from the last 30 days. The `/import` command
 isn't available during a running task, in a remote session, or while connected
 to a local app-server daemon. See [CLI slash
-commands](https://learn.chatgpt.com/docs/developer-commands?surface=cli#cli-import-claude-code-or-cursor-setup-with-import).
+commands](developer-commands.html#cli-import-claude-code-or-cursor-setup-with-import).
 
 #### How importing works
 
@@ -31049,17 +31049,17 @@ When you import, ChatGPT:
 
 | Imported item                     | Destination                                             |
 | --------------------------------- | ------------------------------------------------------- |
-| Instruction files                 | [`AGENTS.md`](https://learn.chatgpt.com/docs/agent-configuration/agents-md)     |
-| `settings.json`                   | [`config.toml`](https://learn.chatgpt.com/docs/config-file/config-basic)        |
-| Skills                            | [Skills](https://learn.chatgpt.com/docs/build-skills)                           |
+| Instruction files                 | [`AGENTS.md`](agent-configuration/agents-md.html)     |
+| `settings.json`                   | [`config.toml`](config-file/config-basic.html)        |
+| Skills                            | [Skills](build-skills.html)                           |
 | Plugins                           | Plugins                                                 |
 | Existing project folders          | Projects using the same folders                         |
-| Project memories from Claude Code | [Memories](https://learn.chatgpt.com/docs/customization/memories)               |
+| Project memories from Claude Code | [Memories](customization/memories.html)               |
 | Chats from the last 30 days       | ChatGPT chats                                           |
-| MCP server configuration          | [Codex MCP configuration](https://learn.chatgpt.com/docs/extend/mcp)            |
-| Hooks                             | [Codex hooks](https://learn.chatgpt.com/docs/hooks)                             |
-| Slash commands                    | [Skills](https://learn.chatgpt.com/docs/build-skills)                           |
-| Subagents                         | [Codex subagents](https://learn.chatgpt.com/docs/agent-configuration/subagents) |
+| MCP server configuration          | [Codex MCP configuration](extend/mcp.html)            |
+| Hooks                             | [Codex hooks](hooks.html)                             |
+| Slash commands                    | [Skills](build-skills.html)                           |
+| Subagents                         | [Codex subagents](agent-configuration/subagents.html) |
 
 #### Finish setup after importing
 
@@ -31084,12 +31084,12 @@ Review imported setup before you rely on it, especially:
 #### After you import
 
 Once the import finishes, open one of your imported projects and continue from
-there. See [Use ChatGPT](https://learn.chatgpt.com/docs/use-chatgpt) for guidance on starting your
+there. See [Use ChatGPT](use-chatgpt.html) for guidance on starting your
 next task.
 
 ### Plugins
 
-Source: [Plugins](https://learn.chatgpt.com/docs/plugins.md)
+Source: [Plugins](plugins.md)
 
 #### Overview
 
@@ -31150,7 +31150,7 @@ A plugin can contain one or more of these parts:
   available in the execution environment; installing a plugin on the web doesn't
   deploy those scripts. Enterprise admins can deploy required scripts through
   mobile device management (MDM). Review and trust plugin hooks before they run.
-  See [Hooks](https://learn.chatgpt.com/docs/hooks) for setup and managed-hook policies.
+  See [Hooks](hooks.html) for setup and managed-hook policies.
 
 You can share plugins by publishing them through a marketplace source, such as a
 repo marketplace for a project or team. See [Build plugins](https://developers.openai.com/plugins/build/plugins)
@@ -31178,7 +31178,7 @@ The Plugins Directory organizes plugins into tabs:
 Use the separate **Installed** row to review plugins you already installed.
 
 Workspace admins can import and sync a GitHub marketplace for their team. See
-[Plugin management](https://learn.chatgpt.com/docs/enterprise/plugin-management) for setup and access
+[Plugin management](enterprise/plugin-management.html) for setup and access
 requirements.
 
 #### Install and use a plugin
@@ -31281,7 +31281,7 @@ on or off.
 #### API key availability
 
 If you [sign in to Codex with an OpenAI API
-key](https://learn.chatgpt.com/docs/auth#sign-in-with-an-api-key), you can browse, install, and manage
+key](auth.html#sign-in-with-an-api-key), you can browse, install, and manage
 supported OpenAI-curated plugins in Codex CLI and Codex in the ChatGPT desktop
 app. Some plugins aren't available with API key authentication because their
 connection flows require unsupported OAuth capabilities. Review plugin usage
@@ -31293,7 +31293,7 @@ In ChatGPT on the web, Chat and Work use the workspace permissions and tools
 available to that chat. MCP servers still require their own sign-in and access.
 
 When a plugin capability runs through a Codex host, the host's [sandbox and
-approval policy](https://learn.chatgpt.com/docs/agent-approvals-security) applies.
+approval policy](agent-approvals-security.html) applies.
 Connections to external services use that service's own authentication and
 access controls.
 
@@ -31334,14 +31334,14 @@ requirements.
 
 #### Plugin guides
 
-- [Record & Replay](https://learn.chatgpt.com/docs/extend/record-and-replay): Show ChatGPT a workflow
+- [Record & Replay](extend/record-and-replay.html): Show ChatGPT a workflow
   once and turn it into a reusable skill.
-- [Codex Security plugin](https://learn.chatgpt.com/docs/security/plugin): Scan authorized code,
+- [Codex Security plugin](security/plugin.html): Scan authorized code,
   confirm findings, and prepare reviewed fixes.
 
 ### Skills & Plugins
 
-Source: [Skills & Plugins](https://learn.chatgpt.com/docs/skills-and-plugins.md)
+Source: [Skills & Plugins](skills-and-plugins.md)
 
 Skills and plugins help ChatGPT and Codex complete repeatable work with the
 right instructions, resources, and tools. They reduce the need to paste the
@@ -31351,7 +31351,7 @@ same prompt, template, requirements, or process into every chat.
   task or workflow.
 - A **plugin** is an installable bundle that can include skills and Model Context
   Protocol (MCP) servers. MCP servers expose tools and can optionally include
-  custom ChatGPT UI. Plugins can also include [lifecycle hooks](https://learn.chatgpt.com/docs/hooks)
+  custom ChatGPT UI. Plugins can also include [lifecycle hooks](hooks.html)
   for the Codex runtime, including ChatGPT Work and Codex.
 
 #### Use skills for repeatable work
@@ -31409,7 +31409,7 @@ For more details on building skills, see our dedicated guide below.
 
     Create, test, and share reusable skills with ChatGPT and Codex.
 
-](https://learn.chatgpt.com/docs/build-skills)
+](build-skills.html)
 
 #### Use plugins for tools and shared workflows
 
@@ -31422,7 +31422,7 @@ to add an existing workflow instead of building one yourself. After installing
 a plugin, describe the task directly or explicitly choose a plugin or bundled
 skill using the invocation syntax for your surface.
 
-[Learn how to install and use plugins](https://learn.chatgpt.com/docs/plugins).
+[Learn how to install and use plugins](plugins.html).
 
 #### Choose between a skill and a plugin
 
@@ -31431,7 +31431,7 @@ plugin when you want an installable package that can combine instructions with
 connected services or other tools.
 
 You can also demonstrate a workflow with
-[Record & Replay](https://learn.chatgpt.com/docs/extend/record-and-replay), which turns the recording into a
+[Record & Replay](extend/record-and-replay.html), which turns the recording into a
 reusable skill. To package and distribute your own bundle, see
 [Build plugins](https://developers.openai.com/plugins/build/plugins).
 
@@ -31450,9 +31450,9 @@ Automation paths for CI, SDK usage, app-server, GitHub Actions, and related agen
 
 ### Codex App Server
 
-Source: [Codex App Server](https://learn.chatgpt.com/docs/app-server.md)
+Source: [Codex App Server](app-server.md)
 
-Codex app-server is the interface Codex uses to power rich clients (for example, the Codex VS Code extension). Use it when you want a deep integration inside your own product: authentication, conversation history, approvals, and streamed agent events. The app-server implementation is open source in the Codex GitHub repository ([openai/codex/codex-rs/app-server](https://github.com/openai/codex/tree/main/codex-rs/app-server)). See the [Open Source](https://learn.chatgpt.com/docs/open-source) page for the full list of open-source Codex components.
+Codex app-server is the interface Codex uses to power rich clients (for example, the Codex VS Code extension). Use it when you want a deep integration inside your own product: authentication, conversation history, approvals, and streamed agent events. The app-server implementation is open source in the Codex GitHub repository ([openai/codex/codex-rs/app-server](https://github.com/openai/codex/tree/main/codex-rs/app-server)). See the [Open Source](open-source.html) page for the full list of open-source Codex components.
 
 If you are automating jobs or running Codex in CI, use the
 Codex SDK instead.
@@ -32676,7 +32676,7 @@ Use `configRequirements/read` to inspect the effective admin requirements loaded
 } }
 ```
 
-`result.requirements` is `null` when no requirements are configured. See the docs on [`requirements.toml`](https://learn.chatgpt.com/docs/config-file/config-reference#requirementstoml) for details on supported keys and values.
+`result.requirements` is `null` when no requirements are configured. See the docs on [`requirements.toml`](config-file/config-reference.html#requirementstoml) for details on supported keys and values.
 
 #### Windows sandbox setup (`windowsSandbox/setupStart`)
 
@@ -33799,7 +33799,7 @@ workspace, including notification headlines when available.
 
 ### Codex GitHub Action
 
-Source: [Codex GitHub Action](https://learn.chatgpt.com/docs/github-action.md)
+Source: [Codex GitHub Action](github-action.md)
 
 Use the Codex GitHub Action (`openai/codex-action@v1`) to run Codex in CI/CD jobs, apply patches, or post reviews from a GitHub Actions workflow.
 The action installs the Codex CLI, starts the Responses API proxy when you provide an API key, and runs `codex exec` under the permissions you specify.
@@ -33810,7 +33810,7 @@ Reach for the action when you want to:
 - Gate changes on Codex-driven quality checks as part of your CI pipeline.
 - Run repeatable Codex tasks (code review, release prep, migrations) from a workflow file.
 
-For a CI example, see [Non-interactive mode](https://learn.chatgpt.com/docs/non-interactive-mode) and explore the source in the [openai/codex-action repository](https://github.com/openai/codex-action).
+For a CI example, see [Non-interactive mode](non-interactive-mode.html) and explore the source in the [openai/codex-action repository](https://github.com/openai/codex-action).
 
 #### Prerequisites
 
@@ -33920,7 +33920,7 @@ The action emits the last Codex message through the `final-message` output. Map 
 
 ### Codex SDK
 
-Source: [Codex SDK](https://learn.chatgpt.com/docs/codex-sdk.md)
+Source: [Codex SDK](codex-sdk.md)
 
 If you use Codex through Codex CLI, the IDE extension, or Codex cloud, you can also control it programmatically.
 
@@ -33931,13 +33931,13 @@ Use the SDK when you need to:
 - Build Codex into your own internal tools and workflows
 - Integrate Codex within your own application
 
-Use the Codex SDK to automate coding tasks, including jobs in CI. Use the [Codex app server](https://learn.chatgpt.com/docs/app-server) to build custom clients that handle authentication, conversation history, approvals, and streamed agent events.
+Use the Codex SDK to automate coding tasks, including jobs in CI. Use the [Codex app server](app-server.html) to build custom clients that handle authentication, conversation history, approvals, and streamed agent events.
 
-The `codex mcp-server` command and standalone `codex-mcp-server` binary have been removed. Use the [Codex app server](https://learn.chatgpt.com/docs/app-server) for existing integrations.
+The `codex mcp-server` command and standalone `codex-mcp-server` binary have been removed. Use the [Codex app server](app-server.html) for existing integrations.
 
 If you have beta access and need repository or change scans with structured
 security findings and coverage, use the [Codex Security TypeScript
-SDK](https://learn.chatgpt.com/docs/security/sdk).
+SDK](security/sdk.html).
 
 #### TypeScript library
 
@@ -34066,12 +34066,12 @@ For more details, check out the [Python repo](https://github.com/openai/codex/tr
 
 ### Non-interactive mode
 
-Source: [Non-interactive mode](https://learn.chatgpt.com/docs/non-interactive-mode.md)
+Source: [Non-interactive mode](non-interactive-mode.md)
 
 Non-interactive mode lets you run Codex from scripts (for example, continuous integration (CI) jobs) without opening the interactive TUI.
 You invoke it with `codex exec`.
 
-For flag-level details, see [`codex exec`](https://learn.chatgpt.com/docs/developer-commands?surface=cli#cli-codex-exec).
+For flag-level details, see [`codex exec`](developer-commands.html#cli-codex-exec).
 
 #### When to use `codex exec`
 
@@ -34151,7 +34151,7 @@ Sample JSON stream (each line is a JSON object):
 {"type":"turn.completed","usage":{"input_tokens":24763,"cached_input_tokens":24448,"output_tokens":122,"reasoning_output_tokens":0}}
 ```
 
-If you only need the final message, write it to a file with `-o `/`--output-last-message `. This writes the final message to the file and still prints it to `stdout` (see [`codex exec`](https://learn.chatgpt.com/docs/developer-commands?surface=cli#cli-codex-exec) for details).
+If you only need the final message, write it to a file with `-o `/`--output-last-message `. This writes the final message to the file and still prints it to `stdout` (see [`codex exec`](developer-commands.html#cli-codex-exec) for details).
 
 #### Create structured outputs with a schema
 
@@ -34198,7 +34198,7 @@ Example final output (stdout):
 
 #### Use API key auth
 
-For GitHub Actions, use the [Codex GitHub Action](https://learn.chatgpt.com/docs/github-action) instead of installing and authenticating the CLI yourself. The action is designed to reduce API key exposure by installing Codex, starting a Responses API proxy, and running Codex with a configurable safety strategy.
+For GitHub Actions, use the [Codex GitHub Action](github-action.html) instead of installing and authenticating the CLI yourself. The action is designed to reduce API key exposure by installing Codex, starting a Responses API proxy, and running Codex with a configurable safety strategy.
 
 Do not set `OPENAI_API_KEY` or `CODEX_API_KEY` as a job-level environment variable in workflows that check out or run repository-controlled code. Build scripts, tests, dependency lifecycle hooks, or a compromised action in the same job can read those environment variables.
 
@@ -34233,7 +34233,7 @@ is not an option on the runner, seed `auth.json` through secure storage, run
 Codex on the runner so Codex refreshes it in place, and persist the updated file
 between runs.
 
-See [Maintain Codex account auth in CI/CD (advanced)](https://learn.chatgpt.com/docs/auth/ci-cd-auth).
+See [Maintain Codex account auth in CI/CD (advanced)](auth/ci-cd-auth.html).
 
 #### Resume a non-interactive session
 
@@ -34452,18 +34452,18 @@ generate_prompt.sh | codex exec - --json > result.jsonl
 
 ### Scheduled tasks
 
-Source: [Scheduled tasks](https://learn.chatgpt.com/docs/automations.md)
+Source: [Scheduled tasks](automations.md)
 
 Schedule recurring tasks to run in the background. On ChatGPT web and mobile,
 eligible plans can also run tasks from supported app events. Review active,
 paused, and completed tasks and recent runs in **Scheduled**. You can combine
-scheduled tasks with [skills](https://learn.chatgpt.com/docs/build-skills) for more complex work.
+scheduled tasks with [skills](build-skills.html) for more complex work.
 
 GPT-5.5 retires from ChatGPT, ChatGPT Work, and Codex on all plans on
 October 14, 2026. Review scheduled tasks that use GPT-5.5 and choose an
 available replacement before that date. For Codex with ChatGPT sign-in, choose
 `gpt-6-sol` (GPT-6 Sol) if your plan and workspace provide access. The OpenAI API isn't
-affected. See [GPT-5.5 retirement](https://learn.chatgpt.com/docs/models#gpt-55-retirement) for
+affected. See [GPT-5.5 retirement](models.html#gpt-55-retirement) for
 plan-specific replacements.
 
 In the ChatGPT desktop app, scheduled tasks can work with local projects and
@@ -34544,7 +34544,7 @@ desktop app running. The selected project must still be available on disk when
 the task is scheduled to run.
 
 In Git repositories, you can choose whether a scheduled task runs in your local
-project or on a new [worktree](https://learn.chatgpt.com/docs/environments/git-worktrees). Both options run in the
+project or on a new [worktree](environments/git-worktrees.html). Both options run in the
 background. Worktrees keep changes from scheduled tasks separate from unfinished local
 work, while running in your local project can modify files you are still
 working on. In non-version-controlled projects, scheduled tasks run directly in the
@@ -34554,11 +34554,11 @@ You can also leave the model and reasoning effort on their default settings, or
 choose them explicitly if you want more control over how the scheduled task runs.
 
 If a scheduled task uses a retired model, update it to an available replacement.
-See [model migration guidance](https://learn.chatgpt.com/docs/models#deprecated-codex-models).
+See [model migration guidance](models.html#deprecated-codex-models).
 
 Scheduled tasks run unattended with your default sandbox settings. Start with the
 narrowest access that lets the task succeed, and grant network or broader file
-access only when required. [Understand sandboxing](https://learn.chatgpt.com/docs/sandboxing).
+access only when required. [Understand sandboxing](sandboxing.html).
 
 #### Manage scheduled tasks
 
@@ -34576,7 +34576,7 @@ RFC 5545 recurrence rule (RRULE), such as
 `RRULE:FREQ=MONTHLY;BYMONTHDAY=1;BYHOUR=9;BYMINUTE=0`.
 
 For Git repositories, each scheduled task can run either in your local project or
-on a dedicated background [worktree](https://learn.chatgpt.com/docs/environments/git-worktrees). Use
+on a dedicated background [worktree](environments/git-worktrees.html). Use
 worktrees when you want to isolate scheduled-task changes from unfinished local
 work. Use local mode when you want the scheduled task to work directly in your main
 checkout, keeping in mind that it can change files you are actively editing.
@@ -34586,7 +34586,7 @@ directory. You can have the same scheduled task run on more than one project.
 Scheduled tasks created with ChatGPT Work on the web, or with ChatGPT Work or
 Codex in the desktop app, can use plugins. Scheduled tasks can also use skills.
 To keep scheduled tasks maintainable and shareable across teams, use
-[skills](https://learn.chatgpt.com/docs/build-skills) to define the action and provide tools and context.
+[skills](build-skills.html) to define the action and provide tools and context.
 Select or invoke a specific skill in the task prompt when the workflow shouldn't
 rely on automatic tool selection.
 
@@ -34659,8 +34659,8 @@ pinning runs unless you intend to keep their worktrees.
 Scheduled tasks run unattended and use your default sandbox settings.
 
 For a plain-language explanation of these boundaries, see the
-[sandboxing overview](https://learn.chatgpt.com/docs/sandboxing). For filesystem and network
-rules, see [Permissions](https://learn.chatgpt.com/docs/permissions).
+[sandboxing overview](sandboxing.html). For filesystem and network
+rules, see [Permissions](permissions.html).
 
 - If your sandbox mode is **read-only**, tool calls fail if they require
   modifying files, accessing network, or working with apps on your computer.
@@ -34668,17 +34668,17 @@ rules, see [Permissions](https://learn.chatgpt.com/docs/permissions).
 - If your sandbox mode is **workspace-write**, tool calls fail if they require
   modifying files outside the workspace, accessing network, or working with apps
   on your computer. You can selectively allowlist commands to run outside the
-  sandbox using [rules](https://learn.chatgpt.com/docs/agent-configuration/rules).
+  sandbox using [rules](agent-configuration/rules.html).
 - If your sandbox mode is **full access**, background scheduled tasks carry
   elevated risk, as ChatGPT may change files, run commands, and access network
   without asking. Consider updating sandbox settings to workspace write, and
-  using [rules](https://learn.chatgpt.com/docs/agent-configuration/rules) to selectively define which commands the agent
+  using [rules](agent-configuration/rules.html) to selectively define which commands the agent
   can run with full access.
 
 If you are in a managed environment, admins can restrict these behaviors using
 admin-enforced requirements. For example, they can disallow `approval_policy =
 "never"` or constrain allowed sandbox modes. See
-[Admin-enforced requirements (`requirements.toml`)](https://learn.chatgpt.com/docs/enterprise/managed-configuration#admin-enforced-requirements-requirementstoml).
+[Admin-enforced requirements (`requirements.toml`)](enterprise/managed-configuration.html#admin-enforced-requirements-requirementstoml).
 
 Scheduled tasks use `approval_policy = "never"` when your organization policy
 allows it. If admin requirements disallow `approval_policy = "never"`,
@@ -34695,14 +34695,14 @@ Linux, Windows, enterprise controls, OSS notes, and product or policy caveats th
 
 ### Access tokens
 
-Source: [Access tokens](https://learn.chatgpt.com/docs/enterprise/access-tokens.md)
+Source: [Access tokens](enterprise/access-tokens.md)
 
 Codex access tokens are ChatGPT workspace credentials scoped to Codex permissions. They authenticate trusted non-interactive local workflows, including Codex CLI and app-server-based automation, with a ChatGPT workspace identity. Use them when a script, scheduled job, or CI runner needs repeatable local access.
 
 Codex access tokens are currently supported for ChatGPT Business and
 Enterprise workspaces.
 
-Create personal access tokens in the ChatGPT admin console at [Access tokens](https://chatgpt.com/admin/access-tokens). Each token belongs to its creator and that user's ChatGPT workspace. Tokens act as agent identities for programmatic local workflows. For tokens created from a dedicated non-human workspace identity's detail page, see [Service accounts](https://learn.chatgpt.com/docs/enterprise/service-accounts).
+Create personal access tokens in the ChatGPT admin console at [Access tokens](https://chatgpt.com/admin/access-tokens). Each token belongs to its creator and that user's ChatGPT workspace. Tokens act as agent identities for programmatic local workflows. For tokens created from a dedicated non-human workspace identity's detail page, see [Service accounts](enterprise/service-accounts.html).
 
 If a Platform API key works for your automation, keep using API key auth. Use
 Codex access tokens when a trusted local workflow specifically needs ChatGPT
@@ -34751,7 +34751,7 @@ profile. Token-authenticated Codex CLI and app-server workflows also require
 the user's local Codex permission.
 
 For the relationship between these controls, see
-[Roles and workspace permissions](https://learn.chatgpt.com/docs/enterprise/roles-and-workspace-permissions).
+[Roles and workspace permissions](enterprise/roles-and-workspace-permissions.html).
 
 1. Have a workspace owner open
    [Workspace settings > Permissions & roles](https://chatgpt.com/admin/permissions).
@@ -34832,9 +34832,9 @@ a login created with `codex login --with-access-token` to authenticate its
 OpenAI requests. That credential is separate from client-to-app-server
 transport authentication. For a remote WebSocket connection, configure a
 separate bearer or capability token as described in
-[App server](https://learn.chatgpt.com/docs/app-server); don't reuse the Codex access token as the
+[App server](app-server.html); don't reuse the Codex access token as the
 transport token. See
-[Authentication and network environment variables](https://learn.chatgpt.com/docs/config-file/environment-variables#authentication-and-network).
+[Authentication and network environment variables](config-file/environment-variables.html#authentication-and-network).
 
 #### Rotate or revoke a token
 
@@ -34890,18 +34890,18 @@ and belongs to a user with the required local Codex permission.
 
 #### Related docs
 
-- [Authentication](https://learn.chatgpt.com/docs/auth)
-- [Service accounts](https://learn.chatgpt.com/docs/enterprise/service-accounts)
-- [Non-interactive mode](https://learn.chatgpt.com/docs/non-interactive-mode)
-- [Admin rollout guide](https://learn.chatgpt.com/docs/enterprise/admin-setup)
-- [Groups and provisioning](https://learn.chatgpt.com/docs/enterprise/groups-and-provisioning)
-- [User lifecycle management](https://learn.chatgpt.com/docs/enterprise/user-lifecycle)
-- [Roles and workspace permissions](https://learn.chatgpt.com/docs/enterprise/roles-and-workspace-permissions)
-- [Governance](https://learn.chatgpt.com/docs/enterprise/governance)
+- [Authentication](auth.html)
+- [Service accounts](enterprise/service-accounts.html)
+- [Non-interactive mode](non-interactive-mode.html)
+- [Admin rollout guide](enterprise/admin-setup.html)
+- [Groups and provisioning](enterprise/groups-and-provisioning.html)
+- [User lifecycle management](enterprise/user-lifecycle.html)
+- [Roles and workspace permissions](enterprise/roles-and-workspace-permissions.html)
+- [Governance](enterprise/governance.html)
 
 ### Admin rollout guide
 
-Source: [Admin rollout guide](https://learn.chatgpt.com/docs/enterprise/admin-setup.md)
+Source: [Admin rollout guide](enterprise/admin-setup.md)
 
 Use this guide to plan a ChatGPT Enterprise rollout across these administration
 boundaries:
@@ -34930,12 +34930,12 @@ runtime behavior for covered capabilities in those clients. This guide names
 the individual surface when behavior or availability differs.
 
 Start with the canonical map in
-[Roles and workspace permissions](https://learn.chatgpt.com/docs/enterprise/roles-and-workspace-permissions).
+[Roles and workspace permissions](enterprise/roles-and-workspace-permissions.html).
 Use Help Center guidance for current ChatGPT workspace procedures and the
 linked developer documentation for local and hosted runtime behavior.
 
 For enterprise security, privacy, and runtime protections, see
-[Agent approvals and security](https://learn.chatgpt.com/docs/agent-approvals-security) and the
+[Agent approvals and security](agent-approvals-security.html) and the
 [Codex security white paper](https://trust.openai.com/?itemUid=382f924d-54f3-43a8-a9df-c39e6c959958&source=click).
 
 #### Step 1: Assign owners and choose a rollout
@@ -34972,9 +34972,9 @@ procedures:
 - [Manage members, seat types, roles, and access](https://help.openai.com/en/articles/8266401-managing-members-seat-types-roles-and-access-in-chatgpt-enterprise)
 - [Configure role-based access control](https://help.openai.com/en/articles/11750701-rbac)
 - [Manage workspace settings](https://help.openai.com/en/articles/8411955)
-- [Groups and provisioning](https://learn.chatgpt.com/docs/enterprise/groups-and-provisioning)
-- [User lifecycle management](https://learn.chatgpt.com/docs/enterprise/user-lifecycle)
-- [Authentication](https://learn.chatgpt.com/docs/auth)
+- [Groups and provisioning](enterprise/groups-and-provisioning.html)
+- [User lifecycle management](enterprise/user-lifecycle.html)
+- [Authentication](auth.html)
 
 Test sign-in and feature access with a representative member before expanding
 the rollout. Workspace access doesn't grant repository, file, or action access
@@ -35012,8 +35012,8 @@ computer_use = false
 
 For the authoritative key list, delivery behavior, precedence, and more
 examples, see
-[Managed configuration](https://learn.chatgpt.com/docs/enterprise/managed-configuration) and the
-[`requirements.toml` reference](https://learn.chatgpt.com/docs/config-file/config-reference#requirementstoml).
+[Managed configuration](enterprise/managed-configuration.html) and the
+[`requirements.toml` reference](config-file/config-reference.html#requirementstoml).
 
 #### Step 4: Standardize repository configuration
 
@@ -35023,9 +35023,9 @@ skills without duplicating setup for every user. Check configuration into
 
 | Type          | Source                                           | Use it to                                                  |
 | ------------- | ------------------------------------------------ | ---------------------------------------------------------- |
-| Configuration | [Config basics](https://learn.chatgpt.com/docs/config-file/config-basic) | Set repository defaults for supported local clients        |
-| Rules         | [Rules](https://learn.chatgpt.com/docs/agent-configuration/rules)        | Control commands that require approval outside the sandbox |
-| Skills        | [Build skills](https://learn.chatgpt.com/docs/build-skills)              | Make repository workflows available to supported clients   |
+| Configuration | [Config basics](config-file/config-basic.html) | Set repository defaults for supported local clients        |
+| Rules         | [Rules](agent-configuration/rules.html)        | Control commands that require approval outside the sandbox |
+| Skills        | [Build skills](build-skills.html)              | Make repository workflows available to supported clients   |
 
 Repository configuration can supply defaults and reusable workflows. It can't
 grant workspace, model, Platform API, or connected-system access.
@@ -35048,9 +35048,9 @@ each boundary:
 
 Codex cloud respects the repository permissions and protections exposed by the
 connected source system. Workspace access doesn't bypass those controls. See
-[Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environment),
-[GitHub integration](https://learn.chatgpt.com/docs/third-party/github), and
-[Agent approvals and security](https://learn.chatgpt.com/docs/agent-approvals-security) for Codex cloud
+[Cloud environments](environments/cloud-environment.html),
+[GitHub integration](third-party/github.html), and
+[Agent approvals and security](agent-approvals-security.html) for Codex cloud
 setup and runtime guidance.
 
 #### Step 6: Configure plugins and connected capabilities
@@ -35074,20 +35074,20 @@ They aren't available in the IDE extension.
 ChatGPT and Codex share one universal public plugin directory; workspace
 controls determine which of those plugins members can access.
 
-See [Plugin controls](https://learn.chatgpt.com/docs/enterprise/apps-and-connectors) and
-[Skill controls](https://learn.chatgpt.com/docs/enterprise/skills) for the complete model.
+See [Plugin controls](enterprise/apps-and-connectors.html) and
+[Skill controls](enterprise/skills.html) for the complete model.
 
 #### Step 7: Set up governance and observability
 
 Choose the reporting surface that matches the question:
 
-- Use [Workspace analytics](https://learn.chatgpt.com/docs/enterprise/workspace-analytics) for
+- Use [Workspace analytics](enterprise/workspace-analytics.html) for
   interactive ChatGPT workspace analytics and Codex analytics.
-- Use the [Analytics API](https://learn.chatgpt.com/docs/enterprise/analytics-api) for programmatic,
+- Use the [Analytics API](enterprise/analytics-api.html) for programmatic,
   aggregated reporting through the Codex Analytics API.
-- Use the [Compliance API](https://learn.chatgpt.com/docs/enterprise/compliance-api) for audit and
+- Use the [Compliance API](enterprise/compliance-api.html) for audit and
   investigation records.
-- Use [ChatGPT usage limits and spend controls](https://learn.chatgpt.com/docs/enterprise/usage-limits)
+- Use [ChatGPT usage limits and spend controls](enterprise/usage-limits.html)
   when plan-dependent Codex activity consumes eligible ChatGPT workspace
   credits.
 
@@ -35128,7 +35128,7 @@ scope and administrator guidance when those signals change.
 
 ### Analytics API
 
-Source: [Analytics API](https://learn.chatgpt.com/docs/enterprise/analytics-api.md)
+Source: [Analytics API](enterprise/analytics-api.md)
 
 The Analytics APIs provide aggregated usage and activity metrics for a ChatGPT
 workspace. The unified Daily Usage Analytics API reports daily ChatGPT, Codex,
@@ -35149,7 +35149,7 @@ The Analytics API is appropriate when you need to:
 - Avoid coupling an integration to an interactive dashboard.
 
 It's not a raw audit-log interface. Use the
-[Compliance API](https://learn.chatgpt.com/docs/enterprise/compliance-api) when the workflow requires
+[Compliance API](enterprise/compliance-api.html) when the workflow requires
 auditable activity records.
 
 #### Confirm the administration boundaries
@@ -35165,14 +35165,14 @@ doesn't duplicate that contract.
 
 #### Related docs
 
-- [Workspace analytics](https://learn.chatgpt.com/docs/enterprise/workspace-analytics)
-- [Admin rollout guide](https://learn.chatgpt.com/docs/enterprise/admin-setup)
-- [Governance](https://learn.chatgpt.com/docs/enterprise/governance)
-- [Compliance API](https://learn.chatgpt.com/docs/enterprise/compliance-api)
+- [Workspace analytics](enterprise/workspace-analytics.html)
+- [Admin rollout guide](enterprise/admin-setup.html)
+- [Governance](enterprise/governance.html)
+- [Compliance API](enterprise/compliance-api.html)
 
 ### ChatGPT usage limits and spend controls
 
-Source: [ChatGPT usage limits and spend controls](https://learn.chatgpt.com/docs/enterprise/usage-limits.md)
+Source: [ChatGPT usage limits and spend controls](enterprise/usage-limits.md)
 
 ChatGPT workspace usage limits and spend controls apply to eligible activity
 under the plan for the workspace. Depending on the plan, this can include some
@@ -35180,7 +35180,7 @@ Codex activity. These controls aren't a universal Codex limit system and don't
 govern OpenAI API Platform billing.
 
 For the complete administration model, see
-[Roles and workspace permissions](https://learn.chatgpt.com/docs/enterprise/roles-and-workspace-permissions).
+[Roles and workspace permissions](enterprise/roles-and-workspace-permissions.html).
 
 #### Know when these controls apply
 
@@ -35203,15 +35203,15 @@ source-system permissions or govern Platform API usage or billing.
 
 #### Related docs
 
-- [ChatGPT Work: usage and cost](https://learn.chatgpt.com/docs/enterprise/chatgpt-work-usage-and-cost)
-- [Admin rollout guide](https://learn.chatgpt.com/docs/enterprise/admin-setup)
-- [Governance](https://learn.chatgpt.com/docs/enterprise/governance)
-- [Workspace analytics](https://learn.chatgpt.com/docs/enterprise/workspace-analytics)
-- [Codex pricing](https://learn.chatgpt.com/docs/pricing)
+- [ChatGPT Work: usage and cost](enterprise/chatgpt-work-usage-and-cost.html)
+- [Admin rollout guide](enterprise/admin-setup.html)
+- [Governance](enterprise/governance.html)
+- [Workspace analytics](enterprise/workspace-analytics.html)
+- [Codex pricing](pricing.html)
 
 ### ChatGPT Work admin FAQ
 
-Source: [ChatGPT Work admin FAQ](https://learn.chatgpt.com/docs/enterprise/work-admin-faq.md)
+Source: [ChatGPT Work admin FAQ](enterprise/work-admin-faq.md)
 
 ChatGPT Work brings the technology behind Codex into ChatGPT for longer,
 multi-step tasks. It can gather context from chats, files, workspace
@@ -35237,7 +35237,7 @@ plan, workspace, and region. See
 This FAQ explains how admins manage ChatGPT Work: access and data controls,
 compliance and visibility, usage and spend, incident response, and rollout
 practices. For the hosted execution model and security boundaries, see
-[ChatGPT Work Overview](https://learn.chatgpt.com/docs/enterprise/chatgpt-work-overview).
+[ChatGPT Work Overview](enterprise/chatgpt-work-overview.html).
 
 #### Core administrative controls
 
@@ -35263,18 +35263,18 @@ Administrators govern ChatGPT Work through these control layers:
 - **Group membership:** On plans that support SCIM, synchronize groups through
   an identity provider so access updates as employees join the organization,
   change roles, or leave. See
-  [Groups and provisioning](https://learn.chatgpt.com/docs/enterprise/groups-and-provisioning).
+  [Groups and provisioning](enterprise/groups-and-provisioning.html).
 - **Workspace and member roles:** Built-in Enterprise roles include Owner,
   Admin, Member, and Analytics Viewer. On supported plans, custom roles and
   member RBAC control access to ChatGPT Work, plugins, and other capabilities.
   Where seat types apply, members also need a seat that includes ChatGPT; a
   Codex-only seat doesn't grant access to Work. See
-  [Roles and workspace permissions](https://learn.chatgpt.com/docs/enterprise/roles-and-workspace-permissions).
+  [Roles and workspace permissions](enterprise/roles-and-workspace-permissions.html).
 - **Plugins and apps:** Plugin policy governs plugin availability and
   installation. App access, action controls, and approval behavior are
   configured separately. Workspace Agents have their own controls where
-  available. See [Plugin controls](https://learn.chatgpt.com/docs/enterprise/apps-and-connectors),
-  [Plugins](https://learn.chatgpt.com/docs/plugins), and the
+  available. See [Plugin controls](enterprise/apps-and-connectors.html),
+  [Plugins](plugins.html), and the
   [App security white paper](https://cdn.openai.com/business-guides-and-resources/app-security-whitepaper.pdf).
 - **Source-system permissions:** A user can access only the content and actions
   allowed by the account or shared connection in the native application. See
@@ -35288,13 +35288,13 @@ Administrators govern ChatGPT Work through these control layers:
   workspace default, group defaults, and individual overrides. Users can
   request increases when the workspace allows it. Business follows a separate
   credit and spend-control model. See
-  [ChatGPT usage limits and spend controls](https://learn.chatgpt.com/docs/enterprise/usage-limits).
+  [ChatGPT usage limits and spend controls](enterprise/usage-limits.html).
 - **Analytics and reporting:** The Global Admin Console and workspace analytics
   support adoption and credit-usage analysis. Use the Compliance API and Codex
   reporting surfaces for their documented event and product scopes; review the
   current schemas before promising coverage of particular prompts, files,
   approvals, actions, errors, or tool calls. See
-  [Governance](https://learn.chatgpt.com/docs/enterprise/governance).
+  [Governance](enterprise/governance.html).
 
 #### Access, data, systems, and user actions
 
@@ -35387,8 +35387,8 @@ system's controls.
 
 For Codex activity, enterprise controls can extend to development environments,
 repositories, configured tools, and related activity. Review
-[Admin rollout guide](https://learn.chatgpt.com/docs/enterprise/admin-setup) and
-[Governance](https://learn.chatgpt.com/docs/enterprise/governance) alongside the workspace controls.
+[Admin rollout guide](enterprise/admin-setup.html) and
+[Governance](enterprise/governance.html) alongside the workspace controls.
 
 #### What data is stored, retained, or deleted?
 
@@ -35403,7 +35403,7 @@ third-party records can have separate retention and deletion rules. See
 ChatGPT Work can create chat content, uploaded or generated files, artifacts,
 and execution metadata. Codex chats can also create repository or environment
 metadata, command output, diffs, and logs. Check the current product and
-[Compliance API](https://learn.chatgpt.com/docs/enterprise/compliance-api) documentation for exact data
+[Compliance API](enterprise/compliance-api.html) documentation for exact data
 classes, retention periods, and deletion paths.
 
 Review retention requirements across both the ChatGPT workspace and connected
@@ -35421,8 +35421,8 @@ breakdowns depend on the analytics surface and workspace. For eligible
 workspaces, the Compliance API provides covered ChatGPT conversation records,
 including supported cloud Work activity. Coverage depends on the product,
 surface, permissions, available endpoint, and documented event schema. See
-[Workspace analytics](https://learn.chatgpt.com/docs/enterprise/workspace-analytics) and the
-[Compliance API](https://learn.chatgpt.com/docs/enterprise/compliance-api).
+[Workspace analytics](enterprise/workspace-analytics.html) and the
+[Compliance API](enterprise/compliance-api.html).
 
 #### Are prompts, outputs, files, actions, or tool calls logged?
 
@@ -35463,7 +35463,7 @@ in to OpenTelemetry exports for events such as API requests, errors, prompt
 metadata, tool-approval decisions, and tool results. Prompt contents are
 redacted unless `otel.log_user_prompt = true` is enabled as a separate explicit
 opt-in. See
-[Monitoring and telemetry](https://learn.chatgpt.com/docs/agent-approvals-security#monitoring-and-telemetry).
+[Monitoring and telemetry](agent-approvals-security.html#monitoring-and-telemetry).
 This local Codex telemetry doesn't provide an OpenTelemetry export for ChatGPT
 Work on the web.
 
@@ -35488,8 +35488,8 @@ provide additional visibility within their documented product and event
 scopes.
 
 For supported local Codex clients, enterprise administrators can apply
-[managed configuration](https://learn.chatgpt.com/docs/enterprise/managed-configuration) and
-[permission profiles](https://learn.chatgpt.com/docs/permissions). Those local-client controls don't
+[managed configuration](enterprise/managed-configuration.html) and
+[permission profiles](permissions.html). Those local-client controls don't
 grant access to, or replace the workspace permissions for, hosted ChatGPT Work.
 
 #### Can access be scoped by group, role, workspace, or capability?
@@ -35542,7 +35542,7 @@ servers, hooks, command rules, and other supported runtime behavior.
 
 #### How does ChatGPT Work usage translate into spend over time?
 
-[ChatGPT Work and Codex share pricing, credits, and usage limits](https://learn.chatgpt.com/docs/pricing).
+[ChatGPT Work and Codex share pricing, credits, and usage limits](pricing.html).
 For eligible credit-based agreements, review employees' combined Chat and Work
 usage against the shared workspace credit allocation. Consumption varies with
 the model, applicable reasoning or speed settings, processed input and output,
@@ -35552,7 +35552,7 @@ Using committed credits doesn't automatically increase your invoice. Actual
 charges depend on the remaining credit balance, contracted rates, account
 overage eligibility, and configured workspace overage limit. For planning
 examples, effective user limits, reporting boundaries, and billing details,
-see [ChatGPT Work: usage and cost](https://learn.chatgpt.com/docs/enterprise/chatgpt-work-usage-and-cost).
+see [ChatGPT Work: usage and cost](enterprise/chatgpt-work-usage-and-cost.html).
 
 The highest-variance patterns are often workflows that run frequently,
 retrieve or process large amounts of information, call multiple tools or apps,
@@ -35630,16 +35630,16 @@ Revocation paths include:
 
 | Topic                    | Use this when explaining                                                      | Learn ChatGPT page                                               |
 | ------------------------ | ----------------------------------------------------------------------------- | ---------------------------------------------------------------- |
-| Work overview            | How cloud execution, browser access, network policy, and data boundaries work | [ChatGPT Work Overview](https://learn.chatgpt.com/docs/enterprise/chatgpt-work-overview) |
-| Workspace setup and RBAC | Who can use and administer Codex                                              | [Admin rollout guide](https://learn.chatgpt.com/docs/enterprise/admin-setup)             |
-| Authentication           | How ChatGPT sign-in, API key sign-in, and workspace policy differ             | [Authentication](https://learn.chatgpt.com/docs/auth)                                    |
-| Approvals and sandboxing | How Codex controls file, command, network, and side-effecting tool actions    | [Agent approvals and security](https://learn.chatgpt.com/docs/agent-approvals-security)  |
-| Managed policy           | How admins enforce Codex settings users can't override                        | [Managed configuration](https://learn.chatgpt.com/docs/enterprise/managed-configuration) |
-| Runtime environments     | How Codex cloud setup, secrets, caches, and task phases work                  | [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environment)      |
-| Internet access          | How Codex cloud domain allowlists and HTTP methods work                       | [Agent internet access](https://learn.chatgpt.com/docs/cloud/internet-access)            |
-| Permissions              | How filesystem, network, and deny-read controls work                          | [Permissions](https://learn.chatgpt.com/docs/permissions)                                |
-| Observability            | How analytics, reporting, and compliance exports work                         | [Governance](https://learn.chatgpt.com/docs/enterprise/governance)                       |
-| Automation credentials   | How access tokens are created, limited, revoked, and audited                  | [Access tokens](https://learn.chatgpt.com/docs/enterprise/access-tokens)                 |
+| Work overview            | How cloud execution, browser access, network policy, and data boundaries work | [ChatGPT Work Overview](enterprise/chatgpt-work-overview.html) |
+| Workspace setup and RBAC | Who can use and administer Codex                                              | [Admin rollout guide](enterprise/admin-setup.html)             |
+| Authentication           | How ChatGPT sign-in, API key sign-in, and workspace policy differ             | [Authentication](auth.html)                                    |
+| Approvals and sandboxing | How Codex controls file, command, network, and side-effecting tool actions    | [Agent approvals and security](agent-approvals-security.html)  |
+| Managed policy           | How admins enforce Codex settings users can't override                        | [Managed configuration](enterprise/managed-configuration.html) |
+| Runtime environments     | How Codex cloud setup, secrets, caches, and task phases work                  | [Cloud environments](environments/cloud-environment.html)      |
+| Internet access          | How Codex cloud domain allowlists and HTTP methods work                       | [Agent internet access](cloud/internet-access.html)            |
+| Permissions              | How filesystem, network, and deny-read controls work                          | [Permissions](permissions.html)                                |
+| Observability            | How analytics, reporting, and compliance exports work                         | [Governance](enterprise/governance.html)                       |
+| Automation credentials   | How access tokens are created, limited, revoked, and audited                  | [Access tokens](enterprise/access-tokens.html)                 |
 
 #### Recommended admin actions
 
@@ -35676,7 +35676,7 @@ Revocation paths include:
 
 ### ChatGPT Work cloud security
 
-Source: [ChatGPT Work cloud security](https://learn.chatgpt.com/docs/enterprise/chatgpt-work-cloud-security.md)
+Source: [ChatGPT Work cloud security](enterprise/chatgpt-work-cloud-security.md)
 
 ChatGPT Work is part of your existing ChatGPT workspace and follows its
 applicable privacy, security, and data-handling policies. For Business,
@@ -35691,7 +35691,7 @@ organization enables.
 
 Capabilities and controls depend on the workspace plan, rollout, configuration,
 and connected integration. For the broader execution model, see the
-[ChatGPT Work Overview](https://learn.chatgpt.com/docs/enterprise/chatgpt-work-overview).
+[ChatGPT Work Overview](enterprise/chatgpt-work-overview.html).
 
 #### Security at a glance
 
@@ -35788,7 +35788,7 @@ actions.
 Confirm the plugin and each underlying app are available in the workspace.
 Review role access, connected-account authorization, and action permissions as
 distinct decisions. See
-[Plugin controls](https://learn.chatgpt.com/docs/enterprise/apps-and-connectors).
+[Plugin controls](enterprise/apps-and-connectors.html).
 
 #### Personal and shared connections
 
@@ -35846,7 +35846,7 @@ the cloud browser, web search, or connected apps. Changes to the network
 setting apply after the current code run or shell command finishes and the
 execution environment refreshes.
 
-See [Code and shell sandboxing](https://learn.chatgpt.com/docs/sandboxing?surface=web).
+See [Code and shell sandboxing](sandboxing.html).
 
 #### Data handling and retention
 
@@ -35963,11 +35963,11 @@ extract directly.
 Enable only the access the task requires. Confirm connected-account
 permissions, retention settings, available audit records, and where a person
 should review the result before expanding access. For rollout planning, see the
-[Admin rollout guide](https://learn.chatgpt.com/docs/enterprise/admin-setup).
+[Admin rollout guide](enterprise/admin-setup.html).
 
 ### ChatGPT Work local security
 
-Source: [ChatGPT Work local security](https://learn.chatgpt.com/docs/enterprise/chatgpt-work-local-security.md)
+Source: [ChatGPT Work local security](enterprise/chatgpt-work-local-security.md)
 
 ChatGPT Work can use approved files, applications, and browser sessions on a user's computer to complete local tasks. Access depends on workspace permissions, the user's existing account access, operating-system permissions, application approvals, and supported device policies.
 
@@ -36005,9 +36005,9 @@ Direct file reads, file edits, and shell commands follow the task's sandbox and 
 
 #### Computer Use and application approvals
 
-Workspace permissions determine who can use Work Local. Administrator policies can further restrict which native applications [Computer Use](https://learn.chatgpt.com/docs/computer-use) may operate and whether application approvals can be saved for future sessions. Required operating-system permissions and application approvals still apply. When a task uses an application or signed-in account, that account's permissions determine which information and actions are available.
+Workspace permissions determine who can use Work Local. Administrator policies can further restrict which native applications [Computer Use](computer-use.html) may operate and whether application approvals can be saved for future sessions. Required operating-system permissions and application approvals still apply. When a task uses an application or signed-in account, that account's permissions determine which information and actions are available.
 
-Allowing an application through administrator policy does not install the required plugin, grant operating-system permissions, or approve an action that still requires review. For supported controls and configuration examples, see [Managed browser and Computer Use controls](https://learn.chatgpt.com/docs/enterprise/managed-configuration#control-browser-and-computer-use).
+Allowing an application through administrator policy does not install the required plugin, grant operating-system permissions, or approve an action that still requires review. For supported controls and configuration examples, see [Managed browser and Computer Use controls](enterprise/managed-configuration.html#control-browser-and-computer-use).
 
 On macOS, Screen Recording allows Computer Use to see application content, and Accessibility allows it to click, type, and navigate. Supported macOS tasks can run in the background. On Windows, Computer Use operates on the active, visible desktop and cannot run in the background while the user continues using that same session.
 
@@ -36017,9 +36017,9 @@ Users can stop a task at any time. Computer Use cannot approve operating-system 
 
 Supported macOS configurations can optionally allow an approved Computer Use task to continue after the Mac locks. Availability depends on the app version, feature rollout, applicable requirements, and remote-control eligibility.
 
-Enabling Locked Use installs a macOS authorization plugin that can temporarily unlock the Mac for an active, trusted Computer Use turn. ChatGPT covers every display during the temporary unlock. If it detects local keyboard or pointer input, it relocks the Mac and pauses automatic unlock until the user unlocks it manually. See [How Locked Use works](https://learn.chatgpt.com/docs/computer-use#locked-use).
+Enabling Locked Use installs a macOS authorization plugin that can temporarily unlock the Mac for an active, trusted Computer Use turn. ChatGPT covers every display during the temporary unlock. If it detects local keyboard or pointer input, it relocks the Mac and pauses automatic unlock until the user unlocks it manually. See [How Locked Use works](computer-use.html#locked-use).
 
-Administrators can prevent users from enabling Locked Use on managed Macs. This requirement does not turn off Locked Use if it is already enabled. Windows Computer Use requires an active, unlocked desktop. See [Locked Use restrictions](https://learn.chatgpt.com/docs/enterprise/managed-configuration#restrict-locked-computer-use).
+Administrators can prevent users from enabling Locked Use on managed Macs. This requirement does not turn off Locked Use if it is already enabled. Windows Computer Use requires an active, unlocked desktop. See [Locked Use restrictions](enterprise/managed-configuration.html#restrict-locked-computer-use).
 
 #### Browser sessions and existing sign-ins
 
@@ -36027,11 +36027,11 @@ Work Local does not automatically gain access to every browser or company accoun
 
 | Browser path                                | Session and security boundary                                                                                                                                                                                                                                                                           |
 | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Desktop in-app browser](https://learn.chatgpt.com/docs/browser)    | Uses a profile separate from the user's regular browser. Users can sign in within that profile. On supported clients, managed Browser Use policies restrict agent access to sites and available browser capabilities. The built-in browser cannot automate file uploads.                                |
-| [Chrome extension](https://learn.chatgpt.com/docs/chrome-extension) | Can interact with existing tabs and signed-in accounts when the extension and website access are approved. On supported clients, the same managed Browser Use policies apply to agent actions through the extension.                                                                                    |
+| [Desktop in-app browser](browser.html)    | Uses a profile separate from the user's regular browser. Users can sign in within that profile. On supported clients, managed Browser Use policies restrict agent access to sites and available browser capabilities. The built-in browser cannot automate file uploads.                                |
+| [Chrome extension](chrome-extension.html) | Can interact with existing tabs and signed-in accounts when the extension and website access are approved. On supported clients, the same managed Browser Use policies apply to agent actions through the extension.                                                                                    |
 | Computer Use operating a browser            | Operates the browser as an approved native application and can use accounts already signed in. **Browser Use's site and capability policies do not apply to this path.** Native-app policies, operating-system permissions, application approvals, and the signed-in account's permissions still apply. |
 
-Supported Browser Use policies can restrict site access, uploads, downloads, browser-history access, and full Chrome DevTools Protocol (CDP) access for browser debugging. Administrators can also restrict automatic approval review, saved approvals, and how long site-access approvals last. A user approval cannot override an administrator's denial. See [Managed browser controls](https://learn.chatgpt.com/docs/enterprise/managed-configuration#control-browser-and-computer-use).
+Supported Browser Use policies can restrict site access, uploads, downloads, browser-history access, and full Chrome DevTools Protocol (CDP) access for browser debugging. Administrators can also restrict automatic approval review, saved approvals, and how long site-access approvals last. A user approval cannot override an administrator's denial. See [Managed browser controls](enterprise/managed-configuration.html#control-browser-and-computer-use).
 
 A hosted cloud browser is separate from the user's local browsers and does not automatically inherit their existing sign-ins. Website sign-in through the cloud browser is not available in Enterprise or Edu workspaces.
 
@@ -36039,11 +36039,11 @@ A hosted cloud browser is separate from the user's local browsers and does not a
 
 A connected app can provide access to information or actions in another system. A plugin can use an app as an underlying tool. Making a plugin available does not automatically enable the required app, authorize an account, or permit every action.
 
-Plugin and app defaults depend on the plan and whether the workspace is new or existing. New Enterprise and Edu workspaces start with a selected set of apps enabled; those defaults do not change existing workspace settings and do not apply to Healthcare workspaces. In general, new plugins and apps are disabled by default in Enterprise and Edu. Business apps are enabled by default. Administrators can change availability. See the current plugin and app defaults and the [ChatGPT Work overview](https://learn.chatgpt.com/docs/enterprise/chatgpt-work-overview).
+Plugin and app defaults depend on the plan and whether the workspace is new or existing. New Enterprise and Edu workspaces start with a selected set of apps enabled; those defaults do not change existing workspace settings and do not apply to Healthcare workspaces. In general, new plugins and apps are disabled by default in Enterprise and Edu. Business apps are enabled by default. Administrators can change availability. See the current plugin and app defaults and the [ChatGPT Work overview](enterprise/chatgpt-work-overview.html).
 
 Before a task uses a connected system, confirm that the workspace allows the app and any required plugin, the connection is authorized, and the connected account can access the requested information or action. Read-only settings, allowed actions, and confirmation requirements vary by integration.
 
-Plugins that provide browser or Computer Use capabilities require their own availability and installation review. Making a plugin available does not override managed browser or native-app policies, operating-system permissions, or required approvals. Desktop-only plugins and locally provided tools may follow different installation paths. See [Plugin controls](https://learn.chatgpt.com/docs/enterprise/apps-and-connectors).
+Plugins that provide browser or Computer Use capabilities require their own availability and installation review. Making a plugin available does not override managed browser or native-app policies, operating-system permissions, or required approvals. Desktop-only plugins and locally provided tools may follow different installation paths. See [Plugin controls](enterprise/apps-and-connectors.html).
 
 #### Personal and shared connections
 
@@ -36053,7 +36053,7 @@ Limit shared accounts to the necessary data and actions, restrict who can use th
 
 #### Administrator access and managed-device policies
 
-Review the Work controls available in **Workspace settings** > **Permissions & roles**. Whether local and hosted Work appear as distinct permissions depends on the workspace configuration and rollout. For additional guidance, see the [Work administrator FAQ](https://learn.chatgpt.com/docs/enterprise/work-admin-faq).
+Review the Work controls available in **Workspace settings** > **Permissions & roles**. Whether local and hosted Work appear as distinct permissions depends on the workspace configuration and rollout. For additional guidance, see the [Work administrator FAQ](enterprise/work-admin-faq.html).
 
 Enable only the execution environments approved for each user or group, and verify effective access after making changes.
 
@@ -36061,7 +36061,7 @@ Workspace permissions determine who can use Work. Administrators can also restri
 
 Enforced requirements cannot be overridden by individual users. Managed defaults, by contrast, establish initial settings that users may be able to change. Neither replaces workspace roles or operating-system permissions.
 
-Supported local clients load managed requirements during configuration loading. A background refresh can make newer cloud-managed requirements available for a later configuration load; it does not by itself demonstrate that an existing task is using the new policy. macOS MDM requirement changes are read at the next client launch. After changing managed requirements, restart the applicable local client and verify its effective settings before relying on the restriction. Workspace permission changes can follow a different activation path. See [How local clients apply cloud-managed requirements](https://learn.chatgpt.com/docs/enterprise/managed-configuration#how-local-clients-apply-cloud-managed-requirements).
+Supported local clients load managed requirements during configuration loading. A background refresh can make newer cloud-managed requirements available for a later configuration load; it does not by itself demonstrate that an existing task is using the new policy. macOS MDM requirement changes are read at the next client launch. After changing managed requirements, restart the applicable local client and verify its effective settings before relying on the restriction. Workspace permission changes can follow a different activation path. See [How local clients apply cloud-managed requirements](enterprise/managed-configuration.html#how-local-clients-apply-cloud-managed-requirements).
 
 | Managed setting                                       | Security purpose                                                                              |
 | ----------------------------------------------------- | --------------------------------------------------------------------------------------------- |
@@ -36075,7 +36075,7 @@ Supported local clients load managed requirements during configuration loading. 
 
 These are restriction examples, not a list of enabled defaults. Omitting a feature requirement leaves normal client, platform, rollout, and user settings in effect. Browser Use feature flags, the built-in browser pane, and native Computer Use are separate controls; validate each browser path independently.
 
-Available settings and delivery methods depend on the client, operating system, workspace, and deployment configuration. Validate restrictions on a representative managed device. For supported policy settings, configuration examples, and MDM setup instructions, see [Managed configuration](https://learn.chatgpt.com/docs/enterprise/managed-configuration).
+Available settings and delivery methods depend on the client, operating system, workspace, and deployment configuration. Validate restrictions on a representative managed device. For supported policy settings, configuration examples, and MDM setup instructions, see [Managed configuration](enterprise/managed-configuration.html).
 
 #### Local networking and private resources
 
@@ -36085,7 +36085,7 @@ Managed network requirements and Browser Use origin policies are separate checks
 
 Managed network requirements under `[experimental_network]` are experimental and may change. Windows support is limited; test the exact client and environment before applying them to Windows users. Domain rules alone do not activate the managed proxy; `experimental_network.enabled = true` is required and does not override a sandbox that keeps networking off.
 
-Review the connection, signed-in account, destination, and action required by the workflow. For configuration details and platform limitations, see [Network access requirements](https://learn.chatgpt.com/docs/enterprise/managed-configuration#configure-network-access-requirements).
+Review the connection, signed-in account, destination, and action required by the workflow. For configuration details and platform limitations, see [Network access requirements](enterprise/managed-configuration.html#configure-network-access-requirements).
 
 #### Data handling and retention
 
@@ -36113,7 +36113,7 @@ Available reporting depends on the workspace plan, product experience, event, co
 
 In supported versions, Browser Use can emit OpenTelemetry events for capability checks, including site access, uploads, and downloads. These events record the decision and decision source, with policy details where available. The decision source can be unknown. When export is configured, they are sent to the customer's OpenTelemetry endpoint alongside other local-runtime telemetry.
 
-OpenTelemetry export is separate from Compliance API records and must be configured independently. These events do not establish a complete record of every browser or native-app action. See [OpenTelemetry configuration](https://learn.chatgpt.com/docs/config-file/config-advanced#observability-and-telemetry).
+OpenTelemetry export is separate from Compliance API records and must be configured independently. These events do not establish a complete record of every browser or native-app action. See [OpenTelemetry configuration](config-file/config-advanced.html#observability-and-telemetry).
 
 Determine whether the relevant systems record the task identity, supported prompts and responses, connected-app calls, browser approvals, application actions, local file activity, or endpoint events. Source-system and device records can provide different visibility from ChatGPT workspace records.
 
@@ -36127,7 +36127,7 @@ Check that approved actions work, restricted actions are blocked, and available 
 
 ### ChatGPT Work Overview
 
-Source: [ChatGPT Work Overview](https://learn.chatgpt.com/docs/enterprise/chatgpt-work-overview.md)
+Source: [ChatGPT Work Overview](enterprise/chatgpt-work-overview.md)
 
 ChatGPT Work and Codex share core execution, isolation, and permission
 mechanisms, and fall within the same security boundaries that are part of your
@@ -36146,11 +36146,11 @@ configuration.
 
 For a focused review of hosted execution, connected-account permissions,
 browser and network settings, retention, and audit visibility, see
-[ChatGPT Work cloud security](https://learn.chatgpt.com/docs/enterprise/chatgpt-work-cloud-security).
+[ChatGPT Work cloud security](enterprise/chatgpt-work-cloud-security.html).
 
 For device access, local browser sessions, managed policies, and local data
 handling, see
-[ChatGPT Work local security](https://learn.chatgpt.com/docs/enterprise/chatgpt-work-local-security).
+[ChatGPT Work local security](enterprise/chatgpt-work-local-security.html).
 
 #### Execution isolation, files, and device access
 
@@ -36186,7 +36186,7 @@ Administrators can control whether ChatGPT automatically references saved
 Library files. Disabling automatic references does not prevent users from
 explicitly accessing or attaching files they are authorized to use.
 
-See [Code and shell sandboxing](https://learn.chatgpt.com/docs/sandboxing?surface=web),
+See [Code and shell sandboxing](sandboxing.html),
 [Creating and editing documents, spreadsheets, and presentations](https://help.openai.com/en/articles/20001278-creating-and-editing-documents-spreadsheets-and-presentations-with-chatgpt-work),
 and
 [File storage and Library in ChatGPT](https://help.openai.com/en/articles/20001052-library-for-chatgpt).
@@ -36213,7 +36213,7 @@ search, or the cloud browser.
 
 Changes to the code and shell network setting take effect after the current run
 finishes and Work refreshes its execution environment. See
-[Code and shell sandboxing](https://learn.chatgpt.com/docs/sandboxing?surface=web) and
+[Code and shell sandboxing](sandboxing.html) and
 [Work access controls](https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex).
 
 Outgoing interaction controls are separate from
@@ -36256,7 +36256,7 @@ or a complete administrator-visible execution history.
 
 See
 [Using cloud browser in ChatGPT](https://help.openai.com/en/articles/20001280-using-cloud-browser-in-chatgpt)
-and [Browser](https://learn.chatgpt.com/docs/browser?surface=web).
+and [Browser](browser.html).
 
 #### Connected applications, credentials, and permissions
 
@@ -36287,7 +36287,7 @@ policy.
 
 See
 [Admin controls, security, and compliance for plugins and apps](https://help.openai.com/en/articles/11509118-admin-controls-security-and-compliance-in-apps-enterprise-edu-and-business),
-[Plugin controls](https://learn.chatgpt.com/docs/enterprise/apps-and-connectors),
+[Plugin controls](enterprise/apps-and-connectors.html),
 [Google Workspace administrator-managed setup](https://help.openai.com/en/articles/10929079-google-workspace-admin-managed-setup),
 [ChatGPT apps with sync](https://help.openai.com/en/articles/10847137-chatgpt-apps-with-sync).
 
@@ -36301,7 +36301,7 @@ deletion rules.
 For details, see [Enterprise privacy](https://openai.com/enterprise-privacy/),
 [Chat and file retention policies](https://help.openai.com/en/articles/8983778-chat-and-file-retention-policies-in-chatgpt),
 [Data residency and inference residency](https://help.openai.com/en/articles/9903489-data-residency-and-inference-residency-for-chatgpt),
-and the [ChatGPT Work Admin FAQ](https://learn.chatgpt.com/docs/enterprise/work-admin-faq).
+and the [ChatGPT Work Admin FAQ](enterprise/work-admin-faq.html).
 
 #### Retention depends on the data type
 
@@ -36336,7 +36336,7 @@ and the
 
 ### ChatGPT Work: usage and cost
 
-Source: [ChatGPT Work: usage and cost](https://learn.chatgpt.com/docs/enterprise/chatgpt-work-usage-and-cost.md)
+Source: [ChatGPT Work: usage and cost](enterprise/chatgpt-work-usage-and-cost.md)
 
 ChatGPT Work helps employees complete multi-step tasks, such as researching a
 topic, analyzing information, or creating a finished document or presentation.
@@ -36391,7 +36391,7 @@ estimate of credits consumed.
 **Tokens** measure the information the model reads and writes, including input,
 cached input, and output. On credit-based agreements, **credits** pay for
 eligible usage from the shared workspace allocation. See
-[token rates](https://learn.chatgpt.com/docs/pricing#token-rates) for credit pricing.
+[token rates](pricing.html#token-rates) for credit pricing.
 
 If your Enterprise agreement instead specifies usage-based billing in USD, use the Enterprise USD rate card and your agreement. Don't apply the credit calculation to a USD-billed workspace or treat consumed credits as an additional invoice charge.
 
@@ -36518,7 +36518,7 @@ depend on your plan, workspace configuration, and agreement. Reports might not
 reflect activity immediately; compare the report timestamp and billing period
 before reconciling usage with an invoice. For cross-product applicability and
 current setup procedures, see
-[ChatGPT usage limits and spend controls](https://learn.chatgpt.com/docs/enterprise/usage-limits).
+[ChatGPT usage limits and spend controls](enterprise/usage-limits.html).
 
 #### Measure usage alongside outcomes
 
@@ -36540,7 +36540,7 @@ and any actual billing impact. Usage alone doesn't establish savings, and
 projected time improvements aren't guaranteed financial returns.
 
 To explore the activity behind your usage, see
-[Usage Insights](https://learn.chatgpt.com/docs/enterprise/usage-insights).
+[Usage Insights](enterprise/usage-insights.html).
 Learn how to interpret the Insights overview and category details, then use the
 findings in a conversation with your team.
 
@@ -36559,13 +36559,13 @@ Before expanding access:
    rollout.
 
 For broader access, data, governance, and rollout guidance, see the
-[ChatGPT Work admin FAQ](https://learn.chatgpt.com/docs/enterprise/work-admin-faq). For
+[ChatGPT Work admin FAQ](enterprise/work-admin-faq.html). For
 contract-specific pricing, credit availability, and invoicing questions,
 contact your account team.
 
 ### Compliance API and audit events
 
-Source: [Compliance API and audit events](https://learn.chatgpt.com/docs/enterprise/compliance-api.md)
+Source: [Compliance API and audit events](enterprise/compliance-api.md)
 
 Use the Compliance API for security, legal, governance, and investigation
 workflows that require auditable records. Use analytics, not compliance records,
@@ -36588,8 +36588,8 @@ The Compliance API is appropriate when you need to:
 - Support approved security, legal, or governance investigations.
 
 It's not a productivity dashboard. Don't use it to infer code quality or
-individual performance. Use [Workspace analytics](https://learn.chatgpt.com/docs/enterprise/workspace-analytics)
-or the [Analytics API](https://learn.chatgpt.com/docs/enterprise/analytics-api) for adoption reporting.
+individual performance. Use [Workspace analytics](enterprise/workspace-analytics.html)
+or the [Analytics API](enterprise/analytics-api.html) for adoption reporting.
 
 #### Get started
 
@@ -36650,14 +36650,14 @@ This page doesn't duplicate that contract.
 
 #### Related docs
 
-- [Workspace analytics](https://learn.chatgpt.com/docs/enterprise/workspace-analytics)
-- [Admin rollout guide](https://learn.chatgpt.com/docs/enterprise/admin-setup)
-- [Governance](https://learn.chatgpt.com/docs/enterprise/governance)
-- [Analytics API](https://learn.chatgpt.com/docs/enterprise/analytics-api)
+- [Workspace analytics](enterprise/workspace-analytics.html)
+- [Admin rollout guide](enterprise/admin-setup.html)
+- [Governance](enterprise/governance.html)
+- [Analytics API](enterprise/analytics-api.html)
 
 ### Deploy the Windows app
 
-Source: [Deploy the Windows app](https://learn.chatgpt.com/docs/enterprise/windows-deployment.md)
+Source: [Deploy the Windows app](enterprise/windows-deployment.md)
 
 Choose how your organization installs apps.
 
@@ -36885,7 +36885,7 @@ installation. To enable automatic updates, allow devices to reach
 packages through your management tool.
 
 For update policy and rollout guidance, see
-[Manage app updates](https://learn.chatgpt.com/docs/enterprise/manage-app-updates). Disabling the built-in
+[Manage app updates](enterprise/manage-app-updates.html). Disabling the built-in
 updater doesn't disable updates from the Microsoft Store or your management tool.
 
 #### Troubleshooting
@@ -36929,12 +36929,12 @@ For more information about the provisioning setting, see Microsoft's application
 
 #### Related resources
 
-- [Managed configuration](https://learn.chatgpt.com/docs/enterprise/managed-configuration)
-- [ChatGPT desktop app for Windows](https://learn.chatgpt.com/docs/windows/windows-app)
+- [Managed configuration](enterprise/managed-configuration.html)
+- [ChatGPT desktop app for Windows](windows/windows-app.html)
 
 ### Governance
 
-Source: [Governance](https://learn.chatgpt.com/docs/enterprise/governance.md)
+Source: [Governance](enterprise/governance.md)
 
 Governance for Codex activity spans interactive analytics, programmatic
 reporting, related ChatGPT usage controls, and audit records. Choose the
@@ -36943,11 +36943,11 @@ different purposes.
 
 | If you need to                                          | Start with                                                                |
 | ------------------------------------------------------- | ------------------------------------------------------------------------- |
-| Understand adoption across ChatGPT                      | [Workspace analytics](https://learn.chatgpt.com/docs/enterprise/workspace-analytics)              |
+| Understand adoption across ChatGPT                      | [Workspace analytics](enterprise/workspace-analytics.html)              |
 | Review Codex adoption and activity interactively        | [Codex analytics](#analytics-dashboard)                                   |
-| Load aggregated Codex reporting into another system     | [Analytics API](https://learn.chatgpt.com/docs/enterprise/analytics-api)                          |
-| Export records for audit or investigation               | [Compliance API](https://learn.chatgpt.com/docs/enterprise/compliance-api)                        |
-| Review plan-dependent ChatGPT workspace credit controls | [ChatGPT usage limits and spend controls](https://learn.chatgpt.com/docs/enterprise/usage-limits) |
+| Load aggregated Codex reporting into another system     | [Analytics API](enterprise/analytics-api.html)                          |
+| Export records for audit or investigation               | [Compliance API](enterprise/compliance-api.html)                        |
+| Review plan-dependent ChatGPT workspace credit controls | [ChatGPT usage limits and spend controls](enterprise/usage-limits.html) |
 
 #### Open the administration surfaces
 
@@ -36971,7 +36971,7 @@ ChatGPT provides workspace-wide analytics for broad adoption and engagement.
 Codex analytics focuses on Codex activity. Both are interactive reporting
 surfaces, not raw audit logs.
 
-Use [Workspace analytics](https://learn.chatgpt.com/docs/enterprise/workspace-analytics) to compare the
+Use [Workspace analytics](enterprise/workspace-analytics.html) to compare the
 two experiences and find their current owner-maintained sources. You can also
 open [Workspace analytics](https://chatgpt.com/admin/usage) directly. Don't
 build a durable reporting contract from dashboard labels or downloaded report
@@ -36985,7 +36985,7 @@ can consume ChatGPT workspace credits, and exhausted limits can pause access to
 eligible features. These controls don't set a universal Codex limit or govern
 Platform API billing.
 
-See [ChatGPT usage limits and spend controls](https://learn.chatgpt.com/docs/enterprise/usage-limits)
+See [ChatGPT usage limits and spend controls](enterprise/usage-limits.html)
 for the durable boundary and current Help Center sources.
 
 #### Analytics API
@@ -36996,7 +36996,7 @@ reporting that shouldn't depend on an interactive dashboard.
 
 The API reference owns access requirements, routes, schemas,
 fields, reporting windows, and pagination. See
-[Analytics API](https://learn.chatgpt.com/docs/enterprise/analytics-api) for the conceptual integration
+[Analytics API](enterprise/analytics-api.html) for the conceptual integration
 boundary and the canonical reference link.
 
 #### Compliance API
@@ -37006,22 +37006,22 @@ auditable records. It's not an adoption or productivity dashboard.
 
 The API reference owns event coverage, schemas, permissions,
 filters, retention, and request behavior. See
-[Compliance API](https://learn.chatgpt.com/docs/enterprise/compliance-api) for the conceptual
+[Compliance API](enterprise/compliance-api.html) for the conceptual
 integration boundary and the canonical reference link.
 
 For rollout sequencing and verification across these surfaces, use the
-[Admin rollout guide](https://learn.chatgpt.com/docs/enterprise/admin-setup).
+[Admin rollout guide](enterprise/admin-setup.html).
 
 #### Related docs
 
-- [Admin rollout guide](https://learn.chatgpt.com/docs/enterprise/admin-setup)
-- [Workspace analytics](https://learn.chatgpt.com/docs/enterprise/workspace-analytics)
-- [Analytics API](https://learn.chatgpt.com/docs/enterprise/analytics-api)
-- [Compliance API](https://learn.chatgpt.com/docs/enterprise/compliance-api)
+- [Admin rollout guide](enterprise/admin-setup.html)
+- [Workspace analytics](enterprise/workspace-analytics.html)
+- [Analytics API](enterprise/analytics-api.html)
+- [Compliance API](enterprise/compliance-api.html)
 
 ### GPTs and Sharing
 
-Source: [GPTs and Sharing](https://learn.chatgpt.com/docs/enterprise/gpts-and-sharing.md)
+Source: [GPTs and Sharing](enterprise/gpts-and-sharing.md)
 
 #### Sharing
 
@@ -37057,7 +37057,7 @@ information:
 
 ### Groups and provisioning
 
-Source: [Groups and provisioning](https://learn.chatgpt.com/docs/enterprise/groups-and-provisioning.md)
+Source: [Groups and provisioning](enterprise/groups-and-provisioning.md)
 
 Groups organize people in a ChatGPT workspace and can carry custom roles. Group
 membership doesn't replace seat assignments, grant workspace feature permissions
@@ -37065,7 +37065,7 @@ by itself, override local runtime policy, or provide access to the Platform API
 or connected systems.
 
 For the complete control model, see
-[Roles and workspace permissions](https://learn.chatgpt.com/docs/enterprise/roles-and-workspace-permissions).
+[Roles and workspace permissions](enterprise/roles-and-workspace-permissions.html).
 
 #### Compare membership sources
 
@@ -37108,7 +37108,7 @@ doesn't replace local runtime requirements or Platform API organization access.
 Workspace RBAC and local runtime requirements are separate control systems. A
 group can be relevant to both, but don't infer a managed-requirements matching
 or precedence rule from workspace group order. Use
-[Managed configuration](https://learn.chatgpt.com/docs/enterprise/managed-configuration) for the
+[Managed configuration](enterprise/managed-configuration.html) for the
 documented delivery and local precedence rules.
 
 #### Use current setup procedures
@@ -37135,15 +37135,15 @@ steps, availability, and limits:
 
 #### Related docs
 
-- [User lifecycle management](https://learn.chatgpt.com/docs/enterprise/user-lifecycle)
-- [Authentication](https://learn.chatgpt.com/docs/auth)
-- [Roles and workspace permissions](https://learn.chatgpt.com/docs/enterprise/roles-and-workspace-permissions)
-- [Managed configuration](https://learn.chatgpt.com/docs/enterprise/managed-configuration)
-- [Admin rollout guide](https://learn.chatgpt.com/docs/enterprise/admin-setup)
+- [User lifecycle management](enterprise/user-lifecycle.html)
+- [Authentication](auth.html)
+- [Roles and workspace permissions](enterprise/roles-and-workspace-permissions.html)
+- [Managed configuration](enterprise/managed-configuration.html)
+- [Admin rollout guide](enterprise/admin-setup.html)
 
 ### Manage app updates
 
-Source: [Manage app updates](https://learn.chatgpt.com/docs/enterprise/manage-app-updates.md)
+Source: [Manage app updates](enterprise/manage-app-updates.md)
 
 The ChatGPT desktop app normally checks for and installs updates on its own. If
 your organization needs to review new releases before users receive them, you
@@ -37169,7 +37169,7 @@ Confirm that you have:
   installed app versions.
 
 If you haven't deployed the app on Windows, start with
-[Deploy the Windows app](https://learn.chatgpt.com/docs/enterprise/windows-deployment).
+[Deploy the Windows app](enterprise/windows-deployment.html).
 
 #### Turn off in-app updates
 
@@ -37209,7 +37209,7 @@ that interface, add the same TOML block directly to the applicable policy, use
 **Groups** to assign it when available, and select **Save**.
 
 For details about managed policy delivery and precedence, see
-[Managed configuration](https://learn.chatgpt.com/docs/enterprise/managed-configuration).
+[Managed configuration](enterprise/managed-configuration.html).
 
 #### Verify the managed setting
 
@@ -37252,7 +37252,7 @@ service compatibility.
 For macOS, download the
 [ChatGPT desktop app installer](https://persistent.oaistatic.com/codex-app-prod/ChatGPT.dmg).
 For Windows installation methods and architecture-specific packages, see
-[Deploy the Windows app](https://learn.chatgpt.com/docs/enterprise/windows-deployment).
+[Deploy the Windows app](enterprise/windows-deployment.html).
 
 #### Turn in-app updates back on
 
@@ -37270,7 +37270,7 @@ When no applicable policy sets `in_app_updates = false`, the app's built-in
 updater follows its normal behavior. If the **Managed** indicator still
 appears, review other workspace policies, MDM profiles, and system
 `requirements.toml` files. See
-[Locations and precedence](https://learn.chatgpt.com/docs/enterprise/managed-configuration#locations-and-precedence)
+[Locations and precedence](enterprise/managed-configuration.html#locations-and-precedence)
 for the order in which managed sources apply.
 
 #### Understand security and support responsibilities
@@ -37308,16 +37308,16 @@ installed the update. The policy controls only the app's built-in updater.
 
 #### Related docs
 
-- [Managed configuration](https://learn.chatgpt.com/docs/enterprise/managed-configuration)
-- [Deploy the Windows app](https://learn.chatgpt.com/docs/enterprise/windows-deployment)
-- [`requirements.toml` configuration reference](https://learn.chatgpt.com/docs/config-file/config-reference#requirementstoml)
-- [Admin rollout guide](https://learn.chatgpt.com/docs/enterprise/admin-setup)
+- [Managed configuration](enterprise/managed-configuration.html)
+- [Deploy the Windows app](enterprise/windows-deployment.html)
+- [`requirements.toml` configuration reference](config-file/config-reference.html#requirementstoml)
+- [Admin rollout guide](enterprise/admin-setup.html)
 
 ### Managed configuration
 
-Source: [Managed configuration](https://learn.chatgpt.com/docs/enterprise/managed-configuration.md)
+Source: [Managed configuration](enterprise/managed-configuration.md)
 
-Managed configuration controls supported local runtime behavior for covered capabilities in the ChatGPT desktop app, Codex CLI, and IDE extension. Supported requirements can differ by client and version. Managed configuration doesn't grant ChatGPT workspace access, assign seats, or replace workspace role-based access control (RBAC). Use [Roles and workspace permissions](https://learn.chatgpt.com/docs/enterprise/roles-and-workspace-permissions) for workspace feature access and this page for local runtime policy.
+Managed configuration controls supported local runtime behavior for covered capabilities in the ChatGPT desktop app, Codex CLI, and IDE extension. Supported requirements can differ by client and version. Managed configuration doesn't grant ChatGPT workspace access, assign seats, or replace workspace role-based access control (RBAC). Use [Roles and workspace permissions](enterprise/roles-and-workspace-permissions.html) for workspace feature access and this page for local runtime policy.
 
 Enterprise admins can control supported local client behavior with:
 
@@ -37331,24 +37331,24 @@ Define local or Git marketplaces and plugin defaults in system `config.toml`
 or the `config.toml` section of [Managed configuration](https://chatgpt.com/codex/settings/managed-configs).
 These settings are defaults, not enforced policy.
 
-See [Configuration Reference](https://learn.chatgpt.com/docs/config-file/config-reference) for configuration keys,
-[Configuration precedence](https://learn.chatgpt.com/docs/config-file/config-basic#configuration-precedence)
+See [Configuration Reference](config-file/config-reference.html) for configuration keys,
+[Configuration precedence](config-file/config-basic.html#configuration-precedence)
 for overrides, and [repo plugin settings](https://developers.openai.com/plugins/build/plugins#enable-or-disable-a-plugin-for-a-repo)
 for project-level configuration. [Workspace GitHub import and
-sync](https://learn.chatgpt.com/docs/enterprise/plugin-management) is separate.
+sync](enterprise/plugin-management.html) is separate.
 
 #### Admin-enforced requirements (requirements.toml)
 
-Requirements constrain security-sensitive settings (approval policy, approvals reviewer, automatic review policy, sandbox mode, permission profiles, web search mode, managed hooks, which MCP servers users can enable, and which plugin marketplace sources they can use). When resolving configuration (for example from `config.toml`, [profile files](https://learn.chatgpt.com/docs/config-file/config-advanced#profiles), or CLI config overrides), if a value conflicts with an enforced rule, the local client falls back to a compatible value and notifies the user. If you configure an `mcp_servers` allowlist, the client enables an MCP server only when both its name and identity match an approved entry; otherwise, the client disables it.
+Requirements constrain security-sensitive settings (approval policy, approvals reviewer, automatic review policy, sandbox mode, permission profiles, web search mode, managed hooks, which MCP servers users can enable, and which plugin marketplace sources they can use). When resolving configuration (for example from `config.toml`, [profile files](config-file/config-advanced.html#profiles), or CLI config overrides), if a value conflicts with an enforced rule, the local client falls back to a compatible value and notifies the user. If you configure an `mcp_servers` allowlist, the client enables an MCP server only when both its name and identity match an approved entry; otherwise, the client disables it.
 
-Requirements can also constrain [feature flags](https://learn.chatgpt.com/docs/config-file/config-basic#feature-flags) via the `[features]` table in `requirements.toml`. Note that features aren't always security-sensitive, but enterprises can pin values if desired. Omitted keys remain unconstrained.
+Requirements can also constrain [feature flags](config-file/config-basic.html#feature-flags) via the `[features]` table in `requirements.toml`. Note that features aren't always security-sensitive, but enterprises can pin values if desired. Omitted keys remain unconstrained.
 
-For Codex 0.138.0 or later, prefer [permission profiles](https://learn.chatgpt.com/docs/permissions)
+For Codex 0.138.0 or later, prefer [permission profiles](permissions.html)
 with `allowed_permission_profiles` and managed `default_permissions`. Use
 `allowed_sandbox_modes` only for legacy deployments that still configure
 `sandbox_mode`.
 
-For the exact key list, see the [`requirements.toml` section in Configuration Reference](https://learn.chatgpt.com/docs/config-file/config-reference#requirementstoml).
+For the exact key list, see the [`requirements.toml` section in Configuration Reference](config-file/config-reference.html#requirementstoml).
 
 #### Migrate the retired `untrusted` approval policy
 
@@ -37365,7 +37365,7 @@ To keep stricter command approvals, omit an explicit `approval_policy`, set
 `~/.codex/config.toml`, and keep `untrusted` in `allowed_approval_policies`.
 This also disables project-local configuration. Setting `on-request` explicitly
 overrides that policy. See
-[Migrate from the retired `untrusted` approval policy](https://learn.chatgpt.com/docs/agent-approvals-security#migrate-from-the-retired-untrusted-approval-policy)
+[Migrate from the retired `untrusted` approval policy](agent-approvals-security.html#migrate-from-the-retired-untrusted-approval-policy)
 for examples and security tradeoffs.
 
 #### Locations and precedence
@@ -37383,7 +37383,7 @@ Each supported local client composes requirements from lower to higher precedenc
 Higher-precedence layers override ordinary scalar and list values from lower
 layers. Tables merge by key, while requirements such as rules, hooks, and
 filesystem restrictions have field-specific composition behavior. Use the
-[`requirements.toml` reference](https://learn.chatgpt.com/docs/config-file/config-reference#requirementstoml)
+[`requirements.toml` reference](config-file/config-reference.html#requirementstoml)
 for the current schema instead of assuming that every field merges the same
 way.
 
@@ -37430,7 +37430,7 @@ requirements format.
 
 For supported keys and examples, see
 [Example requirements.toml](#example-requirementstoml) and the
-[`requirements.toml` reference](https://learn.chatgpt.com/docs/config-file/config-reference#requirementstoml).
+[`requirements.toml` reference](config-file/config-reference.html#requirementstoml).
 
 #### How local clients apply cloud-managed requirements
 
@@ -37479,7 +37479,7 @@ cli_auth_credentials_store = "keyring"
 doesn't restrict login methods. If set, the list must contain at least one method.
 `api` permits API authentication, including Amazon Bedrock.
 The workspace restriction also applies to
-[Codex access tokens](https://learn.chatgpt.com/docs/enterprise/access-tokens).
+[Codex access tokens](enterprise/access-tokens.html).
 
 User-configured `forced_login_method` and `forced_chatgpt_workspace_id` must
 follow the requirements. When a user selects a workspace, it must also appear
@@ -37487,7 +37487,7 @@ in the managed workspace allowlist. If no workspaces match, ChatGPT login is
 unavailable. API authentication remains available when permitted. If no login method
 is available, Codex refuses to start.
 
-See the [requirements reference](https://learn.chatgpt.com/docs/config-file/config-reference#requirementstoml)
+See the [requirements reference](config-file/config-reference.html#requirementstoml)
 for credential storage modes and service URL configuration.
 
 #### Example requirements.toml
@@ -37520,7 +37520,7 @@ Appshots.
 
 #### Disable device remote control
 
-To disable [device remote control](https://learn.chatgpt.com/docs/remote-connections#pick-up-work-from-another-device)
+To disable [device remote control](remote-connections.html#pick-up-work-from-another-device)
 for managed users, set the top-level `allow_remote_control` requirement:
 
 ```toml
@@ -37535,7 +37535,7 @@ disable SSH remote connections.
 #### Control available permission profiles
 
 Use `allowed_permission_profiles` to control which built-in and custom
-[permission profiles](https://learn.chatgpt.com/docs/permissions) users can select. This is the
+[permission profiles](permissions.html) users can select. This is the
 permission-profile counterpart to `allowed_sandbox_modes`; use the allowlist that
 matches how your users select permissions.
 
@@ -37721,7 +37721,7 @@ domain and its subdomains. A matching deny rule wins over an allow rule.
 
 The domain syntax, local/private destination rules, deny-over-allow behavior,
 and DNS rebinding limitations are the same as the sandbox networking behavior
-described in [Agent approvals & security](https://learn.chatgpt.com/docs/agent-approvals-security#network-isolation).
+described in [Agent approvals & security](agent-approvals-security.html#network-isolation).
 
 The proxy routes local commands that run inside the sandbox. Browser tools
 also check managed network denies and exclusive allowlists before accessing
@@ -37803,13 +37803,13 @@ Windows policies can identify packaged apps with
 `product_name`, and `access`; `binary_name` is optional. Use the app's verified
 identity rather than its display name alone.
 
-See the [configuration reference](https://learn.chatgpt.com/docs/config-file/config-reference#requirementstoml)
+See the [configuration reference](config-file/config-reference.html#requirementstoml)
 for the complete fields and [locked-use restrictions](#restrict-locked-computer-use)
 for managed macOS devices.
 
 #### Pin feature flags
 
-You can also pin [feature flags](https://learn.chatgpt.com/docs/config-file/config-basic#feature-flags) for users
+You can also pin [feature flags](config-file/config-basic.html#feature-flags) for users
 receiving a managed `requirements.toml`:
 
 ```toml
@@ -37835,7 +37835,7 @@ settings.
 - `in_app_updates = false` disables the ChatGPT desktop app's own updater on
   restart, where supported. It doesn't affect external package deployment or
   extend support for older app versions. For setup and rollout guidance, see
-  [Manage app updates](https://learn.chatgpt.com/docs/enterprise/manage-app-updates).
+  [Manage app updates](enterprise/manage-app-updates.html).
 - `browser_use = false` disables Computer Use in browsers and Browser Agent availability.
 - `browser_use_full_cdp_access = false` disables full CDP access in the local
   runtime, including Browser Developer mode, and prevents the ChatGPT desktop
@@ -37849,7 +37849,7 @@ platform, and rollout availability.
 
 #### Restrict locked computer use
 
-To prevent users from enabling [Locked Use](https://learn.chatgpt.com/docs/computer-use#locked-use)
+To prevent users from enabling [Locked Use](computer-use.html#locked-use)
 on a managed Mac, add this requirement:
 
 ```toml
@@ -38016,7 +38016,7 @@ features.plugins = false
 
 This setting also applies when users sign in to Codex with an API key. See the
 [`features.plugins`
-reference](https://learn.chatgpt.com/docs/config-file/config-reference#requirementstoml) for the
+reference](config-file/config-reference.html#requirementstoml) for the
 supported configuration.
 
 #### Restrict plugin marketplace sources
@@ -38045,7 +38045,7 @@ path = "/opt/company/codex-plugins"
 Git rules match the normalized repository URL and, when present, an exact
 `ref`. Host patterns are regular expressions matched against the lowercase Git
 host; use `^` and `$` for a whole-host match. Local rules require an absolute,
-normalized path. See the [`requirements.toml` reference](https://learn.chatgpt.com/docs/config-file/config-reference#requirementstoml)
+normalized path. See the [`requirements.toml` reference](config-file/config-reference.html#requirementstoml)
 for the full schema and merge behavior.
 
 These requirements reject unmatched marketplace add, plugin install, and
@@ -38083,10 +38083,10 @@ If a managed default, macOS MDM profile, or saved configuration pins
 model before October 14, 2026. Choose `gpt-6-sol` once an administrator has
 enabled it for the affected users. GPT-5.5 retires from ChatGPT,
 ChatGPT Work, and Codex on all plans on that date. The OpenAI API isn't
-affected. See [workspace model availability](https://learn.chatgpt.com/docs/enterprise/workspace-model-availability#prepare-for-the-gpt-55-retirement).
+affected. See [workspace model availability](enterprise/workspace-model-availability.html#prepare-for-the-gpt-55-retirement).
 
 For configurations that still pin `gpt-5.4` or `gpt-5.4-mini`, follow the
-[GPT-5.4 migration guidance](https://learn.chatgpt.com/docs/enterprise/workspace-model-availability#prepare-for-the-gpt-54-retirement).
+[GPT-5.4 migration guidance](enterprise/workspace-model-availability.html#prepare-for-the-gpt-54-retirement).
 
 Make sure your managed defaults meet your requirements; the local runtime
 rejects disallowed values.
@@ -38102,7 +38102,7 @@ overrides bottom):
 
 CLI `--config key=value` overrides apply to the base, but managed layers override them. This means each run starts from the managed defaults even if you provide local flags.
 
-Cloud `config.toml` uses [normal configuration precedence](https://learn.chatgpt.com/docs/config-file/config-basic#configuration-precedence),
+Cloud `config.toml` uses [normal configuration precedence](config-file/config-basic.html#configuration-precedence),
 not the legacy ordering above. Cloud `requirements.toml` uses
 [requirements precedence](#locations-and-precedence).
 
@@ -38170,13 +38170,13 @@ log_user_prompt = false            # keep prompts redacted
 
 ### Plugin controls
 
-Source: [Plugin controls](https://learn.chatgpt.com/docs/enterprise/apps-and-connectors.md)
+Source: [Plugin controls](enterprise/apps-and-connectors.md)
 
 Plugins package reusable workflows and can include skills and MCP servers that connect
 to other tools. ChatGPT and Codex use the same public plugin directory on
 supported surfaces, while admins decide which plugins are available in their workspace.
-Learn more about [plugins](https://learn.chatgpt.com/docs/plugins),
-[skills](https://learn.chatgpt.com/docs/skills-and-plugins), and
+Learn more about [plugins](plugins.html),
+[skills](skills-and-plugins.html), and
 [connected services](https://help.openai.com/en/articles/11487775).
 
 In this guide, **app** and **MCP server** refer to the same connected
@@ -38192,7 +38192,7 @@ in Codex in the ChatGPT desktop app, and through the Codex CLI plugin browser.
 They aren't available in the IDE extension.
 
 To see how these controls fit with workspace roles and permissions, see
-[Roles and workspace permissions](https://learn.chatgpt.com/docs/enterprise/roles-and-workspace-permissions).
+[Roles and workspace permissions](enterprise/roles-and-workspace-permissions.html).
 
 #### Understand the capability chain
 
@@ -38201,7 +38201,7 @@ A plugin can span these control layers:
 | Layer                   | What it determines                                                       | Where to manage it                                                                                                              |
 | ----------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
 | Availability            | Whether the plugin bundle is available to the user                       | [Workspace settings](https://chatgpt.com/admin/settings) for supported web and desktop surfaces; the CLI plugin browser for CLI |
-| Included skills         | Which reusable instructions the installed plugin contributes             | The plugin package and [Skill controls](https://learn.chatgpt.com/docs/enterprise/skills)                                                               |
+| Included skills         | Which reusable instructions the installed plugin contributes             | The plugin package and [Skill controls](enterprise/skills.html)                                                               |
 | MCP server access       | Whether users can use an MCP server's capabilities                       | [Workspace apps](https://chatgpt.com/admin/ca) and [Permissions & roles](https://chatgpt.com/admin/settings)                    |
 | Actions and permissions | Which actions users can run and when ChatGPT asks before using its tools | The connection's **Action control** and **App permissions** in [Workspace apps](https://chatgpt.com/admin/ca)                   |
 | Service authorization   | Which external data and actions the authenticated identity can access    | The connected service and its identity provider                                                                                 |
@@ -38219,7 +38219,7 @@ browser for installation. See
 packaging and distribution.
 
 To import workspace plugins from GitHub and keep them up to date, see
-[Plugin management](https://learn.chatgpt.com/docs/enterprise/plugin-management).
+[Plugin management](enterprise/plugin-management.html).
 
 #### Export the public catalog for review
 
@@ -38323,7 +38323,7 @@ See [security and compliance for connected services](https://help.openai.com/en/
 and [connections with sync](https://help.openai.com/en/articles/10847137) for current
 data-handling details. For locally configured MCP servers in the ChatGPT desktop
 app, Codex CLI, or IDE extension, see
-[Codex MCP configuration](https://learn.chatgpt.com/docs/extend/mcp).
+[Codex MCP configuration](extend/mcp.html).
 
 #### Use current procedures and references
 
@@ -38331,14 +38331,14 @@ app, Codex CLI, or IDE extension, see
 - [Apps in ChatGPT](https://help.openai.com/en/articles/11487775)
 - [Apps with sync](https://help.openai.com/en/articles/10847137)
 - [Manage workspace settings](https://help.openai.com/en/articles/8411955)
-- [Plugins](https://learn.chatgpt.com/docs/plugins)
-- [Skills and plugins](https://learn.chatgpt.com/docs/skills-and-plugins)
+- [Plugins](plugins.html)
+- [Skills and plugins](skills-and-plugins.html)
 - [Build plugins](https://developers.openai.com/plugins/build/plugins)
-- [Admin rollout guide](https://learn.chatgpt.com/docs/enterprise/admin-setup)
+- [Admin rollout guide](enterprise/admin-setup.html)
 
 ### Plugin management
 
-Source: [Plugin management](https://learn.chatgpt.com/docs/enterprise/plugin-management.md)
+Source: [Plugin management](enterprise/plugin-management.md)
 
 #### Before you begin
 
@@ -38346,7 +38346,7 @@ Workspace admins can import a plugin marketplace from GitHub and keep its plugin
 
 This page covers workspace import and sync. To configure marketplaces directly
 on local clients through cloud-managed or system `config.toml`, see
-[Configure plugin marketplaces and defaults](https://learn.chatgpt.com/docs/enterprise/managed-configuration#configure-plugin-marketplaces-and-defaults).
+[Configure plugin marketplaces and defaults](enterprise/managed-configuration.html#configure-plugin-marketplaces-and-defaults).
 To enable or disable plugins for a specific project, see [Enable or disable a plugin for a
 repo](https://developers.openai.com/plugins/build/plugins#enable-or-disable-a-plugin-for-a-repo).
 
@@ -38433,7 +38433,7 @@ Git sources can select a `ref` or a full 40-character commit `sha`. The authoriz
 
 GitHub import and sync do not apply repository installation or authentication policies, including `AVAILABLE`, `INSTALLED_BY_DEFAULT`, `NOT_AVAILABLE`, `ON_INSTALL`, and `ON_USE`. Workspace admins configure these settings for each plugin. Syncing an update or moving an existing plugin to GitHub management preserves its workspace policies.
 
-Use **Installation policy** to choose **Available** or **Installed** for each eligible role. Required apps must also be enabled, and members must have access to the connected service. Importing a plugin does not grant app access or connect members' accounts. See [Plugin controls](https://learn.chatgpt.com/docs/enterprise/apps-and-connectors) for role, app, and action controls.
+Use **Installation policy** to choose **Available** or **Installed** for each eligible role. Required apps must also be enabled, and members must have access to the connected service. Importing a plugin does not grant app access or connect members' accounts. See [Plugin controls](enterprise/apps-and-connectors.html) for role, app, and action controls.
 
 #### Move an existing plugin to GitHub management
 
@@ -38531,7 +38531,7 @@ Do not delete the marketplace just to reconnect it or change ownership: deletion
 
 ### Prisma AIRS
 
-Source: [Prisma AIRS](https://learn.chatgpt.com/docs/enterprise/prisma-airs.md)
+Source: [Prisma AIRS](enterprise/prisma-airs.md)
 
 Connect Palo Alto Networks Prisma AIRS to apply your security policies to
 Codex prompts before they reach the model. Workspace admins configure the
@@ -38605,7 +38605,7 @@ Codex sends newly submitted prompt text to the configured Prisma AIRS endpoint
 for inspection. This applies to covered Codex workflows, including the app, CLI,
 IDE extension, and cloud, when users authenticate to the configured ChatGPT
 workspace. Sessions authenticated with a Platform API key aren't covered. See
-[Enforce a login method or workspace](https://learn.chatgpt.com/docs/auth#enforce-a-login-method-or-workspace)
+[Enforce a login method or workspace](auth.html#enforce-a-login-method-or-workspace)
 to require the intended sign-in method and workspace.
 
 Prisma AIRS doesn't scan assistant responses, tool calls, tool results, files,
@@ -38631,12 +38631,12 @@ to manage the integration:
   connection and API key.
 
 For broader workspace setup and policy management, see the
-[Admin rollout guide](https://learn.chatgpt.com/docs/enterprise/admin-setup) and
-[Managed configuration](https://learn.chatgpt.com/docs/enterprise/managed-configuration).
+[Admin rollout guide](enterprise/admin-setup.html) and
+[Managed configuration](enterprise/managed-configuration.html).
 
 ### Roles and workspace permissions
 
-Source: [Roles and workspace permissions](https://learn.chatgpt.com/docs/enterprise/roles-and-workspace-permissions.md)
+Source: [Roles and workspace permissions](enterprise/roles-and-workspace-permissions.md)
 
 Different settings cover different parts of your organization's ChatGPT
 experience. Giving someone access in one area doesn't automatically give them
@@ -38660,10 +38660,10 @@ and effective requirements can differ by client and version.
 | Boundary          | What it controls                                                                                                                                                                                      | What it doesn't control                                                                          | Current source                                                                                                                                                                                           |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ChatGPT workspace | Membership, seats, built-in administration roles, and role-based access to supported workspace features                                                                                               | Local agent permissions, Platform API organization access, or permissions in a connected service | [ChatGPT workspace access](https://help.openai.com/en/articles/8266401-managing-members-seat-types-roles-and-access-in-chatgpt-enterprise) and [RBAC](https://help.openai.com/en/articles/11750701-rbac) |
-| Local clients     | Runtime behavior for covered capabilities in the ChatGPT desktop app, Codex CLI, and IDE extension, including approvals, filesystem and network access, permission profiles, and allowed integrations | A ChatGPT seat, feature or model entitlement, or access to external data                         | [Managed configuration](https://learn.chatgpt.com/docs/enterprise/managed-configuration) and [Permissions](https://learn.chatgpt.com/docs/permissions)                                                                                                   |
-| Codex cloud       | Eligibility to use hosted Codex workflows and the cloud environments made available to the user                                                                                                       | Local runtime policy or the repository permissions granted by a source system                    | [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environment)                                                                                                                                              |
+| Local clients     | Runtime behavior for covered capabilities in the ChatGPT desktop app, Codex CLI, and IDE extension, including approvals, filesystem and network access, permission profiles, and allowed integrations | A ChatGPT seat, feature or model entitlement, or access to external data                         | [Managed configuration](enterprise/managed-configuration.html) and [Permissions](permissions.html)                                                                                                   |
+| Codex cloud       | Eligibility to use hosted Codex workflows and the cloud environments made available to the user                                                                                                       | Local runtime policy or the repository permissions granted by a source system                    | [Cloud environments](environments/cloud-environment.html)                                                                                                                                              |
 | Platform API      | Organization and project membership, API keys, model access, usage, and billing for API-authenticated work                                                                                            | ChatGPT workspace membership, local-client access, or Codex cloud access                         | [OpenAI API Platform](https://platform.openai.com/docs/overview)                                                                                                                                         |
-| Plugins           | Plugin availability and installation, bundled skills, connector access, and supported connector actions                                                                                               | Authorization in the connected service or broader local and cloud runtime permissions            | [Plugin controls](https://learn.chatgpt.com/docs/enterprise/apps-and-connectors)                                                                                                                                                 |
+| Plugins           | Plugin availability and installation, bundled skills, connector access, and supported connector actions                                                                                               | Authorization in the connected service or broader local and cloud runtime permissions            | [Plugin controls](enterprise/apps-and-connectors.html)                                                                                                                                                 |
 | Connected systems | Which repositories, files, messages, and actions the authenticated account can access in the source system                                                                                            | ChatGPT workspace, plugin, Codex cloud, or Platform API entitlement                              | The connected service's administration and access controls                                                                                                                                               |
 
 A request must pass every boundary that applies to it. For example, workspace
@@ -38736,7 +38736,7 @@ procedure:
 
 #### Control Computer History access
 
-[Computer History](https://learn.chatgpt.com/docs/customization/computer-history) is off by default for
+[Computer History](customization/computer-history.html) is off by default for
 Business and Enterprise workspaces. Members cannot turn it on until a workspace
 owner explicitly grants access. Enterprise workspace owners can grant access
 by role:
@@ -38764,23 +38764,23 @@ system.
 
 Users can select a built-in or custom permission profile when local policy
 allows it. Administrators can distribute defaults and requirements through the
-supported managed-configuration channels. See [Permissions](https://learn.chatgpt.com/docs/permissions)
-for profile behavior and [Managed configuration](https://learn.chatgpt.com/docs/enterprise/managed-configuration)
+supported managed-configuration channels. See [Permissions](permissions.html)
+for profile behavior and [Managed configuration](enterprise/managed-configuration.html)
 for requirements, delivery, and precedence.
 
 #### Related docs
 
-- [Admin rollout guide](https://learn.chatgpt.com/docs/enterprise/admin-setup)
-- [Groups and provisioning](https://learn.chatgpt.com/docs/enterprise/groups-and-provisioning)
-- [User lifecycle management](https://learn.chatgpt.com/docs/enterprise/user-lifecycle)
-- [Workspace model availability](https://learn.chatgpt.com/docs/enterprise/workspace-model-availability)
-- [Access tokens](https://learn.chatgpt.com/docs/enterprise/access-tokens)
-- [Managed configuration](https://learn.chatgpt.com/docs/enterprise/managed-configuration)
-- [Authentication](https://learn.chatgpt.com/docs/auth)
+- [Admin rollout guide](enterprise/admin-setup.html)
+- [Groups and provisioning](enterprise/groups-and-provisioning.html)
+- [User lifecycle management](enterprise/user-lifecycle.html)
+- [Workspace model availability](enterprise/workspace-model-availability.html)
+- [Access tokens](enterprise/access-tokens.html)
+- [Managed configuration](enterprise/managed-configuration.html)
+- [Authentication](auth.html)
 
 ### Service accounts
 
-Source: [Service accounts](https://learn.chatgpt.com/docs/enterprise/service-accounts.md)
+Source: [Service accounts](enterprise/service-accounts.md)
 
 Service accounts let you run and scale headless Codex workflows across your organization without relying on an employee's account. Each continuous integration (CI) runner, scheduled job, or shared integration gets its own ChatGPT workspace identity, with the same groups, roles, access controls, and auditability you expect for people.
 
@@ -38788,7 +38788,7 @@ Only workspace owners and admins can create service accounts. They can let other
 
 Service accounts are available only on pay-as-you-go plans.
 
-A service account represents a non-human workspace identity. A [personal access token](https://learn.chatgpt.com/docs/enterprise/access-tokens) represents the workspace member who creates it. API Platform project service accounts and API keys use separate project access and billing.
+A service account represents a non-human workspace identity. A [personal access token](enterprise/access-tokens.html) represents the workspace member who creates it. API Platform project service accounts and API keys use separate project access and billing.
 
 #### Create and set up a service account
 
@@ -38833,7 +38833,7 @@ These roles apply to people managing the account. They are separate from the wor
 
 **Configure** and **Manager** can enable or disable the account. Only workspace owners and admins can create, delete, or share accounts. Operators manage shared accounts while signed in to their own ChatGPT accounts.
 
-For more about workspace permissions, see [Roles and workspace permissions](https://learn.chatgpt.com/docs/enterprise/roles-and-workspace-permissions).
+For more about workspace permissions, see [Roles and workspace permissions](enterprise/roles-and-workspace-permissions.html).
 
 #### Run Codex without signing in
 
@@ -38869,7 +38869,7 @@ If your workspace supports service-account provisioning through the System for C
 }
 ```
 
-Assign the identity to the workspace and required groups, then sync it. The identity provider manages the account's name, group membership, and lifecycle. SCIM-managed accounts can't be renamed or deleted in ChatGPT. See [Groups and provisioning](https://learn.chatgpt.com/docs/enterprise/groups-and-provisioning).
+Assign the identity to the workspace and required groups, then sync it. The identity provider manages the account's name, group membership, and lifecycle. SCIM-managed accounts can't be renamed or deleted in ChatGPT. See [Groups and provisioning](enterprise/groups-and-provisioning.html).
 
 #### Manage service accounts with the Admin API
 
@@ -38925,17 +38925,17 @@ Runs are attributed to the service account. Available workspace analytics and au
 
 #### Related docs
 
-- [Authentication](https://learn.chatgpt.com/docs/auth)
-- [Personal access tokens](https://learn.chatgpt.com/docs/enterprise/access-tokens)
-- [Roles and workspace permissions](https://learn.chatgpt.com/docs/enterprise/roles-and-workspace-permissions)
-- [Groups and provisioning](https://learn.chatgpt.com/docs/enterprise/groups-and-provisioning)
-- [Governance](https://learn.chatgpt.com/docs/enterprise/governance)
-- [Compliance API and audit events](https://learn.chatgpt.com/docs/enterprise/compliance-api)
-- [Non-interactive mode](https://learn.chatgpt.com/docs/non-interactive-mode)
+- [Authentication](auth.html)
+- [Personal access tokens](enterprise/access-tokens.html)
+- [Roles and workspace permissions](enterprise/roles-and-workspace-permissions.html)
+- [Groups and provisioning](enterprise/groups-and-provisioning.html)
+- [Governance](enterprise/governance.html)
+- [Compliance API and audit events](enterprise/compliance-api.html)
+- [Non-interactive mode](non-interactive-mode.html)
 
 ### Skill controls
 
-Source: [Skill controls](https://learn.chatgpt.com/docs/enterprise/skills.md)
+Source: [Skill controls](enterprise/skills.md)
 
 Skills are reusable workflows made from instructions and supporting resources.
 ChatGPT workspace Skills, filesystem skills used by covered local capabilities
@@ -38943,7 +38943,7 @@ in the ChatGPT desktop app, Codex CLI, or IDE extension, and plugins that
 package skills have separate lifecycle and access controls.
 
 For the complete administration model, see
-[Roles and workspace permissions](https://learn.chatgpt.com/docs/enterprise/roles-and-workspace-permissions).
+[Roles and workspace permissions](enterprise/roles-and-workspace-permissions.html).
 
 #### Skill distribution and administration
 
@@ -38966,7 +38966,7 @@ shared by ChatGPT and Codex.
 
 #### Owning controls
 
-See [Build skills](https://learn.chatgpt.com/docs/build-skills) for filesystem locations and authoring,
+See [Build skills](build-skills.html) for filesystem locations and authoring,
 [Skills in ChatGPT](https://help.openai.com/en/articles/20001066-skills-in-chatgpt)
 for current workspace procedures, and [Build plugins](https://developers.openai.com/plugins/build/plugins) for
 plugin packaging.
@@ -38979,16 +38979,16 @@ owns it.
 
 #### Related docs
 
-- [Skills and plugins](https://learn.chatgpt.com/docs/skills-and-plugins)
-- [Plugins](https://learn.chatgpt.com/docs/plugins)
-- [Build skills](https://learn.chatgpt.com/docs/build-skills)
+- [Skills and plugins](skills-and-plugins.html)
+- [Plugins](plugins.html)
+- [Build skills](build-skills.html)
 - [Build plugins](https://developers.openai.com/plugins/build/plugins)
-- [Admin rollout guide](https://learn.chatgpt.com/docs/enterprise/admin-setup)
-- [Plugin controls](https://learn.chatgpt.com/docs/enterprise/apps-and-connectors)
+- [Admin rollout guide](enterprise/admin-setup.html)
+- [Plugin controls](enterprise/apps-and-connectors.html)
 
 ### Usage Insights for ChatGPT Work in Codex
 
-Source: [Usage Insights for ChatGPT Work in Codex](https://learn.chatgpt.com/docs/enterprise/usage-insights.md)
+Source: [Usage Insights for ChatGPT Work in Codex](enterprise/usage-insights.md)
 
 Insights in the Admin Console helps you understand what teams use ChatGPT Work and Codex for and where credits are spent. Open a category in the workspace overview to see its tasks and usage. Check the scope shown in each view before comparing results.
 
@@ -39036,7 +39036,7 @@ Review the tasks in the category and the credits used by each one. The model, re
 
 Where available, review plugin and skill invocations for the category or task. These counts include activity across ChatGPT Work and Codex within the selected dates and filters. Invocations aren't the same as messages or completed tasks.
 
-Keep estimates labeled as estimates when you share a finding. Plugin and skill credit allocations can overlap, so don't add those views together to calculate total investment. For more on interpreting credits and billing impact, see [ChatGPT Work usage and cost](https://learn.chatgpt.com/docs/enterprise/chatgpt-work-usage-and-cost).
+Keep estimates labeled as estimates when you share a finding. Plugin and skill credit allocations can overlap, so don't add those views together to calculate total investment. For more on interpreting credits and billing impact, see [ChatGPT Work usage and cost](enterprise/chatgpt-work-usage-and-cost.html).
 
 #### Code review
 
@@ -39123,13 +39123,13 @@ Choose a recurring planning cycle, such as stock for an event. Agree which produ
 
 To assess ROI, compare the value of the improvement with the costs of AI, setup, training, and ongoing support. Include time spent reviewing and correcting the work. Time saved isn't automatically a cash saving; check how the team uses that capacity.
 
-Before raising usage limits, review current limits, consumption, and the work that needs more capacity. Credits consumed aren't automatically an additional invoice charge. See [ChatGPT Work usage and cost](https://learn.chatgpt.com/docs/enterprise/chatgpt-work-usage-and-cost).
+Before raising usage limits, review current limits, consumption, and the work that needs more capacity. Credits consumed aren't automatically an additional invoice charge. See [ChatGPT Work usage and cost](enterprise/chatgpt-work-usage-and-cost.html).
 
 Usage insights are one part of understanding the return on your investment in ChatGPT Work and Codex. They show usage and credit consumption within the selected scope. The teams doing the work can explain what changed, whether results improved, and what that improvement is worth. Use both to decide which workflows to expand and where the team needs more support.
 
 ### User lifecycle management
 
-Source: [User lifecycle management](https://learn.chatgpt.com/docs/enterprise/user-lifecycle.md)
+Source: [User lifecycle management](enterprise/user-lifecycle.md)
 
 Use this guide to give employees the right ChatGPT workspace access when they
 join, update that access when their responsibilities change, and remove access
@@ -39295,7 +39295,7 @@ administration, then perform the same seat, group, role, and sign-in checks.
 
 A group organizes members but doesn't grant access to every feature by itself.
 For the current role-assignment procedure, see
-[Roles and workspace permissions](https://learn.chatgpt.com/docs/enterprise/roles-and-workspace-permissions)
+[Roles and workspace permissions](enterprise/roles-and-workspace-permissions.html)
 and [Configure role-based access control](https://help.openai.com/en/articles/11750701-rbac).
 
 #### Update access when an employee changes teams
@@ -39378,7 +39378,7 @@ The **Access tokens** page identifies each token's creator and status. Use
    those tokens.
 3. Choose the replacement identity. For a durable non-human workflow on an
    eligible pay-as-you-go plan, use an approved dedicated [service
-   account](https://learn.chatgpt.com/docs/enterprise/service-accounts). Otherwise, identify an
+   account](enterprise/service-accounts.html). Otherwise, identify an
    approved active workflow owner. Have a workspace owner grant that person
    access-token creation permission if needed and confirm that the person has
    local Codex permission.
@@ -39403,7 +39403,7 @@ workflow doesn't require. The following example shows the scoped interface:
 Workspace owners and admins can revoke any token in their workspace. A member
 with access-token permission can revoke only tokens they created. For current
 token permissions and rotation steps, see
-[Access tokens](https://learn.chatgpt.com/docs/enterprise/access-tokens#rotate-or-revoke-a-token).
+[Access tokens](enterprise/access-tokens.html#rotate-or-revoke-a-token).
 
 #### Review connected systems and retained data
 
@@ -39419,8 +39419,8 @@ relevant service owner to review access to:
 
 Apply the controls owned by each system instead of assuming that a workspace
 group or SCIM change updates permissions everywhere. See
-[Roles and workspace permissions](https://learn.chatgpt.com/docs/enterprise/roles-and-workspace-permissions)
-for the complete boundary model and [Plugin controls](https://learn.chatgpt.com/docs/enterprise/apps-and-connectors)
+[Roles and workspace permissions](enterprise/roles-and-workspace-permissions.html)
+for the complete boundary model and [Plugin controls](enterprise/apps-and-connectors.html)
 for plugin availability, bundled skills, and connected-app permissions.
 
 Removing workspace access isn't the same as deleting content. When a member
@@ -39446,7 +39446,7 @@ approval owner, and token-revocation verification in the approved system.
 Confirm available records, administrator permissions, and retention in the
 authenticated [Admin API reference](https://chatgpt.com/admin/api-reference).
 Sensitive compliance scopes can require a workspace owner. For the product
-overview, see [Compliance API and audit events](https://learn.chatgpt.com/docs/enterprise/compliance-api).
+overview, see [Compliance API and audit events](enterprise/compliance-api.html).
 Don't infer event coverage, fields, or retention periods from this guide.
 
 #### Troubleshoot missing or unexpected access
@@ -39503,19 +39503,19 @@ access reviews according to your organization's identity and security policies.
 
 #### Related docs
 
-- [Admin rollout guide](https://learn.chatgpt.com/docs/enterprise/admin-setup)
-- [Groups and provisioning](https://learn.chatgpt.com/docs/enterprise/groups-and-provisioning)
-- [Roles and workspace permissions](https://learn.chatgpt.com/docs/enterprise/roles-and-workspace-permissions)
-- [Plugin controls](https://learn.chatgpt.com/docs/enterprise/apps-and-connectors)
-- [Access tokens](https://learn.chatgpt.com/docs/enterprise/access-tokens)
-- [Service accounts](https://learn.chatgpt.com/docs/enterprise/service-accounts)
-- [Authentication](https://learn.chatgpt.com/docs/auth)
-- [Managed configuration](https://learn.chatgpt.com/docs/enterprise/managed-configuration)
-- [Compliance API and audit events](https://learn.chatgpt.com/docs/enterprise/compliance-api)
+- [Admin rollout guide](enterprise/admin-setup.html)
+- [Groups and provisioning](enterprise/groups-and-provisioning.html)
+- [Roles and workspace permissions](enterprise/roles-and-workspace-permissions.html)
+- [Plugin controls](enterprise/apps-and-connectors.html)
+- [Access tokens](enterprise/access-tokens.html)
+- [Service accounts](enterprise/service-accounts.html)
+- [Authentication](auth.html)
+- [Managed configuration](enterprise/managed-configuration.html)
+- [Compliance API and audit events](enterprise/compliance-api.html)
 
 ### Using the Admin plugin in ChatGPT Work
 
-Source: [Using the Admin plugin in ChatGPT Work](https://learn.chatgpt.com/docs/enterprise/admin-plugin.md)
+Source: [Using the Admin plugin in ChatGPT Work](enterprise/admin-plugin.md)
 
 Use this guide to understand how the Admin plugin supports common administration work, prepare for a task, and try prompts for key use cases with the right approvals and context.
 
@@ -39725,20 +39725,20 @@ Start with a defined admin task: identify the required inputs and permissions, r
 #### Related resources
 
 - [ChatGPT workspace Admin API reference](https://chatgpt.com/public/admin/api-reference)
-- [Administration boundaries](https://learn.chatgpt.com/docs/enterprise/roles-and-workspace-permissions#understand-the-control-boundaries)
-- [ChatGPT workspace Analytics API](https://learn.chatgpt.com/docs/enterprise/analytics-api)
-- [ChatGPT workspace Compliance API](https://learn.chatgpt.com/docs/enterprise/compliance-api)
+- [Administration boundaries](enterprise/roles-and-workspace-permissions.html#understand-the-control-boundaries)
+- [ChatGPT workspace Analytics API](enterprise/analytics-api.html)
+- [ChatGPT workspace Compliance API](enterprise/compliance-api.html)
 
 ### Workspace analytics
 
-Source: [Workspace analytics](https://learn.chatgpt.com/docs/enterprise/workspace-analytics.md)
+Source: [Workspace analytics](enterprise/workspace-analytics.md)
 
 Use ChatGPT workspace analytics for broad workspace adoption. Use Codex
 analytics for Codex-focused reporting. Use the Analytics API for programmatic
 aggregates and the Compliance API for auditable records.
 
 These reporting surfaces don't grant product access or set runtime policy. See
-[Roles and workspace permissions](https://learn.chatgpt.com/docs/enterprise/roles-and-workspace-permissions)
+[Roles and workspace permissions](enterprise/roles-and-workspace-permissions.html)
 for the administration boundaries.
 
 #### Choose a reporting surface
@@ -39771,13 +39771,13 @@ schema contract. Dashboard categories, fields, filters, and export formats can
 change independently of this page.
 
 For a walkthrough of the Insights dashboard, see
-[Usage Insights](https://learn.chatgpt.com/docs/enterprise/usage-insights).
+[Usage Insights](enterprise/usage-insights.html).
 Explore Use cases and Tasks, compare activity with consumption and reach, and
 open a category to understand its details.
 
-For automated reporting, use the [Analytics API](https://learn.chatgpt.com/docs/enterprise/analytics-api)
+For automated reporting, use the [Analytics API](enterprise/analytics-api.html)
 and follow its API reference. For auditable records, use the
-[Compliance API](https://learn.chatgpt.com/docs/enterprise/compliance-api).
+[Compliance API](enterprise/compliance-api.html).
 
 #### Interpret reporting data
 
@@ -39789,12 +39789,12 @@ Keep these boundaries in mind:
   separate contracts.
 - Analytics describes activity; it doesn't grant access or change runtime
   permissions.
-- [ChatGPT usage limits and spend controls](https://learn.chatgpt.com/docs/enterprise/usage-limits) are
+- [ChatGPT usage limits and spend controls](enterprise/usage-limits.html) are
   a separate, plan-dependent workspace boundary.
 
 ### Workspace model availability
 
-Source: [Workspace model availability](https://learn.chatgpt.com/docs/enterprise/workspace-model-availability.md)
+Source: [Workspace model availability](enterprise/workspace-model-availability.md)
 
 The models available to someone depend on the product surface and how they
 signed in. A model setting in your ChatGPT workspace doesn't automatically
@@ -39802,16 +39802,16 @@ apply to Codex in the ChatGPT desktop app, Codex CLI, the IDE extension, Codex
 cloud, or the OpenAI API.
 
 For the complete administration model, see
-[Roles and workspace permissions](https://learn.chatgpt.com/docs/enterprise/roles-and-workspace-permissions).
+[Roles and workspace permissions](enterprise/roles-and-workspace-permissions.html).
 
 #### Identify the model boundary
 
 | Product or authentication boundary                                                         | Model access follows                                                                                  | Current source                                                                                                                |
 | ------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | ChatGPT workspace                                                                          | The workspace plan, member access, workspace settings, and supported role permissions                 | [ChatGPT Enterprise and Edu models and limits](https://help.openai.com/en/articles/11165333-chatgpt-enterprise-models-limits) |
-| Codex in the ChatGPT desktop app, Codex CLI, and IDE extension with ChatGPT sign-in        | Models supported by the specific client and the access available to the signed-in ChatGPT identity    | [Codex models](https://learn.chatgpt.com/docs/models) and current workspace guidance                                                                  |
-| Codex cloud                                                                                | Models supported by hosted Codex workflows and the access available to the signed-in ChatGPT identity | [Codex models](https://learn.chatgpt.com/docs/models) and [Codex cloud](https://learn.chatgpt.com/docs/cloud)                                                                 |
-| Codex in the ChatGPT desktop app, Codex CLI, and IDE extension with API-key authentication | The OpenAI API organization and project associated with the key                                       | [Authentication](https://learn.chatgpt.com/docs/auth) and the [OpenAI API Platform](https://platform.openai.com/docs/overview)                        |
+| Codex in the ChatGPT desktop app, Codex CLI, and IDE extension with ChatGPT sign-in        | Models supported by the specific client and the access available to the signed-in ChatGPT identity    | [Codex models](models.html) and current workspace guidance                                                                  |
+| Codex cloud                                                                                | Models supported by hosted Codex workflows and the access available to the signed-in ChatGPT identity | [Codex models](models.html) and [Codex cloud](cloud.md)                                                                 |
+| Codex in the ChatGPT desktop app, Codex CLI, and IDE extension with API-key authentication | The OpenAI API organization and project associated with the key                                       | [Authentication](auth.html) and the [OpenAI API Platform](https://platform.openai.com/docs/overview)                        |
 
 Check the current source for the surface the user is actually using. Don't
 copy a model catalog or assume that a ChatGPT model-picker setting has the same
@@ -39834,7 +39834,7 @@ doesn't support changing its default model.
 
 Fast mode availability depends on the workspace, product surface, and any
 enforced `features.fast_mode` setting in
-[`requirements.toml`](https://learn.chatgpt.com/docs/config-file/config-reference#requirementstoml).
+[`requirements.toml`](config-file/config-reference.html#requirementstoml).
 This setting can pin Fast mode on or off for managed local Codex clients; it
 isn't a starting default and can't override workspace or product availability.
 
@@ -39858,8 +39858,8 @@ confirm availability on each client used by your pilot group.
 
 Enabling access and choosing a starting model are separate decisions. Check the
 applicable seat, role, and billing arrangement before setting Astra as a default.
-See [pricing](https://learn.chatgpt.com/docs/pricing) for allowance and billing
-guidance and [safety monitoring](https://learn.chatgpt.com/docs/agent-approvals-security#safety-monitoring-and-paused-tasks)
+See [pricing](pricing.html) for allowance and billing
+guidance and [safety monitoring](agent-approvals-security.html#safety-monitoring-and-paused-tasks)
 for tasks that pause for review.
 
 For API-key sign-in, Astra access follows the API organization and project
@@ -39883,8 +39883,8 @@ tasks. Check scripts and commands that explicitly select `gpt-5.5` too.
 
 Changing a default doesn't grant model access. Confirm that the replacement
 is available to the affected users on each client. See
-[Codex models](https://learn.chatgpt.com/docs/models#gpt-55-retirement) and
-[managed configuration](https://learn.chatgpt.com/docs/enterprise/managed-configuration)
+[Codex models](models.html#gpt-55-retirement) and
+[managed configuration](enterprise/managed-configuration.html)
 for migration guidance.
 
 #### Prepare for the GPT-5.4 retirement
@@ -39899,8 +39899,8 @@ models available to the affected users' plans and clients:
   Enterprise and Edu, an administrator must enable Luna first.
 
 The OpenAI API and Codex authenticated with your own API key aren't affected.
-See [Codex models](https://learn.chatgpt.com/docs/models#deprecated-codex-models) and
-[managed configuration](https://learn.chatgpt.com/docs/enterprise/managed-configuration)
+See [Codex models](models.html#deprecated-codex-models) and
+[managed configuration](enterprise/managed-configuration.html)
 for migration details.
 
 #### Separate access from runtime permissions
@@ -39928,118 +39928,118 @@ If a user can't select an expected model:
 - [ChatGPT Enterprise and Edu models and limits](https://help.openai.com/en/articles/11165333-chatgpt-enterprise-models-limits)
 - [Manage workspace settings](https://help.openai.com/en/articles/8411955)
 - [Role-based access control](https://help.openai.com/en/articles/11750701-rbac)
-- [Codex models](https://learn.chatgpt.com/docs/models)
-- [Codex feature availability by plan](https://learn.chatgpt.com/docs/pricing#feature-availability)
-- [Authentication](https://learn.chatgpt.com/docs/auth)
+- [Codex models](models.html)
+- [Codex feature availability by plan](pricing.html#feature-availability)
+- [Authentication](auth.html)
 
 #### Related docs
 
-- [Admin rollout guide](https://learn.chatgpt.com/docs/enterprise/admin-setup)
-- [Groups and provisioning](https://learn.chatgpt.com/docs/enterprise/groups-and-provisioning)
-- [Roles and workspace permissions](https://learn.chatgpt.com/docs/enterprise/roles-and-workspace-permissions)
-- [Managed configuration](https://learn.chatgpt.com/docs/enterprise/managed-configuration)
+- [Admin rollout guide](enterprise/admin-setup.html)
+- [Groups and provisioning](enterprise/groups-and-provisioning.html)
+- [Roles and workspace permissions](enterprise/roles-and-workspace-permissions.html)
+- [Managed configuration](enterprise/managed-configuration.html)
 
 ### Administration
 
-Source: [Administration](https://learn.chatgpt.com/docs/administration.md)
+Source: [Administration](administration.md)
 
 Set access and policy boundaries for ChatGPT, Codex developer tools, APIs, plugins, and connected systems.
 
 Administration covers six related boundaries: ChatGPT workspace access; local runtime policy for covered capabilities in the ChatGPT desktop app, Codex CLI, and IDE extension; Codex cloud eligibility; Platform API access; plugin availability and connector permissions; and permissions in connected systems. Start with workspace identity and access, then apply the runtime and source-system controls required for each deployment.
 
-[Explore authentication](https://learn.chatgpt.com/docs/auth?surface=app)
+[Explore authentication](auth.html)
 
 #### Getting started
 
 Start with the rollout guide, then use the reference pages for each control boundary.
 
-- [Admin rollout guide](https://learn.chatgpt.com/docs/enterprise/admin-setup): Plan access, assign owners, configure controls, and verify the rollout.
+- [Admin rollout guide](enterprise/admin-setup.html): Plan access, assign owners, configure controls, and verify the rollout.
 
 #### ChatGPT Work
 
 Review the ChatGPT Work overview and administration reference.
 
-- [ChatGPT Work Overview](https://learn.chatgpt.com/docs/enterprise/chatgpt-work-overview): Understand hosted execution, network controls, data boundaries, and audit visibility.
+- [ChatGPT Work Overview](enterprise/chatgpt-work-overview.html): Understand hosted execution, network controls, data boundaries, and audit visibility.
 
-- [ChatGPT Work cloud security](https://learn.chatgpt.com/docs/enterprise/chatgpt-work-cloud-security): Review hosted execution, connected accounts, access controls, retention, and audit visibility.
+- [ChatGPT Work cloud security](enterprise/chatgpt-work-cloud-security.html): Review hosted execution, connected accounts, access controls, retention, and audit visibility.
 
-- [ChatGPT Work local security](https://learn.chatgpt.com/docs/enterprise/chatgpt-work-local-security): Review local execution, device and browser access, managed policies, data handling, and audit limitations.
+- [ChatGPT Work local security](enterprise/chatgpt-work-local-security.html): Review local execution, device and browser access, managed policies, data handling, and audit limitations.
 
-- [ChatGPT Work admin FAQ](https://learn.chatgpt.com/docs/enterprise/work-admin-faq): Review access, data, governance, usage, and incident controls for ChatGPT Work.
+- [ChatGPT Work admin FAQ](enterprise/work-admin-faq.html): Review access, data, governance, usage, and incident controls for ChatGPT Work.
 
-- [ChatGPT Work: usage and cost](https://learn.chatgpt.com/docs/enterprise/chatgpt-work-usage-and-cost): Understand shared credits, billing impact, spending controls, and adoption planning.
+- [ChatGPT Work: usage and cost](enterprise/chatgpt-work-usage-and-cost.html): Understand shared credits, billing impact, spending controls, and adoption planning.
 
 #### Identity and authentication
 
 Choose how people sign in and issue credentials for programmatic workflows.
 
-- [Authentication overview](https://learn.chatgpt.com/docs/auth): Compare sign-in methods, credential storage, and enforcement controls.
+- [Authentication overview](auth.html): Compare sign-in methods, credential storage, and enforcement controls.
 
-- [Personal Access Tokens](https://learn.chatgpt.com/docs/enterprise/access-tokens): Create and manage tokens for programmatic access.
+- [Personal Access Tokens](enterprise/access-tokens.html): Create and manage tokens for programmatic access.
 
-- [Service accounts](https://learn.chatgpt.com/docs/enterprise/service-accounts): Create and manage workspace identities for automated workflows.
+- [Service accounts](enterprise/service-accounts.html): Create and manage workspace identities for automated workflows.
 
 #### Workspace access, policy, and models
 
 Assign ChatGPT workspace access and keep it separate from local runtime policy, Codex cloud access, and Platform API access.
 
-- [Groups and provisioning](https://learn.chatgpt.com/docs/enterprise/groups-and-provisioning): Manage manual and SCIM groups, provisioning, and rollout cohorts.
+- [Groups and provisioning](enterprise/groups-and-provisioning.html): Manage manual and SCIM groups, provisioning, and rollout cohorts.
 
-- [User lifecycle management](https://learn.chatgpt.com/docs/enterprise/user-lifecycle): Provision employees, update group access, and revoke departing users' credentials.
+- [User lifecycle management](enterprise/user-lifecycle.html): Provision employees, update group access, and revoke departing users' credentials.
 
-- [Roles and workspace permissions](https://learn.chatgpt.com/docs/enterprise/roles-and-workspace-permissions): Use the canonical map of workspace, runtime, API, plugin, and source-system controls.
+- [Roles and workspace permissions](enterprise/roles-and-workspace-permissions.html): Use the canonical map of workspace, runtime, API, plugin, and source-system controls.
 
-- [GPTs and Sharing](https://learn.chatgpt.com/docs/enterprise/gpts-and-sharing): Manage GPT sharing, ownership, connected apps, and third-party actions across your workspace.
+- [GPTs and Sharing](enterprise/gpts-and-sharing.html): Manage GPT sharing, ownership, connected apps, and third-party actions across your workspace.
 
-- [Managed configuration](https://learn.chatgpt.com/docs/enterprise/managed-configuration): Distribute managed settings where supported and enforce runtime requirements for covered capabilities in the ChatGPT desktop app, Codex CLI, and IDE extension.
+- [Managed configuration](enterprise/managed-configuration.html): Distribute managed settings where supported and enforce runtime requirements for covered capabilities in the ChatGPT desktop app, Codex CLI, and IDE extension.
 
-- [Prisma AIRS](https://learn.chatgpt.com/docs/enterprise/prisma-airs): Apply workspace-wide security policies to Codex prompts.
+- [Prisma AIRS](enterprise/prisma-airs.html): Apply workspace-wide security policies to Codex prompts.
 
-- [HIPAA configuration](https://learn.chatgpt.com/docs/hipaa-configuration): Configure local runtime safeguards for workflows that may handle protected health information.
+- [HIPAA configuration](hipaa-configuration.html): Configure local runtime safeguards for workflows that may handle protected health information.
 
-- [Workspace model availability](https://learn.chatgpt.com/docs/enterprise/workspace-model-availability): Separate model access for ChatGPT, Codex in the ChatGPT desktop app, Codex CLI, the IDE extension, Codex cloud, and the Platform API.
+- [Workspace model availability](enterprise/workspace-model-availability.html): Separate model access for ChatGPT, Codex in the ChatGPT desktop app, Codex CLI, the IDE extension, Codex cloud, and the Platform API.
 
 #### Plugin and connector controls
 
 Control plugin installation, bundled skills, connector-backed capabilities, and connected-service access.
 
-- [Plugin controls](https://learn.chatgpt.com/docs/enterprise/apps-and-connectors): Manage plugin availability, connector access and actions, and source-system permissions.
+- [Plugin controls](enterprise/apps-and-connectors.html): Manage plugin availability, connector access and actions, and source-system permissions.
 
-- [Plugin management](https://learn.chatgpt.com/docs/enterprise/plugin-management): Import and sync workspace plugins from GitHub.
+- [Plugin management](enterprise/plugin-management.html): Import and sync workspace plugins from GitHub.
 
-- [Skill controls](https://learn.chatgpt.com/docs/enterprise/skills): Compare ChatGPT workspace, local filesystem, and plugin skill controls.
+- [Skill controls](enterprise/skills.html): Compare ChatGPT workspace, local filesystem, and plugin skill controls.
 
 #### Usage, governance, and compliance
 
 Measure adoption and route reporting or audit data to the system that owns it.
 
-- [Governance](https://learn.chatgpt.com/docs/enterprise/governance): Choose the right analytics, spend, and audit surface for each question.
+- [Governance](enterprise/governance.html): Choose the right analytics, spend, and audit surface for each question.
 
-- [Admin plugin](https://learn.chatgpt.com/docs/enterprise/admin-plugin): Use the Admin plugin for permissions, approvals, and supported administrative workflows.
+- [Admin plugin](enterprise/admin-plugin.html): Use the Admin plugin for permissions, approvals, and supported administrative workflows.
 
-- [Workspace analytics](https://learn.chatgpt.com/docs/enterprise/workspace-analytics): Review workspace-level ChatGPT adoption and Codex usage.
+- [Workspace analytics](enterprise/workspace-analytics.html): Review workspace-level ChatGPT adoption and Codex usage.
 
-- [Usage Insights](https://learn.chatgpt.com/docs/enterprise/usage-insights): Explore usage across ChatGPT Work and Codex and assess workflow results with your team.
+- [Usage Insights](enterprise/usage-insights.html): Explore usage across ChatGPT Work and Codex and assess workflow results with your team.
 
-- [Analytics API](https://learn.chatgpt.com/docs/enterprise/analytics-api): Automate developer activity and code review reporting with the Codex Analytics API.
+- [Analytics API](enterprise/analytics-api.html): Automate developer activity and code review reporting with the Codex Analytics API.
 
-- [Compliance API and audit events](https://learn.chatgpt.com/docs/enterprise/compliance-api): Export activity records for audit and investigation workflows.
+- [Compliance API and audit events](enterprise/compliance-api.html): Export activity records for audit and investigation workflows.
 
 #### Deployment and model providers
 
 Deploy and update desktop apps, connect managed hosts, or configure a supported external model provider.
 
-- [Manage app updates](https://learn.chatgpt.com/docs/enterprise/manage-app-updates): Control desktop app updates and deploy approved versions through your device management platform.
+- [Manage app updates](enterprise/manage-app-updates.html): Control desktop app updates and deploy approved versions through your device management platform.
 
-- [Windows app deployment](https://learn.chatgpt.com/docs/enterprise/windows-deployment): Choose an installation and update path for managed Windows devices.
+- [Windows app deployment](enterprise/windows-deployment.html): Choose an installation and update path for managed Windows devices.
 
-- [Remote connections](https://learn.chatgpt.com/docs/remote-connections): Start and control work on connected computers.
+- [Remote connections](remote-connections.html): Start and control work on connected computers.
 
-- [Amazon Bedrock](https://learn.chatgpt.com/docs/amazon-bedrock): Configure supported local clients to use models available through Bedrock.
+- [Amazon Bedrock](amazon-bedrock.html): Configure supported local clients to use models available through Bedrock.
 
 ### ChatGPT desktop app for Linux
 
-Source: [ChatGPT desktop app for Linux](https://learn.chatgpt.com/docs/linux/linux-app.md)
+Source: [ChatGPT desktop app for Linux](linux/linux-app.md)
 
 The ChatGPT desktop app for Linux is available in preview. Install the package
 for your Linux distribution and processor architecture, then sign in with your
@@ -40093,7 +40093,7 @@ For ARM64, replace `chatgpt_amd64.deb` with `chatgpt_arm64.deb`.
 
 Open **ChatGPT** from your applications menu, or run `chatgpt` in a terminal.
 Sign in with your ChatGPT account and follow the
-[desktop app quickstart](https://learn.chatgpt.com/docs/quickstart?setup=app).
+[desktop app quickstart](quickstart.html).
 
 #### Install on Fedora
 
@@ -40110,7 +40110,7 @@ For ARM64, replace `chatgpt.x86_64.rpm` with `chatgpt.aarch64.rpm`.
 
 Open **ChatGPT** from your applications menu, or run `chatgpt` in a terminal.
 Sign in with your ChatGPT account and follow the
-[desktop app quickstart](https://learn.chatgpt.com/docs/quickstart?setup=app).
+[desktop app quickstart](quickstart.html).
 
 #### Install on Arch Linux
 
@@ -40127,7 +40127,7 @@ repository, and installs ChatGPT. Installation performs a full system upgrade
 and prompts for confirmation.
 
 Open **ChatGPT** from your applications menu. Sign in with your ChatGPT account
-and follow the [desktop app quickstart](https://learn.chatgpt.com/docs/quickstart?setup=app).
+and follow the [desktop app quickstart](quickstart.html).
 
 #### Update the app
 
@@ -40160,7 +40160,7 @@ The preview supports the desktop distributions listed in
 Other Linux distributions may work but aren't formally supported.
 
 Some features have separate platform requirements. For example,
-[Computer Use](https://learn.chatgpt.com/docs/computer-use) is available on macOS and Windows but not
+[Computer Use](computer-use.html) is available on macOS and Windows but not
 yet in the Linux preview. A future release will add Linux support.
 
 #### Wayland support
@@ -40178,19 +40178,19 @@ shortcuts, may not fully work while native Wayland support matures.
 
 #### Next steps
 
-- Follow the [desktop app quickstart](https://learn.chatgpt.com/docs/quickstart?setup=app).
-- Set up the [Chrome extension](https://learn.chatgpt.com/docs/chrome-extension) for browser integration.
-- Review [permissions](https://learn.chatgpt.com/docs/permissions) for local projects and commands.
+- Follow the [desktop app quickstart](quickstart.html).
+- Set up the [Chrome extension](chrome-extension.html) for browser integration.
+- Review [permissions](permissions.html) for local projects and commands.
 
 ### ChatGPT desktop app for Windows
 
-Source: [ChatGPT desktop app for Windows](https://learn.chatgpt.com/docs/windows/windows-app.md)
+Source: [ChatGPT desktop app for Windows](windows/windows-app.md)
 
 Use the ChatGPT desktop app on Windows with native sandbox and PowerShell support
 
 ### Open Source
 
-Source: [Open Source](https://learn.chatgpt.com/docs/open-source.md)
+Source: [Open Source](open-source.md)
 
 OpenAI develops key parts of Codex in the open. That work lives on GitHub so you can follow progress, report issues, and contribute improvements.
 
@@ -40223,7 +40223,7 @@ When you file an issue, include which component you are using (CLI, SDK, IDE ext
 
 ### Use ChatGPT Work and Codex with Amazon Bedrock
 
-Source: [Use ChatGPT Work and Codex with Amazon Bedrock](https://learn.chatgpt.com/docs/amazon-bedrock.md)
+Source: [Use ChatGPT Work and Codex with Amazon Bedrock](amazon-bedrock.md)
 
 Configure local ChatGPT Work and Codex surfaces to use OpenAI models available
 through Amazon Bedrock. In this setup, the local client sends model requests to
@@ -40483,10 +40483,10 @@ service behavior, contact the customer's AWS administrator or AWS Support.
 
 ### Windows sandbox
 
-Source: [Windows sandbox](https://learn.chatgpt.com/docs/windows/windows-sandbox.md)
+Source: [Windows sandbox](windows/windows-sandbox.md)
 
-Use Codex on Windows with the native [ChatGPT desktop app](https://learn.chatgpt.com/docs/windows/windows-app), the
-[CLI](https://learn.chatgpt.com/docs/codex/cli), or the [IDE extension](https://learn.chatgpt.com/docs/codex/ide).
+Use Codex on Windows with the native [ChatGPT desktop app](windows/windows-app.html), the
+[CLI](codex/cli.html), or the [IDE extension](codex/ide.html).
 
 The ChatGPT desktop app on Windows supports core workflows such as parallel chats,
 worktrees, scheduled tasks, Git functionality, the built-in browser, file previews,
@@ -40531,7 +40531,7 @@ doesn't work in your environment, use `unelevated` as a fallback while you
 troubleshoot the setup.
 
 Enterprise administrators can constrain which native sandbox implementations
-Codex can use through [`requirements.toml`](https://learn.chatgpt.com/docs/enterprise/managed-configuration#admin-enforced-requirements-requirementstoml):
+Codex can use through [`requirements.toml`](enterprise/managed-configuration.html#admin-enforced-requirements-requirementstoml):
 
 ```toml
 [windows]
@@ -40541,7 +40541,7 @@ allowed_sandbox_implementations = ["elevated"]
 This example requires the `elevated` sandbox and prevents users from falling
 back to `unelevated`. To permit either implementation, include both values;
 Codex prefers `elevated` when no mode is selected. See the
-[`requirements.toml` reference](https://learn.chatgpt.com/docs/config-file/config-reference#requirementstoml) for
+[`requirements.toml` reference](config-file/config-reference.html#requirementstoml) for
 the supported values.
 
 By default, both sandbox modes also use a private desktop for stronger UI
@@ -40553,11 +40553,11 @@ older `Winsta0\\Default` behavior for compatibility.
 Running Codex in full access mode means Codex is not limited to your project
 directory and might perform unintentional destructive actions that can lead to
 data loss. For safer automation, keep sandbox boundaries in place and use
-[rules](https://learn.chatgpt.com/docs/agent-configuration/rules) for specific exceptions, or set your
+[rules](agent-configuration/rules.html) for specific exceptions, or set your
 [approval policy to
-never](https://learn.chatgpt.com/docs/agent-approvals-security#run-without-approval-prompts) to have
+never](agent-approvals-security.html#run-without-approval-prompts) to have
 Codex attempt to solve problems without asking for escalated permissions,
-based on your [approval and security setup](https://learn.chatgpt.com/docs/agent-approvals-security).
+based on your [approval and security setup](agent-approvals-security.html).
 
 #### Windows version matrix
 
@@ -40585,7 +40585,7 @@ When a command fails because the Windows sandbox can't read a directory, use:
 
 The path must be an existing absolute directory. After the command succeeds, later commands that run in the sandbox can read that directory during the current session.
 
-Use the native Windows sandbox by default. Choose [WSL](https://learn.chatgpt.com/docs/windows/wsl)
+Use the native Windows sandbox by default. Choose [WSL](windows/wsl.html)
 when you need Linux-native tooling, your workflow already lives in WSL2, or
 neither native Windows sandbox mode meets your needs.
 
@@ -40728,10 +40728,10 @@ Then fully restart VS Code after installation.
 
 ### WSL
 
-Source: [WSL](https://learn.chatgpt.com/docs/windows/wsl.md)
+Source: [WSL](windows/wsl.md)
 
 When you use WSL2, Codex runs inside the Linux environment instead of using the
-native [Windows sandbox](https://learn.chatgpt.com/docs/windows/windows-sandbox). Choose WSL2 when you need Linux-native
+native [Windows sandbox](windows/windows-sandbox.html). Choose WSL2 when you need Linux-native
 tooling, your repositories and developer workflow already live in WSL2, or
 neither native Windows sandbox mode works for your environment.
 

@@ -1,8 +1,8 @@
 # Configuration Reference
 
-> For the complete documentation index, see [llms.txt](https://learn.chatgpt.com/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
-Use this page as a searchable reference for Codex configuration files. For conceptual guidance and examples, start with [Config basics](https://learn.chatgpt.com/docs/config-file/config-basic) and [Advanced Config](https://learn.chatgpt.com/docs/config-file/config-advanced).
+Use this page as a searchable reference for Codex configuration files. For conceptual guidance and examples, start with [Config basics](config-basic.html) and [Advanced Config](config-advanced.html).
 
 ## `config.toml`
 
@@ -15,16 +15,16 @@ or telemetry routing keys. Codex ignores `openai_base_url`,
 `model_providers`, `notify`, `profile`, `profiles`,
 `experimental_realtime_ws_base_url`, and `otel` when they appear in a
 project-local `.codex/config.toml`; put provider, notification, and telemetry
-keys in user-level config instead. Config [profile files](https://learn.chatgpt.com/docs/config-file/config-advanced#profiles) live next to
+keys in user-level config instead. Config [profile files](config-advanced.html#profiles) live next to
 `config.toml` as `$CODEX_HOME/profile-name.config.toml`; select one with
 `--profile profile-name`.
 
-For sandbox and approval keys (`approval_policy`, `sandbox_mode`, and `sandbox_workspace_write.*`), pair this reference with [Sandbox and approvals](https://learn.chatgpt.com/docs/agent-approvals-security#sandbox-and-approvals), [Protected paths in writable roots](https://learn.chatgpt.com/docs/agent-approvals-security#protected-paths-in-writable-roots), and [Network access](https://learn.chatgpt.com/docs/agent-approvals-security#network-access). For beta permission profiles, see [Permissions](https://learn.chatgpt.com/docs/permissions).
+For sandbox and approval keys (`approval_policy`, `sandbox_mode`, and `sandbox_workspace_write.*`), pair this reference with [Sandbox and approvals](../agent-approvals-security.html#sandbox-and-approvals), [Protected paths in writable roots](../agent-approvals-security.html#protected-paths-in-writable-roots), and [Network access](../agent-approvals-security.html#network-access). For beta permission profiles, see [Permissions](../permissions.html).
 
 Codex and ChatGPT Work no longer support `approval_policy = "untrusted"`.
 Remove the setting or choose a supported policy. Project entries with
 `trust_level = "untrusted"` in user-level `~/.codex/config.toml` remain supported. See
-[Migrate from the retired `untrusted` approval policy](https://learn.chatgpt.com/docs/agent-approvals-security#migrate-from-the-retired-untrusted-approval-policy)
+[Migrate from the retired `untrusted` approval policy](../agent-approvals-security.html#migrate-from-the-retired-untrusted-approval-policy)
 for examples and approval tradeoffs.
 
 <ConfigTable
@@ -498,13 +498,13 @@ for examples and approval tradeoffs.
       key: "hooks.<Event>[].hooks[].async",
       type: "boolean",
       description:
-        "Run a command hook in the background without delaying the triggering operation. Defaults to `false`; `SessionEnd` always runs synchronously. See [Run hooks in the background](https://learn.chatgpt.com/docs/hooks#run-hooks-in-the-background).",
+        "Run a command hook in the background without delaying the triggering operation. Defaults to `false`; `SessionEnd` always runs synchronously. See [Run hooks in the background](../hooks.html#run-hooks-in-the-background).",
     },
     {
       key: "hooks.<Event>[].hooks[].additionalContextLimit",
       type: "integer",
       description:
-        "Approximate per-handler token threshold for saving oversized `additionalContext` to disk and showing the model a shorter preview. Defaults to `2500`; `0` passes the full context directly to the model. See [Large hook output](https://learn.chatgpt.com/docs/hooks#large-hook-output).",
+        "Approximate per-handler token threshold for saving oversized `additionalContext` to disk and showing the model a shorter preview. Defaults to `2500`; `0` passes the full context directly to the model. See [Large hook output](../hooks.html#large-hook-output).",
     },
     {
       key: "hooks.<Event>[].hooks[].commandWindows",
@@ -516,7 +516,7 @@ for examples and approval tradeoffs.
       key: "features.memories",
       type: "boolean",
       description:
-        "Enable [Memories](https://learn.chatgpt.com/docs/customization/memories) (off by default).",
+        "Enable [Memories](../customization/memories.html) (off by default).",
     },
     {
       key: "mcp_optional_startup_grace_ms",
@@ -1298,7 +1298,7 @@ for examples and approval tradeoffs.
       key: "desktop.custom_file_handlers.<id>",
       type: "table",
       description:
-        "User-level only. Defines an additional **Open in** target for the ChatGPT desktop app. See [Add custom file handlers](https://learn.chatgpt.com/docs/config-file/config-advanced#add-custom-file-handlers) for examples and handler ID constraints.",
+        "User-level only. Defines an additional **Open in** target for the ChatGPT desktop app. See [Add custom file handlers](config-advanced.html#add-custom-file-handlers) for examples and handler ID constraints.",
     },
     {
       key: "desktop.custom_file_handlers.<id>.label",
@@ -1748,19 +1748,19 @@ for examples and approval tradeoffs.
   client:load
 />
 
-You can find the latest JSON schema for `config.toml` [here](https://learn.chatgpt.com/docs/config-schema.json).
+You can find the latest JSON schema for `config.toml` [here](../config-schema.json).
 
 To get autocompletion and diagnostics when editing `config.toml` in VS Code or Cursor, you can install the [Even Better TOML](https://marketplace.visualstudio.com/items?itemName=tamasfe.even-better-toml) extension and add this line to the top of your `config.toml`:
 
 ```toml
-#:schema https://developers.openai.com/codex/config-schema.json
+#:schema ../codex/config-schema.json
 ```
 
 Note: Rename `experimental_instructions_file` to `model_instructions_file`. Codex deprecates the old key; update existing configs to the new name.
 
 ## `requirements.toml`
 
-`requirements.toml` is an admin-enforced configuration file that constrains security-sensitive settings users can't override. For details, locations, and examples, see [Admin-enforced requirements](https://learn.chatgpt.com/docs/enterprise/managed-configuration#admin-enforced-requirements-requirementstoml).
+`requirements.toml` is an admin-enforced configuration file that constrains security-sensitive settings users can't override. For details, locations, and examples, see [Admin-enforced requirements](../enterprise/managed-configuration.html#admin-enforced-requirements-requirementstoml).
 
 For ChatGPT Business and Enterprise users, Codex can also apply cloud-fetched
 requirements. See the security page for precedence details.
@@ -2456,13 +2456,13 @@ from either one wins.
       key: "hooks.<Event>[].hooks[].async",
       type: "boolean",
       description:
-        "Run a command hook in the background without delaying the triggering operation. Defaults to `false`; `SessionEnd` always runs synchronously. See [Run hooks in the background](https://learn.chatgpt.com/docs/hooks#run-hooks-in-the-background).",
+        "Run a command hook in the background without delaying the triggering operation. Defaults to `false`; `SessionEnd` always runs synchronously. See [Run hooks in the background](../hooks.html#run-hooks-in-the-background).",
     },
     {
       key: "hooks.<Event>[].hooks[].additionalContextLimit",
       type: "integer",
       description:
-        "Approximate per-handler token threshold for saving oversized `additionalContext` to disk and showing the model a shorter preview. Defaults to `2500`; `0` passes the full context directly to the model. See [Large hook output](https://learn.chatgpt.com/docs/hooks#large-hook-output).",
+        "Approximate per-handler token threshold for saving oversized `additionalContext` to disk and showing the model a shorter preview. Defaults to `2500`; `0` passes the full context directly to the model. See [Large hook output](../hooks.html#large-hook-output).",
     },
     {
       key: "hooks.<Event>[].hooks[].commandWindows",

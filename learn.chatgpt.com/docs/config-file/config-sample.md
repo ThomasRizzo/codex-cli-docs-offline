@@ -1,16 +1,16 @@
 # Sample Configuration
 
-> For the complete documentation index, see [llms.txt](https://learn.chatgpt.com/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Use this example configuration as a starting point. It includes most keys Codex reads from `config.toml`, along with default behaviors, recommended values where helpful, and short notes.
 
 For explanations and guidance, see:
 
-- [Config basics](https://learn.chatgpt.com/docs/config-file/config-basic)
-- [Advanced Config](https://learn.chatgpt.com/docs/config-file/config-advanced)
-- [Config Reference](https://learn.chatgpt.com/docs/config-file/config-reference)
-- [Sandbox and approvals](https://learn.chatgpt.com/docs/agent-approvals-security#sandbox-and-approvals)
-- [Managed configuration](https://learn.chatgpt.com/docs/enterprise/managed-configuration)
+- [Config basics](config-basic.html)
+- [Advanced Config](config-advanced.html)
+- [Config Reference](config-reference.html)
+- [Sandbox and approvals](../agent-approvals-security.html#sandbox-and-approvals)
+- [Managed configuration](../enterprise/managed-configuration.html)
 
 Use the snippet below as a reference. Copy only the keys and sections you need into `~/.codex/config.toml` (or into a project-scoped `.codex/config.toml`), then adjust values for your setup.
 

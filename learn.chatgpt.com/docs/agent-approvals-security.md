@@ -1,17 +1,17 @@
 # Agent approvals & security
 
-> For the complete documentation index, see [llms.txt](https://learn.chatgpt.com/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Codex helps protect your code and data and reduces the risk of misuse.
 
 This page covers how to operate Codex safely, including sandboxing, approvals,
   and network access. If you are looking for Codex Security, the product for
-  scanning connected GitHub repositories, see [Codex Security](https://learn.chatgpt.com/docs/security).
+  scanning connected GitHub repositories, see [Codex Security](security.html).
 
 By default, the agent runs with network access turned off. Locally, Codex uses an OS-enforced sandbox that limits what it can touch (typically to the current workspace), plus an approval policy that controls when it must stop and ask you before acting.
 
 For a high-level explanation of how sandboxing works across the ChatGPT desktop app,
-Codex CLI, and IDE extension, see [sandboxing](https://learn.chatgpt.com/docs/sandboxing).
+Codex CLI, and IDE extension, see [sandboxing](sandboxing.html).
 For a broader enterprise security overview, see the [Codex security white paper](https://trust.openai.com/?itemUid=382f924d-54f3-43a8-a9df-c39e6c959958&source=click).
 
 ## Migrate from the retired `untrusted` approval policy
@@ -82,13 +82,13 @@ surface.
 | Zero data retention, Modified Abuse Monitoring, or non-US data storage residency                        | Full findings and resume aren't available. The task ends. |
 
 Safety monitoring evaluates model behavior during a task.
-[Automatic approval review](https://learn.chatgpt.com/docs/sandboxing/auto-review) evaluates individual actions that
+[Automatic approval review](sandboxing/auto-review.html) evaluates individual actions that
 already require approval before those actions run. An action approved by
 automatic approval review can still be part of a task that monitoring later pauses.
 
 ## Network access<ElevatedRiskBadge class="ml-2"></ElevatedRiskBadge>
 
-For Codex cloud, see [agent internet access](https://learn.chatgpt.com/docs/cloud/internet-access) to enable full internet access or a domain allow list.
+For Codex cloud, see [agent internet access](cloud/internet-access.html) to enable full internet access or a domain allow list.
 
 For the ChatGPT desktop app, Codex CLI, or IDE extension, the default `workspace-write` sandbox mode keeps network access turned off unless you enable it in your configuration:
 
@@ -135,7 +135,7 @@ network access by itself. Use `sandbox_workspace_write.network_access` with
 - Network on + `network_proxy` on: network stays on, and outbound traffic is
   constrained by the configured network policy.
 
-The proxy feature also applies to [permission profiles](https://learn.chatgpt.com/docs/permissions#network-permissions).
+The proxy feature also applies to [permission profiles](permissions.html#network-permissions).
 A profile's `network.enabled = true` grants command network access, while
 `features.network_proxy = true` activates enforcement of that profile's domain
 rules:
@@ -162,7 +162,7 @@ access and the `api.openai.com` allow rule does not restrict their destinations.
 Admin-managed `experimental_network` requirements are separate from the user
 feature toggle. They can configure and start sandboxed networking without
 `features.network_proxy`, but they do not turn on network access when the active
-sandbox keeps it off. See [Managed configuration](https://learn.chatgpt.com/docs/enterprise/managed-configuration#configure-network-access-requirements)
+sandbox keeps it off. See [Managed configuration](enterprise/managed-configuration.html#configure-network-access-requirements)
 for the administrator-side `requirements.toml` shape.
 
 #### Network policy
@@ -241,12 +241,12 @@ policies, or environment controls.
 Browser tools separately check managed network denies and exclusive allowlists
 before accessing an origin. Browser origin policies can further restrict site
 access, uploads, downloads, and developer tools. See
-[managed browser controls](https://learn.chatgpt.com/docs/enterprise/managed-configuration#control-browser-and-computer-use).
+[managed browser controls](enterprise/managed-configuration.html#control-browser-and-computer-use).
 
 For managed users, combine command network policy with controls such as
 `allowed_web_search_modes`, approved `mcp_servers`, and feature requirements
 for apps, plugins, browsers, or Computer Use. See
-[Managed configuration](https://learn.chatgpt.com/docs/enterprise/managed-configuration).
+[Managed configuration](enterprise/managed-configuration.html).
 
 You can also control the [web search tool](https://platform.openai.com/docs/guides/tools-web-search) without granting full network access to spawned commands. Codex defaults to using a web search cache to access results. The cache is an OpenAI-maintained index of web results, so cached mode returns pre-indexed results instead of fetching live pages. This reduces exposure to prompt injection from arbitrary live content, but you should still treat web results as untrusted. If you are using `--yolo` or another [full access sandbox setting](#common-sandbox-and-approval-combinations), web search defaults to live results. Use `--search` or set `web_search = "live"` to allow live browsing, or set it to `"disabled"` to turn the tool off:
 
@@ -312,7 +312,7 @@ approvals_reviewer = "auto_review"
 
 For the full reviewer lifecycle, trigger conditions, configuration precedence,
 and failure behavior, see
-[Auto-review](https://learn.chatgpt.com/docs/sandboxing/auto-review).
+[Auto-review](sandboxing/auto-review.html).
 
 The reviewer evaluates only actions that already need approval, such as sandbox
 escalations, blocked network requests, `request_permissions` prompts, or
@@ -331,7 +331,7 @@ is in the open-source Codex repository. Enterprises can replace its
 tenant-specific section with `guardian_policy_config` in managed requirements.
 Local `[auto_review].policy` text is also supported, but managed requirements
 take precedence. For setup details, see
-[Managed configuration](https://learn.chatgpt.com/docs/enterprise/managed-configuration#configure-automatic-review-policy).
+[Managed configuration](enterprise/managed-configuration.html#configure-automatic-review-policy).
 
 In the ChatGPT desktop app, these reviews appear as automatic review items with a status
 such as Reviewing, Approved, Denied, Aborted, or Timed out. They can also
@@ -355,7 +355,7 @@ For non-interactive runs, use `codex exec --sandbox workspace-write`; Codex keep
 
 #### Configuration in `config.toml`
 
-For the broader configuration workflow, see [Config basics](https://learn.chatgpt.com/docs/config-file/config-basic), [Advanced Config](https://learn.chatgpt.com/docs/config-file/config-advanced#approval-policies-and-sandbox-modes), and the [Configuration Reference](https://learn.chatgpt.com/docs/config-file/config-reference).
+For the broader configuration workflow, see [Config basics](config-file/config-basic.html), [Advanced Config](config-file/config-advanced.html#approval-policies-and-sandbox-modes), and the [Configuration Reference](config-file/config-reference.html).
 
 ```toml
 # Interactive approvals with a read-only sandbox
@@ -377,7 +377,7 @@ network_access = true
 # } }
 ```
 
-You can also save presets as [profile files](https://learn.chatgpt.com/docs/config-file/config-advanced#profiles), then select them with `codex --profile profile-name`:
+You can also save presets as [profile files](config-file/config-advanced.html#profiles), then select them with `codex --profile profile-name`:
 
 ```toml
 # ~/.codex/full_auto.config.toml
@@ -412,7 +412,7 @@ Codex enforces the sandbox differently depending on your OS:
 
 - **macOS** uses Seatbelt policies and runs commands using `sandbox-exec` with a profile (`-p`) that corresponds to the `--sandbox` mode you selected. When restricted read access enables platform defaults, Codex appends a curated macOS platform policy (instead of broadly allowing `/System`) to preserve common tool compatibility.
 - **Linux** uses `bwrap` plus `seccomp` by default.
-- **Windows** uses the Linux sandbox implementation when running in [Windows Subsystem for Linux 2 (WSL2)](https://learn.chatgpt.com/docs/windows/wsl). WSL1 was supported through Codex `0.114`; starting in `0.115`, the Linux sandbox moved to `bwrap`, so WSL1 is no longer supported. When running natively on Windows, Codex uses a [Windows sandbox](https://learn.chatgpt.com/docs/windows/windows-sandbox#windows-sandbox) implementation.
+- **Windows** uses the Linux sandbox implementation when running in [Windows Subsystem for Linux 2 (WSL2)](windows/wsl.html). WSL1 was supported through Codex `0.114`; starting in `0.115`, the Linux sandbox moved to `bwrap`, so WSL1 is no longer supported. When running natively on Windows, Codex uses a [Windows sandbox](windows/windows-sandbox.html#windows-sandbox) implementation.
 
 If you use the Codex IDE extension on Windows, it supports WSL2 directly. Set the following in your VS Code settings to keep the agent inside WSL2 whenever it's available:
 
@@ -422,7 +422,7 @@ If you use the Codex IDE extension on Windows, it supports WSL2 directly. Set th
 }
 ```
 
-This ensures the IDE extension inherits Linux sandbox semantics for commands, approvals, and filesystem access even when the host OS is Windows. Learn more in the [WSL guide](https://learn.chatgpt.com/docs/windows/wsl).
+This ensures the IDE extension inherits Linux sandbox semantics for commands, approvals, and filesystem access even when the host OS is Windows. Learn more in the [WSL guide](windows/wsl.html).
 
 When running natively on Windows, configure the native sandbox mode in `config.toml`:
 
@@ -432,7 +432,7 @@ sandbox = "unelevated" # or "elevated"
 # sandbox_private_desktop = true  # default; set false only for compatibility
 ```
 
-See the [Windows setup guide](https://learn.chatgpt.com/docs/windows/windows-sandbox#windows-sandbox) for details.
+See the [Windows setup guide](windows/windows-sandbox.html#windows-sandbox) for details.
 
 When you run Linux in a containerized environment such as Docker, the sandbox may not work if the host or container configuration blocks the namespace, setuid `bwrap`, or `seccomp` operations that Codex needs.
 
@@ -557,7 +557,7 @@ For the full event catalog and configuration reference, see the [Codex configura
 - Keep `log_user_prompt = false` unless policy explicitly permits storing prompt contents. Prompts can include source code and sensitive data.
 - Route telemetry only to collectors you control; apply retention limits and access controls aligned with your compliance requirements.
 - Treat tool arguments and outputs as sensitive. Favor redaction at the collector or SIEM when possible.
-- Review local data retention settings (for example, `history.persistence` / `history.max_bytes`) if you don't want Codex to save session transcripts under `CODEX_HOME`. See [Advanced Config](https://learn.chatgpt.com/docs/config-file/config-advanced#history-persistence) and [Configuration Reference](https://learn.chatgpt.com/docs/config-file/config-reference).
+- Review local data retention settings (for example, `history.persistence` / `history.max_bytes`) if you don't want Codex to save session transcripts under `CODEX_HOME`. See [Advanced Config](config-file/config-advanced.html#history-persistence) and [Configuration Reference](config-file/config-reference.html).
 - If you run the CLI with network access turned off, OTel export can't reach your collector. To export, allow network access in `workspace-write` mode for the OTel endpoint, or export from Codex cloud with the collector domain on your approved list.
 - Review events periodically for approval/sandbox changes and unexpected tool executions.
 
@@ -565,4 +565,4 @@ OTel is optional and designed to complement, not replace, the sandbox and approv
 
 ## Managed configuration
 
-Enterprise admins can configure Codex security settings for their workspace in [Managed configuration](https://learn.chatgpt.com/docs/enterprise/managed-configuration). See that page for setup and policy details.
+Enterprise admins can configure Codex security settings for their workspace in [Managed configuration](enterprise/managed-configuration.html). See that page for setup and policy details.
