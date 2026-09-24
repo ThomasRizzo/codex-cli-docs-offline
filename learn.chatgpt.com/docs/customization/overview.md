@@ -1,20 +1,20 @@
 # Customization
 
-> For the complete documentation index, see [llms.txt](https://learn.chatgpt.com/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Customization is how you make Codex work the way your team works.
 
 In Codex, customization comes from a few layers that work together:
 
 - **Project guidance (`AGENTS.md`)** for persistent instructions
-- **[Memories](https://learn.chatgpt.com/docs/customization/memories)** for useful context learned from prior work
+- **[Memories](memories.html)** for useful context learned from prior work
 - **Skills** for reusable workflows and domain expertise
-- **[MCP](https://learn.chatgpt.com/docs/extend/mcp)** for access to external tools and shared systems
-- **[Subagents](https://learn.chatgpt.com/docs/agent-configuration/subagents)** for delegating work to specialized subagents
+- **[MCP](../extend/mcp.html)** for access to external tools and shared systems
+- **[Subagents](../agent-configuration/subagents.html)** for delegating work to specialized subagents
 
 These are complementary, not competing. `AGENTS.md` shapes behavior, memories
 carry local context forward, skills package repeatable processes, and
-[MCP](https://learn.chatgpt.com/docs/extend/mcp) connects Codex to systems outside the local workspace.
+[MCP](../extend/mcp.html) connects Codex to systems outside the local workspace.
 
 ## AGENTS Guidance
 
@@ -37,7 +37,7 @@ When the agent makes incorrect assumptions about your codebase, correct them in 
 - **Too much reading**: If it finds the right files but reads too many documents, add routing guidance (which directories/files to prioritize).
 - **Recurring PR feedback**: If you leave the same feedback more than once, codify it.
 - **In GitHub**: In a pull request comment, tag `@codex` with a request (for example, `@codex add this to AGENTS.md`) to delegate the update to a cloud chat.
-- **Automate drift checks**: Use [scheduled tasks](https://learn.chatgpt.com/docs/automations) to run recurring checks (for example, daily) that look for guidance gaps and suggest what to add to `AGENTS.md`.
+- **Automate drift checks**: Use [scheduled tasks](../automations.html) to run recurring checks (for example, daily) that look for guidance gaps and suggest what to add to `AGENTS.md`.
 
 Pair `AGENTS.md` with infrastructure that enforces those rules: pre-commit hooks, linters, and type checkers catch issues before you see them, so the system gets smarter about preventing recurring mistakes.
 
@@ -64,7 +64,7 @@ Use the global file to shape how Codex communicates with you (for example, revie
   ]}
 />
 
-[Custom instructions with AGENTS.md](https://learn.chatgpt.com/docs/agent-configuration/agents-md)
+[Custom instructions with AGENTS.md](../agent-configuration/agents-md.html)
 
 ## Skills
 
@@ -75,7 +75,7 @@ Skills are loaded and visible to the agent (at least their metadata), so Codex c
 Use skill folders to author and iterate on workflows locally. If a plugin
 already exists for the workflow, install it first to reuse a proven setup. When
 you want to distribute your own workflow across teams or bundle it with
-connectors, package it as a [plugin](https://learn.chatgpt.com/docs/build-plugins). Skills remain the
+connectors, package it as a [plugin](../build-plugins.html). Skills remain the
 authoring format; plugins are the installable distribution unit.
 
 A skill is typically a `SKILL.md` file plus optional scripts, references, and assets.
@@ -96,7 +96,7 @@ A skill is typically a `SKILL.md` file plus optional scripts, references, and as
   ]}
 />
 
-The skill directory can include a `scripts/` folder with CLI scripts that Codex invokes as part of the workflow (for example, seed data or run validations). When the workflow needs external systems (issue trackers, design tools, docs servers), pair the skill with [MCP](https://learn.chatgpt.com/docs/extend/mcp).
+The skill directory can include a `scripts/` folder with CLI scripts that Codex invokes as part of the workflow (for example, seed data or run validations). When the workflow needs external systems (issue trackers, design tools, docs servers), pair the skill with [MCP](../extend/mcp.html).
 
 Example `SKILL.md`:
 
@@ -133,7 +133,7 @@ Codex uses progressive disclosure for skills:
 
 Skills can be invoked explicitly, and Codex can also choose them implicitly when the task matches the skill description. Clear skill descriptions improve triggering reliability.
 
-[Build skills](https://learn.chatgpt.com/docs/build-skills)
+[Build skills](../build-skills.html)
 
 ## MCP
 
@@ -160,24 +160,24 @@ In practice, MCP is often most useful when paired with skills:
 
 - A skill defines the workflow and names the MCP tools to use
 
-[Model Context Protocol](https://learn.chatgpt.com/docs/extend/mcp)
+[Model Context Protocol](../extend/mcp.html)
 
 ## Subagents
 
 You can create different agents with different roles and prompt them to use tools differently. For example, one agent might run specific testing commands and configurations, while another has MCP servers that fetch production logs for debugging. Each subagent stays focused and uses the right tools for its job.
 
-[Subagents](https://learn.chatgpt.com/docs/agent-configuration/subagents)
+[Subagents](../agent-configuration/subagents.html)
 
 ## Skills + MCP together
 
 Skills plus MCP is where it all comes together: skills define repeatable workflows, and MCP connects them to external tools and systems.
-If a skill depends on MCP, declare that dependency in `agents/openai.yaml` so Codex can install and wire it automatically (see [Build skills](https://learn.chatgpt.com/docs/build-skills)).
+If a skill depends on MCP, declare that dependency in `agents/openai.yaml` so Codex can install and wire it automatically (see [Build skills](../build-skills.html)).
 
 ## Next step
 
 Build in this order:
 
-1. [Custom instructions with AGENTS.md](https://learn.chatgpt.com/docs/agent-configuration/agents-md) so Codex follows your repo conventions. Add pre-commit hooks and linters to enforce those rules.
-2. Install a [plugin](https://learn.chatgpt.com/docs/plugins) when a reusable workflow already exists. Otherwise, create a [skill](https://learn.chatgpt.com/docs/build-skills) and package it as a plugin when you want to share it.
-3. [MCP](https://learn.chatgpt.com/docs/extend/mcp) when workflows need external systems (Linear, GitHub, docs servers, design tools).
-4. [Subagents](https://learn.chatgpt.com/docs/agent-configuration/subagents) when you're ready to delegate noisy or specialized tasks to subagents.
+1. [Custom instructions with AGENTS.md](../agent-configuration/agents-md.html) so Codex follows your repo conventions. Add pre-commit hooks and linters to enforce those rules.
+2. Install a [plugin](../plugins.html) when a reusable workflow already exists. Otherwise, create a [skill](../build-skills.html) and package it as a plugin when you want to share it.
+3. [MCP](../extend/mcp.html) when workflows need external systems (Linear, GitHub, docs servers, design tools).
+4. [Subagents](../agent-configuration/subagents.html) when you're ready to delegate noisy or specialized tasks to subagents.
