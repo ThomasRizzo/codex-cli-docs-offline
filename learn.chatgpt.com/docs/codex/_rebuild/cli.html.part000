@@ -1,0 +1,40 @@
+<!DOCTYPE html><html lang="en"> <head><!-- Global Metadata --> <meta charset="utf-8"> <meta name="viewport" content="width=device-width,initial-scale=1">  <script>(function(){const siteVariantDomains = [{"id":"chatgpt-docs","domains":["learn.chatgpt.com","learn.chatgpt-staging.com","learn-chatgpt-preview.localhost"]}];
+const forcedSiteVariantId = undefined;
+const siteVariantQueryParam = "site_variant";
+const chatGptSiteVariant = "chatgpt";
+const chatGptDocsVariantId = "chatgpt-docs";
+const developersOpenAiHostname = "developers.openai.com";
+
+  (() => {
+    const hostname = window.location.hostname.toLowerCase().replace(/\.$/, "");
+    const queryVariant =
+      hostname !== developersOpenAiHostname &&
+      new URLSearchParams(window.location.search).get(siteVariantQueryParam) ===
+        chatGptSiteVariant
+        ? chatGptDocsVariantId
+        : undefined;
+    const hostnameVariant = siteVariantDomains.find((variant) =>
+      variant.domains.some(
+        (domain) => domain.toLowerCase().replace(/\.$/, "") === hostname
+      )
+    )?.id;
+    const activeVariantId =
+      forcedSiteVariantId || hostnameVariant || queryVariant;
+
+    if (forcedSiteVariantId) {
+      document.documentElement.dataset.siteVariantForced = forcedSiteVariantId;
+    } else {
+      delete document.documentElement.dataset.siteVariantForced;
+    }
+
+    if (activeVariantId) {
+      document.documentElement.dataset.siteVariant = activeVariantId;
+    } else {
+      delete document.documentElement.dataset.siteVariant;
+    }
+  })();
+})();</script> <link rel="icon" type="image/png" href="../../favicon.png"> <meta name="generator" content="Astro v7.3.1"> <link rel="preconnect" href="https://cdn.openai.com" crossorigin> <link rel="preload" href="https://cdn.openai.com/common/fonts/openai-sans/v2/OpenAISans-Regular.woff2" as="font" type="font/woff2" crossorigin> <style>
+  @layer theme, base, components, utilities;
+</style> <!-- Canonical URL --> <link rel="canonical" href="cli.tmp.html">  <!-- Primary Meta Tags --> <title data-default-meta-title="CLI – Codex | OpenAI Developers" data-site-variant-meta-titles="{&quot;chatgpt-docs&quot;:&quot;Codex CLI | ChatGPT Learn&quot;}">
+  Codex CLI | ChatGPT Learn
+</title> <meta name="title" content="Codex CLI | ChatGPT Learn"> <meta name="description" content="Use Codex from your terminal and scripts.">  <!-- Open Graph / Facebook --> <meta property="og:t
