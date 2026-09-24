@@ -111,7 +111,7 @@ jobs:
           ls learn.chatgpt.com/docs/codex/ || true
 
       - name: Rewrite Learn URLs to relative paths
-        run: ./scripts/make-urls-relative.sh
+        run: bash scripts/make-urls-relative.sh
 
       - name: Commit and push mirror
         run: |

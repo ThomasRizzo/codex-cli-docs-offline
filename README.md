@@ -52,7 +52,7 @@ Absolute `learn.chatgpt.com` (and mapped `developers.openai.com/codex|docs`) lin
 After a fresh mirror or local content update, re-run:
 
 ```bash
-./scripts/make-urls-relative.sh
+bash scripts/make-urls-relative.sh
 # or: python3 scripts/make-urls-relative.py
 # optional: --dry-run  /  --root PATH
 ```
