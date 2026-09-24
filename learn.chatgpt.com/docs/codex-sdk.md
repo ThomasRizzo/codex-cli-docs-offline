@@ -1,6 +1,6 @@
 # Codex SDK
 
-> For the complete documentation index, see [llms.txt](https://learn.chatgpt.com/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 If you use Codex through Codex CLI, the IDE extension, or Codex cloud, you can also control it programmatically.
 
@@ -11,13 +11,13 @@ Use the SDK when you need to:
 - Build Codex into your own internal tools and workflows
 - Integrate Codex within your own application
 
-Use the Codex SDK to automate coding tasks, including jobs in CI. Use the [Codex app server](https://learn.chatgpt.com/docs/app-server) to build custom clients that handle authentication, conversation history, approvals, and streamed agent events.
+Use the Codex SDK to automate coding tasks, including jobs in CI. Use the [Codex app server](app-server.html) to build custom clients that handle authentication, conversation history, approvals, and streamed agent events.
 
-The `codex mcp-server` command and standalone `codex-mcp-server` binary have been removed. Use the [Codex app server](https://learn.chatgpt.com/docs/app-server) for existing integrations.
+The `codex mcp-server` command and standalone `codex-mcp-server` binary have been removed. Use the [Codex app server](app-server.html) for existing integrations.
 
 If you have beta access and need repository or change scans with structured
 security findings and coverage, use the [Codex Security TypeScript
-SDK](https://learn.chatgpt.com/docs/security/sdk).
+SDK](security/sdk.html).
 
 ## TypeScript library
 
