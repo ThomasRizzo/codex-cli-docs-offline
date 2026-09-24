@@ -1,6 +1,6 @@
 # Developer settings
 
-> For the complete documentation index, see [llms.txt](https://learn.chatgpt.com/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 <ContentModeSwitch group="codex-surface" id="web">
 
@@ -13,7 +13,7 @@ settings; workspace administrators may manage some settings for you.
 
 <ContentModeSwitch group="codex-surface" id="app">
 
-The general [Settings](https://learn.chatgpt.com/docs/reference/settings) page covers app preferences,
+The general [Settings](reference/settings.html) page covers app preferences,
 including profile, keyboard shortcuts, notifications, appearance,
 personalization, memories, and archived chats.
 
@@ -43,8 +43,8 @@ share.
 
 Codex agents in the app inherit the same configuration as the IDE extension and
 CLI. Use the in-app controls for common settings, or edit `config.toml` for
-advanced options. See [Agent approvals and security](https://learn.chatgpt.com/docs/agent-approvals-security)
-and [Config basics](https://learn.chatgpt.com/docs/config-file/config-basic) for details.
+advanced options. See [Agent approvals and security](agent-approvals-security.html)
+and [Config basics](config-file/config-basic.html) for details.
 
 ## Git
 
@@ -58,14 +58,14 @@ Connect external tools through Model Context Protocol (MCP). Enable recommended
 servers or add your own. If a server requires OAuth, the app starts the
 authentication flow. These settings also apply to the Codex CLI and IDE
 extension because MCP configuration lives in `config.toml`. See
-[Model Context Protocol](https://learn.chatgpt.com/docs/extend/mcp) for details.
+[Model Context Protocol](extend/mcp.html) for details.
 
 ## Browser developer mode
 
 Under **Developer mode**, turn on **Enable full CDP access** to let ChatGPT use
 the Chrome DevTools Protocol for performance profiling and deeper browser
 debugging. If your organization has disabled full CDP access, you can't enable
-it locally. See [Developer mode](https://learn.chatgpt.com/docs/browser?surface=app#app-developer-mode) for setup,
+it locally. See [Developer mode](browser.html#app-developer-mode) for setup,
 risk, approval, and administrator requirements.
 
 </ContentModeSwitch>
@@ -89,7 +89,7 @@ session:
 - Start Codex with `--strict-config` to treat unrecognized `config.toml` keys as
   errors instead of ignoring them.
 
-See [Developer commands](https://learn.chatgpt.com/docs/developer-commands?surface=cli) for the full
+See [Developer commands](developer-commands.html) for the full
 interactive command reference.
 
 ## Change settings for one run
@@ -105,7 +105,7 @@ codex --config model_reasoning_effort='"medium"'
 ```
 
 Command-line flags and `--config` values have the highest precedence. For the
-complete flag list, see [Developer commands](https://learn.chatgpt.com/docs/developer-commands?surface=cli).
+complete flag list, see [Developer commands](developer-commands.html).
 
 ## Configuration layers
 
@@ -113,7 +113,7 @@ The CLI applies command-line flags and `--config` overrides before project,
 profile, user, system, and built-in settings. Use that precedence to keep shared
 defaults in configuration files and one-off changes on the command line.
 
-For the complete order and common options, see [Config basics](https://learn.chatgpt.com/docs/config-file/config-basic).
+For the complete order and common options, see [Config basics](config-file/config-basic.html).
 
 ## Change settings in the TUI
 
@@ -132,14 +132,14 @@ settings:
 Some commands apply only to the current session, while some pickers offer to
 save the choice. Set the related configuration key when you want a default for
 future sessions. For the terminal theme, editor, completions, and shortcut
-workflows, see [CLI customization](https://learn.chatgpt.com/docs/cli-customization).
+workflows, see [CLI customization](cli-customization.html).
 
 ## Settings references
 
-- [Advanced configuration](https://learn.chatgpt.com/docs/config-file/config-advanced) covers profiles, one-off overrides, and other advanced workflows.
-- [Configuration reference](https://learn.chatgpt.com/docs/config-file/config-reference) lists the available keys and values.
-- [Sample configuration](https://learn.chatgpt.com/docs/config-file/config-sample) provides a complete example file.
-- [Environment variables](https://learn.chatgpt.com/docs/config-file/environment-variables) documents variables used by the CLI and installer.
+- [Advanced configuration](config-file/config-advanced.html) covers profiles, one-off overrides, and other advanced workflows.
+- [Configuration reference](config-file/config-reference.html) lists the available keys and values.
+- [Sample configuration](config-file/config-sample.html) provides a complete example file.
+- [Environment variables](config-file/environment-variables.html) documents variables used by the CLI and installer.
 
 </ContentModeSwitch>
 
@@ -161,8 +161,8 @@ the settings panel for common agent controls, or select **Open config.toml** to
 edit the active configuration layer directly.
 
 For the configuration layer order and common keys, see [Config
-basics](https://learn.chatgpt.com/docs/config-file/config-basic). For every supported `config.toml` key, see the
-[Configuration reference](https://learn.chatgpt.com/docs/config-file/config-reference).
+basics](config-file/config-basic.html). For every supported `config.toml` key, see the
+[Configuration reference](config-file/config-reference.html).
 
 ## Change an editor setting
 
@@ -191,7 +191,7 @@ The extension also honors VS Code's built-in chat font settings for Codex chat s
 
 The `chatgpt.*` keys above belong to the IDE extension and don't go in
 `config.toml`. For shared agent settings, use [Config
-basics](https://learn.chatgpt.com/docs/config-file/config-basic), [Advanced configuration](https://learn.chatgpt.com/docs/config-file/config-advanced),
-and the [Configuration reference](https://learn.chatgpt.com/docs/config-file/config-reference).
+basics](config-file/config-basic.html), [Advanced configuration](config-file/config-advanced.html),
+and the [Configuration reference](config-file/config-reference.html).
 
 </ContentModeSwitch>
