@@ -1,6 +1,6 @@
 # CLI customization
 
-> For the complete documentation index, see [llms.txt](https://learn.chatgpt.com/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 The Codex CLI provides terminal-specific options for how interactive sessions
 look and how you enter commands and prompts.
@@ -45,4 +45,4 @@ the editor configured by `VISUAL`, or `EDITOR` when `VISUAL` isn't set. Save
 and close the editor to return the text to the composer before sending it.
 
 For interactive keyboard controls and the full command and option list, see
-[Commands](https://learn.chatgpt.com/docs/developer-commands?surface=cli#cli-interactive-shortcuts).
+[Commands](developer-commands.html#cli-interactive-shortcuts).
