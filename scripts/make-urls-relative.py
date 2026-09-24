@@ -52,6 +52,31 @@ ASSET_EXACT = {"/favicon.png", "/llms.txt", "/OpenAI_Developers.svg"}
 # Live /codex/{name} 308s to top-level /{name} (not /docs/...).
 TOPLEVEL_FROM_CODEX = frozenset({"resources", "use-cases", "videos"})
 
+# Optional live-harvested alias map (/codex/x -> canonical path), written by
+# scripts/build-seeds.py during the mirror build. Takes precedence over heuristics.
+CODEX_REDIRECTS: dict[str, str] = {}
+
+
+def load_redirects(root: Path) -> None:
+    import json
+
+    f = root / "scripts" / "codex-redirects.json"
+    if f.is_file():
+        try:
+            data = json.loads(f.read_text(encoding="utf-8"))
+        except (OSError, ValueError) as exc:
+            print(f"warn: bad {f}: {exc}", file=sys.stderr)
+            return
+        for k, v in data.items():
+            CODEX_REDIRECTS[k.rstrip("/") or "/"] = urlsplit(v).path or "/"
+
+
+def apply_redirect(path: str) -> str:
+    key = path.rstrip("/") or "/"
+    if key == "/codex" or key.startswith("/codex/"):
+        return CODEX_REDIRECTS.get(key, path)
+    return path
+
 
 def split_path_query_fragment(raw: str) -> tuple[str, str]:
     """Return (path_for_lookup, fragment_suffix including '#' or ''). Drop query."""
@@ -166,7 +191,7 @@ def candidate_relpaths(url_path: str) -> list[str]:
 
     if path == "/docs" or path.startswith("/docs/"):
         if path == "/docs":
-            add("docs/codex.html", "docs/index.html", "docs.html", "docs")
+            add("docs.html", "docs/index.html", "docs/codex.html", "docs")
             return cands
         rest = path[len("/docs/") :]
         rest = rest.rstrip("/")
@@ -261,10 +286,11 @@ class Rewriter:
         self.files_changed = 0
         self.replacements = 0
         self.missing = 0
+        load_redirects(self.root)
 
     def rewrite_url_path(self, from_file: Path, url_path: str) -> str:
         path, fragment = split_path_query_fragment(url_path)
-        path = demangle_path(path)
+        path = apply_redirect(demangle_path(path))
         target, exists = resolve_target(self.mirror, path)
         if not exists:
             self.missing += 1
