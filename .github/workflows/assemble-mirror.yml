@@ -1,38 +1,125 @@
-name: Assemble offline mirror from b64 parts
+name: Build offline Codex docs mirror
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - 'upload-parts/**'
-      - '.github/workflows/assemble-mirror.yml'
 
 permissions:
   contents: write
 
 jobs:
-  assemble:
+  mirror:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Assemble tarball and extract
+
+      - name: Install tools
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq wget
+
+      - name: Mirror Codex docs from learn.chatgpt.com
         run: |
           set -euo pipefail
-          if [ ! -d upload-parts ]; then
-            echo "No upload-parts/; nothing to assemble"
-            exit 0
+          rm -rf learn.chatgpt.com staging
+          mkdir -p staging
+          cat > /tmp/urls.txt << 'EOF'
+          https://learn.chatgpt.com/llms.txt
+          https://learn.chatgpt.com/docs/llms-full.txt
+          https://learn.chatgpt.com/docs/codex-manual.md
+          https://learn.chatgpt.com/docs/codex
+          https://learn.chatgpt.com/docs/codex.md
+          https://learn.chatgpt.com/docs/codex/cli
+          https://learn.chatgpt.com/docs/codex/cli.md
+          https://learn.chatgpt.com/docs/codex/ide
+          https://learn.chatgpt.com/docs/codex/ide.md
+          https://learn.chatgpt.com/docs/config-file/config-basic
+          https://learn.chatgpt.com/docs/config-file/config-basic.md
+          https://learn.chatgpt.com/docs/config-file/config-advanced
+          https://learn.chatgpt.com/docs/config-file/config-advanced.md
+          https://learn.chatgpt.com/docs/config-file/config-reference
+          https://learn.chatgpt.com/docs/config-file/config-reference.md
+          https://learn.chatgpt.com/docs/config-file/config-sample
+          https://learn.chatgpt.com/docs/config-file/config-sample.md
+          https://learn.chatgpt.com/docs/config-file/environment-variables
+          https://learn.chatgpt.com/docs/config-file/environment-variables.md
+          https://learn.chatgpt.com/docs/cli-customization
+          https://learn.chatgpt.com/docs/cli-customization.md
+          https://learn.chatgpt.com/docs/non-interactive-mode
+          https://learn.chatgpt.com/docs/non-interactive-mode.md
+          https://learn.chatgpt.com/docs/developer-commands
+          https://learn.chatgpt.com/docs/developer-commands.md
+          https://learn.chatgpt.com/docs/developer-settings
+          https://learn.chatgpt.com/docs/developer-settings.md
+          https://learn.chatgpt.com/docs/hooks
+          https://learn.chatgpt.com/docs/hooks.md
+          https://learn.chatgpt.com/docs/codex-sdk
+          https://learn.chatgpt.com/docs/codex-sdk.md
+          https://learn.chatgpt.com/docs/app-server
+          https://learn.chatgpt.com/docs/app-server.md
+          https://learn.chatgpt.com/docs/github-action
+          https://learn.chatgpt.com/docs/github-action.md
+          https://learn.chatgpt.com/docs/agent-approvals-security
+          https://learn.chatgpt.com/docs/agent-approvals-security.md
+          https://learn.chatgpt.com/docs/agent-configuration/agents-md
+          https://learn.chatgpt.com/docs/agent-configuration/agents-md.md
+          https://learn.chatgpt.com/docs/agent-configuration/rules
+          https://learn.chatgpt.com/docs/agent-configuration/rules.md
+          https://learn.chatgpt.com/docs/agent-configuration/speed
+          https://learn.chatgpt.com/docs/agent-configuration/speed.md
+          https://learn.chatgpt.com/docs/agent-configuration/subagents
+          https://learn.chatgpt.com/docs/agent-configuration/subagents.md
+          https://learn.chatgpt.com/docs/extend/mcp
+          https://learn.chatgpt.com/docs/extend/mcp.md
+          https://learn.chatgpt.com/docs/extend/record-and-replay
+          https://learn.chatgpt.com/docs/extend/record-and-replay.md
+          https://learn.chatgpt.com/docs/build-skills
+          https://learn.chatgpt.com/docs/build-skills.md
+          https://learn.chatgpt.com/docs/skills-and-plugins
+          https://learn.chatgpt.com/docs/skills-and-plugins.md
+          https://learn.chatgpt.com/docs/features/codex-micro
+          https://learn.chatgpt.com/docs/features/codex-micro.md
+          https://learn.chatgpt.com/docs/configuration
+          https://learn.chatgpt.com/docs/configuration.md
+          https://learn.chatgpt.com/docs/cloud
+          https://learn.chatgpt.com/docs/cloud.md
+          https://learn.chatgpt.com/docs/cloud/internet-access
+          https://learn.chatgpt.com/docs/cloud/internet-access.md
+          https://learn.chatgpt.com/docs/customization/overview
+          https://learn.chatgpt.com/docs/customization/overview.md
+          https://learn.chatgpt.com/favicon.png
+          EOF
+          sed -i 's/^[[:space:]]*//' /tmp/urls.txt
+          wget --mirror --convert-links --adjust-extension --page-requisites --no-parent \
+            --domains=learn.chatgpt.com \
+            -e robots=off \
+            --timeout=30 --tries=3 --wait=0.1 \
+            -A 'html,css,js,png,jpg,jpeg,svg,woff,woff2,gif,webp,ico,txt,xml,md' \
+            -i /tmp/urls.txt \
+            -P staging || true
+          find staging -name '*.tmp.html' -print0 | while IFS= read -r -d '' f; do
+            mv "$f" "${f%.tmp.html}.html"
+          done
+          if [ -d staging/learn.chatgpt.com ]; then
+            rm -rf learn.chatgpt.com
+            mv staging/learn.chatgpt.com .
           fi
-          cat upload-parts/part-*.b64 | base64 -d > /tmp/mirror.tar.gz
-          find . -mindepth 1 -maxdepth 1 ! -name '.git' ! -name 'upload-parts' ! -name '.github' -exec rm -rf {} +
-          tar -xzf /tmp/mirror.tar.gz
-          rm -rf upload-parts
+          rm -rf staging
+          if [ ! -f index.html ]; then
+            printf '%s\n' '<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=learn.chatgpt.com/docs/codex/cli.html"><title>Codex CLI Docs Offline</title></head><body><p><a href="learn.chatgpt.com/docs/codex/cli.html">Open Codex CLI docs</a></p></body></html>' > index.html
+          fi
+          echo "=== Mirror stats ==="
+          find learn.chatgpt.com -type f 2>/dev/null | wc -l
+          du -sh learn.chatgpt.com 2>/dev/null || true
+          ls learn.chatgpt.com/docs/codex/ || true
+
+      - name: Commit and push mirror
+        run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
-          git status --short | head -50
           if git diff --cached --quiet; then
-            echo "No changes"
+            echo "No changes to commit"
             exit 0
           fi
-          git commit -m "Assemble full offline Codex docs mirror from uploaded parts"
+          DATE=$(TZ=America/New_York date '+%Y-%m-%d %H:%M %Z')
+          git commit -m "Build offline Codex docs mirror (${DATE})"
           git push
