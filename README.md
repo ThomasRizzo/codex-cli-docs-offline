@@ -13,7 +13,7 @@ Note: `developers.openai.com/codex/*` 308-redirects to `learn.chatgpt.com/docs/c
 
 ## Mirror date
 
-**2026-09-24 13:22 EDT** (America/New_York)
+**2026-09-24 13:28 EDT** (America/New_York)
 
 ## How to browse offline
 
@@ -38,10 +38,11 @@ Markdown twins (`*.md`) sit next to many HTML pages for text-only / LLM ingestio
 ## Limitations
 
 - This is a **static snapshot**. Live site content will drift over time.
-- HTML pages were **slimmed for offline use** (shared mega-nav to unmirrored `/api`/`/ads` sections removed; main article content retained).
-- Site-wide nav links to unrelated sections were **not** mirrored and would 404 locally.
+- Full Astro HTML pages include site chrome; links to unmirrored sections (`/api/docs`, `/ads`, etc.) will 404 locally.
+- Site-wide nav links to unrelated sections were **not** mirrored and will 404 locally.
 - Interactive widgets / JS-only features may degrade without network.
 - Prefer `python3 -m http.server` so relative `_astro` CSS paths resolve.
+- Re-run the GitHub Action **Build offline Codex docs mirror** (`workflow_dispatch`) to refresh from learn.chatgpt.com.
 
 ## License / attribution
 
