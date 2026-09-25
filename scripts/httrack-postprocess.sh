@@ -5,12 +5,16 @@ set -euo pipefail
 OUT=$(realpath "$1"); REPO=$(realpath "$2"); HOST=learn.chatgpt.com
 HOSTS="$HOST cdn.openai.com i.ytimg.com i.vimeocdn.com"
 echo "postprocess: OUT=$OUT REPO=$REPO"
+ls -la "$OUT" | head -30 || true
 
 find "$OUT" -type f \( -name '*.tmp' -o -name '*.delayed' -o -name '*.readme' \) -delete || true
 find "$OUT" -depth -type d -empty -delete || true
 
 echo "postprocess: strip HTTrack comments"
-find "$OUT" -type f -name '*.html' -exec perl -0pi -e 's{<!-- Mirrored from [^>]*? by HTTrack Website Copier/[^>]*?-->\n?}{}g; s{<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->\n?}{}g; s{<!-- Created by HTTrack Website Copier/[^>]*?-->\n?}{}g;' {} +
+# Use xargs (not find -exec): perl s{}{} delimiters contain {}, which breaks find -exec ... +
+# Use s||| delimiters to avoid any {} confusion.
+find "$OUT" -type f -name '*.html' -print0 | xargs -0 -r -n 50 perl -0pi -e \
+  's|<!-- Mirrored from .*? by HTTrack Website Copier/.*?-->\n?||gs; s|<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->\n?||gs; s|<!-- Created by HTTrack Website Copier/.*?-->\n?||gs;'
 
 if [ -f "$OUT/$HOST/docs/codex-manual-markdown.html" ]; then
   echo "postprocess: restore docs/codex-manual.md"
@@ -36,6 +40,12 @@ if [ -s /tmp/md-candidates.txt ]; then
   while IFS= read -r p; do
     curl -sf --retry 2 --max-time 60 -o "$OUT/$HOST/${p}.md" "https://${HOST}/${p}.md" || rm -f "$OUT/$HOST/${p}.md"
   done < /tmp/md-candidates.txt || true
+fi
+
+if [ ! -d "$OUT/$HOST" ]; then
+  echo "ERROR: missing $OUT/$HOST after HTTrack" >&2
+  find "$OUT" -maxdepth 2 -type d | head -50 >&2 || true
+  exit 1
 fi
 
 echo "postprocess: fix leftover links"
