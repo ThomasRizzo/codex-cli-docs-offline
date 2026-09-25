@@ -9,7 +9,7 @@ permissions:
 jobs:
   mirror:
     runs-on: ubuntu-latest
-    timeout-minutes: 150
+    timeout-minutes: 360
     steps:
       - uses: actions/checkout@v4
 
@@ -41,12 +41,13 @@ jobs:
         #   combinatorially; ?site_locale/?surface/?export duplicates. Assets with ?v=/?dpl=
         #   are re-allowed below.
         # api/, plugins/, apps-sdk 308 off-host to developers.openai.com -> excluded (stay absolute).
+        # -E14400: up to 4h (site sometimes rate-limits; first full crawl was ~44m).
         run: |
           set -euo pipefail
           rm -rf /tmp/ht && mkdir -p /tmp/ht
           httrack -%L /tmp/seeds.txt -O /tmp/ht \
             -s0 -c4 -%c5 -A2000000 -T30 -R3 -%k -n -I0 -o0 -K0 -N "%h%p/%n.%t" -%P -q -%v0 \
-            -M3000000000 -m60000000 -E7200 \
+            -M3000000000 -m60000000 -E14400 \
             -F "Mozilla/5.0 (compatible; offline-docs-mirror; +https://github.com/${{ github.repository }})" \
             "-*" "+learn.chatgpt.com/*" \
             "-learn.chatgpt.com/api*" "-learn.chatgpt.com/plugins*" "-learn.chatgpt.com/apps-sdk*" \
@@ -56,6 +57,9 @@ jobs:
             "+learn.chatgpt.com/*.mp4?*" "+learn.chatgpt.com/*.webm?*" "+learn.chatgpt.com/*.woff2?*" \
             "+cdn.openai.com/common/fonts/*" "+i.ytimg.com/vi/*" "+i.vimeocdn.com/*"
           grep 'mirror complete' /tmp/ht/hts-log.txt || true
+          echo "=== httrack output top ==="
+          ls -la /tmp/ht | head -30
+          find /tmp/ht -name '*.html' | wc -l | sed 's/^/html files mirrored: /'
 
       - name: Fix what HTTrack leaves behind
         # 1) query-string links + data-href nav attrs -> relative local paths (uses the
