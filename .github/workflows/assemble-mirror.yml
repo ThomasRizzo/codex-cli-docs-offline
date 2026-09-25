@@ -1,4 +1,4 @@
-name: Build offline Codex docs mirror
+name: Build offline learn.chatgpt.com mirror (HTTrack)
 
 on:
   workflow_dispatch:
@@ -9,59 +9,63 @@ permissions:
 jobs:
   mirror:
     runs-on: ubuntu-latest
+    timeout-minutes: 150
     steps:
       - uses: actions/checkout@v4
 
       - name: Install tools
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq wget
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq httrack curl
 
-      - name: Build seed list from live llms.txt + nav (canonical destinations)
-        # Seeds every llms.txt page plus sidebar/nav targets; /codex/* aliases are
-        # resolved through their live 308s (e.g. /codex/resources -> /resources,
-        # /codex/auth -> /docs/auth). Never invents docs/codex/... paths.
-        # Also writes scripts/codex-redirects.json for the URL rewriter.
-        run: python3 scripts/build-seeds.py .
-
-      - name: Mirror Codex docs from learn.chatgpt.com
+      - name: Seed list (site root + sitemap + llms.txt + machine-readable files)
+        # HTTrack crawls from here; the sitemap/llms.txt seeds catch pages that are not
+        # linked from the nav. No redirect resolution needed: HTTrack follows /codex/* 308s
+        # itself and links to the canonical local file.
         run: |
           set -euo pipefail
-          rm -rf learn.chatgpt.com staging
-          mkdir -p staging
-          # Pages without an extension are rejected by -A during recursion, so the
-          # crawl stays limited to the seeded pages plus their assets.
-          wget --mirror --convert-links --adjust-extension --page-requisites --no-parent \
-            --domains=learn.chatgpt.com \
-            -e robots=off \
-            --timeout=30 --tries=3 --wait=0.1 \
-            --exclude-directories=/api,/ads,/blog \
-            -A 'html,css,js,png,jpg,jpeg,svg,woff,woff2,gif,webp,ico,txt,xml,md' \
-            -i /tmp/urls.txt \
-            -P staging -nv || true
-          # wget saves extensionless seeds as *.tmp.html and --convert-links points
-          # hrefs at those names; rename the files AND fix the hrefs.
-          find staging -name '*.tmp.html' -print0 | while IFS= read -r -d '' f; do
-            mv "$f" "${f%.tmp.html}.html"
-          done
-          find staging -type f \( -name '*.html' -o -name '*.css' -o -name '*.js' -o -name '*.md' -o -name '*.txt' \) -print0 \
-            | xargs -0 -r sed -i 's/\.tmp\.html/.html/g'
-          if [ -d staging/learn.chatgpt.com ]; then
-            rm -rf learn.chatgpt.com
-            mv staging/learn.chatgpt.com .
-          fi
-          rm -rf staging
-          if [ ! -f index.html ]; then
-            printf '%s\n' '<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=learn.chatgpt.com/docs/codex/cli.html"><title>Codex CLI Docs Offline</title></head><body><p><a href="learn.chatgpt.com/docs/codex/cli.html">Open Codex CLI docs</a></p></body></html>' > index.html
-          fi
-          echo "=== Mirror stats ==="
-          find learn.chatgpt.com -type f 2>/dev/null | wc -l
-          du -sh learn.chatgpt.com 2>/dev/null || true
-          ls learn.chatgpt.com/docs/auth.html learn.chatgpt.com/docs/quickstart.html \
-            learn.chatgpt.com/docs/administration.html learn.chatgpt.com/docs/changelog.html \
-            learn.chatgpt.com/resources.html learn.chatgpt.com/use-cases.html \
-            learn.chatgpt.com/videos.html 2>/dev/null || true
+          B=https://learn.chatgpt.com
+          {
+            echo "$B/"
+            for f in robots.txt sitemap-index.xml chatgpt-sitemap-0.xml llms.txt llms-full.txt \
+                     docs/llms.txt docs/llms-full.txt docs/codex-manual.md blog/llms.txt; do echo "$B/$f"; done
+            curl -sfL "$B/sitemap-index.xml" | grep -o '<loc>[^<]*</loc>' | sed 's/<\/*loc>//g' \
+              | while read -r sm; do curl -sfL "$sm" | grep -o '<loc>[^<]*</loc>' | sed 's/<\/*loc>//g'; done
+            curl -sfL "$B/docs/llms.txt" | grep -oE "$B/[^) >\"]+"
+          } | sort -u > /tmp/seeds.txt
+          wc -l /tmp/seeds.txt
 
-      - name: Rewrite Learn URLs to relative paths
-        run: bash scripts/make-urls-relative.sh
+      - name: Mirror learn.chatgpt.com with HTTrack
+        # -N "%h%p/%n.%t": REQUIRED. The site sends Content-Disposition: filename="<slug>"
+        #   on every page, so HTTrack's default naming saves pages with NO .html extension
+        #   (and collides page/dir names like docs/auth vs docs/auth/ci-cd-auth).
+        # "-learn.chatgpt.com/*?*": REQUIRED. /use-cases?team=a&team=b facets explode
+        #   combinatorially; ?site_locale/?surface/?export duplicates. Assets with ?v=/?dpl=
+        #   are re-allowed below.
+        # api/, plugins/, apps-sdk 308 off-host to developers.openai.com -> excluded (stay absolute).
+        run: |
+          set -euo pipefail
+          rm -rf /tmp/ht && mkdir -p /tmp/ht
+          httrack -%L /tmp/seeds.txt -O /tmp/ht \
+            -s0 -c4 -%c5 -A2000000 -T30 -R3 -%k -n -I0 -o0 -K0 -N "%h%p/%n.%t" -%P -q -%v0 \
+            -M3000000000 -m60000000 -E7200 \
+            -F "Mozilla/5.0 (compatible; offline-docs-mirror; +https://github.com/${{ github.repository }})" \
+            "-*" "+learn.chatgpt.com/*" \
+            "-learn.chatgpt.com/api*" "-learn.chatgpt.com/plugins*" "-learn.chatgpt.com/apps-sdk*" \
+            "-learn.chatgpt.com/*?*" "+learn.chatgpt.com/_astro/*" \
+            "+learn.chatgpt.com/*.webp?*" "+learn.chatgpt.com/*.png?*" "+learn.chatgpt.com/*.jpg?*" "+learn.chatgpt.com/*.jpeg?*" \
+            "+learn.chatgpt.com/*.svg?*" "+learn.chatgpt.com/*.gif?*" "+learn.chatgpt.com/*.css?*" "+learn.chatgpt.com/*.js?*" \
+            "+learn.chatgpt.com/*.mp4?*" "+learn.chatgpt.com/*.webm?*" "+learn.chatgpt.com/*.woff2?*" \
+            "+cdn.openai.com/common/fonts/*" "+i.ytimg.com/vi/*" "+i.vimeocdn.com/*"
+          grep 'mirror complete' /tmp/ht/hts-log.txt || true
+
+      - name: Fix what HTTrack leaves behind
+        # 1) query-string links + data-href nav attrs -> relative local paths (uses the
+        #    redirect map in hts-cache), CSS url(/...) fonts HTTrack doesn't parse,
+        #    <source srcset>, and _astro files lost to Vercel deploy skew mid-crawl.
+        # 2) strip per-run HTTrack timestamps, junk files, restore codex-manual.md name,
+        #    fetch the unlinked .md twins, move host dirs into the repo.
+        run: |
+          set -euo pipefail
+          bash scripts/httrack-postprocess.sh /tmp/ht .
 
       - name: Commit and push mirror
         run: |
@@ -70,9 +74,8 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           if git diff --cached --quiet; then
-            echo "No changes to commit"
-            exit 0
+            echo "No changes to commit"; exit 0
           fi
           DATE=$(TZ=America/New_York date '+%Y-%m-%d %H:%M %Z')
-          git commit -m "Build offline Codex docs mirror (${DATE})"
+          git commit -m "Build offline learn.chatgpt.com mirror (${DATE})"
           git push
