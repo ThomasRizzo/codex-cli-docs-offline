@@ -1,24 +1,23 @@
-# Codex CLI Docs — Offline Mirror
+# learn.chatgpt.com — Offline Mirror
 
-Static offline snapshot of the OpenAI / ChatGPT **Codex** documentation (CLI, IDE, config, and related pages).
+Static offline snapshot of the whole [learn.chatgpt.com](https://learn.chatgpt.com) site (Codex docs, config reference, use cases, cookbook, blog, and related pages), plus a few CDN assets the pages need offline.
 
-## Source
+## What's in the tree
 
-- Primary host: [https://learn.chatgpt.com](https://learn.chatgpt.com)
-- Codex tree: [https://learn.chatgpt.com/docs/codex/](https://learn.chatgpt.com/docs/codex/) (especially [CLI](https://learn.chatgpt.com/docs/codex/cli))
-- Config docs: [https://learn.chatgpt.com/docs/config-file/](https://learn.chatgpt.com/docs/config-file/)
-- Doc map: [https://learn.chatgpt.com/llms.txt](https://learn.chatgpt.com/llms.txt)
-
-Note: `developers.openai.com/codex/*` 308-redirects to `learn.chatgpt.com/docs/codex/*`. This mirror captures the canonical Learn site (Astro static HTML).
-
-## Mirror date
-
-**2026-09-24 13:28 EDT** (America/New_York)
+| Path | Role |
+|------|------|
+| `index.html` | Splash page → `learn.chatgpt.com/index.html` |
+| `learn.chatgpt.com/` | HTTrack whole-site mirror (HTML + `.md` twins + `_astro` assets) |
+| `cdn.openai.com/` | Shared fonts referenced as `../cdn.openai.com/...` |
+| `i.ytimg.com/`, `i.vimeocdn.com/` | Video thumbnails |
+| `web.config` | IIS default document + extra MIME maps |
+| `scripts/` | Thin post-process after HTTrack (`httrack-postprocess.sh`, `fix-leftover-links.py`) |
+| `.github/workflows/assemble-mirror.yml` | Rebuild Action (`workflow_dispatch`) |
 
 ## How to browse offline
 
-1. **Simplest:** open `index.html` in a browser (or `learn.chatgpt.com/docs/codex/cli.html`).
-2. **Local server (recommended for relative asset paths):**
+1. Open `index.html`, or
+2. Prefer a local static server so relative `_astro` paths resolve cleanly:
 
 ```bash
 cd codex-cli-docs-offline
@@ -27,38 +26,43 @@ python3 -m http.server 8765
 
 Then visit http://127.0.0.1:8765/
 
-Markdown twins (`*.md`) sit next to many HTML pages for text-only / LLM ingestion. Also included: `learn.chatgpt.com/llms.txt` and `learn.chatgpt.com/docs/codex-manual.md`.
+## IIS notes
 
-## What's included
+Point the site root at the **repo root** (not `learn.chatgpt.com/`). Keep `web.config` so:
 
-- HTML pages under `/docs/codex/`, `/docs/config-file/`, and related Codex CLI/agent docs
-- Page assets: `/_astro/` CSS/JS/fonts, `/js/`, `/images/codex/`, local font copies
-- Markdown exports (page `.md` twins + manuals where available)
+- `index.html` is the default document
+- `.md`, `.woff2`, `.webp`, `.vtt`, `.webm`, `.jsonl`, `.ts`, `.py`, `.yml` get sensible MIME types
+
+Links are already relative (HTTrack + `scripts/fix-leftover-links.py`). No IIS outbound URL Rewrite module is required for Learn navigation. Paths under `/api`, `/plugins`, and `/apps-sdk` stay absolute `https://learn.chatgpt.com/...` on purpose — they 308 off-host to `developers.openai.com` and are excluded from the mirror.
+
+## How the mirror is built
+
+GitHub Action **Build offline learn.chatgpt.com mirror** (`assemble-mirror.yml`, `workflow_dispatch` only):
+
+1. Build `seeds.txt` from site root + sitemap + `llms.txt` (and a few machine-readable files).
+2. Run **HTTrack** with host-preserving names (`-N "%h%p/%n.%t"`), no query-string crawl explosion, and exclusions for `/api`, `/plugins`, `/apps-sdk`.
+3. Thin post-process (`scripts/httrack-postprocess.sh` + `fix-leftover-links.py`): strip HTTrack junk/timestamps, rename `codex-manual-markdown` → `docs/codex-manual.md`, fetch unlinked `.md` twins, relativize leftover absolute / `data-href` / CSS `url(/_astro/…)` links, recover `_astro` files lost to Vercel deploy skew via `?dpl=`.
+4. Commit and push the refreshed tree with `GITHUB_TOKEN`.
+
+### Re-run the Action
+
+1. Open https://github.com/ThomasRizzo/codex-cli-docs-offline/actions/workflows/assemble-mirror.yml
+2. **Run workflow** → branch `main`
+3. Wait for success (often ~30–90+ minutes; timeout is 150 minutes), then `git pull`
+
+## Exclusions (left absolute / not mirrored)
+
+- `learn.chatgpt.com/api*`
+- `learn.chatgpt.com/plugins*`
+- `learn.chatgpt.com/apps-sdk*`
+- Query-string page facets (`?team=`, `?site_locale=`, `?surface=`, `?export=`) — combinatorial; assets with `?v=` / `?dpl=` are still allowed
 
 ## Limitations
 
-- This is a **static snapshot**. Live site content will drift over time.
-- Full Astro HTML pages include site chrome; links to unmirrored sections (`/api/docs`, `/ads`, etc.) will 404 locally.
-- Site-wide nav links to unrelated sections were **not** mirrored and will 404 locally.
-- Interactive widgets / JS-only features may degrade without network.
-- Prefer `python3 -m http.server` so relative `_astro` CSS paths resolve.
-- Re-run the GitHub Action **Build offline Codex docs mirror** (`workflow_dispatch`) to refresh from learn.chatgpt.com.
-
-
-## Relative URLs (IIS / static hosts)
-
-Absolute `learn.chatgpt.com` (and mapped `developers.openai.com/codex|docs`) links are rewritten to **relative** paths so IIS or any static file host keeps navigation on the local mirror—no outbound URL rewrite module required for Learn links.
-
-After a fresh mirror or local content update, re-run:
-
-```bash
-bash scripts/make-urls-relative.sh
-# or: python3 scripts/make-urls-relative.py
-# optional: --dry-run  /  --root PATH
-```
-
-The GitHub Action **Build offline Codex docs mirror** runs this automatically after `wget`.
+- Static snapshot; live content drifts.
+- Interactive / network-only widgets may degrade offline.
+- Excluded off-host sections stay online-only links.
 
 ## License / attribution
 
-Content © OpenAI / ChatGPT Learn documentation. This repository is an unofficial offline mirror for personal/offline reference; it is not affiliated with OpenAI.
+Content © OpenAI / ChatGPT Learn documentation. Unofficial offline mirror for personal/offline reference; not affiliated with OpenAI.
