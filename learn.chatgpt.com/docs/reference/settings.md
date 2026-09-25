@@ -1,6 +1,6 @@
 # Settings
 
-> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Use the settings panel to personalize the app and manage everyday preferences.
 Open [**Settings**](codex://settings) from the app menu or press
@@ -99,7 +99,7 @@ Choose **Friendly**, **Pragmatic**, or **None** as your default personality. Use
 **None** to disable personality instructions. You can update this at any time.
 
 You can also add your own custom instructions. Editing custom instructions updates your
-[personal instructions in `AGENTS.md`](../agent-configuration/agents-md.md).
+[personal instructions in `AGENTS.md`](../agent-configuration/agents-md.html).
 
 ## Suggested prompts
 

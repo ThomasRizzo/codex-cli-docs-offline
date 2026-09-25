@@ -1,6 +1,6 @@
 # Run Codex Security in GitLab CI/CD
 
-> For the complete documentation index, see [llms.txt](../../../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Run Codex Security in GitLab CI/CD to scan committed changes and protected
 branches, publish findings to GitLab Security, and optionally propose verified
@@ -137,7 +137,7 @@ The minimal example intentionally omits full scans and remediation.
 
 ## Adopt the production pipeline
 
-1. [Download the complete GitLab pipeline](gitlab.yml)
+1. [Download the complete GitLab pipeline](https://learn.chatgpt.com/docs/security/cli/ci/gitlab.yml)
    and save it as `.gitlab-ci.yml` in the repository root. If your repository
    already has a pipeline, merge the example's stages, hidden templates, and
    jobs into the existing file.

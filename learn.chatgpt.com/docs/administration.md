@@ -1,6 +1,6 @@
 # Administration
 
-> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 <CodexDocsOverviewLanding
   title="Administration"
@@ -131,6 +131,13 @@
             "Manage GPT sharing, ownership, connected apps, and third-party actions across your workspace.",
           href: "/codex/enterprise/gpts-and-sharing",
           icon: "userLock",
+        },
+        {
+          title: "Migrate custom GPTs to plugins",
+          description:
+            "Plan your workspace transition, migrate individual GPTs or eligible batches, and test and share replacement plugins.",
+          href: "/codex/migrate-custom-gpts",
+          icon: "tools",
         },
         {
           title: "Managed configuration",

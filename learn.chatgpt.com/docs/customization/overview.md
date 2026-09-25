@@ -1,6 +1,6 @@
 # Customization
 
-> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Customization is how you make Codex work the way your team works.
 
@@ -64,7 +64,7 @@ Use the global file to shape how Codex communicates with you (for example, revie
   ]}
 />
 
-[Custom instructions with AGENTS.md](../agent-configuration/agents-md.md)
+[Custom instructions with AGENTS.md](../agent-configuration/agents-md.html)
 
 ## Skills
 
@@ -177,7 +177,7 @@ If a skill depends on MCP, declare that dependency in `agents/openai.yaml` so Co
 
 Build in this order:
 
-1. [Custom instructions with AGENTS.md](../agent-configuration/agents-md.md) so Codex follows your repo conventions. Add pre-commit hooks and linters to enforce those rules.
+1. [Custom instructions with AGENTS.md](../agent-configuration/agents-md.html) so Codex follows your repo conventions. Add pre-commit hooks and linters to enforce those rules.
 2. Install a [plugin](../plugins.html) when a reusable workflow already exists. Otherwise, create a [skill](../build-skills.html) and package it as a plugin when you want to share it.
 3. [MCP](../extend/mcp.html) when workflows need external systems (Linear, GitHub, docs servers, design tools).
 4. [Subagents](../agent-configuration/subagents.html) when you're ready to delegate noisy or specialized tasks to subagents.

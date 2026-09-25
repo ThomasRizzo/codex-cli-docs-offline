@@ -1,6 +1,6 @@
 # Codex Security
 
-> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Codex Security is an application security agent that helps security and
 engineering teams find, confirm, and fix vulnerabilities. Use it in

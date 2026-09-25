@@ -1,0 +1,341 @@
+html[data-training-embedded="true"]
+  .lab-shell.hands-on-course.phase-practice
+  .journey-header {
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+}
+.hands-on-course .journey-nav-button svg {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  color: inherit;
+}
+.hands-on-course .journey-header-actions .journey-nav-button {
+  width: 32px;
+  min-height: 32px;
+  height: 32px;
+  padding: 0;
+}
+.lab-shell.hands-on-course.phase-practice .journey-header-actions {
+  align-items: center;
+  gap: 2px;
+}
+.lab-shell.hands-on-course.phase-practice
+  .journey-header-actions
+  .journey-nav-button {
+  border-color: transparent;
+  background: transparent;
+  box-shadow: none;
+  color: var(--journey-muted);
+  transition: color 150ms ease;
+}
+.lab-shell.hands-on-course.phase-practice
+  .journey-header-actions
+  .journey-nav-button:hover:not(:disabled) {
+  background: transparent;
+  color: var(--journey-ink);
+}
+.lab-shell.hands-on-course.phase-practice
+  .journey-header-actions
+  .journey-nav-button:focus-visible {
+  outline: 2px solid var(--journey-accent);
+  outline-offset: 2px;
+}
+@media (min-width: 1181px) {
+  .hands-on-course .journey-header-actions .journey-nav-button svg {
+    width: 20px;
+    height: 20px;
+    flex-basis: 20px;
+  }
+}
+/* Both courses use the same rail. Labels keep their natural width while the
+   connectors take up the available space up to the desktop reference width. */
+html[data-training-embedded="true"] .hands-on-course .journey-stage-list {
+  width: min(760px, 100%);
+  max-width: none;
+}
+html[data-training-embedded="true"] .hands-on-course .journey-stage-connector {
+  min-width: 0;
+  margin-inline: clamp(6px, 0.8vw, 10px);
+}
+html[data-theme="dark"] .hands-on-course .journey-stage-connector {
+  background: color-mix(in srgb, var(--journey-ink) 22%, transparent);
+}
+html[data-theme="dark"] .hands-on-course .journey-stage-item.is-complete {
+  --work-completed-color: color-mix(
+    in srgb,
+    var(--journey-green) 50%,
+    var(--journey-ink)
+  );
+}
+html[data-theme="dark"]
+  .hands-on-course
+  .journey-stage-item.is-complete
+  .journey-stage-marker {
+  border-color: color-mix(
+    in srgb,
+    var(--work-completed-color) 35%,
+    transparent
+  );
+  background: color-mix(in srgb, var(--work-completed-color) 16%, transparent);
+  color: var(--work-completed-color);
+}
+html[data-theme="dark"]
+  .hands-on-course
+  .journey-stage-item.is-complete
+  .journey-stage-connector {
+  background: color-mix(in srgb, var(--work-completed-color) 40%, transparent);
+}
+.hands-on-course .practice-stage-actions .primary-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.hands-on-course .practice-stage-actions .primary-button svg {
+  width: 16px;
+  height: 16px;
+}
+.hands-on-course .practice-lesson-title:focus {
+  outline: none;
+}
+.hands-on-course .practice-task-progress {
+  margin-inline-start: auto;
+  margin-inline-end: 8px;
+}
+.hands-on-course .practice-task-example:disabled,
+.hands-on-course .hint-prompt-chip:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.course-storage {
+  margin: 0 2px;
+  color: var(--journey-faint);
+  font-size: 10px;
+  line-height: 1.5;
+}
+.course-skip-lesson {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  gap: 6px;
+  min-height: 0;
+  margin-top: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--journey-muted);
+  font-size: 12px;
+  cursor: pointer;
+}
+.course-skip-lesson:hover {
+  color: var(--journey-ink);
+  background: transparent;
+}
+.course-skip-lesson svg {
+  width: 14px;
+  height: 14px;
+}
+.course-skip-lesson:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+@media (max-width: 900px) {
+  html[data-training-embedded="true"]
+    .lab-shell.hands-on-course.phase-practice
+    .practice-screen {
+    row-gap: 20px;
+  }
+  .hands-on-course .practice-guidance-stack {
+    max-height: min(340px, 40dvh);
+    padding-bottom: 12px;
+  }
+}
+@media (max-width: 1180px) {
+  html[data-training-embedded="true"]
+    .lab-shell.hands-on-course.phase-practice
+    .journey-header {
+    gap: 8px;
+    padding-inline: 12px;
+  }
+  html[data-training-embedded="true"] .hands-on-course .journey-stage-list {
+    display: grid;
+    grid-template-columns: repeat(var(--course-step-count), minmax(0, 1fr));
+    width: min(calc(var(--course-step-count) * 52px), 100%);
+    gap: 0;
+  }
+  html[data-training-embedded="true"] .hands-on-course .journey-stage-item {
+    justify-content: center;
+  }
+  html[data-training-embedded="true"] .hands-on-course .journey-stage-link,
+  html[data-training-embedded="true"] .hands-on-course .journey-stage-current {
+    width: 32px;
+    height: 36px;
+    gap: 0;
+    padding: 0;
+    overflow: visible;
+    justify-content: center;
+  }
+  html[data-training-embedded="true"] .hands-on-course .journey-stage-marker {
+    width: 24px;
+    height: 24px;
+    flex-basis: 24px;
+  }
+  html[data-training-embedded="true"] .hands-on-course .journey-stage-connector,
+  html[data-training-embedded="true"]
+    .hands-on-course
+    .journey-stage-item
+    .journey-stage-label {
+    display: none;
+  }
+  html[data-training-embedded="true"] .hands-on-course .journey-header-back {
+    width: 32px;
+    min-height: 32px;
+    height: 32px;
+    padding: 0;
+  }
+  .hands-on-course .journey-header-actions .journey-nav-button {
+    width: 28px;
+    min-height: 28px;
+    height: 28px;
+  }
+  .lab-shell.hands-on-course.phase-practice .journey-header-actions {
+    gap: 0;
+  }
+  .hands-on-course .journey-header-back .journey-nav-label {
+    display: none;
+  }
+}
+@media (min-width: 721px) and (max-width: 1180px) {
+  html[data-training-embedded="true"] .hands-on-course .journey-stage-list {
+    display: flex;
+    width: auto;
+    gap: clamp(16px, 2vw, 24px);
+  }
+  html[data-training-embedded="true"] .hands-on-course .journey-stage-item {
+    flex: 0 0 auto;
+  }
+  html[data-training-embedded="true"] .hands-on-course .journey-stage-current {
+    width: auto;
+    gap: 8px;
+  }
+  html[data-training-embedded="true"]
+    .hands-on-course
+    .journey-stage-item.is-current
+    .journey-stage-label {
+    display: inline;
+  }
+}
+
+.course-walkthrough-icon {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  background: currentColor;
+  mask: url("walkthrough-icon.svg") center / contain no-repeat;
+}
+.course-tooltip-trigger {
+  position: relative;
+}
+.course-tooltip-trigger [role="tooltip"] {
+  position: absolute;
+  z-index: 60;
+  right: 0;
+  top: calc(100% + 8px);
+  width: max-content;
+  max-width: 220px;
+  padding: 5px 9px;
+  border-radius: 8px;
+  background: #303030;
+  color: #fff;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.course-tooltip-trigger:hover [role="tooltip"],
+.course-tooltip-trigger:focus-visible [role="tooltip"] {
+  opacity: 1;
+  visibility: visible;
+}
+.course-finish-frame {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  border: 0;
+}
+@media (min-width: 1181px) {
+  .course-walkthrough-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media (max-width: 720px) {
+  html[data-training-embedded="true"] .hands-on-course .journey-current-lesson {
+    display: none;
+  }
+  html[data-training-embedded="true"] .hands-on-course .journey-stage-link,
+  html[data-training-embedded="true"] .hands-on-course .journey-stage-current {
+    width: 100%;
+    min-width: 0;
+  }
+}
+@media (max-width: 400px) {
+  html[data-training-embedded="true"] .hands-on-course .journey-stage-marker {
+    width: 20px;
+    height: 20px;
+    flex-basis: 20px;
+    font-size: 11px;
+  }
+  html[data-training-embedded="true"]
+    .hands-on-course.phase-practice
+    .journey-header {
+    gap: 4px;
+    padding-inline: 8px;
+  }
+}
+
+.hands-on-course [data-training-next-highlight] {
+  outline: 2px solid #339cff;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px rgb(51 156 255 / 14%);
+}
+
+@media (max-width: 900px) {
+  /* Give every stacked layout the taller app lane, leaving the lesson title
+     visible below and capping the height on taller screens. */
+  html[data-training-embedded="true"]
+    .lab-shell.hands-on-course.phase-practice
+    .practice-screen {
+    grid-template-rows: clamp(420px, calc(100dvh - 150px), 640px) auto;
+    overflow-y: auto;
+  }
+
+  html[data-training-embedded="true"]
+    .lab-shell.hands-on-course.phase-practice
+    .practice-guidance-stack {
+    max-height: none;
+    overflow: visible;
+  }
+
+  .lab-shell.hands-on-course.phase-practice .practice-task-card {
+    max-height: none;
+  }
+}
+
+@media (max-width: 720px) {
+  html[data-training-embedded="true"]
+    .codex-course:has([data-course-catalog="true"])
+    .practice-screen {
+    grid-template-areas: "workspace";
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr);
+  }
+  .codex-course:has([data-course-catalog="true"]) .practice-guidance-stack {
+    display: none;
+  }
+}

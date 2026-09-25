@@ -1,6 +1,6 @@
 # Pricing
 
-> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 **ChatGPT Work and Codex share usage.** ChatGPT Work usage inside
   ChatGPT uses the same pricing, credits, and usage limits as Codex.
@@ -624,7 +624,7 @@ tips to maximize your limits:
   separate required work from optional improvements.
 - **Reduce the size of your AGENTS.md.** If you work on a larger project, you
   can control how much context you inject through AGENTS.md files by [nesting
-  them within your repository](agent-configuration/agents-md.md#layer-project-instructions).
+  them within your repository](agent-configuration/agents-md.html#layer-project-instructions).
 - **Limit the number of MCP servers you use.** Every
   [MCP](extend/mcp.html) server adds more context to your messages and uses
   more of your limit. Disable MCP servers when you don’t need them.

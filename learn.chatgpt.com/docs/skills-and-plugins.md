@@ -1,6 +1,6 @@
 # Skills & Plugins
 
-> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Skills and plugins help ChatGPT and Codex complete repeatable work with the
 right instructions, resources, and tools. They reduce the need to paste the
@@ -95,6 +95,8 @@ skill using the invocation syntax for your surface.
 Use a skill when you need reusable instructions for a focused task. Use a
 plugin when you want an installable package that can combine instructions with
 connected services or other tools.
+
+Moving an existing custom GPT workflow? See [Migrate custom GPTs to plugins](migrate-custom-gpts.html) for workspace preparation, migration, testing, and sharing.
 
 You can also demonstrate a workflow with
 [Record & Replay](extend/record-and-replay.html), which turns the recording into a

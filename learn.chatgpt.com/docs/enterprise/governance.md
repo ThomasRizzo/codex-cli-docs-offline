@@ -1,6 +1,6 @@
 # Governance
 
-> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Governance for Codex activity spans interactive analytics, programmatic
 reporting, related ChatGPT usage controls, and audit records. Choose the

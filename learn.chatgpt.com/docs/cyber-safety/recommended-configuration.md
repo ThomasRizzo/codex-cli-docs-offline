@@ -1,6 +1,6 @@
 # Recommended configuration
 
-> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 The security controls appropriate for a cybersecurity workflow depend on the model, the actions it can take, the systems it can access, and the sensitivity of the data involved.
 

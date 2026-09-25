@@ -1,0 +1,63 @@
+WEBVTT
+
+00:00:00.200 --> 00:00:03.120
+So a custom GPT is made up of a name,
+
+00:00:03.120 --> 00:00:06.200
+instructions that tell the GPT what to do,
+
+00:00:06.200 --> 00:00:09.760
+sometimes files for the GPT to reference,
+
+00:00:09.760 --> 00:00:12.960
+sometimes apps, although that's not a
+requirement,
+
+00:00:12.960 --> 00:00:15.200
+and then some custom GPTs have
+
+00:00:15.200 --> 00:00:17.480
+been configured with custom actions.
+
+00:00:17.480 --> 00:00:19.840
+I want to highlight that custom actions do
+not
+
+00:00:19.840 --> 00:00:22.680
+transfer over when you migrate to a
+plugin.
+
+00:00:22.680 --> 00:00:25.160
+When I hit that "Migrate" button,
+
+00:00:25.160 --> 00:00:28.120
+you'll see that the name of the custom GPT
+
+00:00:28.120 --> 00:00:30.680
+becomes the name of the skill within the
+plugin.
+
+00:00:30.680 --> 00:00:34.380
+The instructions and files are within that
+skill.
+
+00:00:34.380 --> 00:00:35.880
+If you've connected an app,
+
+00:00:35.880 --> 00:00:37.640
+it just connects right to the plugin,
+
+00:00:37.640 --> 00:00:40.080
+and then those custom actions again are
+not transferred.
+
+00:00:40.080 --> 00:00:41.480
+So you'll either need to set up
+
+00:00:41.480 --> 00:00:44.440
+a supported app with the right read or
+write actions,
+
+00:00:44.440 --> 00:00:46.800
+or you'll need to set up a custom MCP
+server.

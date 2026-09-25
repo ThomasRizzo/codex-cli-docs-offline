@@ -1,6 +1,6 @@
 # Usage Insights for ChatGPT Work in Codex
 
-> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Insights in the Admin Console helps you understand what teams use ChatGPT Work and Codex for and where credits are spent. Open a category in the workspace overview to see its tasks and usage. Check the scope shown in each view before comparing results.
 

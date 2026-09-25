@@ -1,6 +1,6 @@
 # Review GitLab merge requests with Codex
 
-> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Use Codex code review to get another high-signal review pass on GitLab merge
 requests. Codex reviews the merge request diff, follows your repository

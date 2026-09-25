@@ -1,6 +1,6 @@
 # ChatGPT Work cloud security
 
-> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 ChatGPT Work is part of your existing ChatGPT workspace and follows its
 applicable privacy, security, and data-handling policies. For Business,

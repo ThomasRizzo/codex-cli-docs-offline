@@ -1,6 +1,6 @@
 # Codex Security plugin quickstart
 
-> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Codex Security scans your code for vulnerabilities and validates plausible
 findings. For each reportable issue, it gives you the evidence and remediation

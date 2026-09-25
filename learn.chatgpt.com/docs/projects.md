@@ -1,6 +1,6 @@
 # Projects and chats
 
-> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 <ContentModeSwitch group="codex-surface" id="app">
 

@@ -1,6 +1,6 @@
 # Windows sandbox
 
-> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Use Codex on Windows with the native [ChatGPT desktop app](windows-app.html), the
 [CLI](../codex/cli.html), or the [IDE extension](../codex/ide.html).
@@ -24,7 +24,7 @@ workflows while enforcing bounded filesystem and network permissions.
 
 
   <CodexCallout
-    href="windows-app.html"
+    href="/codex/windows/windows-app"
     title="Use the ChatGPT desktop app on Windows"
     description="Work across projects, run parallel chats, and review results in one place with the native Windows app."
     iconSrc="/images/codex/codex-banner-icon.webp"

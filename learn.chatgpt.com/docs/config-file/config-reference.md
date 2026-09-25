@@ -1,6 +1,6 @@
 # Configuration Reference
 
-> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Use this page as a searchable reference for Codex configuration files. For conceptual guidance and examples, start with [Config basics](config-basic.html) and [Advanced Config](config-advanced.html).
 
@@ -1753,7 +1753,7 @@ You can find the latest JSON schema for `config.toml` [here](../config-schema.js
 To get autocompletion and diagnostics when editing `config.toml` in VS Code or Cursor, you can install the [Even Better TOML](https://marketplace.visualstudio.com/items?itemName=tamasfe.even-better-toml) extension and add this line to the top of your `config.toml`:
 
 ```toml
-#:schema ../../config-schema.json
+#:schema https://developers.openai.com/codex/config-schema.json
 ```
 
 Note: Rename `experimental_instructions_file` to `model_instructions_file`. Codex deprecates the old key; update existing configs to the new name.

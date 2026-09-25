@@ -1,6 +1,6 @@
 # Run a deep security scan
 
-> For the complete documentation index, see [llms.txt](../../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Run a deep scan when you need a more thorough review and can allow for a longer
 runtime. Deep scans search a repository more extensively and can reduce

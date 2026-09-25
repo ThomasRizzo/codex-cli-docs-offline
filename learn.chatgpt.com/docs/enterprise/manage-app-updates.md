@@ -1,6 +1,6 @@
 # Manage app updates
 
-> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 The ChatGPT desktop app normally checks for and installs updates on its own. If
 your organization needs to review new releases before users receive them, you

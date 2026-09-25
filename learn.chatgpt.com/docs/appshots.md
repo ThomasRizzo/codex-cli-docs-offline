@@ -1,6 +1,6 @@
 # Appshots
 
-> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Appshots let you send the frontmost app window to a chat in ChatGPT. Use them when
 you're actively working in another app on your computer and want to provide

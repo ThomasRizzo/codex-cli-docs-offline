@@ -1,6 +1,6 @@
 # ChatGPT Work Overview
 
-> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 ChatGPT Work and Codex share core execution, isolation, and permission
 mechanisms, and fall within the same security boundaries that are part of your

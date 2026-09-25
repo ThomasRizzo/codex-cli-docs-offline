@@ -1,31 +1,6 @@
 # Developer commands
 
-> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
-
-<ContentModeSwitch group="codex-surface" id="web">
-
-ChatGPT web has its own composer command menu. Type `/` to see the actions
-available in the current chat. It doesn't expose the ChatGPT desktop app or CLI
-command set; the Codex slash commands, CLI subcommands, and flags in this
-reference don't apply to ChatGPT web.
-
-</ContentModeSwitch>
-
-<ContentModeSwitch group="codex-surface" id="app">
-
-## ChatGPT desktop app commands
-
-The general [Commands](reference/commands.html) page covers app navigation,
-chat shortcuts, keyboard customization, and deep links for chats, settings,
-skills, scheduled tasks, plugins, and pets.
-
-The [Slash commands](reference/slash-commands.html) page covers the commands
-available from the app composer, including `/feedback`, `/goal`, `/init`,
-`/mcp`, `/plan`, `/review`, and `/status`.
-
-</ContentModeSwitch>
-
-<ContentModeSwitch group="codex-surface" id="cli">
+> For the complete documentation index, see [llms.txt](llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 ## How to read this reference
 
@@ -360,7 +335,7 @@ Check for and apply a Codex CLI update when the installed release supports self-
 - [Codex CLI overview](codex/cli.html): installation, upgrades, and quick tips.
 - [Config basics](config-file/config-basic.html): persist defaults like the model and provider.
 - [Advanced Config](config-file/config-advanced.html): profiles, providers, sandbox tuning, and integrations.
-- [AGENTS.md](agent-configuration/agents-md.md): conceptual overview of Codex agent capabilities and best practices.
+- [AGENTS.md](agent-configuration/agents-md.html): conceptual overview of Codex agent capabilities and best practices.
 
 Slash commands give you fast, keyboard-first control over Codex. Type `/` in
 the composer to open the slash popup, choose a command, and Codex will perform
@@ -941,66 +916,3 @@ Expected: Codex clears local credentials for the current user session.
 1. Type `/quit` (or `/exit`) and press Enter.
 
 Expected: Codex exits immediately. Save or commit any important work first.
-
-</ContentModeSwitch>
-
-<ContentModeSwitch group="codex-surface" id="ide">
-
-Use these commands to control Codex from the VS Code Command Palette. You can also bind them to keyboard shortcuts.
-
-## Assign a key binding
-
-To assign or change a key binding for a Codex command:
-
-1. Open the Command Palette (**Cmd+Shift+P** on macOS or **Ctrl+Shift+P** on Windows/Linux).
-2. Run **Preferences: Open Keyboard Shortcuts**.
-3. Search for `Codex` or the command ID (for example, `chatgpt.newChat`).
-4. Select the pencil icon, then enter the shortcut you want.
-
-## Extension commands
-
-| Command                   | Default key binding                        | Description                                             |
-| ------------------------- | ------------------------------------------ | ------------------------------------------------------- |
-| `chatgpt.addToThread`     | -                                          | Add selected text range as context for the current chat |
-| `chatgpt.addFileToThread` | -                                          | Add the entire file as context for the current chat     |
-| `chatgpt.newChat`         | macOS: `Cmd+N`<br />Windows/Linux: `Ctrl+N` | Create a new chat                                       |
-| `chatgpt.newCodexPanel`   | -                                          | Create a new Codex panel                                |
-| `chatgpt.openCommandMenu` | -                                          | Open the Codex command menu                             |
-| `chatgpt.openSidebar`     | -                                          | Open the Codex sidebar panel                            |
-
-Slash commands let you control Codex without leaving the composer. Use them to check status, switch between local and cloud mode, or send feedback.
-
-## Use a slash command
-
-1. In the Codex composer, type `/`.
-2. Select a command from the list, or keep typing to filter (for example, `/status`).
-3. Press **Enter**.
-
-## Available slash commands
-
-| Slash command        | Description                                                                             |
-| -------------------- | --------------------------------------------------------------------------------------- |
-| `/approve`           | Approve one retry of a recent automatic-review denial, when automatic review is active. |
-| `/cloud`             | Run the chat in the cloud, when cloud execution is available.                           |
-| `/cloud-environment` | Choose the cloud environment for the chat.                                              |
-| `/compact`           | Compact the current chat's context.                                                     |
-| `/fast`              | Turn a catalog-provided Fast service tier on or off, when available.                    |
-| `/feedback`          | Open the feedback dialog to submit feedback and optionally include logs.                |
-| `/fork`              | Copy a local chat into a new local chat.                                                |
-| `/goal`              | Set a persistent goal for Codex to work toward.                                         |
-| `/ide-context`       | Turn automatic IDE context on or off.                                                   |
-| `/init`              | Generate an `AGENTS.md` scaffold for the current project.                               |
-| `/local`             | Run the chat in your local workspace.                                                   |
-| `/mcp`               | Open MCP status to view connected servers.                                              |
-| `/memories`          | Configure whether the chat can use or generate memories, when Memories is available.    |
-| `/model`             | Choose the model for the current chat.                                                  |
-| `/personality`       | Choose how Codex responds, when the current model supports personalities.               |
-| `/plan`              | Toggle plan mode for multi-step planning.                                               |
-| `/project`           | Choose a project for new chats.                                                         |
-| `/reasoning`         | Choose the reasoning effort for the current chat.                                       |
-| `/review`            | Start code review mode to review uncommitted changes or compare against a base branch.  |
-| `/side`              | Start a temporary side chat without interrupting the main chat.                         |
-| `/status`            | Show the chat ID, context usage, and rate limits.                                       |
-| `/worktree`          | Run the chat in a new Git worktree.                                                     |
-
-</ContentModeSwitch>

@@ -1,6 +1,6 @@
 # Speed
 
-> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 **ChatGPT Work and Codex share usage.** Both use the same
   pricing, credits, and usage limits. See [Codex pricing](../pricing.html) for
@@ -33,6 +33,6 @@ apply. API Priority processing has its own billing rate; for GPT-5.6, it costs
 2x the Standard API token rate.
 
 <VideoPlayer
-  src="../../videos/codex/fast-mode-demo.mp4"
+  src="/videos/codex/fast-mode-demo.mp4"
   class="[&_video]:mx-auto [&_video]:max-h-[400px] [&_video]:max-w-full [&_video]:w-auto"
 />

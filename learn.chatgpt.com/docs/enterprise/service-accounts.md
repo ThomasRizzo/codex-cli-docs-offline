@@ -1,6 +1,6 @@
 # Service accounts
 
-> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Service accounts let you run and scale headless Codex workflows across your organization without relying on an employee's account. Each continuous integration (CI) runner, scheduled job, or shared integration gets its own ChatGPT workspace identity, with the same groups, roles, access controls, and auditability you expect for people.
 

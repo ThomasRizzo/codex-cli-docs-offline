@@ -1,6 +1,6 @@
 # Codex Security CLI FAQ
 
-> For the complete documentation index, see [llms.txt](../../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Find answers to common questions about scanning repositories and managing
 security findings from the terminal. For installation and a first scan, start

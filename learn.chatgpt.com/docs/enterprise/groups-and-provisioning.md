@@ -1,6 +1,6 @@
 # Groups and provisioning
 
-> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Groups organize people in a ChatGPT workspace and can carry custom roles. Group
 membership doesn't replace seat assignments, grant workspace feature permissions

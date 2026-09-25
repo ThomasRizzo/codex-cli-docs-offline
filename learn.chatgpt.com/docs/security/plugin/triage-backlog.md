@@ -1,6 +1,6 @@
 # Triage a backlog
 
-> For the complete documentation index, see [llms.txt](../../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Use `$codex-security:triage-finding` to review existing security findings
 against the current repository. This workflow performs a read-only static

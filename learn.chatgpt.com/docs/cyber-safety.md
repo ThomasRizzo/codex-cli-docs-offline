@@ -1,6 +1,6 @@
 # Models and Trusted Access
 
-> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 OpenAI Daybreak helps approved users perform authorized defensive cybersecurity work. Daybreak Blue provides access to flagship models with reduced refusals for authorized defensive workflows. Daybreak Red provides separately approved access to specialist cyber models for more advanced security research.
 

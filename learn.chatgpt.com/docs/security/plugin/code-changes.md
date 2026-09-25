@@ -1,6 +1,6 @@
 # Review code changes for security
 
-> For the complete documentation index, see [llms.txt](../../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Run a security change review to find regressions in one Git-backed change set.
 Codex reviews each changed source-like file and its directly supporting code.

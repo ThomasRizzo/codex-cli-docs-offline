@@ -1,6 +1,6 @@
 # Use the Codex Security workbench
 
-> For the complete documentation index, see [llms.txt](../../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 The Security workbench brings your scans, findings, and repositories together
 in the Codex desktop app. Codex performs scan analysis in a regular task, while

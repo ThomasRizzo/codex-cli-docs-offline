@@ -1,6 +1,6 @@
 # Security Review
 
-> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Codex Security Review is available in research preview.
 It is available to ChatGPT Enterprise, Business, Edu, and Pro customers; it is

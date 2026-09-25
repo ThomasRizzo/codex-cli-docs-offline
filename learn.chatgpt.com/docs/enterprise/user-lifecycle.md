@@ -1,6 +1,6 @@
 # User lifecycle management
 
-> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Use this guide to give employees the right ChatGPT workspace access when they
 join, update that access when their responsibilities change, and remove access

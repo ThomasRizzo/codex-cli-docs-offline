@@ -1,6 +1,6 @@
 # Workspace analytics
 
-> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Use ChatGPT workspace analytics for broad workspace adoption. Use Codex
 analytics for Codex-focused reporting. Use the Analytics API for programmatic

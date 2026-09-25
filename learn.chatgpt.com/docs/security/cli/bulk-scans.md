@@ -1,6 +1,6 @@
 # Run bulk security scans
 
-> For the complete documentation index, see [llms.txt](../../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Use `npx @openai/codex-security bulk-scan` to review repositories in one
 campaign. Discover repositories from your personal GitHub account or an
@@ -103,7 +103,7 @@ npx @openai/codex-security bulk-scan repositories.csv \
 `--workers` controls concurrent repository scans and defaults to `4`. It does
 not set the number of independent standard-scan workers within each deep scan;
 configure those limits through
-[`[deep_scan]`](reference.html#configure-deep-scans). Use `--mode
+[`[deep_scan]`](/codex/security/cli/reference#configure-deep-scans). Use `--mode
 deep` to select deep scanning for rows without their own `mode`. Each CSV row
 can still choose its own scan mode and repository scope.
 

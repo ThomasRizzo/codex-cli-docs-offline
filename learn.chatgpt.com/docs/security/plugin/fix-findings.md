@@ -1,6 +1,6 @@
 # Fix and verify security findings
 
-> For the complete documentation index, see [llms.txt](../../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Use Codex Security to turn an accepted security finding into a focused,
 verified patch. You can work in the Security workbench or run the remediation

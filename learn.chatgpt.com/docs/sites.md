@@ -1,6 +1,6 @@
 # Sites
 
-> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Sites is in public beta and is available with ChatGPT Plus, Pro, Business,
   Enterprise and Edu plans. Plan-specific usage limits apply across all Sites
@@ -174,8 +174,8 @@ Sites handles the sign-in and sign-out flows through platform-provided paths,
 then returns the visitor to your Site:
 
 ```html
-<a href="../signin-with-chatgpt.html">Sign in with ChatGPT</a>
-<a href="../signout-with-chatgpt.html">Sign out</a>
+<a href="/signin-with-chatgpt">Sign in with ChatGPT</a>
+<a href="/signout-with-chatgpt">Sign out</a>
 ```
 
 After a visitor signs in, Sites forwards their identity to the server through

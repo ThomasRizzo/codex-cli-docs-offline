@@ -1,6 +1,6 @@
 # ChatGPT Work admin FAQ
 
-> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 ChatGPT Work brings the technology behind Codex into ChatGPT for longer,
 multi-step tasks. It can gather context from chats, files, workspace

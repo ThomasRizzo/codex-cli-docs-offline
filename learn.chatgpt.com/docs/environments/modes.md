@@ -1,6 +1,6 @@
 # Codex environments
 
-> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 In the ChatGPT desktop app, open the ChatGPT dropdown and select **Codex**.
 When starting a Codex chat, choose where it runs:

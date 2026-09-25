@@ -1,6 +1,6 @@
 # Auto-review
 
-> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Auto-review replaces manual approval at the sandbox boundary with a separate
 reviewer agent. The main Codex agent still runs inside the same sandbox, with
@@ -75,7 +75,7 @@ The exact policy lives in the open-source Codex repository:
 and
 [policy.md](https://github.com/openai/codex/blob/main/codex-rs/core/src/guardian/policy.md).
 That policy can be customized per enterprise with `guardian_policy_config` or
-per user with local [`[auto_review].policy`](../config-file/config-advanced.html#approval-policies-and-sandbox-modes).
+per user with local [`[auto_review].policy`](/codex/config-file/config-advanced#approval-policies-and-sandbox-modes).
 
 ## What the reviewer sees
 
@@ -133,7 +133,7 @@ The default reviewer policy is in the open-source Codex repository:
 Enterprises can replace its tenant-specific section with
 `guardian_policy_config` in managed requirements. Individual users can also set
 a local
-[`[auto_review].policy`](../config-file/config-advanced.html#approval-policies-and-sandbox-modes)
+[`[auto_review].policy`](/codex/config-file/config-advanced#approval-policies-and-sandbox-modes)
 in their `config.toml`, but managed requirements take precedence:
 
 ```toml

@@ -1,6 +1,6 @@
 # Run Codex Security in CI
 
-> For the complete documentation index, see [llms.txt](../../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Run the Codex Security CLI in CI to review the exact changes in a pull request
 or merge request, keep findings and coverage, and optionally fail the check at

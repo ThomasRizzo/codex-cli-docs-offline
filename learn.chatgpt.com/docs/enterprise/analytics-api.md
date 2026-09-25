@@ -1,6 +1,6 @@
 # Analytics API
 
-> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 The Analytics APIs provide aggregated usage and activity metrics for a ChatGPT
 workspace. The unified Daily Usage Analytics API reports daily ChatGPT, Codex,

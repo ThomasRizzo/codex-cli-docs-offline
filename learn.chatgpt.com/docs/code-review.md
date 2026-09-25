@@ -1,6 +1,6 @@
 # Code review
 
-> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Use ChatGPT or Codex to inspect code changes before you commit or push them.
 

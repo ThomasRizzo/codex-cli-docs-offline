@@ -1,6 +1,6 @@
 # Using the Admin plugin in ChatGPT Work
 
-> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Use this guide to understand how the Admin plugin supports common administration work, prepare for a task, and try prompts for key use cases with the right approvals and context.
 
@@ -54,6 +54,8 @@ The analytics use cases need access to connected, approved data sources. ROI ana
 ## 3. Explore key Admin plugin use cases
 
 Pick a use case, replace each placeholder with a value from your approved request, and follow the steps in order. Start with a read-only request unless the task is a supported change that already has approval.
+
+Use [Migrate custom GPTs in bulk](../migrate-custom-gpts.html#admin-bulk-migration) to inventory GPTs, migrate eligible batches, and coordinate owner testing and access checks.
 
 ### List workspace roles
 

@@ -1,6 +1,6 @@
 # Import from another agent
 
-> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Use the import flow to bring instructions, settings, skills, plugins, projects,
 and recent work from another agent into the ChatGPT desktop app or Codex CLI.
@@ -78,7 +78,7 @@ When you import, ChatGPT:
 
 | Imported item                     | Destination                                             |
 | --------------------------------- | ------------------------------------------------------- |
-| Instruction files                 | [`AGENTS.md`](agent-configuration/agents-md.md)     |
+| Instruction files                 | [`AGENTS.md`](agent-configuration/agents-md.html)     |
 | `settings.json`                   | [`config.toml`](config-file/config-basic.html)        |
 | Skills                            | [Skills](build-skills.html)                           |
 | Plugins                           | Plugins                                                 |

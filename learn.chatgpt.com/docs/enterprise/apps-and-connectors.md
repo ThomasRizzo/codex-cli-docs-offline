@@ -1,6 +1,6 @@
 # Plugin controls
 
-> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Plugins package reusable workflows and can include skills and MCP servers that connect
 to other tools. ChatGPT and Codex use the same public plugin directory on

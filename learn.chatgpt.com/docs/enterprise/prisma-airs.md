@@ -1,6 +1,6 @@
 # Prisma AIRS
 
-> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Connect Palo Alto Networks Prisma AIRS to apply your security policies to
 Codex prompts before they reach the model. Workspace admins configure the

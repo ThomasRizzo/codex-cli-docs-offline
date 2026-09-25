@@ -3,7 +3,7 @@ title: "Codex Manual"
 hidden: true
 ---
 
-> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 ## Find By Topic
 
@@ -104,7 +104,7 @@ Use this glossary as a quick reference for Codex terms across the app, CLI, IDE 
 
 ### Resources
 
-Source: [Resources](../resources.md)
+Source: [Resources](https://learn.chatgpt.com/resources.md)
 
 Find Codex videos, community programs, and OpenAI resources
 
@@ -1262,7 +1262,7 @@ Read the [Codex app launch notes](changelog.html#codex-2026-02-02) and
 
 ### ChatGPT
 
-Source: [ChatGPT](../docs.md)
+Source: [ChatGPT](https://learn.chatgpt.com/docs.md)
 
 Use ChatGPT for ambitious work and software development
 
@@ -1737,7 +1737,7 @@ tips to maximize your limits:
   separate required work from optional improvements.
 - **Reduce the size of your AGENTS.md.** If you work on a larger project, you
   can control how much context you inject through AGENTS.md files by [nesting
-  them within your repository](agent-configuration/agents-md.md#layer-project-instructions).
+  them within your repository](agent-configuration/agents-md.html#layer-project-instructions).
 - **Limit the number of MCP servers you use.** Every
   [MCP](extend/mcp.html) server adds more context to your messages and uses
   more of your limit. Disable MCP servers when you don’t need them.
@@ -1851,7 +1851,7 @@ How Codex reasons through work, tasks, prompting, speed, and multi-agent coordin
 
 ### Best practices
 
-Source: [Best practices](../guides/best-practices.md)
+Source: [Best practices](https://learn.chatgpt.com/guides/best-practices.md)
 
 If you’re new to Codex or coding agents in general, this guide will help you get better results faster. It covers the core habits that make Codex more effective across the [CLI](codex/cli.html), [IDE extension](codex/ide.html), and the [ChatGPT desktop app](app.html), from prompting and planning to validation, MCP, skills, and scheduled tasks.
 
@@ -1897,7 +1897,7 @@ A few approaches work well:
 
 #### Make guidance reusable with `AGENTS.md`
 
-Once a prompting pattern works, the next step is to stop repeating it manually. That's where [AGENTS.md](agent-configuration/agents-md.md) comes in.
+Once a prompting pattern works, the next step is to stop repeating it manually. That's where [AGENTS.md](agent-configuration/agents-md.html) comes in.
 
 Think of `AGENTS.md` as an open-format README for agents. It loads into context automatically and is the best place to encode how you and your team want Codex to work in a repository.
 
@@ -5874,7 +5874,7 @@ Source: [Codex Security plugin changelog](security/plugin/changelog.md)
 
 Use this changelog to see what changed in the Codex Security plugin.
 
-**Latest plugin version:** `0.1.24`.
+**Newest release notes:** `0.1.30`.
 
 Check the plugin version in your current Codex environment before you use a
 feature from a newer release.
@@ -5882,6 +5882,34 @@ feature from a newer release.
 Changelog entries follow the plugin version, not the package version. CLI and
 SDK users can run `npx @openai/codex-security info --json` to check the
 package and bundled plugin versions together.
+
+#### 0.1.30 (September 24, 2026)
+
+- This release updates the plugin version. It has the same behavior as `0.1.25`.
+
+#### 0.1.25 (September 23, 2026)
+
+#### Keep scan artifacts with saved results
+
+- Store retained scan evidence and supplemental documents with the scan, while
+  keeping disposable build and test output in temporary storage.
+- Save artifacts through the plugin during a running scan so they remain
+  available with its final results and recovery checkpoints.
+
+#### Follow scan progress and results
+
+- See standard scan progress advance through threat modeling, discovery,
+  validation, attack-path analysis, and reporting as each phase begins.
+
+#### Review more files with fewer interruptions
+
+- Include changed GitHub Actions workflow files in change scans and recognize
+  `.cjs`, `.cts`, `.mts`, and `.tf` files during repository review.
+- Continue a scan without an access warning when the Daybreak check is
+  unavailable or inconclusive. A fresh result that reports access isn't granted
+  still shows the enrollment warning.
+- Use `OPENAI_API_KEY` for deep scan workers without a Codex account when the
+  selected provider requires OpenAI authentication.
 
 #### 0.1.24 (September 9, 2026)
 
@@ -8155,7 +8183,7 @@ npx @openai/codex-security bulk-scan repositories.csv \
 `--workers` controls concurrent repository scans and defaults to `4`. It does
 not set the number of independent standard-scan workers within each deep scan;
 configure those limits through
-[`[deep_scan]`](security/cli/reference.html#configure-deep-scans). Use `--mode
+[`[deep_scan]`](/codex/security/cli/reference#configure-deep-scans). Use `--mode
 deep` to select deep scanning for rows without their own `mode`. Each CSV row
 can still choose its own scan mode and repository scope.
 
@@ -8882,7 +8910,7 @@ The minimal example intentionally omits full scans and remediation.
 
 #### Adopt the production pipeline
 
-1. [Download the complete GitLab pipeline](security/cli/ci/gitlab.yml)
+1. [Download the complete GitLab pipeline](https://learn.chatgpt.com/docs/security/cli/ci/gitlab.yml)
    and save it as `.gitlab-ci.yml` in the repository root. If your repository
    already has a pipeline, merge the example's stages, hidden templates, and
    jobs into the existing file.
@@ -10175,7 +10203,7 @@ The exact policy lives in the open-source Codex repository:
 and
 [policy.md](https://github.com/openai/codex/blob/main/codex-rs/core/src/guardian/policy.md).
 That policy can be customized per enterprise with `guardian_policy_config` or
-per user with local [`[auto_review].policy`](config-file/config-advanced.html#approval-policies-and-sandbox-modes).
+per user with local [`[auto_review].policy`](/codex/config-file/config-advanced#approval-policies-and-sandbox-modes).
 
 #### What the reviewer sees
 
@@ -10233,7 +10261,7 @@ The default reviewer policy is in the open-source Codex repository:
 Enterprises can replace its tenant-specific section with
 `guardian_policy_config` in managed requirements. Individual users can also set
 a local
-[`[auto_review].policy`](config-file/config-advanced.html#approval-policies-and-sandbox-modes)
+[`[auto_review].policy`](/codex/config-file/config-advanced#approval-policies-and-sandbox-modes)
 in their `config.toml`, but managed requirements take precedence:
 
 ```toml
@@ -11517,7 +11545,7 @@ Security and privacy are foundational to user trust. Bake them into your plannin
 
 ### Codex Security
 
-Source: [Codex Security](security/index.md)
+Source: [Codex Security](https://learn.chatgpt.com/docs/security/index.md)
 
 Codex Security is an application security agent that helps security and
 engineering teams find, confirm, and fix vulnerabilities. Use it in
@@ -12026,7 +12054,7 @@ You can find the latest JSON schema for `config.toml` [here](config-schema.json)
 To get autocompletion and diagnostics when editing `config.toml` in VS Code or Cursor, you can install the [Even Better TOML](https://marketplace.visualstudio.com/items?itemName=tamasfe.even-better-toml) extension and add this line to the top of your `config.toml`:
 
 ```toml
-#:schema ../config-schema.json
+#:schema https://developers.openai.com/codex/config-schema.json
 ```
 
 Note: Rename `experimental_instructions_file` to `model_instructions_file`. Codex deprecates the old key; update existing configs to the new name.
@@ -13072,7 +13100,7 @@ Codex reads `AGENTS.md` (and related files) and includes a limited amount of pro
 - `project_doc_max_bytes`: how much to read from each `AGENTS.md` file
 - `project_doc_fallback_filenames`: additional filenames to try when `AGENTS.md` is missing at a directory level
 
-For a detailed walkthrough, see [Custom instructions with AGENTS.md](agent-configuration/agents-md.md).
+For a detailed walkthrough, see [Custom instructions with AGENTS.md](agent-configuration/agents-md.html).
 
 #### Desktop
 
@@ -15172,7 +15200,7 @@ Control models, tools, environments, and defaults with configuration files and v
 
 Shape how agents collaborate and follow project guidance.
 
-- [AGENTS.md](agent-configuration/agents-md.md): Give Codex durable instructions for a repository.
+- [AGENTS.md](agent-configuration/agents-md.html): Give Codex durable instructions for a repository.
 
 - [Subagents](agent-configuration/subagents.html): Delegate focused tasks to specialized agents.
 
@@ -15225,7 +15253,7 @@ chats, such as your preferred response style. In Codex, these personal
 instructions are stored in your global `AGENTS.md` file. Projects and
 repositories can also provide their own instructions.
 
-[Learn how `AGENTS.md` instructions work](agent-configuration/agents-md.md).
+[Learn how `AGENTS.md` instructions work](agent-configuration/agents-md.html).
 
 #### Match your writing style in Work
 
@@ -15812,7 +15840,7 @@ Check for and apply a Codex CLI update when the installed release supports self-
 - [Codex CLI overview](codex/cli.html): installation, upgrades, and quick tips.
 - [Config basics](config-file/config-basic.html): persist defaults like the model and provider.
 - [Advanced Config](config-file/config-advanced.html): profiles, providers, sandbox tuning, and integrations.
-- [AGENTS.md](agent-configuration/agents-md.md): conceptual overview of Codex agent capabilities and best practices.
+- [AGENTS.md](agent-configuration/agents-md.html): conceptual overview of Codex agent capabilities and best practices.
 
 ### Agent internet access
 
@@ -16723,7 +16751,7 @@ Choose **Friendly**, **Pragmatic**, or **None** as your default personality. Use
 **None** to disable personality instructions. You can update this at any time.
 
 You can also add your own custom instructions. Editing custom instructions updates your
-[personal instructions in `AGENTS.md`](agent-configuration/agents-md.md).
+[personal instructions in `AGENTS.md`](agent-configuration/agents-md.html).
 
 #### Suggested prompts
 
@@ -19845,8 +19873,8 @@ Sites handles the sign-in and sign-out flows through platform-provided paths,
 then returns the visitor to your Site:
 
 ```html
-<a href="../signin-with-chatgpt.html">Sign in with ChatGPT</a>
-<a href="../signout-with-chatgpt.html">Sign out</a>
+<a href="/signin-with-chatgpt">Sign in with ChatGPT</a>
+<a href="/signout-with-chatgpt">Sign out</a>
 ```
 
 After a visitor signs in, Sites forwards their identity to the server through
@@ -23669,7 +23697,7 @@ Pair `AGENTS.md` with infrastructure that enforces those rules: pre-commit hooks
 Codex can load guidance from multiple locations: a global file in your Codex home directory (for you as a developer) and repo-specific files that teams can check in. Files closer to the working directory take precedence.
 Use the global file to shape how Codex communicates with you (for example, review style, verbosity, and defaults), and keep repo files focused on team and codebase rules.
 
-[Custom instructions with AGENTS.md](agent-configuration/agents-md.md)
+[Custom instructions with AGENTS.md](agent-configuration/agents-md.html)
 
 #### Skills
 
@@ -23766,7 +23794,7 @@ If a skill depends on MCP, declare that dependency in `agents/openai.yaml` so Co
 
 Build in this order:
 
-1. [Custom instructions with AGENTS.md](agent-configuration/agents-md.md) so Codex follows your repo conventions. Add pre-commit hooks and linters to enforce those rules.
+1. [Custom instructions with AGENTS.md](agent-configuration/agents-md.html) so Codex follows your repo conventions. Add pre-commit hooks and linters to enforce those rules.
 2. Install a [plugin](plugins.html) when a reusable workflow already exists. Otherwise, create a [skill](build-skills.html) and package it as a plugin when you want to share it.
 3. [MCP](extend/mcp.html) when workflows need external systems (Linear, GitHub, docs servers, design tools).
 4. [Subagents](agent-configuration/subagents.html) when you're ready to delegate noisy or specialized tasks to subagents.
@@ -26382,7 +26410,7 @@ It includes:
   Cursor.
 - **API key setup:** create, save, and connect a project API key from Codex, or
   get guided local `OPENAI_API_KEY` setup in Claude Code and Cursor.
-- **Agents SDK:** build and deploy OpenAI Agents SDK apps from an idea, a repo,
+- **Agents SDK:** work with applications that need the Agents SDK, from an idea, a repo,
   or a prior Codex task.
 - **Troubleshooting:** identify common OpenAI API failures and route
   you to the right next step.
@@ -26535,14 +26563,14 @@ Frontend:
 - If the Frontend skill is not installed, install the Frontend skill and use it.
 ```
 
-#### Build an agent with the Agents SDK
+#### Build an agent with the Agents API
 
 Create a launch-planning agent with a frontend, useful tools, and observability hooks.
 
 **Prompt**
 
 ```text
-Build a working launch-planning agent app called "Launch Desk" using the current OpenAI Agents SDK.
+Build a working launch-planning agent app called "Launch Desk" using the current OpenAI Agents API.
 
 The app should help an engineering team turn a rough launch idea into an actionable release plan. Users should enter a product brief, audience, launch date, constraints, and available assets in a frontend UI. The agent should respond with a prioritized plan, risk register, owner checklist, launch copy suggestions, and follow-up questions when key details are missing.
 
@@ -26552,11 +26580,11 @@ Requirements:
 - Build the agent with clear instructions and a project structure that separates frontend UI, server/API routes, agent setup, tools, and tests.
 - Include useful tool patterns, such as extracting tasks from the brief, checking launch readiness against a rubric, generating owner checklists, and drafting channel-specific launch copy.
 - Include streaming or progressive response updates, and verify them end-to-end by posting to the local API route and reading the stream until at least one tool progress event and one model text delta are received.
-- Include tracing or observability hooks if idiomatic.
+- Include session tracing and usage reporting through documented Agents API surfaces.
 - Include OPENAI_API_KEY environment variable setup and local setup instructions.
-- Make it easy for a developer to understand, run, test, and extend with new tools or handoffs.
+- Make it easy for a developer to understand, run, test, and extend with new tools or multi-agent delegation.
 - Add a README and a validation checklist for the agent behavior, frontend flow, and tool outputs.
-- Use current OpenAI API and Agents SDK patterns. Do not use deprecated Assistants API or legacy Chat Completions scaffolding unless you explicitly explain why a compatibility shim is needed.
+- Use the managed Codex harness through the Agents API and current OpenAI SDK patterns. Do not use deprecated Assistants API or legacy Chat Completions scaffolding unless you explicitly explain why a compatibility shim is needed.
 
 Local run and verification requirement:
 After implementing, start the frontend and backend dev servers in a way that can actually reach the OpenAI API from the server process. If the environment uses sandboxed command execution, do not assume localhost success means OpenAI API access works. Verify the agent endpoint with a real streamed POST request to the local API and confirm that it emits at least one tool event and one model text delta. If the server cannot reach the OpenAI API, diagnose and fix the server run mode or clearly report the exact blocker.
@@ -26625,7 +26653,7 @@ Please:
 
 - Find all OpenAI SDK calls, model names, prompt construction, streaming paths, structured outputs, tool usage, and tests.
 - Identify outdated model usage or legacy API patterns.
-- Recommend the safest current API path for this app, such as Responses API for general multimodal/tool-using workflows, Agents SDK for agentic orchestration, or Realtime API for low-latency voice experiences.
+- Recommend the safest current API path for this app, such as Responses API for general multimodal/tool-using workflows, Agents API for new agent applications, or Realtime API for low-latency voice experiences.
 - Produce a step-by-step implementation plan that preserves behavior and public interfaces where possible.
 - Flag risky changes, compatibility concerns, and areas that need manual review.
 - Recommend the tests, fixtures, and docs that should be added or updated.
@@ -26676,23 +26704,23 @@ Frontend:
 - If the Frontend skill is not installed, install the Frontend skill and use it.
 ```
 
-#### Migrate from Responses API to Agents SDK
+#### Evaluate moving to the Agents API
 
-Create a no-code-change migration plan for whether and how to move to the Agents SDK.
+Create a no-code-change migration plan for whether and how to move to the Agents API.
 
 **Prompt**
 
 ```text
-Inspect this existing app built with the Responses API and create a migration plan for whether it should move to the OpenAI Agents SDK. Do not change code.
+Inspect this existing app built with the Responses API and create a migration plan for whether it should move to the OpenAI Agents API. Do not change code.
 
 Please:
 
 - Map the current Responses API workflows, prompts, tools, streaming behavior, and state management.
-- Decide whether the app benefits from a more agentic architecture with tools, handoffs, tracing, or streaming orchestration.
-- If the migration is justified, produce a scoped migration plan toward the Agents SDK while preserving key behavior and user experience.
+- Decide whether the app benefits from a more agentic architecture with tools, delegation, session tracing, or streaming orchestration.
+- If the migration is justified, produce a scoped migration plan toward the Agents API while preserving key behavior and user experience.
 - If only part of the app should migrate, define the boundary and explain what should remain on the Responses API.
 - Recommend tests and setup docs to add or update.
-- Explain the proposed architecture changes, especially where tools, handoffs, tracing, or streaming add value.
+- Explain the proposed architecture changes, especially where tools, delegation, session tracing, or streaming add value.
 - Finish with a migration plan, rollback notes, and a validation checklist.
 
 Documentation:
@@ -28968,15 +28996,16 @@ server.registerTool(
 
 Set these keys on the resource template that serves your component (`registerResource`). They help ChatGPT describe and frame the rendered iframe without leaking metadata to other clients.
 
-| Key                                   |     Placement     | Type            | Purpose                                                                                                                                                                                           |
-| ------------------------------------- | :---------------: | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `_meta.ui.prefersBorder`              | Resource contents | boolean         | Hint that the component should render inside a bordered card when supported.                                                                                                                      |
-| `_meta.ui.csp`                        | Resource contents | object          | Preferred metadata surface for standard widget CSP fields: `connectDomains`, `resourceDomains`, and optional `frameDomains`.                                                                      |
-| `_meta.ui.domain`                     | Resource contents | string (origin) | Dedicated origin for hosted components (required when submitting a plugin with UI; must be unique per plugin). Defaults to `https://web-sandbox.oaiusercontent.com`.                              |
-| `_meta["openai/widgetDescription"]`   | Resource contents | string          | Human-readable summary surfaced to the model when the component loads, reducing redundant assistant narration.                                                                                    |
-| `_meta["openai/widgetPrefersBorder"]` | Resource contents | boolean         | OpenAI-specific compatibility alias for `_meta.ui.prefersBorder` in ChatGPT.                                                                                                                      |
-| `_meta["openai/widgetCSP"]`           | Resource contents | object          | Legacy ChatGPT compatibility key for widget CSP metadata. Standard CSP fields are superseded by `_meta.ui.csp`, but `redirect_domains` is still required for trusted `openExternal` destinations. |
-| `_meta["openai/widgetDomain"]`        | Resource contents | string (origin) | OpenAI-specific compatibility alias for `_meta.ui.domain` in ChatGPT.                                                                                                                             |
+| Key                                        |     Placement     | Type            | Purpose                                                                                                                                                                                           |
+| ------------------------------------------ | :---------------: | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `_meta.ui.prefersBorder`                   | Resource contents | boolean         | Hint that the component should render inside a bordered card when supported.                                                                                                                      |
+| `_meta.ui.csp`                             | Resource contents | object          | Preferred metadata surface for standard widget CSP fields: `connectDomains`, `resourceDomains`, and optional `frameDomains`.                                                                      |
+| `_meta.ui.domain`                          | Resource contents | string (origin) | Dedicated origin for hosted components (required when submitting a plugin with UI; must be unique per plugin). Defaults to `https://web-sandbox.oaiusercontent.com`.                              |
+| `_meta["openai/ui"].availableDisplayModes` | Resource contents | string[]        | Supported display modes: `inline`, `fullscreen`, and `pip`. Lets ChatGPT choose a display mode before loading the component.                                                                      |
+| `_meta["openai/widgetDescription"]`        | Resource contents | string          | Human-readable summary surfaced to the model when the component loads, reducing redundant assistant narration.                                                                                    |
+| `_meta["openai/widgetPrefersBorder"]`      | Resource contents | boolean         | OpenAI-specific compatibility alias for `_meta.ui.prefersBorder` in ChatGPT.                                                                                                                      |
+| `_meta["openai/widgetCSP"]`                | Resource contents | object          | Legacy ChatGPT compatibility key for widget CSP metadata. Standard CSP fields are superseded by `_meta.ui.csp`, but `redirect_domains` is still required for trusted `openExternal` destinations. |
+| `_meta["openai/widgetDomain"]`             | Resource contents | string (origin) | OpenAI-specific compatibility alias for `_meta.ui.domain` in ChatGPT.                                                                                                                             |
 
 ChatGPT supports the legacy `_meta["openai/widgetCSP"]` compatibility key with the following snake_case field names:
 
@@ -28992,6 +29021,33 @@ The standard `_meta.ui.csp` object is generally preferred for new UI and support
 - `frameDomains?`: `string[]`. Optional list of origins allowed for iframe embeds. By default, widgets can't render subframes. Plugins can embed their own domain, including existing editors and admin interfaces, under the [iframe policy](https://developers.openai.com/plugins/app-guidelines#iframes-and-embedded-pages). A justification is required at submission, and iframe use can require additional review or lead to slower approval.
 
 However, `_meta.ui.csp` does not support `redirect_domains` for `window.openai.openExternal(...)` links. To allowlist redirect targets, you must still set `_meta["openai/widgetCSP"].redirect_domains`.
+
+#### Declare display modes before the UI loads
+
+Set `_meta["openai/ui"].availableDisplayModes` on the resource contents returned
+by your server. For a fullscreen-only component, this lets ChatGPT open it in
+fullscreen immediately, without showing an inline loading state first.
+
+Return this object in the resource's `contents` array, with `html` set to your
+component's HTML:
+
+```ts
+const resource = {
+  uri: "ui://widget/viewer.html",
+  mimeType: "text/html;profile=mcp-app",
+  text: html,
+  _meta: {
+    "openai/ui": {
+      availableDisplayModes: ["fullscreen"],
+    },
+  },
+};
+```
+
+List every mode your component supports, such as `["inline", "fullscreen"]`.
+Keep declaring `availableDisplayModes` during MCP Apps initialization too;
+the server declaration supplements that flow, which also supports dynamic
+display modes.
 
 #### Tool results
 
@@ -31049,7 +31105,7 @@ When you import, ChatGPT:
 
 | Imported item                     | Destination                                             |
 | --------------------------------- | ------------------------------------------------------- |
-| Instruction files                 | [`AGENTS.md`](agent-configuration/agents-md.md)     |
+| Instruction files                 | [`AGENTS.md`](agent-configuration/agents-md.html)     |
 | `settings.json`                   | [`config.toml`](config-file/config-basic.html)        |
 | Skills                            | [Skills](build-skills.html)                           |
 | Plugins                           | Plugins                                                 |
@@ -31429,6 +31485,8 @@ skill using the invocation syntax for your surface.
 Use a skill when you need reusable instructions for a focused task. Use a
 plugin when you want an installable package that can combine instructions with
 connected services or other tools.
+
+Moving an existing custom GPT workflow? See [Migrate custom GPTs to plugins](migrate-custom-gpts.html) for workspace preparation, migration, testing, and sharing.
 
 You can also demonstrate a workflow with
 [Record & Replay](extend/record-and-replay.html), which turns the recording into a
@@ -37023,6 +37081,10 @@ For rollout sequencing and verification across these surfaces, use the
 
 Source: [GPTs and Sharing](enterprise/gpts-and-sharing.md)
 
+**Moving from custom GPTs to plugins?**
+
+See [Migrate custom GPTs to plugins](migrate-custom-gpts.html) to prepare your workspace, migrate GPTs, and review sharing and access for their replacements.
+
 #### Sharing
 
 Control who can create GPTs and whether they can be shared with specific people, groups, or the entire workspace.
@@ -39566,6 +39628,8 @@ The analytics use cases need access to connected, approved data sources. ROI ana
 
 Pick a use case, replace each placeholder with a value from your approved request, and follow the steps in order. Start with a read-only request unless the task is a supported change that already has approval.
 
+Use [Migrate custom GPTs in bulk](migrate-custom-gpts.html#admin-bulk-migration) to inventory GPTs, migrate eligible batches, and coordinate owner testing and access checks.
+
 #### List workspace roles
 
 **Prompt to try**
@@ -39991,6 +40055,8 @@ Assign ChatGPT workspace access and keep it separate from local runtime policy, 
 
 - [GPTs and Sharing](enterprise/gpts-and-sharing.html): Manage GPT sharing, ownership, connected apps, and third-party actions across your workspace.
 
+- [Migrate custom GPTs to plugins](migrate-custom-gpts.html): Plan your workspace transition, migrate individual GPTs or eligible batches, and test and share replacement plugins.
+
 - [Managed configuration](enterprise/managed-configuration.html): Distribute managed settings where supported and enforce runtime requirements for covered capabilities in the ChatGPT desktop app, Codex CLI, and IDE extension.
 
 - [Prisma AIRS](enterprise/prisma-airs.html): Apply workspace-wide security policies to Codex prompts.
@@ -40187,6 +40253,345 @@ shortcuts, may not fully work while native Wayland support matures.
 Source: [ChatGPT desktop app for Windows](windows/windows-app.md)
 
 Use the ChatGPT desktop app on Windows with native sandbox and PowerShell support
+
+### Moving your custom GPT workflows to plugins
+
+Source: [Moving your custom GPT workflows to plugins](migrate-custom-gpts.md)
+
+Custom GPTs helped you make ChatGPT your own. Plugins build on that work, bringing your instructions and knowledge into workflows that can do more.
+
+This guide is for ChatGPT Enterprise workspace admins and people migrating GPTs they created. Start with the path that fits your role:
+
+- **Workspace admins:** [Prepare your workspace](#plan-your-transition), check permissions, and [migrate GPTs in bulk](#admin-bulk-migration).
+- **GPT creators:** [Prepare your GPT](#identify-gpts-that-may-need-extra-attention), then [migrate, test, and share it](#migrate-test-and-share).
+
+**Using someone else’s GPT?** Ask its creator or a workspace admin to migrate it, then [install the replacement they share with you](#step-3-share-and-verify-access).
+
+**Create or refine a plugin**
+
+See [Build plugins](build-plugins.html) for guidance on building a new plugin or updating one after migration.
+
+#### Understand the change
+
+We’re transitioning custom GPTs to plugins. Use the milestones below to plan your migration before custom GPTs are retired.
+
+A plugin is a reusable package for a workflow that can include skills, apps, or both. Skills explain how to do a task, such as writing in your team's style. Apps connect ChatGPT to other services for information or supported actions.
+
+      Plugin
+      A package for a workflow
+
+    Can include one or both
+
+      Skills
+      Instructions for how to do the work
+
+      Apps
+      Connections to tools and information
+
+In an enterprise workspace, your admin decides which plugins you can use, including access by role where supported. They can make plugins available for you to install or install them automatically for eligible users. Sharing a plugin or publishing it to the workspace requires separate permissions.
+
+**Your existing permissions still apply**
+
+Plugins respect your existing app access. For example, signing in to Google Drive through ChatGPT lets its plugin work with documents your account can already access. It doesn’t unlock other files or add Google Drive permissions.
+
+You may need to connect your account or approve an action. Available features depend on your app access, workspace settings, and where you use ChatGPT.
+
+Plugins with only skills and reference files need no app connection. For each required app, users need access and any account connection or action permissions the workflow needs. If an optional app is unavailable, other capabilities may still work; capabilities that require an unavailable app cannot.
+
+#### Example Plugin Page
+
+Here’s an example of a plugin page, showing its app and skills. The **Disabled by admin** label means this example plugin is not available to use in the workspace.
+
+With a custom GPT, you explicitly choose the GPT (by opening it or mentioning it with @ on ChatGPT web), then send it your request.
+
+With plugins, you can choose an available plugin or skill directly. In ChatGPT, use an @ mention or open + and select More, where supported.
+
+    Select an available plugin from the composer, then describe the task you
+    want it to help with.
+
+You can also describe your task: ChatGPT can [automatically use a relevant installed skill](build-skills.html#how-chatgpt-and-codex-use-skills), including a skill packaged in a plugin, when its description matches what you need.
+
+**Test how your plugin gets selected**
+
+Automatic skill selection depends on the task and available capabilities; an installed plugin won’t run on every request. After migration, test both explicit selection and a normal task request.
+
+#### What can a plugin do compared with a custom GPT?
+
+| What you want to do        | With a custom GPT                                                                          | With a plugin                                                                                      |
+| -------------------------- | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------- |
+| Reuse instructions         | You add instructions to guide the GPT’s responses.                                         | A skill provides reusable instructions that guide how a task is done.                              |
+| Use team knowledge         | You upload reference files as GPT knowledge.                                               | Skills can include reference files. Review the migrated resources and test how they’re used.       |
+| Connect to other services  | Custom actions connect the GPT to external services.                                       | Apps connect to services and supported actions. GPT custom actions need to be rebuilt separately.  |
+| Use tools and create files | You enable available capabilities such as web search, image generation, and data analysis. | Available tools depend on the experience and workspace settings. Test the outputs your team needs. |
+| Start a workflow           | You open or explicitly select the GPT.                                                     | You can select a plugin or skill. ChatGPT may also use a relevant installed skill automatically.   |
+| Share with your team       | You share the GPT with an allowed audience.                                                | You share or publish the plugin under workspace permissions. Review access before rollout.         |
+
+What transfers to a plugin
+
+      See what moves into a plugin and what needs rebuilding.
+
+      See how a GPT’s instructions and reference files become a skill and
+      connected apps remain part of the plugin. Custom actions do not transfer;
+      plan to replace them with a supported app’s read or write actions, or a
+      custom MCP server.
+
+#### For admins: Prepare your workspace
+
+Help your team carry its work forward: agree on migration owners, check their permissions, and plan access to the replacements.
+
+- **Admin notice.** Admins receive an early heads-up and guidance to plan the transition and prepare their teams.
+- **Migration.** GPT creators and workspace admins can migrate published GPTs to plugins.
+- **Custom GPT retirement.** Custom GPTs stop working. Move the workflows you want to keep to plugins and test them before retirement.
+
+#### Choose priority migrations
+
+Start with GPTs your team relies on most. Agree with their creators on what to keep, who will maintain it, and who needs access.
+
+- Allow extra time for custom actions, which need to be rebuilt separately.
+- Name an owner for each GPT and record its purpose, audience, instructions, reference files, and integrations.
+- Ask owners to save a few familiar prompts and good results, including one harder case, so they can compare the replacement.
+- Confirm which GPTs are published. Have creators publish needed drafts while GPT creation is still available; public sharing isn’t required.
+
+  Choose priority workflows
+
+      Use ownership and recent usage to prioritize your GPT migrations.
+
+      Identify the GPTs your team still relies on and consider leaving unused
+      workflows behind. Admins with access to the ChatGPT admin plugin can
+      request GPT names, owners, and message counts from the last 30 days to
+      help prioritize.
+
+#### Review workspace permissions
+
+Before migrating, check that everyone has the access they need. Permissions control actions such as using, sharing, or publishing plugins; roles group permissions for similar responsibilities. With role-based access control (RBAC), workspace owners assign roles to people or groups.
+
+Use this table to check access for migration and the replacement plugins.
+
+| Action                                                               | What admins should check                                                                                                                                                                                                                                            |
+| -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Migrate their own custom GPTs to plugins                             | Enable plugins for the workspace. The person migrating must be the GPT’s creator or a workspace owner or admin, and the GPT must be published. Having access to someone else’s GPT is not enough.                                                                   |
+| Share newly migrated GPTs (now plugins) with people or groups        | Give Share plugins to people who need to share replacements with individuals or groups. People who only use a plugin don’t need this permission.                                                                                                                    |
+| Publish newly migrated GPTs (now plugins) to the workspace directory | Give Publish plugins to workspace to people who will publish replacements in the workspace plugin directory. This is separate from sharing directly.                                                                                                                |
+| Install and use new plugins                                          | Allow Use plugins for the intended users or roles.                                                                                                                                                                                                                  |
+| Use an included app                                                  | Enable required apps for the intended users or roles. Check that their connected accounts can access the needed information. Only supported, allowed actions can run, and required approvals still apply. Plugin installation does not add app or file permissions. |
+
+**Built-in migration doesn't require upload permissions**
+
+You do not need to enable **Upload plugins** or **Upload plugins with custom MCP servers** just for the built-in migration. Set any permissions for separately rebuilt integrations according to your workspace's policies.
+
+For current settings, see Plugin and app admin controls and Skill admin controls.
+
+#### Check installation and app access
+
+Decide how teammates will get each replacement. Available lets eligible users install a plugin; Installed installs it for eligible users or roles. These settings do not change who the plugin is shared with.
+
+Review required apps separately: check workspace and role access, account sign-in, and action approvals. Test access with an account that has the same permissions as a typical teammate.
+
+For workspace admins: Migrate GPTs in bulk
+
+In ChatGPT Work, type **@** and select [ChatGPT Admin](enterprise/admin-plugin.html). Check that its Admin app shows **Connected**. For Codex, use the open or copy button on a prompt below. Review the prompt and selected plugin before sending.
+
+#### 1. Run the GPT report
+
+The report is ordered by recent use and includes owners, usage, migration status, and custom actions.
+
+#### 2. Export and use the results
+
+Ask for your preferred format, such as **Excel**, **CSV**, or **Google Sheets**. Sort, filter, share, or track migration your way.
+
+#### 3. Schedule a recurring report
+
+[Scheduled tasks](automations.html) must be enabled, with the Admin plugin available to the task. Review the schedule and first runs in **Scheduled**.
+
+#### 4. Migrate selected GPTs
+
+Choose GPTs by ID or describe the group, such as all private GPTs. Replacements start private, and originals become read-only.
+
+Bulk migration **does not copy sharing settings**. Record who needs access, then **share each replacement manually** or ask the GPT creator to share it. We expect bulk sharing through the Admin plugin soon.
+
+Have owners [test the replacement plugins](#step-2-test-with-familiar-work) and verify access. Custom actions need to be rebuilt separately.
+
+Email template: Ask GPT creators to migrate
+
+Make this your own: replace the placeholders before sending.
+
+Created by me > Migrate to plugin. The GPT must be published; after migration, it becomes read-only.
+
+2. Test. Try familiar tasks and one harder case. Check the instructions, attached files, results, and required apps or tools.
+
+3. Share. Each replacement starts private. Share it with the intended people or groups, then ask a teammate to test access. Keep private workflows private.
+
+Follow [migration guide link] for the steps. Custom actions need rebuilding; contact [admin contact] if yours uses them or you need help.
+
+Please reply with each plugin’s link, testing status, and any blockers.
+
+Thanks for helping your team make the switch,
+[admin name/team]`} />
+
+#### For GPT creators: Prepare your GPT
+
+Before migrating a GPT you created, save its intended audience and a few familiar prompts and results for testing. Check the table below for anything that needs extra attention. Admins migrating on a creator’s behalf should review these details with them.
+
+| If your custom GPT…                                           | What to review                                                                                                                                                                                                                                                                                                                                                    |
+| ------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Uses custom actions                                           | Custom actions don’t transfer. Rebuild needed integrations with a supported connector or custom MCP connection, then test them before your team switches.                                                                                                                                                                                                         |
+| Depends on a model, detailed instructions, or a strict format | The selected model doesn’t carry over; Enterprise defaults apply. Compare familiar prompts and results. Check that the right skill is selected and follows your instructions and format, since behavior can differ.                                                                                                                                               |
+| Relies on files, tools, or previous chat context              | Check that files, templates, and examples are present and used correctly; transfer and retrieval may differ. Test required tools, such as web search, images, data analysis, or file creation. GPT capability settings don’t guarantee the same setup. Conversation starters and previous chats may not copy, so save useful prompts and identify needed context. |
+| Is shared with teammates or people outside your workspace     | Record the intended audience and verify they can install and use the replacement. Show users how to install or select it. Check the replacement’s sharing settings. Check access for external users: public GPTs in affected Enterprise workspaces are included, but public sharing and timelines for other plans may differ.                                     |
+| Needs updates during the transition                           | The original GPT stays usable until retirement. Maintain and test the replacement plugin as your workflow changes.                                                                                                                                                                                                                                                |
+
+#### For GPT creators: Migrate, test, and share
+
+Use these steps for a published GPT you created. Workspace admins can also use them to help creators migrate individual GPTs.
+
+**Before you migrate:** The original GPT becomes read-only after migration. You can continue using it until retirement, but future edits must be made in the replacement plugin.
+
+#### Step 1: Convert your GPT
+
+Go to **My GPTs**, find your GPT under **Created by me**, and select **Migrate to plugin**. You can also ask a workspace admin for help.
+
+Migration turns your GPT’s instructions into a skill and brings over its knowledge files and connected apps. Rebuild custom actions separately. Save familiar prompts: conversation starters do not transfer one-to-one. The selected model does not carry over, and capability settings do not guarantee the same tools or behavior. Review migrated files and test required tools before sharing.
+
+If you don’t see **Migrate to plugin**, see [Why don’t I see the migration option?](#why-dont-i-see-the-migration-option) in the Admin FAQ.
+
+Your new plugin starts private. Test it, then share it with the people who need access—even if they could already use the original GPT.
+
+      Follow the migration steps, then review and install your plugin.
+
+#### Step 2: Test with familiar work
+
+Try the plugin on familiar tasks and one harder case. Check the following before sharing it.
+
+- Is the right skill selected, and does it follow your instructions?
+- Does it use the expected reference material and produce complete answers or files with the required structure, fields, and format?
+- Does it handle the harder case correctly and respond in a workable amount of time?
+- Are the tools and integrations it needs available?
+
+**Switch after the workflow is ready**
+
+If a required capability is missing, wait to switch that workflow until you have a tested alternative.
+
+      Test familiar workflows and refine the plugin before sharing it.
+
+#### Step 3: Share and verify access
+
+Review who can access the new plugin. To share with people or groups, you need Share plugins access. To publish to the workspace, you need Publish plugins to workspace. Have an intended user open and test the replacement.
+
+**For people using the replacement:** After the creator or admin shares the plugin with you, install it before using it, unless your admin has installed it for you. Sharing access and installation are separate steps.
+
+If you can’t share or publish the plugin, ask your admin to check your permissions before announcing the switch.
+
+#### Step 4: Help your team switch
+
+Share the replacement link, explain key differences, and demonstrate a familiar task. Update onboarding, instructions, and saved resources, and name an owner for future changes and questions.
+
+After migration, the plugin’s creator or a workspace owner or admin can [edit the replacement](build-plugins.html). Rerun your important tests after each change.
+
+#### What happens to the original GPT?
+
+Until retirement, the original GPT stays usable, and you can continue editing an existing GPT that you have not migrated, even after new GPT creation stops. Once you migrate a GPT, the original becomes read-only. At retirement, custom GPTs stop running and leave the GPT directory.
+
+#### Admin FAQ
+
+Find answers to common questions about preparing your workspace and helping your team switch.
+
+h3]:mb-5 [&>h3]:mt-12 [&>h3]:text-xl [&>h3:first-child]:mt-0 [&_summary]:gap-3 [&_summary]:px-5 [&_summary]:py-4 [&_.toggle-section-content]:px-5 [&\_details[open]>.toggle-section-content]:border-t [&\_details[open]>.toggle-section-content]:border-default [&\_details[open]>.toggle-section-content]:pt-4 [&\_details[open]>summary>span>svg]:rotate-90">
+
+#### Preparing your workspace
+
+### Can admins migrate many GPTs at once?
+
+Yes. Workspace admins can use the [ChatGPT Admin plugin](enterprise/admin-plugin.html) to migrate selected batches. Start with the GPTs your team needs most.
+
+Use the [admin walkthrough](#admin-bulk-migration) to run a report and migrate selected GPTs. Sharing settings do not carry over in bulk; share each replacement manually.
+
+### Who can migrate a GPT, and how does the process work?
+
+The GPT’s creator or a workspace admin can start migration from a published GPT’s page. Admins can do this even if they did not create the GPT.
+
+Plugins must be enabled, and shared access alone does not give someone permission to migrate.
+
+### Why don’t I see the migration option?
+
+You must be the GPT’s creator or a workspace admin, the GPT must be published, and plugins must be enabled for you.
+
+Access to use someone else’s GPT does not give you permission to migrate it.
+
+If these conditions are met and the option is still missing, contact OpenAI support with the GPT’s name, owner, and a description of what you’re seeing.
+
+### Which permissions should I review before people start migrating?
+
+Start by enabling plugins. The built-in migration workflow does not require Upload plugins or Upload plugins with custom MCP servers.
+
+People who will share plugins with others in the workspace need Share plugins, and those who will publish them across the workspace need Publish plugins to workspace.
+
+Rebuilding a custom integration is a separate task and may require additional permissions.
+
+### What do employees need to use a migrated plugin?
+
+Employees need:
+
+- **Use plugins** permission.
+- Access to the replacement plugin.
+- A workspace policy that allows them to install it or installs it for them.
+
+Any included apps still require the appropriate app access and authorization. Connecting an account through ChatGPT does not give someone additional permissions in that app.
+
+### Can employees use migrated plugins in Chat, or do they need Work?
+
+Migrated plugins can be used in Chat when plugins are enabled for the user, as well as in Work. Available tools still depend on the plugin, workspace settings, and where it is used. For the creation and editing workflow and its prerequisites, see [Build plugins](build-plugins.html).
+
+Check access for each task separately: using the plugin, creating or editing it, and sharing or publishing it. Before assigning maintainers, ask your admin to confirm that they can access the creation and editing experience; the built-in migration requirements do not answer that question.
+
+### How should I manage access when we roll out the replacements?
+
+Review each plugin’s audience and installation policy, then ask someone in the intended audience to test access.
+
+An Available plugin lets eligible users install it, while an Installed plugin is installed for them by default. Role controls and app permissions still apply.
+
+The replacement starts private. Access to the original GPT does not automatically give someone access to the plugin. Share it with the intended people or groups, then ask a recipient to install and test it, unless their admin has already installed it for them. Identify who will maintain the replacement and help teammates with access.
+
+#### Testing and ongoing administration
+
+### Will a migrated plugin behave exactly like the original GPT?
+
+A migrated plugin may respond differently from the original GPT. Compare the same prompts and reference files, including one difficult example, and check that answers use the right sources, include the expected facts, follow the requested format, and use the required tools. Test both explicit plugin selection and a normal task request, since automatic skill selection depends on the request and available capabilities. Ask owners to assess:
+
+- The quality of the output.
+- How well instructions are followed.
+- How long the task takes.
+
+The GPT’s selected model does not carry over; Enterprise defaults apply.
+
+### What should I do about GPTs that use custom actions?
+
+Custom actions do not transfer through the migration workflow. The person maintaining that workflow will need to rebuild the integration using a supported connector or a custom MCP server.
+
+Identify these GPTs early so the appropriate technical and security teams have time to review the replacement and its permissions.
+
+### What happens to the original GPT after migration?
+
+The original GPT remains usable until retirement. At retirement, custom GPTs stop running and leave the GPT directory.
+
+Owners should maintain the plugin going forward. See [What happens to the original GPT?](#what-happens-to-the-original-gpt).
+
+### Can we still migrate a GPT after retirement?
+
+Yes. You will still be able to migrate a GPT after retirement, although the GPT itself will no longer run.
+
+### Which admin controls apply after migration?
+
+Migrated plugins follow the workspace’s plugin permissions. Admins can control who uses and shares plugins, as well as who publishes them to the workspace. You can review role permissions and manage individual plugins.
+
+Included apps retain their own access and action controls, so making a plugin available does not grant access to the data or actions in its apps.
+
+### How should admins plan for plugin usage and costs?
+
+Converting a custom GPT to a plugin does not consume credits. Under credit-based pricing, editing or updating a plugin does consume credits. Conversion is separate from using the replacement plugin, so review the usage and costs of the workflow before rolling it out.
+
+Usage depends on whether the plugin runs in Chat or Work, the models and features involved, and your workspace’s agreement. Under credit-based pricing, Instant Chat is generally unlimited, but a request can switch to a reasoning model or use a feature that consumes credits. Work consumes credits based on the model and tokens used. Enterprise agreements billed in USD have different terms, including charges for Instant usage. Review your workspace’s credit-based rate card or USD rate card before rollout.
+
+Review users’ effective usage limits and workspace spending controls separately. In a credit-based workspace, a zero overage limit prevents spending beyond the shared credit allocation; it does not prevent use of remaining credits. Usage alerts notify admins but do not stop usage. See Manage usage limits and overages for the controls that apply to your workspace.
 
 ### Open Source
 

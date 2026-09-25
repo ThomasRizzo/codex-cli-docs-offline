@@ -1,6 +1,6 @@
 # ChatGPT Work: usage and cost
 
-> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 ChatGPT Work helps employees complete multi-step tasks, such as researching a
 topic, analyzing information, or creating a finished document or presentation.

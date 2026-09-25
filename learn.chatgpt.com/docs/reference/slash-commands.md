@@ -1,6 +1,6 @@
 # Slash commands
 
-> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Slash commands let you run actions without leaving the chat composer. Available
 commands vary based on your environment and access.

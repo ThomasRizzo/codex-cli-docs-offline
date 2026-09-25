@@ -1,0 +1,349 @@
+WEBVTT
+
+1
+00:00:07.520 --> 00:00:10.231
+<b>Most of the work I put off isn't complicated.</b>
+
+2
+00:00:10.231 --> 00:00:11.399
+<b>It's just scattered.</b>
+
+3
+00:00:11.983 --> 00:00:14.027
+<b>ChatGPT Work helps me pull it together.</b>
+
+4
+00:00:14.485 --> 00:00:17.196
+<b>Before we dive in, let's talk about the difference</b>
+
+5
+00:00:17.196 --> 00:00:18.740
+<b>between Work and Chat.</b>
+
+6
+00:00:19.115 --> 00:00:22.368
+<b>Chat is great when I need a thoughtful answer.</b>
+
+7
+00:00:22.535 --> 00:00:25.955
+<b>Work goes a step further: it can bring in information</b>
+
+8
+00:00:25.955 --> 00:00:27.665
+<b>from the apps I already use</b>
+
+9
+00:00:27.665 --> 00:00:29.751
+<b>and help me actually finish the task.</b>
+
+10
+00:00:30.251 --> 00:00:33.004
+<b>I need to confirm a team dinner next week,</b>
+
+11
+00:00:33.004 --> 00:00:35.757
+<b>but the restaurant's email is buried in my Gmail</b>
+
+12
+00:00:35.757 --> 00:00:37.091
+<b>and the latest headcount</b>
+
+13
+00:00:37.091 --> 00:00:39.135
+<b>and dietary restrictions are in Slack.</b>
+
+14
+00:00:39.719 --> 00:00:40.928
+<b>The details are split,</b>
+
+15
+00:00:40.928 --> 00:00:42.555
+<b>between my inbox and Slack</b>
+
+16
+00:00:42.680 --> 00:00:44.932
+<b>and I don't want to dig through both</b>
+
+17
+00:00:44.932 --> 00:00:46.684
+<b>just to send one reply.</b>
+
+18
+00:00:46.684 --> 00:00:50.355
+<b>First, I'm going to download the ChatGPT desktop app.</b>
+
+19
+00:00:51.064 --> 00:00:55.443
+<b>You can also use Work mode on the web at chatgpt.com,</b>
+
+20
+00:00:55.526 --> 00:00:57.904
+<b>but the app makes it easy to work alongside</b>
+
+21
+00:00:57.904 --> 00:01:00.073
+<b>everything else I already have open.</b>
+
+22
+00:01:00.365 --> 00:01:02.617
+<b>I'll open the download page,</b>
+
+23
+00:01:02.617 --> 00:01:04.744
+<b>choose the version for my computer,</b>
+
+24
+00:01:04.744 --> 00:01:06.996
+<b>and follow the installation steps.</b>
+
+25
+00:01:06.996 --> 00:01:09.749
+<b>Now I'll open the app and sign in</b>
+
+26
+00:01:09.832 --> 00:01:12.460
+<b>with the ChatGPT account I want to use.</b>
+
+27
+00:01:12.543 --> 00:01:16.881
+<b>Once I'm in, I can choose between Chat and Work.</b>
+
+28
+00:01:16.881 --> 00:01:19.133
+<b>Chat is where I go for a quick question.</b>
+
+29
+00:01:19.133 --> 00:01:22.053
+<b>For this, I'm selecting Work mode</b>
+
+30
+00:01:22.053 --> 00:01:24.806
+<b>because I want ChatGPT to find information</b>
+
+31
+00:01:24.806 --> 00:01:28.518
+<b>in Gmail and Slack and then use it to draft an email.</b>
+
+32
+00:01:28.518 --> 00:01:32.355
+<b>To find that email, ChatGPT needs access to Gmail.</b>
+
+33
+00:01:32.730 --> 00:01:34.565
+<b>That's where plugins come in.</b>
+
+34
+00:01:34.565 --> 00:01:38.653
+<b>Plugins connect ChatGPT to the apps I already use,</b>
+
+35
+00:01:38.653 --> 00:01:42.365
+<b>like Gmail, Slack, Calendar, and Google Drive.</b>
+
+36
+00:01:42.698 --> 00:01:45.034
+<b>I'll click Plugins in the sidebar,</b>
+
+37
+00:01:45.493 --> 00:01:48.496
+<b>search for Gmail, and select Install.</b>
+
+38
+00:01:49.580 --> 00:01:52.875
+<b>Then I'll sign in and review the permissions</b>
+
+39
+00:01:52.875 --> 00:01:54.419
+<b>before connecting my account.</b>
+
+40
+00:01:54.419 --> 00:01:56.087
+<b>I only need to do this once.</b>
+
+41
+00:01:56.504 --> 00:01:58.756
+<b>I'm also connecting the Slack Plugin,</b>
+
+42
+00:01:58.756 --> 00:02:02.218
+<b>so now ChatGPT can pull the restaurant's email</b>
+
+43
+00:02:02.218 --> 00:02:05.054
+<b>and the latest team details into the same place.</b>
+
+44
+00:02:05.263 --> 00:02:08.933
+<b>Now I'll start a new chat and switch to Work mode.</b>
+
+45
+00:02:09.475 --> 00:02:12.019
+<b>I'll explain what I need: find the email,</b>
+
+46
+00:02:12.562 --> 00:02:15.064
+<b>check Slack for the latest team details,</b>
+
+47
+00:02:15.064 --> 00:02:16.858
+<b>and draft a reply.</b>
+
+48
+00:02:17.108 --> 00:02:20.278
+<b>I can let ChatGPT gather the information it needs,</b>
+
+49
+00:02:20.570 --> 00:02:22.113
+<b>but I still want to review the draft</b>
+
+50
+00:02:22.321 --> 00:02:23.739
+<b>before anything gets sent.</b>
+
+51
+00:02:23.823 --> 00:02:25.700
+<b>You don't need a perfect prompt.</b>
+
+52
+00:02:25.783 --> 00:02:27.952
+<b>Just ask ChatGPT for what you want!</b>
+
+53
+00:02:28.244 --> 00:02:31.372
+<b>All right, it's finding the restaurant email in Gmail</b>
+
+54
+00:02:31.372 --> 00:02:33.499
+<b>and checking Slack for our latest headcount</b>
+
+55
+00:02:33.499 --> 00:02:35.042
+<b>and dietary restrictions.</b>
+
+56
+00:02:35.334 --> 00:02:37.753
+<b>If it needs more information or permission,</b>
+
+57
+00:02:37.753 --> 00:02:41.257
+<b>it can ask me. Otherwise, I can let the task finish</b>
+
+58
+00:02:41.340 --> 00:02:43.134
+<b>and come back when it's ready.</b>
+
+59
+00:02:43.217 --> 00:02:44.552
+<b>Here's the restaurant email</b>
+
+60
+00:02:44.635 --> 00:02:46.929
+<b>asking me to confirm Thursday at seven,</b>
+
+61
+00:02:47.013 --> 00:02:48.473
+<b>and here's the Slack update</b>
+
+62
+00:02:48.556 --> 00:02:51.392
+<b>with the final headcount and dietary needs.</b>
+
+63
+00:02:51.392 --> 00:02:53.519
+<b>And this is the part that actually helps.</b>
+
+64
+00:02:53.769 --> 00:02:56.814
+<b>It pulls the details together from both apps</b>
+
+65
+00:02:56.814 --> 00:02:58.316
+<b>and gets the reply ready.</b>
+
+66
+00:02:58.566 --> 00:03:00.026
+<b>I'll read through the draft</b>
+
+67
+00:03:00.109 --> 00:03:01.861
+<b>and make one quick change:</b>
+
+68
+00:03:01.944 --> 00:03:04.697
+<b>ask for a quiet table, if one is available.</b>
+
+69
+00:03:04.780 --> 00:03:07.700
+<b>When I'm happy with it, I approve the send.</b>
+
+70
+00:03:07.783 --> 00:03:09.702
+<b>Nothing goes out until I say so.</b>
+
+71
+00:03:09.744 --> 00:03:12.788
+<b>One more thing – I'm going to wake up my pet.</b>
+
+72
+00:03:12.872 --> 00:03:15.124
+<b>This gives me an easy way to notice</b>
+
+73
+00:03:15.124 --> 00:03:17.877
+<b>when Work finishes something or needs my attention.</b>
+
+74
+00:03:17.960 --> 00:03:19.962
+<b>It's also adorable.</b>
+
+75
+00:03:19.962 --> 00:03:23.633
+<b>I'll open the menu, search for Wake Pet, and turn it on.</b>
+
+76
+00:03:24.175 --> 00:03:26.761
+<b>Now I don't have to sit here watching</b>
+
+77
+00:03:26.761 --> 00:03:28.721
+<b>the conversation while something runs,</b>
+
+78
+00:03:28.721 --> 00:03:31.140
+<b>and I'll get an alert when it's finished.</b>
+
+79
+00:03:31.432 --> 00:03:33.684
+<b>This setup works for all sorts of tasks.</b>
+
+80
+00:03:34.018 --> 00:03:36.145
+<b>I can follow up on an overdue email,</b>
+
+81
+00:03:36.354 --> 00:03:37.605
+<b>pull in a Slack update,</b>
+
+82
+00:03:37.605 --> 00:03:39.815
+<b>or find the file I need for a meeting.</b>
+
+83
+00:03:40.024 --> 00:03:42.944
+<b>I started with Gmail, but the real advantage</b>
+
+84
+00:03:42.944 --> 00:03:46.531
+<b>is having my email, messages, files, and calendar</b>
+
+85
+00:03:46.531 --> 00:03:48.407
+<b>together in one place.</b>
+
+86
+00:03:48.658 --> 00:03:50.952
+<b>Look at us, getting things done.</b>
+
+87
+00:03:51.410 --> 00:03:52.870
+<b>That's ChatGPT Work.</b>

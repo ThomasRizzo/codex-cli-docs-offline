@@ -1,6 +1,6 @@
 # Personalize ChatGPT
 
-> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Personalize ChatGPT so its responses and working style better match your
 preferences. You control which personalization features are enabled and can
@@ -19,7 +19,7 @@ chats, such as your preferred response style. In Codex, these personal
 instructions are stored in your global `AGENTS.md` file. Projects and
 repositories can also provide their own instructions.
 
-[Learn how `AGENTS.md` instructions work](agent-configuration/agents-md.md).
+[Learn how `AGENTS.md` instructions work](agent-configuration/agents-md.html).
 
 ## Match your writing style in Work
 

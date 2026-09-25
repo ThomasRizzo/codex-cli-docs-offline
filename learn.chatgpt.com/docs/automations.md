@@ -1,6 +1,6 @@
 # Scheduled tasks
 
-> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Schedule recurring tasks to run in the background. On ChatGPT web and mobile,
 eligible plans can also run tasks from supported app events. Review active,

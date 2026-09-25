@@ -1,6 +1,6 @@
 # Hooks
 
-> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Hooks are an extensibility framework for Codex. They let you run scripts or MCP
 tools during the agentic loop, enabling features such as:

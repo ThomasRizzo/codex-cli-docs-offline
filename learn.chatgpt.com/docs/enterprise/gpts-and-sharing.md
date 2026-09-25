@@ -1,6 +1,10 @@
 # GPTs and Sharing
 
-> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+
+**Moving from custom GPTs to plugins?**
+
+See [Migrate custom GPTs to plugins](../migrate-custom-gpts.html) to prepare your workspace, migrate GPTs, and review sharing and access for their replacements.
 
 ## Sharing
 

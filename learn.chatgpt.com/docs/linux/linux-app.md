@@ -1,6 +1,6 @@
 # ChatGPT desktop app for Linux
 
-> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 The ChatGPT desktop app for Linux is available in preview. Install the package
 for your Linux distribution and processor architecture, then sign in with your

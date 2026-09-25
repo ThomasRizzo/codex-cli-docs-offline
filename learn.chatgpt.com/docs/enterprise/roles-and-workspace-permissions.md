@@ -1,6 +1,6 @@
 # Roles and workspace permissions
 
-> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Different settings cover different parts of your organization's ChatGPT
 experience. Giving someone access in one area doesn't automatically give them

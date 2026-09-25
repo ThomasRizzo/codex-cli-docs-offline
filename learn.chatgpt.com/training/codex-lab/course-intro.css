@@ -1,0 +1,876 @@
+/*
+ * The introduction is the first screen of the guided course. It shares the
+ * journey shell and leaves one clear focal point: the honest welcome-video
+ * placeholder supplied by Developer Experience.
+ */
+
+body.lab-open:has(.lab-shell.phase-intro) {
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.lab-shell.phase-intro .course-intro {
+  --intro-video-ink: #f7f6f3;
+  --intro-video-muted: rgb(247 246 243 / 72%);
+  --intro-video-line: rgb(255 255 255 / 17%);
+  position: relative;
+  display: grid;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 0;
+  align-content: start;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: var(--journey-paper);
+  color: var(--journey-ink);
+  overscroll-behavior: contain;
+  scrollbar-color: var(--journey-line-strong) transparent;
+}
+
+.lab-shell.phase-intro .course-intro-shell {
+  display: grid;
+  width: min(1160px, calc(100% - 64px));
+  max-width: 100%;
+  min-width: 0;
+  min-height: 100%;
+  align-content: center;
+  justify-items: center;
+  gap: clamp(20px, 3vh, 30px);
+  margin: 0 auto;
+  padding: clamp(30px, 5vh, 52px) 0;
+}
+
+.lab-shell.phase-intro .intro-heading {
+  display: grid;
+  width: min(780px, 100%);
+  min-width: 0;
+  justify-items: center;
+  gap: 10px;
+  margin: 0;
+  text-align: center;
+}
+
+.lab-shell.phase-intro .intro-eyebrow {
+  display: inline-flex;
+  min-height: 22px;
+  align-items: center;
+  gap: 7px;
+  margin: 0;
+  color: var(--journey-muted);
+  font-size: 14px;
+  font-weight: 540;
+  letter-spacing: 0.015em;
+}
+
+.lab-shell.phase-intro .intro-eyebrow svg,
+.lab-shell.phase-intro .intro-eyebrow img {
+  width: 15px;
+  height: 15px;
+  flex: 0 0 15px;
+}
+
+.lab-shell.phase-intro .intro-meta {
+  display: flex;
+  min-width: 0;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px 18px;
+  margin: 0;
+  color: var(--journey-muted);
+}
+
+.lab-shell.phase-intro .intro-meta-item {
+  display: inline-flex;
+  min-width: 0;
+  align-items: center;
+  gap: 6px;
+  color: inherit;
+  font-size: 12px;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.lab-shell.phase-intro .intro-meta-item svg {
+  width: 14px;
+  height: 14px;
+  flex: 0 0 14px;
+  color: var(--journey-faint);
+}
+
+.lab-shell.phase-intro .intro-video-frame {
+  display: grid;
+  width: min(1120px, 100%);
+  max-width: 100%;
+  min-width: 0;
+  margin: 0;
+}
+
+.lab-shell.phase-intro .intro-video-stage {
+  position: relative;
+  display: grid;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  aspect-ratio: 16 / 9;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 12%);
+  border-radius: 18px;
+  background: #0d0e0f;
+  box-shadow:
+    0 24px 56px -34px rgb(16 18 22 / 48%),
+    0 2px 8px -5px rgb(16 18 22 / 22%);
+  color: var(--intro-video-ink);
+  isolation: isolate;
+}
+
+.lab-shell.phase-intro .intro-video-backdrop {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 44%, rgb(101 91 171 / 24%) 0%, transparent 33%),
+    radial-gradient(circle at 28% 57%, rgb(83 118 123 / 12%) 0%, transparent 28%),
+    linear-gradient(145deg, #17181a 0%, #111214 52%, #0c0d0e 100%);
+}
+
+.lab-shell.phase-intro .intro-video-backdrop::before {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgb(255 255 255 / 3%) 1px, transparent 1px),
+    linear-gradient(0deg, rgb(255 255 255 / 2.3%) 1px, transparent 1px);
+  background-position: center;
+  background-size: clamp(38px, 6vw, 68px) clamp(38px, 6vw, 68px);
+  content: "";
+  mask-image: radial-gradient(ellipse at 50% 46%, #000 3%, transparent 72%);
+  opacity: 0.34;
+}
+
+.lab-shell.phase-intro .intro-video-backdrop::after {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgb(10 11 12 / 12%) 0%, transparent 29%),
+    linear-gradient(0deg, rgb(7 8 9 / 76%) 0%, transparent 37%);
+  content: "";
+}
+
+.lab-shell.phase-intro .intro-video-content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: min(calc(100% - 72px), 680px);
+  min-width: 0;
+  justify-items: center;
+  gap: 9px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.lab-shell.phase-intro .intro-video-mark {
+  display: block;
+  width: clamp(48px, 6vw, 72px);
+  height: clamp(48px, 6vw, 72px);
+  margin: 0 0 3px;
+  object-fit: contain;
+}
+
+.lab-shell.phase-intro .intro-video-eyebrow {
+  color: rgb(247 246 243 / 78%);
+  font-size: clamp(10px, 1vw, 12px);
+  font-weight: 520;
+  letter-spacing: 0.035em;
+}
+
+.lab-shell.phase-intro .intro-video-title {
+  max-width: 18ch;
+  margin: 0;
+  color: var(--intro-video-ink);
+  font-size: clamp(30px, 4.2vw, 50px);
+  font-weight: 470;
+  letter-spacing: -0.055em;
+  line-height: 1.03;
+  text-wrap: balance;
+}
+
+.lab-shell.phase-intro .intro-video-subtitle {
+  max-width: 48ch;
+  margin: 0;
+  color: var(--intro-video-muted);
+  font-size: clamp(11px, 1.05vw, 14px);
+  line-height: 1.55;
+  text-wrap: balance;
+}
+
+.lab-shell.phase-intro .intro-video-placeholder {
+  position: absolute;
+  z-index: 2;
+  top: clamp(12px, 2.2vw, 24px);
+  left: clamp(12px, 2.2vw, 24px);
+  display: inline-flex;
+  min-height: 25px;
+  align-items: center;
+  padding: 0 8px;
+  border: 1px solid rgb(255 255 255 / 15%);
+  border-radius: 999px;
+  background: rgb(255 255 255 / 6%);
+  color: rgb(255 255 255 / 82%);
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.lab-shell.phase-intro .intro-video-controls {
+  position: absolute;
+  z-index: 2;
+  right: clamp(14px, 2.5vw, 28px);
+  bottom: clamp(11px, 2vw, 22px);
+  left: clamp(14px, 2.5vw, 28px);
+  display: grid;
+  min-width: 0;
+  grid-template-columns: 34px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 11px;
+  color: var(--intro-video-ink);
+  pointer-events: none;
+}
+
+.lab-shell.phase-intro .intro-video-play {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border: 1px solid var(--intro-video-line);
+  border-radius: 50%;
+  background: rgb(255 255 255 / 10%);
+  color: #fff;
+}
+
+.lab-shell.phase-intro .intro-video-play svg {
+  width: 15px;
+  height: 15px;
+}
+
+.lab-shell.phase-intro .intro-video-timeline {
+  height: 3px;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 24%);
+}
+
+.lab-shell.phase-intro .intro-video-progress {
+  display: block;
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: rgb(255 255 255 / 84%);
+}
+
+.lab-shell.phase-intro .intro-video-time {
+  color: rgb(255 255 255 / 78%);
+  font-size: 10px;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+html[data-theme="dark"] .lab-shell.phase-intro .course-intro {
+  background: var(--journey-paper);
+  color: var(--journey-ink);
+  scrollbar-color: rgb(255 255 255 / 20%) transparent;
+}
+
+html[data-theme="dark"] .lab-shell.phase-intro .intro-video-stage {
+  border-color: rgb(255 255 255 / 14%);
+  box-shadow: 0 26px 60px -36px rgb(0 0 0 / 76%);
+}
+
+@media (max-height: 760px) and (min-width: 721px) {
+  .lab-shell.phase-intro .course-intro-shell {
+    width: min(1000px, calc(100% - 64px));
+    gap: 18px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
+
+  .lab-shell.phase-intro .intro-video-frame {
+    width: min(820px, 100%);
+  }
+}
+
+@media (max-width: 720px) {
+  .lab-shell.phase-intro .course-intro-shell {
+    width: calc(100% - 36px);
+    gap: 20px;
+    padding-top: 26px;
+    padding-bottom: 28px;
+  }
+
+  .lab-shell.phase-intro .intro-eyebrow {
+    font-size: 12px;
+  }
+
+  .lab-shell.phase-intro .intro-meta {
+    gap: 7px 13px;
+  }
+
+  .lab-shell.phase-intro .intro-meta-item {
+    font-size: 11px;
+  }
+
+  .lab-shell.phase-intro .intro-video-stage {
+    border-radius: 14px;
+  }
+
+  .lab-shell.phase-intro .intro-video-content {
+    width: calc(100% - 34px);
+    gap: 5px;
+    padding-bottom: 6px;
+  }
+
+  .lab-shell.phase-intro .intro-video-mark {
+    width: clamp(38px, 11vw, 52px);
+    height: clamp(38px, 11vw, 52px);
+    margin-bottom: 0;
+  }
+
+  .lab-shell.phase-intro .intro-video-title {
+    font-size: clamp(23px, 7vw, 32px);
+  }
+
+  .lab-shell.phase-intro .intro-video-subtitle {
+    max-width: 39ch;
+    font-size: 10px;
+    line-height: 1.4;
+  }
+
+  .lab-shell.phase-intro .intro-video-placeholder {
+    top: 10px;
+    left: 10px;
+    min-height: 22px;
+    padding: 0 7px;
+    font-size: 9px;
+  }
+
+  .lab-shell.phase-intro .intro-video-controls {
+    right: 11px;
+    bottom: 9px;
+    left: 11px;
+    grid-template-columns: 28px minmax(0, 1fr) auto;
+    gap: 8px;
+  }
+
+  .lab-shell.phase-intro .intro-video-play {
+    width: 28px;
+    height: 28px;
+  }
+
+  .lab-shell.phase-intro .intro-video-play svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .lab-shell.phase-intro .intro-video-time {
+    font-size: 9px;
+  }
+
+}
+
+@media (max-width: 360px) {
+  .lab-shell.phase-intro .course-intro-shell {
+    width: calc(100% - 24px);
+    gap: 17px;
+    padding-top: 22px;
+    padding-bottom: 24px;
+  }
+
+  .lab-shell.phase-intro .intro-meta {
+    gap: 5px 10px;
+  }
+
+  .lab-shell.phase-intro .intro-video-subtitle {
+    display: none;
+  }
+
+  .lab-shell.phase-intro .intro-video-mark {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lab-shell.phase-intro *,
+  .lab-shell.phase-intro *::before,
+  .lab-shell.phase-intro *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.lab-shell.phase-summary .course-summary {
+  display: grid;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 0;
+  align-content: start;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: var(--journey-paper);
+  color: var(--journey-ink);
+  overscroll-behavior: contain;
+  scroll-padding-top: 28px;
+  scrollbar-color: var(--journey-line-strong) transparent;
+}
+
+.lab-shell.phase-summary .course-summary-shell {
+  display: grid;
+  width: min(860px, calc(100% - 72px));
+  max-width: 100%;
+  min-width: 0;
+  min-height: 0;
+  align-content: start;
+  gap: 25px;
+  margin: 0 auto;
+  padding: clamp(46px, 7vh, 76px) 0 clamp(96px, 12vh, 126px);
+}
+
+.lab-shell.phase-summary .course-summary-heading {
+  display: grid;
+  min-width: 0;
+  justify-items: start;
+  gap: 10px;
+}
+
+.lab-shell.phase-summary .course-summary-icon {
+  display: inline-grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 50%;
+  background: rgb(34 150 98 / 11%);
+  color: #188654;
+}
+
+.lab-shell.phase-summary .course-summary-icon svg {
+  width: 21px;
+  height: 21px;
+}
+
+.lab-shell.phase-summary .course-summary-eyebrow {
+  margin: 4px 0 0;
+  color: var(--journey-muted);
+  font-size: 13px;
+  font-weight: 550;
+  line-height: 1.4;
+}
+
+.lab-shell.phase-summary .course-summary-title {
+  max-width: 15ch;
+  margin: 0;
+  color: var(--journey-ink);
+  font-size: clamp(35px, 4.9vw, 56px);
+  font-weight: 650;
+  letter-spacing: -0.058em;
+  line-height: 1.06;
+  text-wrap: balance;
+}
+
+.lab-shell.phase-summary .course-summary-introduction {
+  max-width: 60ch;
+  margin: 2px 0 0;
+  color: var(--journey-muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.lab-shell.phase-summary .course-summary-milestones {
+  display: grid;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--journey-line);
+  list-style: none;
+}
+
+.lab-shell.phase-summary .course-summary-milestone {
+  display: grid;
+  min-width: 0;
+  grid-template-columns: 34px minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 15px;
+  padding: 17px 0;
+  border-bottom: 1px solid var(--journey-line);
+}
+
+.lab-shell.phase-summary .course-summary-milestone-marker {
+  display: inline-grid;
+  width: 29px;
+  height: 29px;
+  place-items: center;
+  border: 1px solid var(--journey-line-strong);
+  border-radius: 50%;
+  color: var(--journey-muted);
+  font-size: 11px;
+  font-weight: 550;
+}
+
+.lab-shell.phase-summary .course-summary-milestone.is-complete .course-summary-milestone-marker {
+  border-color: transparent;
+  background: rgb(34 150 98 / 11%);
+  color: #188654;
+}
+
+.lab-shell.phase-summary .course-summary-milestone-marker svg {
+  width: 16px;
+  height: 16px;
+}
+
+.lab-shell.phase-summary .course-summary-milestone-copy {
+  display: grid;
+  min-width: 0;
+  gap: 4px;
+}
+
+.lab-shell.phase-summary .course-summary-lessons {
+  display: grid;
+  min-width: 0;
+  gap: 9px;
+  margin: 14px 0 1px;
+  padding: 0;
+  list-style: none;
+}
+
+.lab-shell.phase-summary .course-summary-lesson {
+  min-width: 0;
+  border: 1px solid var(--journey-line);
+  border-radius: 11px;
+}
+
+.lab-shell.phase-summary .course-summary-lesson-disclosure {
+  min-width: 0;
+}
+
+.lab-shell.phase-summary .course-summary-lesson-toggle {
+  display: grid;
+  min-width: 0;
+  grid-template-columns: 24px minmax(0, 1fr) auto 16px;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 13px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.lab-shell.phase-summary .course-summary-lesson-toggle::-webkit-details-marker {
+  display: none;
+}
+
+.lab-shell.phase-summary .course-summary-lesson-number,
+.lab-shell.phase-summary .course-summary-lesson-status {
+  color: var(--journey-muted);
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.lab-shell.phase-summary .course-summary-lesson-status {
+  white-space: nowrap;
+}
+
+.lab-shell.phase-summary .course-summary-lesson-title {
+  min-width: 0;
+  color: var(--journey-ink);
+  font-size: 13px;
+  font-weight: 550;
+  line-height: 1.45;
+}
+
+.lab-shell.phase-summary .course-summary-lesson-chevron {
+  display: inline-grid;
+  width: 16px;
+  height: 16px;
+  place-items: center;
+  color: var(--journey-muted);
+  transition: transform 150ms ease;
+}
+
+.lab-shell.phase-summary .course-summary-lesson-chevron svg {
+  width: 15px;
+  height: 15px;
+}
+
+.lab-shell.phase-summary .course-summary-lesson-disclosure[open] .course-summary-lesson-chevron {
+  transform: rotate(180deg);
+}
+
+.lab-shell.phase-summary .course-summary-lesson-details {
+  display: grid;
+  min-width: 0;
+  gap: 15px;
+  padding: 0 14px 16px 47px;
+}
+
+.lab-shell.phase-summary .course-summary-lesson-description {
+  margin: 0;
+  color: var(--journey-muted);
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.lab-shell.phase-summary .course-summary-actions,
+.lab-shell.phase-summary .course-summary-prompt,
+.lab-shell.phase-summary .course-summary-observations {
+  display: grid;
+  min-width: 0;
+  gap: 7px;
+}
+
+.lab-shell.phase-summary .course-summary-detail-heading {
+  margin: 0;
+  color: var(--journey-ink);
+  font-size: 11px;
+  font-weight: 580;
+  line-height: 1.45;
+}
+
+.lab-shell.phase-summary .course-summary-action-list {
+  display: grid;
+  gap: 5px;
+  margin: 0;
+  padding-left: 17px;
+  color: var(--journey-muted);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.lab-shell.phase-summary .course-summary-observation-list {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  color: var(--journey-muted);
+  font-size: 11px;
+  line-height: 1.55;
+  list-style: none;
+}
+
+.lab-shell.phase-summary .course-summary-observation-list li {
+  display: flex;
+  min-width: 0;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4px 10px;
+}
+
+.lab-shell.phase-summary .course-summary-observation-list code {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  color: var(--journey-ink);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 10px;
+}
+
+.lab-shell.phase-summary .course-summary-prompt-example {
+  min-width: 0;
+  margin: 0;
+  padding: 11px 12px;
+  overflow-wrap: anywhere;
+  border: 1px solid var(--journey-line);
+  border-radius: 8px;
+  background: rgb(127 127 127 / 6%);
+  color: var(--journey-ink);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 11px;
+  line-height: 1.65;
+  white-space: pre-wrap;
+}
+
+.lab-shell.phase-summary .course-summary-lesson-links {
+  display: flex;
+  min-width: 0;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 9px 17px;
+}
+
+.lab-shell.phase-summary .course-summary-lesson-link,
+.lab-shell.phase-summary .course-summary-lesson-revisit {
+  display: inline-flex;
+  width: fit-content;
+  max-width: 100%;
+  align-items: center;
+  gap: 5px;
+  color: var(--journey-ink);
+  font-size: 12px;
+  text-decoration-line: underline;
+  text-decoration-color: var(--journey-line-strong);
+  text-underline-offset: 3px;
+}
+
+.lab-shell.phase-summary .course-summary-lesson-link svg {
+  width: 14px;
+  height: 14px;
+  flex: 0 0 14px;
+}
+
+.lab-shell.phase-summary .course-summary-milestone-title {
+  margin: 3px 0 0;
+  color: var(--journey-ink);
+  font-size: 14px;
+  font-weight: 570;
+  line-height: 1.4;
+}
+
+.lab-shell.phase-summary .course-summary-milestone-description {
+  margin: 0;
+  color: var(--journey-muted);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.lab-shell.phase-summary .course-summary-milestone-status {
+  padding-top: 6px;
+  color: var(--journey-muted);
+  font-size: 11px;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.lab-shell.phase-summary .course-summary-boundary {
+  max-width: 70ch;
+  margin: -4px 0 0;
+  color: var(--journey-muted);
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.lab-shell.phase-summary .course-summary-docs {
+  display: inline-flex;
+  width: fit-content;
+  max-width: 100%;
+  align-items: center;
+  gap: 6px;
+  color: var(--journey-ink);
+  font-size: 13px;
+  font-weight: 530;
+  text-decoration-line: underline;
+  text-decoration-color: var(--journey-line-strong);
+  text-underline-offset: 3px;
+}
+
+.lab-shell.phase-summary .course-summary-docs svg {
+  width: 15px;
+  height: 15px;
+  flex: 0 0 15px;
+}
+
+html[data-theme="dark"] .lab-shell.phase-summary .course-summary-icon,
+html[data-theme="dark"] .lab-shell.phase-summary .course-summary-milestone.is-complete .course-summary-milestone-marker {
+  background: rgb(57 188 124 / 14%);
+  color: #49c589;
+}
+
+@media (max-width: 720px) {
+  .lab-shell.phase-summary .course-summary-shell {
+    width: calc(100% - 38px);
+    gap: 21px;
+    padding-top: 40px;
+    padding-bottom: 108px;
+  }
+
+  .lab-shell.phase-summary .course-summary-title {
+    max-width: 13ch;
+    font-size: clamp(35px, 8.8vw, 49px);
+  }
+
+  .lab-shell.phase-summary .course-summary-introduction {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .lab-shell.phase-summary .course-summary-milestone {
+    grid-template-columns: 29px minmax(0, 1fr);
+    gap: 4px 12px;
+    padding: 15px 0;
+  }
+
+  .lab-shell.phase-summary .course-summary-milestone-status {
+    grid-column: 2;
+    padding-top: 2px;
+  }
+
+  .lab-shell.phase-summary .course-summary-lessons {
+    gap: 8px;
+    margin-top: 11px;
+  }
+
+  .lab-shell.phase-summary .course-summary-lesson-toggle {
+    grid-template-columns: 21px minmax(0, 1fr) auto 14px;
+    gap: 7px;
+    padding: 11px 9px;
+  }
+
+  .lab-shell.phase-summary .course-summary-lesson-details {
+    gap: 13px;
+    padding: 0 10px 13px 10px;
+  }
+
+  .lab-shell.phase-summary .course-summary-lesson-title {
+    font-size: 12px;
+  }
+
+  .lab-shell.phase-summary .course-summary-lesson-number,
+  .lab-shell.phase-summary .course-summary-lesson-status {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .lab-shell.phase-summary .course-summary-shell {
+    width: calc(100% - 26px);
+    gap: 18px;
+    padding-top: 34px;
+    padding-bottom: 108px;
+  }
+
+  .lab-shell.phase-summary .course-summary-icon {
+    width: 37px;
+    height: 37px;
+  }
+
+  .lab-shell.phase-summary .course-summary-title {
+    font-size: 34px;
+  }
+
+  .lab-shell.phase-summary .course-summary-milestone-description {
+    font-size: 12px;
+  }
+
+  .lab-shell.phase-summary .course-summary-lesson-toggle {
+    grid-template-columns: 20px minmax(0, 1fr) 14px;
+    row-gap: 3px;
+  }
+
+  .lab-shell.phase-summary .course-summary-lesson-status {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .lab-shell.phase-summary .course-summary-lesson-chevron {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .lab-shell.phase-summary .course-summary-prompt-example {
+    padding: 9px;
+    font-size: 10px;
+  }
+}

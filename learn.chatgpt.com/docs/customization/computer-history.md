@@ -1,6 +1,6 @@
 # Computer History
 
-> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Computer History is **off by default** for ChatGPT Pro, Business, and
   Enterprise users in the ChatGPT desktop app on macOS. Pro users can choose to

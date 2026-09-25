@@ -7,7 +7,7 @@ Use this as a compact map of ChatGPT docs for Codex. Each page has a Markdown tw
 ## Documentation sets
 - [Combined ChatGPT docs](docs/llms-full.txt): Single-file Markdown export of ChatGPT and Codex guides and references.
 - [Codex manual (Markdown)](docs/codex-manual.md): Machine-oriented condensed manual generated from the ChatGPT and Codex docs set.
-- [ChatGPT use cases](use-cases/llms.txt): Generated index of practical ChatGPT and Codex workflows and curated collections.
+- [ChatGPT use cases](https://learn.chatgpt.com/use-cases/llms.txt): Generated index of practical ChatGPT and Codex workflows and curated collections.
 
 ## Administration
 - [Administration](docs/administration.md): Set access and policy boundaries for ChatGPT, Codex developer tools, APIs, plugins, and connected systems
@@ -163,7 +163,7 @@ Use this as a compact map of ChatGPT docs for Codex. Each page has a Markdown tw
 - [Glossary](docs/glossary.md): Definitions for common Codex terms and concepts
 
 ## Guides
-- [Building an AI-Native Engineering Team](guides/build-ai-native-engineering-team.md): How coding agents speed up the software development lifecycle
+- [Building an AI-Native Engineering Team](https://learn.chatgpt.com/guides/build-ai-native-engineering-team.md): How coding agents speed up the software development lifecycle
 
 ## Hooks
 - [Hooks](docs/hooks.md): Run scripts or MCP tools during the Codex lifecycle
@@ -187,7 +187,7 @@ Use this as a compact map of ChatGPT docs for Codex. Each page has a Markdown tw
 - [Integrated terminal](docs/integrated-terminal.md): Run commands and inspect output without leaving your chat
 
 ## Learn
-- [Best practices](guides/best-practices.md): Getting started with Codex and proven practices for better results
+- [Best practices](https://learn.chatgpt.com/guides/best-practices.md): Getting started with Codex and proven practices for better results
 
 ## Linux
 - [ChatGPT desktop app for Linux](docs/linux/linux-app.md): Install and update ChatGPT on supported Ubuntu, Debian, Fedora, and Arch Linux desktop distributions
@@ -197,6 +197,9 @@ Use this as a compact map of ChatGPT docs for Codex. Each page has a Markdown tw
 
 ## Mcp Server
 - [Codex MCP server removal](docs/mcp-server.md): Migrate from the removed Codex MCP server to the app server
+
+## Migrate Custom Gpts
+- [Moving your custom GPT workflows to plugins](docs/migrate-custom-gpts.md): Guidance for Enterprise admins preparing their workspace and GPT creators migrating, testing, and sharing replacement plugins.
 
 ## Model Selection
 - [Model selection](docs/model-selection.md): Find the right model for your use case
@@ -214,7 +217,7 @@ Use this as a compact map of ChatGPT docs for Codex. Each page has a Markdown tw
 - [Open Source](docs/open-source.md): Open-source components of Codex and where to collaborate
 
 ## Overview
-- [ChatGPT](docs.md): Use ChatGPT for ambitious work and software development
+- [ChatGPT](https://learn.chatgpt.com/docs.md): Use ChatGPT for ambitious work and software development
 
 ## Permission Modes
 - [Permissions](docs/permission-modes.md): Choose what ChatGPT can do on your computer and when it asks for approval
@@ -253,7 +256,7 @@ Use this as a compact map of ChatGPT docs for Codex. Each page has a Markdown tw
 - [Remote connections](docs/remote-connections.md): Use Remote to access work on a connected computer, or connect the ChatGPT desktop app to projects over SSH
 
 ## Resources
-- [Resources](resources.md): Find Codex videos, community programs, and OpenAI resources
+- [Resources](https://learn.chatgpt.com/resources.md): Find Codex videos, community programs, and OpenAI resources
 
 ## Sandboxing
 - [Sandbox](docs/sandboxing.md): How sandboxing works across ChatGPT and Codex clients
@@ -303,7 +306,7 @@ Use this as a compact map of ChatGPT docs for Codex. Each page has a Markdown tw
 - [Use ChatGPT](docs/use-chatgpt.md): Choose Chat, ChatGPT Work, or Codex, add useful context, and refine the result.
 
 ## Videos
-- [Videos](videos.md): Learn how to use ChatGPT and Codex with demos, walkthroughs, and talks
+- [Videos](https://learn.chatgpt.com/videos.md): Learn how to use ChatGPT and Codex with demos, walkthroughs, and talks
 
 ## Visualizations
 - [Visualizations](docs/visualizations.md): Turn ideas and information into interactive visual explanations in ChatGPT

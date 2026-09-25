@@ -1,6 +1,6 @@
 # Site tools
 
-> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Site tools are ChatGPT's implementation of the proposed
 [WebMCP standard](https://webmachinelearning.github.io/webmcp/). With WebMCP,

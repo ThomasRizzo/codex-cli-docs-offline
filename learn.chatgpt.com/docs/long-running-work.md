@@ -1,6 +1,6 @@
 # Long-running work
 
-> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 For work that may take many steps, give ChatGPT a clear outcome, constraints,
 and definition of done. Keep related work in the same chat so

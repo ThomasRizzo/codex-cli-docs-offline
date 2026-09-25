@@ -1,6 +1,6 @@
 # Run a Codex Security scan
 
-> For the complete documentation index, see [llms.txt](../../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Start with a standard Codex Security scan for an initial review or a routine
 repository or component assessment. It runs the full scan workflow once.

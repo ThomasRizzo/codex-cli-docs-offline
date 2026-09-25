@@ -1,6 +1,6 @@
 # Advanced Configuration
 
-> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Use these options when you need more control over providers, policies, and integrations. For a quick start, see [Config basics](config-basic.html).
 
@@ -746,7 +746,7 @@ Codex reads `AGENTS.md` (and related files) and includes a limited amount of pro
 - `project_doc_max_bytes`: how much to read from each `AGENTS.md` file
 - `project_doc_fallback_filenames`: additional filenames to try when `AGENTS.md` is missing at a directory level
 
-For a detailed walkthrough, see [Custom instructions with AGENTS.md](../agent-configuration/agents-md.md).
+For a detailed walkthrough, see [Custom instructions with AGENTS.md](../agent-configuration/agents-md.html).
 
 ## Desktop
 

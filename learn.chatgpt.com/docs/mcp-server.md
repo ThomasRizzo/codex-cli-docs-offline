@@ -1,6 +1,6 @@
 # Codex MCP server removal
 
-> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 The `codex mcp-server` command and the standalone `codex-mcp-server` binary have
 been removed. Integrations that launch either command must migrate before

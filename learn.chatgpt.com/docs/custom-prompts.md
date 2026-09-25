@@ -1,6 +1,6 @@
 # Custom Prompts
 
-> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Custom prompts are deprecated. Use [skills](build-skills.html) for reusable
   instructions that Codex can invoke explicitly or implicitly.

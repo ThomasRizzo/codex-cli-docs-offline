@@ -1,6 +1,6 @@
 # Propose security hardening
 
-> For the complete documentation index, see [llms.txt](../../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Use `$codex-security:propose-security-hardening` to turn a collection of
 security evidence into structural or architectural hardening options. The

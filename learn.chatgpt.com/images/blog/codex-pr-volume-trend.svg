@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" role="img" aria-labelledby="title desc">
+  <title id="title">Weekly PR volume has more than doubled</title>
+  <desc id="desc">Weekly PR volume increases across three quarters.</desc>
+  <g font-family="OpenAI Sans, ui-sans-serif, system-ui, sans-serif">
+    <text x="52" y="66" font-size="27" font-weight="600" letter-spacing="-.35" fill="#0d0d0d">Weekly PR volume has more than doubled</text>
+    <line x1="52" y1="350" x2="848" y2="350" stroke="#c9daed" stroke-width="1"/>
+    <g>
+      <rect x="126" y="270" width="146" height="80" fill="#9cc3ed"/><rect x="377" y="222" width="146" height="128" fill="#2877c8"/><rect x="628" y="138.16" width="146" height="211.84" fill="#0f5aa8"/>
+    </g>
+    <g font-size="15" fill="#5f6b7a"><text x="199" y="381" text-anchor="middle">Q4 '25</text><text x="450" y="381" text-anchor="middle">Q1 '26</text><text x="701" y="381" text-anchor="middle">Q2 '26</text></g>
+  </g>
+</svg>

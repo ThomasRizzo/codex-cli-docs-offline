@@ -1,0 +1,419 @@
+html[data-training-embedded="true"] .lab-shell.phase-intro,
+html[data-training-embedded="true"] .lab-shell.phase-brief,
+html[data-training-embedded="true"] .lab-shell.phase-practice {
+  --journey-header-height: 68px;
+  --journey-footer-height: 0px;
+  grid-template-rows: var(--journey-header-height) minmax(0, 1fr);
+}
+
+html[data-training-embedded="true"] .lab-shell.phase-intro .journey-header,
+html[data-training-embedded="true"] .lab-shell.phase-brief .journey-header,
+html[data-training-embedded="true"] .lab-shell.phase-practice .journey-header {
+  grid-template-columns: auto minmax(0, 1fr) auto auto;
+  gap: clamp(12px, 2vw, 24px);
+  padding: 0 clamp(16px, 3vw, 40px);
+}
+
+html[data-training-embedded="true"] .journey-stage-nav {
+  width: 100%;
+  min-width: 0;
+  flex-direction: column;
+  gap: 3px;
+  justify-content: center;
+}
+
+html[data-training-embedded="true"] .journey-current-lesson {
+  display: none;
+  color: var(--journey-muted);
+  font-size: 11px;
+}
+
+html[data-training-embedded="true"] .code-line.is-cited {
+  background: color-mix(in srgb, var(--journey-ink) 10%, transparent);
+}
+
+html[data-training-embedded="true"] .journey-stage-list {
+  width: min(760px, 100%);
+  gap: 0;
+}
+
+html[data-training-embedded="true"] .journey-stage-item {
+  flex: 1 1 0;
+  gap: 0;
+}
+
+html[data-training-embedded="true"] .journey-stage-item:last-child {
+  flex: 0 0 auto;
+}
+
+html[data-training-embedded="true"] .journey-stage-link,
+html[data-training-embedded="true"] .journey-stage-current {
+  display: inline-flex;
+  min-height: 36px;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+}
+
+html[data-training-embedded="true"] .journey-stage-marker {
+  display: inline-grid;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  place-items: center;
+  border: 1px solid var(--journey-line-strong);
+  border-radius: 999px;
+  color: var(--journey-muted);
+  font-size: 10px;
+  font-weight: 560;
+}
+
+html[data-training-embedded="true"]
+  .journey-stage-item.is-current
+  .journey-stage-marker {
+  border-color: var(--journey-ink);
+  background: var(--journey-ink);
+  color: var(--journey-paper);
+}
+
+html[data-training-embedded="true"]
+  .journey-stage-item.is-complete
+  .journey-stage-marker {
+  border-color: var(--journey-green);
+  background: var(--journey-green);
+  color: #fff;
+}
+
+html[data-training-embedded="true"] .journey-stage-marker svg {
+  width: 13px;
+  height: 13px;
+}
+
+html[data-training-embedded="true"] .journey-stage-label {
+  color: var(--journey-muted);
+  font-size: 11px;
+}
+
+html[data-training-embedded="true"]
+  .journey-stage-item.is-current
+  .journey-stage-label,
+html[data-training-embedded="true"]
+  .journey-stage-item.is-complete
+  .journey-stage-label {
+  color: var(--journey-ink);
+}
+
+html[data-training-embedded="true"] .journey-stage-connector {
+  height: 1px;
+  min-width: 12px;
+  flex: 1 1 auto;
+  margin: 0 10px;
+  background: var(--journey-line-strong);
+}
+
+html[data-training-embedded="true"]
+  .journey-stage-item.is-complete
+  .journey-stage-connector {
+  background: var(--journey-green);
+}
+
+html[data-training-embedded="true"] .journey-header-back,
+html[data-training-embedded="true"] .journey-header-next,
+html[data-training-embedded="true"] .journey-restart {
+  min-height: 36px;
+}
+
+html[data-training-embedded="true"] .lab-shell.phase-practice .practice-screen {
+  --practice-task-lane: clamp(280px, 24vw, 360px);
+  --practice-lane-gap: 6px;
+  grid-template-areas: "guidance workspace";
+  grid-template-columns: var(--practice-task-lane) minmax(0, 1fr);
+  align-items: start;
+}
+
+html[data-training-embedded="true"]
+  .lab-shell.phase-practice
+  .practice-workspace-pane {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  grid-area: workspace;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr);
+  align-self: start;
+}
+
+html[data-training-embedded="true"]
+  .lab-shell.phase-practice
+  .practice-codex-frame,
+html[data-training-embedded="true"]
+  .lab-shell.phase-practice
+  .practice-guidance-stack {
+  align-self: start;
+}
+
+html[data-training-embedded="true"]
+  .lab-shell.phase-practice
+  .practice-codex-frame {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  grid-area: auto;
+}
+
+html[data-training-embedded="true"] .practice-lesson-overview {
+  display: grid;
+  gap: 8px;
+  padding: 2px 2px 14px;
+}
+
+html[data-training-embedded="true"] .practice-lesson-eyebrow {
+  margin: 0;
+  color: var(--journey-muted);
+  font-size: 12px;
+  font-weight: 520;
+}
+
+html[data-training-embedded="true"] .practice-lesson-title {
+  margin: 0;
+  color: var(--journey-ink);
+  font-size: clamp(20px, 1.75vw, 25px);
+  font-weight: 590;
+  letter-spacing: -0.045em;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+
+html[data-training-embedded="true"] .practice-lesson-copy,
+html[data-training-embedded="true"] .practice-lesson-concept p {
+  margin: 0;
+  color: var(--journey-muted);
+  font-size: 13px;
+  line-height: 1.5;
+  text-wrap: pretty;
+}
+
+html[data-training-embedded="true"] .practice-lesson-concept {
+  color: var(--journey-ink);
+  font-size: 12px;
+}
+
+html[data-training-embedded="true"] .practice-lesson-concept summary {
+  width: fit-content;
+  cursor: pointer;
+  font-weight: 550;
+}
+
+html[data-training-embedded="true"] .practice-lesson-concept p {
+  padding-top: 7px;
+}
+
+html[data-training-embedded="true"] .practice-lesson-notice {
+  margin: 0;
+  color: var(--journey-muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.practice-assignment-overlay {
+  position: absolute;
+  z-index: 8;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(420px, calc(100% - 32px));
+  max-height: calc(100% - 180px);
+  overflow: auto;
+  pointer-events: none;
+}
+
+.practice-assignment-overlay:empty,
+.practice-assignment-overlay[hidden] {
+  display: none;
+}
+
+.practice-assignment-overlay > * {
+  pointer-events: auto;
+}
+
+html[data-training-embedded="true"] .practice-scenario-note {
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 15px;
+  border: 1px solid var(--journey-line-strong);
+  border-radius: 13px;
+  background: var(--journey-paper);
+}
+
+html[data-training-embedded="true"] .practice-scenario-icon {
+  display: inline-flex;
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  align-items: center;
+  color: var(--journey-muted);
+}
+
+html[data-training-embedded="true"] .practice-scenario-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+html[data-training-embedded="true"] .practice-scenario-content {
+  display: grid;
+  min-width: 0;
+  flex: 1 1 auto;
+  gap: 3px;
+}
+
+html[data-training-embedded="true"] .practice-scenario-title,
+html[data-training-embedded="true"] .practice-scenario-copy {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.4;
+  text-wrap: pretty;
+}
+
+html[data-training-embedded="true"] .practice-scenario-title {
+  color: var(--journey-ink);
+  font-weight: 560;
+}
+
+html[data-training-embedded="true"] .practice-scenario-copy {
+  color: var(--journey-muted);
+}
+
+html[data-training-embedded="true"] .practice-scenario-dismiss {
+  display: inline-grid;
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  place-items: center;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--journey-muted);
+  cursor: pointer;
+}
+
+html[data-training-embedded="true"] .practice-scenario-dismiss:hover,
+html[data-training-embedded="true"] .practice-scenario-dismiss:focus-visible {
+  background: var(--journey-canvas);
+  color: var(--journey-ink);
+}
+
+html[data-training-embedded="true"] .practice-scenario-dismiss svg {
+  width: 15px;
+  height: 15px;
+}
+
+@media (max-width: 1180px) {
+  html[data-training-embedded="true"] .journey-stage-item:not(.is-current) {
+    display: inline-flex;
+  }
+
+  html[data-training-embedded="true"]
+    .journey-stage-item:not(.is-current)
+    .journey-stage-label {
+    display: none;
+  }
+
+  html[data-training-embedded="true"] .journey-stage-connector {
+    margin-right: 7px;
+    margin-left: 7px;
+  }
+}
+
+@media (max-width: 900px) {
+  html[data-training-embedded="true"]
+    .lab-shell.phase-practice
+    .practice-screen {
+    grid-template-areas:
+      "workspace"
+      "guidance";
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr) auto;
+    row-gap: 8px;
+  }
+
+  html[data-training-embedded="true"] .practice-lesson-overview {
+    gap: 4px;
+    padding-bottom: 5px;
+  }
+
+  html[data-training-embedded="true"] .practice-lesson-title {
+    font-size: 18px;
+  }
+
+  html[data-training-embedded="true"] .practice-lesson-copy {
+    display: none;
+  }
+
+  html[data-training-embedded="true"] .practice-scenario-note {
+    gap: 9px;
+    padding: 9px 10px;
+  }
+}
+
+@media (max-width: 380px) {
+  html[data-training-embedded="true"]
+    .lab-shell.phase-practice
+    .practice-screen {
+    grid-template-rows: minmax(0, 1fr) min(280px, 40dvh);
+  }
+
+  html[data-training-embedded="true"]
+    .lab-shell.phase-practice
+    .practice-guidance-stack {
+    max-height: min(280px, 40dvh);
+  }
+}
+
+@media (max-width: 720px) {
+  html[data-training-embedded="true"] .lab-shell.phase-intro,
+  html[data-training-embedded="true"] .lab-shell.phase-brief,
+  html[data-training-embedded="true"] .lab-shell.phase-practice {
+    --journey-header-height: 56px;
+    --journey-footer-height: 0px;
+    grid-template-rows: var(--journey-header-height) minmax(0, 1fr);
+  }
+
+  html[data-training-embedded="true"] .lab-shell.phase-intro .journey-header,
+  html[data-training-embedded="true"] .lab-shell.phase-brief .journey-header,
+  html[data-training-embedded="true"]
+    .lab-shell.phase-practice
+    .journey-header {
+    grid-template-columns: auto minmax(0, 1fr) auto auto;
+    gap: 7px;
+    padding-right: 9px;
+    padding-left: 9px;
+  }
+
+  html[data-training-embedded="true"] .journey-stage-marker {
+    width: 19px;
+    height: 19px;
+    flex-basis: 19px;
+  }
+
+  html[data-training-embedded="true"] .journey-current-lesson {
+    display: block;
+  }
+
+  html[data-training-embedded="true"] .journey-stage-label,
+  html[data-training-embedded="true"]
+    .journey-stage-item.is-current
+    .journey-stage-label {
+    display: none;
+  }
+
+  html[data-training-embedded="true"] .journey-stage-connector {
+    min-width: 1px;
+    margin-right: 1px;
+    margin-left: 1px;
+  }
+}

@@ -1,13 +1,13 @@
 # Build plugins
 
-> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 To build or submit a plugin, use the complete
 [builder documentation on developers.openai.com](https://developers.openai.com/plugins).
 
 
 
-  <ButtonLink href="../plugins.html" color="primary" variant="solid" size="lg">
+  <ButtonLink href="/plugins" color="primary" variant="solid" size="lg">
     Build and submit a plugin
   </ButtonLink>
 

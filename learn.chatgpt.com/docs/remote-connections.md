@@ -1,6 +1,6 @@
 # Remote connections
 
-> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Remote connections let you access work running on another device or machine.
 In the ChatGPT mobile app, open **Remote** to work with ChatGPT or Codex chats on

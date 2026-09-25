@@ -1,6 +1,6 @@
 # Get started with ChatGPT Work
 
-> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+> For the complete documentation index, see [llms.txt](llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 <VideoPlayer src="https://cdn.openai.com/devhub/superapp-video-v1.mp4" />
 
