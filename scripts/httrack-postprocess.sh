@@ -56,6 +56,9 @@ for h in $HOSTS; do
   [ -d "$OUT/$h" ] || continue
   rm -rf "${REPO:?}/$h"; mv "$OUT/$h" "$REPO/$h"
 done
+echo "postprocess: site banner (banner.txt + offline-banner.js at the site root)"
+python3 "$(dirname "$0")/inject-banner.py" "$REPO" "learn.chatgpt.com"
+
 echo "=== mirror stats ==="
 for h in $HOSTS; do
   [ -d "$REPO/$h" ] && printf '%-20s %6s files %s\n' "$h" "$(find "$REPO/$h" -type f | wc -l)" "$(du -sh "$REPO/$h" | cut -f1)" || true

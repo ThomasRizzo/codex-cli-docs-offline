@@ -26,6 +26,28 @@ python3 -m http.server 8765
 
 Then visit http://127.0.0.1:8765/
 
+## Site banner (`banner.txt`)
+
+Every page shows a thin one-line bar at the top whose content comes from **`banner.txt` at the
+site root** (the folder IIS serves, next to `web.config` / `index.html`).
+
+* Each rebuild (`scripts/inject-banner.py`, run by the GitHub Action) rewrites it with
+  `Offline mirror of learn.chatgpt.com, mirrored <YYYY-MM-DD>` (crawl date, UTC).
+* It may contain **simple inline HTML**, e.g.
+  `Internal copy &mdash; see <a href="https://intranet.example/ai-policy">AI usage policy</a> and <a href="https://intranet.example/docs">internal docs</a>`.
+  Keep it to one line of inline markup (links, `<b>`, `<code>`); `<script>` does not run.
+* To customise it, **edit the deployed copy on IIS** – no rebuild needed; the change shows on
+  the next page load (`web.config` sends `Cache-Control: no-cache` for `banner.txt`, and the
+  loader fetches it with `cache: 'no-cache'`).
+* **A rebuild overwrites `banner.txt`.** When you redeploy a new build, keep your edited copy
+  (copy it aside first, or exclude `banner.txt` from the deploy/robocopy, e.g. `/XF banner.txt`).
+* Empty, missing or unreachable `banner.txt` ⇒ no banner at all.
+* How it loads: `offline-banner.js` (source: `scripts/offline-banner.js`) fetches `banner.txt` via a path relative to the
+  script file itself, so it works when the mirror is an IIS application under a sub-path. It
+  inserts a fixed full-width bar, pads `<body>` and shifts the site's fixed/sticky header and
+  sidebars down by the bar height so nothing is hidden; colours follow the page's light/dark mode.
+  The root `index.html` redirect/splash page itself has no banner; every docs page does.
+
 ## IIS notes
 
 Point the site root at the **repo root** (not `learn.chatgpt.com/`). Keep `web.config` so:
