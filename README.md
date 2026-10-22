@@ -36,6 +36,7 @@ site root** (the folder IIS serves, next to `web.config` / `index.html`).
 * It may contain **simple inline HTML**, e.g.
   `Internal copy &mdash; see <a href="https://intranet.example/ai-policy">AI usage policy</a> and <a href="https://intranet.example/docs">internal docs</a>`.
   Keep it to one line of inline markup (links, `<b>`, `<code>`); `<script>` does not run.
+  Relative `href`s (e.g. `policies/ai.html`) are resolved against the site root.
 * To customise it, **edit the deployed copy on IIS** – no rebuild needed; the change shows on
   the next page load (`web.config` sends `Cache-Control: no-cache` for `banner.txt`, and the
   loader fetches it with `cache: 'no-cache'`).
@@ -44,7 +45,7 @@ site root** (the folder IIS serves, next to `web.config` / `index.html`).
 * Empty, missing or unreachable `banner.txt` ⇒ no banner at all.
 * How it loads: `offline-banner.js` (source: `scripts/offline-banner.js`) fetches `banner.txt` via a path relative to the
   script file itself, so it works when the mirror is an IIS application under a sub-path. It
-  inserts a fixed full-width bar, pads `<body>` and shifts the site's fixed/sticky header and
+  inserts a fixed full-width 28px bar, pads `<body>` and shifts the site's fixed/sticky header and
   sidebars down by the bar height so nothing is hidden; colours follow the page's light/dark mode.
   The root `index.html` redirect/splash page itself has no banner; every docs page does.
 

@@ -17,8 +17,8 @@
     var st = document.createElement('style');
     st.textContent =
       '#' + ID + '{position:fixed;top:0;left:0;right:0;z-index:2147483000;box-sizing:border-box;' +
-      'margin:0;padding:3px 12px;font:500 12.5px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;' +
-      'text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;' +
+      'height:28px;margin:0;padding:0 1rem;display:flex;align-items:center;justify-content:center;gap:.5em;' +
+      'font:500 12.5px/1 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;' +
       'background:#fff4cc;color:#3b2f00;border-bottom:1px solid #e6d58a}' +
       '#' + ID + ' a{color:inherit;text-decoration:underline;font-weight:600}' +
       'html.dark #' + ID + ',html[data-theme="dark"] #' + ID + '{background:#3a3000;color:#ffe9a8;border-bottom-color:#5c4d00}' +
@@ -57,6 +57,11 @@
     var bar = document.createElement('div');
     bar.id = ID; bar.setAttribute('role', 'note');
     bar.innerHTML = txt;
+    /* relative hrefs in banner.txt are relative to the site root (where banner.txt lives) */
+    Array.prototype.forEach.call(bar.querySelectorAll('a[href]'), function (a) {
+      var hr = a.getAttribute('href');
+      if (!/^([a-z][a-z0-9+.-]*:|\/|#)/i.test(hr)) a.href = new URL(hr, url).href;
+    });
     bar.title = bar.textContent;
     document.body.insertBefore(bar, document.body.firstChild);
     offset(bar);
