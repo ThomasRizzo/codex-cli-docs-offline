@@ -2,16 +2,13 @@
 
 > For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
-Codex Security scans your code for vulnerabilities and validates plausible
-findings. For each reportable issue, it gives you the evidence and remediation
-guidance you need to review the result. Scan only code you own or have
-permission to assess.
-
-Follow this quickstart to install the plugin and run a standard, read-only scan
-of a local repository in Codex.
+Install the Codex Security plugin, run a standard scan of a local repository,
+and review its findings. The scan leaves your source unchanged and saves a
+report with evidence and remediation guidance.
 
 This page covers the Codex Security plugin in the desktop app or Codex CLI. To
-  scan a connected GitHub repository in Codex cloud, see [Codex Security cloud
+  scan a connected GitHub repository in Codex cloud, install the separate
+  **Codex Security Cloud** plugin from the plugin marketplace. See [Cloud
   setup](setup.html).
 
 ## Install the plugin
@@ -37,6 +34,10 @@ This page covers the Codex Security plugin in the desktop app or Codex CLI. To
 
 3. Confirm the plugin is enabled, then open **Security** in the sidebar.
 
+If plugin installation shows "Disabled by admin" in a managed workspace,
+ask your workspace owner to [check plugin access](../enterprise/apps-and-connectors.html#troubleshoot-disabled-by-admin).
+For a personal account, see [plugin and app troubleshooting](https://help.openai.com/en/articles/20001497-troubleshooting-plugins-apps-in-chatgpt).
+
 </ContentModeSwitch>
 
 <ContentModeSwitch group="codex-surface" id="cli">
@@ -55,10 +56,9 @@ This page covers the Codex Security plugin in the desktop app or Codex CLI. To
 
 
 
-Check the [plugin changelog](plugin/changelog.html) before you rely
-  on a feature or start a long-running scan. If **Security** doesn't appear in
-  the desktop-app sidebar, update the app and plugin and confirm that the plugin
-  is enabled.
+If **Security** doesn't appear in the desktop-app sidebar, confirm that
+  **Codex** is selected and the plugin is enabled. Update the app and plugin if
+  needed, and check whether your workspace administrator allows the plugin.
 
 ## Run your first scan
 
@@ -91,10 +91,10 @@ with `xhigh` reasoning effort.
    leave **Deep scan** off, and select the entire repository or one folder.
    Confirm that the branch and revision identify the code you intended to scan.
 
-3. Add relevant context
+3. Add security context
 
    Choose the model and reasoning effort. Open **Additional context** only when
-   you need to describe a specific attack vector, security-sensitive area, or
+   you need to describe an attack vector, security-sensitive area, or
    repository detail that should guide the review.
 
    <figure className="not-prose my-6">
@@ -167,62 +167,34 @@ with `xhigh` reasoning effort.
 
 
 
+## Interpret the result
+
+Check the target and revision first. Then read which areas were reviewed and
+which were deferred. A completed scan can still have coverage gaps. A review
+that reports no findings hasn't necessarily ruled out every vulnerability.
+
+Open a finding and read its source evidence, attacker prerequisites, validation,
+and remaining uncertainty. Validation can use source analysis without running
+a reproducer. Use the recorded method and evidence to decide whether the issue
+applies to your system.
+
 ## What the scan creates
 
-<ContentModeSwitch group="codex-surface" id="app">
+In the desktop app, completed scans remain in **Scans**. In Codex CLI, use the
+scan directory reported in the conversation. Open `report.md` for the readable
+result. Detailed vulnerability reports under `findings/` and design proposals
+under `hardening/` are optional outputs you can request.
 
-Completed scans remain available in **Scans**. Review their findings and
-coverage in the Security workbench, or inspect related findings and repository
-history in **Findings** and **Repositories**. The scan also creates the files
-below.
-
-</ContentModeSwitch>
-
-<ContentModeSwitch group="codex-surface" id="cli">
-
-Every completed scan reports a summary in the terminal and creates the files
-below.
-
-</ContentModeSwitch>
-
-
-
-- `report.md`, the primary readable entry point to the scan results.
-- `findings/<slug>/`, when detailed vulnerability reports and supporting
-  proof-of-concept files are available.
-- `hardening/`, when structural hardening guidance and supporting proposals or
-  diagrams are available.
-- Structured scan data in `scan-manifest.json`, `findings.json`, and
-  `coverage.json` for automation and integrations. You can review scan results
-  without opening these files.
-
-Keep the full scan directory together when sharing or archiving results so the
-links from `report.md` continue to work.
+The directory also contains `scan-manifest.json`, `findings.json`, and
+`coverage.json` for tools and automation. Keep it together when sharing or
+archiving results so the report's links continue to work.
 
 ## Choose your next workflow
 
-- [Use the Security workbench](plugin/workbench.html) to manage
-  saved scans, findings, repositories, and scan activity in the desktop app.
-- [Run a scan from the CLI](cli.html) if you have beta access and
-  need a repeatable terminal workflow with structured results.
-- [Run a standard or scoped scan](plugin/scans.html) to review a
-  repository or one folder with the default workflow.
-- [Assess a first scan](plugin/scans.html#assess-a-first-scan)
-  to check the results against known issues and decide when to scan again.
-- [Run a deep scan](plugin/deep-scans.html) for a more thorough scan
-  when you can allow for a longer runtime.
-- [Review code changes](plugin/code-changes.html) to assess a pull
-  request, commit, branch range, or working-tree patch.
-- [Triage a backlog](plugin/triage-backlog.html) to review existing
-  security findings.
+- [Configure scope and security context](plugin/scans.html) for the
+  next scan, or [review a code change](plugin/code-changes.html).
 - [Fix and verify a finding](plugin/fix-findings.html) after you
-  accept one finding for remediation.
-- [Export or track findings](plugin/export-findings.html) to create
-  JSON, CSV, SARIF, an approval-gated Linear, GitHub, or Jira issue, or a private
-  draft GitHub Security Advisory.
-- [Write vulnerability reports](plugin/vulnerability-reports.html)
-  to turn supplied findings, disclosure notes, source, and PoCs into
-  self-contained reports.
-- [Propose security hardening](plugin/security-hardening.html) to
-  consider structural or architectural options based on scan results or other
-  security evidence.
+  accept its evidence, or [track it in an issue](plugin/export-findings.html).
+
+For other scan modes and workflows, return to the [Codex Security
+overview](../security.html).

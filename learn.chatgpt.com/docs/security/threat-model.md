@@ -1,42 +1,43 @@
-# Improving the threat model
+# Improve the Cloud threat model
 
 > For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
-Learn what a threat model is and how editing it improves Codex Security's suggestions.
+Update a monitored repository's threat model when the generated version misses
+security assumptions or deployment context. This guide applies to Codex
+Security Cloud. For local plugin policy, see [Configure the
+scan](plugin/scans.html#configure-the-scan).
 
 ## What a threat model is
 
-A threat model is a short security summary of how your repository works. In Codex Security, you edit it as a `project overview`, and the system uses it as scan context for future scans, prioritization, and review.
+A threat model is a short security summary of how your repository works. Codex Security creates the first draft from the code and uses it to guide future commit scans and prioritize findings.
 
-Codex Security creates the first draft from the code. If the findings feel off, this is the first thing to edit.
+A threat model describes:
 
-A useful threat model calls out:
-
-- entry points and untrusted inputs
-- trust boundaries and auth assumptions
-- sensitive data paths or privileged actions
-- the areas your team wants reviewed first
+- Entry points and who can supply input to them
+- Trust boundaries and authentication or authorization assumptions
+- Sensitive data and privileged actions
+- Areas that need particular attention
 
 For example:
 
-> Public API for account changes. Accepts JSON requests and file uploads. Uses an internal auth service for identity checks and writes billing changes through an internal service. Focus review on auth checks, upload parsing, and service-to-service trust boundaries.
+> The public account API accepts authenticated users' JSON requests and file
+> uploads. Users may change only accounts in their own tenant. The identity
+> service authenticates the caller, but each handler must check tenant access.
+> Billing changes go through a privileged internal service. Prioritize missing
+> tenant checks and upload paths that can reach that service.
 
-That gives Codex Security a better starting point for future scans and finding prioritization.
+Identify uncertain assumptions. For example, don't describe an endpoint
+as internal-only unless that is true of the deployment you want assessed.
 
-## Improving and revisiting the threat model
+## Edit the threat model
 
-If you want to improve the results, edit the threat model first. Use it when findings are missing the areas you care about or showing up in places you don't expect. The threat model changes future scan context.
+1. Open the Codex Security Cloud plugin. See [Cloud setup](setup.html)
+   if you haven't installed it or configured commit monitoring.
+2. Open **Repositories** and select the monitored repository.
+3. Open **Monitoring settings**.
+4. Edit **Threat model**, then select **Save**.
 
-Some users copy the current threat model into Codex, use a chat to improve it
-  based on the areas they want reviewed more closely, and then paste the updated
-  version back into the web UI.
+Changes apply to future scans.
 
-### Where to edit
-
-To review or update the threat model, go to [Codex Security scans](https://chatgpt.com/codex/security/scans), open the repository, and click **Edit**.
-
-## Related docs
-
-- [Codex Security cloud setup](setup.html) covers repository setup and findings review.
-- [Codex Security](../security.html) gives the product overview.
-- [Codex Security cloud FAQ](faq.html) covers common cloud questions.
+Revisit the model after changes to authentication, tenant boundaries, or exposed
+services. Keep facts about the deployment separate from priorities for the scan.

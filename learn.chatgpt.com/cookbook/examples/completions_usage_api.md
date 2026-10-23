@@ -60,15 +60,12 @@ def get_data(url, params):
 
         response = requests.get(url, headers=headers, params=params)
 
-        if response.status_code == 200:
-            data_json = response.json()
-            all_data.extend(data_json.get("data", []))
+        response.raise_for_status()
+        data_json = response.json()
+        all_data.extend(data_json.get("data", []))
 
-            page_cursor = data_json.get("next_page")
-            if not page_cursor:
-                break
-        else:
-            print(f"Error: {response.status_code}")
+        page_cursor = data_json.get("next_page")
+        if not page_cursor:
             break
 
     if all_data:

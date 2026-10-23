@@ -13,7 +13,17 @@ curl -G "https://api.ads.openai.com/v1/ad_account" \
   -H "Authorization: Bearer ${OPENAI_ADS_API_KEY}"
 ```
 
-Check your advertiser ID, name, URL, currency, timezone, configured status, and returned reviews. Currency and timezone are creation-time choices and cannot be edited through the branding update.
+Check your advertiser ID, names, URL, currency, timezone, configured status, and returned reviews. Currency and timezone are creation-time choices and cannot be edited through the branding update.
+
+The account has three names with different purposes:
+
+| Field          | Purpose                             |
+| -------------- | ----------------------------------- |
+| `legal_name`   | Legal business name                 |
+| `account_name` | Internal name shown in Ads Manager  |
+| `brand_name`   | Public advertiser name shown in ads |
+
+The response also includes `name`, which matches `legal_name`.
 
 ### Upload an advertiser icon
 
@@ -28,18 +38,29 @@ Use JPEG, PNG, or WebP with dimensions of at least 256 × 256 pixels. Save the r
 
 ### Apply branding
 
+Changing the legal or public brand name pauses ad delivery until the account
+passes review.
+
 ```bash
 curl -X POST "https://api.ads.openai.com/v1/ad_account/brand" \
   -H "Authorization: Bearer ${OPENAI_ADS_API_KEY}" \
   -H "Content-Type: application/json" \
   -d '{
-    "name": "Acme",
+    "brand_name": "Acme",
     "url": "https://example.com",
     "favicon_file_id": "file_123"
   }'
 ```
 
-Replace the sample URL with your actual website. The current update schema makes these fields optional, so send only the branding fields you intend to change.
+Replace the sample URL with your actual website and `file_123` with the uploaded
+icon's file ID.
+
+Use `legal_name`, `account_name`, or `brand_name` to update names independently.
+Omitted names remain unchanged. Legacy `name` sets all three names to the same
+value; don't combine it with the individual name fields.
+
+See the [API reference](https://developers.openai.com/ads/api-reference/ad-account#update-account-brand-metadata)
+for field requirements and errors.
 
 ### Check review after updating
 

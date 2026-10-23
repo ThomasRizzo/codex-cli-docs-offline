@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 Building agentic application often requires connecting to external services. Traditionally, this is done through function calling where every action makes a round-trip from the model to your backend, then to an external service, waits for a response, and finally returns the result to the model. This process introduces multiple network hops and significant latency, making it cumbersome to scale and manage.
 
 The hosted Model Context Protocol (MCP) tool in the Responses API makes this easier. Instead of manually wiring each function call to specific services, you can configure your model once to point to an MCP server (or several!). That server acts as a centralized tool host, exposing standard commands like “search product catalog” or “add item to cart.” This allows for simpler orchestration and centralized management of tools. With MCP, the model interacts directly with the MCP server, reducing latency and eliminating backend coordination.

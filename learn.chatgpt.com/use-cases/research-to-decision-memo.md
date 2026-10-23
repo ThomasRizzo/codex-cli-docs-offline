@@ -59,7 +59,7 @@ starterPrompt:
     If the audience needs a pre-read, organize the memo and supporting analysis
     into a review-ready packet while keeping the memo as the source of truth.
     Flag assumptions and do not make the decision or share the output.
-  suggestedModel: gpt-6-sol
+  suggestedModel: gpt-6.1-sol
   suggestedEffort: medium
 relatedLinks:
   - label: "OpenAI Academy: Everyday work"

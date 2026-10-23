@@ -205,7 +205,9 @@ Use `/activate`, `/pause`, and `/archive` on the ad to change its state. An acti
 
 ### Tracking parameters
 
-Add `landing_page_configuration.query_string_template` at the campaign, ad-group, or ad level. For example:
+Add `landing_page_configuration.query_string_template` at the campaign, ad-group, or ad level where available. Account tracking settings also provide defaults. For product feeds, the ad's tracking settings apply to product destinations; individual products have no separate configurable ad entity.
+
+For example:
 
 ```json
 {
@@ -215,7 +217,39 @@ Add `landing_page_configuration.query_string_template` at the campaign, ad-group
 }
 ```
 
-Parameters from different levels combine. For a duplicate parameter, precedence is: existing destination URL, ad, ad group, campaign, then ad account.
+Parameters from different levels combine. When the same query key appears at more than one level, the highest-priority value wins. This applies to all query keys, including custom keys, not only `utm_*` parameters.
+
+The product-feed ordering below applies to accounts using the new mode. Accounts using [Legacy ordering](#legacy-product-feed-tracking) must [migrate](#moving-from-legacy) by **November 5, 2026**.
+
+#### Parameter precedence
+
+Precedence from lowest to highest is:
+
+`Feed (if applicable) < Account < Campaign < Ad group < Ad`
+
+Configured parameters override matching keys in the feed URL. Feed parameters without a matching configured key remain in the final URL. An ad-level value overrides a matching ad-group, campaign, or account value.
+
+For example, feed `utm_medium=search` plus campaign `utm_medium=paid` produces `utm_medium=paid`.
+
+The same rule applies to custom keys:
+
+| Source                     | Query parameters                               |
+| -------------------------- | ---------------------------------------------- |
+| Feed URL                   | `utm_medium=search&source=feed&offer=spring`   |
+| Campaign tracking settings | `utm_medium=paid&source=campaign`              |
+| Final URL                  | `utm_medium=paid&source=campaign&offer=spring` |
+
+The campaign replaces `utm_medium` and `source`. The unmatched feed parameter `offer=spring` stays in the final URL.
+
+#### Legacy product-feed tracking
+
+After any feed-specific removal of `utm_*` parameters, Legacy ordering gives remaining feed URL values the highest priority. Precedence from lowest to highest is:
+
+`Account < Campaign < Ad group < Ad < Feed`
+
+#### Moving from Legacy
+
+Account admins can select **Switch now** in the **Feed tracking is changing** banner in Ads Manager to opt in. Other users see **Switch now** but can't select it and should ask an account admin to opt in.
 
 ## Ad Previews
 

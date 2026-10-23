@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 *This guide is for developers and ML practitioners who have some experience with OpenAIʼs APIs and wish to use their fine-tuned models for research or other appropriate uses. OpenAI’s services are not intended for the personalized treatment or diagnosis of any medical condition and are subject to our [applicable terms](https://openai.com/policies/).*
 
 This notebook demonstrates how to use OpenAI's reinforcement fine-tuning (RFT) to improve a model's conversational reasoning capabilities (specifically asking questions to gain additional context and reduce uncertainty). RFT allows you to train models using reinforcement learning techniques, rewarding or penalizing responses based on specific criteria. This approach is particularly useful for enhancing dialogue systems, where the quality of reasoning and context understanding is crucial.

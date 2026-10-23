@@ -69,11 +69,13 @@ Recent delivery and cost metrics can reflect different processing stages. See [D
 
 ### Conversion and purchase outcomes
 
+The metrics below describe general Insights. For the dedicated conversion endpoint's goal totals and event details, see [Conversion Reporting & Attribution](#conversion-reporting--attribution).
+
 | Metric                                              | Meaning                                                                                                         |
 | --------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| Conversions (`conversions`)                         | Click-through conversions for the conversion events configured on your campaigns.                               |
+| Conversions (`conversions`)                         | Goal conversions from clicks plus views within the selected attribution windows.                                |
 | Cost per action (`cpa`)                             | Spend divided by conversions.                                                                                   |
-| Post-click conversion rate (`post_click_cvr`)       | Conversions divided by clicks, returned as a ratio.                                                             |
+| Post-click conversion rate (`post_click_cvr`)       | Click-through goal conversions divided by clicks, returned as a ratio.                                          |
 | Attributed sales (`order_created_attributed_sales`) | The value of attributed purchase events (`order_created`), expressed in the ad account's currency.              |
 | Return on ad spend (`order_created_roas`)           | Attributed purchase value divided by spend. A value of `4` means four units of attributed sales per unit spent. |
 
@@ -168,13 +170,13 @@ For purchase value and ROAS, use [Conversion Reporting & Attribution](#conversio
 
 ### Conversion Reporting & Attribution
 
-Conversion reporting connects outcomes to eligible ad interactions. Before reporting, configure conversion events and attach them to your campaigns as described in Conversion Tracking. Reporting applies going forward from attachment.
+Conversion reporting connects outcomes to eligible ad interactions. To count an event as a campaign goal, configure it and attach it to your campaign as described in [Conversion Tracking](https://developers.openai.com/ads/conversion-tracking). Goal reporting applies going forward from attachment. You can also report attributed events that are not campaign goals.
 
-Use general Insights when you want conversion outcomes alongside spend and delivery. Use `POST /v1/conversions/insights` for a focused conversion report, including click-through and view-through counts.
+Use general Insights when you want conversion outcomes alongside spend and delivery. Use `POST /v1/conversions/insights` for a focused report with goal conversion totals, click-through and view-through counts, sales, and optional goal and non-goal event details.
 
 #### Retrieve daily conversions
 
-Use campaign Insights to retrieve daily conversions alongside clicks and spend:
+Use campaign Insights to retrieve daily conversions alongside clicks and spend. This example explicitly selects the default 30-day click and 1-day view windows, using ad-event time:
 
 ```bash
 curl -G "https://api.ads.openai.com/v1/campaigns/cmpn_123/insights" \
@@ -182,6 +184,9 @@ curl -G "https://api.ads.openai.com/v1/campaigns/cmpn_123/insights" \
   --data-urlencode 'aggregation_level=campaign' \
   --data-urlencode 'time_granularity=daily' \
   --data-urlencode 'time_ranges[]={"type":"date_range","since":"2026-09-01","until":"2026-09-07","timezone":"America/New_York"}' \
+  --data-urlencode 'attribution_window_days=30' \
+  --data-urlencode 'view_through_attribution_window_days=1' \
+  --data-urlencode 'attribution_time_basis=ad_event_time' \
   --data-urlencode 'fields[]=campaign_id' \
   --data-urlencode 'fields[]=readable_time' \
   --data-urlencode 'fields[]=clicks' \
@@ -215,17 +220,115 @@ To segment this report by country or device, add `"breakdown": "country"` or `"b
 
 #### Understand attribution
 
-An attribution window is the period after an ad interaction during which an outcome can be credited to that interaction. Click-through attribution follows the applicable configured click window. The Conversion Tracking setup examples use 30 days.
+An attribution window is the period after an ad interaction during which an outcome can be credited to that interaction. The four GET Insights endpoints and `POST /v1/conversions/insights` use the same reporting settings. Send them as query parameters for GET or body fields for POST:
 
-| Reported field              | Meaning                                                                |
-| --------------------------- | ---------------------------------------------------------------------- |
-| `conversions`               | Click-through conversions.                                             |
-| `click_through_conversions` | The same click-through count, explicitly labeled by attribution type.  |
-| `view_through_conversions`  | Separately reported conversions attributed to eligible ad impressions. |
+| Parameter                              | Accepted values | Default when omitted                                                      |
+| -------------------------------------- | --------------- | ------------------------------------------------------------------------- |
+| `attribution_window_days`              | `7`, `14`, `30` | `30` days after a click.                                                  |
+| `view_through_attribution_window_days` | `0`, `1`        | `1` day after an impression. Use `0` to exclude view-through attribution. |
 
-View-through attribution uses a one-day window after an eligible impression. If an outcome is eligible for both click-through and view-through attribution, the click takes precedence. View-through conversions are supplemental reporting. CPA, post-click conversion rate, and conversion optimization remain based on click-through conversions.
+Each window defaults independently; changing the click window does not disable views. These settings affect conversions, sales, CPA, ROAS, and post-click conversion rate. Impressions, clicks, and spend are unchanged.
 
-Daily conversion reporting uses the conversion date. An action that occurs after the ad interaction can therefore appear on a later reporting day.
+The dedicated conversion endpoint reports these goal conversion counts:
+
+| Reported field              | Meaning                                                                                  |
+| --------------------------- | ---------------------------------------------------------------------------------------- |
+| `conversions`               | Goal conversions from clicks plus views within the selected windows.                     |
+| `click_through_conversions` | Goal conversions attributed to eligible clicks.                                          |
+| `view_through_conversions`  | Goal conversions attributed to eligible impressions, or `0` when the view window is `0`. |
+
+For example, 3 click-through and 2 view-through goal conversions produce `conversions: 5`. If an outcome is eligible for both click-through and view-through attribution, the click takes precedence. These reporting options do not change campaign conversion goals or optimization settings.
+
+By default, `attribution_time_basis` is `"ad_event_time"`: the date range and daily rows use the date of the attributed ad interaction. Set it to `"conversion_time"` to use the date the conversion occurred. Conversion-time reporting has limited coverage of non-goal events; use ad-event time when reporting on those events.
+
+Use full days in the ad account's timezone, for up to 365 days. The `date_range.until` date is inclusive; `unix_range.end` is exclusive. Set `time_granularity` to `"daily"` for daily rows or `"none"` for period totals. When comparing with Ads Manager, use the same date range, time basis, and click/view windows.
+
+Existing integrations that relied on click-only totals or conversion-date defaults should review their reporting assumptions. GET Insights and the dedicated conversion endpoint now default to 30-day click, 1-day view, and ad-event time, including when settings are omitted. Neither provides a legacy reporting mode.
+
+#### Report goal and non-goal events
+
+Add `"include": ["attributed_events"]` to the same endpoint to see attributed events even when they are not configured as campaign conversion goals. For example, a campaign can have attributed purchases while optimizing for a different event.
+
+```bash
+curl -X POST "https://api.ads.openai.com/v1/conversions/insights" \
+  -H "Authorization: Bearer ${OPENAI_ADS_API_KEY}" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "aggregation_level": "campaign",
+    "time_granularity": "none",
+    "time_ranges": [
+      "{\"type\":\"unix_range\",\"start\":\"1788235200\",\"end\":\"1788840000\"}"
+    ],
+    "entity_ids": ["cmpn_123"],
+    "attribution_time_basis": "ad_event_time",
+    "attribution_window_days": 30,
+    "view_through_attribution_window_days": 1,
+    "include": ["attributed_events"]
+  }'
+```
+
+This illustrative response shows two attributed purchases that did not match the campaign's conversion goals:
+
+```json
+{
+  "object": "list",
+  "account_currency": "USD",
+  "data": [
+    {
+      "entity_id": "cmpn_123",
+      "conversions": 0,
+      "click_through_conversions": 0,
+      "view_through_conversions": 0,
+      "order_created_attributed_sales": "100",
+      "order_created_attributed_sales_currency": "USD",
+      "attributed_events": [
+        {
+          "entity_id": "cmpn_123",
+          "event_name": "order_created",
+          "event_kind": "standard",
+          "attributed_event_count": 2,
+          "click_through_conversions": 2,
+          "view_through_conversions": 0,
+          "attributed_event_value_amount": 100,
+          "attributed_event_value_count": 2,
+          "attributed_event_value_currency": "USD",
+          "conversion_event_setting_breakdowns": []
+        }
+      ]
+    }
+  ],
+  "count": 1
+}
+```
+
+The outer `conversions` field counts campaign goal conversions; each nested `attributed_event_count` includes goal and non-goal activity for that event. An empty `conversion_event_setting_breakdowns` array means no goal settings matched. Unavailable monetary values are `null`, not zero.
+
+Adding or removing `include` leaves the reporting clock, windows, and metric values for matching summary rows unchanged. Events are attached to the same entity, date, and country or device breakdown as the summary. The response's `count` is the number of summary rows, not the number of events.
+
+#### Select event names
+
+Omit `event_names` to include all attributed events. To request specific standard or custom events, add their exact names alongside the expansion:
+
+```json
+{
+  "include": ["attributed_events"],
+  "event_names": ["order_created", "newsletter_signup"]
+}
+```
+
+Add these fields to a complete reporting request, using exact event names recognized for your account. Recognized events are configured in conversion event settings, including archived settings, or appear in published received-event history. They do not need to be campaign goals or have activity in the requested period.
+
+New events without conversion settings become selectable after their received-event history is published. Publication delays and retention limits can affect which names are recognized.
+
+Invalid selectors return HTTP 400. See [Conversion insights](https://developers.openai.com/ads/api-reference/insights#conversion-insights) for selector limits and validation rules.
+
+Selecting names filters nested event details without recalculating goal counts or summary sales. Retained rows with no matching events have `attributed_events: []`; this does not confirm that historical event processing is complete.
+
+#### Handle empty rows and large reports
+
+`include_zero_rows` defaults to `true`. With `false` and the event expansion, a row is retained when its goal count, summary sales amount, or a selected event count is nonzero. For example, a row with no goal conversions and USD 100 in sales remains present with `attributed_events: []` when you select an inactive event.
+
+The dedicated conversion endpoint returns HTTP 413 if a report exceeds 2,000 summary rows or 2,000 event rows, or if an event's goal-setting breakdown exceeds 2,000 entries. It does not return a partial report or a pagination cursor. Split the request into smaller entity lists or non-overlapping date ranges and retry. For event expansions, selecting fewer `event_names` can also reduce the number of event rows.
 
 #### Report purchase value and ROAS
 

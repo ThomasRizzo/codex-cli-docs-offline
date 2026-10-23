@@ -2,6 +2,7 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+- [Release ChatGPT usage budgets hourly, daily, or weekly](/cookbook/examples/chatgpt/daily_usage_limits/readme.md): Release a monthly ChatGPT budget in credits or US dollars in hourly, daily, or weekly increments. Explore a plan in your browser, try a Codex-assisted pilot, and deploy on managed infrastructure.
 - [Build a ChatGPT plugin with the OpenAI Agents SDK and Amazon Bedrock AgentCore](/cookbook/examples/partners/aws/chatgpt_agents_sdk_aws_agentcore_cookbook/notebooks/chatgpt_agents_sdk_aws_agentcore_cookbook.md): Build a private ChatGPT flight-assistant plugin with the OpenAI Agents SDK on Amazon Bedrock, connect it through Secure MCP Tunnel, and validate tracing and Promptfoo evaluations.
 - [Manage SharePoint site access with the ChatGPT Admin API](/cookbook/examples/chatgpt/sharepoint_site_access/sharepoint_site_access.md): Resolve SharePoint URLs into site-collection identifiers and safely manage a ChatGPT workspace allowlist with the Admin API.
 - [Trigger a Workspace Agent from the API](/cookbook/examples/chatgpt/workspace_agents/workspace-agents-api-trigger.md): Configure a Workspace Agent, add an API channel, and send a live trigger that writes to the agent's configured destination.

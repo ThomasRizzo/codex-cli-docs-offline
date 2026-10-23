@@ -26,8 +26,8 @@ cloud, and the API Platform.
 
 ## Set a clear starting experience for employees
 
-Review [Models settings](https://help.openai.com/en/articles/8411955) for your
-workspace before inviting a pilot group. Workspace owners and admins can
+Configure [Models settings](https://help.openai.com/en/articles/8411955) for your
+workspace before granting access. Workspace owners and admins can
 configure separate starting defaults for Chat and for Work and Codex. Where
 supported, choose a starting model, reasoning level, speed, and new-chat
 behavior for Chat, Work, and local Codex surfaces.
@@ -44,6 +44,22 @@ enforced `features.fast_mode` setting in
 This setting can pin Fast mode on or off for managed local Codex clients; it
 isn't a starting default and can't override workspace or product availability.
 
+## Save Preview and Launch access
+
+Where separate Preview and Launch access settings are visible and editable,
+select **Save changes** to save your choices.
+
+If **Sync preview and launch access** is available and editable, turn it on to
+copy your Preview choices to Launch when you save. Sync runs when you save;
+it doesn't continuously update Launch access. Turning optional Sync off and
+saving keeps the latest saved Launch choices unless you also edit them. You
+can edit and save Launch choices separately with Sync off.
+
+After a successful save, reopen the access settings to verify the saved choices.
+If the page reports that it couldn't save all changes, some changes may
+already be saved. Follow the on-screen guidance to review and save the
+remaining changes.
+
 ## GPT-6 Sol and Luna in Enterprise
 
 GPT-6 Sol and GPT-6 Luna are off by default in Enterprise workspaces at
@@ -52,15 +68,24 @@ it. Review your [workspace model settings](https://help.openai.com/en/articles/8
 and confirm access on each client. Choosing a model in local configuration
 doesn't override workspace controls.
 
+## GPT-6.1 Sol in Enterprise
+
+GPT-6.1 Sol has its own planned rollout. The plan keeps it off by default in
+Enterprise and Edu until an administrator enables it.
+Check your [workspace model settings](https://help.openai.com/en/articles/8411955)
+and the [Codex model rollout](../models.html#gpt-61-sol) before changing a
+workspace default. Choosing a model in local configuration doesn't grant access.
+
 ## GPT-6 Astra in Enterprise
 
-During the initial rollout, your organization must have Daybreak access before
-an administrator can enable Astra. Astra is off by default for ChatGPT
-Enterprise for the first two weeks after launch. Administrators in eligible
-workspaces can enable Astra for users or groups
-across Chat, Work, and Codex. Existing product eligibility still applies. Review your
+Astra is off by default at launch in eligible ChatGPT Enterprise and Edu
+workspaces. A workspace owner must enable access through workspace model
+settings. Access does not automatically turn on after two weeks.
+Existing Early Model Access settings do not grant access to Astra.
+Workspace owners can enable Astra for the workspace or specific roles across
+Chat, Work, and Codex. Existing product eligibility still applies. Review your
 [workspace model settings](https://help.openai.com/en/articles/8411955) and
-confirm availability on each client used by your pilot group.
+confirm availability on each client your users rely on.
 
 Enabling access and choosing a starting model are separate decisions. Check the
 applicable seat, role, and billing arrangement before setting Astra as a default.
@@ -76,14 +101,13 @@ model or changing local configuration doesn't grant access by itself.
 
 ## Prepare for the GPT-5.5 retirement
 
-On October 14, 2026, GPT-5.5 will retire from ChatGPT, ChatGPT Work, and Codex
-on all plans, including consumer, Business, Enterprise, and Edu plans. This
-retirement does not apply to the OpenAI API.
+GPT-5.5 retires from Codex with ChatGPT sign-in on October 14, 2026, at noon
+PDT (19:00 UTC). The OpenAI API and Codex sessions authenticated with an API
+key aren't affected.
 
-Before October 14, review workspace defaults for ChatGPT, ChatGPT Work, and
-Codex and choose an available replacement for each surface. For Work and Codex
-with ChatGPT sign-in, choose `gpt-6-sol` (GPT-6 Sol) once an administrator has
-enabled it for the affected users. Replace `gpt-5.5` in workspace defaults,
+Review Codex workspace defaults and choose an available replacement. Choose
+`gpt-6.1-sol` (GPT-6.1 Sol) once an administrator has enabled it for the
+affected users. Replace `gpt-5.5` in workspace defaults,
 saved model settings, managed configurations, custom agents, and scheduled
 tasks. Check scripts and commands that explicitly select `gpt-5.5` too.
 

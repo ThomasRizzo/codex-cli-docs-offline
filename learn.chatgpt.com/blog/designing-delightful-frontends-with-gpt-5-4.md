@@ -142,6 +142,10 @@ To help people get the most out of GPT-5.4 on general front-end tasks, we’ve a
 
 
 
+### Frontend Skill
+
+
+
 ```
 ---
 name: frontend-skill
@@ -329,6 +333,8 @@ Motion rules:
 - Would the design still feel premium if all decorative shadows were removed?
 
 ```
+
+
 
 
 

@@ -15,6 +15,9 @@ Examples throughout this guide will use a placeholder for the Advertiser API key
 
 API partners can follow [API Partner Setup](https://developers.openai.com/ads/api-partner-setup). For another end-to-end example, see the [Quickstart](https://developers.openai.com/ads/api-quickstart).
 
+Use [Audit Logs](https://developers.openai.com/ads/api-reference/audit-logs) to review recorded changes to
+resources in your ad account.
+
 ### Request conventions
 
 Use the following base URL for API requests. Provide your API key in the Authorization header when making requests.
@@ -205,6 +208,10 @@ ad account. See [Bulk API limits](https://developers.openai.com/ads/bulk-api#lim
 
 ## Changelog
 
+### September 30th, 2026
+
+- Added selectable click/view attribution windows and time basis to all four GET Insights endpoints. Omitted settings now default independently to 30-day click, 1-day view, and ad-event time. Conversion totals include click-through plus view-through goal conversions and can differ from previous reports; impressions, clicks, and spend are unchanged. See [Understand attribution](https://developers.openai.com/ads/reporting#understand-attribution).
+
 ### September 10th, 2026
 
 - Added granular web platform targeting with `desktop_web`, `ios_web`, and `android_web` in `targeting.platforms.included`. Target desktop, iOS, and Android browsers separately, or use `web` to include all web platforms. See [Platform Targeting](https://developers.openai.com/ads/platform-targeting). Platform breakdowns in [Insights](https://developers.openai.com/ads/api-reference/insights#platform-breakdown) also separate web platforms while preserving historical Web totals.
@@ -216,6 +223,11 @@ ad account. See [Bulk API limits](https://developers.openai.com/ads/bulk-api#lim
 ### August 25th, 2026
 
 - Added custom audience Add, Remove, Replace, and Merge operations, automatic identifier matching, and support for small and empty exclusion-only audiences. See [Custom Audiences](https://developers.openai.com/ads/custom-audiences).
+
+### August 19th, 2026
+
+- Added phone, first name, last name, region, and postal code matching fields to the [JavaScript Pixel](https://developers.openai.com/ads/measurement-pixel).
+- Added plural customer-information fields and Android GAID support to the [Conversions API](https://developers.openai.com/ads/conversions-api).
 
 ### July 16th, 2026
 

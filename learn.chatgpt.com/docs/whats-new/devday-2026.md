@@ -1,0 +1,268 @@
+# DevDay 2026
+
+> For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+
+[Back to What's new](../whats-new.html#devday-2026)
+
+September 29, 2026
+
+
+
+<section className="devday-area" data-color="green">
+
+## ChatGPT
+
+
+
+
+
+
+### Meet your dot
+
+Dots are always-on agents that take on ongoing responsibility. Give your dot a goal and define what it can do on its own. It works across connected apps on its own computer, keeps making progress between conversations, and brings back results for your review. It reaches out when a decision needs your judgment. Dots are rolling out gradually to eligible accounts.
+
+[Meet your dot](../dots.html)
+[Availability](../dots.html#access)
+[Admin guide](../enterprise/dots-admin-guide.html)
+
+
+
+
+
+
+### Work across devices
+
+Start a new synced ChatGPT Work task on desktop and continue on web or mobile. An online, connected computer can run steps that need its local files and tools. Existing tasks keep their original mode.
+
+[Get started with Work](../get-started-with-work.html#continue-work-across-devices)
+[Set up sync](../enterprise/cloud-local-access.html)
+
+
+
+
+
+
+### ChatGPT Space
+
+Bring files and Pages together. Draft and revise with ChatGPT, edit your work directly, and invite collaborators to view, comment, or edit.
+
+[Get started](../space/getting-started.html)
+[Pages](../space/pages.html)
+[Work with the agent](../space/agents.html)
+[Collaboration](../space/collaboration.html)
+[Admin guide](../enterprise/chatgpt-space.html)
+
+
+
+
+
+
+</section>
+
+<section className="devday-area" data-color="blue">
+
+## Codex
+
+
+
+
+
+
+### Astra Ultrafast in Codex
+
+Use GPT-6 Astra Ultrafast in Codex and ChatGPT Work on the Pro $500/month plan and eligible Enterprise and Edu plans. Enterprise owners control access; workspaces requiring inference residency outside the US aren't eligible.
+
+[Ultrafast mode](../agent-configuration/speed.html#ultrafast-mode)
+[Plans and usage](../pricing.html)
+
+
+
+
+
+
+### Reusable cloud environments
+
+Describe your development setup, let Codex prepare and test it, then publish the environment. New tasks start in isolated workspaces using the prepared filesystem. Continue cloud tasks from web, mobile, or desktop while your computer sleeps.
+
+[Cloud environments](../environments/cloud-environments.html)
+
+
+
+
+
+
+### Codex Security Cloud
+
+Scan connected GitHub repositories or monitor new commits with the Security Cloud plugin, available in research preview. Review findings, validation evidence, and patches before creating a draft pull request.
+
+[Set up Security Cloud](../security/setup.html)
+[Threat model](../security/threat-model.html)
+
+
+
+
+
+
+</section>
+
+<section className="devday-area" data-color="purple">
+
+## Sites & plugins
+
+
+
+
+
+
+### Sign in with ChatGPT
+
+Let users sign in with ChatGPT and, for eligible Plus and Pro users, use their ChatGPT plan for AI requests in your app. Commercial sign-in is in a limited trial with selected partners. ChatGPT plan usage is available to open-source partners and selected private clients.
+
+[Quickstart](https://developers.openai.com/siwc/quickstart)
+[Open-source apps](https://developers.openai.com/siwc/token-sharing-open-source)
+
+
+
+
+
+
+### Sites with connected data
+
+Build a Site that uses each visitor's own connected apps. Plugins in Sites are available for workspace-private Sites where enabled; visitors choose their accounts and consent to access.
+
+[Build with plugins](../sites.html#load-visitor-data-via-plugins)
+[Sharing and access](../sites.html#control-access-and-secrets)
+
+
+
+
+
+
+### Plugin Extensions
+
+Add sidebar apps, conversation panels, file viewers and editors, and forms to ChatGPT. Composer mentions are available only in the desktop app. Free and Go web extensions are coming soon. Package the interface alongside your plugin's tools and skills.
+
+[Build extensions](https://developers.openai.com/plugins/build/extensions)
+[Package a plugin](https://developers.openai.com/plugins/build/plugins)
+
+
+
+
+
+
+### MCP Events
+
+Let users ask ChatGPT to monitor updates from your MCP server and act when matching events arrive. ChatGPT requires MCP 2.0 and supports webhook delivery from the draft MCP Events specification.
+
+[Build event subscriptions](https://developers.openai.com/plugins/build/mcp-events)
+
+
+
+
+
+
+### Website annotations
+
+Choose what people can select, attach useful context, and add controls to preview changes before sending feedback to ChatGPT. The Browser Annotation API works in supported desktop app browsers.
+
+[Annotations Extensibility](../annotations-extensibility.html)
+
+
+
+
+
+
+</section>
+
+<section className="devday-area" data-color="orange">
+
+## API
+
+
+
+
+
+
+### GPT-6.1 Sol
+
+GPT-6.1 Sol offers near-Astra performance at a lower cost for complex coding and professional work. Use it in the API and Codex, where available. It supports Multi-agent beta in Responses and EU data residency with Standard, Flex, and Batch processing.
+
+[API model](https://developers.openai.com/api/docs/models/gpt-6.1-sol)
+[Codex availability](../models.html#gpt-61-sol)
+[Multi-agent beta](https://developers.openai.com/api/docs/guides/responses-multi-agent)
+
+
+
+
+
+
+### Astra Ultrafast in the API
+
+Reduce the time between generated output tokens with GPT-6 Astra Ultrafast in the Responses API. Availability is subject to rate limits, with global processing and US data residency.
+
+[Ultrafast guide](https://developers.openai.com/api/docs/guides/ultrafast-mode)
+[Pricing](https://developers.openai.com/api/docs/pricing?latest-pricing=ultrafast)
+
+
+
+
+
+
+</section>
+
+<section className="devday-area" data-color="green">
+
+## Enterprise
+
+
+
+
+
+
+### ChatGPT in Slack and Teams
+
+Bring ChatGPT into approved conversations with your deployment's connected tools. Configure who can use each deployment and which channels it can access.
+
+[Slack and Teams guide](../enterprise/chatgpt-slack-and-teams.html)
+
+
+
+
+
+
+### Team Tasks
+
+Run scheduled or event-triggered work through a team's service account and approved connections.
+
+[Set up Team Tasks](../enterprise/teams.html)
+
+
+
+
+
+
+### Workspace connections
+
+Connect company-managed accounts for supported teams and workflows. Each connection uses the connected account's permissions.
+
+[Manage shared connections](../enterprise/shared-connections.html)
+
+
+
+
+
+
+### Agent Security
+
+Control which tools agents can use and how they access files and the network. Set workspace policies for local and Codex Cloud execution; Work Cloud has separate controls.
+
+[Agent Security](../enterprise/agent-security.html)
+[Managed configuration](../enterprise/managed-configuration.html)
+[Work sync](../enterprise/cloud-local-access.html)
+
+
+
+
+
+
+</section>

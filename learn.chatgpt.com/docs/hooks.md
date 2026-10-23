@@ -11,7 +11,7 @@ tools during the agentic loop, enabling features such as:
 - Run a custom validation check when a chat turn stops, enforcing standards
 - Customize prompting when in a certain directory
 
-Runtime behavior to keep in mind:
+How hooks run:
 
 - Matching hooks from multiple files all run.
 - Multiple matching command hooks for the same event are launched concurrently,
@@ -318,13 +318,20 @@ Hooks are enabled by default. To turn them off in `config.toml`, set:
 hooks = false
 ```
 
-Use `hooks` as the canonical feature key. `codex_hooks` still works as a
+Use `hooks` as the feature key. `codex_hooks` still works as a
 deprecated alias. Admins can force hooks off the same way in
 `requirements.toml` with `[features].hooks = false`.
 
 ## Managed hooks from `requirements.toml`
 
-Enterprise-managed requirements can also define hooks inline under `[hooks]`.
+When managed policy and remote hooks are enabled, Work Cloud with local access and dots use admin-managed remote MCP hooks on the cloud orchestrator. Configure `mcp_tool` handlers in Global `requirements.toml`. Work Cloud without local access and personal accounts do not use these enterprise hooks. Command/shell, prompt, and agent handlers; hooks from local configuration, plugins, or local directories; environment-scoped hooks; and `SessionEnd` MCP hooks are not supported with cloud orchestration, even when tools execute locally. When both orchestration and execution are local, existing supported hooks continue to work in local-only Work and Codex threads. Admins can still configure supported managed hooks in Agent Security for those workflows.
+
+Before relying on these hooks, test callback connectivity, required events, and failure behavior. An explicit supported denial can block an action, but a `PreToolUse` callback error, timeout, or malformed response can fail the hook without blocking the tool. MCP hooks do not provide a complete Compliance API audit trail.
+
+The Codex instructions in this section still apply to supported Codex workflows. Before enabling Local computer access with Work Cloud, review any compatibility warning in the sync setting and **Agent Security**. See [Managed configuration](enterprise/managed-configuration.html).
+
+In Codex, enterprise-managed requirements can define hooks inline under `[hooks]`.
+The command-hook example below applies only to Codex.
 This is useful when admins want to enforce the hook configuration while
 delivering the actual scripts through MDM or another device-management system.
 To enforce managed hooks even for users who disabled hooks locally, pin
@@ -408,20 +415,20 @@ event.
 
 Only some current Codex events honor `matcher`:
 
-| Event               | What `matcher` filters | Notes                                                        |
-| ------------------- | ---------------------- | ------------------------------------------------------------ |
-| `PermissionRequest` | tool name              | Support includes `Bash`, `apply_patch`\*, and MCP tool names |
-| `PostToolUse`       | tool name              | See [Tool coverage](#tool-coverage)                          |
-| `PostCompact`       | compaction trigger     | Values are `manual` or `auto`                                |
-| `PreCompact`        | compaction trigger     | Values are `manual` or `auto`                                |
-| `PreToolUse`        | tool name              | See [Tool coverage](#tool-coverage)                          |
-| `SessionEnd`        | end reason             | Currently only `other`                                       |
-| `SessionStart`      | start source           | Values are `startup`, `resume`, `clear`, and `compact`       |
-| `SubagentStart`     | subagent type          | Values depend on the subagent that starts                    |
-| `SubagentStop`      | subagent type          | Values depend on the subagent that stops                     |
-| `UserPromptSubmit`  | not supported          | Any configured `matcher` is ignored for this event           |
-| `Stop`              | not supported          | Any configured `matcher` is ignored for this event           |
-| `Interrupt`         | not supported          | Any configured `matcher` is ignored for this event           |
+| Event               | What `matcher` filters | Notes                                                          |
+| ------------------- | ---------------------- | -------------------------------------------------------------- |
+| `PermissionRequest` | tool name              | Support includes `Bash`, `apply_patch`\*, and MCP tool names   |
+| `PostToolUse`       | tool name              | See [Tool coverage](#tool-coverage)                            |
+| `PostCompact`       | compaction trigger     | Values are `manual` or `auto`                                  |
+| `PreCompact`        | compaction trigger     | Values are `manual` or `auto`                                  |
+| `PreToolUse`        | tool name              | See [Tool coverage](#tool-coverage)                            |
+| `SessionEnd`        | end reason             | Currently only `other`                                         |
+| `SessionStart`      | start source           | Values are `startup`, `resume`, `clear`, `compact`, and `fork` |
+| `SubagentStart`     | subagent type          | Values depend on the subagent that starts                      |
+| `SubagentStop`      | subagent type          | Values depend on the subagent that stops                       |
+| `UserPromptSubmit`  | not supported          | Any configured `matcher` is ignored for this event             |
+| `Stop`              | not supported          | Any configured `matcher` is ignored for this event             |
+| `Interrupt`         | not supported          | Any configured `matcher` is ignored for this event             |
 
 \*For `apply_patch`, `matcher` values can also use `Edit` or `Write`.
 
@@ -432,7 +439,7 @@ Examples:
 - `Edit|Write`
 - `mcp__filesystem__read_file`
 - `mcp__filesystem__.*`
-- `startup|resume|clear|compact`
+- `startup|resume|clear|compact|fork`
 - `manual|auto`
 
 ### Tool coverage
@@ -644,14 +651,17 @@ Background hooks can't block, approve, rewrite, or otherwise control the
 
 Fields in addition to [Common input fields](#common-input-fields):
 
-| Field    | Type     | Meaning                                                             |
-| -------- | -------- | ------------------------------------------------------------------- |
-| `source` | `string` | How the session started: `startup`, `resume`, `clear`, or `compact` |
+| Field    | Type     | Meaning                                                                     |
+| -------- | -------- | --------------------------------------------------------------------------- |
+| `source` | `string` | How the session started: `startup`, `resume`, `clear`, `compact`, or `fork` |
+
+A forked thread uses `source: "fork"`. Resuming a thread with supplied history
+still uses `source: "resume"`.
 
 Plain text on `stdout` is added as extra developer context.
 
-JSON on `stdout` supports [Common output fields](#common-output-fields) and this
-hook-specific shape:
+JSON on `stdout` supports [Common output fields](#common-output-fields) and
+this hook-specific shape:
 
 ```json
 {

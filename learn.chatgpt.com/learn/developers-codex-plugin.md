@@ -17,7 +17,7 @@ It includes:
   Cursor.
 - **API key setup:** create, save, and connect a project API key from Codex, or
   get guided local `OPENAI_API_KEY` setup in Claude Code and Cursor.
-- **Agents SDK:** work with applications that need the Agents SDK, from an idea, a repo,
+- **Agents SDK:** build and deploy OpenAI Agents SDK apps from an idea, a repo,
   or a prior Codex task.
 - **Troubleshooting:** identify common OpenAI API failures and route
   you to the right next step.

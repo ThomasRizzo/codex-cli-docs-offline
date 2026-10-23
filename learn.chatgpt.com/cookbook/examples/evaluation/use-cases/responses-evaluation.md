@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 In the following eval, we are going to compare how a new model (gpt-4.1-mini) compares to our old model (gpt-4o-mini) by evaluating it on some stored responses. The benefit of this is for most developers, they won't have to spend any time putting together a whole eval -- all of their data will already be stored in their [logs page](https://platform.openai.com/logs).
 
 ```python

@@ -2,13 +2,13 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
-If you work through a security backlog, finding another possible issue is only the start. You still need to work out whether it affects your software, gather evidence, and land a safe fix. That gets harder as the code, alerts, and vulnerability reports keep coming in.
+When you find a possible issue in a security backlog, you still need to determine whether it affects your software, gather evidence, and land a safe fix. That gets harder as code, alerts, and vulnerability reports keep coming in.
 
 We've recently added more ways to work through that process with ChatGPT, Codex Security, and the open-source Codex Security CLI. You can review a pull request before it merges, investigate a repository or an existing vulnerability backlog, and add recurring checks to CI. These capabilities are part of [OpenAI Daybreak](https://openai.com/daybreak/), which brings together models, security tools, responsible access, and the security ecosystem for approved defenders.
 
-In [previously reported results](https://openai.com/index/daybreak-securing-the-world/), Codex Security cloud had analyzed more than 30 million commits across more than 30,000 codebases. Here, I want to walk through where the available workflows fit and how I'd choose a starting point. The aim is the same throughout: turn findings into evidence and reviewed fixes, while keeping access scoped and people responsible for consequential decisions.
+In [previously reported results](https://openai.com/index/daybreak-securing-the-world/), Codex Security Cloud had analyzed more than 30 million commits across more than 30,000 codebases. Here's how I'd choose a starting point, gather evidence, and review fixes while keeping access scoped and people responsible for consequential decisions.
 
-These workflows are suggested starting points, not a one-size-fits-all deployment pattern. Developers should tailor them to their organization, use case, risk profile, and data-handling practices, and determine the appropriate configuration, safeguards, and deployment for their environment.
+Adapt these workflows to your organization, use case, risk profile, and data-handling practices. Choose the configuration, safeguards, and deployment appropriate for your environment.
 
 ## Start with an investigation in ChatGPT
 
@@ -20,11 +20,11 @@ If you already have a log excerpt, an advisory, or an incident timeline, [ChatGP
 - Prepare a threat model for a new feature and compare remediation options.
 - Turn a technical finding into guidance for engineering or leadership.
 
-You'll still need to check the underlying evidence, follow your organization's data-handling policies, and decide what actions to take. When the next question requires examining a repository, a pull request, a security backlog, or a proposed patch, that's a good point to move to a [Codex Security](/codex/security) workflow.
+Check the underlying evidence, follow your organization's data-handling policies, and decide what actions to take. Use [Codex Security](/codex/security) when you need to examine a repository, pull request, security backlog, or proposed patch.
 
 ## Review security issues before code is merged
 
-[Codex Security Review](/codex/security/security-review) brings focused security analysis into GitHub pull requests, so it's a natural starting point when you're already reviewing a change there. Once your workspace has research preview access and a connected repository, you can request a review by commenting:
+[Codex Security Review](/codex/security/security-review) brings focused security analysis into GitHub pull requests, so it's a natural starting point when you're already reviewing a change there. Once your workspace has access and a connected repository, you can request a review by commenting:
 
 ```text
 @codex security review
@@ -32,7 +32,7 @@ You'll still need to check the underlying evidence, follow your organization's d
 
 If that fits your team's workflow, [configure automatic reviews](/codex/security/security-review#configure-security-review) when a pull request opens, after every push, or whenever an existing Codex code review runs. A repository threat model or other security guidance is useful context here: it helps the review account for your application's assets, trust boundaries, and assumptions.
 
-Codex considers the pull-request diff alongside relevant repository context. The findings on the pull request are a starting point; the associated Codex task's **Security Report** has severity, supporting evidence, attack paths, validation details, and remediation guidance. One detail to pay attention to is the reporting threshold: findings posted to GitHub inherit the pull request's visibility.
+Codex considers the pull-request diff and relevant repository context. The associated Codex task's **Security Report** has severity, supporting evidence, attack paths, validation details, and remediation guidance. Check the reporting threshold: findings posted to GitHub inherit the pull request's visibility.
 
 <figure class="not-prose my-8">
   <img
@@ -49,7 +49,7 @@ Codex considers the pull-request diff alongside relevant repository context. The
   </figcaption>
 </figure>
 
-Codex Security Review is available in research preview to eligible ChatGPT Enterprise, Business, Edu, and Pro workspaces with a connected GitHub repository.
+Codex Security Review is available to ChatGPT Enterprise, Business, Edu, and Pro accounts.
 
 ## Investigate a repository with Codex Security
 
@@ -72,15 +72,15 @@ The [Security workbench](/codex/security/plugin/workbench) brings scans, finding
   </figcaption>
 </figure>
 
-[Recent workbench updates](/codex/security/plugin/changelog) help with the less exciting part of a long investigation: keeping track of what's happening. You can see live scan phases, reviewed files, active workers, elapsed time, and measured token usage. Interrupted deep scans can resume without repeating completed work, and reusable summaries reduce unnecessary overhead.
+[Recent workbench updates](/codex/security/plugin/changelog) show live scan phases, reviewed files, active workers, elapsed time, and measured token usage. Interrupted deep scans can resume without repeating completed work, and reusable summaries reduce overhead.
 
 ## Keep important repositories under continuous review
 
-If a repository needs ongoing attention, you can [set up Codex Security cloud](/codex/security/setup) for continuous analysis of a connected GitHub repository. You choose the repository, branch, environment, and history window. Codex then builds a repository-specific threat model, reviews relevant commits, and presents ranked findings for investigation.
+If a repository needs ongoing attention, install **Codex Security Cloud** from the plugin marketplace and [connect your GitHub repository](/codex/security/setup). Choose **Repository** for a scan that runs once, or **Commit changes** for ongoing monitoring. Select a Codex cloud environment, then review scan progress and findings in the plugin.
 
-Where practical, likely issues are validated in an isolated environment. The supporting code excerpts, call paths, reproduction output, and remediation guidance give you something concrete to review. It's worth keeping the [threat model](/codex/security/threat-model) up to date as your architecture and priorities change. Inspect a suggested patch before opening a pull request, too.
+Where practical, likely issues are validated in an isolated environment. Review the code excerpts, call paths, reproduction output, and remediation guidance. Keep the [threat model](/codex/security/threat-model) up to date as your architecture and priorities change, and inspect suggested patches before opening a pull request.
 
-Codex Security cloud is available in research preview. An initial scan may take several hours for a larger repository; subsequent analysis focuses on newly relevant commits and changes.
+Codex Security Cloud is available in research preview. A scan may take several hours for a larger repository. With commit monitoring enabled, Codex continues to review new commits; you can change the history window and threat model in the repository's **Monitoring settings**.
 
 ## Turn existing alerts into an actionable queue
 
@@ -94,7 +94,7 @@ That evidence helps you focus on issues that affect the software you actually ru
 
 Once a finding looks credible, the next question is whether you can fix it safely. For an accepted finding, [ask Codex Security to prepare a fix](/codex/security/plugin/fix-findings). Where safe and practical, it can reproduce the issue, generate a focused patch, and provide evidence that the change addresses the original problem.
 
-When feasible, the workflow adds a regression test that fails before the fix and passes afterward. That's useful evidence to have alongside the patch. If a reliable test can't be created safely, the workflow records the remaining proof gap instead of overstating what was verified.
+When feasible, the workflow adds a regression test that fails before the fix and passes afterward. If a reliable test can't be created safely, it records what remains unverified.
 
 <figure class="not-prose my-8">
   <img
@@ -157,13 +157,13 @@ npx @openai/codex-security bulk-scan repositories.csv \
 
 Campaigns preserve progress and results separately for each repository. You can resume interrupted work, tune concurrency and retries, provide shared architecture documents or security policies, and retain findings, coverage, and portable SARIF results. Supported models, reasoning effort, scan depth, and estimated cost limits let you choose how much analysis each target warrants. Treat estimated cost limits as estimates, not hard spending caps.
 
-For a large monorepo, I'd scope the first scan to an owned service, package, or another meaningful security boundary. Start with a standard scan, then apply deep scans selectively to sensitive services or complex components. For connected GitHub repositories, Codex Security cloud can review a selected commit-history window and continue reviewing new commits.
+For a large monorepo, I'd scope the first scan to an owned service, package, or another meaningful security boundary. Start with a standard scan, then apply deep scans selectively to sensitive services or complex components. For connected GitHub repositories, Codex Security Cloud can review a selected commit-history window and continue reviewing new commits.
 
-The initial campaign gives you a baseline to work from. Updating threat models, tracking findings in your existing systems, and verifying reviewed fixes is how you turn that first pass into a repeatable security program.
+Use the initial campaign as a baseline. Update threat models, track findings in your existing systems, and verify reviewed fixes to make the process repeatable.
 
 ## Work with the security ecosystem you already use
 
-There's no need to start by replacing the systems your team already uses. Codex Security is designed to work alongside existing scanners, vulnerability-management systems, issue trackers, service providers, and open-source projects. You can bring in existing findings, export portable results, and route reviewed issues back into those workflows.
+Codex Security works alongside existing scanners, vulnerability-management systems, issue trackers, service providers, and open-source projects. You can bring in existing findings, export portable results, and route reviewed issues back into those workflows.
 
 Through OpenAI Daybreak, we also work with security organizations, researchers, open-source maintainers, and [partners](https://openai.com/daybreak/partners/) to make model-assisted defense available in more tools and services. Access to advanced cyber capabilities is limited to approved users conducting authorized work, with safeguards matched to the activity.
 
@@ -180,8 +180,8 @@ If you're deciding what to try first, I'd start wherever your team already has w
 - Open [ChatGPT](https://chatgpt.com/) for an initial investigation.
 - [Install the Codex Security plugin](/codex/security/plugin) to assess a repository or triage an existing backlog.
 - [Configure Codex Security Review](/codex/security/security-review) to check pull requests before they merge.
-- [Connect a repository to Codex Security cloud](/codex/security/setup) for ongoing analysis.
+- [Connect a repository to Codex Security Cloud](/codex/security/setup) for ongoing analysis.
 - [Explore the CLI](/codex/security/cli) and [TypeScript SDK](/codex/security/sdk) to add checks to existing tools.
 - [Review Trusted Access for Cyber](/codex/cyber-safety#trusted-access-for-cyber) and [OpenAI Daybreak](https://openai.com/daybreak/) for advanced, authorized work.
 
-You don't have to adopt every workflow at once. Whichever one you try, the useful loop is the same: establish whether the risk is real, inspect the evidence, review the proposed change, and verify the fix.
+Whichever workflow you try, establish whether the risk is real, inspect the evidence, review the proposed change, and verify the fix.

@@ -36,7 +36,7 @@ relatedLinks:
 
 Sites is a managed hosting service in ChatGPT. Ask ChatGPT to create an app, and it can build the project, run it for testing, deploy it, and return a URL you can share.
 
-Sites is in public beta for eligible paid plans. It isn't available on Free or Go, or in the EEA, Switzerland, or the United Kingdom at launch, and rollout or workspace settings can affect access.
+Sites availability depends on your plan, rollout, and workspace settings. Check [Sites availability and usage limits](https://developers.openai.com/codex/sites#availability-and-usage-limits) before you start.
 
 The scope ranges from static sites to full-stack JavaScript or TypeScript web apps. That makes Sites a good fit for focused internal tools: onboarding dashboards, training hubs, searchable resource libraries, lightweight workflow apps, and reporting views.
 
@@ -77,7 +77,7 @@ Many internal apps need persistence. Sites supports two storage primitives:
 
 Keep structured metadata in D1 and larger file objects in R2. A read-only resource page or small static site may not need either one.
 
-Sites doesn't support data or inference residency. Don't use it to process protected health information or payment-card data, or to enable financial transactions. Review the [Sites data and usage restrictions](https://help.openai.com/en/articles/20001339-creating-and-managing-chatgpt-sites) before storing sensitive information.
+Review the [Sites limits and unsupported uses](https://developers.openai.com/codex/sites#understand-limits-and-unsupported-uses) before storing sensitive information. The guide links to current residency requirements and explains restrictions on protected health information and payments through third-party processors.
 
 ## Manage and share your projects
 

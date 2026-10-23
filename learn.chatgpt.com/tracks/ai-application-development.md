@@ -66,9 +66,9 @@ Evals are how you measure and improve your AI app’s behavior. They help you:
 
 Unlike informal testing, evals create a feedback loop that lets you iterate safely and continuously improve your AI applications.
 
-The type of eval you use depends on the application you are building.
+Different types of evals suit different types of applications.
 
-For example, if you want the system to produce answers that can be right or wrong (such as a math problem or classification task), you can run evals with a set of questions you already know the answers to (the "ground truth").
+For example, if you want the system to produce answers that can be right or wrong (such as a math problem or a classification task), you can run evals with a set of questions you already know the answers to (the "ground truth").
 
 ![evals](https://cdn.openai.com/devhub/tracks/diagram-17.png)
 
@@ -76,7 +76,7 @@ In other cases, there might not be a "ground truth" for the answers, but you can
 
 ### Basic techniques
 
-The first thing you need to master when building AI applications is **prompt engineering**: _how to tell the models what to do_.
+The first thing you need to master when building AI applications is "prompt engineering," or _how to tell the models what to do_.
 
 With the models' increasing performance, there is no need to learn a complex syntax or information structure.
 
@@ -104,7 +104,7 @@ A common misconception is that fine-tuning can "teach" the models about your
 
 If you want to build robust AI applications, you need to make sure the model outputs are reliable.
 
-LLMs produce non-deterministic outputs by default, meaning you can get widely different output formats if you don't constrain them.
+Large language models produce non-deterministic outputs by default, meaning you can get widely different output formats if you don't constrain them.
 Prompt engineering can only get you so far, and when you are building for production you can't afford for your application to break because you got an unexpected output.
 
 That is why you should rely as much as possible (unless you are generating a user-facing response) on structured outputs and tool calls.
@@ -131,27 +131,26 @@ The build hour below is a good example of how you can use the playground to expe
 
 ### Getting started building agents
 
-For new agent applications, start with the [Agents API](/api/docs/guides/agents-api/quickstart). OpenAI runs the Codex harness and manages orchestration and durable sessions while you build the surrounding application.
+The Responses API is your starting point for building dynamic, multi-modal AI applications.
+It's a stateful API that supports our latest models' capabilities, including things such as tool-calling in reasoning, and it offers a set of powerful built-in tools.
 
-Use the [Responses API](/api/docs/guides/migrate-to-responses) for direct model integrations or application-owned orchestration.
+As an abstraction on top of the Responses API, the Agents SDK is a framework for building and orchestrating agents.
 
-The Agents SDK is [feature complete](/api/docs/guides/agents/sdk#important-notice): maintenance continues, but major new features are not planned. You can continue using it for existing applications or as a short-term option when a required capability is not yet supported by the Agents API.
-
-If you're new to agents, follow the [Building agents](/tracks/building-agents#building-with-the-agents-api) track first.
+If you're not already familiar with the Responses API or Agents SDK or the concept of agents, we recommend following our [Building Agents](/tracks/building-agents#building-with-the-responses-api) track first.
 
 #### Learn and build
 
-Start with the Agents API quickstart and Agents overview. If your application needs direct model calls, the Responses starter app illustrates that integration.
+Explore the following resources to rapidly get started building. The Agents SDK repositories contain example code that you can use to get started in either Python or TypeScript, and the Responses starter app is a good starting point to build with the Responses API.
 
 ### Inspiration
 
-These demos use the Responses API and Agents SDK to demonstrate different interaction patterns:
+Explore these demos to get a sense of what you can build with the Responses API and the Agents SDK:
 
 - **Support agent**: a support agent built on top of the Responses API, with a "human in the loop" angle—the agent is meant to be used by a human that can accept or reject the agent's suggestions
 - **Customer service agent**: a network of multiple agents working together to handle a customer request, built with the Agents SDK
 - **Frontend testing agent**: a computer-using agent that requires a single user input to test a frontend application
 
-Explore the demo closest to your use case to see how its interaction pattern works.
+Pick the one most relevant to your use case and adapt from there.
 
 ### Augmenting the model's knowledge
 
@@ -216,9 +215,9 @@ Evals in practice let you:
 
 By embedding evals into your development cycle, you create repeatable, objective feedback loops that keep your AI systems aligned with both user needs and business goals.
 
-Some evals rely on a "ground truth" (a set of question/answer pairs), and others rely on more subjective criteria.
+Many types of evals exist, some that rely on a "ground truth" (a set of question/answer pairs), and others that rely on more subjective criteria.
 
-Even when you have expected answers, comparing the model's output to them might not always be straightforward. Sometimes, you can compare the output directly with the expected answer, as in the example below.
+Even when you have expected answers, comparing the model's output to them might not always be straightforward. Sometimes, you can check that the output matches the expected answer, like in the example below.
 In other cases, you might need to rely on different metrics and scoring algorithms that can compare outputs holistically—when you're comparing big chunks of text (for example, translations or summaries).
 
 _Example: Check the model's output against the expected answer, ignoring order._
@@ -239,7 +238,7 @@ console.log(isCorrect ? "Correct!" : "Incorrect.");
 
 #### Learn and build
 
-Use the evaluation best practices guide to design rubrics and measure outputs against business goals as your application moves from prototype to production.
+Explore the following resources to learn evaluation-driven development to scale apps from prototype to production. These resources will walk you through how to design rubrics and measure outputs against business goals.
 
 ### Evals API
 
@@ -262,16 +261,16 @@ They help you:
 
 Together, evals and guardrails form the foundation of trustworthy, production-grade AI systems.
 
-Guardrails fall into two categories:
+Guardrails fall into two types:
 
 - **Input guardrails**: To prevent unwanted inputs from being processed
 - **Output guardrails**: To prevent unwanted outputs from being returned
 
 In a production environment, ideally you would have both types of guardrails, depending on how the input and output are used and the level of risk you're comfortable with.
 
-A guardrail can be an instruction in the system prompt or a combination of multiple checks.
+Guardrails can involve specifying something in the system prompt or combining multiple checks.
 
-One guardrail you can implement uses the Moderation API (which is free to use) to check if the input triggers any of the common flags (violence, illegal ask, etc.) and stop the generation process if it does.
+One guardrail to implement is to use the Moderation API (which is free to use) to check if the input triggers any of the common flags (violence, illegal ask, etc.) and stop the generation process if it does.
 
 _Example: Classify text for policy compliance with the Moderation API._
 
@@ -291,8 +290,6 @@ print(response)
 
 Explore the following resources to implement safeguards that make your AI predictable and compliant. Set up guardrails against common risks like hallucinations or unsafe tool use.
 
-For Agents SDK applications, the guardrails guide below shows how to add checks to an SDK workflow. The Cookbook example explores hallucination checks.
-
 Now that you've learned how to incorporate evals into your workflow and build guardrails to enforce safe and compliant behavior, you can move on to the last phase, where you'll learn to optimize your applications for cost, latency, and production readiness.
 
 ## Phase 4: Scalability and maintenance
@@ -306,11 +303,11 @@ In this final phase, you'll learn how to run AI applications at production scale
 
 Optimizing your application's performance means ensuring your workflows stay accurate, consistent, and efficient as they move into long-term production use.
 
-You can adjust three aspects of your application:
+You can adjust 3 levers:
 
-- Improving the prompts (prompt engineering)
-- Improving the context you provide to the model (RAG)
-- Improving the model itself (fine-tuning)
+- Improving the prompts (that is, prompt engineering)
+- Improving the context you provide to the model (that is, RAG)
+- Improving the model itself (that is, fine-tuning)
 
 ![Performance optimization](https://cdn.openai.com/devhub/tracks/diagram-10.png)
 
@@ -336,7 +333,7 @@ You can monitor your usage and costs with the cost API, to keep track on what yo
 
 ### Set up your account for production
 
-On the OpenAI platform, we have the concept of tiers, going from 1 to 5. An organization in Tier 1 won't be able to make the same number of requests per minute or send us the same amount of tokens per minute as an organization in Tier 5.
+The OpenAI platform has three paid usage tiers: Build, Launch, and Grow. Higher tiers generally provide higher request and token rate limits.
 
 Before going live, make sure your tier is set up to manage the expected production usage—you can check our rate limits in the guide below.
 
@@ -348,7 +345,7 @@ Our production best practices guide will walk you through how to make sure your 
 In this track, you:
 
 - Learned about core concepts such as agents and evals
-- Explored the Agents API for new agents and the Responses API for direct model integrations and optionally incorporated some basic techniques like prompt engineering, fine-tuning, and RAG
+- Designed and deployed applications using the Responses API or Agents SDK and optionally incorporated some basic techniques like prompt engineering, fine-tuning, and RAG
 - Validated and safeguarded your solutions with evals and guardrails
 - Optimized for cost, latency, and long-term reliability in production
 

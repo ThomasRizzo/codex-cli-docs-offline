@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 [LM Studio](https://lmstudio.ai) is a performant and friendly desktop application for running large language models (LLMs) on local hardware. This guide will walk you through how to set up and run **gpt-oss-20b** or **gpt-oss-120b** models using LM Studio, including how to chat with them, use MCP servers, or interact with the models through LM Studio's local development API.
 
 Note that this guide is meant for consumer hardware, like running gpt-oss on a PC or Mac. For server applications with dedicated GPUs like NVIDIA's H100s, [check out our vLLM guide](https://developers.openai.com/cookbook/articles/gpt-oss/run-vllm).

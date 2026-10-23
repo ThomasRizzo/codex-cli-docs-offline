@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 OpenAI **Distillation** uses the outputs of a larger model to fine-tune a smaller one. Moving to the smaller model can reduce latency and cost for specific tasks. In this cookbook, we'll distill `gpt-4o` outputs into `gpt-4o-mini` and compare the result with a generic, non-distilled `gpt-4o-mini` model.
 
 We'll also use **Structured Outputs** for classification with an enum. We'll measure how structured outputs affect the fine-tuned model and show that they work with each model, including the distilled one.

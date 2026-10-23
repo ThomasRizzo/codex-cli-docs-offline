@@ -2,11 +2,378 @@
 
 > For the complete documentation index, see [llms.txt](llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
-This weekly digest highlights ChatGPT and Codex features that can change how you
-work, with examples and links to learn more. For every versioned update, bug fix,
-and minor improvement, see the [Codex changelog](changelog.html).
+For every versioned update, bug fix, and minor improvement, see the [ChatGPT and Codex changelog](changelog.html) and [API changelog](https://developers.openai.com/api/docs/changelog).
+
+
+
+## October 12–16, 2026
+
+
+
+
+### Open your dot from iOS widgets and Shortcuts
+
+Add the **Your dot** Home Screen widget to open your conversation, with optional message and call buttons. In Apple Shortcuts, use **Open your dot** with **Messaging**, **Dictation**, or **Call** mode. You can assign a saved shortcut to your iPhone's Action button on supported models.
+
+These features are rolling out with ChatGPT for iOS 1.2026.279 and require [dot access](dots.html#access). [Set up widgets and shortcuts](dots/channels.html#ios-widgets-and-shortcuts).
+
+## [October 5–9, 2026](whats-new/october-5-9-2026.html)
+
+
+
+
+### [Create your dot in the ChatGPT mobile app](whats-new/dots-october-9-2026.html)
+
+Create your dot, give it a name, customize its appearance, and connect plugins from your phone. This week's Dots update also brings more context from ChatGPT and Codex, faster cloud browsing, and fixes to notifications, setup, and everyday use.
+
+
+
+
+### Use GPT-6.1 Sol with Ultrafast mode
+
+[Ultrafast mode](agent-configuration/speed.html#ultrafast-mode) speeds up
+token generation with GPT-6.1 Sol in Codex and ChatGPT Work. Ultrafast is
+available on Pro $500 and eligible Enterprise and Edu plans.
+
+[Read the full update →](whats-new/october-5-9-2026.html)
+
+## [DevDay 2026](whats-new/devday-2026.html)
+
+<a id="devday-roundup-title" />
+
+
+
+
+
+
+
+
+
+
+
+### Meet your dot
+
+Give your dot ongoing responsibility. Dots keep making progress between conversations and are rolling out gradually to eligible accounts.
+
+[Meet your dot](dots.html)
+[Availability](dots.html#access)
+[Admin guide](enterprise/dots-admin-guide.html)
+
+
+
+
+
+
+### Work across devices
+
+Start a synced Work task on desktop and continue on web or mobile.
+
+[Get started with Work](get-started-with-work.html#continue-work-across-devices)
+[Set up sync](enterprise/cloud-local-access.html)
+
+
+
+
+
+
+### ChatGPT Space
+
+Bring files and Pages together, and work with collaborators.
+
+[Get started](space/getting-started.html)
+[Pages](space/pages.html)
+[Work with the agent](space/agents.html)
+[Collaboration](space/collaboration.html)
+[Admin guide](enterprise/chatgpt-space.html)
+
+
+
+
+
+
+
+
+
+
+
+### Astra Ultrafast in Codex
+
+Faster responses in Codex and Work on Pro $500 and eligible Enterprise and Edu plans.
+
+[Ultrafast mode](agent-configuration/speed.html#ultrafast-mode)
+[Plans and usage](pricing.html)
+
+
+
+
+
+
+### Reusable cloud environments
+
+Prepare a development setup once and reuse it in isolated cloud workspaces.
+
+[Cloud environments](environments/cloud-environments.html)
+
+
+
+
+
+
+### Codex Security Cloud
+
+Scan repositories, review findings, and prepare patches in research preview.
+
+[Set up Security Cloud](security/setup.html)
+[Threat model](security/threat-model.html)
+
+
+
+
+
+
+
+
+
+
+
+### Sign in with ChatGPT
+
+Offer ChatGPT sign-in and eligible ChatGPT plan usage in your app. Commercial sign-in is in a limited trial with selected partners.
+
+[Quickstart](https://developers.openai.com/siwc/quickstart)
+[Open-source apps](https://developers.openai.com/siwc/token-sharing-open-source)
+
+
+
+
+
+
+### Sites with connected data
+
+Build workspace-private Sites with each visitor’s connected apps, where enabled.
+
+[Build with plugins](sites.html#load-visitor-data-via-plugins)
+[Sharing and access](sites.html#control-access-and-secrets)
+
+
+
+
+
+
+### Plugin Extensions
+
+Add sidebar apps, panels, editors, and forms to ChatGPT. Composer mentions require the desktop app; Free and Go web extensions are coming soon.
+
+[Build extensions](https://developers.openai.com/plugins/build/extensions)
+[Package a plugin](https://developers.openai.com/plugins/build/plugins)
+
+
+
+
+
+
+### MCP Events
+
+Let users ask ChatGPT to act on updates from your MCP server. Requires MCP 2.0 and webhook delivery.
+
+[Build event subscriptions](https://developers.openai.com/plugins/build/mcp-events)
+
+
+
+
+
+
+### Website annotations
+
+Add context and preview controls to feedback from supported desktop browsers.
+
+[Annotations Extensibility](annotations-extensibility.html)
+
+
+
+
+
+
+
+
+
+
+
+### GPT-6.1 Sol
+
+Use GPT-6.1 Sol for complex coding and professional work in the API and Codex, where available.
+
+[API model](https://developers.openai.com/api/docs/models/gpt-6.1-sol)
+[Codex availability](models.html#gpt-61-sol)
+[Multi-agent beta](https://developers.openai.com/api/docs/guides/responses-multi-agent)
+
+
+
+
+
+
+### Astra Ultrafast in the API
+
+Generate output tokens faster in the Responses API, subject to availability.
+
+[Ultrafast guide](https://developers.openai.com/api/docs/guides/ultrafast-mode)
+[Pricing](https://developers.openai.com/api/docs/pricing?latest-pricing=ultrafast)
+
+
+
+
+
+
+
+
+
+
+
+### ChatGPT in Slack and Teams
+
+Bring ChatGPT and approved tools into Slack and Teams conversations.
+
+[Slack and Teams guide](enterprise/chatgpt-slack-and-teams.html)
+
+
+
+
+
+
+### Team Tasks
+
+Run scheduled or event-triggered work through a team’s service account and approved connections.
+
+[Set up Team Tasks](enterprise/teams.html)
+
+
+
+
+
+
+### Workspace connections
+
+Connect company-managed accounts for supported teams and workflows.
+
+[Manage shared connections](enterprise/shared-connections.html)
+
+
+
+
+
+
+### Agent Security
+
+Manage tool, file, and network access for local and cloud agents.
+
+[Agent Security](enterprise/agent-security.html)
+[Managed configuration](enterprise/managed-configuration.html)
+[Work sync](enterprise/cloud-local-access.html)
+
+
+
+
+
+
+
+
+
+
+
+[Read the full update →](whats-new/devday-2026.html)
+
+## [September 28–October 2, 2026](whats-new/september-28-october-2-2026.html)
+
+
+
+
+### Choose GPT-6.1 Sol for complex work
+
+Use [GPT-6.1 Sol](models.html#gpt-61-sol) for coding and professional work at a lower cost than Astra. Access depends on your plan, client, and workspace settings.
+
+
+
+
+### Delegate ongoing work to your dot
+
+[Dots](dots.html) continue work between conversations and bring back results for review. [Access is rolling out gradually](dots.html#access) to eligible accounts.
+
+
+
+
+### Use GPT-6 Astra Ultrafast
+
+[Ultrafast](agent-configuration/speed.html#ultrafast-mode) speeds up token generation in Codex and Work on Pro $500 and eligible Enterprise and Edu plans. Usage and workspace restrictions apply.
+
+
+
+
+### Prepare reusable Codex Cloud environments
+
+[Prepare and publish a cloud environment](environments/cloud-environments.html) once, then reuse its filesystem in isolated workspaces for new tasks.
+
+
+
+
+### Scan repositories with Codex Security Cloud
+
+Install the [Security Cloud plugin](security/setup.html) to scan connected repositories and review findings and patches. Available in research preview to workspaces with access.
+
+
+
+
+### Continue Work across devices
+
+With [Local computer access with Work Cloud](enterprise/cloud-local-access.html) enabled, continue eligible tasks from desktop, web, or mobile. Keep your computer online for steps that need its local resources.
+
+
+
+
+### Work together in ChatGPT Space
+
+Create and share [Pages in Space](space/pages.html). Mention ChatGPT or your dot and use [slash commands](space/agents.html) while editing.
+
+
+
+
+### Set up shared team workflows
+
+Run scheduled or event-triggered [Team Tasks](enterprise/teams.html) with a service account and approved workspace connections. Admins also manage [ChatGPT access in Slack and Teams](enterprise/chatgpt-slack-and-teams.html).
+
+
+
+
+### Sign in to apps with ChatGPT
+
+Add [ChatGPT sign-in and eligible plan usage](https://developers.openai.com/siwc/quickstart) to your app. Commercial sign-in is in a limited trial; plan usage supports open-source partners and selected private clients.
+
+
+
+
+### Extend your plugin's interface
+
+[Plugin Extensions](https://developers.openai.com/plugins/build/extensions) add interfaces to ChatGPT. Composer mentions are desktop-only, and Free and Go web extensions are coming soon.
+
+
+
+
+### Respond to MCP events
+
+Build [webhook subscriptions](https://developers.openai.com/plugins/build/mcp-events) so users can ask ChatGPT to act on updates from your MCP server. Requires MCP 2.0.
+
+
+
+
+### Customize website annotations
+
+Use the [Browser Annotation API](annotations-extensibility.html) to attach context and preview controls to website feedback in supported desktop browsers.
+
+[Read the full update →](whats-new/september-28-october-2-2026.html)
 
 ## September 21–25, 2026
+
+
+
 
 ### Choose GPT-6 Sol and Luna
 
@@ -21,18 +388,26 @@ for availability details.
 
 ## September 14–18, 2026
 
+
+
+
 ### Prepare for GPT-5.5 retirement
 
 GPT-5.5 will retire from ChatGPT, ChatGPT Work, and Codex on October 14, 2026,
 across all plans. The OpenAI API isn't affected.
 
-For Codex with ChatGPT sign-in, switch to **GPT-5.6 Sol** (`gpt-5.6-sol`).
+For Codex with ChatGPT sign-in, choose an available replacement for your plan
+and client. See [GPT-5.5 retirement](models.html#gpt-55-retirement) for
+migration guidance.
 Update saved model settings, workspace defaults, custom agents, scheduled
 tasks, and scripts that still select GPT-5.5 before the retirement date.
 [Read the retirement notice](changelog.html#codex-2026-09-14-gpt-55-retirement)
 for details.
 
 ## September 7–11, 2026
+
+
+
 
 ### Start a quick chat from your pet
 
@@ -45,6 +420,9 @@ Choose a companion in **Settings > Pets**, or select **Mini** to use the
 controls without a pet. Press **Option+Space** on macOS or **Windows+Alt+P** on
 Windows to show the controls and focus Quick Chat. Use `@` to add context and
 `$` to choose a skill, then press **Enter** to send your request.
+
+
+
 
 ### Share an app window on Windows
 
@@ -66,6 +444,9 @@ for the full update and smaller improvements.
 
 ## August 31–September 4, 2026
 
+
+
+
 ### Take on demanding work with GPT-6 Astra
 
 [GPT-6 Astra](models.html#gpt-6-astra) combines advanced reasoning, computer
@@ -80,6 +461,9 @@ Enterprise access requires both rollout eligibility and an administrator to
 enable it.
 
 ## August 24–28, 2026
+
+
+
 
 ### Work with more websites
 
@@ -115,6 +499,9 @@ Use @Edge to read the current page and turn it into a concise checklist.
 [Read the August 25 browser release
 notes](changelog.html#codex-2026-08-25-browser).
 
+
+
+
 ### Run scheduled tasks from app events
 
 [Scheduled tasks](automations.html#web-trigger-tasks-from-app-events) can now
@@ -138,6 +525,9 @@ When one of my pull requests in <owner>/<repository> receives new review feedbac
 notes](changelog.html#codex-2026-08-25-event-triggers).
 
 ## August 17–21, 2026
+
+
+
 
 ### Work with more of your apps and content
 
@@ -169,6 +559,9 @@ Find the latest Messages conversation about tomorrow's launch, summarize the ope
 
 [View @OpenAIDevs on X](https://x.com/OpenAIDevs/status/2090555241343418814) (2026-08-20)
 
+
+
+
 ### Work with GitLab projects in Codex cloud
 
 [GitLab support](third-party/gitlab.html) is available in beta on all ChatGPT
@@ -183,6 +576,9 @@ workspace admin setup; webhook activity requires GitLab 19.0 or later.
 
 [Read the August 19 GitLab release
 notes](changelog.html#codex-2026-08-19-gitlab).
+
+
+
 
 ### Export public plugin metadata for review
 
@@ -201,6 +597,9 @@ workspaces.
 notes](changelog.html#codex-2026-08-17-admin-csv).
 
 ## August 10–14, 2026
+
+
+
 
 ### Find earlier work with Computer History
 
@@ -227,6 +626,9 @@ Find the document and Slack thread I was reviewing earlier, then summarize the d
 
 [Watch: Computer History in ChatGPT](https://www.youtube.com/watch?v=W-HhMUe9hOg)
 
+
+
+
 ### Use the ChatGPT desktop app on Linux
 
 The [ChatGPT desktop app for Linux](linux/linux-app.html) is now available in
@@ -243,6 +645,9 @@ Linux preview.
 > Now in preview: The ChatGPT desktop app for Linux.
 
 [View @OpenAI on X](https://x.com/OpenAI/status/2087231350134980830) (2026-08-11)
+
+
+
 
 ### Bring your existing agent setup and work with you
 
@@ -262,6 +667,9 @@ notes](changelog.html#codex-2026-08-11-app).
 > You can now keep your work from other agents in sync with ChatGPT Work and Codex.
 
 [View @OpenAIDevs on X](https://x.com/OpenAIDevs/status/2087242829076791392) (2026-08-11)
+
+
+
 
 ### Choose the right access for defensive security work
 
@@ -285,6 +693,9 @@ announcement](changelog.html#codex-2026-08-10-daybreak).
 
 ## August 3–7, 2026
 
+
+
+
 ### Talk through files and projects with ChatGPT Voice
 
 [ChatGPT Voice](features/voice.html) now supports uploaded files and
@@ -300,6 +711,9 @@ instructions.
 Review the research brief I uploaded, explain the main tradeoffs out loud, and compare them with the sources already in this project.
 ```
 
+
+
+
 ### Study and teach with dedicated education plugins
 
 Three new [plugins](plugins.html) bring classroom-specific workflows to
@@ -313,6 +727,9 @@ The plugins are available through ChatGPT Edu and ChatGPT for Teachers district
 deployments. Schools control which tools and permissions are available. Read
 the [education plugins
 announcement](https://openai.com/index/learn-teach-chatgpt-work-codex/).
+
+
+
 
 ### Reuse saved files and find past work faster
 
@@ -328,12 +745,18 @@ to move the content back into your message.
 Read the [ChatGPT release
 notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes).
 
+
+
+
 ### See your remaining ChatGPT Work usage
 
 Eligible users on personal plans and ChatGPT Business can check their remaining
 ChatGPT Work usage directly in the web sidebar. Available credit options depend
 on your account and workspace permissions. ChatGPT Work and Codex continue to
 share the same [usage limits and credits](pricing.html).
+
+
+
 
 ### Choose how GPT-5.6 responds in ChatGPT
 
@@ -345,6 +768,9 @@ and Go plans.
 These changes apply to ChatGPT conversations. They don't change model behavior
 in ChatGPT Work or Codex. Read the [ChatGPT release
 notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes).
+
+
+
 
 ### Organize work and switch agents in Codex CLI 0.147.0
 
@@ -363,6 +789,9 @@ web search and remote conversation compaction.
 
 [Watch: Introducing Agent Plugins](https://www.youtube.com/watch?v=UaeWJK_vv-Y)
 
+
+
+
 ### Follow and resume deeper security scans
 
 Hosted Codex Security plugin versions `0.1.16` through `0.1.18` add live scan
@@ -375,6 +804,9 @@ scan progress and findings, or [configure a deep
 scan](security/plugin/deep-scans.html) when you need a more thorough
 assessment. Check the [plugin changelog](security/plugin/changelog.html) to
 confirm which features your installed version supports.
+
+
+
 
 ### Review GitHub pull requests for security risks
 
@@ -395,6 +827,9 @@ can apply.
 
 ## July 27–31, 2026
 
+
+
+
 ### Use GPT-5.6 Terra and Luna at lower rates
 
 GPT-5.6 Terra now costs 20% less, and GPT-5.6 Luna costs 80% less. Input,
@@ -407,6 +842,9 @@ work and Luna especially useful for focused coding and high-volume tasks.
 > Starting today, we are reducing prices for GPT-5.6 Luna by 80% and GPT-5.6 Terra by 20%
 
 [View @OpenAI on X](https://x.com/OpenAI/status/2082878156483219672) (2026-07-30)
+
+
+
 
 ### Find useful context across your browser and open tabs
 
@@ -427,6 +865,9 @@ task.
 
 [View @ChatGPT on X](https://x.com/ChatGPT/status/2082970812584432115) (2026-07-30)
 
+
+
+
 ### Review changes across repositories
 
 When a [local project contains more than one
@@ -443,6 +884,9 @@ review views.
 Review the changes across every repository in this project, identify integration risks, and summarize the fixes needed before I open a pull request.
 ```
 
+
+
+
 ### Refine generated images in your conversation
 
 Open a generated image in the expanded viewer, then switch between
@@ -455,6 +899,9 @@ Learn more about [image generation](image-generation.html).
 > ImageGen in Codex just got a new lightbox and canvas.
 
 [View @OpenAIDevs on X](https://x.com/OpenAIDevs/status/2082944138635595782) (2026-07-30)
+
+
+
 
 ### Find chats that need your attention
 
@@ -471,6 +918,9 @@ notes](changelog.html#codex-2026-07-30-app).
 
 [View @OpenAIDevs on X](https://x.com/OpenAIDevs/status/2083288643310133716) (2026-07-31)
 
+
+
+
 ### Connect partner tools with Sign in with ChatGPT
 
 **Sign in with ChatGPT** is rolling out in beta to supported plugins and
@@ -482,6 +932,9 @@ Partners receive only your name, email address, and profile picture when
 available. Each plugin's requested access still requires a separate review
 and approval. Read the [July 29 sign-in
 announcement](changelog.html#codex-2026-07-29).
+
+
+
 
 ### Collaborate in a dedicated academic research workspace
 
@@ -500,6 +953,9 @@ paper](https://help.openai.com/en/articles/20001406).
 
 [Watch: We're giving 100,000 academic researchers free access to our frontier models](https://www.youtube.com/watch?v=MLehRytu9Zo)
 
+
+
+
 ### Continue Codex tasks more reliably on iOS
 
 ChatGPT for iOS 1.2026.202 reconnects to tasks more reliably when you return to
@@ -511,6 +967,9 @@ The release also improves pause and resume controls for goals, inline tables
 and visual themes, large workspace diffs, selected-text references, and model
 restoration. Read the [July 27 iOS release
 notes](changelog.html#codex-2026-07-27-mobile).
+
+
+
 
 ### Compare security scans and manage findings
 
@@ -525,6 +984,9 @@ repository history, and remediation in the desktop app. The hosted plugin
 catalog offers version `0.1.15`, while the public CLI plugin marketplace
 offers version `0.1.11`. Check the [Codex Security plugin
 changelog](security/plugin/changelog.html) before relying on a new feature.
+
+
+
 
 ### Run security scans from the terminal, CI, or TypeScript
 
@@ -546,6 +1008,9 @@ access. Some full-repository scans also require Trusted Access for Cyber.
 
 [View @OpenAI on X](https://x.com/OpenAI/status/2082263717916586117) (2026-07-29)
 
+
+
+
 ### Organize sessions and extend Codex CLI 0.146.0
 
 [Codex CLI 0.146.0](https://github.com/openai/codex/releases/tag/rust-v0.146.0)
@@ -563,6 +1028,9 @@ remote Code Mode hosts. Review the
 before exposing a remote connection. The release also improves proxy support,
 MCP reconnection, terminal responsiveness, and Windows sandbox reliability.
 
+
+
+
 ### Use GPT-5.6 Sol for hosted Codex work
 
 [GPT-5.6 Sol](models.html#recommended-models) now powers Codex cloud code
@@ -570,6 +1038,9 @@ review and quality assurance for eligible customers. Sol is the flagship
 GPT-5.6 model for complex coding, research, computer use, and security work.
 Codex cloud selects its model automatically; Terra and Luna remain available on
 supported local and web surfaces.
+
+
+
 
 ### Prepare for the GPT-5.4 model retirement
 
@@ -585,6 +1056,9 @@ availability](enterprise/workspace-model-availability.html) before the
 cutoff.
 
 ## July 20–24, 2026
+
+
+
 
 ### Talk through work with ChatGPT Voice
 
@@ -602,6 +1076,9 @@ desktop app and through [Remote on iOS](remote-connections.html#set-up-mobile-ac
 
 
 [Watch: Building with ChatGPT Voice](https://www.youtube.com/watch?v=E0ZMOschrTU)
+
+
+
 
 ### Work across multiple folders in one local project
 
@@ -623,6 +1100,9 @@ folder](projects.html#use-local-projects-for-folders-and-codebases).
 
 ## July 13–17, 2026
 
+
+
+
 ### Keep Work conversations and Projects together on desktop
 
 The ChatGPT desktop app now keeps Chat and Work conversations together in the
@@ -643,6 +1123,9 @@ view that fits your task.
 Open the Launch project, review its files and recent conversations, and continue the launch plan from the latest Work conversation.
 ```
 
+
+
+
 ### Control parallel Codex work with Codex Micro
 
 On July 15, OpenAI and Work Louder launched
@@ -656,6 +1139,9 @@ adjust reasoning effort without leaving the keyboard.
 
 [Watch: Introducing the Codex Micro](https://www.youtube.com/watch?v=m8uUUUsMD3Y)
 
+
+
+
 ### Use GPT-5.6 through Amazon Bedrock
 
 GPT-5.6 Sol, Terra, and Luna reached general availability through Amazon
@@ -663,6 +1149,9 @@ Bedrock. Local ChatGPT Work and Codex surfaces can use the built-in
 [`amazon-bedrock` provider](amazon-bedrock.html) with a Bedrock API key or the
 AWS SDK credential chain. This includes Work and Codex in the ChatGPT desktop
 app, Codex CLI, the IDE extension, and the Codex SDK.
+
+
+
 
 ### Inspect Codex task visualizations on iOS
 
@@ -674,6 +1163,9 @@ links to newly created tasks. Read the
 ## July 6–10, 2026
 
 <a id="take-on-ambitious-work-with-chatgpt-work"></a>
+
+
+
 
 ### Take on ambitious work in ChatGPT
 
@@ -701,6 +1193,9 @@ Create a launch brief from the attached research and campaign template. Show me 
 
 [Watch: Meet ChatGPT Work](https://www.youtube.com/watch?v=yRc5HcGJ-Cs)
 
+
+
+
 ### Choose the right GPT-5.6 model
 
 The [GPT-5.6 family](models.html#recommended-models) offers three recommended
@@ -713,6 +1208,9 @@ medium reasoning.
 
 
 [Watch: Meet GPT-5.6](https://www.youtube.com/watch?v=-MPGU2a67Ls)
+
+
+
 
 ### Use Codex in the ChatGPT desktop app
 
@@ -734,6 +1232,9 @@ ChatGPT plan, including Free.
 
 ## June 15–19, 2026
 
+
+
+
 ### Turn demonstrated workflows into reusable skills
 
 [Record & Replay](extend/record-and-replay.html) lets you show ChatGPT or
@@ -748,6 +1249,9 @@ the EEA, the United Kingdom, and Switzerland, and requires Computer Use.
 
 <a id="continue-a-task-on-another-host"></a>
 
+
+
+
 ### Continue a chat on another host
 
 [Chat handoff](remote-connections.html#hand-off-a-chat-between-hosts)
@@ -757,6 +1261,9 @@ the chat, and continue from the matching project.
 
 The same desktop release adds bulk actions to scheduled run history, so
 you can mark every run as read or archive eligible runs together.
+
+
+
 
 ### Browse and review workspaces from iOS
 
@@ -774,6 +1281,9 @@ Read the [June 15 iOS](changelog.html#codex-2026-06-15-mobile),
 [June 18 app](changelog.html#codex-2026-06-18-app) release notes.
 
 ## June 8–12, 2026
+
+
+
 
 ### Debug web apps with Browser Developer mode
 
@@ -807,6 +1317,9 @@ Use @Browser to reproduce the slow checkout. Inspect the network timing and cons
 
 [Watch: Debug web apps with browser use in Codex](https://www.youtube.com/watch?v=bhgYFRZLyKI)
 
+
+
+
 ### Bring your setup to Codex
 
 New migration flows can import supported setup from other coding agents during
@@ -815,6 +1328,9 @@ plus improved plugin management, browser diagnostics, and completed-chat
 summaries.
 
 <a id="set-up-codex-tasks-from-ios"></a>
+
+
+
 
 ### Set up Codex chats from iOS
 
@@ -826,6 +1342,9 @@ Read the [June 9 app](changelog.html#codex-2026-06-09-app),
 [June 11 app](changelog.html#codex-2026-06-11-app) release notes.
 
 ## June 1–5, 2026
+
+
+
 
 ### Build and deploy websites with Sites
 
@@ -847,6 +1366,9 @@ Build a responsive launch dashboard from this project with Sites. Validate it at
 
 [Watch: Introducing Sites in Codex](https://www.youtube.com/watch?v=VRvC5smyzso)
 
+
+
+
 ### Use Codex with Amazon Bedrock
 
 You can [use Codex with Amazon Bedrock](amazon-bedrock.html) for local
@@ -865,6 +1387,9 @@ view.
 [View @OpenAIDevs on X](https://x.com/OpenAIDevs/status/2061564710173224985) (2026-06-01)
 
 ## May 25–29, 2026
+
+
+
 
 ### Use Windows apps and control Codex remotely
 
@@ -899,6 +1424,9 @@ Read the [May 25 iOS](changelog.html#codex-2026-05-25-mobile) and
 
 ## May 18–22, 2026
 
+
+
+
 ### Give Codex context from any Mac app with Appshots
 
 [Appshots](appshots.html) send the frontmost app window to Codex with a
@@ -918,6 +1446,9 @@ Use this appshot as the visual reference. Match the selected screen in the app, 
 
 [Watch: Introducing Appshots in Codex](https://www.youtube.com/watch?v=QKYbGCvNpFo)
 
+
+
+
 ### Follow long-running goals
 
 [Goal mode](prompting.html#goal-mode) left experimental status and is
@@ -935,6 +1466,9 @@ continue approved computer-use work after a Mac locks, including through
 
 ## May 11–15, 2026
 
+
+
+
 ### Continue desktop work from mobile
 
 In the ChatGPT mobile app, **Remote** connects to a Mac running the ChatGPT
@@ -948,6 +1482,9 @@ to set up a host and pick up work from another device.
 > Now in preview: Codex in the ChatGPT mobile app.
 
 [View @OpenAI on X](https://x.com/OpenAI/status/2055016850849993072) (2026-05-14)
+
+
+
 
 ### Automate trusted workflows
 
@@ -966,6 +1503,9 @@ managed setup and controls for Codex.
 [View @OpenAIDevs on X](https://x.com/OpenAIDevs/status/2055032115964870838) (2026-05-14)
 
 ## May 4–8, 2026
+
+
+
 
 ### Work across browser tabs with the Chrome extension
 
@@ -997,6 +1537,9 @@ Read the [May 5 app](changelog.html#codex-2026-05-05-app),
 
 ## April 20–24, 2026
 
+
+
+
 ### Use GPT-5.5 for complex work
 
 [GPT-5.5](models.html) arrived in Codex as the recommended model for most
@@ -1006,6 +1549,9 @@ research, and finished knowledge-work outputs.
 
 
 [Watch: Introducing GPT-5.5](https://www.youtube.com/watch?v=blGtYq9mL18)
+
+
+
 
 ### Let Codex operate the browser and review approvals
 
@@ -1033,6 +1579,9 @@ Use @Browser to open the local app, reproduce the checkout failure, fix it, and 
 
 ## April 13–17, 2026
 
+
+
+
 ### Preview and operate work in one place
 
 The [built-in browser](browser.html) added live previews and page
@@ -1054,6 +1603,9 @@ verification part of the same task as the code change.
 
 <a id="start-with-a-task-and-keep-it-moving"></a>
 
+
+
+
 ### Start with a chat and keep it moving
 
 [Standalone chats](projects.html#start-without-a-project) made it
@@ -1072,6 +1624,9 @@ work that spans chats.
 
 ## April 6–10, 2026
 
+
+
+
 ### Review and ship pull requests in the app
 
 The review experience added collapsible inline comments, inline and detached
@@ -1084,6 +1639,9 @@ Read the [April 9](changelog.html#codex-2026-04-09-app) and
 learn how to [review changes in the app](code-review.html).
 
 ## March 23–27, 2026
+
+
+
 
 ### Package workflows as plugins
 
@@ -1104,6 +1662,9 @@ Read the [task search](changelog.html#codex-2026-03-24-app),
 
 ## March 16–20, 2026
 
+
+
+
 ### Branch earlier and choose tools from the composer
 
 You could fork a chat from an earlier message, making it easier to try a new
@@ -1122,6 +1683,9 @@ Read the [GPT-5.4 mini](changelog.html#codex-2026-03-17),
 [View @OpenAIDevs on X](https://x.com/OpenAIDevs/status/2033953815834333608) (2026-03-17)
 
 ## March 9–13, 2026
+
+
+
 
 ### Schedule work with the right environment
 
@@ -1144,6 +1708,9 @@ personalize.
 
 [View @OpenAIDevs on X](https://x.com/OpenAIDevs/status/2032222711032971548) (2026-03-12)
 
+
+
+
 ### Let Codex inspect terminal output
 
 Codex also learned to read the [integrated terminal](integrated-terminal.html#run-and-validate-your-project)
@@ -1162,6 +1729,9 @@ Read the [March 11](changelog.html#codex-2026-03-11-app) and
 [March 12](changelog.html#codex-2026-03-12-app) Codex app release notes.
 
 ## March 2–6, 2026
+
+
+
 
 ### Run Codex natively on Windows
 
@@ -1183,6 +1753,9 @@ available for developers who preferred a Linux environment.
 
 <a id="move-tasks-between-local-and-worktree"></a>
 
+
+
+
 ### Move chats between Local and Worktree
 
 [Local and Worktree handoff](environments/git-worktrees.html#working-between-local-and-worktree)
@@ -1195,6 +1768,9 @@ Read the [Windows launch](changelog.html#codex-2026-03-04-app),
 [GPT-5.4](changelog.html#codex-2026-03-05) release notes.
 
 ## February 9–13, 2026
+
+
+
 
 ### Iterate in real time and branch an approach
 
@@ -1215,6 +1791,9 @@ current [model guide](models.html).
 
 ## February 2–6, 2026
 
+
+
+
 ### The Codex app launches on macOS
 
 The Codex app launched as a desktop workspace for parallel project chats,
@@ -1232,6 +1811,9 @@ Those capabilities now live in Codex in the [ChatGPT desktop app](app.html).
 
 
 [Watch: Introducing the Codex app](https://www.youtube.com/watch?v=HFM3se4lNiw)
+
+
+
 
 ### Steer active work and add files
 

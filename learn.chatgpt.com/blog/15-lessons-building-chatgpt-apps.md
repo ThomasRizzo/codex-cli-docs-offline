@@ -172,11 +172,9 @@ One of the first things we tackled was iteration speed. The combination of long-
 
 After spending considerable time understanding Vite’s internals, we built a Vite plugin that enables live reload of widgets directly inside ChatGPT. The plugin intercepts resource requests to the MCP server and injects real-time updates into the ChatGPT iframe. Seeing a change in the IDE immediately reflected inside ChatGPT dramatically shortened our feedback loop.
 
-![Gif of the hot reload in action](https://cdn.openai.com/devhub/blog/alpic-demo.gif)
-
 ### 12. Not every test belongs in ChatGPT
 
-Testing on ChatGPT is the gold standard, but for the first iterations, a local emulator can help you move more quickly, especially when you are working on tool definitions that require app reloads in Developer Mode.
+Testing on ChatGPT is the gold standard, but for the first iterations, a local emulator can help you move more quickly, especially when you are working on tool definitions that require [refreshing the custom MCP server connection](/plugins/deploy/connect-chatgpt#refresh-metadata) in ChatGPT.
 
 To speed up early iterations, we built a lightweight local emulator that mocks the ChatGPT host environment, complete with debugging tools and apps-specific logs. This allowed us to iterate on React state and layout in milliseconds, reserving real ChatGPT tests for validating model interactions and edge cases.
 

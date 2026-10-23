@@ -2,6 +2,12 @@
 
 > For the complete documentation index, see [llms.txt](llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+For a local client using an organization-provided model gateway, choose
+[Sign in with ChatGPT through a gateway](enterprise/sign-in-with-chatgpt-through-a-gateway.html)
+or [API/provider credentials](enterprise/connect-to-a-gateway.html).
+Direct Bedrock access uses the
+[Amazon Bedrock authentication options](amazon-bedrock.html#authentication-options).
+
 ## OpenAI authentication
 
 <a id="sign-in-with-chatgpt"></a>
@@ -34,6 +40,14 @@ and [Roles and workspace permissions](enterprise/roles-and-workspace-permissions
 to plan those controls.
 
 ### Sign in with ChatGPT
+
+To use Local computer access with Work Cloud across desktop, mobile, and web:
+
+1. Sign in with ChatGPT to an eligible workspace.
+
+1. Ask a workspace owner to enable Work Cloud, then turn on **Allow local computer access** under Work Cloud. **Use Codex locally on the ChatGPT desktop app** is not a prerequisite.
+
+API keys and Codex access tokens do not enable Local computer access with Work Cloud. See [Roles and workspace permissions](enterprise/roles-and-workspace-permissions.html) and the [Work admin FAQ](enterprise/work-admin-faq.html) for prerequisites, or [Local computer access for Work Cloud and dots](enterprise/cloud-local-access.html) for setup.
 
 When you sign in with ChatGPT from the ChatGPT desktop app, Codex CLI, or IDE extension, the sign-in flow opens a browser window. After you sign in, the browser returns your credentials to Codex.
 

@@ -25,6 +25,7 @@ Use this as a compact map of the Ads docs. Each page has a Markdown twin at `/ad
 - [Ad Account](https://developers.openai.com/ads/api-reference/ad-account.md): Manage account metadata and account-wide spending limits.
 - [Ad Groups](https://developers.openai.com/ads/api-reference/ad-groups.md): Create, list, retrieve, update, and change ad group state.
 - [Ads](https://developers.openai.com/ads/api-reference/ads.md): Create, list, retrieve, update, preview, and change ad state.
+- [Audit Logs](https://developers.openai.com/ads/api-reference/audit-logs.md): Review recorded changes to resources in an ad account.
 - [Authentication](https://developers.openai.com/ads/api-reference/authentication.md): Setting up bearer token authentication.
 - [Campaigns](https://developers.openai.com/ads/api-reference/campaigns.md): Create, list, retrieve, update, and change campaign state.
 - [Conversion Setup](https://developers.openai.com/ads/api-reference/conversion-setup.md): Create pixels, Conversions API keys, and event settings.
@@ -57,6 +58,9 @@ Use this as a compact map of the Ads docs. Each page has a Markdown twin at `/ad
 
 ## Delta Feeds
 - [Delta Feeds API](https://developers.openai.com/ads/delta-feeds.md): Update product availability and prices without uploading your entire catalog.
+
+## Hotel Feeds
+- [Hotel property feeds (limited beta)](https://developers.openai.com/ads/hotel-feeds.md): Create and upload hotel property feeds for the limited Hotel ads beta.
 
 ## Image Tag
 - [Image Tag](https://developers.openai.com/ads/image-tag.md): Send conversion events from HTML without JavaScript.

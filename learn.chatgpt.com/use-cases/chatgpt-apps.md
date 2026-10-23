@@ -21,8 +21,8 @@ bestFor:
   - Planning a first ChatGPT app around a user outcome
   - Scaffolding an MCP server, tool metadata, and an optional widget without
     overbuilding
-  - Running a tight loop from local HTTPS testing to ChatGPT developer-mode
-    verification
+  - Running a tight loop from local HTTPS testing to custom MCP server
+    verification in ChatGPT
 starterPrompt:
   title: Plan the App Before You Scaffold It
   body: >-
@@ -111,7 +111,7 @@ To learn more about how to install and use skills, see our [skills documentation
 
 1. Start with one narrow plugin outcome and ask Codex to propose three to five tools with clear names, descriptions, inputs, and outputs.
 2. Decide whether v1 can stay data-only or needs a widget, then scaffold the MCP server and optional widget using existing repository patterns before adding dependencies.
-3. Run the MCP server locally behind HTTPS, connect it in ChatGPT developer mode, and test it with a small direct, indirect, and negative prompt set.
+3. Run the MCP server locally behind HTTPS, connect it in ChatGPT with [Add custom MCP server](https://developers.openai.com/api/docs/guides/custom-mcp-server), and test it with a small direct, indirect, and negative prompt set.
 4. Iterate on metadata, state handling, `structuredContent`, and `_meta` payloads until the core read flow behaves reliably inside ChatGPT.
 5. Add OAuth 2.1 only when user-specific data or write actions require it, without complicating anonymous or read-only flows.
 6. Prepare a hosted preview with a stable `/mcp` endpoint, verify streaming and UI asset hosting, and review the launch checklist before sharing or submitting the plugin.
@@ -180,7 +180,7 @@ Constraints:
 Verification:
 
 - Start the local server
-- Explain how to connect the MCP server in ChatGPT developer mode
+- Explain how to connect the MCP server in ChatGPT using Add custom MCP server
 - List the exact prompts to test
 ```
 
@@ -198,7 +198,7 @@ Requirements:
 - Keep read-only tools anonymous if possible.
 - Add OAuth 2.1 only for user-specific data or write actions.
 - Use an existing identity provider such as Auth0 or Stytch.
-- Document scopes, token checks, and the developer-mode test flow.
+- Document scopes, token checks, and the custom MCP server test flow in ChatGPT.
 
 Output:
 
@@ -238,7 +238,7 @@ Output:
 - The tool set stays small and has explicit metadata, inputs, and outputs.
 - The MCP server works end to end and returns concise `structuredContent`, reserving widget-only data for `_meta`.
 - The widget, if needed, renders correctly inside ChatGPT.
-- A local HTTPS testing loop works through ChatGPT developer mode.
+- A local HTTPS testing loop works with the custom MCP server connected in ChatGPT.
 - A small direct, indirect, and negative prompt set passes with the expected conversation flow and tool payloads.
 - Auth is added only where user-specific data or write actions require it.
 - A deployment plan and launch-readiness review cover metadata, tool hints, privacy, and test prompts before the plugin is shared or submitted.
@@ -252,5 +252,5 @@ Output:
 - Treating metadata as an afterthought. Better move: write tool descriptions and parameter docs early, then replay a prompt set against them.
 - Adding auth before proving the anonymous or read-only path. Better move: get the core tool flow working first, then add OAuth for the tools that actually need it.
 - Declaring the plugin done before testing inside ChatGPT. Better move: connect
-  the MCP server in developer mode, inspect tool payloads, and verify the real
+  the custom MCP server in ChatGPT, inspect tool payloads, and verify the real
   conversation flow.

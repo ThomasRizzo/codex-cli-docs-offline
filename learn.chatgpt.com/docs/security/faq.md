@@ -1,115 +1,147 @@
-# Codex Security cloud FAQ
+# Codex Security Cloud FAQ
 
 > For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
-This FAQ covers Codex Security cloud. For local scans and workflows that run in
-a Codex task, see the [Codex Security plugin quickstart](plugin.html).
+These answers apply to Codex Security Cloud. For installation and a first scan,
+use [Cloud setup](setup.html). Local scans have separate
+[plugin](plugin.html) and [CLI](cli.html) guides.
 
-{/* vale Microsoft.Auto = NO */}
-{/* vale Vale.Spelling = NO */}
+## Billing
 
-## Getting started
+### How are Cloud scans billed?
 
-### What is Codex Security?
+Repository scans and continuous scans set up after October 1, 2026, at
+12:53 PM Pacific are billed based on token usage at your plan's rates, in
+credits or USD depending on your billing plan. For
+[eligible accounts](#do-i-get-a-free-scanning-period-or-free-scanning-credits),
+free scanning credits apply before paid usage is billed.
 
-Software security remains one of the hardest and most important problems in engineering. Codex Security is an LLM-driven security analysis toolkit that inspects source code and returns structured, ranked vulnerability findings with proposed patches. It helps developers and security teams discover and fix security issues at scale.
+This usage is not covered by your plan's included usage allowance.
 
-### Why does it matter?
+Continuous scans set up before that cutoff are free until
+October 21, 2026. After that, they are billed at regular token rates under
+your account's billing plan if you enable paid usage. Otherwise, they pause.
 
-Software is foundational to modern industry and society, and vulnerabilities create systemic risk. Codex Security supports a defender-first workflow by continuously identifying likely issues, validating them when possible, and proposing fixes. That helps teams improve security without slowing development.
+### Do I get a free scanning period or free scanning credits?
 
-### What business problem does Codex Security solve?
+What you receive depends on whether your account had continuous scanning set
+up before October 1, 2026, at 12:53 PM Pacific:
 
-Codex Security shortens the path from a suspected issue to a confirmed, reproducible finding with evidence and a proposed patch. That reduces triage load and cuts false positives compared with traditional scanners alone.
+- If it did, your covered continuous scans remain free until October 21, 2026.
+  This free period doesn't cover repository scans or continuous scanning set
+  up after October 1, 2026, at 12:53 PM Pacific.
+- If it didn't, eligible accounts receive $500 in free scanning credits
+  instead of the free continuous-scanning period.
 
-### How does Codex Security work?
+### How do free scanning credits work?
 
-Codex Security runs analysis in an ephemeral, isolated container and temporarily clones the target repository. It performs code-level analysis and returns structured findings with a description, file and location, criticality, root cause, and a suggested remediation.
+Repository scans and continuous scanning use the same free balance. In a
+workspace, everyone shares that balance. These free scanning credits don't
+expire.
 
-For findings that include verification steps, the system executes proposed commands or tests in the same sandbox, records success or failure, exit codes, stdout, stderr, test results, and any generated diffs or artifacts, and attaches that output as evidence for review.
+When the free balance runs out, further scanning is billed under your
+account's or workspace's billing plan.
 
-### Does it replace SAST?
+### What happens when the free continuous-scanning period ends?
 
-No. Codex Security complements SAST. It adds semantic, LLM-based reasoning and automated validation, while existing SAST tools still provide broad deterministic coverage.
+Select **Keep scans running** and enable paid usage to continue these scans
+after the free period. They are then billed at regular token rates under
+your account's or workspace's billing plan.
 
-## Features
+If you opt out or don't enable paid usage, those scans pause when the free
+period ends. Select **Re-enable scans** to enable paid usage afterward.
+In a workspace, ask a workspace owner to make this choice if you don't have
+permission.
 
-### What is the analysis pipeline?
+### Where can I see token usage and charges?
 
-Codex Security follows a staged pipeline:
+Open a scan in **Scans** to review its token usage and cost. Hover over the
+token count to see input, cached input, and output tokens. Cached input is
+included in the input count, not added on top of it.
 
-1. **Analysis** builds a threat model for the repository.
-2. **Commit scanning** reviews merged commits and repository history for likely issues.
-3. **Validation** tries to reproduce likely vulnerabilities in a sandbox to reduce false positives.
-4. **Patching** integrates with Codex to propose patches that reviewers can inspect before opening a PR.
+Usage shows the cost before free scanning credits or billing exemptions,
+along with any amount covered by free scanning credits.
 
-It works alongside engineers in GitHub, Codex, and standard review workflows.
+Scans marked "Exempt from billing. No charges apply." incur no charges,
+even when they show token usage and cost.
 
-### What languages are supported?
-
-Codex Security is language-agnostic. In practice, performance depends on the model's reasoning ability for the language and framework used by the repository.
-
-### What outputs do I get after the scan completes?
-
-You get ranked findings with criticality, validation status, and a proposed patch when one is available. Findings can also include crash output, reproduction evidence, call-path context, and related annotations.
-
-### How is customer code isolated?
-
-Each analysis and validation job runs in an ephemeral Codex container with session-scoped tools. Artifacts are extracted for review, and the container is torn down after the job completes.
-
-### Does Codex Security auto-apply patches?
-
-No. The proposed patch is a recommended remediation. Users can review it and push it as a PR to GitHub from the findings UI, but Codex Security does not auto-apply changes to the repository.
+## Scanning
 
 ### Does the project need to be built for scanning?
 
-No. Codex Security can produce findings from repository and commit context without a compile step. During auto-validation, it may try to build the project inside the container if that helps reproduce the issue. For environment setup details, see [Codex cloud environments](../environments/cloud-environment.html).
+Codex Security can analyze source without a successful build. Validation may
+need dependencies or a working build to reproduce an issue. Configure those
+requirements in the [Codex cloud
+environment](../environments/cloud-environment.html).
 
-### How does Codex Security reduce false positives and avoid broken patches?
+If validation can't run, inspect what the finding establishes from source and
+what still depends on runtime or deployment behavior.
 
-Codex Security uses two stages. First, the model ranks likely issues. Then auto-validation tries to reproduce each issue in a clean container. Findings that successfully reproduce are marked as validated, which helps reduce false positives before human review.
+### What languages are supported?
 
-### How long do initial scans take, and what happens after that?
+Codex Security analyzes source across languages. Results depend on the model's
+ability to reason about the language and framework, and on the available
+repository context. A successful scan doesn't imply equal coverage across
+languages or components. Check the report for the scope actually reviewed.
 
-Initial scan time depends on repository size, build time, and how many findings proceed to validation. For some repositories, scans can take several hours. For larger repositories, they can take multiple days. Later scans are usually faster because they focus on new commits and incremental changes.
+### How do repository scans and commit monitoring differ?
 
-### What is a threat model?
+A **One-Time Scan** reviews the repository once. **Continuous Scanning** monitors
+new commits and can review selected commit history. Enable it after the first
+scan using [Monitor new commits](setup.html#5-monitor-new-commits).
 
-A threat model is the scan-time security context for a repository. It combines a concise project overview with attack-surface details such as entry points, trust boundaries, auth assumptions, and risky components. For more detail, see [Improving the threat model](threat-model.html).
+### Can I pause commit monitoring?
 
-### How is a threat model generated?
-
-Codex Security prompts the model to summarize the repository architecture and security entry points, classify the repository type, run specialized extractors, and merge the results into a project overview or threat model artifact used throughout the scan.
-
-### Does it replace manual security review?
-
-No. Codex Security accelerates review and helps rank findings, but it does not replace code-level validation, exploitability checks, or human threat assessment.
+Open **Repositories**, select the repository, and open **Monitoring settings**.
+Set monitoring to **Paused** and select **Save**. You can enable it again from
+the same settings.
 
 ### Can I edit the threat model?
 
-Yes. Codex Security creates the initial threat model, and you can update it as the architecture, risks, and business context change. For the editing workflow, see [Improving the threat model](threat-model.html).
+Yes. Update it in the monitored repository's **Monitoring settings** when the
+architecture, deployment, or security assumptions change. The [threat-model
+guide](threat-model.html) explains what to include. Changes apply to
+future scans.
 
-### Do I need to configure a scan before using threat modeling?
+## Findings and validation
 
-Yes. Threat-model guidance is tied to how and what you scan, so you need to configure the repository first. See [Codex Security setup](setup.html).
+### What does validation establish?
 
-### What does the proposed patch contain?
+Read the evidence attached to the particular finding. Source analysis can
+establish a vulnerable code path. Execution evidence can show that a specific
+reproducer or test demonstrated the issue.
 
-The proposed patch contains a minimal actionable diff with filename and line context when a remediation can be generated for the finding.
-
-### Does the patch directly modify my PR branch?
-
-No. The workflow generates a diff, patch file, or suggested change for maintainers and reviewers to inspect before applying.
-
-## Validation
-
-### What is auto-validation?
-
-Auto-validation is the phase that tries to reproduce a suspected issue in an isolated container. It records whether reproduction succeeded or failed and captures logs, commands, and related artifacts as evidence.
+A finding's recorded status and severity help organize review. Use the
+underlying evidence and prerequisites to decide whether it applies to your
+system and what to fix.
 
 ### What happens if validation fails?
 
-The finding remains unvalidated. Logs and reports still capture what was attempted so engineers can retry, investigate further, or adjust the reproduction steps.
+Inspect the attempted validation and any available logs. A failed reproducer
+can mean the issue doesn't apply, but it can also mean the environment or test
+was unsuitable. Resolve the stated gap before dismissing the finding or
+claiming that it was reproduced.
 
-{/* vale Microsoft.Auto = YES */}
-{/* vale Vale.Spelling = YES */}
+### What if the scan reports no findings?
+
+Confirm that the scan completed and reviewed the intended repository and
+revision. Read any recorded limits or unfinished work. A scan that reports no
+findings can still miss vulnerabilities.
+
+## Fixes
+
+### Does Codex Security apply patches automatically?
+
+The action depends on the finding. **Fix with Codex** on a repository finding
+starts a conversation that asks Codex to verify the issue, implement a fix,
+and run relevant tests. Review the changes in that conversation.
+
+For a finding with a suggested patch, review the diff before selecting
+**Create draft pull request**. Creating the draft doesn't merge the fix.
+
+### How do I know whether a patch fixed the issue?
+
+Review the patch's validation evidence, including whether the original issue
+still reproduces and whether legitimate behavior still works. If validation
+wasn't completed, keep that uncertainty with the finding. A proposed patch,
+draft pull request, or status change alone doesn't verify a fix.

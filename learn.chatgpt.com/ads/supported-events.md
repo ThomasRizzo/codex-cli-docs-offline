@@ -22,7 +22,8 @@
 
 `app_installed` and `app_opened` are available through the Conversions API
 only. Send them with `action_source` set to `mobile_app`. They are not
-supported by the JavaScript Pixel currently.
+supported by the JavaScript Pixel currently. For Android app events, include
+`events[].user.android_advertising_id` when available. IDFA is not supported.
 
 Use `page_viewed` for page loads. Use `contents_viewed` when a user views a
 specific product or content item, including interactions that happen after the
@@ -84,10 +85,42 @@ only are not supported by the JavaScript Pixel.
 | `name`         | No       | string  | Human-readable item name.                                                                                                         |
 | `content_type` | No       | string  | Optional non-empty category such as `product`, `plan`, or `page`.                                                                 |
 | `quantity`     | No       | integer | Quantity of the item. Use integers, not strings.                                                                                  |
-| `amount`       | No       | integer | Item-level monetary value in the currency's standard minor unit.                                                                  |
+| `amount`       | No       | integer | Per-unit price in the currency's standard minor unit. Supply `quantity` separately.                                               |
 | `currency`     | No       | string  | Include when you send an item-level `amount`, or rely on the event-level `currency` when one currency applies to the whole event. |
 | `variant_dict` | No       | object  | Conversions API only. An object with string keys and values, such as `{"size": "medium", "color": "blue"}`.                       |
 
 Use lowercase letters, numbers, underscores, or dashes in
 `custom_event_name`. Keep the name between 1 and 64 characters, and do not
 reuse one of the built-in event names.
+
+### Item and event amounts
+
+The Measurement Pixel and Conversions API use the same amount semantics.
+`contents[].amount` is the price of one unit. The event-level `amount`
+represents the value of the whole event.
+
+For example, two units at TRY 799.00 each use item `amount: 79900` and
+`quantity: 2`. For an `order_created` event containing only those units with no
+other adjustments, send this event data:
+
+```json
+{
+  "type": "contents",
+  "amount": 159800,
+  "currency": "TRY",
+  "contents": [
+    {
+      "id": "SKU24680",
+      "quantity": 2,
+      "amount": 79900,
+      "currency": "TRY"
+    }
+  ]
+}
+```
+
+Here, `79900` means 79,900 minor units, or TRY 799.00, per unit. The event value
+is `2 × 79900 = 159800` minor units, or TRY 1,598.00.
+
+If TRY 799.00 is the total for both units, send item `amount: 39950` with
+`quantity: 2` instead.

@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 <img src="https://developers.openai.com/cookbook/assets/images/realtime_prompting_guide.png"
   style="width:450px; height:450px;"
 />

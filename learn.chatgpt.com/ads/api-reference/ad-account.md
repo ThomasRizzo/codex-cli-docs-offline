@@ -4,19 +4,45 @@
 
 ## Update account brand metadata
 
-Set the account name or favicon and start a new brand review.
-At least one of `name` or `favicon_file_id` is required.
+Update account names or the advertiser icon. Send at least one field.
+
+Changing the legal or public brand name pauses ad delivery until the account
+passes review.
+
 This operation must be enabled for the ad account. If it returns `403`, contact
 your OpenAI partner representative.
 
 `POST /ad_account/brand`
 
-| Field             | Type   | Required | Notes                                               |
-| ----------------- | ------ | -------- | --------------------------------------------------- |
-| `name`            | string | No       | Updated account display name.                       |
-| `favicon_file_id` | string | No       | File ID uploaded with `purpose: "account_favicon"`. |
+| Field             | Type   | Required | Notes                                                     |
+| ----------------- | ------ | -------- | --------------------------------------------------------- |
+| `legal_name`      | string | No       | Legal business name.                                      |
+| `account_name`    | string | No       | Internal name shown in Ads Manager.                       |
+| `brand_name`      | string | No       | Public advertiser name shown in ads.                      |
+| `name`            | string | No       | Legacy field that sets all three names to the same value. |
+| `favicon_file_id` | string | No       | File ID uploaded with `purpose: "account_favicon"`.       |
 
-Upload the favicon with the [file endpoint](https://developers.openai.com/ads/api-reference/files#upload-an-account-favicon),
+Use `legal_name`, `account_name`, or `brand_name` to update names independently.
+Omitted names remain unchanged.
+
+Legacy `name` sets all three names to the same value, replacing any separate
+values. Combining `name` with an individual name field returns `422`.
+
+Names must contain 2–1000 characters after trimming and cannot contain `<` or `>`.
+The API rejects `null` and blank names.
+
+To change only the name shown in ads:
+
+```bash
+curl -X POST "https://api.ads.openai.com/v1/ad_account/brand" \
+  -H "Authorization: Bearer $OPENAI_ADS_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "brand_name": "Acme"
+  }'
+```
+
+Upload the advertiser icon with the [file endpoint](https://developers.openai.com/ads/api-reference/files#upload-an-account-favicon),
 then assign it to the account:
 
 ```bash
@@ -28,9 +54,10 @@ curl -X POST "https://api.ads.openai.com/v1/ad_account/brand" \
   }'
 ```
 
-The response includes the updated account. Poll `GET /ad_account` until
-`review.status` is `approved`. An account with any other review status cannot
-serve ads.
+Returns the updated account in the same format as `GET /ad_account`.
+
+The API may save changes before returning `503`. Retrieve the account to check
+its values, then retry the same request.
 
 ## Get ad account metadata
 
@@ -48,7 +75,10 @@ curl -X GET "https://api.ads.openai.com/v1/ad_account" \
 ```json
 {
   "id": "adacct_123",
-  "name": "Acme Ads",
+  "name": "Acme LLC",
+  "legal_name": "Acme LLC",
+  "account_name": "Acme US campaigns",
+  "brand_name": "Acme",
   "url": "https://www.acme.example",
   "preview_url": null,
   "status": "active",
@@ -63,13 +93,19 @@ curl -X GET "https://api.ads.openai.com/v1/ad_account" \
 The response includes:
 
 - `id` for the ad account
-- `name` for the display name
+- `name` for the legal business name, retained for compatibility
+- `legal_name` for the same legal business name
+- `account_name` for the internal name shown in Ads Manager
+- `brand_name` for the public advertiser name shown in ads
 - `url` for the primary destination
-- `preview_url` for the favicon preview URL when one is available
+- `preview_url` for the advertiser icon preview URL when one is available
 - `status` when an account status is available
 - `timezone` for the ad account timezone
 - `currency_code` for the account currency
 - `review` for the account's brand review status
+
+`legal_name`, `account_name`, and `brand_name` are optional response fields.
+Unset account and brand names default to the legal name.
 
 ## Account spending limits
 

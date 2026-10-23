@@ -6,6 +6,20 @@ Use these options when you need more control over providers, policies, and integ
 
 For background on project guidance, reusable capabilities, custom slash commands, subagent workflows, and integrations, see [Customization](../customization/overview.html). For configuration keys, see [Configuration Reference](config-reference.html).
 
+<a id="applying-these-examples-to-synced-work"></a>
+
+## Applying these examples to Local computer access with Work Cloud
+
+These examples describe Codex configuration. Check the [Configuration Reference](config-reference.html) before adapting them for Local computer access with Work Cloud.
+
+- **Policy scope:** For Work with local access and dots, supported Global policy governs the shared cloud orchestrator when managed policy is enabled; applicable local execution requirements govern the connected computer. Work cloud containers retain existing Work Cloud policies.
+- **Local execution:** MDM and legacy managed-device requirements rank above Agent Security. The device's system requirements file ranks below Agent Security.
+- **Enterprise hooks:** Where enabled for your workspace, this feature supports admin-defined MCP hooks that run on the cloud coordinator (orchestrator) for supported lifecycle and tool events. Command hooks and hooks from local configuration or plugins are not supported with cloud orchestration, even when tools execute locally.
+- **Auditing:** Before relying on these hooks, test the callback connection, confirm the events it receives, and check how failures affect the task. MCP hooks do not provide a complete Compliance API audit trail.
+- **Other settings:** Custom model providers and host-local paths do not carry over to this feature through managed configuration. Review network restrictions and field-specific merge rules in [Managed configuration](../enterprise/managed-configuration.html).
+
+See [Hooks](../hooks.html) for support scope and setup guidance.
+
 ## Profiles
 
 Profiles let you save named configuration layers and switch between them from
@@ -16,13 +30,18 @@ Profile names can contain letters, numbers, hyphens, and underscores.
 Create a separate TOML file for each profile. Use top-level config keys in the
 profile file; don't nest them under `[profiles.profile-name]`.
 
+The example uses [GPT-6.1 Sol](../models.html#gpt-6.1-sol), which requires access
+for your signed-in account or workspace. If it isn't available, choose a model
+you can use.
+
 ```toml
 # ~/.codex/deep-review.config.toml
-model = "gpt-6-sol"
+model = "gpt-6.1-sol"
 model_reasoning_effort = "medium"
 approval_policy = "on-request"
 model_catalog_json = "/Users/me/.codex/model-catalogs/deep-review.json"
 ```
+
 
 ```shell
 codex --profile deep-review
@@ -43,22 +62,23 @@ longer supported. Move legacy profile settings into
 
 ## One-off overrides from the CLI
 
-In addition to editing `~/.codex/config.toml`, you can override configuration for a single run from the CLI:
+You can edit `~/.codex/config.toml` or override configuration for a single run from the CLI:
 
 - Prefer dedicated flags when they exist (for example, `--model`).
 - Use `-c` / `--config` when you need to override an arbitrary key.
 
-Examples:
+The model overrides below also require [GPT-6.1 Sol access](../models.html#gpt-6.1-sol).
+If you don't have access, substitute a model available to you:
 
-```shell
+```bash
 # Dedicated flag
-codex --model gpt-6-sol
-
+codex --model gpt-6.1-sol
 # Generic key/value override (value is TOML, not JSON)
-codex --config model='"gpt-6-sol"'
+codex --config model='"gpt-6.1-sol"'
 codex --config sandbox_workspace_write.network_access=true
 codex --config 'shell_environment_policy.include_only=["PATH","HOME"]'
 ```
+
 
 Notes:
 
@@ -159,28 +179,32 @@ Set `project_root_markers = []` to skip searching parent directories and treat t
 
 ## Custom model providers
 
+If your organization provides a model gateway, follow
+[Sign in with ChatGPT through a gateway](../enterprise/sign-in-with-chatgpt-through-a-gateway.html)
+or [Use API/provider credentials](../enterprise/connect-to-a-gateway.html)
+for client setup and verification. For organization-wide deployment, see
+[Roll out a gateway](../enterprise/roll-out-a-gateway.html).
+
 A model provider defines how Codex connects to a model (base URL, wire API, authentication, and optional HTTP headers). Custom providers can't reuse the reserved built-in provider IDs: `openai`, `ollama`, and `lmstudio`.
 
-Define additional providers and point `model_provider` at them:
+Define more providers and point `model_provider` at them:
 
 ```toml
-model = "gpt-6-sol"
+model = "gpt-6.1-sol"
 model_provider = "proxy"
-
 [model_providers.proxy]
 name = "OpenAI using LLM proxy"
 base_url = "http://proxy.example.com"
 env_key = "OPENAI_API_KEY"
-
 [model_providers.local_ollama]
 name = "Ollama"
 base_url = "http://localhost:11434/v1"
-
 [model_providers.mistral]
 name = "Mistral"
 base_url = "https://api.mistral.ai/v1"
 env_key = "MISTRAL_API_KEY"
 ```
+
 
 If a custom provider supports the standalone web search endpoint, advertise
 that capability in its provider configuration:
@@ -301,7 +325,7 @@ model_context_window = 128000             # Context window size
 
 Pick approval strictness (affects when Codex pauses) and sandbox level (affects file/network access).
 
-For operational details to keep in mind while editing `config.toml`, see [Common sandbox and approval combinations](../agent-approvals-security.html#common-sandbox-and-approval-combinations), [Protected paths in writable roots](../agent-approvals-security.html#protected-paths-in-writable-roots), and [Network access](../agent-approvals-security.html#network-access).
+For guidance on editing `config.toml`, see [Common sandbox and approval combinations](../agent-approvals-security.html#common-sandbox-and-approval-combinations), [Protected paths in writable roots](../agent-approvals-security.html#protected-paths-in-writable-roots), and [Network access](../agent-approvals-security.html#network-access).
 
 Codex and ChatGPT Work no longer support `approval_policy = "untrusted"`. See
 [Migrate from the retired `untrusted` approval policy](../agent-approvals-security.html#migrate-from-the-retired-untrusted-approval-policy)
@@ -354,11 +378,11 @@ For the complete key list and requirements constraints, see
 [Configuration Reference](config-reference.html) and
 [Managed configuration](../enterprise/managed-configuration.html).
 
-In workspace-write mode, some environments keep `.git/` and `.codex/`
-  read-only even when the rest of the workspace is writable. This is why
-  commands like `git commit` may still require approval to run outside the
-  sandbox. If you want Codex to skip specific commands (for example, block `git
-  commit` outside the sandbox), use
+In workspace-write mode, some environments keep `.git/`, `.agents/`,
+  `.codex/`, and `.aws/` read-only even when the rest of the workspace is
+  writable. This is why commands like `git commit` may still require approval to
+  run outside the sandbox. If you want Codex to skip specific commands (for
+  example, block `git commit` outside the sandbox), use
   [rules](../agent-configuration/rules.html).
 
 Disable sandboxing entirely (use only if your environment already isolates processes):
@@ -478,12 +502,14 @@ For more security and privacy guidance around telemetry, see [Security](../agent
 
 By default, Codex periodically sends a small amount of anonymous usage and health data back to OpenAI. This helps detect when Codex isn't working correctly and shows what features and configuration options are being used, so the Codex team can focus on what matters most. These metrics don't contain any personally identifiable information (PII). Metrics collection is independent of OTel log/trace export.
 
-If you want to disable metrics collection entirely across the ChatGPT desktop app, Codex CLI, and IDE extension on a machine, set the analytics flag in your config:
+To disable analytics and metrics collection in Codex CLI, set the analytics flag in your config:
 
 ```toml
 [analytics]
 enabled = false
 ```
+
+This also disables custom OTLP metrics exporters in Codex CLI.
 
 Each metric includes its own fields plus the default context fields below.
 

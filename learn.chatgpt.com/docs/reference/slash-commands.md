@@ -21,6 +21,8 @@ Enabled skills also appear in the slash command list. Custom prompts appear as
 | Slash command        | Description                                                                             |
 | -------------------- | --------------------------------------------------------------------------------------- |
 | `/approve`           | Approve one retry of a recent automatic-review denial, when automatic review is active. |
+| `/archive`           | Archive the current chat.                                                               |
+| `/chat`              | Choose a chat without a project before starting a new chat.                             |
 | `/cloud`             | Run the chat in the cloud, when cloud execution is available.                           |
 | `/cloud-environment` | Choose the cloud environment for the chat.                                              |
 | `/compact`           | Compact the current chat's context.                                                     |
@@ -34,15 +36,17 @@ Enabled skills also appear in the slash command list. Custom prompts appear as
 | `/mcp`               | Open MCP status to view connected servers.                                              |
 | `/memories`          | Configure whether the chat can use or generate memories, when Memories is available.    |
 | `/model`             | Choose the model for the current chat.                                                  |
+| `/new`               | Start a blank chat in the same local workspace, when available.                         |
 | `/pet`               | Wake or tuck away the desktop pet.                                                      |
-| `/personality`       | Choose how Codex responds, when the current model supports personalities.               |
+| `/pin`               | Pin or unpin the current chat, when available.                                          |
 | `/plan`              | Toggle plan mode for multi-step planning.                                               |
 | `/project`           | Choose a project for new chats.                                                         |
 | `/reasoning`         | Choose the reasoning effort for the current chat.                                       |
+| `/rename`            | Rename the current chat.                                                                |
 | `/review`            | Start code review mode to review uncommitted changes or compare against a base branch.  |
 | `/side`              | Start a temporary side chat without interrupting the main chat.                         |
 | `/status`            | Show the chat ID, context usage, and rate limits.                                       |
-| `/task`              | Start a chat without a project.                                                         |
+| `/usage`             | Open usage and billing settings, when available with ChatGPT sign-in.                   |
 | `/worktree`          | Run the chat in a new Git worktree.                                                     |
 
 ## Set or manage a goal with `/goal`

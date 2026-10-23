@@ -43,7 +43,7 @@ starterPrompt:
 
     Do not invent join keys or silently merge conflicting records. Preserve the
     original files and return the consolidated workbook for review.
-  suggestedModel: gpt-6-sol
+  suggestedModel: gpt-6.1-sol
   suggestedEffort: medium
 relatedLinks:
   - label: "OpenAI Academy: Everyday work"

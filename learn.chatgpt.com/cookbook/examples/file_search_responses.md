@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 Although RAG can be overwhelming, searching amongst PDF file shouldn't be complicated. One of the most adopted options as of now is parsing your PDF, defining your chunking strategies, uploading those chunks to a storage provider, running embeddings on those chunks of texts and storing those embeddings in a vector database. And that's only the setup — retrieving content in our LLM workflow also requires multiple steps.
 
 This is where file search — a hosted tool you can use in the Responses API — comes in. It allows you to search your knowledge base and generate an answer based on the retrieved content. In this cookbook, we'll upload those PDFs to a vector store on OpenAI and use file search to fetch additional context from this vector store to answer the questions we generated in the first step. Then, we'll initially create a small set of questions based on PDFs extracted from OpenAI's blog ([openai.com/news](https://openai.com/news)).

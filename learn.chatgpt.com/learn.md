@@ -11,11 +11,11 @@ Curated resources are listed here with their canonical destination URLs.
 - [Combined learn docs](https://developers.openai.com/learn/llms-full.txt): Single-file Markdown export of learn docs and curated items.
 
 ## Code
-- [Agents SDK — Python](https://github.com/openai/openai-agents-python): Run agent workflows in your application with the Python SDK.
-- [Agents SDK — TypeScript](https://github.com/openai/openai-agents-js): Run agent workflows in your application with the TypeScript SDK.
-- [Agents SDK quickstart](https://openai.github.io/openai-agents-python/quickstart/): Install the Agents SDK and run an agent in Python.
+- [Agents SDK — Python](https://github.com/openai/openai-agents-python): Python SDK for developing agents with OpenAI.
+- [Agents SDK — TypeScript](https://github.com/openai/openai-agents-js): TypeScript SDK for developing agents with OpenAI.
+- [Agents SDK quickstart](https://openai.github.io/openai-agents-python/quickstart/): Quickstart project for building agents with the Agents SDK.
 - [ChatKit advanced samples](https://github.com/openai/openai-chatkit-advanced-samples): Advanced samples showcasing the capabilities of ChatKit (part of AgentKit).
-- [ChatKit starter app](https://github.com/openai/openai-chatkit-starter-app): Maintain ChatKit integrations backed by an existing Agent Builder workflow during its transition window.
+- [ChatKit starter app](https://github.com/openai/openai-chatkit-starter-app): Integrate ChatKit with an Agent Builder workflow in your application.
 - [Computer Use API — starter app](https://github.com/openai/openai-cua-sample-app): Sample app showcasing Computer Use API integration.
 - [CS agents demo](https://github.com/openai/openai-cs-agents-demo): Demo showcasing customer service agents orchestration.
 - [Frontend testing demo](https://github.com/openai/openai-testing-agent-demo): Demo application for frontend testing using CUA.
@@ -66,14 +66,13 @@ Curated resources are listed here with their canonical destination URLs.
 
 ## Guide
 - [Agentic Commerce Protocol](https://developers.openai.com/commerce): Design flows for embedded commerce in ChatGPT.
-- [Agents API multi-agent orchestration](https://developers.openai.com/api/docs/guides/agents-api/multi-agent): Delegate work across agents with the managed Codex harness.
-- [Agents API quickstart](https://developers.openai.com/api/docs/guides/agents-api/quickstart): Run a task, stream progress, and continue a session with the managed Codex harness.
-- [Agents SDK quickstart](https://openai.github.io/openai-agents-python/quickstart/): Install the Agents SDK and run an agent in Python.
+- [Agents SDK quickstart](https://openai.github.io/openai-agents-python/quickstart/): Step-by-step guide to quickly build agents with the OpenAI Agents SDK.
 - [API deployment checklist](https://developers.openai.com/api/docs/guides/deployment-checklist): Checklist for tuning Responses API applications before launch.
 - [Audio & speech guide](https://platform.openai.com/docs/guides/audio): Overview of approaches for audio processing and speech in applications.
 - [Background mode guide](https://platform.openai.com/docs/guides/background): Guide to running tasks in the background with Responses.
 - [Batch API guide](https://platform.openai.com/docs/guides/batch): Guide on how to use the Batch API to reduce costs
-- [Building agents guide](https://developers.openai.com/api/docs/guides/agents): Official guide to building agents using the OpenAI platform.
+- [Building agents guide](https://platform.openai.com/docs/guides/agents): Official guide to building agents using the OpenAI platform.
+- [Building guardrails for agents](https://openai.github.io/openai-agents-python/guardrails/): Guide to implementing safeguards and guardrails in agent applications.
 - [Built-in tools guide](https://platform.openai.com/docs/guides/tools?api-mode=responses): Guide to using OpenAI's built-in tools with the Responses API.
 - [Code interpreter guide](https://platform.openai.com/docs/guides/tools-code-interpreter): Guide to using the built-in code interpreter tool.
 - [Computer Use API guide](https://platform.openai.com/docs/guides/tools-computer-use): Guide to using the Computer Use API (CUA).
@@ -87,7 +86,6 @@ Curated resources are listed here with their canonical destination URLs.
 - [Function calling guide](https://platform.openai.com/docs/guides/function-calling): Introduction to function calling with OpenAI models.
 - [Getting Started with Evals](https://platform.openai.com/docs/guides/evaluation-getting-started): Step-by-step guide to setting up your first eval.
 - [Graders](https://platform.openai.com/docs/guides/graders): Guide to using graders for evaluations.
-- [Guardrails with the Agents SDK](https://openai.github.io/openai-agents-python/guardrails/): Configure application-side safeguards in an Agents SDK workflow.
 - [Image generation guide](https://platform.openai.com/docs/guides/image-generation): Guide to generating images using OpenAI models.
 - [Keep costs low & accuracy high](https://platform.openai.com/docs/guides/reasoning-best-practices#how-to-keep-costs-low-and-accuracy-high): Guide on balancing cost efficiency with model accuracy.
 - [Latency optimization guide](https://platform.openai.com/docs/guides/latency-optimization): Best practices for reducing model response latency.
@@ -97,10 +95,10 @@ Curated resources are listed here with their canonical destination URLs.
 - [Model optimization guide](https://platform.openai.com/docs/guides/model-optimization): Guide on optimizing OpenAI models for performance and cost.
 - [OpenAI Developers plugin](https://developers.openai.com/learn/developers-codex-plugin): Install and use the OpenAI Developers plugin in Codex, Claude Code, or Cursor.
 - [OpenAI models page](https://platform.openai.com/docs/models): Overview of the models available on the OpenAI platform.
-- [Orchestration with the Agents SDK](https://openai.github.io/openai-agents-python/multi_agent/): Coordinate agents in an existing Agents SDK application.
+- [Orchestrating multiple agents](https://openai.github.io/openai-agents-python/multi_agent/): Guide to coordinating multiple agents with shared context.
 - [Predicted outputs guide](https://platform.openai.com/docs/guides/predicted-outputs): Guide to understanding and using predicted outputs.
 - [Production best practices](https://platform.openai.com/docs/guides/production-best-practices): Guide on best practices for running AI applications in production
-- [Prompt engineering guide](https://developers.openai.com/api/docs/guides/prompt-engineering): Detailed guide on prompt engineering strategies.
+- [Prompt engineering guide](https://platform.openai.com/docs/guides/realtime-transcription): Detailed guide on prompt engineering strategies.
 - [Prompt Optimizer](https://platform.openai.com/docs/guides/prompt-optimizer): Guide to refining prompts with the Prompt Optimizer.
 - [RAG technique overview](https://platform.openai.com/docs/guides/optimizing-llm-accuracy#retrieval-augmented-generation-rag): Overview of retrieval-augmented generation techniques.
 - [Rate limits guide](https://platform.openai.com/docs/guides/rate-limits): Guide to understanding and managing rate limits
@@ -120,7 +118,7 @@ Curated resources are listed here with their canonical destination URLs.
 - [Structured outputs guide](https://platform.openai.com/docs/guides/structured-outputs?api-mode=responses): Guide for producing structured outputs with the Responses API.
 - [Supervised fine-tuning overview](https://platform.openai.com/docs/guides/supervised-fine-tuning): Guide to supervised fine-tuning for customizing model behavior.
 - [Tools overview guide](https://openai.github.io/openai-agents-js/guides/voice-agents/build/#delegation-through-tools): Guide covering realtime delegation through tools.
-- [Tracing with the Agents SDK](https://openai.github.io/openai-agents-python/tracing/): Monitor and debug an Agents SDK workflow with tracing.
+- [Tracing module](https://openai.github.io/openai-agents-python/tracing/): Guide to monitoring and debugging agents with tracing.
 - [Transcription guide](https://platform.openai.com/docs/guides/realtime-transcription): Detailed guide for building transcription pipelines.
 - [Transcription intro](https://platform.openai.com/docs/guides/speech-to-text#transcriptions): Introduction to converting speech to text with OpenAI APIs.
 - [Translation use case](https://platform.openai.com/docs/guides/speech-to-text#translations): Overview of building multilingual voice applications.

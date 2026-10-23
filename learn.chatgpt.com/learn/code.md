@@ -6,11 +6,11 @@
 
 - [Sora starter app](https://github.com/openai/openai-sora-sample-app): Sample app showcasing integrations with Sora in the API.
 - [ChatKit advanced samples](https://github.com/openai/openai-chatkit-advanced-samples): Advanced samples showcasing the capabilities of ChatKit (part of AgentKit).
-- [ChatKit starter app](https://github.com/openai/openai-chatkit-starter-app): Maintain ChatKit integrations backed by an existing Agent Builder workflow during its transition window.
+- [ChatKit starter app](https://github.com/openai/openai-chatkit-starter-app): Integrate ChatKit with an Agent Builder workflow in your application.
 - [Plugin UI examples](https://github.com/openai/openai-apps-sdk-examples): Example UI and corresponding MCP servers for ChatGPT plugins.
-- [Agents SDK — Python](https://github.com/openai/openai-agents-python): Run agent workflows in your application with the Python SDK.
-- [Agents SDK — TypeScript](https://github.com/openai/openai-agents-js): Run agent workflows in your application with the TypeScript SDK.
-- [Agents SDK quickstart](https://openai.github.io/openai-agents-python/quickstart/): Install the Agents SDK and run an agent in Python.
+- [Agents SDK — Python](https://github.com/openai/openai-agents-python): Python SDK for developing agents with OpenAI.
+- [Agents SDK — TypeScript](https://github.com/openai/openai-agents-js): TypeScript SDK for developing agents with OpenAI.
+- [Agents SDK quickstart](https://openai.github.io/openai-agents-python/quickstart/): Quickstart project for building agents with the Agents SDK.
 - [Computer Use API — starter app](https://github.com/openai/openai-cua-sample-app): Sample app showcasing Computer Use API integration.
 - [Frontend testing demo](https://github.com/openai/openai-testing-agent-demo): Demo application for frontend testing using CUA.
 - [openai.fm](https://github.com/openai/openai-fm): Code samples for speech processing from the openai.fm repo.

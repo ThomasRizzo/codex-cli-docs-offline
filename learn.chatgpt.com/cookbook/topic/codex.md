@@ -4,6 +4,7 @@
 
 > Automate developer workflows and build code-generation experiences using Codex-driven agents and tools.
 
+- [Harness-aware evaluation of plugins](/cookbook/examples/partners/harness_aware_plugin_evals/harness_aware_plugin_evals.md): Evaluate an MCP-backed plugin through direct tool tests, a controlled model loop, and the Codex harness, then use shared test cases and traces to diagnose and improve its behavior.
 - [Generate Transparent Image Assets for Campaigns and Presentations](/cookbook/examples/multimodal/transparent-image-assets-for-campaigns-and-presentations.md): Generate reusable transparent PNG assets for seasonal ecommerce campaigns and branded PowerPoint presentations.
 - [Iterating Development Workflows with Codex](/cookbook/examples/codex/iterating-development-workflows-with-codex.md): Build and improve Codex development workflows using repository harnesses, phased implementation plans, approval gates, reusable skills, and evidence-backed retrospectives.
 - [Build an Agent Improvement Loop with Traces, Evals, and Codex](/cookbook/examples/agents_sdk/agent_improvement_loop.md): Build a trace-driven improvement loop that turns human and model feedback into Promptfoo evals, HALO-ranked harness changes, and a Codex handoff.

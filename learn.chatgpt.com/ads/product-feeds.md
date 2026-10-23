@@ -4,6 +4,8 @@
 
 Use product feeds to create ads from your catalog. Upload your product data, select the products an ad group can use, and create an ad template that fills in product details when an ad is shown.
 
+For hotel properties, use the separate [Hotel property feed guide (limited beta)](https://developers.openai.com/ads/hotel-feeds).
+
 Examples use an ad account-scoped Advertiser API key, `${OPENAI_ADS_API_KEY}`, and sample IDs such as `fd_123`, `cmpn_123`, `adgrp_123`, and `ad_123`. Replace these with the IDs returned by your requests. Keep the API key on your server. See [Authentication](https://developers.openai.com/ads/api-reference/authentication) for request conventions.
 
 The examples use a US catalog with USD prices. Use the countries, product information, and currency appropriate to your catalog and ad account.
@@ -544,7 +546,7 @@ Use the body and price macros as shown in the example. You can combine supported
 
 The selected product supplies the image and destination URL, so this example does not upload a separate creative image or set a `target_url`. Each product-feed ad group can contain at most one non-archived product-ad template.
 
-To add tracking parameters to product URLs, use `landing_page_configuration` on the campaign, ad group, or ad. See the [Campaigns reference](https://developers.openai.com/ads/api-reference/campaigns).
+To add tracking parameters to product URLs, use account tracking settings or `landing_page_configuration` on the campaign, ad group, or ad. Individual products have no separate configurable ad entity; the ad's tracking settings apply to their destinations. See [tracking parameters](https://developers.openai.com/ads/campaign-management#tracking-parameters) for parameter precedence, Legacy behavior, examples, and migration guidance.
 
 ### 4. Inspect before activation
 

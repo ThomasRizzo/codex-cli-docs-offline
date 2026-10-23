@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 ## Overview
 
 This notebook provides a clear, hands-on guide for beginners to quickly get started with Speech-to-Text (STT) using the OpenAI API. You'll explore multiple practical methods, their use cases, and considerations.

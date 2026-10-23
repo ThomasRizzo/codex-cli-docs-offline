@@ -4,6 +4,7 @@
 
 > Agents are systems that independently accomplish tasks on your behalf. Agents use an LLM to execute instructions and make decisions. They have access to tools to gather context and take actions, always operating within clearly defined guardrails.
 
+- [Run Agents API sandboxes on AWS Lambda MicroVMs](/cookbook/examples/agents_api/sandboxes/aws/readme.md): Run agent tools in AWS Lambda MicroVMs with application-managed or webhook-managed provisioning, file transfers, and suspend/resume.
 - [Optimizing Customer Support Agents for Cost and Quality](/cookbook/examples/agent_optimization/optimizing_agents_for_cost_and_quality.md): Optimize agents on cost, latency and performance.
 - [Build an SRE agent for incident response](/cookbook/examples/agents_api/apps/sev_bot/readme.md): Investigate incidents in Slack using service telemetry, GitHub, AWS, and past incident reports, with human review before recovery.
 - [Build a Slack bot with the Agents API](/cookbook/examples/agents_api/apps/slack_bot/readme.md): Connect Slack threads to persistent agent sessions, workplace tools, and isolated sandboxes.

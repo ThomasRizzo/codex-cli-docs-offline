@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 One of the most exciting things about the Realtime API is that the emotion, tone and pace of speech are all passed to the model for inference. Traditional cascaded voice systems (involving STT and TTS) introduce an intermediate transcription step, relying on SSML or prompting to approximate prosody, which inherently loses fidelity. The speaker's expressiveness is literally lost in translation. Because it can process raw audio, the Realtime API preserves those audio attributes through inference, minimizing latency and enriching responses with tonal and inflectional cues. Because of this, the Realtime API makes LLM-powered speech translation closer to a live interpreter than ever before. 
 
 This cookbook demonstrates how to use OpenAI's [ Realtime API](https://platform.openai.com/docs/guides/realtime) to build a multi-lingual, one-way translation workflow with WebSockets. It is implemented using the [Realtime + WebSockets integration](https://platform.openai.com/docs/guides/realtime-websocket) in a speaker application and a WebSocket server to mirror the translated audio to a listener application. 

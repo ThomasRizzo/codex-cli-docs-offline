@@ -29,7 +29,7 @@ Leverage Codex to make targeted changes from visual inputs or prompts, and have 
 
 Tag Codex in Slack when there's a feature request or a reported issue, so that it can pick up the task and work on it in the background.
 
-- [Kick off coding tasks from Slack](https://developers.openai.com/codex/use-cases/slack-coding-tasks): Mention `@Codex` in Slack to start a chat tied to the right repo and environment, then...
+- [Kick off coding tasks from Slack](https://developers.openai.com/codex/use-cases/slack-coding-tasks): Mention `@ChatGPT` in Slack to request repository work in an eligible workspace-shared Codex...
 
 ## Deploy a preview
 

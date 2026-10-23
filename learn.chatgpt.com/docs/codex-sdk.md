@@ -66,6 +66,26 @@ const result2 = await thread2.run("Pick up where you left off");
 console.log(result2.finalResponse);
 ```
 
+### Configuration overrides
+
+Pass `config` to set structured Codex configuration. For keys that can't be
+expressed as dotted paths, use `configOverrides` to pass raw TOML strings as
+separate `--config` arguments:
+
+```ts
+const codex = new Codex({
+  config: { default_permissions: "audit" },
+  configOverrides: [
+    'permissions.audit.filesystem={":root"="read","/path/to/project/.env"="deny"}',
+  ],
+});
+```
+
+Raw overrides take precedence over structured `config`. The SDK applies
+managed settings such as `baseUrl` and thread-specific options afterward, so
+they take precedence over both. These overrides don't change your Codex configuration
+files.
+
 For more details, check out the [TypeScript repo](https://github.com/openai/codex/tree/main/sdk/typescript).
 
 ## Python library
@@ -88,37 +108,35 @@ in to newer prerelease builds.
 
 ### Usage
 
-Start Codex, create a thread, and run a prompt:
+Start Codex, create a thread, and run a prompt. The examples use GPT-6.1 Sol,
+which must be available to your signed-in account. Otherwise, omit `model` to
+use your configured default. See [GPT-6.1 Sol availability by plan](models.html#gpt-6.1-sol).
 
 ```python
 from openai_codex import Codex, Sandbox
-
 with Codex() as codex:
     thread = codex.thread_start(
-        model="gpt-6-sol",
+        model="gpt-6.1-sol",
         sandbox=Sandbox.workspace_write,
     )
     result = thread.run("Make a plan to diagnose and fix the CI failures")
     print(result.final_response)
 ```
 
+
 Use `AsyncCodex` when your application is already asynchronous:
 
 ```python
 import asyncio
-
 from openai_codex import AsyncCodex
-
-
 async def main() -> None:
     async with AsyncCodex() as codex:
-        thread = await codex.thread_start(model="gpt-6-sol")
+        thread = await codex.thread_start(model="gpt-6.1-sol")
         result = await thread.run("Implement the plan")
         print(result.final_response)
-
-
 asyncio.run(main())
 ```
+
 
 ### Sandbox presets
 

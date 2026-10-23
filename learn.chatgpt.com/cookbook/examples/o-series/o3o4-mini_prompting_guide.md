@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 ## Introduction 
 The o3/o4-mini models are the latest in our o-series of models trained to think for longer before responding. They are the smartest models we’ve released to date and represent a significant step forward from o1/o3-mini in tool calling capabilities. These models are trained to use tools natively within their chain of thought (CoT) which unlocks improved reasoning capabilities around when and how to use tools. We’ve released a guide on how to [call functions](https://developers.openai.com/cookbook/examples/reasoning_function_calls) with these models via the responses API, this guide builds on top of that and tells you how you can get the best function calling performance with these models.
 

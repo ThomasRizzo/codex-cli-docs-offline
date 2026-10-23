@@ -18,6 +18,15 @@ The CLI and IDE extension share the same configuration layers. You can use them 
 
 ## Configuration precedence
 
+Requirements constrain behavior; configuration values provide defaults. Local computer access with Work Cloud follows these requirements:
+
+- **Across policies:** A higher-priority policy wins over a lower-priority policy, even when the lower-priority policy is more specific.
+- **Within one policy:** OS-specific environment overrides take priority over all-OS environment overrides, followed by Global.
+- **For local execution:** MDM and legacy managed-device requirements rank above Agent Security. The device's system requirements file ranks below Agent Security.
+- **For Work Cloud:** Work cloud containers retain existing Work Cloud policies. For Work with local access and dots, supported Global policy governs the shared cloud orchestrator when managed policy is enabled; applicable local execution requirements govern the connected computer.
+
+Some requirements have field-specific merge rules. See [Managed configuration](../enterprise/managed-configuration.html) for policy scope and runtime limits, and the [Configuration Reference](config-reference.html) for Work compatibility.
+
 Codex resolves values in this order (highest precedence first):
 
 1. CLI flags and `--config` overrides
@@ -53,7 +62,7 @@ Here are a few options people change most often:
 Choose the model Codex uses by default in the CLI and IDE.
 
 ```toml
-model = "gpt-6-sol"
+model = "gpt-6.1-sol"
 ```
 
 
@@ -75,7 +84,7 @@ Adjust how much filesystem and network access Codex has while executing commands
 sandbox_mode = "workspace-write"
 ```
 
-For mode-by-mode behavior (including protected `.git`/`.codex` paths and network defaults), see [Sandbox and approvals](../agent-approvals-security.html#sandbox-and-approvals), [Protected paths in writable roots](../agent-approvals-security.html#protected-paths-in-writable-roots), and [Network access](../agent-approvals-security.html#network-access).
+For mode-by-mode behavior (including protected `.git`, `.agents`, `.codex`, and `.aws` paths and network defaults), see [Sandbox and approvals](../agent-approvals-security.html#sandbox-and-approvals), [Protected paths in writable roots](../agent-approvals-security.html#protected-paths-in-writable-roots), and [Network access](../agent-approvals-security.html#network-access).
 
 #### Permission profiles
 
@@ -86,17 +95,21 @@ matching `default_permissions` value. See [Permissions](../permissions.html).
 
 #### Windows sandbox mode
 
-When running Codex natively on Windows, set the native sandbox mode to `elevated` in the `windows` table. Use `unelevated` only if you don't have administrator permissions or if elevated setup fails.
+On Windows, prefer MXC when the device and policy support it. Set a legacy implementation for fallback:
 
 ```toml
 [windows]
-sandbox = "elevated"   # Recommended
-# sandbox = "unelevated" # Fallback if admin permissions/setup are unavailable
+sandbox = "elevated" # Legacy fallback
+
+[features]
+prefer_mxc = true
 ```
+
+Use `unelevated` only when elevated setup is unavailable and your organization's policy permits it. See the [Windows sandbox guide](../windows/windows-sandbox.html#enable-mxc) for compatibility limits and rollout controls.
 
 #### Web search mode
 
-Codex enables web search by default for local chats and serves results from a web search cache. The cache is an OpenAI-maintained index of web results, so cached mode returns pre-indexed results instead of fetching live pages. This reduces exposure to prompt injection from arbitrary live content, but you should still treat web results as untrusted. If you are using `--yolo` or another [full access sandbox setting](../agent-approvals-security.html#common-sandbox-and-approval-combinations), web search defaults to live results. Choose a mode with `web_search`:
+Codex enables web search by default for local chats and serves results from a web search cache. The cache is an OpenAI-maintained index of web results, so cached mode returns pre-indexed results instead of fetching live pages. This reduces exposure to prompt injection from arbitrary live content. Treat web results as untrusted. If you are using `--yolo` or another [full access sandbox setting](../agent-approvals-security.html#common-sandbox-and-approval-combinations), web search defaults to live results. Choose a mode with `web_search`:
 
 - `"cached"` (default) serves results from the web search cache.
 - `"indexed"` permits external web access only when the search index gates the request.
@@ -120,13 +133,16 @@ model_reasoning_effort = "medium"
 
 #### Communication style
 
-Set a default communication style for supported models.
+To omit the built-in personality instructions, set:
 
 ```toml
-personality = "friendly" # or "pragmatic" or "none"
+personality = "none"
 ```
 
-You can override this later in an active session with `/personality` or per thread/turn when using the app-server APIs.
+This removes the `Personality` section from the model's built-in instructions.
+It doesn't change explicit custom base instructions. The older `friendly` and
+`pragmatic` values no longer select a style. Codex no longer provides the
+`/personality` command.
 
 #### TUI keymap
 
@@ -184,22 +200,21 @@ Use the `[features]` table in `config.toml` to toggle optional and experimental 
 
 ### Common feature flags
 
-| Key                  |        Default        | Maturity     | Description                                                                              |
-| -------------------- | :-------------------: | ------------ | ---------------------------------------------------------------------------------------- |
-| `apps`               |         true          | Stable       | Enable app (connector) integrations                                                      |
-| `goals`              |         true          | Stable       | Enable persisted goals and automatic continuation                                        |
-| `hooks`              |         true          | Stable       | Enable lifecycle hooks from `hooks.json` or inline `[hooks]`. See [Hooks](../hooks.html). |
-| `fast_mode`          |         true          | Stable       | Enable Fast mode selection and the `service_tier = "fast"` path                          |
-| `memories`           |         false         | Experimental | Enable [Memories](../customization/memories.html)                                         |
-| `multi_agent`        |         true          | Stable       | Enable subagent collaboration tools                                                      |
-| `personality`        |         true          | Stable       | Enable personality selection controls                                                    |
-| `remote_plugin`      |         true          | Stable       | Enable the remote plugin catalog                                                         |
-| `shell_snapshot`     |         true          | Stable       | Snapshot your shell environment to speed up repeated commands                            |
-| `shell_tool`         |         true          | Stable       | Enable the default `shell` tool                                                          |
-| `unified_exec`       | `true` except Windows | Stable       | Use the unified PTY-backed exec tool                                                     |
-| `web_search`         |         true          | Deprecated   | Legacy toggle; prefer the top-level `web_search` setting                                 |
-| `web_search_cached`  |         false         | Deprecated   | Legacy toggle that maps to `web_search = "cached"` when unset                            |
-| `web_search_request` |         false         | Deprecated   | Legacy toggle that maps to `web_search = "live"` when unset                              |
+| Key                  | Default | Maturity     | Description                                                                              |
+| -------------------- | :-----: | ------------ | ---------------------------------------------------------------------------------------- |
+| `apps`               |  true   | Stable       | Enable app (connector) integrations                                                      |
+| `goals`              |  true   | Stable       | Enable persisted goals and automatic continuation                                        |
+| `hooks`              |  true   | Stable       | Enable lifecycle hooks from `hooks.json` or inline `[hooks]`. See [Hooks](../hooks.html). |
+| `fast_mode`          |  true   | Stable       | Enable Fast mode selection and the `service_tier = "fast"` path                          |
+| `memories`           |  false  | Experimental | Enable [Memories](../customization/memories.html)                                         |
+| `multi_agent`        |  true   | Stable       | Enable subagent collaboration tools                                                      |
+| `remote_plugin`      |  true   | Stable       | Enable the remote plugin catalog                                                         |
+| `shell_snapshot`     |  true   | Stable       | Snapshot your shell environment to speed up repeated commands                            |
+| `shell_tool`         |  true   | Stable       | Enable command execution tools                                                           |
+| `unified_exec`       |  true   | Stable       | Enable resumable command execution; only managed requirements can disable it             |
+| `web_search`         |  true   | Deprecated   | Legacy toggle; prefer the top-level `web_search` setting                                 |
+| `web_search_cached`  |  false  | Deprecated   | Legacy toggle that maps to `web_search = "cached"` when unset                            |
+| `web_search_request` |  false  | Deprecated   | Legacy toggle that maps to `web_search = "live"` when unset                              |
 
 This table lists common user-facing flags, not every internal or
   under-development feature. The Maturity column uses labels such as

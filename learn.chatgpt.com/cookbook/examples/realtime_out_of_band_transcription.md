@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 **Purpose**: This notebook demonstrates how to use the Realtime model itself to accurately transcribe user audio `out-of-band` using the same websocket session connection, avoiding errors and inconsistencies common when relying on a separate transcription model (gpt-4o-transcribe/whisper-1).
 
 We call this [out-of-band](https://platform.openai.com/docs/guides/realtime-conversations#create-responses-outside-the-default-conversation) transcription using the Realtime model. It’s simply a second response.create request on the same Realtime WebSocket, tagged so it doesn’t write back to the active conversation state. The model runs again with a different set of instructions (a transcription prompt), triggering a new inference pass that’s separate from the assistant’s main speech turn.

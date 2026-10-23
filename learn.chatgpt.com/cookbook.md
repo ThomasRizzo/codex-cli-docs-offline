@@ -17,6 +17,7 @@ Each entry has a Markdown twin at `/cookbook/<path>.md`.
 - [How to handle the raw chain of thought in gpt-oss](https://developers.openai.com/cookbook/articles/gpt-oss/handle-raw-cot.md)
 - [How to run gpt-oss locally with Ollama](https://developers.openai.com/cookbook/articles/gpt-oss/run-locally-ollama.md)
 - [How to run gpt-oss with Transformers](https://developers.openai.com/cookbook/articles/gpt-oss/run-transformers.md)
+- [Integrating Sign in with ChatGPT in your Opensource App](https://developers.openai.com/cookbook/articles/sign-in-with-chatgpt.md): Add ChatGPT sign-in and ChatGPT plan usage to an existing open-source desktop app.
 - [OpenAI Harmony Response Format](https://developers.openai.com/cookbook/articles/openai-harmony.md)
 - [User guide for gpt-oss-safeguard](https://developers.openai.com/cookbook/articles/gpt-oss-safeguard-guide.md)
 - [Verifying gpt-oss implementations](https://developers.openai.com/cookbook/articles/gpt-oss/verifying-implementations.md)
@@ -49,6 +50,7 @@ Each entry has a Markdown twin at `/cookbook/<path>.md`.
 - [Getting the Most out of GPT-5.4 for Vision and Document Understanding](https://developers.openai.com/cookbook/examples/multimodal/document_and_multimodal_understanding_tips.md): A practical guide to get the best performance on vision tasks with GPT-5.4.
 - [GPT-5 Prompt Migration and Improvement Using the New Optimizer](https://developers.openai.com/cookbook/examples/gpt-5/prompt-optimization-cookbook.md)
 - [GPT-Live evaluation guide](https://developers.openai.com/cookbook/examples/audio/voice_agent_evaluation.md): Evaluate full-duplex voice agents with controlled requests, recorded audio, and simulated conversations, measuring interaction quality and verified task outcomes.
+- [Harness-aware evaluation of plugins](https://developers.openai.com/cookbook/examples/partners/harness_aware_plugin_evals/harness_aware_plugin_evals.md): Evaluate an MCP-backed plugin through direct tool tests, a controlled model loop, and the Codex harness, then use shared test cases and traces to diagnose and improve its behavior.
 - [How to use the Usage API and Cost API to monitor your OpenAI usage](https://developers.openai.com/cookbook/examples/completions_usage_api.md): Cookbook to fetch and visualize Completions Usage and cost data via API.
 - [Image Evals for Image Generation and Editing Use Cases](https://developers.openai.com/cookbook/examples/multimodal/image_evals.md): Cookbook to build image evals for image generation and editing use cases.
 - [Iterating Development Workflows with Codex](https://developers.openai.com/cookbook/examples/codex/iterating-development-workflows-with-codex.md): Build and improve Codex development workflows using repository harnesses, phased implementation plans, approval gates, reusable skills, and evidence-backed retrospectives.
@@ -62,6 +64,8 @@ Each entry has a Markdown twin at `/cookbook/<path>.md`.
 - [Optimizing Customer Support Agents for Cost and Quality](https://developers.openai.com/cookbook/examples/agent_optimization/optimizing_agents_for_cost_and_quality.md): Optimize agents on cost, latency and performance.
 - [Prompt Personalities](https://developers.openai.com/cookbook/examples/gpt-5/prompt_personalities.md): Cookbook to shape agent personality via instruction prompts for tone and style.
 - [Realtime Eval Guide](https://developers.openai.com/cookbook/examples/realtime_eval_guide.md)
+- [Release ChatGPT usage budgets hourly, daily, or weekly](https://developers.openai.com/cookbook/examples/chatgpt/daily_usage_limits/readme.md): Release a monthly ChatGPT budget in credits or US dollars in hourly, daily, or weekly increments. Explore a plan in your browser, try a Codex-assisted pilot, and deploy on managed infrastructure.
+- [Run Agents API sandboxes on AWS Lambda MicroVMs](https://developers.openai.com/cookbook/examples/agents_api/sandboxes/aws/readme.md): Run agent tools in AWS Lambda MicroVMs with application-managed or webhook-managed provisioning, file transfers, and suspend/resume.
 - [SchemaFlow: Agentic Database Change Impact Analysis, SQL Generation, and Eval Guardrails](https://developers.openai.com/cookbook/examples/partners/schemaflow_design_guide/schemaflow_cookbook.md): Build a staged SchemaFlow pipeline with the OpenAI Agents SDK for database change parsing, impact analysis, rollout planning, SQL generation, guardrails, artifacts, optional File Search grounding, and Promptfoo evals.
 - [Skills in OpenAI API](https://developers.openai.com/cookbook/examples/skills_in_api.md): Cookbook for building skills with the OpenAI API.
 - [Temporal Agents with Knowledge Graphs](https://developers.openai.com/cookbook/examples/partners/temporal_agents_with_knowledge_graphs/temporal_agents.md)

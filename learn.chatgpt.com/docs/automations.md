@@ -7,12 +7,14 @@ eligible plans can also run tasks from supported app events. Review active,
 paused, and completed tasks and recent runs in **Scheduled**. You can combine
 scheduled tasks with [skills](build-skills.html) for more complex work.
 
+**For workspace admins:** See [Set up and manage teams and Team Tasks](enterprise/teams.html) for recurring or event-triggered work shared by a team, including permissions and connection setup. Team Tasks run in the cloud through the team's service account and configured app connections.
+
 <ContentModeSwitch group="codex-surface" ids="app,web">
 
-GPT-5.5 retires from ChatGPT, ChatGPT Work, and Codex on all plans on
-October 14, 2026. Review scheduled tasks that use GPT-5.5 and choose an
-available replacement before that date. For Codex with ChatGPT sign-in, choose
-`gpt-6-sol` (GPT-6 Sol) if your plan and workspace provide access. The OpenAI API isn't
+GPT-5.5 retires from Codex with ChatGPT sign-in on October 14, 2026, at noon
+PDT (19:00 UTC). Review scheduled tasks that use GPT-5.5 in Codex and choose
+`gpt-6.1-sol` (GPT-6.1 Sol) if your plan and workspace provide access.
+The OpenAI API and Codex sessions authenticated with an API key aren't
 affected. See [GPT-5.5 retirement](models.html#gpt-55-retirement) for
 plan-specific replacements.
 
@@ -153,12 +155,6 @@ choose them explicitly if you want more control over how the scheduled task runs
 If a scheduled task uses a retired model, update it to an available replacement.
 See [model migration guidance](models.html#deprecated-codex-models).
 
-
-
-> Illustration: ChatGPT composer ready to create a scheduled task with 6 Sol Medium selected.
-
-
-
 Scheduled tasks run unattended with your default sandbox settings. Start with the
 narrowest access that lets the task succeed, and grant network or broader file
 access only when required. [Understand sandboxing](sandboxing.html).
@@ -170,12 +166,6 @@ app sidebar.
 
 The **Scheduled** view acts as your inbox. Scheduled task runs with findings
 appear there, and an unread indicator shows when a run needs your attention.
-
-
-
-> Illustration: Scheduled tasks page with All, Active, and Paused filters and three scheduled tasks.
-
-
 
 Standalone scheduled tasks start a new chat for each scheduled run and report
 results in **Scheduled**. Use them when each run should be independent or when one

@@ -2,9 +2,21 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
-The Conversions API is a more reliable tracking source than the pixel alone. Use the Conversions API when possible for more accurate insights.
+Conversions API (CAPI) sends conversion events directly from your server to OpenAI—for example, when your backend confirms a purchase. It complements the [Measurement Pixel](https://developers.openai.com/ads/measurement-pixel), which sends events from a visitor’s browser.
+
+Use both to combine browser activity with confirmed backend conversions. CAPI helps you:
+
+- Measure conversions without depending solely on browser event delivery.
+- Improve matching with [supported customer identifiers](#send-user-data).
+- Control event delivery and retries from your server.
+
+When both integrations report the same conversion, [deduplicate browser and server events](#deduplicate-browser-and-server-events) using the same event ID and Pixel ID. Follow the attribution guidance below to forward available click and browser references. Start with a key conversion, such as a purchase, then follow the setup instructions.
 
 ## Send events
+
+We recommend sending all conversion events, not just those with an `oppref`,
+  to incorporate view-through conversions in your campaign's performance
+  metrics.
 
 Send events to the Conversions API from your server only.
 
@@ -156,11 +168,16 @@ depend on its `type`.
 | `contents[].name`         | No       | A string containing the item's display name.                                                                                                                                  |
 | `contents[].content_type` | No       | A string describing the item category, such as `product`, `plan`, or `page`.                                                                                                  |
 | `contents[].quantity`     | No       | The item quantity as an integer.                                                                                                                                              |
-| `contents[].amount`       | No       | The item-level monetary value as an integer in the currency's standard minor unit.                                                                                            |
+| `contents[].amount`       | No       | The per-unit price as an integer in the currency's standard minor unit. Supply `contents[].quantity` separately.                                                              |
 | `contents[].currency`     | No       | A valid three-letter ISO 4217 currency code for the item, such as `USD`, `EUR`, or `JPY`.                                                                                     |
 | `contents[].variant_dict` | No       | An object whose keys and values are strings, such as `{"size": "medium", "color": "blue"}`.                                                                                   |
 | `plan_id`                 | No       | A string identifying your subscription or trial plan. Available when `data.type` is `plan_enrollment` or `custom`.                                                            |
 | `<custom_field>`          | No       | A custom property available only when `data.type` is `custom`. Values can be strings, numbers, boolean values, objects, arrays, or `null`.                                    |
+
+Use `contents[].amount` for the price of one unit and the event-level `amount`
+for the value of the whole event. See
+[Item and event amounts](https://developers.openai.com/ads/supported-events#item-and-event-amounts) for an
+example with `quantity: 2`.
 
 ## Send user data
 
@@ -234,9 +251,10 @@ Place this object inside an event at `events[].user`:
 }
 ```
 
-Use the plural list fields below. For each list, the API uses the first three
-valid, unique values in the order provided. It ignores additional values without
-rejecting the event or request.
+Use the plural list fields below. Each submitted list must contain at most three
+values. When you supply both singular and plural forms, each merged field must
+contain at most three unique values. Exceeding either limit returns HTTP 400;
+the API does not truncate values.
 
 | Field                    | Type           | Description                                                                                                                    |
 | ------------------------ | -------------- | ------------------------------------------------------------------------------------------------------------------------------ |
@@ -251,7 +269,7 @@ rejecting the event or request.
 | `countries`              | `list[string]` | Raw two-letter country codes, such as `US`.                                                                                    |
 | `android_advertising_id` | `string`       | Raw Android Google Advertising ID (GAID) in UUID format. Available only through the Conversions API.                           |
 | `obref`                  | `string`       | Opaque browser reference from the Pixel's `__obref` cookie. Pass it without hashing.                                           |
-| `ip_address`             | `string`       | Valid IPv4 or IPv6 address.                                                                                                    |
+| `ip_address`             | `string`       | Valid IPv4 or IPv6 address of the user's device that generated the event. Send without hashing.                                |
 | `user_agent`             | `string`       | Non-empty user agent string from the client that generated the event.                                                          |
 
 `android_advertising_id` supports Android GAID only; IDFA is not supported. You

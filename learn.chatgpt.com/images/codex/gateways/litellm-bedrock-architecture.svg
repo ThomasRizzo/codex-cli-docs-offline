@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="360" viewBox="0 0 1040 360" role="img" aria-labelledby="litellm-title" aria-describedby="litellm-desc">
+  <title id="litellm-title">Codex through LiteLLM to Amazon Bedrock</title>
+  <desc id="litellm-desc">Reading left to right, Codex sends Responses API requests with a scoped gateway credential to an HTTPS load balancer. The load balancer and LiteLLM sit inside the organization gateway boundary. LiteLLM routes the Codex-facing model alias to an approved Amazon Bedrock model while keeping the provider credential server-side.</desc>
+  <metadata>Illustrative architecture based on the customer guide path: Codex client to HTTPS load balancer to LiteLLM to Amazon Bedrock. Created 2026-08-27. No deployment-specific endpoints, identities, or credentials are shown.</metadata>
+  <defs>
+    <marker id="litellm-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse">
+      <path d="M1 1 L8 5 L1 9" fill="none" stroke="#202020" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <pattern id="litellm-dots" width="8" height="8" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="0.8" fill="#C7CBC5" opacity="0.6"/>
+    </pattern>
+    <style>
+      .label { font-family: Arial, Helvetica, sans-serif; fill: #202020; }
+      .node { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, Liberation Mono, monospace; fill: #202020; font-size: 18px; }
+      .note { font-family: Arial, Helvetica, sans-serif; fill: #555555; font-size: 15px; }
+      .boundary-label { font-family: Arial, Helvetica, sans-serif; fill: #555555; font-size: 15px; font-weight: 600; letter-spacing: 0.02em; }
+    </style>
+  </defs>
+
+  <rect width="1040" height="360" fill="#FFFFFF"/>
+
+  <g id="organization-gateway-boundary">
+    <rect x="292" y="58" width="508" height="244" rx="10" fill="url(#litellm-dots)" stroke="#8A8A8A" stroke-width="1.4"/>
+    <rect x="316" y="42" width="282" height="32" rx="16" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="1.2"/>
+    <text x="336" y="63" class="boundary-label">organization gateway boundary</text>
+  </g>
+
+  <g id="connectors" fill="none" stroke="#202020" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#litellm-arrow)">
+    <path d="M246 176 H344"/>
+    <path d="M528 176 H600"/>
+    <path d="M720 176 H824"/>
+  </g>
+
+  <g id="edge-labels">
+    <text x="260" y="104" class="note">HTTPS + scoped</text>
+    <text x="260" y="122" class="note">gateway credential</text>
+    <text x="536" y="112" class="note">Responses API</text>
+    <text x="738" y="112" class="note">approved alias</text>
+  </g>
+
+  <g id="codex-client">
+    <rect x="52" y="126" width="194" height="100" rx="28" fill="#FFFFFF" stroke="#202020" stroke-width="1.5"/>
+    <text x="149" y="168" text-anchor="middle" class="node">Codex client</text>
+    <text x="149" y="194" text-anchor="middle" class="note">CLI or desktop app</text>
+  </g>
+
+  <g id="https-load-balancer">
+    <rect x="344" y="126" width="184" height="100" rx="28" fill="#FFFFFF" stroke="#202020" stroke-width="1.5"/>
+    <text x="436" y="166" text-anchor="middle" class="node">HTTPS</text>
+    <text x="436" y="192" text-anchor="middle" class="note">load balancer</text>
+  </g>
+
+  <g id="litellm">
+    <rect x="600" y="126" width="120" height="100" rx="28" fill="#F7FBF3" stroke="#527F2D" stroke-width="1.8"/>
+    <text x="660" y="168" text-anchor="middle" class="node">LiteLLM</text>
+    <text x="660" y="194" text-anchor="middle" class="note">alias routing</text>
+  </g>
+
+  <g id="amazon-bedrock">
+    <rect x="824" y="126" width="164" height="100" rx="28" fill="#FFFFFF" stroke="#202020" stroke-width="1.5"/>
+    <text x="906" y="168" text-anchor="middle" class="node">Amazon</text>
+    <text x="906" y="192" text-anchor="middle" class="node">Bedrock</text>
+  </g>
+
+  <g id="server-side-credential">
+    <path d="M660 226 V266" fill="none" stroke="#527F2D" stroke-width="1.5"/>
+    <rect x="520" y="266" width="280" height="42" rx="21" fill="#FFFFFF" stroke="#527F2D" stroke-width="1.4"/>
+    <text x="660" y="292" text-anchor="middle" class="note" fill="#365F20">provider credential stays server-side</text>
+  </g>
+</svg>

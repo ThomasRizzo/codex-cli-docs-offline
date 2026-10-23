@@ -38,7 +38,7 @@ Local permission profiles are supported on macOS, Linux, WSL, and native
 Windows. See [Scope and enforcement](#scope-and-enforcement) for platform-specific
 details and caveats.
 
-For Codex cloud network settings, see [Internet Access](cloud/internet-access.html).
+For current Codex Cloud network settings, see [Connect to services](environments/cloud-environments.html#connect-to-services). For Codex Cloud (Legacy), see [Internet access](cloud/internet-access.html).
 
 ## Define and select a profile
 
@@ -138,9 +138,9 @@ writable while still setting a matching `.env` path to `deny`.
 Use `extends` when a profile is mostly the same as a built-in or another named
 profile. Prefer extending a built-in profile over starting from scratch so
 baseline protections carry forward. Extending `:workspace`, for example, keeps
-the workspace root's `.codex` directory read-only unless you explicitly
-override it. Set the parent once, then add or override only the rules that
-differ.
+the workspace root's `.git`, `.agents`, `.codex`, and `.aws` paths read-only
+unless you explicitly override those rules. Set the parent once, then add or
+override only the rules that differ.
 
 ```toml
 default_permissions = "project-edit"
@@ -177,25 +177,25 @@ cycles.
 | `permissions.<name>.description`                                  | String                     | None                    | Provides a human-readable description for the profile. A profile does not inherit its parent's description through `extends`.                                                                                                                                                                                                                                                                                                 |
 | `permissions.<name>.extends`                                      | String profile name        | None                    | Starts this profile from another named profile or the built-in `:read-only` or `:workspace` profile. Codex rejects `:danger-full-access`, unknown parents, and inheritance cycles.                                                                                                                                                                                                                                            |
 | `[permissions.<name>.workspace_roots]`                            | Table                      | None                    | Adds profile-defined workspace roots that receive `:workspace_roots` filesystem rules alongside the current session's runtime workspace roots.                                                                                                                                                                                                                                                                                |
-| `permissions.<name>.workspace_roots."<path>"`                     | Boolean                    | `false`                 | Adds the path to the profile's workspace root set when `true`. Entries set to `false` remain inactive.                                                                                                                                                                                                                                                                                                                        |
+| `permissions.<name>.workspace_roots."<path>"`                     | boolean                    | `false`                 | Adds the path to the profile's workspace root set when `true`. Entries set to `false` remain inactive.                                                                                                                                                                                                                                                                                                                        |
 | `[permissions.<name>.filesystem]`                                 | Table                      | None                    | Maps filesystem paths to access values or scoped subpath maps. Missing or empty filesystem tables keep filesystem access restricted and emit a startup warning.                                                                                                                                                                                                                                                               |
 | `permissions.<name>.filesystem.glob_scan_max_depth`               | Number                     | None                    | Limits deny-read glob expansion on Linux, WSL, and native Windows when Codex snapshots matches before sandbox startup. Larger values can increase startup scanning work. Use a value of at least `1` when an unbounded `**` pattern needs bounded pre-expansion.                                                                                                                                                              |
 | `[permissions.<name>.filesystem]."<path>"`                        | `read`, `write`, or `deny` | None                    | Grants direct access for a supported path. `deny` denies access and wins over equally specific `write` or `read` entries. Codex rejects direct write rules that the active runtime cannot enforce.                                                                                                                                                                                                                            |
 | `[permissions.<name>.filesystem."<path>"]."<subpath>"`            | `read`, `write`, or `deny` | None                    | Grants access to a descendant of `<path>`. Use `.` for the base path. Other subpaths must be relative descendants and cannot contain `.` or `..` components.                                                                                                                                                                                                                                                                  |
 | `[permissions.<name>.network]`                                    | Table                      | None                    | Configures command network access and the policy that an active network proxy enforces. Enable `features.network_proxy` unless administrator-managed network requirements start the proxy.                                                                                                                                                                                                                                    |
-| `permissions.<name>.network.enabled`                              | Boolean                    | `false`                 | Enables network access for commands in the profile. It does not start the network proxy; without an active proxy, commands can connect directly without domain restrictions.                                                                                                                                                                                                                                                  |
+| `permissions.<name>.network.enabled`                              | boolean                    | `false`                 | Enables network access for commands in the profile. It does not start the network proxy; without an active proxy, commands can connect directly without domain restrictions.                                                                                                                                                                                                                                                  |
 | `[permissions.<name>.network.domains]`                            | Table                      | None                    | Maps host patterns to `allow` or `deny`. Rules apply only when the network proxy is active. The active proxy blocks domain requests if there are no `allow` entries, and deny entries override allow entries.                                                                                                                                                                                                                 |
-| `permissions.<name>.network.domains."<pattern>"`                  | `allow` or `deny`          | None                    | Supports exact hosts, `*.example.com` for subdomains, `**.example.com` for apex plus subdomains, and `*` as an allow-only global wildcard. Host patterns are normalized by trimming, lowercasing, stripping a trailing dot, and stripping simple ports or brackets.                                                                                                                                                           |
+| `permissions.<name>.network.domains."<pattern>"`                  | `allow` or `deny`          | None                    | Supports exact hosts, `*.example.com` for subdomains, `**.example.com` for apex plus subdomains, and `*` as an allow-only global wildcard. Host patterns are normalized by trimming, converting to lowercase, stripping a trailing dot, and stripping port numbers or brackets.                                                                                                                                               |
 | `[permissions.<name>.network.unix_sockets]`                       | Table                      | None                    | Maps Unix socket allowlist overrides. Use only for local integrations such as Docker.                                                                                                                                                                                                                                                                                                                                         |
 | `permissions.<name>.network.unix_sockets."<path>"`                | `allow` or `deny`          | None                    | Adds an absolute Unix socket path to the effective allowlist with `allow`, or rejects it with `deny`. Denied entries are omitted from the effective allowlist.                                                                                                                                                                                                                                                                |
-| `permissions.<name>.network.proxy_url`                            | URL string                 | `http://127.0.0.1:3128` | HTTP proxy listener used for `HTTP_PROXY`, `HTTPS_PROXY`, websocket proxy variables, and related tool proxy environment variables.                                                                                                                                                                                                                                                                                            |
-| `permissions.<name>.network.enable_socks5`                        | Boolean                    | `true`                  | Enables the SOCKS5 listener used for `ALL_PROXY` and FTP proxy variables.                                                                                                                                                                                                                                                                                                                                                     |
+| `permissions.<name>.network.proxy_url`                            | URL string                 | `http://127.0.0.1:3128` | HTTP proxy listener used for `HTTP_PROXY`, `HTTPS_PROXY`, WebSocket proxy variables, and related tool proxy environment variables.                                                                                                                                                                                                                                                                                            |
+| `permissions.<name>.network.enable_socks5`                        | boolean                    | `true`                  | Enables the SOCKS5 listener used for `ALL_PROXY` and FTP proxy variables.                                                                                                                                                                                                                                                                                                                                                     |
 | `permissions.<name>.network.socks_url`                            | URL string                 | `http://127.0.0.1:8081` | SOCKS5 listener address.                                                                                                                                                                                                                                                                                                                                                                                                      |
-| `permissions.<name>.network.enable_socks5_udp`                    | Boolean                    | `true`                  | Enables SOCKS5 UDP support when the SOCKS5 listener is enabled.                                                                                                                                                                                                                                                                                                                                                               |
-| `permissions.<name>.network.allow_upstream_proxy`                 | Boolean                    | `true`                  | Allows the network sandbox proxy to respect upstream `HTTP(S)_PROXY` and `ALL_PROXY` settings for outbound requests.                                                                                                                                                                                                                                                                                                          |
-| `permissions.<name>.network.allow_local_binding`                  | Boolean                    | `false`                 | Disables the local/private-network guard when `true`. When `false`, exact local literals such as `localhost` or `127.0.0.1` must be explicitly allowlisted, and hostnames that resolve to local or private IPs remain blocked.                                                                                                                                                                                                |
-| `permissions.<name>.network.dangerously_allow_non_loopback_proxy` | Boolean                    | `false`                 | Allows proxy listeners to bind non-loopback addresses. Leave unset for ordinary local development.                                                                                                                                                                                                                                                                                                                            |
-| `permissions.<name>.network.dangerously_allow_all_unix_sockets`   | Boolean                    | `false`                 | Bypasses the Unix socket allowlist where Unix socket proxying is supported. This is a broad local escape hatch.                                                                                                                                                                                                                                                                                                               |
+| `permissions.<name>.network.enable_socks5_udp`                    | boolean                    | `true`                  | Enables SOCKS5 UDP support when the SOCKS5 listener is enabled.                                                                                                                                                                                                                                                                                                                                                               |
+| `permissions.<name>.network.allow_upstream_proxy`                 | boolean                    | `true`                  | Allows the network sandbox proxy to respect upstream `HTTP(S)_PROXY` and `ALL_PROXY` settings for outbound requests.                                                                                                                                                                                                                                                                                                          |
+| `permissions.<name>.network.allow_local_binding`                  | boolean                    | `false`                 | Disables the local/private-network guard when `true`. When `false`, exact local literals such as `localhost` or `127.0.0.1` must be explicitly allowlisted, and hostnames that resolve to local or private IPs remain blocked.                                                                                                                                                                                                |
+| `permissions.<name>.network.dangerously_allow_non_loopback_proxy` | boolean                    | `false`                 | Allows proxy listeners to bind non-loopback addresses. Leave unset for ordinary local development.                                                                                                                                                                                                                                                                                                                            |
+| `permissions.<name>.network.dangerously_allow_all_unix_sockets`   | boolean                    | `false`                 | Bypasses the Unix socket allowlist where Unix socket proxying is supported. This is a broad local escape hatch.                                                                                                                                                                                                                                                                                                               |
 
 ## Filesystem permissions
 
@@ -291,6 +291,19 @@ profile-defined workspace root. Use it when you want to preserve normal
 workspace writes while keeping environment files, generated secrets, or similar
 credential-bearing files unreadable.
 
+On Linux, WSL, and native Windows with MXC or `elevated`, deny-read glob matches
+are enumerated when each sandboxed process starts. Matching files created afterward are not
+added to that process's deny list and remain readable if its other permissions
+allow access. For example, a long-running shell, script, watcher, or development
+server can read a matching `.env` file created after it started.
+
+This snapshot lasts for the sandboxed process's lifetime, not the whole Codex
+session. Starting a new sandboxed process through Codex enumerates the matches
+again; continuing to use an already-running process does not refresh its deny
+list. Don't rely on a glob to block newly created files in that running process.
+See [Windows MXC compatibility](windows/windows-sandbox.html#mxc-compatibility)
+for Windows-specific limits.
+
 `deny` glob patterns are supported as deny-read rules. `read` or `write` globs
 are less portable on Linux, WSL, and native Windows sandboxing, so prefer exact
 paths or subtree rules such as `"docs/**" = "read"` when possible.
@@ -309,7 +322,7 @@ glob_scan_max_depth = 3
 
 `glob_scan_max_depth` must be at least `1`. Higher values scan deeper before
 sandbox startup, which can add startup work on Linux, WSL, and native Windows.
-If you prefer not to use bounded expansion, enumerate explicit depths such as
+If you prefer not to use bounded expansion, list explicit depths such as
 `*.env`, `*/*.env`, and `*/*/*.env`.
 
 Add reusable workspace roots to the profile when the same rules should apply to
@@ -444,6 +457,19 @@ for admin-enforced filesystem and network constraints.
 
 ## Scope and enforcement
 
+<a id="synced-work-and-environment-policy"></a>
+
+### Local computer access with Work Cloud and environment policy
+
+Review the policy for each environment where Local computer access with Work Cloud runs:
+
+- **Enterprise requirements:** For Work with local access and dots, supported Global policy governs the shared cloud orchestrator when managed policy is enabled; applicable local execution requirements govern the connected computer.
+- **Cloud execution:** Work cloud containers use existing Work Cloud policies.
+- **Local policy order:** MDM and legacy managed-device requirements rank above Agent Security. The device's system requirements file ranks below Agent Security.
+- **Policy priority:** A higher-priority policy wins even if a lower-priority policy is more specific. Within one policy, OS-specific environment overrides take priority over all-OS environment overrides, followed by Global.
+
+Some requirements have field-specific merge rules. See [Managed configuration](enterprise/managed-configuration.html) and the [Configuration Reference](config-file/config-reference.html) for supported fields and runtime limits. Don't assume Work Cloud supports the Codex permission profiles shown here.
+
 Permission profiles define the boundaries for local sandboxed command
 execution. Use them together with approval policies and the separate controls
 for web search, connectors, MCP servers, the built-in browser, Computer Use,
@@ -485,7 +511,9 @@ sandbox. It does not apply the profile's domain allowlist to:
   use their own feature and approval controls.
 - **Codex service traffic:** Model, authentication, and other client service
   requests use the client's separate HTTP and system-proxy settings.
-- **Codex cloud:** These tasks use their environment's own
+- **Codex Cloud:** These tasks use their environment's own
+  [network settings](environments/cloud-environments.html#connect-to-services).
+  Codex Cloud (Legacy) has separate
   [internet access settings](cloud/internet-access.html).
 
 To limit these surfaces, configure each capability directly. A command network
@@ -497,15 +525,16 @@ allowlist is not a global network policy for every action Codex can perform.
   be enforced by the platform sandbox, Codex refuses to run the command instead
   of silently running it unsandboxed.
 - On Linux and WSL, Codex uses [bubblewrap](https://github.com/containers/bubblewrap)
-  and [seccomp](https://www.kernel.org/doc/html/latest/userspace-api/seccomp_filter.html),
-  with Landlock available for compatibility fallback paths. The strongest
-  enforcement path depends on user namespaces and kernel support; restricted
-  container hosts can force compatibility paths, and unsupported split policies
-  are refused.
-- On native Windows, [`elevated` sandboxing](windows/windows-sandbox.html#windows-sandbox)
-  is strongest because it can use dedicated lower-privilege sandbox users,
-  filesystem permission boundaries, and firewall rules. `unelevated`
-  sandboxing is a fallback with weaker network isolation and cannot enforce
+  and [seccomp](https://www.kernel.org/doc/html/latest/userspace-api/seccomp_filter.html)
+  to enforce filesystem restrictions. The legacy Landlock option can't isolate
+  app-server Unix sockets and is rejected for filesystem-restricted policies.
+  Disable `features.use_legacy_landlock` when upgrading. Hosts that block the
+  required bubblewrap operations can't run these policies.
+- On Windows, MXC uses process isolation for filesystem and network permissions.
+  Review [MXC compatibility](windows/windows-sandbox.html#mxc-compatibility)
+  before enabling it. The legacy `elevated` fallback uses dedicated lower-privilege
+  sandbox users, filesystem permission boundaries, and firewall rules.
+  `unelevated` is a legacy fallback with weaker network isolation and cannot enforce
   every split read/write carveout, so unsupported policies are refused. Use WSL
   when you need the Linux sandbox model.
 
@@ -547,8 +576,8 @@ default_permissions = "workspace-only"
 
 [permissions.workspace-only]
 # By extending the :workspace profile, you get Codex's safeguards to ensure
-# subfolders such as .codex/ and .git/ within a workspace root are read-only
-# while the rest of the folder is writable.
+# paths such as .git/, .agents/, .codex/, and .aws/ within a workspace root
+# are read-only while the rest of the folder is writable.
 extends = ":workspace"
 
 [permissions.workspace-only.filesystem]

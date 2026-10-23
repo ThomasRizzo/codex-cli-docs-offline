@@ -96,16 +96,11 @@ Relay uses fictional seeded data, but the integration pattern is general. The sa
 
 This pattern is already showing up in public implementations:
 
-- [GitHub and JetBrains](https://github.blog/changelog/2026-07-07-codex-as-agent-provider-and-agentic-enhancements-in-jetbrains-ides/)
-  bring Codex into existing IDE workflows.
+-  [GitHub and JetBrains](https://github.blog/changelog/2026-07-07-codex-as-agent-provider-and-agentic-enhancements-in-jetbrains-ides/) bring Codex into existing IDE workflows.
 
-- [Cisco](https://blogs.cisco.com/ai/from-an-idea-to-a-live-app-on-cisco-in-minutes)
-  uses the Codex SDK in App Builder inside Cisco Cloud Control.
+-  [Cisco](https://blogs.cisco.com/ai/from-an-idea-to-a-live-app-on-cisco-in-minutes) uses the Codex SDK in App Builder inside Cisco Cloud Control.
 
-- [Thrive Holdings and Crete](https://openai.com/index/building-self-improving-tax-agents-with-codex/)
-  use Codex in a tax-preparation workflow that incorporates practitioner
-  feedback. Their pilot processed 7,000 returns and reduced preparation time by
-  about a third.
+-  [Thrive Holdings and Crete](https://openai.com/index/building-self-improving-tax-agents-with-codex/) use Codex in a tax-preparation workflow that incorporates practitioner feedback. Their pilot processed 7,000 returns and reduced preparation time by about a third.
 
 These examples are not limited to engineering: the same pattern applies to support teams investigating customer issues, operations teams coordinating workflows, security teams triaging incidents, sales teams researching accounts, and marketing teams developing campaigns. In each case, the application provides the context, tools, and approvals, while Codex powers the underlying agent loop.
 

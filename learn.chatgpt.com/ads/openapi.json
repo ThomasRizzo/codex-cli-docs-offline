@@ -20,7 +20,8 @@
   "paths": {
     "/campaigns": {
       "get": {
-        "summary": "Get all campaigns for an ad account",
+        "summary": "List Campaigns",
+        "description": "Get all campaigns for an ad account",
         "operationId": "ListCampaignsMethod",
         "parameters": [
           {
@@ -95,7 +96,8 @@
         "x-openai-class-name": "sofa.api.methods.campaigns.list_campaigns.ListCampaignsMethod"
       },
       "post": {
-        "summary": "Create a campaign for an ad account",
+        "summary": "Create Campaign",
+        "description": "Create a campaign for an ad account",
         "operationId": "CreateCampaignMethod",
         "parameters": [
           {
@@ -145,7 +147,8 @@
     },
     "/campaigns/{campaign_id}": {
       "get": {
-        "summary": "Get a campaign",
+        "summary": "Get Campaign",
+        "description": "Get a campaign",
         "operationId": "GetCampaignMethod",
         "parameters": [
           {
@@ -183,7 +186,8 @@
         "x-openai-class-name": "sofa.api.methods.campaigns.get_campaign.GetCampaignMethod"
       },
       "post": {
-        "summary": "Update a campaign",
+        "summary": "Update Campaign",
+        "description": "Update a campaign",
         "operationId": "UpdateCampaignMethod",
         "parameters": [
           {
@@ -229,7 +233,8 @@
     },
     "/campaigns/{campaign_id}/activate": {
       "post": {
-        "summary": "Activate a campaign",
+        "summary": "Activate Campaign",
+        "description": "Activate a campaign",
         "operationId": "ActivateCampaignMethod",
         "parameters": [
           {
@@ -266,7 +271,8 @@
     },
     "/campaigns/{campaign_id}/pause": {
       "post": {
-        "summary": "Pause a campaign",
+        "summary": "Pause Campaign",
+        "description": "Pause a campaign",
         "operationId": "PauseCampaignMethod",
         "parameters": [
           {
@@ -303,7 +309,8 @@
     },
     "/campaigns/{campaign_id}/archive": {
       "post": {
-        "summary": "Archive a campaign",
+        "summary": "Archive Campaign",
+        "description": "Archive a campaign",
         "operationId": "ArchiveCampaignMethod",
         "parameters": [
           {
@@ -340,7 +347,8 @@
     },
     "/custom_audiences": {
       "get": {
-        "summary": "List custom audiences for the authenticated ad account.",
+        "summary": "List Custom Audiences",
+        "description": "List custom audiences for the authenticated ad account.",
         "operationId": "ListCustomAudiencesMethod",
         "parameters": [
           {
@@ -431,7 +439,8 @@
         "x-openai-class-name": "sofa.api.methods.custom_audiences.list_custom_audiences.ListCustomAudiencesMethod"
       },
       "post": {
-        "summary": "Create a custom audience from an uploaded file, or without a file when small audiences are enabled for the account. Processing and publication are asynchronous.",
+        "summary": "Create Custom Audience",
+        "description": "Create a custom audience from an uploaded file, or without a file when small audiences are enabled for the account. Processing and publication are asynchronous.",
         "operationId": "CreateCustomAudienceMethod",
         "parameters": [],
         "requestBody": {
@@ -468,7 +477,8 @@
     },
     "/custom_audiences/{custom_audience_id}": {
       "get": {
-        "summary": "Get a custom audience for the authenticated ad account.",
+        "summary": "Get Custom Audience",
+        "description": "Get a custom audience for the authenticated ad account.",
         "operationId": "GetCustomAudienceMethod",
         "parameters": [
           {
@@ -505,7 +515,8 @@
     },
     "/custom_audiences/{custom_audience_id}/archive": {
       "post": {
-        "summary": "Archive a custom audience for the authenticated ad account.",
+        "summary": "Archive Custom Audience",
+        "description": "Archive a custom audience for the authenticated ad account.",
         "operationId": "ArchiveCustomAudienceMethod",
         "parameters": [
           {
@@ -542,7 +553,8 @@
     },
     "/custom_audiences/{custom_audience_id}/add": {
       "post": {
-        "summary": "Add uploaded or inline identifiers to an existing custom audience.",
+        "summary": "Add Custom Audience Members",
+        "description": "Add uploaded or inline identifiers to an existing custom audience.",
         "operationId": "AddCustomAudienceMembersMethod",
         "parameters": [
           {
@@ -600,7 +612,8 @@
     },
     "/custom_audiences/{custom_audience_id}/remove": {
       "post": {
-        "summary": "Remove uploaded or inline identifiers from an existing custom audience.",
+        "summary": "Remove Custom Audience Members",
+        "description": "Remove uploaded or inline identifiers from an existing custom audience.",
         "operationId": "RemoveCustomAudienceMembersMethod",
         "parameters": [
           {
@@ -658,7 +671,8 @@
     },
     "/custom_audiences/{custom_audience_id}/replace": {
       "post": {
-        "summary": "Replace an existing audience using an uploaded file and its current revision.",
+        "summary": "Replace Custom Audience Members",
+        "description": "Replace an existing audience using an uploaded file and its current revision.",
         "operationId": "ReplaceCustomAudienceMembersMethod",
         "parameters": [
           {
@@ -716,7 +730,8 @@
     },
     "/custom_audiences/merge": {
       "post": {
-        "summary": "Create an independent custom audience containing all matched source members.",
+        "summary": "Merge Custom Audiences",
+        "description": "Create an independent custom audience containing all matched source members.",
         "operationId": "MergeCustomAudiencesMethod",
         "parameters": [
           {
@@ -766,7 +781,8 @@
     },
     "/custom_audiences/{custom_audience_id}/operations/{operation_id}": {
       "get": {
-        "summary": "Retrieve the privacy-safe lifecycle state of a custom audience operation.",
+        "summary": "Get Custom Audience Operation",
+        "description": "Retrieve the privacy-safe lifecycle state of a custom audience operation.",
         "operationId": "GetCustomAudienceOperationMethod",
         "parameters": [
           {
@@ -805,7 +821,8 @@
     },
     "/custom_audiences/{custom_audience_id}/operations": {
       "get": {
-        "summary": "List accepted custom audience operations for the authenticated ad account.",
+        "summary": "List Custom Audience Operations",
+        "description": "List accepted custom audience operations for the authenticated ad account.",
         "operationId": "ListCustomAudienceOperationsMethod",
         "parameters": [
           {
@@ -851,56 +868,10 @@
         "x-openai-class-name": "sofa.api.methods.custom_audiences.mutate_custom_audience_members.ListCustomAudienceOperationsMethod"
       }
     },
-    "/custom_audiences/{custom_audience_id}/operations/{operation_id}/resume": {
-      "post": {
-        "summary": "Resume an existing ADD or REMOVE operation using its original inputs and checkpoints. No request body or Idempotency-Key is required.",
-        "operationId": "ResumeCustomAudienceOperationMethod",
-        "parameters": [
-          {
-            "name": "custom_audience_id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "operation_id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "minLength": 1,
-              "maxLength": 128
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CustomAudienceMembershipOperationBody"
-                }
-              }
-            }
-          }
-        },
-        "x-openai-class-name": "sofa.api.methods.custom_audiences.mutate_custom_audience_members.ResumeCustomAudienceOperationMethod",
-        "security": [
-          {
-            "ApiKeyAuth": []
-          },
-          {
-            "AdsOAuth": ["ads.admin.all.read", "ads.admin.all.write"]
-          }
-        ]
-      }
-    },
     "/custom_audiences/{custom_audience_id}/operations/{operation_id}/cancel": {
       "post": {
-        "summary": "Cancel an accepted ADD or REMOVE operation before membership changes begin. Operations already applying changes cannot be canceled.",
+        "summary": "Cancel Custom Audience Operation",
+        "description": "Cancel an accepted ADD or REMOVE operation before membership changes begin. Operations already applying changes cannot be canceled.",
         "operationId": "CancelCustomAudienceOperationMethod",
         "parameters": [
           {
@@ -945,9 +916,58 @@
         ]
       }
     },
+    "/custom_audiences/{custom_audience_id}/operations/{operation_id}/resume": {
+      "post": {
+        "summary": "Resume Custom Audience Operation",
+        "description": "Resume an existing ADD or REMOVE operation using its original inputs and checkpoints. No request body or Idempotency-Key is required.",
+        "operationId": "ResumeCustomAudienceOperationMethod",
+        "parameters": [
+          {
+            "name": "custom_audience_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "operation_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomAudienceMembershipOperationBody"
+                }
+              }
+            }
+          }
+        },
+        "x-openai-class-name": "sofa.api.methods.custom_audiences.mutate_custom_audience_members.ResumeCustomAudienceOperationMethod",
+        "security": [
+          {
+            "ApiKeyAuth": []
+          },
+          {
+            "AdsOAuth": ["ads.admin.all.read", "ads.admin.all.write"]
+          }
+        ]
+      }
+    },
     "/api_keys": {
       "post": {
-        "summary": "Create an API key scoped to the selected ad account.",
+        "summary": "Create Api Key",
+        "description": "Create an API key scoped to the selected ad account.",
         "operationId": "CreateApiKeyMethod",
         "parameters": [],
         "requestBody": {
@@ -981,7 +1001,8 @@
     },
     "/ad_account/brand": {
       "post": {
-        "summary": "Update ad account brand metadata.",
+        "summary": "Update Ad Account",
+        "description": "Update ad account brand metadata. The legacy name field synchronizes all three names; legal_name, account_name, and brand_name update independently and cannot be combined with name.",
         "operationId": "UpdateAdAccountMethod",
         "parameters": [],
         "requestBody": {
@@ -1018,7 +1039,8 @@
     },
     "/ad_account/activate": {
       "post": {
-        "summary": "Activate the ad account.",
+        "summary": "Activate Ad Account",
+        "description": "Activate the ad account.",
         "operationId": "ActivateAdAccountMethod",
         "parameters": [],
         "responses": {
@@ -1046,7 +1068,8 @@
     },
     "/ad_account/pause": {
       "post": {
-        "summary": "Pause the ad account.",
+        "summary": "Pause Ad Account",
+        "description": "Pause the ad account.",
         "operationId": "PauseAdAccountMethod",
         "parameters": [],
         "responses": {
@@ -1074,7 +1097,8 @@
     },
     "/ad_accounts": {
       "get": {
-        "summary": "List ad accounts accessible to the authenticated API key",
+        "summary": "List Ad Accounts",
+        "description": "List ad accounts accessible to the authenticated API key",
         "operationId": "ListAdAccountsMethod",
         "parameters": [
           {
@@ -1119,9 +1143,133 @@
         "x-openai-class-name": "sofa.api.methods.list_ad_accounts.ListAdAccountsMethod"
       }
     },
+    "/audit_logs": {
+      "get": {
+        "summary": "List Audit Logs",
+        "description": "List audit logs for the authenticated ad account.",
+        "operationId": "ListAuditLogsMethod",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100
+            }
+          },
+          {
+            "name": "after",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "before",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "order",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/ListOrderParam"
+            }
+          },
+          {
+            "name": "campaign_id",
+            "in": "query",
+            "description": "Object ID of the campaign. Includes logs for the campaign and its ad groups and ads.",
+            "required": false,
+            "schema": {
+              "description": "Object ID of the campaign. Includes logs for the campaign and its ad groups and ads.",
+              "type": "string"
+            }
+          },
+          {
+            "name": "ad_group_id",
+            "in": "query",
+            "description": "Object ID of the ad group. Includes logs for the ad group and its ads.",
+            "required": false,
+            "schema": {
+              "description": "Object ID of the ad group. Includes logs for the ad group and its ads.",
+              "type": "string"
+            }
+          },
+          {
+            "name": "ad_id",
+            "in": "query",
+            "description": "Object ID of the ad.",
+            "required": false,
+            "schema": {
+              "description": "Object ID of the ad.",
+              "type": "string"
+            }
+          },
+          {
+            "name": "actor_id",
+            "in": "query",
+            "description": "ID of the actor who made the change, not the affected user.",
+            "required": false,
+            "schema": {
+              "description": "ID of the actor who made the change, not the affected user.",
+              "type": "string"
+            }
+          },
+          {
+            "name": "start_time",
+            "in": "query",
+            "description": "Inclusive start time as a Unix timestamp in seconds.",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 946684800,
+              "maximum": 4102444800
+            }
+          },
+          {
+            "name": "end_time",
+            "in": "query",
+            "description": "Inclusive end time as a Unix timestamp in seconds.",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 946684800,
+              "maximum": 4102444800
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListAuditLogsResource"
+                }
+              }
+            }
+          }
+        },
+        "x-openai-class-name": "sofa.api.methods.list_audit_logs.ListAuditLogsMethod",
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
     "/ad_account_creation_sessions": {
       "post": {
-        "summary": "Start OpenAI-hosted Ads account creation for an authorized partner user.",
+        "summary": "Create Ad Account Creation Session",
+        "description": "Start OpenAI-hosted Ads account creation for an authorized partner user.",
         "operationId": "CreateAdAccountCreationSessionMethod",
         "parameters": [
           {
@@ -1169,7 +1317,8 @@
     },
     "/me": {
       "get": {
-        "summary": "Return the authenticated user's stable application-scoped opaque identifier.",
+        "summary": "Retrieve the current user identity",
+        "description": "Return the authenticated user's stable application-scoped opaque identifier.",
         "operationId": "GetAdsOAuthMeMethod",
         "parameters": [],
         "responses": {
@@ -1194,7 +1343,8 @@
     },
     "/ad_account": {
       "get": {
-        "summary": "Get metadata for the ad account",
+        "summary": "Get Ad Account",
+        "description": "Get metadata for the ad account",
         "operationId": "GetAdAccountMethod",
         "parameters": [],
         "responses": {
@@ -1214,7 +1364,8 @@
     },
     "/ad_account/spend_limit_windows": {
       "get": {
-        "summary": "View spend limit windows with inclusive start dates and exclusive end dates, ordered by start time ascending. Daily recurrence is returned separately; data remains dated windows only. Creating account spending limits requires an ad account on postpaid invoice billing.",
+        "summary": "Get Ad Account Spend Limit Windows",
+        "description": "View spend limit windows with inclusive start dates and exclusive end dates, ordered by start time ascending. Active and upcoming Daily recurrence rules are returned separately in daily_limits; daily_limit retains the active or earliest upcoming rule for legacy clients. data remains dated windows only. Creating account spending limits requires an ad account on postpaid invoice billing.",
         "operationId": "GetAdAccountSpendLimitWindowsMethod",
         "parameters": [],
         "responses": {
@@ -1232,7 +1383,8 @@
         "x-openai-class-name": "sofa.api.methods.get_ad_account_spend_limit_windows.GetAdAccountSpendLimitWindowsMethod"
       },
       "post": {
-        "summary": "Create a spend limit window with an inclusive start date and exclusive end date. Available only for ad accounts on postpaid invoice billing.",
+        "summary": "Create Ad Account Spend Limit Window",
+        "description": "Create a spend limit window with an inclusive start date and exclusive end date. Available only for ad accounts on postpaid invoice billing.",
         "operationId": "CreateAdAccountSpendLimitWindowMethod",
         "parameters": [],
         "requestBody": {
@@ -1269,7 +1421,8 @@
     },
     "/ad_account/spend_limit_windows/{window_id}": {
       "post": {
-        "summary": "Edit a spend limit window with an inclusive start date and exclusive end date. Available only for ad accounts on postpaid invoice billing.",
+        "summary": "Update Ad Account Spend Limit Window",
+        "description": "Edit a spend limit window with an inclusive start date and exclusive end date. Available only for ad accounts on postpaid invoice billing.",
         "operationId": "UpdateAdAccountSpendLimitWindowMethod",
         "parameters": [
           {
@@ -1316,7 +1469,8 @@
     },
     "/ad_account/spend_limit_windows/{window_id}/delete": {
       "post": {
-        "summary": "Delete an active or scheduled spend limit window before it ends. Available only for ad accounts on postpaid invoice billing.",
+        "summary": "Delete Ad Account Spend Limit Window",
+        "description": "Delete an active or scheduled spend limit window before it ends. Available only for ad accounts on postpaid invoice billing.",
         "operationId": "DeleteAdAccountSpendLimitWindowMethod",
         "parameters": [
           {
@@ -1352,11 +1506,123 @@
         ]
       }
     },
+    "/ad_account/daily_spend_limit": {
+      "post": {
+        "summary": "Set Ad Account Daily Spend Limit",
+        "description": "Set an account-wide daily billable ad-spend limit, with an optional exclusive end date. Send window_id=null to create a separate non-overlapping schedule, or a rule ID to edit. Omitting window_id retains legacy singleton upsert and rejects ambiguous configurations. Creating or editing a daily limit requires an ad account on postpaid invoice billing. Omit end_date to retain an existing end, or send null for no end. First activation takes effect no earlier than the next account-local day. Increases and decreases apply on save and retain today's counted spend; a decrease below recorded spend is rejected. Like Date range limits, edits are not retroactive: delayed charges use the settings effective at their event time, and the spend check is not atomic with concurrent billing. The saved amount repeats each day in the recorded account timezone, without carryover, proration, or campaign-style flexibility. Use the latest configuration revision.",
+        "operationId": "SetAdAccountDailySpendLimitMethod",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SetAdAccountDailySpendLimitBody"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdAccountDailySpendLimitChangeResource"
+                }
+              }
+            }
+          }
+        },
+        "x-openai-class-name": "sofa.api.methods.ad_account_daily_spend_limit.SetAdAccountDailySpendLimitMethod",
+        "security": [
+          {
+            "ApiKeyAuth": []
+          },
+          {
+            "AdsOAuth": ["ads.admin.all.read", "ads.admin.all.write"]
+          }
+        ]
+      }
+    },
+    "/ad_account/daily_spend_limit/delete": {
+      "post": {
+        "summary": "Delete Ad Account Daily Spend Limit",
+        "description": "Remove the selected daily limit on save. Omit window_id only when at most one active or upcoming Daily rule exists. Historical protected days and their billable allowances are retained for late events and corrections. Does not delete dated or IO limits.",
+        "operationId": "DeleteAdAccountDailySpendLimitMethod",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteAdAccountDailySpendLimitBody"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdAccountDailySpendLimitChangeResource"
+                }
+              }
+            }
+          }
+        },
+        "x-openai-class-name": "sofa.api.methods.ad_account_daily_spend_limit.DeleteAdAccountDailySpendLimitMethod",
+        "security": [
+          {
+            "ApiKeyAuth": []
+          },
+          {
+            "AdsOAuth": ["ads.admin.all.read", "ads.admin.all.write"]
+          }
+        ]
+      }
+    },
     "/ad_account/insights": {
       "get": {
-        "summary": "Get ad account insights aggregated by time granularity. Attribution metrics for the current account-local day are preliminary and may change as conversions are processed.",
+        "summary": "Get Ad Account Insights",
+        "description": "Get ad account insights aggregated by time granularity. Attribution metrics for the current account-local day are preliminary and may change as conversions are processed.",
         "operationId": "GetAdAccountInsightsMethod",
         "parameters": [
+          {
+            "name": "attribution_window_days",
+            "in": "query",
+            "description": "Click attribution window: 7, 14, or 30 days. Omitted or null windows independently default to 30-day click and 1-day view.",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 7,
+              "maximum": 30,
+              "enum": [7, 14, 30]
+            }
+          },
+          {
+            "name": "view_through_attribution_window_days",
+            "in": "query",
+            "description": "View attribution window: 0 excludes views; 1 includes one-day views.",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 1,
+              "enum": [0, 1]
+            }
+          },
+          {
+            "name": "attribution_time_basis",
+            "in": "query",
+            "description": "Date reports by the attributed ad interaction (ad_event_time) or conversion (conversion_time). Defaults to ad_event_time.",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/AttributionTimeBasisParam"
+            }
+          },
           {
             "name": "time_granularity",
             "in": "query",
@@ -1446,8 +1712,10 @@
           {
             "name": "segments",
             "in": "query",
+            "description": "Use [\"hotel\"] for enrolled accounts to request Hotel-property reporting. Hotel supports none/daily/monthly, hierarchy aggregation, and forward pagination. Property conversions, carousel-card metrics and geography/device segments are unsupported.",
             "required": false,
             "schema": {
+              "description": "Use [\"hotel\"] for enrolled accounts to request Hotel-property reporting. Hotel supports none/daily/monthly, hierarchy aggregation, and forward pagination. Property conversions, carousel-card metrics and geography/device segments are unsupported.",
               "type": "array",
               "items": {
                 "type": "string"
@@ -1492,9 +1760,301 @@
         "x-openai-class-name": "sofa.api.methods.insights.get_ad_account_insights.GetAdAccountInsightsMethod"
       }
     },
+    "/ad_account/hotel_insights": {
+      "get": {
+        "summary": "Get Hotel Insights",
+        "description": "Get Hotel-property Insights for the authenticated ad account. Available only to accounts enrolled in Hotel reporting. Impressions/clicks combine settled and estimated data; spend and cost rates remain settled-only. Inspect coverage before interpreting partial or empty results. Property conversions, geography breakdowns, and metadata sorting are not supported. Current catalog completion is optional and feed-scoped.",
+        "operationId": "GetHotelInsightsMethod",
+        "parameters": [
+          {
+            "name": "filters",
+            "in": "query",
+            "description": "JSON object strings with \"field\", \"operator\", \"value\"; all filters are ANDed. At most 2000 text values are allowed across all filters. hotel_name, hotel_brand, hotel_category, hotel_city, hotel_region and hotel_country_code support IN with string arrays (exact, case-sensitive current metadata). impressions, clicks, spend, ctr, cpc and cpm support GREATER_THAN/LESS_THAN with finite numbers. Metrics filter property/time-bucket totals before pagination and hierarchy expansion; trends use daily property totals. CTR is a ratio; CPC/CPM use settled denominators. Missing metadata does not match a text filter.",
+            "required": false,
+            "schema": {
+              "description": "JSON object strings with \"field\", \"operator\", \"value\"; all filters are ANDed. At most 2000 text values are allowed across all filters. hotel_name, hotel_brand, hotel_category, hotel_city, hotel_region and hotel_country_code support IN with string arrays (exact, case-sensitive current metadata). impressions, clicks, spend, ctr, cpc and cpm support GREATER_THAN/LESS_THAN with finite numbers. Metrics filter property/time-bucket totals before pagination and hierarchy expansion; trends use daily property totals. CTR is a ratio; CPC/CPM use settled denominators. Missing metadata does not match a text filter.",
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 50
+            }
+          },
+          {
+            "name": "start_date",
+            "in": "query",
+            "description": "Inclusive YYYY-MM-DD in the ad account timezone. Older ranges are accepted; only retained data is returned. Inspect coverage for unavailable history.",
+            "required": true,
+            "schema": {
+              "description": "Inclusive YYYY-MM-DD in the ad account timezone. Older ranges are accepted; only retained data is returned. Inspect coverage for unavailable history.",
+              "type": "string",
+              "minLength": 10,
+              "maxLength": 10
+            }
+          },
+          {
+            "name": "end_date",
+            "in": "query",
+            "description": "Inclusive YYYY-MM-DD in the ad account timezone, no later than today.",
+            "required": true,
+            "schema": {
+              "description": "Inclusive YYYY-MM-DD in the ad account timezone, no later than today.",
+              "type": "string",
+              "minLength": 10,
+              "maxLength": 10
+            }
+          },
+          {
+            "name": "campaign_ids",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2000
+            }
+          },
+          {
+            "name": "ad_group_ids",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2000
+            }
+          },
+          {
+            "name": "ad_ids",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2000
+            }
+          },
+          {
+            "name": "inventory_items",
+            "in": "query",
+            "description": "Optional exact feed/property pairs. Each entry is a JSON object string with \"inventory_feed_id\" and \"inventory_item_id\". A property ID is scoped to its feed; entries are ORed as pairs and combined with the other filters. Omitted or empty selects all properties within the other filters.",
+            "required": false,
+            "schema": {
+              "description": "Optional exact feed/property pairs. Each entry is a JSON object string with \"inventory_feed_id\" and \"inventory_item_id\". A property ID is scoped to its feed; entries are ORed as pairs and combined with the other filters. Omitted or empty selects all properties within the other filters.",
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2000
+            }
+          },
+          {
+            "name": "include_zero_activity",
+            "in": "query",
+            "description": "Include current active, unexpired properties from owned Hotel feeds even without activity. Hierarchy filters constrain configured feeds, not exact Hotel Set membership. Daily/monthly results add a zero only in the latest requested bucket. Catalog-only rows retain bucket-mutability data_status; page coverage remains the metric-completeness signal.",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "time_granularity",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/HotelInsightsGranularity"
+            }
+          },
+          {
+            "name": "breakdown",
+            "in": "query",
+            "description": "Expand properties into hierarchy rows. Each row retains its own metrics and repeats hotel_impressions/clicks/spend/ctr/cpc/cpm for the filtered property/time-bucket total. Do not sum these repeated parent metrics across child rows.",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/HotelInsightsBreakdown"
+            }
+          },
+          {
+            "name": "sort_field",
+            "in": "query",
+            "description": "Sort property totals before paging or expanding hierarchy rows. Rates use ratios of totals; spend/CPC/CPM use settled data only. Time buckets remain newest first.",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/HotelInsightsSortField"
+            }
+          },
+          {
+            "name": "sort_direction",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/HotelInsightsSortDirection"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Maximum property/time-bucket groups; each may expand into multiple hierarchy rows.",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 2000
+            }
+          },
+          {
+            "name": "after",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "maxLength": 8192
+            }
+          },
+          {
+            "name": "include_total_count",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HotelInsightsResource"
+                }
+              }
+            }
+          }
+        },
+        "x-openai-class-name": "sofa.api.methods.insights.get_hotel_insights.GetHotelInsightsMethod"
+      }
+    },
+    "/ad_account/hotel_insights/timeseries": {
+      "get": {
+        "summary": "Get Hotel Insights Timeseries",
+        "description": "Get daily Hotel Insights totals across the selected properties for the authenticated ad account, independently of property pagination. Dates use the account timezone. Impressions/clicks combine settled and estimated data; spend and cost rates are settled-only. Missing dates are not filled with zeros: inspect coverage before interpreting partial or empty results. Requires enrollment in Hotel reporting.",
+        "operationId": "GetHotelInsightsTimeseriesMethod",
+        "parameters": [
+          {
+            "name": "filters",
+            "in": "query",
+            "description": "JSON object strings with \"field\", \"operator\", \"value\"; all filters are ANDed. At most 2000 text values are allowed across all filters. hotel_name, hotel_brand, hotel_category, hotel_city, hotel_region and hotel_country_code support IN with string arrays (exact, case-sensitive current metadata). impressions, clicks, spend, ctr, cpc and cpm support GREATER_THAN/LESS_THAN with finite numbers. Metrics filter property/time-bucket totals before pagination and hierarchy expansion; trends use daily property totals. CTR is a ratio; CPC/CPM use settled denominators. Missing metadata does not match a text filter.",
+            "required": false,
+            "schema": {
+              "description": "JSON object strings with \"field\", \"operator\", \"value\"; all filters are ANDed. At most 2000 text values are allowed across all filters. hotel_name, hotel_brand, hotel_category, hotel_city, hotel_region and hotel_country_code support IN with string arrays (exact, case-sensitive current metadata). impressions, clicks, spend, ctr, cpc and cpm support GREATER_THAN/LESS_THAN with finite numbers. Metrics filter property/time-bucket totals before pagination and hierarchy expansion; trends use daily property totals. CTR is a ratio; CPC/CPM use settled denominators. Missing metadata does not match a text filter.",
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 50
+            }
+          },
+          {
+            "name": "start_date",
+            "in": "query",
+            "description": "Inclusive YYYY-MM-DD in the ad account timezone. Older ranges are accepted; only retained data is returned. Inspect coverage for unavailable history.",
+            "required": true,
+            "schema": {
+              "description": "Inclusive YYYY-MM-DD in the ad account timezone. Older ranges are accepted; only retained data is returned. Inspect coverage for unavailable history.",
+              "type": "string",
+              "minLength": 10,
+              "maxLength": 10
+            }
+          },
+          {
+            "name": "end_date",
+            "in": "query",
+            "description": "Inclusive YYYY-MM-DD in the ad account timezone, no later than today.",
+            "required": true,
+            "schema": {
+              "description": "Inclusive YYYY-MM-DD in the ad account timezone, no later than today.",
+              "type": "string",
+              "minLength": 10,
+              "maxLength": 10
+            }
+          },
+          {
+            "name": "campaign_ids",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2000
+            }
+          },
+          {
+            "name": "ad_group_ids",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2000
+            }
+          },
+          {
+            "name": "ad_ids",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2000
+            }
+          },
+          {
+            "name": "inventory_items",
+            "in": "query",
+            "description": "Optional exact feed/property pairs. Each entry is a JSON object string with \"inventory_feed_id\" and \"inventory_item_id\". A property ID is scoped to its feed; entries are ORed as pairs and combined with the other filters. Omitted or empty selects all properties within the other filters.",
+            "required": false,
+            "schema": {
+              "description": "Optional exact feed/property pairs. Each entry is a JSON object string with \"inventory_feed_id\" and \"inventory_item_id\". A property ID is scoped to its feed; entries are ORed as pairs and combined with the other filters. Omitted or empty selects all properties within the other filters.",
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2000
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HotelInsightsTimeseriesResource"
+                }
+              }
+            }
+          }
+        },
+        "x-openai-class-name": "sofa.api.methods.insights.get_hotel_insights_timeseries.GetHotelInsightsTimeseriesMethod"
+      }
+    },
     "/campaigns/{campaign_id}/insights": {
       "get": {
-        "summary": "Get campaign insights aggregated by time granularity. Attribution metrics for the current account-local day are preliminary and may change as conversions are processed.",
+        "summary": "Get Campaign Insights",
+        "description": "Get campaign insights aggregated by time granularity. Attribution metrics for the current account-local day are preliminary and may change as conversions are processed.",
         "operationId": "GetCampaignInsightsMethod",
         "parameters": [
           {
@@ -1503,6 +2063,39 @@
             "required": true,
             "schema": {
               "type": "string"
+            }
+          },
+          {
+            "name": "attribution_window_days",
+            "in": "query",
+            "description": "Click attribution window: 7, 14, or 30 days. Omitted or null windows independently default to 30-day click and 1-day view.",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 7,
+              "maximum": 30,
+              "enum": [7, 14, 30]
+            }
+          },
+          {
+            "name": "view_through_attribution_window_days",
+            "in": "query",
+            "description": "View attribution window: 0 excludes views; 1 includes one-day views.",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 1,
+              "enum": [0, 1]
+            }
+          },
+          {
+            "name": "attribution_time_basis",
+            "in": "query",
+            "description": "Date reports by the attributed ad interaction (ad_event_time) or conversion (conversion_time). Defaults to ad_event_time.",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/AttributionTimeBasisParam"
             }
           },
           {
@@ -1642,7 +2235,8 @@
     },
     "/ad_groups/{ad_group_id}/insights": {
       "get": {
-        "summary": "Get ad group insights aggregated by time granularity. Attribution metrics for the current account-local day are preliminary and may change as conversions are processed.",
+        "summary": "Get Ad Group Insights",
+        "description": "Get ad group insights aggregated by time granularity. Attribution metrics for the current account-local day are preliminary and may change as conversions are processed.",
         "operationId": "GetAdGroupInsightsMethod",
         "parameters": [
           {
@@ -1651,6 +2245,39 @@
             "required": true,
             "schema": {
               "type": "string"
+            }
+          },
+          {
+            "name": "attribution_window_days",
+            "in": "query",
+            "description": "Click attribution window: 7, 14, or 30 days. Omitted or null windows independently default to 30-day click and 1-day view.",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 7,
+              "maximum": 30,
+              "enum": [7, 14, 30]
+            }
+          },
+          {
+            "name": "view_through_attribution_window_days",
+            "in": "query",
+            "description": "View attribution window: 0 excludes views; 1 includes one-day views.",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 1,
+              "enum": [0, 1]
+            }
+          },
+          {
+            "name": "attribution_time_basis",
+            "in": "query",
+            "description": "Date reports by the attributed ad interaction (ad_event_time) or conversion (conversion_time). Defaults to ad_event_time.",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/AttributionTimeBasisParam"
             }
           },
           {
@@ -1790,7 +2417,8 @@
     },
     "/ads/{ad_id}/insights": {
       "get": {
-        "summary": "Get ad insights aggregated by time granularity. Attribution metrics for the current account-local day are preliminary and may change as conversions are processed.",
+        "summary": "Get Ad Insights",
+        "description": "Get ad insights aggregated by time granularity. Attribution metrics for the current account-local day are preliminary and may change as conversions are processed.",
         "operationId": "GetAdInsightsMethod",
         "parameters": [
           {
@@ -1799,6 +2427,39 @@
             "required": true,
             "schema": {
               "type": "string"
+            }
+          },
+          {
+            "name": "attribution_window_days",
+            "in": "query",
+            "description": "Click attribution window: 7, 14, or 30 days. Omitted or null windows independently default to 30-day click and 1-day view.",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 7,
+              "maximum": 30,
+              "enum": [7, 14, 30]
+            }
+          },
+          {
+            "name": "view_through_attribution_window_days",
+            "in": "query",
+            "description": "View attribution window: 0 excludes views; 1 includes one-day views.",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 1,
+              "enum": [0, 1]
+            }
+          },
+          {
+            "name": "attribution_time_basis",
+            "in": "query",
+            "description": "Date reports by the attributed ad interaction (ad_event_time) or conversion (conversion_time). Defaults to ad_event_time.",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/AttributionTimeBasisParam"
             }
           },
           {
@@ -1938,7 +2599,8 @@
     },
     "/geo_lookup/search": {
       "get": {
-        "summary": "Search Market locations and standard region codes for advertiser geo targeting.",
+        "summary": "Get Geo Lookup",
+        "description": "Search Market locations and standard region codes for advertiser geo targeting.",
         "operationId": "GetGeoLookupMethod",
         "parameters": [
           {
@@ -1978,7 +2640,8 @@
     },
     "/lead_sync_subscriptions": {
       "post": {
-        "summary": "Provision lead delivery to a managed Webhooks endpoint.",
+        "summary": "Create Lead Sync Subscription",
+        "description": "Provision lead delivery to a managed Webhooks endpoint.",
         "operationId": "CreateLeadSyncSubscriptionMethod",
         "parameters": [
           {
@@ -2026,7 +2689,8 @@
         ]
       },
       "get": {
-        "summary": "List the lead-sync subscription for an authorized Ad Account.",
+        "summary": "List Lead Sync Subscriptions",
+        "description": "List the lead-sync subscription for an authorized Ad Account.",
         "operationId": "ListLeadSyncSubscriptionsMethod",
         "parameters": [
           {
@@ -2057,7 +2721,8 @@
     },
     "/lead_sync_subscriptions/{subscription_id}": {
       "get": {
-        "summary": "Get a lead-sync subscription.",
+        "summary": "Get Lead Sync Subscription",
+        "description": "Get a lead-sync subscription.",
         "operationId": "GetLeadSyncSubscriptionMethod",
         "parameters": [
           {
@@ -2086,7 +2751,8 @@
         "x-openai-class-name": "sofa.api.methods.lead_sync_subscriptions.GetLeadSyncSubscriptionMethod"
       },
       "delete": {
-        "summary": "Delete a lead-sync subscription.",
+        "summary": "Delete Lead Sync Subscription",
+        "description": "Delete a lead-sync subscription.",
         "operationId": "DeleteLeadSyncSubscriptionMethod",
         "parameters": [
           {
@@ -2125,7 +2791,8 @@
     },
     "/conversions/api_keys": {
       "post": {
-        "summary": "Create a Conversions API key for the currently authenticated ad account.",
+        "summary": "Create Conversion Api Key",
+        "description": "Create a Conversions API key for the currently authenticated ad account.",
         "operationId": "CreateConversionApiKeyMethod",
         "parameters": [],
         "requestBody": {
@@ -2162,7 +2829,8 @@
     },
     "/conversions/event_settings": {
       "post": {
-        "summary": "Create a conversion event setting for the currently authenticated ad account.",
+        "summary": "Create Conversion Event Setting",
+        "description": "Create a conversion event setting for the currently authenticated ad account.",
         "operationId": "CreateConversionEventSettingMethod",
         "parameters": [],
         "requestBody": {
@@ -2197,7 +2865,8 @@
         ]
       },
       "get": {
-        "summary": "List conversion event settings for the currently authenticated ad account.",
+        "summary": "List Conversion Event Settings",
+        "description": "List conversion event settings for the currently authenticated ad account.",
         "operationId": "ListConversionEventSettingsMethod",
         "parameters": [
           {
@@ -2252,7 +2921,8 @@
     },
     "/conversions/pixels": {
       "post": {
-        "summary": "Create a conversion pixel.",
+        "summary": "Create Conversion Source",
+        "description": "Create a conversion pixel.",
         "operationId": "CreateConversionSourceMethod",
         "parameters": [],
         "requestBody": {
@@ -2287,7 +2957,8 @@
         ]
       },
       "get": {
-        "summary": "List conversion pixels and connected pixel ids for the acting ad account.",
+        "summary": "List Conversion Sources",
+        "description": "List conversion pixels and connected pixel ids for the acting ad account.",
         "operationId": "ListConversionSourcesMethod",
         "parameters": [
           {
@@ -2342,7 +3013,8 @@
     },
     "/conversions/events": {
       "get": {
-        "summary": "List recent sampled conversion events for the acting ad account.",
+        "summary": "List Conversion Events",
+        "description": "List recent sampled conversion events for the acting ad account.",
         "operationId": "ListConversionEventsMethod",
         "parameters": [
           {
@@ -2390,7 +3062,8 @@
     },
     "/conversions/insights": {
       "post": {
-        "summary": "Get attributed conversion totals or daily values for the authenticated ad account.",
+        "summary": "Post Conversion Insights",
+        "description": "Get attributed conversion totals or daily values for the authenticated ad account.",
         "operationId": "PostConversionInsightsMethod",
         "parameters": [],
         "requestBody": {
@@ -2419,7 +3092,8 @@
     },
     "/ad_groups": {
       "get": {
-        "summary": "Get ad groups for the ad account, optionally filtered by campaign",
+        "summary": "List Ad Groups",
+        "description": "Get ad groups for the ad account, optionally filtered by campaign",
         "operationId": "ListAdGroupsMethod",
         "parameters": [
           {
@@ -2502,7 +3176,8 @@
         "x-openai-class-name": "sofa.api.methods.ad_groups.list_ad_groups.ListAdGroupsMethod"
       },
       "post": {
-        "summary": "Create an ad group for a campaign",
+        "summary": "Create Ad Group",
+        "description": "Create an ad group for a campaign",
         "operationId": "CreateAdGroupMethod",
         "parameters": [
           {
@@ -2552,7 +3227,8 @@
     },
     "/ad_groups/{ad_group_id}": {
       "get": {
-        "summary": "Get an ad group",
+        "summary": "Get Ad Group",
+        "description": "Get an ad group",
         "operationId": "GetAdGroupMethod",
         "parameters": [
           {
@@ -2590,7 +3266,8 @@
         "x-openai-class-name": "sofa.api.methods.ad_groups.get_ad_group.GetAdGroupMethod"
       },
       "post": {
-        "summary": "Update an ad group",
+        "summary": "Update Ad Group",
+        "description": "Update an ad group",
         "operationId": "UpdateAdGroupMethod",
         "parameters": [
           {
@@ -2636,7 +3313,8 @@
     },
     "/ad_groups/{ad_group_id}/activate": {
       "post": {
-        "summary": "Activate an ad group",
+        "summary": "Activate Ad Group",
+        "description": "Activate an ad group",
         "operationId": "ActivateAdGroupMethod",
         "parameters": [
           {
@@ -2673,7 +3351,8 @@
     },
     "/ad_groups/{ad_group_id}/pause": {
       "post": {
-        "summary": "Pause an ad group",
+        "summary": "Pause Ad Group",
+        "description": "Pause an ad group",
         "operationId": "PauseAdGroupMethod",
         "parameters": [
           {
@@ -2710,7 +3389,8 @@
     },
     "/ad_groups/{ad_group_id}/archive": {
       "post": {
-        "summary": "Archive an ad group",
+        "summary": "Archive Ad Group",
+        "description": "Archive an ad group",
         "operationId": "ArchiveAdGroupMethod",
         "parameters": [
           {
@@ -2747,7 +3427,8 @@
     },
     "/ads": {
       "get": {
-        "summary": "Get ads for the ad account, optionally filtered by ad group",
+        "summary": "List Ads",
+        "description": "Get ads for the ad account, optionally filtered by ad group",
         "operationId": "ListAdsMethod",
         "parameters": [
           {
@@ -2830,7 +3511,8 @@
         "x-openai-class-name": "sofa.api.methods.ads.list_ads.ListAdsMethod"
       },
       "post": {
-        "summary": "Create an ad for an ad group",
+        "summary": "Create Ad",
+        "description": "Create an ad for an ad group",
         "operationId": "CreateAdMethod",
         "parameters": [
           {
@@ -2880,7 +3562,8 @@
     },
     "/ads/{ad_id}": {
       "get": {
-        "summary": "Get an ad",
+        "summary": "Get Ad",
+        "description": "Get an ad",
         "operationId": "GetAdMethod",
         "parameters": [
           {
@@ -2918,7 +3601,8 @@
         "x-openai-class-name": "sofa.api.methods.ads.get_ad.GetAdMethod"
       },
       "post": {
-        "summary": "Update an ad",
+        "summary": "Update Ad",
+        "description": "Update an ad",
         "operationId": "UpdateAdMethod",
         "parameters": [
           {
@@ -2962,9 +3646,40 @@
         ]
       }
     },
+    "/ads/{ad_id}/landing_page_crawl": {
+      "get": {
+        "summary": "Get Landing Page Crawler Evidence",
+        "description": "Get saved landing-page crawler evidence for an ad's submitted version. Includes metadata for successful and failed captures and, when available, a read-only screenshot URL valid for up to 24 hours. Returns 404 when no capture is available and 409 while the capture is pending. The status describes the crawl job, not the destination's HTTP status. This read-only operation does not start a crawl.",
+        "operationId": "GetLandingPageCrawlerEvidenceMethod",
+        "parameters": [
+          {
+            "name": "ad_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LandingPageCrawlerPublicEvidenceResource"
+                }
+              }
+            }
+          }
+        },
+        "x-openai-class-name": "sofa.api.methods.ads.get_landing_page_crawler_evidence.GetLandingPageCrawlerEvidenceMethod"
+      }
+    },
     "/ads/{ad_id}/preview": {
       "post": {
-        "summary": "Create a temporary iframe preview for an existing ad.",
+        "summary": "Create Ad Preview",
+        "description": "Create a temporary iframe preview for an existing ad.",
         "operationId": "CreateAdPreviewMethod",
         "parameters": [
           {
@@ -2993,7 +3708,8 @@
     },
     "/ads/{ad_id}/activate": {
       "post": {
-        "summary": "Activate an ad",
+        "summary": "Activate Ad",
+        "description": "Activate an ad",
         "operationId": "ActivateAdMethod",
         "parameters": [
           {
@@ -3030,7 +3746,8 @@
     },
     "/ads/{ad_id}/pause": {
       "post": {
-        "summary": "Pause an ad",
+        "summary": "Pause Ad",
+        "description": "Pause an ad",
         "operationId": "PauseAdMethod",
         "parameters": [
           {
@@ -3067,7 +3784,8 @@
     },
     "/ads/{ad_id}/archive": {
       "post": {
-        "summary": "Archive an ad",
+        "summary": "Archive Ad",
+        "description": "Archive an ad",
         "operationId": "ArchiveAdMethod",
         "parameters": [
           {
@@ -3104,7 +3822,8 @@
     },
     "/uploads": {
       "post": {
-        "summary": "Upload a file and return a file id",
+        "summary": "Upload Blob",
+        "description": "Upload a file and return a file id",
         "operationId": "UploadBlobMethod",
         "parameters": [],
         "requestBody": {
@@ -3141,7 +3860,8 @@
     },
     "/upload": {
       "post": {
-        "summary": "Upload an image URL or image file and return a file id",
+        "summary": "Upload Image",
+        "description": "Upload an image URL or image file and return a file id",
         "operationId": "UploadImageMethod",
         "parameters": [],
         "requestBody": {
@@ -3181,9 +3901,85 @@
         ]
       }
     },
+    "/feeds/{feed_id}/settings": {
+      "get": {
+        "summary": "Get Product Feed Settings",
+        "description": "Get display and organic-listing settings for an owned feed.",
+        "operationId": "GetProductFeedSettingsMethod",
+        "parameters": [
+          {
+            "name": "feed_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductFeedSettingsResource"
+                }
+              }
+            }
+          }
+        },
+        "x-openai-class-name": "sofa.api.methods.product_feeds.product_feed_settings.GetProductFeedSettingsMethod"
+      },
+      "patch": {
+        "summary": "Patch Product Feed Settings",
+        "description": "Update the display name and organic-listing settings for an owned feed.",
+        "operationId": "PatchProductFeedSettingsMethod",
+        "parameters": [
+          {
+            "name": "feed_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PatchProductFeedSettingsBody"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductFeedSettingsResource"
+                }
+              }
+            }
+          }
+        },
+        "x-openai-class-name": "sofa.api.methods.product_feeds.product_feed_settings.PatchProductFeedSettingsMethod",
+        "security": [
+          {
+            "ApiKeyAuth": []
+          },
+          {
+            "AdsOAuth": ["ads.admin.all.read", "ads.admin.all.write"]
+          }
+        ]
+      }
+    },
     "/feeds/{feed_id}/archive": {
       "post": {
-        "summary": "Archive a product feed for the authenticated ad account.",
+        "summary": "Archive Product Feed",
+        "description": "Archive a product feed for the authenticated ad account.",
         "operationId": "ArchiveProductFeedMethod",
         "parameters": [
           {
@@ -3220,7 +4016,8 @@
     },
     "/feeds": {
       "post": {
-        "summary": "Create a product feed for the authenticated ad account.",
+        "summary": "Create Product Feed",
+        "description": "Create a product feed for the authenticated ad account.",
         "operationId": "CreateProductFeedMethod",
         "parameters": [],
         "requestBody": {
@@ -3255,7 +4052,8 @@
         ]
       },
       "get": {
-        "summary": "List product feeds for the authenticated ad account.",
+        "summary": "List Product Feeds",
+        "description": "List product feeds for the authenticated ad account.",
         "operationId": "ListProductFeedsMethod",
         "parameters": [
           {
@@ -3313,7 +4111,8 @@
     },
     "/feeds/uploads": {
       "get": {
-        "summary": "List recent product feed uploads for the authenticated ad account.",
+        "summary": "List Product Feed Uploads",
+        "description": "List recent product feed uploads for the authenticated ad account.",
         "operationId": "ListProductFeedUploadsMethod",
         "parameters": [
           {
@@ -3368,7 +4167,8 @@
     },
     "/feeds/{feed_id}/products/query": {
       "post": {
-        "summary": "List products in a feed that match the supplied ad group product filters.",
+        "summary": "Query Product Feed Products",
+        "description": "List products in a feed that match the supplied ad group product filters.",
         "operationId": "QueryProductFeedProductsMethod",
         "parameters": [
           {
@@ -3406,7 +4206,8 @@
     },
     "/feeds/{feed_id}/products": {
       "patch": {
-        "summary": "Update product availability and prices for an authenticated ad account feed.",
+        "summary": "Patch Product Feed Products",
+        "description": "Update product availability and prices for an authenticated ad account feed.",
         "operationId": "PatchProductFeedProductsMethod",
         "parameters": [
           {
@@ -3452,7 +4253,8 @@
     },
     "/feeds/{feed_id}/sftp_access": {
       "get": {
-        "summary": "Get SFTP access details for an authenticated ad account product feed.",
+        "summary": "Get Product Feed Sftp Access",
+        "description": "Get SFTP access details for an authenticated ad account product feed.",
         "operationId": "GetProductFeedSftpAccessMethod",
         "parameters": [
           {
@@ -3479,7 +4281,8 @@
         "x-openai-class-name": "sofa.api.methods.product_feeds.get_product_feed_sftp_access.GetProductFeedSftpAccessMethod"
       },
       "post": {
-        "summary": "Create or replace SFTP access credentials for an authenticated ad account product feed.",
+        "summary": "Post Product Feed Sftp Access",
+        "description": "Create or replace SFTP access credentials for an authenticated ad account product feed.",
         "operationId": "PostProductFeedSftpAccessMethod",
         "parameters": [
           {
@@ -3525,7 +4328,8 @@
     },
     "/feeds/{feed_id}/sftp_access/activate": {
       "post": {
-        "summary": "Activate SFTP access for an authenticated ad account product feed.",
+        "summary": "Post Product Feed Sftp Access Activate",
+        "description": "Activate SFTP access for an authenticated ad account product feed.",
         "operationId": "PostProductFeedSftpAccessActivateMethod",
         "parameters": [
           {
@@ -3562,7 +4366,8 @@
     },
     "/feeds/{feed_id}/sftp_access/pause": {
       "post": {
-        "summary": "Pause SFTP access for an authenticated ad account product feed.",
+        "summary": "Post Product Feed Sftp Access Pause",
+        "description": "Pause SFTP access for an authenticated ad account product feed.",
         "operationId": "PostProductFeedSftpAccessPauseMethod",
         "parameters": [
           {
@@ -3597,9 +4402,189 @@
         ]
       }
     },
+    "/sandbox/ad_eligibility_jobs": {
+      "post": {
+        "summary": "Submit Partner Eligibility Job",
+        "description": "Submit independent synthetic prompts for current campaign eligibility observations.",
+        "operationId": "SubmitPartnerEligibilityJobMethod",
+        "parameters": [
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "description": "Unique key for retrying this create request. If a matching prior create is visible, the existing object is returned instead of creating a duplicate. Reusing a key with a different request body is rejected. Must contain at least one non-whitespace character and be at most 128 UTF-8 bytes.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128,
+              "pattern": ".*\\S.*"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SubmitPartnerEligibilityJobBody"
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcceptedPartnerEligibilityJobResource"
+                }
+              }
+            }
+          }
+        },
+        "x-openai-class-name": "sofa.api.methods.partner_eligibility_jobs.SubmitPartnerEligibilityJobMethod",
+        "security": [
+          {
+            "AdsOAuth": ["ads.admin.all.read", "ads.admin.all.write"]
+          }
+        ]
+      }
+    },
+    "/sandbox/ad_eligibility_jobs/{batch_id}": {
+      "get": {
+        "summary": "Get Partner Eligibility Job",
+        "description": "Read an authorized partner eligibility job.",
+        "operationId": "GetPartnerEligibilityJobMethod",
+        "parameters": [
+          {
+            "name": "batch_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcceptedPartnerEligibilityJobResource"
+                }
+              }
+            }
+          }
+        },
+        "x-openai-class-name": "sofa.api.methods.partner_eligibility_jobs.GetPartnerEligibilityJobMethod",
+        "security": [
+          {
+            "AdsOAuth": ["ads.admin.all.read"]
+          }
+        ]
+      }
+    },
+    "/sandbox/ad_eligibility_jobs/{batch_id}/results": {
+      "get": {
+        "summary": "Get Partner Eligibility Results",
+        "description": "Read a bounded page in submission order; pending entries must be polled again.",
+        "operationId": "GetPartnerEligibilityResultsMethod",
+        "parameters": [
+          {
+            "name": "batch_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 1000
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PartnerEligibilityResultsResource"
+                }
+              }
+            }
+          }
+        },
+        "x-openai-class-name": "sofa.api.methods.partner_eligibility_jobs.GetPartnerEligibilityResultsMethod",
+        "security": [
+          {
+            "AdsOAuth": ["ads.admin.all.read"]
+          }
+        ]
+      }
+    },
+    "/sandbox/ad_eligibility_jobs/{batch_id}/cancel": {
+      "post": {
+        "summary": "Cancel Partner Eligibility Job",
+        "description": "Request cancellation of unfinished items; completed observations retain their normal expiry.",
+        "operationId": "CancelPartnerEligibilityJobMethod",
+        "parameters": [
+          {
+            "name": "batch_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcceptedPartnerEligibilityJobResource"
+                }
+              }
+            }
+          }
+        },
+        "x-openai-class-name": "sofa.api.methods.partner_eligibility_jobs.CancelPartnerEligibilityJobMethod",
+        "security": [
+          {
+            "AdsOAuth": ["ads.admin.all.read", "ads.admin.all.write"]
+          }
+        ]
+      }
+    },
     "/partner_data/uploads": {
       "post": {
-        "summary": "Create an Ads partner-data upload.",
+        "summary": "Create Partner Data Upload",
+        "description": "Create an Ads partner-data upload.",
         "operationId": "CreatePartnerDataUploadMethod",
         "parameters": [],
         "requestBody": {
@@ -3633,7 +4618,8 @@
     },
     "/partner_data/uploads/{upload_id}": {
       "get": {
-        "summary": "Get an Ads partner-data upload.",
+        "summary": "Get Partner Data Upload",
+        "description": "Get an Ads partner-data upload.",
         "operationId": "GetPartnerDataUploadMethod",
         "parameters": [
           {
@@ -3662,82 +4648,6 @@
         "security": [
           {
             "ApiKeyAuth": []
-          }
-        ]
-      }
-    },
-    "/ad_account/daily_spend_limit": {
-      "post": {
-        "summary": "Set an account-wide daily billable ad-spend limit, with an optional exclusive end date. Creating or editing a daily limit requires an ad account on postpaid invoice billing. Omit end_date to retain an existing end, or send null for no end. First activation takes effect no earlier than the next account-local day. Increases and decreases apply on save and retain today's counted spend; a decrease below recorded spend is rejected. Like Date range limits, edits are not retroactive: delayed charges use the settings effective at their event time, and the spend check is not atomic with concurrent billing. The saved amount repeats each day in the recorded account timezone, without carryover, proration, or campaign-style flexibility. Use the latest configuration revision.",
-        "operationId": "SetAdAccountDailySpendLimitMethod",
-        "parameters": [],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/SetAdAccountDailySpendLimitBody"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AdAccountDailySpendLimitChangeResource"
-                }
-              }
-            }
-          }
-        },
-        "x-openai-class-name": "sofa.api.methods.ad_account_daily_spend_limit.SetAdAccountDailySpendLimitMethod",
-        "security": [
-          {
-            "ApiKeyAuth": []
-          },
-          {
-            "AdsOAuth": ["ads.admin.all.read", "ads.admin.all.write"]
-          }
-        ]
-      }
-    },
-    "/ad_account/daily_spend_limit/delete": {
-      "post": {
-        "summary": "Remove the evergreen daily limit on save. Historical protected days and their billable allowances are retained for late events and corrections. Does not delete dated or IO limits.",
-        "operationId": "DeleteAdAccountDailySpendLimitMethod",
-        "parameters": [],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/DeleteAdAccountDailySpendLimitBody"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AdAccountDailySpendLimitChangeResource"
-                }
-              }
-            }
-          }
-        },
-        "x-openai-class-name": "sofa.api.methods.ad_account_daily_spend_limit.DeleteAdAccountDailySpendLimitMethod",
-        "security": [
-          {
-            "ApiKeyAuth": []
-          },
-          {
-            "AdsOAuth": ["ads.admin.all.read", "ads.admin.all.write"]
           }
         ]
       }
@@ -4139,6 +5049,12 @@
               }
             ]
           },
+          "geographic_targeting_blocked": {
+            "type": "boolean"
+          },
+          "advertiser_phone_verification_required": {
+            "type": "boolean"
+          },
           "serving_issues": {
             "items": {
               "$ref": "#/components/schemas/CampaignServingIssueBody"
@@ -4341,7 +5257,8 @@
       "LandingPageConfigurationParams": {
         "properties": {
           "query_string_template": {
-            "type": "string"
+            "type": "string",
+            "maxLength": 2048
           }
         },
         "type": "object",
@@ -4719,6 +5636,21 @@
         "required": [],
         "x-openai-class-name": "sofa.api.params.custom_audiences.CustomAudienceMembershipMutationBody"
       },
+      "CustomAudienceMembershipOperationFailureReasonBody": {
+        "properties": {
+          "code": {
+            "type": "string",
+            "description": "Stable code for an advertiser-actionable failure."
+          },
+          "message": {
+            "type": "string",
+            "description": "Safe explanation and suggested corrective action."
+          }
+        },
+        "type": "object",
+        "required": ["code", "message"],
+        "x-openai-class-name": "sofa.api.resources.custom_audiences.CustomAudienceMembershipOperationFailureReasonBody"
+      },
       "CustomAudienceMembershipOperationBody": {
         "properties": {
           "operation_id": {
@@ -4732,6 +5664,10 @@
           },
           "status": {
             "type": "string"
+          },
+          "failure_reason": {
+            "$ref": "#/components/schemas/CustomAudienceMembershipOperationFailureReasonBody",
+            "description": "Present only for failed operations with a known advertiser-actionable cause. Omitted for other failures and operations recorded without a failure reason."
           }
         },
         "type": "object",
@@ -4742,35 +5678,6 @@
           "status"
         ],
         "x-openai-class-name": "sofa.api.resources.custom_audiences.CustomAudienceMembershipOperationBody"
-      },
-      "CustomAudienceMembershipOperationsResource": {
-        "properties": {
-          "object": {
-            "type": "string"
-          },
-          "data": {
-            "items": {
-              "$ref": "#/components/schemas/CustomAudienceMembershipOperationBody"
-            },
-            "type": "array"
-          },
-          "has_more": {
-            "type": "boolean"
-          },
-          "next_cursor": {
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "null"
-              }
-            ]
-          }
-        },
-        "type": "object",
-        "required": ["object", "data", "has_more", "next_cursor"],
-        "x-openai-class-name": "sofa.api.resources.custom_audiences.CustomAudienceMembershipOperationsBody"
       },
       "ReplaceCustomAudienceMembersBody": {
         "properties": {
@@ -4827,6 +5734,35 @@
         "required": ["name", "custom_audience_ids"],
         "x-openai-class-name": "sofa.api.params.custom_audiences.MergeCustomAudiencesBody"
       },
+      "CustomAudienceMembershipOperationsResource": {
+        "properties": {
+          "object": {
+            "type": "string"
+          },
+          "data": {
+            "items": {
+              "$ref": "#/components/schemas/CustomAudienceMembershipOperationBody"
+            },
+            "type": "array"
+          },
+          "has_more": {
+            "type": "boolean"
+          },
+          "next_cursor": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": ["object", "data", "has_more", "next_cursor"],
+        "x-openai-class-name": "sofa.api.resources.custom_audiences.CustomAudienceMembershipOperationsBody"
+      },
       "CreateApiKeyBody": {
         "properties": {
           "key_name": {
@@ -4857,6 +5793,15 @@
       "UpdateAdAccountBody": {
         "properties": {
           "name": {
+            "type": "string"
+          },
+          "legal_name": {
+            "type": "string"
+          },
+          "account_name": {
+            "type": "string"
+          },
+          "brand_name": {
             "type": "string"
           },
           "url": {
@@ -4957,6 +5902,15 @@
       },
       "AdAccountResource": {
         "properties": {
+          "legal_name": {
+            "type": "string"
+          },
+          "account_name": {
+            "type": "string"
+          },
+          "brand_name": {
+            "type": "string"
+          },
           "id": {
             "type": "string"
           },
@@ -5042,6 +5996,134 @@
         "type": "object",
         "required": ["object", "data"],
         "x-openai-class-name": "sofa.api.resources.adaccount.AdAccountsBody"
+      },
+      "AuditLogItemBody": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "audit_log_type": {
+            "type": "string"
+          },
+          "obj_type": {
+            "type": "string"
+          },
+          "obj_id": {
+            "type": "string",
+            "description": "Object ID without the Habitat partition key."
+          },
+          "item_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "actor_type": {
+            "type": "string"
+          },
+          "actor_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "campaign_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "ad_group_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "changes": {},
+          "hierarchy_info": {},
+          "ts": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "format": "unixtime"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "audit_log_type",
+          "obj_type",
+          "obj_id",
+          "item_name",
+          "actor_type",
+          "actor_id",
+          "campaign_id",
+          "ad_group_id",
+          "changes",
+          "hierarchy_info",
+          "ts"
+        ],
+        "x-openai-class-name": "sofa.api.resources.audit_logs.AuditLogItemBody"
+      },
+      "ListAuditLogsResource": {
+        "properties": {
+          "object": {
+            "type": "string"
+          },
+          "data": {
+            "items": {
+              "$ref": "#/components/schemas/AuditLogItemBody"
+            },
+            "type": "array"
+          },
+          "first_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "last_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "has_more": {
+            "type": "boolean"
+          }
+        },
+        "type": "object",
+        "required": ["object", "data", "first_id", "last_id", "has_more"],
+        "x-openai-class-name": "sofa.api.resources.audit_logs.ListAuditLogsBody"
       },
       "CreateAdAccountCreationSessionBody": {
         "properties": {
@@ -5160,6 +6242,97 @@
         ],
         "x-openai-class-name": "sofa.api.resources.ad_account_spend_limit_windows.AdAccountSpendLimitWindowBody"
       },
+      "AdAccountDailySpendLimitBody": {
+        "properties": {
+          "window_id": {
+            "type": "string",
+            "description": "Immutable Daily rule ID for targeted edits and removal."
+          },
+          "amount_micros": {
+            "type": "integer",
+            "description": "Current daily billable ad-spend cap."
+          },
+          "start_date": {
+            "type": "string",
+            "description": "First protected account-local date, YYYY-MM-DD."
+          },
+          "end_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "description": "Exclusive account-local end date, YYYY-MM-DD; null means no end."
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "timezone": {
+            "type": "string",
+            "description": "Recorded IANA timezone; immutable while Daily exists."
+          },
+          "status": {
+            "type": "string",
+            "description": "active or upcoming."
+          },
+          "spent_micros": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "description": "Enforcement-backed spend for this day; null if unavailable or not active."
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "remaining_micros": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "spend_as_of": {
+            "anyOf": [
+              {
+                "type": "string",
+                "description": "Actual enforcement counter update timestamp, ISO 8601; null if unavailable."
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "next_reset": {
+            "anyOf": [
+              {
+                "type": "string",
+                "description": "Next account-local midnight with a fresh allowance, ISO 8601; null before activation or on the final protected day."
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "amount_micros",
+          "start_date",
+          "end_date",
+          "timezone",
+          "status",
+          "spent_micros",
+          "remaining_micros",
+          "spend_as_of",
+          "next_reset"
+        ],
+        "x-openai-class-name": "sofa.api.resources.ad_account_spend_limit_windows.AdAccountDailySpendLimitBody"
+      },
       "AdAccountSpendLimitWindowsListResource": {
         "properties": {
           "object": {
@@ -5180,6 +6353,13 @@
                 "type": "null"
               }
             ]
+          },
+          "daily_limits": {
+            "items": {
+              "$ref": "#/components/schemas/AdAccountDailySpendLimitBody"
+            },
+            "type": "array",
+            "description": "Active and upcoming Daily rules, ordered by start date ascending."
           },
           "revision": {
             "type": "integer",
@@ -5300,8 +6480,203 @@
         "required": ["window_id", "object", "deleted"],
         "x-openai-class-name": "sofa.api.resources.ad_account_spend_limit_windows.DeleteAdAccountSpendLimitWindowBody"
       },
+      "SetAdAccountDailySpendLimitBody": {
+        "properties": {
+          "window_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1,
+                "description": "Daily rule ID to edit. Send null to create a new non-overlapping Daily rule. Omit only for legacy singleton upsert; multiple active or upcoming rules require an ID."
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "amount_micros": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Maximum billable ad spend for each account-local day, in account-currency micros."
+          },
+          "expected_revision": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Revision from the latest account-limit list response; use 0 when absent."
+          },
+          "start_date": {
+            "type": "string",
+            "maxLength": 10,
+            "minLength": 10,
+            "description": "Account-local activation date (YYYY-MM-DD). Defaults to earliest_daily_start_date from the list response on first creation; required when recreating a removed or expired limit. New limits cannot start before earliest_daily_start_date. Omit when editing an existing active or upcoming limit; its start date cannot change."
+          },
+          "end_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 10,
+                "minLength": 10,
+                "description": "Optional exclusive account-local end date (YYYY-MM-DD). Omit to retain an existing end, or send null for no end. Must be after the start date and in the future. Expired limits cannot be edited."
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": ["amount_micros", "expected_revision"],
+        "x-openai-class-name": "sofa.api.params.ad_account_daily_spend_limit.SetAdAccountDailySpendLimitBody"
+      },
+      "AdAccountDailySpendLimitChangeResource": {
+        "properties": {
+          "spend_limits": {
+            "$ref": "#/components/schemas/AdAccountSpendLimitWindowsListResource"
+          }
+        },
+        "type": "object",
+        "required": ["spend_limits"],
+        "x-openai-class-name": "sofa.api.resources.ad_account_spend_limit_windows.AdAccountDailySpendLimitChangeBody"
+      },
+      "DeleteAdAccountDailySpendLimitBody": {
+        "properties": {
+          "window_id": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Daily rule ID to remove. Omit only when at most one active or upcoming Daily rule exists."
+          },
+          "expected_revision": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "type": "object",
+        "required": ["expected_revision"],
+        "x-openai-class-name": "sofa.api.params.ad_account_daily_spend_limit.DeleteAdAccountDailySpendLimitBody"
+      },
+      "AttributionTimeBasisParam": {
+        "type": "string",
+        "enum": ["conversion_time", "ad_event_time"],
+        "x-openai-class-name": "sofa.api.params.insights.AttributionTimeBasisParam"
+      },
+      "HotelInsightsCoverageBody": {
+        "properties": {
+          "availability": {
+            "type": "string",
+            "description": "available, partial, or unavailable. Estimates remain mutable even when available."
+          },
+          "retention_start_date": {
+            "type": "string"
+          },
+          "settled_through_hour_utc": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "estimated_from_hour_utc": {
+            "type": "string"
+          },
+          "estimated_through_exclusive_utc": {
+            "type": "string"
+          },
+          "missing_settled_watermark": {
+            "type": "boolean"
+          },
+          "has_retention_gap": {
+            "type": "boolean"
+          },
+          "includes_pre_v3_interval": {
+            "type": "boolean"
+          },
+          "estimated_tail_unconfirmed": {
+            "type": "boolean"
+          }
+        },
+        "type": "object",
+        "required": [
+          "availability",
+          "retention_start_date",
+          "settled_through_hour_utc",
+          "estimated_from_hour_utc",
+          "estimated_through_exclusive_utc",
+          "missing_settled_watermark",
+          "has_retention_gap",
+          "includes_pre_v3_interval",
+          "estimated_tail_unconfirmed"
+        ],
+        "x-openai-class-name": "sofa.api.resources.hotel_insights.HotelInsightsCoverageBody"
+      },
       "InsightItemBody": {
         "properties": {
+          "inventory_type": {
+            "type": "string"
+          },
+          "schema_profile": {
+            "type": "string"
+          },
+          "inventory_feed_id": {
+            "type": "string"
+          },
+          "inventory_item_id": {
+            "type": "string"
+          },
+          "hotel_name": {
+            "type": "string"
+          },
+          "hotel_brand": {
+            "type": "string"
+          },
+          "hotel_description": {
+            "type": "string"
+          },
+          "hotel_url": {
+            "type": "string"
+          },
+          "hotel_primary_image_url": {
+            "type": "string"
+          },
+          "hotel_base_price": {
+            "type": "string"
+          },
+          "hotel_star_rating": {
+            "type": "number"
+          },
+          "hotel_category": {
+            "type": "string"
+          },
+          "hotel_city": {
+            "type": "string"
+          },
+          "hotel_region": {
+            "type": "string"
+          },
+          "hotel_country_code": {
+            "type": "string"
+          },
+          "hotel_impressions": {
+            "type": "integer",
+            "description": "Property/bucket total repeated on hierarchy children; do not sum."
+          },
+          "hotel_clicks": {
+            "type": "integer"
+          },
+          "hotel_spend": {
+            "type": "number"
+          },
+          "hotel_ctr": {
+            "type": "number"
+          },
+          "hotel_cpc": {
+            "type": "number"
+          },
+          "hotel_cpm": {
+            "type": "number"
+          },
           "id": {
             "type": "string"
           },
@@ -5883,6 +7258,12 @@
       },
       "InsightsResource": {
         "properties": {
+          "timezone": {
+            "type": "string"
+          },
+          "coverage": {
+            "$ref": "#/components/schemas/HotelInsightsCoverageBody"
+          },
           "object": {
             "type": "string"
           },
@@ -5917,6 +7298,10 @@
           },
           "has_more": {
             "type": "boolean"
+          },
+          "total_count": {
+            "type": "integer",
+            "description": "Hotel property/time-bucket groups before pagination."
           }
         },
         "type": "object",
@@ -5929,6 +7314,273 @@
           "has_more"
         ],
         "x-openai-class-name": "sofa.api.resources.insights.InsightsBody"
+      },
+      "HotelInsightsGranularity": {
+        "type": "string",
+        "enum": ["none", "daily", "monthly"],
+        "x-openai-class-name": "sofa.api.methods.insights.get_hotel_insights.HotelInsightsGranularity"
+      },
+      "HotelInsightsBreakdown": {
+        "type": "string",
+        "enum": ["campaign", "ad_group", "ad"],
+        "x-openai-class-name": "sofa.api.methods.insights.get_hotel_insights.HotelInsightsBreakdown"
+      },
+      "HotelInsightsSortField": {
+        "type": "string",
+        "enum": ["impressions", "clicks", "spend", "ctr", "cpc", "cpm"],
+        "x-openai-class-name": "sofa.api.methods.insights.get_hotel_insights.HotelInsightsSortField"
+      },
+      "HotelInsightsSortDirection": {
+        "type": "string",
+        "enum": ["asc", "desc"],
+        "x-openai-class-name": "sofa.api.methods.insights.get_hotel_insights.HotelInsightsSortDirection"
+      },
+      "HotelInsightRowBody": {
+        "properties": {
+          "inventory_type": {
+            "type": "string"
+          },
+          "schema_profile": {
+            "type": "string"
+          },
+          "inventory_feed_id": {
+            "type": "string"
+          },
+          "inventory_item_id": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string"
+          },
+          "month": {
+            "type": "string"
+          },
+          "campaign_id": {
+            "type": "string"
+          },
+          "ad_group_id": {
+            "type": "string"
+          },
+          "ad_id": {
+            "type": "string"
+          },
+          "impressions": {
+            "type": "integer"
+          },
+          "clicks": {
+            "type": "integer"
+          },
+          "spend": {
+            "type": "number",
+            "description": "Settled spend in ad-account currency."
+          },
+          "ctr": {
+            "type": "number"
+          },
+          "cpc": {
+            "type": "number",
+            "description": "Settled spend divided by settled clicks."
+          },
+          "cpm": {
+            "type": "number",
+            "description": "Settled spend per thousand settled impressions."
+          },
+          "hotel_impressions": {
+            "type": "integer",
+            "description": "Property total across the filtered hierarchy rows in this bucket."
+          },
+          "hotel_clicks": {
+            "type": "integer"
+          },
+          "hotel_spend": {
+            "type": "number",
+            "description": "Property total settled spend in this bucket."
+          },
+          "hotel_ctr": {
+            "type": "number",
+            "description": "Property clicks divided by property impressions."
+          },
+          "hotel_cpc": {
+            "type": "number",
+            "description": "Property settled spend divided by settled clicks."
+          },
+          "hotel_cpm": {
+            "type": "number",
+            "description": "Property settled spend per thousand settled impressions."
+          },
+          "data_status": {
+            "type": "string",
+            "description": "Bucket mutability: final, estimated, or mixed. See page coverage for source gaps."
+          },
+          "hotel_name": {
+            "type": "string"
+          },
+          "hotel_brand": {
+            "type": "string"
+          },
+          "hotel_description": {
+            "type": "string"
+          },
+          "hotel_url": {
+            "type": "string"
+          },
+          "hotel_primary_image_url": {
+            "type": "string"
+          },
+          "hotel_base_price": {
+            "type": "string"
+          },
+          "hotel_star_rating": {
+            "type": "number"
+          },
+          "hotel_category": {
+            "type": "string"
+          },
+          "hotel_city": {
+            "type": "string"
+          },
+          "hotel_region": {
+            "type": "string"
+          },
+          "hotel_country_code": {
+            "type": "string"
+          }
+        },
+        "type": "object",
+        "required": [
+          "inventory_type",
+          "schema_profile",
+          "inventory_feed_id",
+          "inventory_item_id",
+          "impressions",
+          "clicks",
+          "spend",
+          "ctr",
+          "cpc",
+          "cpm",
+          "data_status"
+        ],
+        "x-openai-class-name": "sofa.api.resources.hotel_insights.HotelInsightRowBody"
+      },
+      "HotelInsightsResource": {
+        "properties": {
+          "object": {
+            "type": "string"
+          },
+          "data": {
+            "items": {
+              "$ref": "#/components/schemas/HotelInsightRowBody"
+            },
+            "type": "array"
+          },
+          "count": {
+            "type": "integer"
+          },
+          "last_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "has_more": {
+            "type": "boolean"
+          },
+          "total_count": {
+            "type": "integer",
+            "description": "Number of property/time-bucket groups, before pagination."
+          },
+          "timezone": {
+            "type": "string"
+          },
+          "coverage": {
+            "$ref": "#/components/schemas/HotelInsightsCoverageBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "object",
+          "data",
+          "count",
+          "last_id",
+          "has_more",
+          "timezone",
+          "coverage"
+        ],
+        "x-openai-class-name": "sofa.api.resources.hotel_insights.HotelInsightsBody"
+      },
+      "HotelInsightsTimeseriesRowBody": {
+        "properties": {
+          "date": {
+            "type": "string",
+            "description": "YYYY-MM-DD in the ad account timezone."
+          },
+          "impressions": {
+            "type": "integer"
+          },
+          "clicks": {
+            "type": "integer"
+          },
+          "spend": {
+            "type": "number",
+            "description": "Settled spend in ad-account currency."
+          },
+          "ctr": {
+            "type": "number"
+          },
+          "cpc": {
+            "type": "number",
+            "description": "Settled spend divided by settled clicks."
+          },
+          "cpm": {
+            "type": "number",
+            "description": "Settled spend per thousand settled impressions."
+          },
+          "data_status": {
+            "type": "string",
+            "description": "final, estimated, or mixed. See coverage for source gaps."
+          }
+        },
+        "type": "object",
+        "required": [
+          "date",
+          "impressions",
+          "clicks",
+          "spend",
+          "ctr",
+          "cpc",
+          "cpm",
+          "data_status"
+        ],
+        "x-openai-class-name": "sofa.api.resources.hotel_insights_timeseries.HotelInsightsTimeseriesRowBody"
+      },
+      "HotelInsightsTimeseriesResource": {
+        "properties": {
+          "object": {
+            "type": "string"
+          },
+          "data": {
+            "items": {
+              "$ref": "#/components/schemas/HotelInsightsTimeseriesRowBody"
+            },
+            "type": "array"
+          },
+          "count": {
+            "type": "integer"
+          },
+          "timezone": {
+            "type": "string"
+          },
+          "coverage": {
+            "$ref": "#/components/schemas/HotelInsightsCoverageBody"
+          }
+        },
+        "type": "object",
+        "required": ["object", "data", "count", "timezone", "coverage"],
+        "x-openai-class-name": "sofa.api.resources.hotel_insights_timeseries.HotelInsightsTimeseriesBody"
       },
       "GeoLookupEntry": {
         "properties": {
@@ -6492,6 +8144,11 @@
         "required": ["object", "data"],
         "x-openai-class-name": "sofa.api.resources.conversion_diagnostics.ConversionEventsBody"
       },
+      "ConversionInsightsIncludeParam": {
+        "type": "string",
+        "enum": ["attributed_events"],
+        "x-openai-class-name": "sofa.api.params.insights.ConversionInsightsIncludeParam"
+      },
       "ConversionTimeGranularityParam": {
         "type": "string",
         "enum": ["none", "daily"],
@@ -6504,6 +8161,29 @@
       },
       "PostConversionInsightsBody": {
         "properties": {
+          "include": {
+            "items": {
+              "$ref": "#/components/schemas/ConversionInsightsIncludeParam"
+            },
+            "type": "array",
+            "description": "Add event details; clock, windows and goal totals are unchanged. count counts summary rows."
+          },
+          "event_names": {
+            "description": "Requires include=[attributed_events]. Omit for all; select configured or published account events.",
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "x-openai-client-enforce-constraints": true
+            },
+            "minItems": 1,
+            "maxItems": 500
+          },
+          "attribution_time_basis": {
+            "$ref": "#/components/schemas/AttributionTimeBasisParam",
+            "description": "Defaults: ad_event_time; omitted/null windows independently use 30-day click/1-day view. conversion_time has limited non-goal coverage."
+          },
           "aggregation_level": {
             "type": "string"
           },
@@ -6530,14 +8210,137 @@
           },
           "include_zero_rows": {
             "type": "boolean"
+          },
+          "attribution_window_days": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 7,
+                "maximum": 30,
+                "enum": [7, 14, 30]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "view_through_attribution_window_days": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 1,
+                "enum": [0, 1]
+              },
+              {
+                "type": "null"
+              }
+            ]
           }
         },
         "type": "object",
         "required": ["aggregation_level", "time_ranges"],
         "x-openai-class-name": "sofa.api.params.insights.InsightsConversionsBody"
       },
+      "ConversionEventSettingBreakdownBody": {
+        "properties": {
+          "conversion_event_setting_id": {
+            "type": "string"
+          },
+          "click_through_conversions": {
+            "type": "integer"
+          },
+          "view_through_conversions": {
+            "type": "integer"
+          }
+        },
+        "type": "object",
+        "required": [
+          "conversion_event_setting_id",
+          "click_through_conversions",
+          "view_through_conversions"
+        ],
+        "x-openai-class-name": "sofa.api.resources.insights.ConversionEventSettingBreakdownBody"
+      },
+      "AttributedEventRowBody": {
+        "properties": {
+          "date": {
+            "type": "string"
+          },
+          "device": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "click_through_conversions": {
+            "type": "integer"
+          },
+          "view_through_conversions": {
+            "type": "integer"
+          },
+          "conversion_event_setting_breakdowns": {
+            "items": {
+              "$ref": "#/components/schemas/ConversionEventSettingBreakdownBody"
+            },
+            "type": "array"
+          },
+          "entity_id": {
+            "type": "string"
+          },
+          "event_name": {
+            "type": "string"
+          },
+          "event_kind": {
+            "type": "string"
+          },
+          "attributed_event_count": {
+            "type": "integer"
+          },
+          "attributed_event_value_amount": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "attributed_event_value_count": {
+            "type": "integer"
+          },
+          "attributed_event_value_currency": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "entity_id",
+          "event_name",
+          "event_kind",
+          "attributed_event_count",
+          "attributed_event_value_amount",
+          "attributed_event_value_count",
+          "attributed_event_value_currency"
+        ],
+        "x-openai-class-name": "sofa.api.resources.insights.AttributedEventRowBody"
+      },
       "ConversionSummaryRowBody": {
         "properties": {
+          "attributed_events": {
+            "items": {
+              "$ref": "#/components/schemas/AttributedEventRowBody"
+            },
+            "type": "array"
+          },
           "entity_id": {
             "type": "string"
           },
@@ -6558,6 +8361,19 @@
           },
           "view_through_conversions": {
             "type": "integer"
+          },
+          "order_created_attributed_sales": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "order_created_attributed_sales_currency": {
+            "type": "string"
           }
         },
         "type": "object",
@@ -6577,6 +8393,9 @@
           },
           "count": {
             "type": "integer"
+          },
+          "account_currency": {
+            "type": "string"
           }
         },
         "type": "object",
@@ -6764,6 +8583,12 @@
                 "type": "null"
               }
             ]
+          },
+          "geographic_targeting_blocked": {
+            "type": "boolean"
+          },
+          "advertiser_phone_verification_required": {
+            "type": "boolean"
           },
           "serving_issues": {
             "items": {
@@ -7232,6 +9057,12 @@
           "review": {
             "$ref": "#/components/schemas/ReviewBody"
           },
+          "geographic_targeting_blocked": {
+            "type": "boolean"
+          },
+          "advertiser_phone_verification_required": {
+            "type": "boolean"
+          },
           "serving_issues": {
             "items": {
               "$ref": "#/components/schemas/AdServingIssueBody"
@@ -7449,6 +9280,57 @@
         "required": [],
         "x-openai-class-name": "sofa.api.params.ads.UpdateAdBody"
       },
+      "LandingPageCrawlerPublicEvidenceResource": {
+        "properties": {
+          "snapshot_id": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "source_url": {
+            "type": "string"
+          },
+          "final_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "captured_at": {
+            "type": "integer",
+            "format": "unixtime"
+          },
+          "crawl_profile": {
+            "type": "string"
+          },
+          "failure_code": {
+            "type": "string"
+          },
+          "robots_txt_allowed": {
+            "type": "boolean"
+          },
+          "robots_txt_reason": {
+            "type": "string"
+          },
+          "robots_txt_url": {
+            "type": "string"
+          },
+          "user_agent": {
+            "type": "string"
+          },
+          "screenshot_url": {
+            "type": "string"
+          }
+        },
+        "type": "object",
+        "required": ["snapshot_id", "status", "source_url"],
+        "x-openai-class-name": "sofa.api.resources.landing_page_crawler_evidence.LandingPageCrawlerPublicEvidenceBody"
+      },
       "AdPreviewItemBody": {
         "properties": {
           "body": {
@@ -7534,6 +9416,48 @@
         "required": ["file_id"],
         "x-openai-class-name": "sofa.api.resources.uploads.UploadImageBody"
       },
+      "ProductFeedSettingsResource": {
+        "properties": {
+          "feed_id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "is_search_eligible_respected": {
+            "type": "boolean"
+          },
+          "countries": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object",
+        "required": [
+          "feed_id",
+          "name",
+          "is_search_eligible_respected",
+          "countries"
+        ],
+        "x-openai-class-name": "sofa.api.resources.product_feed_settings.ProductFeedSettingsBody"
+      },
+      "PatchProductFeedSettingsBody": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "maxLength": 255,
+            "minLength": 1
+          },
+          "is_search_eligible_respected": {
+            "type": "boolean"
+          }
+        },
+        "type": "object",
+        "required": [],
+        "x-openai-class-name": "sofa.api.params.product_feed_settings.PatchProductFeedSettingsBody"
+      },
       "ArchivedProductFeedResource": {
         "properties": {
           "feed_id": {
@@ -7577,6 +9501,9 @@
           },
           "updated_at": {
             "type": "string"
+          },
+          "is_shopify_managed": {
+            "type": "boolean"
           },
           "product_count": {
             "type": "integer"
@@ -7983,6 +9910,26 @@
               }
             ]
           },
+          "variant": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "availability": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
           "filter_values": {
             "additionalProperties": {},
             "type": "object",
@@ -8215,6 +10162,260 @@
         "type": "object",
         "required": ["enabled", "connection_uri", "authentication_method"],
         "x-openai-class-name": "sofa.api.resources.product_feeds.ProductFeedSftpAccessCredentialsResponseBody"
+      },
+      "PartnerEligibilityContextParams": {
+        "properties": {
+          "country_code": {
+            "type": "string",
+            "maxLength": 8,
+            "minLength": 1
+          },
+          "locale": {
+            "type": "string",
+            "maxLength": 32,
+            "minLength": 1
+          },
+          "region_code": {
+            "type": "string",
+            "maxLength": 64,
+            "minLength": 1
+          }
+        },
+        "type": "object",
+        "required": ["country_code", "locale", "region_code"],
+        "x-openai-class-name": "sofa.api.params.partner_eligibility_jobs.PartnerEligibilityContextParams"
+      },
+      "PartnerEligibilityQueryParams": {
+        "properties": {
+          "query_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1
+          },
+          "prompt": {
+            "type": "string",
+            "maxLength": 65536,
+            "minLength": 1
+          }
+        },
+        "type": "object",
+        "required": ["query_id", "prompt"],
+        "x-openai-class-name": "sofa.api.params.partner_eligibility_jobs.PartnerEligibilityQueryParams"
+      },
+      "SubmitPartnerEligibilityJobBody": {
+        "properties": {
+          "schema_version": {
+            "type": "string",
+            "enum": ["1.0"],
+            "default": "1.0",
+            "x-stainless-const": true
+          },
+          "ad_account_id": {
+            "type": "string"
+          },
+          "campaign_id": {
+            "type": "string"
+          },
+          "association_id": {
+            "type": "string",
+            "maxLength": 256,
+            "minLength": 1
+          },
+          "enrollment_generation": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "consent_revision": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "evaluation_context": {
+            "$ref": "#/components/schemas/PartnerEligibilityContextParams"
+          },
+          "queries": {
+            "items": {
+              "$ref": "#/components/schemas/PartnerEligibilityQueryParams"
+            },
+            "type": "array",
+            "maxItems": 1000,
+            "minItems": 1
+          }
+        },
+        "type": "object",
+        "required": [
+          "schema_version",
+          "ad_account_id",
+          "campaign_id",
+          "association_id",
+          "enrollment_generation",
+          "consent_revision",
+          "evaluation_context",
+          "queries"
+        ],
+        "x-openai-class-name": "sofa.api.params.partner_eligibility_jobs.SubmitPartnerEligibilityJobBody"
+      },
+      "PartnerEligibilityJobStatus": {
+        "type": "string",
+        "enum": [
+          "preparing",
+          "pending",
+          "running",
+          "cancelling",
+          "completed",
+          "partially_failed",
+          "failed",
+          "cancelled",
+          "expired"
+        ],
+        "x-openai-class-name": "sofa.api.resources.partner_eligibility_jobs.PartnerEligibilityJobStatus"
+      },
+      "AcceptedPartnerEligibilityJobResource": {
+        "properties": {
+          "schema_version": {
+            "type": "string",
+            "enum": ["1.0"],
+            "default": "1.0",
+            "x-stainless-const": true
+          },
+          "batch_id": {
+            "type": "string"
+          },
+          "ad_account_id": {
+            "type": "string"
+          },
+          "campaign_id": {
+            "type": "string"
+          },
+          "association_id": {
+            "type": "string"
+          },
+          "status": {
+            "$ref": "#/components/schemas/PartnerEligibilityJobStatus"
+          },
+          "total_count": {
+            "type": "integer"
+          },
+          "completed_count": {
+            "type": "integer"
+          },
+          "failed_count": {
+            "type": "integer"
+          },
+          "cancelled_count": {
+            "type": "integer"
+          },
+          "expired_count": {
+            "type": "integer"
+          },
+          "execution_deadline": {
+            "type": "string"
+          },
+          "result_expires_at": {
+            "type": "string"
+          },
+          "results_available": {
+            "type": "boolean"
+          },
+          "retry_after_seconds": {
+            "type": "integer"
+          }
+        },
+        "type": "object",
+        "required": [
+          "schema_version",
+          "batch_id",
+          "ad_account_id",
+          "campaign_id",
+          "association_id",
+          "status",
+          "total_count",
+          "completed_count",
+          "failed_count",
+          "cancelled_count",
+          "expired_count",
+          "execution_deadline",
+          "result_expires_at",
+          "results_available",
+          "retry_after_seconds"
+        ],
+        "x-openai-class-name": "sofa.api.resources.partner_eligibility_jobs.PartnerEligibilityJobBody"
+      },
+      "PartnerEligibilityQueryStatus": {
+        "type": "string",
+        "enum": [
+          "pending",
+          "evaluated",
+          "not_evaluable",
+          "failed",
+          "cancelled",
+          "expired"
+        ],
+        "x-openai-class-name": "sofa.api.resources.partner_eligibility_jobs.PartnerEligibilityQueryStatus"
+      },
+      "PartnerEligibilityQueryResultBody": {
+        "properties": {
+          "query_id": {
+            "type": "string"
+          },
+          "status": {
+            "$ref": "#/components/schemas/PartnerEligibilityQueryStatus"
+          },
+          "eligible": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "retryable": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": ["query_id", "status", "eligible", "retryable"],
+        "x-openai-class-name": "sofa.api.resources.partner_eligibility_jobs.PartnerEligibilityQueryResultBody"
+      },
+      "PartnerEligibilityResultsResource": {
+        "properties": {
+          "schema_version": {
+            "type": "string",
+            "enum": ["1.0"],
+            "default": "1.0",
+            "x-stainless-const": true
+          },
+          "batch_id": {
+            "type": "string"
+          },
+          "results": {
+            "items": {
+              "$ref": "#/components/schemas/PartnerEligibilityQueryResultBody"
+            },
+            "type": "array"
+          },
+          "next_offset": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": ["schema_version", "batch_id", "results", "next_offset"],
+        "x-openai-class-name": "sofa.api.resources.partner_eligibility_jobs.PartnerEligibilityResultsBody"
       },
       "PartnerDataTypeParam": {
         "type": "string",
@@ -8745,150 +10946,6 @@
             }
           }
         ]
-      },
-      "AdAccountDailySpendLimitBody": {
-        "properties": {
-          "amount_micros": {
-            "type": "integer",
-            "description": "Current daily billable ad-spend cap."
-          },
-          "start_date": {
-            "type": "string",
-            "description": "First protected account-local date, YYYY-MM-DD."
-          },
-          "end_date": {
-            "anyOf": [
-              {
-                "type": "string",
-                "description": "Exclusive account-local end date, YYYY-MM-DD; null means no end."
-              },
-              {
-                "type": "null"
-              }
-            ]
-          },
-          "timezone": {
-            "type": "string",
-            "description": "Recorded IANA timezone; immutable while Daily exists."
-          },
-          "status": {
-            "type": "string",
-            "description": "active or upcoming."
-          },
-          "spent_micros": {
-            "anyOf": [
-              {
-                "type": "integer",
-                "description": "Enforcement-backed spend for this day; null if unavailable or not active."
-              },
-              {
-                "type": "null"
-              }
-            ]
-          },
-          "remaining_micros": {
-            "anyOf": [
-              {
-                "type": "integer"
-              },
-              {
-                "type": "null"
-              }
-            ]
-          },
-          "spend_as_of": {
-            "anyOf": [
-              {
-                "type": "string",
-                "description": "Actual enforcement counter update timestamp, ISO 8601; null if unavailable."
-              },
-              {
-                "type": "null"
-              }
-            ]
-          },
-          "next_reset": {
-            "anyOf": [
-              {
-                "type": "string",
-                "description": "Next account-local midnight with a fresh allowance, ISO 8601; null before activation or on the final protected day."
-              },
-              {
-                "type": "null"
-              }
-            ]
-          }
-        },
-        "type": "object",
-        "required": [
-          "amount_micros",
-          "start_date",
-          "end_date",
-          "timezone",
-          "status",
-          "spent_micros",
-          "remaining_micros",
-          "spend_as_of",
-          "next_reset"
-        ],
-        "x-openai-class-name": "sofa.api.resources.ad_account_spend_limit_windows.AdAccountDailySpendLimitBody"
-      },
-      "AdAccountDailySpendLimitChangeResource": {
-        "properties": {
-          "spend_limits": {
-            "$ref": "#/components/schemas/AdAccountSpendLimitWindowsListResource"
-          }
-        },
-        "type": "object",
-        "required": ["spend_limits"],
-        "x-openai-class-name": "sofa.api.resources.ad_account_spend_limit_windows.AdAccountDailySpendLimitChangeBody"
-      },
-      "DeleteAdAccountDailySpendLimitBody": {
-        "properties": {
-          "expected_revision": {
-            "type": "integer",
-            "minimum": 0
-          }
-        },
-        "type": "object",
-        "required": ["expected_revision"],
-        "x-openai-class-name": "sofa.api.params.ad_account_daily_spend_limit.DeleteAdAccountDailySpendLimitBody"
-      },
-      "SetAdAccountDailySpendLimitBody": {
-        "properties": {
-          "amount_micros": {
-            "type": "integer",
-            "minimum": 0,
-            "description": "Maximum billable ad spend for each account-local day, in account-currency micros."
-          },
-          "expected_revision": {
-            "type": "integer",
-            "minimum": 0,
-            "description": "Revision from the latest account-limit list response; use 0 when absent."
-          },
-          "start_date": {
-            "type": "string",
-            "maxLength": 10,
-            "minLength": 10,
-            "description": "Account-local activation date (YYYY-MM-DD). Defaults to earliest_daily_start_date from the list response on first creation; required when recreating a removed or expired limit. New limits cannot start before earliest_daily_start_date. Omit when editing an existing active or upcoming limit; its start date cannot change."
-          },
-          "end_date": {
-            "anyOf": [
-              {
-                "type": "string",
-                "maxLength": 10,
-                "minLength": 10,
-                "description": "Optional exclusive account-local end date (YYYY-MM-DD). Omit to retain an existing end, or send null for no end. Must be after the start date and in the future. Expired limits cannot be edited."
-              },
-              {
-                "type": "null"
-              }
-            ]
-          }
-        },
-        "type": "object",
-        "required": ["amount_micros", "expected_revision"],
-        "x-openai-class-name": "sofa.api.params.ad_account_daily_spend_limit.SetAdAccountDailySpendLimitBody"
       }
     }
   }

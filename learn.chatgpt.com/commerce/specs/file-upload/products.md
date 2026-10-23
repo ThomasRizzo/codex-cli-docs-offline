@@ -17,7 +17,6 @@ add the fields required for your Ads or checkout integration.
 
 
 
-
 ### Start with discovery
 
 Submit one row per purchasable item or variant. Include the nine required
@@ -29,7 +28,6 @@ that describes your products. Ads and checkout have separate requirements.
 - [Product attributes](#item-information), [images](#media), and [prices](#price--promotions)
 - [Shipping](#fulfillment), [returns](#returns), and [reviews](#reviews-and-qa)
 - [Markets](#geo-tagging), [Ads](#ads), and [checkout](#checkout)
-- [Google-compatible feeds](#google-compatible-product-data-feeds)
 
 #### Value conventions
 
@@ -213,9 +211,7 @@ than the currency permits. For USD, use two decimal places. Do not round a
 price into a different payable amount.
 
 Use a positive regular price for discovery and the currency agreed for your
-feed. See the separate [Google-compatible rules](#google-compatible-product-data-feeds)
-for its zero-price exception. Submit the current price; update the feed when a
-sale starts or ends.
+feed. Submit the current price; update the feed when a sale starts or ends.
 
 | Attribute    | Data type      | Requirement | Description                                                                                                                                                                                       | Example     |
 | :----------- | :------------- | :---------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :---------- |
@@ -237,8 +233,8 @@ item becomes available or sells out.
 For a third-party seller, `seller_name` identifies that seller and
 `marketplace_seller` identifies the marketplace where checkout occurs. The
 latter requires [feed setup](#additional-supported-data). The OpenAI format
-requires `seller_name` on each row. Google-compatible feeds use the registered
-merchant name instead. Do not assume registration supplies other row fields.
+requires `seller_name` on each row. Do not assume registration supplies other
+row fields.
 
 ### Fulfillment
 
@@ -292,8 +288,7 @@ next section.
 
 These optional fields require an integration configured to carry them. Confirm
 support during onboarding before relying on them; adding these columns alone
-to a standard OpenAI-format upload does not enable them. Google-compatible
-feeds already support `size_system`.
+to a standard OpenAI-format upload does not enable them.
 
 | Attribute            | Data type        | Requirement                                                               | Description                                                                                                                                                                                                                          | Example               |
 | :------------------- | :--------------- | :------------------------------------------------------------------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------- |
@@ -316,10 +311,8 @@ product URL, or sizing system does not select a destination market.
 | `target_countries` | Array of strings | Optional; requires market setup | Destination countries. Use uppercase ISO 3166-1 alpha-2 codes configured for your feed; the shared format currently represents `US`, `CA`, and `MX`. Standard uploads use `["US"]` regardless of this column. Omitted or empty does not mean worldwide. | `["US"]` |
 | `store_country`    | String           | Optional; requires market setup | Country of the seller's store. Standard uploads use `US` regardless of this column. It is not a regional price or stock override. Omitted or empty does not select another market.                                                                      | `US`     |
 
-For Google-compatible feeds with market processing enabled, registered target
-countries take precedence over uploaded country columns, and prices must use a
-configured currency. Otherwise, the target remains US. Confirm multi-country
-support for your integration; do not rely on list order to choose a market.
+Confirm multi-country support for your integration; do not rely on list order
+to choose a market.
 
 
 
@@ -334,9 +327,6 @@ required for discovery.
 | :---------------- | :---------------------- | :---------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------- |
 | `is_ads_eligible` | boolean                 | Conditionally required for Ads processing | Set `true` for products Ads should process. `false` explicitly opts out in the OpenAI format. Omitted or empty: disabled unless a feed-level Ads default applies. Independent of search eligibility. | `true`                        |
 | `ads_metadata`    | Object of string values | Optional for Ads                          | Product-filter metadata using keys configured for your Ads integration. Omitted, empty, or `{}`: no metadata. Do not invent targeting keys; confirm them during Ads setup.                           | `{"custom_label_0":"summer"}` |
-
-Google-compatible Ads feeds use registered eligibility settings and supported
-Google columns; uploaded OpenAI eligibility controls do not override them.
 
 ### Checkout
 
@@ -372,104 +362,3 @@ price or availability changes in this contract. Update current prices and
 availability in your feed when they change. Do not rely on uploaded dates to
 remove a product or display a pre-order date. Warning and age-restriction fields
 do not establish purchase restrictions.
-
-### Google-compatible product data feeds
-
-Use this format only after OpenAI confirms it for your registered feed. Upload
-a UTF-8, tab-delimited `.txt` or `.tsv` file, or a comma-delimited `.csv` file.
-Gzip-compressed `.txt.gz`, `.txt.gzip`, `.tsv.gz`, and `.csv.gz` files are supported.
-Use one header row and one product or variant per row. JSON, spreadsheets, XML,
-RSS, and Atom are not supported by this compatibility path.
-
-Use lowercase, underscore-separated column names. `.txt` files also accept
-common display labels such as `image link`. Do not use `g:`-prefixed XML names.
-For additional context, see Google's [product data specification](https://support.google.com/merchants/answer/7052112?hl=en#basic_product_data);
-only the profile described here is supported by OpenAI.
-
-#### Required columns and format selection
-
-Include nonempty `id`, `title`, `description`, `link`, `image_link`,
-`availability`, `price`, and `brand` on every row. Their types and meanings match
-`item_id`, `title`, `description`, `url`, `image_url`, `availability`, `price`,
-and `brand` in this reference, with these differences:
-
-- `title` is limited to 150 characters and `description` to 5,000. Use plain text.
-- `link` and `image_link` must be HTTP or HTTPS URLs without a username or password.
-- `availability` must be `in_stock`, `out_of_stock`, `preorder`, or `backorder`.
-  Use `preorder`, not the OpenAI spelling `pre_order`; `unknown` is not accepted.
-- `price` requires a decimal amount and three-letter currency code. It must be
-  positive except for the mobile-subscription case described below. Amounts are
-  normalized to two decimal places; submit prices at that precision to avoid rounding.
-- The conditional identifier and availability-date requirements in the next
-  table also apply.
-
-Register a merchant display name that is nonempty and not a placeholder such
-as `unknown`, `null`, or `n/a`. OpenAI uses that registered name as the seller
-identity on every row. An uploaded `seller_name` cannot override it. The seller
-URL is derived from the product link's scheme and host.
-
-OpenAI checks the OpenAI format first, then this compatibility profile, using
-samples from each nonempty file. A match requires an accepted sample from every
-file that supplies records. One format applies to the entire upload, not to
-individual rows. A file accepted as OpenAI format retains OpenAI field semantics;
-filename extensions alone do not select Google-compatible behavior. Confirm the
-selected format during setup, especially before relying on eligibility controls.
-
-#### Optional and conditional columns
-
-The value conventions in the main reference apply: omit unknown optional data,
-keep identifiers as strings, and use CSV quoting for commas and embedded quotes.
-An empty optional cell means no value unless the table specifies a default.
-Only `identifier_exists` accepts a boolean in this table; `false` is not an empty
-value for any other field.
-
-| Input field                                        | Type and requirement                               | Format, mapping, and dependencies                                                                                                                                                                                                                                                                                                 | Example                                                                               |
-| :------------------------------------------------- | :------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------ |
-| `gtin`                                             | String; conditionally required                     | Supply a valid GTIN or `mpn` unless `identifier_exists=no`. Exactly 8, 12, 13, or 14 digits with a valid check digit; spaces and dashes are removed. GTIN values starting with `02`, `04`, `2`, `05`, `98`, or `99` are not retained; a valid `mpn` can satisfy the identifier requirement instead. Submit one GTIN for the item. | `09506000134352`                                                                      |
-| `mpn`                                              | String; conditionally required                     | Manufacturer part number, used with `brand`. Required if no valid GTIN and `identifier_exists` is omitted or true.                                                                                                                                                                                                                | `NL-TRAIL-10-BLK`                                                                     |
-| `identifier_exists`                                | boolean or string; optional                        | `yes` / `true` or `no` / `false`. Omitted or empty: true. Use false only when no product identifier exists.                                                                                                                                                                                                                       | `yes`                                                                                 |
-| `availability_date`                                | String (date or timestamp); conditionally required | Required for `preorder` and `backorder`. Use `YYYY-MM-DD` or an ISO 8601 timestamp with a time zone, optionally with seconds. Dates use midnight UTC. No preorder-date display or automatic stock change is implied.                                                                                                              | `2026-10-15T09:00:00Z`                                                                |
-| `sale_price`                                       | String (money); optional                           | Positive current sale price, in the same currency as and strictly below `price`. Invalid relationships reject the row. Omitted: regular price.                                                                                                                                                                                    | `59.99 USD`                                                                           |
-| `sale_price_effective_date`                        | String (date range); optional                      | `start/end`, with ISO 8601 dates or timestamps with time zones. Requires `sale_price` and start before end. Date-only boundaries use the start and end of each UTC day. Accepted as date metadata; does not schedule sale activation.                                                                                             | `2026-10-01T00:00:00Z/2026-10-07T23:59:59Z`                                           |
-| `expiration_date`                                  | String (timestamp); optional                       | ISO 8601 timestamp with a time zone: `YYYY-MM-DDThh:mmZ`, optionally with seconds, or a numeric UTC offset. Accepted as metadata; does not automatically remove a product.                                                                                                                                                        | `2026-12-31T23:59:59Z`                                                                |
-| `additional_image_link`                            | String; optional                                   | Comma-separated URLs mapped to additional images. Invalid optional URLs are omitted; credentials in a URL reject the row. Omitted: no additional images.                                                                                                                                                                          | `https://example.com/images/trail-side.jpg,https://example.com/images/trail-sole.jpg` |
-| `item_group_id`                                    | String; conditionally required for variants        | Shared parent ID, different from each `id`. Enables grouping and constructs `variant_dict` from the selected attributes. Omitted: `id` is the group ID and no variant options are used.                                                                                                                                           | `TRAIL`                                                                               |
-| `color`, `size`, `material`, `age_group`, `gender` | Strings; optional                                  | Same values and meanings as the main reference. For grouped variants, these also populate `variant_dict`; keep values consistent across the row.                                                                                                                                                                                  | `Black`, `10`, `Leather`, `adult`, `unisex`                                           |
-| `pattern`                                          | String; optional                                   | Selected pattern; added to `variant_dict` only for grouped variants. Omitted: no pattern option.                                                                                                                                                                                                                                  | `Striped`                                                                             |
-| `size_type`                                        | String; optional                                   | Selected fit label, such as `regular`, `petite`, `maternity`, `big`, `tall`, or `plus`; added to `variant_dict` only for grouped variants. Omitted: no fit option.                                                                                                                                                                | `petite`                                                                              |
-| `size_system`                                      | String; optional                                   | Use the sizing-system values in the main reference with `size`. Omitted: no system supplied; a target country does not fill it in.                                                                                                                                                                                                | `US`                                                                                  |
-| `condition`                                        | String; optional                                   | `new`, `refurbished`, or `used`. Always declare used and refurbished items. Omitted may be treated as new.                                                                                                                                                                                                                        | `refurbished`                                                                         |
-| `product_type`                                     | String; optional                                   | Category path. The first nonempty comma-separated value takes precedence over `google_product_category`.                                                                                                                                                                                                                          | `Apparel & Accessories > Shoes`                                                       |
-| `google_product_category`                          | String; optional                                   | Google taxonomy ID or path, used when `product_type` is empty. Also required for the zero-price exception.                                                                                                                                                                                                                        | `Apparel & Accessories > Shoes`                                                       |
-| `subscription_cost`                                | String; conditionally required for zero price      | `month:periods:amount CURRENCY` or `year:periods:amount CURRENCY`; the `periods` value is a positive integer and `amount` is positive, in the same currency as `price`. Used only to validate the zero-price exception, not to display installment terms.                                                                         | `month:12:30.00 USD`                                                                  |
-
-For a zero-price item, `google_product_category` must identify a supported mobile
-device using category ID `267` (mobile phones) or `4745` (tablets). Category
-paths do not qualify for this exception. Supply a valid `subscription_cost`. Other zero-price products are
-rejected.
-
-#### Eligibility and markets
-
-Accepted Google-compatible products have search enabled and checkout disabled.
-Uploaded `is_eligible_search=false` or `enable_search=false` does not opt a
-product out on this path. Upload only products intended for discovery. To use
-per-item search controls, use a feed confirmed to follow the OpenAI format.
-
-For Ads feeds, eligibility comes from registered feed settings; uploaded OpenAI
-eligibility fields do not override them. Supported Ads filter columns include
-`custom_label_0` through `custom_label_4`: optional strings, such as `summer`,
-with an empty value meaning no label. Confirm the configured filter columns
-with your Ads integration.
-
-If OpenAI confirms market-specific processing, registered target countries
-replace uploaded country values and a price currency outside the configured
-currencies is rejected. Otherwise, the target remains US. Uploaded seller,
-checkout, return-policy, and Ads control columns do not add those capabilities.
-
-Legacy `item_group_title`, `video_link`, and `virtual_model_link` metadata may
-be accepted from existing feeds; they are not used for product discovery. New
-feeds can omit them. Keep current price and availability up to date even when
-you send date metadata.
-
-Upload History reports missing required columns and invalid supported values.
-A malformed row can be rejected while valid rows continue processing.
