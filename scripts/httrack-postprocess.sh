@@ -56,8 +56,10 @@ for h in $HOSTS; do
   [ -d "$OUT/$h" ] || continue
   rm -rf "${REPO:?}/$h"; mv "$OUT/$h" "$REPO/$h"
 done
-echo "postprocess: site banner (banner.txt + offline-banner.js at the site root)"
-python3 "$(dirname "$0")/inject-banner.py" "$REPO" "learn.chatgpt.com"
+echo "postprocess: site banner (banner.txt + inline no-layout-shift bar in every page)"
+# Regenerated on every rebuild; admins may edit the DEPLOYED banner.txt on IIS (inline HTML ok) - see README.
+rm -f "$REPO/offline-banner.js"  # legacy runtime loader (replaced by inline injection)
+python3 "$(dirname "$0")/inject-banner.py" "$REPO" "offline-banner:codex-cli-docs-offline" "learn.chatgpt.com" "$(dirname "$0")/banner-site.css" --tz UTC
 
 echo "=== mirror stats ==="
 for h in $HOSTS; do

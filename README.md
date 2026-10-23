@@ -43,11 +43,15 @@ site root** (the folder IIS serves, next to `web.config` / `index.html`).
 * **A rebuild overwrites `banner.txt`.** When you redeploy a new build, keep your edited copy
   (copy it aside first, or exclude `banner.txt` from the deploy/robocopy, e.g. `/XF banner.txt`).
 * Empty, missing or unreachable `banner.txt` ⇒ no banner at all.
-* How it loads: `offline-banner.js` (source: `scripts/offline-banner.js`) fetches `banner.txt` via a path relative to the
-  script file itself, so it works when the mirror is an IIS application under a sub-path. It
-  inserts a fixed full-width 28px bar, pads `<body>` and shifts the site's fixed/sticky header and
-  sidebars down by the bar height so nothing is hidden; colours follow the page's light/dark mode.
-  The root `index.html` redirect/splash page itself has no banner; every docs page does.
+* How it loads (no layout shift): every rebuild runs `scripts/inject-banner.py`, which writes the
+  default `banner.txt` and injects into **every HTML page** (idempotently, between `<!--ob-->` markers)
+  a small inline `<style>` + script in `<head>` that reserves the 28px bar *before first paint*
+  (body padding and the site's fixed header/sidebar offsets, from `scripts/banner-site.css`), and a
+  placeholder bar `<div id="ob">` at the top of `<body>`. An inline script fills it immediately from
+  the last-seen text cached in `localStorage["offline-banner:codex-cli-docs-offline"]`, then fetches `banner.txt`
+  (`cache: 'no-cache'`, page-relative path, so it works under an IIS sub-path) and updates bar + cache
+  if the text changed. If `banner.txt` is empty/missing the reserved space collapses once, and later
+  visits don't reserve it at all. Colours follow the page's light/dark mode.
 
 ## IIS notes
 

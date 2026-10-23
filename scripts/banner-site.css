@@ -1,0 +1,5 @@
+html.ob-on body{padding-top:28px}
+html.ob-on #header,html.ob-on #header-search-overlay,html.ob-on #drawer{top:28px!important}
+html.ob-on .fixed.top-16{top:92px!important}
+html.ob-on .fixed.w-\[218px\]{top:140px!important}
+@media (min-width:48rem){html.ob-on #docs-agent-panel{top:28px!important}}
