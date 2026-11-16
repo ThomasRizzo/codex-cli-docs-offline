@@ -4,6 +4,7 @@
 
 > Multimodality refers to a model's ability to understand and generate content using various input types—such as text, images, audio, and video.
 
+- [Build a voice agent that follows an SOP](/cookbook/articles/sop_to_voice_agent_builder.md): Turn a written SOP into prompts, tools, and application checks that keep a voice agent on the right procedure when a caller changes their request or corrects an answer.
 - [GPT-Live evaluation guide](/cookbook/examples/audio/voice_agent_evaluation.md): Evaluate full-duplex voice agents with controlled requests, recorded audio, and simulated conversations, measuring interaction quality and verified task outcomes.
 - [Generate Transparent Image Assets for Campaigns and Presentations](/cookbook/examples/multimodal/transparent-image-assets-for-campaigns-and-presentations.md): Generate reusable transparent PNG assets for seasonal ecommerce campaigns and branded PowerPoint presentations.
 - [Evaluating Grounded Spatial Reasoning with GPT-5.5](/cookbook/examples/multimodal/grounded_spatial_reasoning_layouts.md): Build a spec-first floorplan layout workflow with vision, structured outputs, and deterministic spatial evals.

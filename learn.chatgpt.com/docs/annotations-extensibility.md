@@ -15,6 +15,23 @@ People can select part of a page, add a comment, and send it in Context to Codex
 As a developer, you can use the Browser Annotation API to provide context or controls specific to your application. For
 example, you can attach previews for component variants in a design system preview for developers to know how to update the components on a website.
 
+The examples use TypeScript. Save a copied example as `annotations.ts` and compile it for the browser:
+
+```bash
+npm install --save-dev esbuild
+npx esbuild annotations.ts --format=esm --outfile=annotations.js
+```
+
+
+Load the compiled module after adding the example's HTML elements to your page:
+
+```html snippet=setup reason="Load the compiled example module on a page with the documented HTML elements."
+<script type="module" src="./annotations.js"></script>
+```
+
+
+If your application already builds TypeScript, include the example in that build instead.
+
 To get help understanding the Browser Annotation API or adding annotation support to your website, install the Annotations Extensibility plugin.
 
 [Install the Annotations Extensibility plugin](https://chatgpt.com/plugins/Plugin_94f13f4285908191bb882d31b1ffc59e)
@@ -98,6 +115,7 @@ This example makes a chart card selectable as one object:
 </section>
 ```
 
+
 Pointing anywhere within the card highlights the entire card. The optional
 `oai-annotatable` value gives the object a name shown to the user and the model.
 Choose names that distinguish nearby objects, or omit the value.
@@ -121,6 +139,7 @@ during Annotation mode. The attribute doesn't need a value:
   <p>Leave more space between separate groups.</p>
 </article>
 ```
+
 
 Releasing a nonempty selection opens the text annotation editor with the
 selected range and its context. Clicking without selecting text doesn't create
@@ -159,6 +178,7 @@ email address for a request to draft an email:
   </div>
 </section>
 ```
+
 
 <div
   id="try-annotation-metadata"
@@ -233,9 +253,10 @@ Run the script after both elements exist:
 <button id="discuss-delivery" type="button" hidden>Explain more</button>
 ```
 
-```javascript
-const summary = document.getElementById("delivery-summary");
-const button = document.getElementById("discuss-delivery");
+
+```typescript
+const summary = document.getElementById("delivery-summary") as HTMLElement;
+const button = document.getElementById("discuss-delivery") as HTMLButtonElement;
 
 button.hidden = typeof document.oai?.annotation?.request !== "function";
 
@@ -248,6 +269,7 @@ button.addEventListener("click", () => {
   });
 });
 ```
+
 
 Selecting **Explain more** asks the browser to open an annotation with the
 paragraph selected and an editable comment. The person can edit, save, and send it with
@@ -298,6 +320,7 @@ The optional second argument supports these fields:
 | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `mode`                | Use `"advanced"` to open advanced controls for an element, or `"default"` to use the default editor behavior. Defaults to `"default"`. Custom controls can still open with `"default"`; see [Editor defaults](#choose-the-editors-default-mode). Text ranges support only `"default"`. |
 | `enterAnnotationMode` | Set to `true` to enter Annotation mode and remain in it after canceling or sending the annotation.                                                                                                                                                                                     |
+| `omitScreenshot`      | Set to `true` to omit the automatic screenshot for this annotation. Defaults to `false`, which preserves normal screenshot behavior. Applies to element and text-range requests.                                                                                                       |
 | `metadata`            | Valid, nonempty metadata replaces the target's HTML metadata for this request. This option is ignored for text ranges and when the target element is inside a shadow DOM.                                                                                                              |
 | `initialComment`      | Supplies an editable comment, up to 240 UTF-16 code units.                                                                                                                                                                                                                             |
 
@@ -325,11 +348,12 @@ an `oai-annotation-container-text` attribute:
 </button>
 ```
 
+
 Run this script after both elements exist:
 
-```javascript
-const passage = document.getElementById("draft-passage");
-const button = document.getElementById("discuss-passage");
+```typescript
+const passage = document.getElementById("draft-passage") as HTMLElement;
+const button = document.getElementById("discuss-passage") as HTMLButtonElement;
 
 button.hidden = typeof document.oai?.annotation?.request !== "function";
 
@@ -344,6 +368,7 @@ button.addEventListener("click", () => {
   });
 });
 ```
+
 
 <div
   id="try-annotation-text-range"
@@ -406,6 +431,7 @@ browser's selection UI, add this tag to your page's `<head>`:
 <meta name="oai-annotation-editor-default-mode" content="advanced" />
 ```
 
+
 For annotations opened from your own UI, pass `{ mode: "advanced" }` to
 `request()`. Use `mode: "default"`, or omit it, for the default editor behavior.
 The page's meta setting doesn't override this request option. Default mode
@@ -446,20 +472,23 @@ the cards directly; selection attributes aren't required:
 </section>
 ```
 
+
 Run this script after creating the preview:
 
-```javascript
-const preview = document.getElementById("component-preview");
+```typescript
+const preview = document.getElementById("component-preview") as HTMLElement;
 const annotation = document.oai?.annotation;
 
-function previewSpacing(event) {
-  const { callback, value } = event.detail;
+function previewSpacing(event: Event) {
+  const { callback, value } = (
+    event as CustomEvent<{ callback: string; value: number | string }>
+  ).detail;
   if (callback === "setCardPadding") {
     preview.style.setProperty("--card-padding", `${value}px`);
   }
 }
 
-let registration;
+let registration: { dispose(): void } | undefined;
 if (typeof annotation?.registerControls === "function") {
   preview.addEventListener("oaiannotationcontrolchange", previewSpacing);
   registration = annotation.registerControls({
@@ -487,6 +516,7 @@ function disposeAnnotationControls() {
   preview.removeEventListener("oaiannotationcontrolchange", previewSpacing);
 }
 ```
+
 
 <div
   id="try-annotation-spacing"
@@ -537,8 +567,9 @@ selection attributes or metadata. Run the script after the paragraph exists:
 <p id="email-draft">Draft a follow-up email about the project timeline.</p>
 ```
 
-```javascript
-const draft = document.getElementById("email-draft");
+
+```typescript
+const draft = document.getElementById("email-draft") as HTMLElement;
 const registration = document.oai?.annotation?.registerControls?.({
   targets: draft,
   controlsHeading: "Email options",
@@ -558,6 +589,7 @@ const registration = document.oai?.annotation?.registerControls?.({
   ],
 });
 ```
+
 
 This control doesn't need an event handler because it doesn't preview a page
 change. Omitting `currentValue` tells the browser to include the selected tone
@@ -598,6 +630,7 @@ const pageBackgroundControl = {
   currentValue: "#f6f3ec",
 };
 ```
+
 
 <div
   id="try-annotation-color"
@@ -743,9 +776,10 @@ and a stable object ID. Put the script after the canvas:
 </canvas>
 ```
 
-```javascript
-const canvas = document.getElementById("revenue-canvas");
-const context = canvas.getContext("2d");
+
+```typescript
+const canvas = document.getElementById("revenue-canvas") as HTMLCanvasElement;
+const context = canvas.getContext("2d") as CanvasRenderingContext2D;
 const bar = { x: 40, y: 60, width: 320, height: 100 };
 
 context.fillStyle = "#2563eb";
@@ -777,6 +811,7 @@ const surface = document.oai?.annotation?.registerSurface?.({
   },
 });
 ```
+
 
 <div
   id="try-annotation-canvas"
@@ -857,6 +892,7 @@ return {
 };
 ```
 
+
 The optional `name` is visible to the user; `role` gives a short semantic
 description. Include metadata only when it adds context that isn't already
 visible. The optional `rect` uses CSS pixels relative to the visible page area,
@@ -871,8 +907,14 @@ selection feedback. It doesn't require the optional context fields.
 For the canvas above, define this function and add
 `renderSelection: renderRevenueSelection` to the `registerSurface()` options:
 
-```javascript
-function renderRevenueSelection({ hoveredId, selectedId }) {
+```typescript
+function renderRevenueSelection({
+  hoveredId,
+  selectedId,
+}: {
+  hoveredId: string | null;
+  selectedId: string | null;
+}) {
   context.clearRect(0, 0, canvas.width, canvas.height);
   context.fillStyle = "#2563eb";
   context.fillRect(bar.x, bar.y, bar.width, bar.height);
@@ -887,6 +929,7 @@ function renderRevenueSelection({ hoveredId, selectedId }) {
   }
 }
 ```
+
 
 This callback redraws the bar with an outline while it's hovered or selected.
 When both IDs are `null`, it redraws the bar without an outline.
@@ -921,18 +964,22 @@ then run the script after it exists:
 </button>
 ```
 
-```javascript
-const button = document.getElementById("toggle-annotations");
+
+```typescript
+const button = document.getElementById(
+  "toggle-annotations"
+) as HTMLButtonElement;
 const annotation = document.oai?.annotation;
 
-function renderMode(active) {
+function renderMode(active: boolean) {
   button.textContent = active
     ? "Exit annotation mode"
     : "Enter annotation mode";
 }
 
-const onModeChange = (event) => renderMode(event.detail.active);
-const onClick = () => annotation.toggle(!annotation.isActive());
+const onModeChange = (event: Event) =>
+  renderMode((event as CustomEvent<{ active: boolean }>).detail.active);
+const onClick = () => annotation?.toggle(!annotation.isActive());
 
 if (
   typeof annotation?.toggle === "function" &&
@@ -950,6 +997,7 @@ function cleanupAnnotationButton() {
   button.hidden = true;
 }
 ```
+
 
 `toggle()` inverts the mode. Pass `true` to ensure it's on or `false` to ensure
 it's off. Repeated requests with the same boolean are idempotent. Passing

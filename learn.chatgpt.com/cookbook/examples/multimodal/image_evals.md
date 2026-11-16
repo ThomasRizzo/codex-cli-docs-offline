@@ -1073,7 +1073,7 @@ ui_result
 {'test_id': 'ui_checkout_mockup',
  'model_label': 'gpt-image-1.5-ui',
  'task_type': 'image_generation',
- 'artifact_paths': ['/cookbook/assets/images/gen_ui_checkout_mockup_gpt-image-1.5-ui_1769656414221_0.png'],
+ 'artifact_paths': ['../../images/gen_ui_checkout_mockup_gpt-image-1.5-ui_1769656414221_0.png'],
  'scores': {'instruction_following': True,
   'layout_hierarchy': 5.0,
   'in_image_text_rendering': True,
@@ -1529,7 +1529,7 @@ coffee_result
 {'test_id': 'coffee_flyer_generation',
  'model_label': 'gpt-image-1.5',
  'task_type': 'image_generation',
- 'artifact_paths': ['/cookbook/assets/images/gen_coffee_flyer_generation_gpt-image-1.5_1769657762450_0.png'],
+ 'artifact_paths': ['../../images/gen_coffee_flyer_generation_gpt-image-1.5_1769657762450_0.png'],
  'scores': {'instruction_following': True,
   'text_rendering': True,
   'layout_hierarchy': 5.0,
@@ -1806,8 +1806,8 @@ Use existing images from `images/` as the person and garment references.
 
 
 ```python
-vto_person_path = Path("/cookbook/assets/images/base_woman.png")
-vto_garment_path = Path("/cookbook/assets/images/jacket.png")
+vto_person_path = Path("../../images/base_woman.png")
+vto_garment_path = Path("../../images/jacket.png")
 
 vto_prompt = """Put the person in the first image into the jacket shown in the second image.
 Keep the person's face, pose, body shape, and background unchanged.
@@ -1925,7 +1925,7 @@ vto_result
 {'test_id': 'vto_jacket_tryon',
  'model_label': 'gpt-image-1.5-vto',
  'task_type': 'image_editing',
- 'artifact_paths': ['/cookbook/assets/images/edit_vto_jacket_tryon_gpt-image-1.5-vto_1769658750053_0.png'],
+ 'artifact_paths': ['../../images/edit_vto_jacket_tryon_gpt-image-1.5-vto_1769658750053_0.png'],
  'scores': {'facial_similarity': 5.0,
   'outfit_fidelity': 4.0,
   'body_shape_preservation': 4.0,
@@ -2393,7 +2393,7 @@ logo_result
 {'test_id': 'logo_year_edit',
  'model_label': 'gpt-image-1.5-logo',
  'task_type': 'image_editing',
- 'artifact_paths': ['/cookbook/assets/images/edit_logo_year_edit_gpt-image-1.5-logo_1769659071403_0.png'],
+ 'artifact_paths': ['../../images/edit_logo_year_edit_gpt-image-1.5-logo_1769659071403_0.png'],
  'scores': {'edit_intent_correctness': 5.0,
   'non_target_invariance': 0.0,
   'character_and_style_integrity': 2.0,

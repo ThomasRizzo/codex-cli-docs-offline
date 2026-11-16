@@ -24,7 +24,7 @@ GPT-5.4 was trained to use image search and image generation tools natively, all
 
 You can guide the model toward strong visual references by explicitly describing the attributes the images should capture (e.g., style, color palette, composition, or mood). You should also include prompt instructions that guide the model to reuse previously generated images, call the image generation tool to create new visuals, or reference specific external images when required.
 
-```
+```text
 Default to using any uploaded/pre-generated images. Otherwise use the image generation tool to create visually stunning image artifacts. Do not reference or link to web images unless the user explicitly asks for them.
 ```
 
@@ -51,7 +51,7 @@ If you adopt only a few practices from this document, start with these:
 
 Here’s a prompt to get started.
 
-```
+```text
 ## Frontend tasks
 
 When doing frontend design tasks, avoid generic, overbuilt layouts.
@@ -124,7 +124,7 @@ For most web projects, starting with a familiar stack such as **React and Tailwi
 
 Motion and layered UI elements can introduce complexity, especially when fixed or floating components interact with primary content. When working with animations, overlays, or decorative layers, it helps to include guidance that encourages safe layout behavior. For example:
 
-```
+```text
 Keep fixed or floating UI elements from overlapping text, buttons, or other key content across screen sizes. Place them in safe areas, behind primary content where appropriate, and maintain sufficient spacing.
 ```
 
@@ -146,7 +146,7 @@ To help people get the most out of GPT-5.4 on general front-end tasks, we’ve a
 
 
 
-```
+```text
 ---
 name: frontend-skill
 description: Use when the task asks for a visually strong landing page, website, app, prototype, demo, or game UI. This skill enforces restrained composition, image-led hierarchy, cohesive content structure, and tasteful motion while avoiding generic cards, weak branding, and UI clutter.
@@ -340,7 +340,7 @@ Motion rules:
 
 Install the `frontend-skill` by running the following command inside the Codex app:
 
-```
+```text
 $skill-installer frontend-skill
 ```
 

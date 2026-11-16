@@ -36,6 +36,8 @@ Use `--ephemeral` when you don't want to persist session rollout files to disk:
 codex exec --ephemeral "triage this repository and suggest next steps"
 ```
 
+For workers with network-mounted home directories, see how to [keep job state local and retain the session rollout](environments/network-file-systems.html#run-independent-batch-jobs).
+
 If stdin is piped and you also provide a prompt argument, Codex treats the prompt as the instruction and the piped content as additional context.
 
 This lets you generate input with one command and hand it directly to Codex:
@@ -60,6 +62,10 @@ Use `danger-full-access` only in a controlled environment (for example, an isola
 `--full-auto` is no longer supported. Update scripts to use
 `--sandbox workspace-write`, or use `--approve-for-me` to route approval
 requests through automatic review with the workspace-write sandbox.
+
+Local `codex exec` and `codex review` runs load project configuration and project-defined MCP servers only for trusted projects, even in a writable sandbox. Pass `--trust` to save trust for this and future chats. Project-defined MCP servers can run commands outside the sandbox.
+
+Trust persists with `--ephemeral`. If you marked the project untrusted, change that setting first. You can't combine `--trust` with `--ignore-user-config`.
 
 Use `--ignore-user-config` when you need a run that doesn't load `$CODEX_HOME/config.toml`, and `--ignore-rules` when you need to skip user and project execpolicy `.rules` files for a controlled automation environment.
 

@@ -158,7 +158,7 @@ Start with a small CSV and grow it over time as you encounter real failures duri
 
 For example, an initial `evals/setup-demo-app.prompts.csv` might look like this:
 
-```
+```text
 id,should_trigger,prompt
 test-01,true,"Create a demo app named `devday-demo` using the $setup-demo-app skill"
 test-02,true,"Set up a minimal React demo app with Tailwind for quick UI experiments"
@@ -206,24 +206,26 @@ A “good enough” approach looks like this:
 2. Save the JSONL trace to disk
 3. Parse the trace and run deterministic checks over the events
 
-```javascript
+```typescript
 // evals/run-setup-demo-app-evals.mjs
+import { spawnSync } from "node:child_process";
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from "node:fs";
+import path from "node:path";
 
-
-
-
-function runCodex(prompt, outJsonlPath) {
+function runCodex(prompt: string, outJsonlPath: string) {
   const res = spawnSync(
     "codex",
     [
       "exec",
       "--json", // REQUIRED: emit structured events
-      "--full-auto", // Allow file system changes
+      "--sandbox",
+      "workspace-write", // Allow changes inside the example repository
       prompt,
     ],
     { encoding: "utf8" }
   );
 
+  if (res.error) throw res.error;
   mkdirSync(path.dirname(outJsonlPath), { recursive: true });
 
   // stdout is JSONL when --json is enabled
@@ -232,26 +234,33 @@ function runCodex(prompt, outJsonlPath) {
   return { exitCode: res.status ?? 1, stderr: res.stderr };
 }
 
-function parseJsonl(jsonlText) {
+function parseJsonl(jsonlText: string) {
   return jsonlText
     .split("\n")
     .filter(Boolean)
-    .map((line) => JSON.parse(line));
+    .map((line: string) => JSON.parse(line));
 }
 
 // deterministic check: did the agent run `npm install`?
-function checkRanNpmInstall(events) {
+function checkRanNpmInstall(
+  events: {
+    type: string;
+    item?: { type: string; status: string; exit_code: number; command: string };
+  }[]
+) {
   return events.some(
     (e) =>
-      (e.type === "item.started" || e.type === "item.completed") &&
+      e.type === "item.completed" &&
       e.item?.type === "command_execution" &&
+      e.item.status === "completed" &&
+      e.item.exit_code === 0 &&
       typeof e.item?.command === "string" &&
       e.item.command.includes("npm install")
   );
 }
 
 // deterministic check: did `package.json` get created?
-function checkPackageJsonExists(projectDir) {
+function checkPackageJsonExists(projectDir: string) {
   return existsSync(path.join(projectDir, "package.json"));
 }
 
@@ -262,7 +271,10 @@ const tracePath = path.join(projectDir, "evals", "artifacts", "test-01.jsonl");
 const prompt =
   "Create a demo app named demo-app using the $setup-demo-app skill";
 
-runCodex(prompt, tracePath);
+const { exitCode, stderr } = runCodex(prompt, tracePath);
+if (exitCode !== 0) {
+  throw new Error(`Codex exited with status ${exitCode}: ${stderr}`);
+}
 
 const events = parseJsonl(readFileSync(tracePath, "utf8"));
 
@@ -271,6 +283,7 @@ console.log({
   hasPackageJson: checkPackageJsonExists(path.join(projectDir, "demo-app")),
 });
 ```
+
 
 The value here is that everything is **deterministic and debuggable**.
 

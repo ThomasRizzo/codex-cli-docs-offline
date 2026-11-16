@@ -116,6 +116,10 @@ That is especially useful for three agentic loops:
 Ask Codex for one logger per feature area, not one permanent log line for every state mutation. Feature categories such as `Windowing`, `Commands`, `MenuBar`, `Sidebar`, `Sync`, or `Import` make logs much easier to filter during the next debugging pass.
 
 ```swift
+import SwiftUI
+
+struct SidebarItem { let id: String }
+@MainActor private var selection: String?
 import OSLog
 
 private let logger = Logger(
@@ -129,6 +133,7 @@ func selectItem(_ item: SidebarItem) {
   selection = item.id
 }
 ```
+
 
 Use `info` for concise action and lifecycle events that should remain useful over time, and `debug` for noisier local state details that may be removed or demoted before the task is done. Add signposts only when you are measuring a timing span, not by default.
 

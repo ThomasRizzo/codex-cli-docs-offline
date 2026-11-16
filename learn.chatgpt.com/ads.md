@@ -60,7 +60,7 @@ Use this as a compact map of the Ads docs. Each page has a Markdown twin at `/ad
 - [Delta Feeds API](https://developers.openai.com/ads/delta-feeds.md): Update product availability and prices without uploading your entire catalog.
 
 ## Hotel Feeds
-- [Hotel property feeds (limited beta)](https://developers.openai.com/ads/hotel-feeds.md): Create and upload hotel property feeds for the limited Hotel ads beta.
+- [Hotel property feeds (limited beta)](https://developers.openai.com/ads/hotel-feeds.md): Create Hotel property feeds, query inventory, and preview Hotel ads in the limited beta.
 
 ## Image Tag
 - [Image Tag](https://developers.openai.com/ads/image-tag.md): Send conversion events from HTML without JavaScript.

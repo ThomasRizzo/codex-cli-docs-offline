@@ -39,6 +39,7 @@ starterPrompt:
     - threshold-justification plots
 
     - filtered .h5ad
+  suggestedModel: gpt-6-astra
   suggestedEffort: high
 relatedLinks:
   - label: Request access to GPT-Rosalind

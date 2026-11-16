@@ -58,7 +58,7 @@ While some people have expressed concern about tools like Codex failing to scale
 
 Here’s an example where we prompted Codex to review an existing pull request, and add a section to the documentation on how exactly these environment variables are useful when configuring your deployment.
 
-```
+```text
 >_ You are using OpenAI Codex in ~/src/dagster
 
  To get started, describe a task or try one of these commands:
@@ -104,7 +104,7 @@ Different personas prefer different learning formats, but the underlying ideas a
 
 Codex works exceptionally well at translating between these mediums. For example, taking a tutorial and producing a transcript for a YouTube video. Or taking a low-level tutorial, and abstracting it slightly for a blog post. In the below screenshot you can find an example prompt used to take one of our example projects and produce a video transcript. This approach saves hours of rewriting while keeping our messaging consistent across channels.
 
-```
+```text
 >_ You are using OpenAI Codex in ~/src/dagster
 
 ▌Review the example project: examples/docs_projects/project_dagster_modal_pipes

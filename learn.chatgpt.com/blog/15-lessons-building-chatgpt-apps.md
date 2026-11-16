@@ -54,7 +54,7 @@ For this we used `window.openai.setWidgetState(state)`, which allows you to stor
 
 With apps growing in complexity, we saw that we were adding `setWidgetState` in a lot of places for the model to keep track of the navigation. So we decided to introduce a declarative way to describe UI context. Instead of updating the model imperatively on every interaction, we attach a `data-llm` attribute directly to components:
 
-```jsx
+```tsx
 <div
   data-llm={
     selectedTab === "details"
@@ -62,7 +62,10 @@ With apps growing in complexity, we saw that we were adding `setWidgetState` in 
       : "User is viewing reviews"
   }
 >
+  Product details
+</div>
 ```
+
 
 For this to work behind the scenes, we built a Vite plugin that scrapes these attributes and automatically updates the widgetState. From the model’s perspective, it simply receives the relevant UI context at the right time, without developers having to manually synchronize every interaction.
 
@@ -208,7 +211,7 @@ This led to two complementary efforts:
 
 To install and use the Skill, simply use the following command:
 
-```
+```bash
 npx skills add alpic-ai/skybridge
 ```
 

@@ -4,6 +4,7 @@
 
 > Improve your LLM integrations with evals.
 
+- [Build a voice agent that follows an SOP](/cookbook/articles/sop_to_voice_agent_builder.md): Turn a written SOP into prompts, tools, and application checks that keep a voice agent on the right procedure when a caller changes their request or corrects an answer.
 - [Harness-aware evaluation of plugins](/cookbook/examples/partners/harness_aware_plugin_evals/harness_aware_plugin_evals.md): Evaluate an MCP-backed plugin through direct tool tests, a controlled model loop, and the Codex harness, then use shared test cases and traces to diagnose and improve its behavior.
 - [Optimizing Customer Support Agents for Cost and Quality](/cookbook/examples/agent_optimization/optimizing_agents_for_cost_and_quality.md): Optimize agents on cost, latency and performance.
 - [GPT-Live evaluation guide](/cookbook/examples/audio/voice_agent_evaluation.md): Evaluate full-duplex voice agents with controlled requests, recorded audio, and simulated conversations, measuring interaction quality and verified task outcomes.

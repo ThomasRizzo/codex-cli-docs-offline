@@ -4,6 +4,18 @@
 
 Build and debug iOS and macOS apps.
 
+## In this collection
+
+- [Build for iOS](https://developers.openai.com/codex/use-cases/native-ios-apps)
+- [Build for macOS](https://developers.openai.com/codex/use-cases/native-macos-apps)
+- [Build a Mac app shell](https://developers.openai.com/codex/use-cases/macos-sidebar-detail-inspector)
+- [Build React Native apps with Expo](https://developers.openai.com/codex/use-cases/react-native-expo-apps)
+- [Refactor SwiftUI screens](https://developers.openai.com/codex/use-cases/ios-swiftui-view-refactor)
+- [Adopt liquid glass](https://developers.openai.com/codex/use-cases/ios-liquid-glass)
+- [Add iOS app intents](https://developers.openai.com/codex/use-cases/ios-app-intents)
+- [Debug in iOS simulator](https://developers.openai.com/codex/use-cases/ios-simulator-bug-debugging)
+- [Add Mac telemetry](https://developers.openai.com/codex/use-cases/macos-telemetry-logs)
+
 Codex works great on Apple platform projects when each pass has a build, run, or simulator loop attached to it.
 These use cases are helpful when you are building new or existing iOS and macOS apps and need to iterate on the UI and debug issues.
 
@@ -14,6 +26,7 @@ Ask Codex to scaffold iOS and macOS apps with repeatable build loops. The Mac sh
 - [Build for iOS](https://developers.openai.com/codex/use-cases/native-ios-apps): Use Codex to scaffold iOS SwiftUI projects, keep the build loop CLI-first with `xcodebuild`...
 - [Build for macOS](https://developers.openai.com/codex/use-cases/native-macos-apps): Use Codex to build macOS SwiftUI apps, wire a shell-first build-and-run loop, and add...
 - [Build a Mac app shell](https://developers.openai.com/codex/use-cases/macos-sidebar-detail-inspector): Use Codex and the Build macOS Apps plugin to turn an app idea into a desktop-native...
+- [Build React Native apps with Expo](https://developers.openai.com/codex/use-cases/react-native-expo-apps): Use Codex with the Expo plugin to scaffold React Native apps, stay inside Expo Router and...
 
 ## Refactor iOS SwiftUI screens
 

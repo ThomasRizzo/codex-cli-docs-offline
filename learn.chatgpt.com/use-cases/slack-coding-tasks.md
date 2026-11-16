@@ -17,7 +17,6 @@ starterPrompt:
 
     Make the smallest useful fix, run the relevant checks, and report the result
     here.
-  suggestedModel: cloud
 relatedLinks:
   - label: Use ChatGPT in Slack
     url: /codex/third-party/slack

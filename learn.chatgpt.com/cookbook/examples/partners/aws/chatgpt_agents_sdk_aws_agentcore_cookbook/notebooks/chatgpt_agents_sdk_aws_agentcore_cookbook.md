@@ -20,7 +20,7 @@ A joint cookbook by Eliza and OpenAI.
 
 **Model Context Protocol (MCP)** lets ChatGPT discover tools, call them with structured inputs, and receive structured results. The **MCP adapter** in this repository is the server that exposes our three flight tools. It checks the request, runs the agent, and validates the response before returning it to ChatGPT.
 
-![Default request flow: ChatGPT sends a tool call through the hosted tunnel and local tunnel-client to the MCP adapter and local Agents SDK agent. The agent calls Amazon Bedrock and exports traces to AWS.](https://developers.openai.com/cookbook/assets/examples/partners/aws/chatgpt_agents_sdk_aws_agentcore_cookbook/notebooks/images/cookbook-boundaries.svg)
+![Default request flow: ChatGPT sends a tool call through the hosted tunnel and local tunnel-client to the MCP adapter and local Agents SDK agent. The agent calls Amazon Bedrock and exports traces to AWS.](https://developers.openai.com/cookbook/assets/examples/partners/AWS/chatgpt_agents_sdk_aws_agentcore_cookbook/notebooks/images/cookbook-boundaries.svg)
 
 The arrows follow a tool request. The result returns along the same path, and the **widget**, a small HTML view inside ChatGPT, displays the validated result. In MCP, that result is carried in the `structuredContent` field. The widget does not call the flight backend itself.
 
@@ -202,7 +202,7 @@ The adapter exposes `search_flights`, `get_upcoming_status`, and `get_live_statu
 
 The TypeScript tests exercise tool discovery, calls, response validation, and the AWS invocation code with a fake AWS sender. They also check the widget's versioned resource URI, content type (MIME type), and **Content Security Policy (CSP)**, which restricts the resources it can load. The widget uses `textContent` to display result text without treating it as HTML. These tests make no live AWS calls.
 
-The key boundary is in [server.ts](https://developers.openai.com/cookbook/examples/partners/aws/chatgpt_agents_sdk_aws_agentcore_cookbook/mcp-adapter/server.ts): the adapter returns validated data as `structuredContent`, and [flight-widget.html](https://developers.openai.com/cookbook/assets/examples/partners/aws/chatgpt_agents_sdk_aws_agentcore_cookbook/mcp-adapter/public/flight-widget.html) renders it when it receives `ui/notifications/tool-result`.
+The key boundary is in [server.ts](https://developers.openai.com/cookbook/examples/partners/aws/chatgpt_agents_sdk_aws_agentcore_cookbook/mcp-adapter/server.ts): the adapter returns validated data as `structuredContent`, and [flight-widget.html](https://developers.openai.com/cookbook/assets/examples/partners/AWS/chatgpt_agents_sdk_aws_agentcore_cookbook/mcp-adapter/public/flight-widget.html) renders it when it receives `ui/notifications/tool-result`.
 
 
 ```python
@@ -221,7 +221,7 @@ print("Typed MCP server and self-contained widget validated.")
 
 **Evaluation** checks whether an output meets expectations. **Tracing** records what happened during execution. This cookbook uses Promptfoo to score responses and AgentCore Observability to inspect runs; those are separate checks.
 
-![Promptfoo scores fresh agent responses before release. AWS receives traces by default, with OpenAI Traces available in dual mode. An optional AWS evaluation path scores a dedicated Runtime's completed spans.](https://developers.openai.com/cookbook/assets/examples/partners/aws/chatgpt_agents_sdk_aws_agentcore_cookbook/notebooks/images/tracing-evaluation-paths.svg)
+![Promptfoo scores fresh agent responses before release. AWS receives traces by default, with OpenAI Traces available in dual mode. An optional AWS evaluation path scores a dedicated Runtime's completed spans.](https://developers.openai.com/cookbook/assets/examples/partners/AWS/chatgpt_agents_sdk_aws_agentcore_cookbook/notebooks/images/tracing-evaluation-paths.svg)
 
 [Promptfoo](https://developers.openai.com/cookbook/examples/partners/aws/chatgpt_agents_sdk_aws_agentcore_cookbook/runtime-agent/promptfooconfig.agent.cjs) sends three flight scenarios through the local Agents SDK workflow, then checks each response's structure and expected behavior. **AWS Distro for OpenTelemetry (ADOT)** instruments the agent to record spans and export them to AWS. `COOKBOOK_TRACING_MODE=aws` is the default; `dual` also sends traces to OpenAI using a separate `OPENAI_TRACE_API_KEY`.
 
@@ -297,7 +297,7 @@ The local checks validate the sample logic and integration contracts without clo
 To adapt the example:
 
 1. Replace the sample functions in [tools.py](https://developers.openai.com/cookbook/examples/partners/aws/chatgpt_agents_sdk_aws_agentcore_cookbook/runtime-agent/tools.py) with read-only calls to an approved service, such as an inventory or order-status API.
-2. Update the [Python schemas](https://developers.openai.com/cookbook/examples/partners/aws/chatgpt_agents_sdk_aws_agentcore_cookbook/runtime-agent/schemas.py), [MCP tool registrations](https://developers.openai.com/cookbook/examples/partners/aws/chatgpt_agents_sdk_aws_agentcore_cookbook/mcp-adapter/server.ts), [MCP response schemas](https://developers.openai.com/cookbook/examples/partners/aws/chatgpt_agents_sdk_aws_agentcore_cookbook/mcp-adapter/schemas/flight.ts), and [widget](https://developers.openai.com/cookbook/assets/examples/partners/aws/chatgpt_agents_sdk_aws_agentcore_cookbook/mcp-adapter/public/flight-widget.html) together. Preserve strict validation, read-only annotations, and credential isolation.
+2. Update the [Python schemas](https://developers.openai.com/cookbook/examples/partners/aws/chatgpt_agents_sdk_aws_agentcore_cookbook/runtime-agent/schemas.py), [MCP tool registrations](https://developers.openai.com/cookbook/examples/partners/aws/chatgpt_agents_sdk_aws_agentcore_cookbook/mcp-adapter/server.ts), [MCP response schemas](https://developers.openai.com/cookbook/examples/partners/aws/chatgpt_agents_sdk_aws_agentcore_cookbook/mcp-adapter/schemas/flight.ts), and [widget](https://developers.openai.com/cookbook/assets/examples/partners/AWS/chatgpt_agents_sdk_aws_agentcore_cookbook/mcp-adapter/public/flight-widget.html) together. Preserve strict validation, read-only annotations, and credential isolation.
 3. Add representative successes, malformed inputs, and unsupported actions to the [evaluation fixtures](https://developers.openai.com/cookbook/examples/partners/aws/chatgpt_agents_sdk_aws_agentcore_cookbook/runtime-agent/evals/fixtures/flight-status-results.jsonl). Run local checks before evaluating the real agent.
 4. Configure your approved Bedrock model, tunnel, and tracing destinations. Your team can keep the agent local or supply an existing Runtime for hosted execution.
 

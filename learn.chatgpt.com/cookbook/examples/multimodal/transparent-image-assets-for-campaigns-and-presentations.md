@@ -157,10 +157,10 @@ codex_prompt = '''
 Build a simple, responsive single-page campaign website for STILLROOM, a
 premium botanical home-fragrance brand, using these existing transparent PNGs:
 
-- /cookbook/assets/examples/multimodal/images/transparent-image-assets/amber-parfum.png
-- /cookbook/assets/examples/multimodal/images/transparent-image-assets/botanical-oil.png
-- /cookbook/assets/examples/multimodal/images/transparent-image-assets/reed-diffuser.png
-- /cookbook/assets/examples/multimodal/images/transparent-image-assets/garden-candle.png
+- images/transparent-image-assets/amber-parfum.png
+- images/transparent-image-assets/botanical-oil.png
+- images/transparent-image-assets/reed-diffuser.png
+- images/transparent-image-assets/garden-candle.png
 
 Show the heading "One collection, four seasons." Add Spring, Summer, Autumn,
 and Winter controls that change the campaign background and seasonal copy.
@@ -330,8 +330,8 @@ presentation_prompt = f"""
 Create one editable 16:9 PowerPoint slide for a fictional NORTHSTAR CLOUD
 FY26 Q4 board review using these existing transparent PNG charts:
 
-- /cookbook/assets/examples/multimodal/images/transparent-image-assets/quarterly-revenue-growth.png
-- /cookbook/assets/examples/multimodal/images/transparent-image-assets/regional-pipeline-mix.png
+- images/transparent-image-assets/quarterly-revenue-growth.png
+- images/transparent-image-assets/regional-pipeline-mix.png
 
 Mock quarterly revenue, in USD millions: {quarterly_revenue}
 Mock regional pipeline mix, in percent: {regional_pipeline}

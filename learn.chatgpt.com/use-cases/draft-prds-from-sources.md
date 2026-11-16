@@ -47,7 +47,6 @@ starterPrompt:
     Cite the sources behind requirement-level claims. If sources disagree, call
     out the conflict instead of choosing silently. Draft only. Do not post,
     update Linear, or share the document until I approve it.
-  suggestedModel: gpt-6-astra
   suggestedEffort: xhigh
 relatedLinks:
   - label: Plugins

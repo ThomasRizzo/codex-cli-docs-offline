@@ -66,6 +66,7 @@ starterPrompt:
 
     - two visuals: a prioritization heatmap and a GWAS summary figure with the
     lead asthma-linked variants for each target
+  suggestedModel: gpt-6-astra
   suggestedEffort: high
 relatedLinks:
   - label: Request access to GPT-Rosalind

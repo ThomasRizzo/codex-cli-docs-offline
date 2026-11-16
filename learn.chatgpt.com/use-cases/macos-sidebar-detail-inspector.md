@@ -113,14 +113,43 @@ Use the [Build macOS Apps plugin](https://github.com/openai/plugins/tree/main/pl
 Prefer `NavigationSplitView` when the feature benefits from persistent navigation and a stable selected item. Keep sidebar rows native and lightweight, let the sidebar use system backgrounds, and reserve custom cards or dense metadata for the detail pane or inspector.
 
 ```swift
+import SwiftUI
+
+struct Item: Identifiable, Hashable {
+  let id: String
+  let title: String
+  let systemImage: String
+}
+let items = [Item(id: "notes", title: "Notes", systemImage: "note.text"), Item(id: "photos", title: "Photos", systemImage: "photo")]
+
+struct ItemDetailView: View {
+  let selection: String?
+  var body: some View { Text(selection ?? "Select an item").frame(maxWidth: .infinity, maxHeight: .infinity) }
+}
+struct ItemInspectorView: View {
+  let selection: String?
+  var body: some View { Text("Metadata: \(selection ?? "No selection")").padding().frame(minWidth: 220) }
+}
+@MainActor final class LibraryStore: ObservableObject {
+  @Published var entries = items
+  @Published var selection: String?
+  @Published var showInspector = true
+  func addItem() {
+    let item = Item(id: UUID().uuidString, title: "New Item", systemImage: "doc")
+    entries.append(item)
+    selection = item.id
+  }
+}
+
 struct LibraryRootView: View {
-  @SceneStorage("LibraryRootView.selection") private var selection: Item.ID?
-  @SceneStorage("LibraryRootView.showInspector") private var showInspector = true
+  @StateObject private var store = LibraryStore()
+  @SceneStorage("LibraryRootView.selection") private var savedSelection: Item.ID?
+  @SceneStorage("LibraryRootView.showInspector") private var savedShowInspector = true
 
   var body: some View {
     NavigationSplitView {
-      List(selection: $selection) {
-        ForEach(items) { item in
+      List(selection: $store.selection) {
+        ForEach(store.entries) { item in
           Label(item.title, systemImage: item.systemImage)
             .tag(item.id)
         }
@@ -128,14 +157,26 @@ struct LibraryRootView: View {
       .listStyle(.sidebar)
       .navigationTitle("Library")
     } detail: {
-      ItemDetailView(selection: selection)
-        .inspector(isPresented: $showInspector) {
-          ItemInspectorView(selection: selection)
+      ItemDetailView(selection: store.selection)
+        .inspector(isPresented: $store.showInspector) {
+          ItemInspectorView(selection: store.selection)
         }
+    }
+    .focusedSceneObject(store)
+    .onAppear {
+      store.selection = savedSelection
+      store.showInspector = savedShowInspector
+    }
+    .onChange(of: store.selection) { _, selection in
+      savedSelection = selection
+    }
+    .onChange(of: store.showInspector) { _, showInspector in
+      savedShowInspector = showInspector
     }
   }
 }
 ```
+
 
 If the app needs unusual split sizing, low-level window coordination, or custom responder-chain behavior, ask Codex to keep the SwiftUI shell intact and add only the smallest AppKit bridge required for that one gap.
 
@@ -146,6 +187,7 @@ Mac users should be able to discover important actions in the menu bar, the tool
 ```swift
 @main
 struct LibraryApp: App {
+  @FocusedObject private var store: LibraryStore?
   var body: some Scene {
     WindowGroup {
       LibraryRootView()
@@ -153,14 +195,16 @@ struct LibraryApp: App {
     .commands {
       CommandMenu("Library") {
         Button("New Item") {
-          // Create a new item.
+          store?.addItem()
         }
         .keyboardShortcut("n")
+        .disabled(store == nil)
 
         Button("Toggle Inspector") {
-          // Route this command to the focused window or selected item state.
+          store?.showInspector.toggle()
         }
         .keyboardShortcut("i", modifiers: [.command, .option])
+        .disabled(store == nil)
       }
     }
 
@@ -170,6 +214,7 @@ struct LibraryApp: App {
   }
 }
 ```
+
 
 Use `FocusedValue`, scene state, or explicit selection state when a command should apply to the current detail item. If a shortcut would be registered in multiple places, ask Codex to consolidate ownership so the app has one clear command route.
 
@@ -193,6 +238,7 @@ struct LibrarySettingsView: View {
   }
 }
 ```
+
 
 ## Prompt the app concept, then validate the shell
 

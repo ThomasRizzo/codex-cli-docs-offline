@@ -175,7 +175,7 @@ If you don't have specific needs requiring to build a custom RAG pipeline, you c
 
 ### Fine-tuning models
 
-In some cases, your application could benefit from a model that adapts to your specific task. You can use supervised or reinforcement fine-tuning to teach the models certain behaviors.
+In some cases, your application could benefit from a model that adapts to your specific task. You can use supervised fine-tuning to teach the models certain behaviors.
 
 For example, supervised fine-tuning is a good fit when:
 
@@ -184,8 +184,6 @@ For example, supervised fine-tuning is a good fit when:
 - You want to process inputs or generate outputs in a consistent way
 
 You can also use Direct Preference Optimization (DPO) to fine-tune a model with examples of what _not_ to do vs what is a preferred answer.
-
-On the other hand, you can use reinforcement fine-tuning when you want reasoning models to accomplish nuanced objectives.
 
 #### Learn and build
 
@@ -222,7 +220,7 @@ In other cases, you might need to rely on different metrics and scoring algorith
 
 _Example: Check the model's output against the expected answer, ignoring order._
 
-```js
+```typescript
 // Reference answer
 const correctAnswer = ["Eggs", "Sugar"];
 
@@ -235,6 +233,7 @@ const isCorrect =
 
 console.log(isCorrect ? "Correct!" : "Incorrect.");
 ```
+
 
 #### Learn and build
 
@@ -276,15 +275,17 @@ _Example: Classify text for policy compliance with the Moderation API._
 
 ```python
 from openai import OpenAI
+
 client = OpenAI()
 
 response = client.moderations.create(
     model="omni-moderation-latest",
-    input="I want to buy drugs",
+    input="...text to classify goes here...",
 )
 
 print(response)
 ```
+
 
 #### Learn and build
 

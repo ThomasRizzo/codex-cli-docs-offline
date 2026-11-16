@@ -37,7 +37,6 @@ Curated resources are listed here with their canonical destination URLs.
 - [Doing RAG on PDFs using File Search in the Responses API](https://developers.openai.com/cookbook/examples/file_search_responses): Cookbook to search PDFs with the Responses API file search tool.
 - [Eval Driven System Design - From Prototype to Production](https://developers.openai.com/cookbook/examples/partners/eval_driven_system_design/receipt_inspection): Cookbook for eval-driven design of a receipt parsing automation workflow.
 - [Evals API Use-case - Responses Evaluation](https://developers.openai.com/cookbook/examples/evaluation/use-cases/responses-evaluation): Cookbook to evaluate new models against stored Responses API logs.
-- [Exploring Model Graders for Reinforcement Fine-Tuning](https://developers.openai.com/cookbook/examples/reinforcement_fine_tuning): Cookbook to use model graders for reinforcement fine-tuning in expert tasks.
 - [Fine-tuning with gpt-oss and Hugging Face Transformers](https://developers.openai.com/cookbook/articles/gpt-oss/fine-tune-transfomers): Authored by: Edward Beeching, Quentin Gallouédec, and Lewis Tunstall Large reasoning models like OpenAI o3 generate a chain-of-thought to improve the accuracy a
 - [Generate images with GPT Image](https://developers.openai.com/cookbook/examples/generate_images_with_gpt_image): Cookbook to generate and edit images with GPT Image capabilities.
 - [Generate images with high input fidelity](https://developers.openai.com/cookbook/examples/generate_images_with_high_input_fidelity): Cookbook to preserve image details using high input fidelity in Image API.
@@ -55,7 +54,6 @@ Curated resources are listed here with their canonical destination URLs.
 - [o3/o4-mini Function Calling Guide](https://developers.openai.com/cookbook/examples/o-series/o3o4-mini_prompting_guide): Cookbook to improve o3/o4-mini function calling with prompt best practices.
 - [Orchestrating Agents: Routines and Handoffs](https://developers.openai.com/cookbook/examples/orchestrating_agents): Cookbook for orchestrating agent workflows with routines and handoffs.
 - [Prompt Caching 101](https://developers.openai.com/cookbook/examples/prompt_caching101): Cookbook to reduce latency and cost using OpenAI prompt caching.
-- [Reinforcement Fine-Tuning for Conversational Reasoning with the OpenAI API](https://developers.openai.com/cookbook/examples/fine-tuned_qa/reinforcement_finetuning_healthbench): Cookbook for reinforcement fine-tuning conversational reasoning using HealthBench evaluations.
 - [Sora 2 Prompting Guide](https://developers.openai.com/cookbook/examples/sora/sora2_prompting_guide): Cookbook to craft effective video prompts for Sora 2 generation.
 - [Transcribing User Audio with a Separate Realtime Request](https://developers.openai.com/cookbook/examples/realtime_out_of_band_transcription): Cookbook to transcribe user audio using out-of-band Realtime sessions.
 - [Verifying gpt-oss implementations](https://developers.openai.com/cookbook/articles/gpt-oss/verifying-implementations): The OpenAI gpt-oss models are introducing a lot of new concepts to the open-model ecosystem and getting them to perform as expected might take some time. This g
@@ -88,7 +86,7 @@ Curated resources are listed here with their canonical destination URLs.
 - [Graders](https://platform.openai.com/docs/guides/graders): Guide to using graders for evaluations.
 - [Image generation guide](https://platform.openai.com/docs/guides/image-generation): Guide to generating images using OpenAI models.
 - [Keep costs low & accuracy high](https://platform.openai.com/docs/guides/reasoning-best-practices#how-to-keep-costs-low-and-accuracy-high): Guide on balancing cost efficiency with model accuracy.
-- [Latency optimization guide](https://platform.openai.com/docs/guides/latency-optimization): Best practices for reducing model response latency.
+- [Latency optimization guide](https://developers.openai.com/api/docs/guides/latency-optimization): Best practices for reducing model response latency.
 - [LLM correctness and consistency](https://platform.openai.com/docs/guides/optimizing-llm-accuracy): Best practices for achieving accurate and consistent model outputs.
 - [MCP guide](https://platform.openai.com/docs/guides/tools-remote-mcp): Guide to using the Model Context Protocol for portable tools.
 - [Model distillation overview](https://platform.openai.com/docs/guides/distillation#page-top): Overview of distillation techniques for creating efficient models.
@@ -110,7 +108,6 @@ Curated resources are listed here with their canonical destination URLs.
 - [Realtime translation guide](https://platform.openai.com/docs/guides/realtime-translation): Guide to performing realtime speech translation.
 - [Reasoning best practices](https://platform.openai.com/docs/guides/reasoning-best-practices): Prompting and optimization tips for reasoning models
 - [Reasoning guide](https://platform.openai.com/docs/guides/reasoning?api-mode=responses): Overview of what reasoning is and how to prompt reasoning models
-- [Reinforcement fine-tuning overview](https://platform.openai.com/docs/guides/reinforcement-fine-tuning): Guide on reinforcement learning-based fine-tuning techniques.
 - [Responses guide](https://platform.openai.com/docs/api-reference/responses): Introduction to the Responses API and its endpoints.
 - [Responses vs. chat completions guide](https://platform.openai.com/docs/guides/responses-vs-chat-completions): Comparison of the Responses API and Chat Completions.
 - [Speech-to-text guide](https://platform.openai.com/docs/guides/speech-to-text): Guide for building speech recognition pipelines.

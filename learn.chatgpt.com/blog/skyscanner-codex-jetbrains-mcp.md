@@ -27,6 +27,7 @@ As I was writing unit tests for error handling in our code that uses Databricks�
 var stubError = new NotFound("dummy error");
 ```
 
+
 At first glance, that looks reasonable—we want to simulate a `NotFound` error. But moments later, IntelliJ highlighted that line with a big red underline.
 
 The problem: the `NotFound` exception class in the Databricks SDK doesn’t have a constructor that takes a single string argument (you can see this in the Databricks SDK source: [NotFound.java](https://github.com/databricks/databricks-sdk-java/blob/4074f4e0ed2dc09f2feffddf14d7abdf20412119/databricks-sdk-java/src/main/java/com/databricks/sdk/core/error/platform/NotFound.java)). In other words, Codex’s suggested code was never going to compile.

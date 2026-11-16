@@ -11,13 +11,14 @@ Each entry has a Markdown twin at `/cookbook/<path>.md`.
 
 ## Articles
 - [Build a per-run spending controller with the Responses API](https://developers.openai.com/cookbook/articles/per_run_spending_controller_responses_api.md): Enforce an application-owned model-token budget for each Responses API run using token counts, maximum-cost estimates, usage tracking, and safe error handling.
+- [Build a voice agent that follows an SOP](https://developers.openai.com/cookbook/articles/sop_to_voice_agent_builder.md): Turn a written SOP into prompts, tools, and application checks that keep a voice agent on the right procedure when a caller changes their request or corrects an answer.
 - [Build your own content fact checker with gpt-oss-120B, Cerebras, and Parallel](https://developers.openai.com/cookbook/articles/gpt-oss/build-your-own-fact-checker-cerebras.md): Cookbook to build a content fact checker with gpt-oss-120B on Cerebras using Parallel.
 - [Building workspace agents in ChatGPT to complete repeatable, end-to-end work](https://developers.openai.com/cookbook/articles/chatgpt-agents-sales-meeting-prep.md): Build, test, schedule, and share a ChatGPT workspace agent that prepares sales meeting briefs with calendar, SharePoint, and web search context.
 - [Fine-tuning with gpt-oss and Hugging Face Transformers](https://developers.openai.com/cookbook/articles/gpt-oss/fine-tune-transfomers.md)
 - [How to handle the raw chain of thought in gpt-oss](https://developers.openai.com/cookbook/articles/gpt-oss/handle-raw-cot.md)
 - [How to run gpt-oss locally with Ollama](https://developers.openai.com/cookbook/articles/gpt-oss/run-locally-ollama.md)
 - [How to run gpt-oss with Transformers](https://developers.openai.com/cookbook/articles/gpt-oss/run-transformers.md)
-- [Integrating Sign in with ChatGPT in your Opensource App](https://developers.openai.com/cookbook/articles/sign-in-with-chatgpt.md): Add ChatGPT sign-in and ChatGPT plan usage to an existing open-source desktop app.
+- [Integrating Sign in with ChatGPT in your open-source app](https://developers.openai.com/cookbook/articles/sign-in-with-chatgpt.md): Add ChatGPT sign-in and ChatGPT plan usage to an existing open-source desktop app.
 - [OpenAI Harmony Response Format](https://developers.openai.com/cookbook/articles/openai-harmony.md)
 - [User guide for gpt-oss-safeguard](https://developers.openai.com/cookbook/articles/gpt-oss-safeguard-guide.md)
 - [Verifying gpt-oss implementations](https://developers.openai.com/cookbook/articles/gpt-oss/verifying-implementations.md)
@@ -66,6 +67,7 @@ Each entry has a Markdown twin at `/cookbook/<path>.md`.
 - [Realtime Eval Guide](https://developers.openai.com/cookbook/examples/realtime_eval_guide.md)
 - [Release ChatGPT usage budgets hourly, daily, or weekly](https://developers.openai.com/cookbook/examples/chatgpt/daily_usage_limits/readme.md): Release a monthly ChatGPT budget in credits or US dollars in hourly, daily, or weekly increments. Explore a plan in your browser, try a Codex-assisted pilot, and deploy on managed infrastructure.
 - [Run Agents API sandboxes on AWS Lambda MicroVMs](https://developers.openai.com/cookbook/examples/agents_api/sandboxes/aws/readme.md): Run agent tools in AWS Lambda MicroVMs with application-managed or webhook-managed provisioning, file transfers, and suspend/resume.
+- [Run OpenAI agents on a Databricks Sandbox](https://developers.openai.com/cookbook/examples/agents_api/sandboxes/databricks/readme.md): Run agent tools in a Databricks serverless sandbox with application-managed provisioning.
 - [SchemaFlow: Agentic Database Change Impact Analysis, SQL Generation, and Eval Guardrails](https://developers.openai.com/cookbook/examples/partners/schemaflow_design_guide/schemaflow_cookbook.md): Build a staged SchemaFlow pipeline with the OpenAI Agents SDK for database change parsing, impact analysis, rollout planning, SQL generation, guardrails, artifacts, optional File Search grounding, and Promptfoo evals.
 - [Skills in OpenAI API](https://developers.openai.com/cookbook/examples/skills_in_api.md): Cookbook for building skills with the OpenAI API.
 - [Temporal Agents with Knowledge Graphs](https://developers.openai.com/cookbook/examples/partners/temporal_agents_with_knowledge_graphs/temporal_agents.md)

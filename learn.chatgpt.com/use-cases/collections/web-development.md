@@ -4,6 +4,20 @@
 
 Build responsive UI from designs and prompts.
 
+## In this collection
+
+- [Get from idea to proof of concept](https://developers.openai.com/codex/use-cases/idea-to-proof-of-concept)
+- [Turn user stories into UI mocks](https://developers.openai.com/codex/use-cases/user-stories-to-ui-mocks)
+- [Build a hackathon site](https://developers.openai.com/codex/use-cases/build-workshop-practice-site)
+- [Build and deploy internal apps](https://developers.openai.com/codex/use-cases/build-and-deploy-internal-apps)
+- [Bring your app to ChatGPT](https://developers.openai.com/codex/use-cases/chatgpt-apps)
+- [Turn Figma designs into code](https://developers.openai.com/codex/use-cases/figma-designs-to-code)
+- [Build responsive front-end designs](https://developers.openai.com/codex/use-cases/frontend-designs)
+- [Build an AI tour guide](https://developers.openai.com/codex/use-cases/build-an-ai-tour-guide)
+- [Kick off coding tasks from Slack](https://developers.openai.com/codex/use-cases/slack-coding-tasks)
+- [Deploy an app or website](https://developers.openai.com/codex/use-cases/deploy-app-or-website)
+- [Review GitHub pull requests](https://developers.openai.com/codex/use-cases/github-code-reviews)
+
 Codex works great with existing design systems, taking into account constraints and visual inputs to produce a responsive UI.
 These use cases are helpful when you are building web apps and need to iterate on frontend designs.
 
@@ -12,6 +26,10 @@ These use cases are helpful when you are building web apps and need to iterate o
 Use Codex to turn a rough idea into a visual direction and implement a first prototype.
 
 - [Get from idea to proof of concept](https://developers.openai.com/codex/use-cases/idea-to-proof-of-concept): Use Codex with ImageGen to turn a rough idea into a visual direction, implement the smallest...
+- [Turn user stories into UI mocks](https://developers.openai.com/codex/use-cases/user-stories-to-ui-mocks): Use Codex to gather product feedback from Slack, Linear, Google Drive, normalize it into...
+- [Build a hackathon site](https://developers.openai.com/codex/use-cases/build-workshop-practice-site): Turn your event brief and agenda into a site that guides participants through registration...
+- [Build and deploy internal apps](https://developers.openai.com/codex/use-cases/build-and-deploy-internal-apps): Use Sites in ChatGPT Work to build and test a focused internal app, add storage when the...
+- [Bring your app to ChatGPT](https://developers.openai.com/codex/use-cases/chatgpt-apps): Build one narrow ChatGPT app outcome end to end: define the tools, scaffold the MCP server...
 
 ## Build from Figma
 
@@ -24,6 +42,7 @@ Use Codex to pull design context from Figma and turn it into code that follows t
 Leverage Codex to make targeted changes from visual inputs or prompts, and have it verify its work in the browser.
 
 - [Build responsive front-end designs](https://developers.openai.com/codex/use-cases/frontend-designs): Use Codex to translate screenshots and design briefs into code that matches the repo's...
+- [Build an AI tour guide](https://developers.openai.com/codex/use-cases/build-an-ai-tour-guide): Use Codex to add a WebMCP-powered tour to your web app
 
 ## Pick up scoped Slack tasks
 

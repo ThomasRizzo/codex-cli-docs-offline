@@ -86,6 +86,12 @@ Assign the returned `file_id` with
 
 Pass the returned `file_id` when you create or update an ad creative.
 
+For an ad with multiple images, upload each image separately under the same
+ad account and pass the returned IDs in `creative.file_ids`. Use 4–6 distinct
+square (1:1) images in display order. See
+[Create an ad with multiple images](https://developers.openai.com/ads/campaign-management#create-an-ad-with-multiple-images)
+for requirements and a complete example.
+
 `POST /ads`
 
 ```bash

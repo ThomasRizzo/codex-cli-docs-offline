@@ -1,75 +1,109 @@
-function changeTheme() {
-  const element = document.documentElement;
-  const htmlElement = document.querySelector("html");
-  const theme = element.classList.contains("dark") ? "light" : "dark";
-
-  const css = document.createElement("style");
-
-  css.appendChild(
-    document.createTextNode(
-      `* {
-           -webkit-transition: none !important;
-           -moz-transition: none !important;
-           -o-transition: none !important;
-           -ms-transition: none !important;
-           transition: none !important;
-        }`
-    )
-  );
-  document.head.appendChild(css);
-
-  if (theme === "dark") {
-    element.classList.add("dark");
-    htmlElement.dataset.theme = "dark";
-  } else {
-    element.classList.remove("dark");
-    htmlElement.dataset.theme = "light";
+(() => {
+  // Astro can run the shared head script again when navigating between layouts.
+  if (window.__docsThemeController) {
+    window.__docsThemeController();
+    return;
   }
 
-  window.getComputedStyle(css).opacity;
-  document.head.removeChild(css);
-  localStorage.theme = theme;
-}
+  const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
+  const normalizePreference = (value) =>
+    value === "light" || value === "dark" ? value : "system";
+  let preference = "system";
+  let storedPreference;
 
-function preloadTheme() {
-  const theme = (() => {
-    const userTheme = localStorage.theme;
-
-    if (userTheme === "light" || userTheme === "dark") {
-      return userTheme;
-    } else {
-      return window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light";
+  function readPreference() {
+    try {
+      const stored = localStorage.getItem("theme");
+      // Preserve an unsaved choice when writes fail but reads still work.
+      if (stored !== storedPreference) {
+        storedPreference = stored;
+        preference = normalizePreference(stored);
+      }
+    } catch {
+      // Keep the in-memory choice while storage is unavailable.
     }
-  })();
-
-  const element = document.documentElement;
-  const htmlElement = document.querySelector("html");
-
-  if (theme === "dark") {
-    element.classList.add("dark");
-    htmlElement.dataset.theme = "dark";
-  } else {
-    element.classList.remove("dark");
-    htmlElement.dataset.theme = "light";
   }
 
-  localStorage.theme = theme;
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  function initializeThemeButtons() {
-    const headerThemeButton = document.getElementById("header-theme-button");
-    const drawerThemeButton = document.getElementById("drawer-theme-button");
-    headerThemeButton?.addEventListener("click", changeTheme);
-    drawerThemeButton?.addEventListener("click", changeTheme);
+  function applyTheme(target = document) {
+    readPreference();
+    const theme =
+      preference === "system"
+        ? systemTheme.matches
+          ? "dark"
+          : "light"
+        : preference;
+    target.documentElement.classList.toggle("dark", theme === "dark");
+    target.documentElement.dataset.theme = theme;
+    target.querySelectorAll("[data-theme-preference]").forEach((input) => {
+      input.checked = input.value === preference;
+    });
   }
 
-  document.addEventListener("astro:after-swap", initializeThemeButtons);
-  initializeThemeButtons();
-});
+  function refreshTheme() {
+    const style = document.createElement("style");
+    style.textContent = "* { transition: none !important; }";
+    document.head.appendChild(style);
+    applyTheme();
+    window.getComputedStyle(style).opacity;
+    style.remove();
+  }
 
-document.addEventListener("astro:after-swap", preloadTheme);
+  function closePicker(picker, restoreFocus = false) {
+    picker.open = false;
+    if (restoreFocus) picker.querySelector("summary")?.focus();
+  }
 
-preloadTheme();
+  document.addEventListener("change", (event) => {
+    const input = event.target;
+    if (!(input instanceof HTMLInputElement)) return;
+    if (!input.matches("[data-theme-preference]")) return;
+    preference = normalizePreference(input.value);
+    try {
+      localStorage.setItem("theme", preference);
+      storedPreference = preference;
+    } catch {
+      // Keep the in-memory preference if the browser blocks persistence.
+    }
+    refreshTheme();
+    const picker = input.closest("[data-theme-picker]");
+    if (picker) closePicker(picker, true);
+  });
+
+  document.addEventListener("click", (event) => {
+    document.querySelectorAll("[data-theme-picker][open]").forEach((picker) => {
+      if (!picker.contains(event.target)) closePicker(picker);
+    });
+  });
+
+  document.addEventListener(
+    "keydown",
+    (event) => {
+      if (event.key !== "Escape") return;
+      const picker = document.querySelector("[data-theme-picker][open]");
+      if (!picker) return;
+      event.preventDefault();
+      event.stopPropagation();
+      closePicker(picker, true);
+    },
+    true
+  );
+
+  systemTheme.addEventListener("change", () => {
+    readPreference();
+    if (preference === "system") refreshTheme();
+  });
+  window.addEventListener("storage", (event) => {
+    if (event.key !== "theme" && event.key !== null) return;
+    storedPreference = event.newValue;
+    preference = normalizePreference(event.newValue);
+    refreshTheme();
+  });
+  // The head script already applied the theme. Sync the newly parsed pickers.
+  document.addEventListener("DOMContentLoaded", () => applyTheme());
+  document.addEventListener("astro:before-swap", (event) => {
+    applyTheme(event.newDocument);
+  });
+  document.addEventListener("astro:after-swap", refreshTheme);
+  window.__docsThemeController = refreshTheme;
+  refreshTheme();
+})();

@@ -173,6 +173,10 @@ Here are some example use cases you can try with Sites.
 - [See which campaigns bring in leads](../use-cases/compare-campaign-performance.html): Turn weekly campaign exports into a dashboard where your team can compare lead volume and...
 - [Build a hackathon site](../use-cases/build-workshop-practice-site.html): Turn your event brief and agenda into a site that guides participants through registration...
 
+To build your first site, follow [Create a site](sites/creating-a-site.html) to describe what you need, review the result, and refine it.
+
+You can also use **Remix** to build on a useful site a coworker has already made. Keep the parts that fit your task and adapt the content and experience for your team. Learn how to [start from an existing site with Remix](sites/creating-a-site.html#start-from-an-existing-site-with-remix).
+
 ## Understand limits and unsupported uses
 
 Sites hosts web experiences in its supported runtime. Some frameworks, private networks, databases, background services, and hosting patterns aren't supported.
@@ -192,42 +196,97 @@ Don't use sites to process Protected Health Information; target children under 1
 
 See [Creating and managing ChatGPT sites](https://help.openai.com/en/articles/20001339) for current limits and policy links.
 
+## Pricing
+
+You can create as many Sites as you want. Once a Site is running, its traffic and storage count toward hosting usage. Building and editing a Site count toward your plan’s [Codex usage](pricing.html).
+
+### What will my plan cover?
+
+On Plus, Pro, and Business, all your Sites share one monthly hosting allowance. It covers traffic and storage, regardless of how many Sites you publish.
+
+| Plan                      | Monthly hosting allowance                             |
+| ------------------------- | ----------------------------------------------------- |
+| Plus                      | 125 credits                                           |
+| Pro                       | 375 credits                                           |
+| Business                  | 125 credits per seat                                  |
+| Enterprise (credit-based) | Draws from your organization’s contracted credit pool |
+
+For Enterprise customers with a dollar commitment, the proposed billing model prices Codex tokens and Sites hosting separately. Both charges would draw from the same commitment. For example, $10 of Codex usage and $2 of hosting would use $12 of the commitment.
+
+Traffic and storage contribute to hosting usage in the following ways.
+
+- **Traffic** is measured by the requests your Site handles, such as loading a page, image, or other resource. A page visit can generate multiple requests, typically 30–50, though the number varies by Site.
+- **Database storage** holds saved records, such as form responses. A Site with a database has a monthly base fee, even when the database is empty, plus usage for the data it stores.
+- **File storage** holds uploaded files, such as images or PDFs. Usage depends on how much you store and for how long.
+
+Hosting is free through December 31, 2026. Starting **January 1, 2027**, Plus,
+  Pro, and Business customers will pay for hosting usage above their monthly
+  allowance. Enterprise billing follows your organization’s agreement.
+
+Starting **December 1, 2026**, you’ll be able to view traffic and storage usage for each Site. Workspace admins will be able to compare usage across their workspace.
+
+### Hosting usage rates
+
+The following rates are proposed to take effect on January 1, 2027. They show approximate usage in credits. For Enterprise agreements billed in dollars, ask your account team for hosting rates.
+
+| What you use                                                       | Billing unit             | Approx. credits |
+| ------------------------------------------------------------------ | ------------------------ | --------------- |
+| Site without storage                                               | 1 Site per month         | 0               |
+| Site with storage, including an empty database                     | 1 Site per month         | 25              |
+| Traffic                                                            | 100,000 requests         | 16              |
+| Database storage (saved records, such as form responses)           | 1 GiB stored for a month | 150             |
+| File storage (uploaded files, such as images or PDFs)              | 1 GiB stored for a month | 3.75            |
+| Custom domain (domain registration costs extra)                    | 1 domain per month       | 25              |
+| Private connection (Enterprise only; a tunnel to a private system) | 1 tunnel per month       | 125             |
+
+For example, a Site with an empty database uses approximately 25 credits per month before traffic. With 1 GiB of saved records for a full month, its base fee and database storage use approximately 175 credits, excluding traffic and files. One GiB is about 1.07 GB.
+
+### Estimate your monthly cost
+
+Choose an example Site or adjust monthly requests, saved records, and uploaded files. Select your plan to compare this Site’s estimated hosting usage with your monthly allowance.
+
+<SitesCostEstimator
+  client:load
+  plans={[
+    { label: "Plus", monthlyCredits: 125 },
+    { label: "Pro", monthlyCredits: 375 },
+    { label: "Business", monthlyCredits: 125, perSeat: true },
+    { label: "Enterprise" },
+  ]}
+  rates={{
+    traffic: { credits: 16, requests: 100000 },
+    monthlyStorageBase: 25,
+    databasePerGiB: 150,
+    filesPerGiB: 3.75,
+  }}
+/>
+
+Estimates assume a full month of storage. Select **This Site has a database** to include its base fee even when saved records are zero. Custom domains and private connections cost extra, as listed in [Hosting usage rates](#hosting-usage-rates).
+
 ## Next up
 
 
 
-  [Create a site
+  [Create a site](sites/creating-a-site.html)
+
+Describe, build, and refine a website in ChatGPT or Codex.
 
 
+  [Data and connections](sites/data-and-connections.html)
 
-        <TextPrompt />
-      
-
-      Describe, build, and refine a website in ChatGPT or Codex.](sites/creating-a-site.html)
-  [Data and connections
+Choose storage, add sign-in, and connect apps to your site.
 
 
+  [Publish and share](sites/publishing-and-sharing.html)
 
-        <Mcp />
-      
-
-      Choose storage, add sign-in, and connect apps to your site.](sites/data-and-connections.html)
-  [Publish and share
+Review your site, choose its audience, and collaborate with editors.
 
 
+  [Manage a site](sites/managing-a-site.html)
 
-        <Globe />
-      
-
-      Review your site, choose its audience, and collaborate with editors.](sites/publishing-and-sharing.html)
-  [Manage a site
+Review analytics, change domains and settings, and manage site versions.
 
 
-
-        <Folder />
-      
-
-      Review analytics, change domains and settings, and manage site versions.](sites/managing-a-site.html)
 
 
 

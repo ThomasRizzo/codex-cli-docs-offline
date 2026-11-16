@@ -76,11 +76,11 @@ The [Security workbench](/codex/security/plugin/workbench) brings scans, finding
 
 ## Keep important repositories under continuous review
 
-If a repository needs ongoing attention, install **Codex Security Cloud** from the plugin marketplace and [connect your GitHub repository](/codex/security/setup). Choose **Repository** for a scan that runs once, or **Commit changes** for ongoing monitoring. Select a Codex cloud environment, then review scan progress and findings in the plugin.
+If a repository needs ongoing attention, install **Daybreak Defense Factory (Preview)** from the plugin marketplace and [connect your GitHub repository](/codex/security/setup). Choose **Repository** for a scan that runs once, or **Commit changes** for ongoing monitoring. Select a Codex cloud environment, then review scan progress and findings in the plugin.
 
 Where practical, likely issues are validated in an isolated environment. Review the code excerpts, call paths, reproduction output, and remediation guidance. Keep the [threat model](/codex/security/threat-model) up to date as your architecture and priorities change, and inspect suggested patches before opening a pull request.
 
-Codex Security Cloud is available in research preview. A scan may take several hours for a larger repository. With commit monitoring enabled, Codex continues to review new commits; you can change the history window and threat model in the repository's **Monitoring settings**.
+Daybreak Defense Factory is available in research preview. A scan may take several hours for a larger repository. With commit monitoring enabled, Codex continues to review new commits; you can change the history window and threat model in the repository's **Monitoring settings**.
 
 ## Turn existing alerts into an actionable queue
 
@@ -157,7 +157,7 @@ npx @openai/codex-security bulk-scan repositories.csv \
 
 Campaigns preserve progress and results separately for each repository. You can resume interrupted work, tune concurrency and retries, provide shared architecture documents or security policies, and retain findings, coverage, and portable SARIF results. Supported models, reasoning effort, scan depth, and estimated cost limits let you choose how much analysis each target warrants. Treat estimated cost limits as estimates, not hard spending caps.
 
-For a large monorepo, I'd scope the first scan to an owned service, package, or another meaningful security boundary. Start with a standard scan, then apply deep scans selectively to sensitive services or complex components. For connected GitHub repositories, Codex Security Cloud can review a selected commit-history window and continue reviewing new commits.
+For a large monorepo, I'd scope the first scan to an owned service, package, or another meaningful security boundary. Start with a standard scan, then apply deep scans selectively to sensitive services or complex components. For connected GitHub repositories, Daybreak Defense Factory can review a selected commit-history window and continue reviewing new commits.
 
 Use the initial campaign as a baseline. Update threat models, track findings in your existing systems, and verify reviewed fixes to make the process repeatable.
 
@@ -180,7 +180,7 @@ If you're deciding what to try first, I'd start wherever your team already has w
 - Open [ChatGPT](https://chatgpt.com/) for an initial investigation.
 - [Install the Codex Security plugin](/codex/security/plugin) to assess a repository or triage an existing backlog.
 - [Configure Codex Security Review](/codex/security/security-review) to check pull requests before they merge.
-- [Connect a repository to Codex Security Cloud](/codex/security/setup) for ongoing analysis.
+- [Connect a repository to Daybreak Defense Factory](/codex/security/setup) for ongoing analysis.
 - [Explore the CLI](/codex/security/cli) and [TypeScript SDK](/codex/security/sdk) to add checks to existing tools.
 - [Review Trusted Access for Cyber](/codex/cyber-safety#trusted-access-for-cyber) and [OpenAI Daybreak](https://openai.com/daybreak/) for advanced, authorized work.
 

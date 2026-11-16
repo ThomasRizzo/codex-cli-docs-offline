@@ -6,10 +6,8 @@ For current workspace setup, permissions, and availability, see
   [Managing ChatGPT Sites for your workspace](https://help.openai.com/en/articles/20001338-managing-chatgpt-sites-for-your-workspace) 
   in the Help Center.
 
-<span
-  id="what-costs-and-limits-should-we-plan-for"
-  data-localization-body-anchor
-/>
+
+
 
 
 
@@ -39,7 +37,7 @@ Start with a specific use case. For example, an onboarding site that displays ap
 
 
 
-A site can contain pages, application code, and visitor information. Review what it publishes and collects before sharing it. For the building and publishing workflow, see [Creating and managing ChatGPT Sites](https://help.openai.com/en/articles/20001339).
+A site can contain pages, application code, and visitor information. Review what it publishes and collects before sharing it. For the builder's workflow, see [Create a site](../sites/creating-a-site.html#get-started-with-sites).
 
 ### What you can build
 
@@ -59,10 +57,8 @@ For hosting and processing providers, see OpenAI's [sub-processor list](https://
 
 
 
-<span
-  id="enable-sites-and-choose-sharing-permissions"
-  data-localization-body-anchor
-/>
+
+
 
 
 
@@ -84,25 +80,23 @@ Review three levels of control: workspace permissions, the site's sharing and ed
 
 ### Workspace admin controls
 
-Workspace permissions govern who can create and publish sites. Review public publishing and external invitations separately: allowing a named external viewer and making a site available to anyone on the internet are different decisions.
+Workspace permissions govern who can create and publish sites. Public publishing is off by default in Enterprise. To let members invite named external visitors, enable **Allow members to invite external visitors to sites** under **Workspace settings > Permissions & roles**. You can allow these invitations while keeping public publishing off.
+
+In Business workspaces, external invitations are available when sites are enabled and the account has access to the feature. Business has no separate external-invitation setting.
 
 For configuration steps and current role permissions, follow the [workspace administration guidance](https://help.openai.com/en/articles/20001338-managing-chatgpt-sites-for-your-workspace).
 
 ### Site owner and collaborator controls
 
-Use the site's sharing controls to decide who can view it and who can help maintain it.
+The site owner chooses visitors and editors within the limits you set for the workspace.
 
 #### Audience and sharing
 
-A site's audience controls who can open it. Choose an audience that matches the information and activities the site provides. Review the full set of access grants when narrowing access. Removing an individual invitation may still leave access through a group, workspace-wide sharing, or public publishing.
-
-Check the site from the intended visitor experience after changing access. For the sharing workflow, see [Publishing and sharing](../sites/publishing-and-sharing.html).
+When reviewing a site's audience, check individual invitations, group access, workspace-wide sharing, and public access. More than one of these methods can give the same person access. Owners can [choose who can visit](../sites/publishing-and-sharing.html#choose-who-can-visit) or [invite external visitors](../sites/publishing-and-sharing.html#invite-people-outside-your-workspace).
 
 #### Editors and collaboration
 
-Owners can invite eligible workspace members as editors. Owners publish first; editors can publish later updates. Owners manage access and owner-only settings.
-
-Agree on how editors request and record review before publishing changes. An editor can publish later versions without a separate owner-approval step, so an organization's review process must account for who has edit access.
+Review who has edit access. After the owner publishes for the first time, editors can publish updates without separate owner approval. Agree on how they should request and record any review your organization requires. For editor permissions and invitations, see [Collaborate on a site](../sites/publishing-and-sharing.html#collaborate-on-a-site).
 
 ### Application permissions
 
@@ -110,48 +104,52 @@ Site access and access to individual records are separate. For private applicati
 
 For example, a request tracker might let every workspace member open the site while allowing each person to see only their own requests. The application needs to check that rule when returning a record or accepting an action. Hiding a page element does not enforce the rule. Test with separate accounts that should and should not have access to the same record.
 
+## Help teams create and reuse sites
+
+Help members choose a task for their first site, such as finding project resources or guiding a new teammate through onboarding. Point them to [Create a site](../sites/creating-a-site.html) to learn how to describe what they need, review the result, and refine it.
+
+As an alternative, teams can use **Remix** to adapt an existing site. Share a few useful examples with a short explanation of who each one helps and what people can do with it.
+
+Encourage teams to decide whether they need one shared site or a separate adaptation. Co-editing suits people maintaining the same project hub; remixing suits another team that wants the layout with its own milestones and resources. Point builders to the [Remix walkthrough](../sites/creating-a-site.html#start-from-an-existing-site-with-remix).
+
+Ask each team to name the intended audience and the person who will keep its site useful. Before sharing an adaptation, have someone from that audience try a real task and check that the content, links, and actions fit their needs.
+
+For current workspace controls and site permissions, use [Managing ChatGPT Sites for your workspace](https://help.openai.com/en/articles/20001338-managing-chatgpt-sites-for-your-workspace) in the Help Center.
+
 ## Configure connections
 
 
 
 
 
-<span
-  id="enable-tenant-access-to-connected-apps"
-  data-localization-body-anchor
-/>
 
 
 
 
-<span
-  id="check-tenant-access-if-plugins-are-blocked"
-  data-localization-body-anchor
-/>
 
 
 
 
-<span
-  id="allow-an-additional-destination-for-one-site"
-  data-localization-body-anchor
-/>
-<span
-  id="credentials-and-connected-service-access"
-  data-localization-body-anchor
-/>
+
+
+
+
+
+
+
+
 
 Creating or sharing a site does not itself authorize connected-app access. Review organization approval, plugin settings, and each visitor's connected account and permissions in the [Help Center connected-app guidance](https://help.openai.com/en/articles/20001338-managing-chatgpt-sites-for-your-workspace).
 
 Include connections in the site's review. Identify which services it uses, what information it requests, and who should authorize that access. Keep the site's audience decision separate from the connected service's permissions.
 
-Keep credentials out of prompts, attachments, and visible site content. For questions about network access, contact your workspace admin.
+Keep credentials out of prompts, attachments, and visible site content.
 
 ### Verify the visitor experience
 
 Keep connected sites private to their workspace. Before sharing a connected site more widely within that workspace, test with another eligible workspace member who uses their own connected account. Confirm that the site shows information appropriate to that person's existing permissions.
 
-Also check the experience when a visitor does not grant the requested connection access. Explain which features need the connection and make sure the site does not present missing data as a successful result. Follow the current Help Center guidance for supported connections and access requirements.
+Also test what the site shows when a visitor declines access. It should identify which features need the connection and distinguish unavailable data from a successful result. For the visitor steps, see [Let visitors choose their connections](../sites/data-and-connections.html#let-visitors-choose-their-connections).
 
 ## Review and manage sites
 
@@ -159,14 +157,10 @@ Also check the experience when a visitor does not grant the requested connection
 
 
 
-<span
-  id="workspace-visibility-and-audit-records"
-  data-localization-body-anchor
-/>
-<span
-  id="publishing-approval-and-network-controls"
-  data-localization-body-anchor
-/>
+
+
+
+
 
 
 
@@ -174,7 +168,7 @@ Also check the experience when a visitor does not grant the requested connection
 
 ### Saved versions and publishing
 
-Editing and saving a version are separate from publishing it. Review the updated preview, then publish when it's ready for visitors. Sending editing instructions does not immediately change the published site.
+Decide who should review a saved version before it goes live. Your organization sets this review process. An owner or eligible editor can publish without a separate approval in Sites. For the publishing steps, see [Publish an update](../sites/publishing-and-sharing.html#publish-an-update).
 
 
 
@@ -182,37 +176,18 @@ Editing and saving a version are separate from publishing it. Review the updated
 
 
 
-Use this workflow for the first publication and later updates:
-
-<WorkflowSteps>
-
-1. Describe the change and review the saved version.
-2. Check the content, audience, application permissions, and connections affected by the change.
-3. Complete your organization's review, then have the owner or an eligible editor publish the version. The owner must complete the first publication.
-4. Open the published site as an intended visitor and confirm that the expected content and behavior are available.
-
-</WorkflowSteps>
-
-The review step is a recommended organizational process. It does not add a product approval gate.
-
 ### Shared responsibilities
 
-Successful generation or publication does not establish that a site meets your organization's requirements. Assign responsibility for reviewing the content, access rules, generated application code, and connected services. Use reviewers with the appropriate expertise for the site's data and use case.
+Assign reviewers for the site's content, access rules, generated code, and connected services. Choose people who know the data and the intended use.
 
 ### Review before publishing
 
-Review the intended audience, generated code, visitor submissions, and connections before publishing. Test the experience for intended and unintended visitors. Repeat the review after material changes.
+Ask the site owner to [review the site before sharing](../sites/publishing-and-sharing.html#review-before-you-share). Have your reviewers run these checks before the first publication and after material changes.
 
-For example, a team dashboard can look correct for its creator while exposing an uploaded customer list to a broader audience than intended. A request form can collect the right fields while allowing one visitor to read another visitor's submission. Review both what appears on the page and how the application handles data and actions.
-
-Before publishing, check:
-
-- **Content:** Review generated text, images, links, uploaded files, and example data for accuracy and appropriate sharing.
-- **Audience:** Confirm who should be able to open the site, including external viewers and public visitors where applicable.
-- **Records and actions:** Verify that visitors can read and change only the information they have permission to access.
-- **Forms and submissions:** Decide what to collect, where it goes, who can see it, and how visitors can ask questions about it.
-- **Connections and credentials:** Review the services used, requested access, and any information exposed in pages, downloads, or error messages.
-- **Visitor experience:** Use separate visitor accounts to check the expected paths and denied-access cases.
+- Verify that the intended audience can open the site and that excluded visitors cannot.
+- Test record access with separate accounts. For example, if a form collects private requests, check whether one visitor can read or change another visitor's submission.
+- Check what forms collect, where submissions go, who can see them, and how visitors can ask questions about their data.
+- Check which services the site connects to, what access it requests, and whether pages, downloads, or error messages disclose sensitive information.
 
 ### Ongoing maintenance
 
@@ -243,16 +218,12 @@ To review available workspace controls or troubleshoot access, follow the [Help 
 
 
 
-<span
-  id="certifications-encryption-and-customer-managed-keys"
-  data-localization-body-anchor
-/>
 
 
-<span
-  id="applicable-terms-and-data-processing-agreements"
-  data-localization-body-anchor
-/>
+
+
+
+
 
 
 
@@ -275,10 +246,8 @@ For responsibilities and privacy guidance, review these resources:
 
 
 
-<span
-  id="what-happens-when-a-site-is-deleted-or-an-owner-leaves"
-  data-localization-body-anchor
-/>
+
+
 
 <ToggleSection title="How should I plan an ownership handoff or site retirement?">
 
@@ -286,10 +255,8 @@ Before an owner changes roles or leaves, identify who will maintain the site and
 
 </ToggleSection>
 
-<span
-  id="how-long-is-site-data-retained-including-backups"
-  data-localization-body-anchor
-/>
+
+
 
 <ToggleSection title="Where can I confirm retention and deletion requirements?">
 
@@ -297,10 +264,8 @@ For retention or deletion questions, [contact OpenAI Support](https://help.opena
 
 </ToggleSection>
 
-<span
-  id="how-do-i-report-an-access-issue-or-incident"
-  data-localization-body-anchor
-/>
+
+
 
 <ToggleSection title="How do I report an access issue?">
 

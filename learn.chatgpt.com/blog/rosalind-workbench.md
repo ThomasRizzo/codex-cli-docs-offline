@@ -175,7 +175,7 @@ Keeping the question, tools, analysis, and evidence in one place makes those tra
 ## Getting access
 
 
-div]:pl-0 [&_[data-panel]_h3]:hidden">
+
   
 
     

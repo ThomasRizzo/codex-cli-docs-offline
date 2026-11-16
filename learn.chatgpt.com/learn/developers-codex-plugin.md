@@ -19,6 +19,11 @@ It includes:
   get guided local `OPENAI_API_KEY` setup in Claude Code and Cursor.
 - **Agents SDK:** build and deploy OpenAI Agents SDK apps from an idea, a repo,
   or a prior Codex task.
+- **API migration:** when your installation includes the migration skill, migrate
+  existing LLM apps and agents to OpenAI or improve their Responses API
+  integration through changes designed to preserve behavior and improve
+  performance and efficiency. Apply agreed changes incrementally without
+  requiring a full rewrite.
 - **Troubleshooting:** identify common OpenAI API failures and route
   you to the right next step.
 
@@ -36,11 +41,7 @@ If you are new to Codex, start here before installing the plugin:
 
   
 
-    
-
-Install the OpenAI Developers plugin
-
-
+    [Install the OpenAI Developers plugin](codex://plugins/install/openai-developers?marketplace=openai-curated)
   
 
 
@@ -52,17 +53,19 @@ Install the OpenAI Developers plugin
 
        Start Codex from your terminal:
 
-```bash
+       ```bash
        codex
-```
+       ```
+
 
     2. Open the plugin browser
 
        Run:
 
-```text
+       ```text
        /plugins
-```
+       ```
+
 
     3. Install the plugin
 
@@ -117,17 +120,19 @@ Install the OpenAI Developers plugin
 
        In Claude Code, run:
 
-```text
+       ```text
        /plugin marketplace add openai/openai-developers-for-claude
-```
+       ```
+
 
     2. Install the plugin
 
        Run:
 
-```text
+       ```text
        /plugin install openai-developers@openai-developers
-```
+       ```
+
 
     3. Start a new session
 
@@ -176,6 +181,15 @@ The plugin is useful when you want your coding agent to:
 - build an app or agent that uses the OpenAI API
 - set up OpenAI API access for the app you are building
 - diagnose common OpenAI API errors and explain the next step.
+
+### Migrate an existing app
+
+When the migration skill is installed, try:
+
+```text
+Migrate this app to use OpenAI Responses API best practices.
+```
+
 
 ## Sample prompts
 

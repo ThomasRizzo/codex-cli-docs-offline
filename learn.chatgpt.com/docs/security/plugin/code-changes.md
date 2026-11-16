@@ -277,7 +277,7 @@ pipeline on pull requests.
   
 
 
-```groovy
+```groovy snippet=configuration reason="Jenkins pipeline configuration for the documented CI integration"
 pipeline {
   agent { label 'linux' }
   stages {

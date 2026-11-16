@@ -1,9 +1,9 @@
 variables:
-  CODEX_SECURITY_VERSION: "0.1.20"
+  CODEX_SECURITY_VERSION: "0.8.1"
   CODEX_SECURITY_MAX_CHANGED_FILES: "8"
   CODEX_SECURITY_FULL_SCAN_DEFAULT_BRANCH: "false"
   CODEX_SECURITY_SCHEDULED_DEEP_SCAN: "false"
-  CODEX_SECURITY_DEEP_MAX_TIME_HOURS: ""
+  CODEX_SECURITY_DEEP_MAX_TIME_MINUTES: ""
   CODEX_SECURITY_DEEP_MAX_COST: ""
 
 stages:
@@ -117,16 +117,16 @@ codex-security:
         repository)
           if test "$CODEX_SECURITY_MODE" = "deep"; then
             python3 - \
-              "$CODEX_SECURITY_DEEP_MAX_TIME_HOURS" \
+              "$CODEX_SECURITY_DEEP_MAX_TIME_MINUTES" \
               "$CODEX_SECURITY_DEEP_MAX_COST" <<'PY'
       import math
       import sys
 
       try:
-          hours = float(sys.argv[1])
+          minutes = float(sys.argv[1])
           cost = float(sys.argv[2])
-          if not math.isfinite(hours) or not 0 < hours < 8:
-              raise ValueError("time budget must be greater than 0 and less than 8 hours")
+          if not math.isfinite(minutes) or not 0 < minutes < 480:
+              raise ValueError("time budget must be greater than 0 and less than 480 minutes")
           if not math.isfinite(cost) or cost <= 0:
               raise ValueError("cost budget must be greater than 0")
       except (IndexError, TypeError, ValueError) as error:
@@ -135,7 +135,7 @@ codex-security:
       PY
             set -- \
               --mode deep \
-              --max-time-hours "$CODEX_SECURITY_DEEP_MAX_TIME_HOURS" \
+              --max-time "$CODEX_SECURITY_DEEP_MAX_TIME_MINUTES" \
               --max-cost "$CODEX_SECURITY_DEEP_MAX_COST"
           else
             set -- --mode "$CODEX_SECURITY_MODE"
@@ -149,6 +149,7 @@ codex-security:
 
       set -- "$@" \
         --auth api-key \
+        --fail-on-severity high \
         --effort "$CODEX_SECURITY_EFFORT" \
         --output-dir "$RESULTS_DIR" \
         --json
@@ -174,6 +175,15 @@ codex-security:
       set -e
 
       unset CODEX_SECURITY_API_KEY_VALUE
+
+      case "$scan_exit" in
+        0|1)
+          ;;
+        *)
+          echo "The scan failed (exit $scan_exit); skipping SARIF export." >&2
+          exit "$scan_exit"
+          ;;
+      esac
 
       cp -R "$RESULTS_DIR"/. "$ARTIFACT_DIR/results/"
       test ! -s "$JSON_FILE" || cp "$JSON_FILE" "$ARTIFACT_DIR/codex-security.json"
@@ -264,38 +274,6 @@ codex-security:
         exit 2
       fi
 
-      case "$scan_exit" in
-        0|1)
-          ;;
-        2)
-          if ! python3 - "$RESULTS_DIR/scan-manifest.json" "$RESULTS_DIR/coverage.json" <<'PY'
-      import json
-      import pathlib
-      import sys
-
-      try:
-          manifest = json.loads(pathlib.Path(sys.argv[1]).read_text())
-          coverage = json.loads(pathlib.Path(sys.argv[2]).read_text())
-          valid = (
-              manifest.get("scan", {}).get("status") == "completed"
-              and coverage.get("completeness") == "partial"
-          )
-          sys.exit(0 if valid else 1)
-      except (OSError, TypeError, ValueError):
-          sys.exit(1)
-      PY
-          then
-            echo "Exit 2 is not a completed partial scan with valid evidence." >&2
-            exit 2
-          fi
-          echo "Publishing findings from a completed scan with partial coverage." >&2
-          ;;
-        *)
-          echo "Unexpected Codex Security exit code: $scan_exit" >&2
-          exit 2
-          ;;
-      esac
-
       printf '%s\n' "$scan_exit" > "$ARTIFACT_DIR/scan-exit-code.txt"
       exit 0
   artifacts:
@@ -348,7 +326,6 @@ codex-security-remediate:
 
       try:
           manifest = json.loads((results / "scan-manifest.json").read_text())
-          coverage = json.loads((results / "coverage.json").read_text())
           document = json.loads((results / "findings.json").read_text())
           scan = manifest["scan"]
 
@@ -356,12 +333,6 @@ codex-security-remediate:
               raise ValueError("scan manifest is not completed")
           if scan["target"]["revision"] != expected_revision:
               raise ValueError("scan revision does not match the current commit")
-          completeness = coverage["completeness"]
-          if completeness == "partial":
-              print("Skipping remediation because scan coverage is partial.")
-              sys.exit(11)
-          if completeness != "complete":
-              raise ValueError("scan coverage is not complete")
           if not isinstance(document.get("findings"), list):
               raise ValueError("findings.json does not contain a findings array")
 
@@ -399,10 +370,6 @@ codex-security-remediate:
       selection_exit="$?"
       set -e
 
-      if test "$selection_exit" -eq 11; then
-        printf '%s\n' 'partial-coverage' > "$ARTIFACT_DIR/status.txt"
-        exit 0
-      fi
       if test "$selection_exit" -eq 10; then
         printf '%s\n' 'no-high-severity-findings' > "$ARTIFACT_DIR/status.txt"
         exit 0
@@ -506,11 +473,12 @@ codex-security-remediate:
         exit 2
       fi
 
-      # These subcommands invoke Codex directly and require CODEX_API_KEY.
+      # Use the same explicit API-key authentication for each follow-up command.
       env -i PATH="$CODEX_SECURITY_CI_PATH" HOME="$CODEX_SECURITY_CI_HOME" \
         LANG=C.UTF-8 CI=true CI_PROJECT_DIR="$CI_PROJECT_DIR" \
-        "CODEX_API_KEY=$CODEX_SECURITY_API_KEY_VALUE" \
+        "OPENAI_API_KEY=$CODEX_SECURITY_API_KEY_VALUE" \
         "$CODEX_SECURITY_BIN" validate "$SELECTED_FINDING" \
+        --auth api-key \
         --effort "$CODEX_SECURITY_REMEDIATION_EFFORT" \
         > "$ARTIFACT_DIR/validation-before.md"
 
@@ -521,8 +489,9 @@ codex-security-remediate:
 
       env -i PATH="$CODEX_SECURITY_CI_PATH" HOME="$CODEX_SECURITY_CI_HOME" \
         LANG=C.UTF-8 CI=true CI_PROJECT_DIR="$CI_PROJECT_DIR" \
-        "CODEX_API_KEY=$CODEX_SECURITY_API_KEY_VALUE" \
+        "OPENAI_API_KEY=$CODEX_SECURITY_API_KEY_VALUE" \
         "$CODEX_SECURITY_BIN" patch "$SELECTED_FINDING" \
+        --auth api-key \
         --effort "$CODEX_SECURITY_REMEDIATION_EFFORT" \
         > "$ARTIFACT_DIR/patch-report.md"
 
@@ -598,8 +567,9 @@ codex-security-remediate:
       set +e
       env -i PATH="$CODEX_SECURITY_CI_PATH" HOME="$CODEX_SECURITY_CI_HOME" \
         LANG=C.UTF-8 CI=true CI_PROJECT_DIR="$CI_PROJECT_DIR" \
-        "CODEX_API_KEY=$CODEX_SECURITY_API_KEY_VALUE" \
+        "OPENAI_API_KEY=$CODEX_SECURITY_API_KEY_VALUE" \
         "$CODEX_SECURITY_BIN" verify-fix "$SELECTED_FINDING" \
+        --auth api-key \
         --effort "$CODEX_SECURITY_REMEDIATION_EFFORT" \
         --format json \
         --full-output \
@@ -1004,10 +974,6 @@ codex-security-gate:
   image: alpine:3.20
   dependencies:
     - codex-security
-  # Remove this calibration-only allowance when partial coverage must block.
-  allow_failure:
-    exit_codes:
-      - 2
   script:
     - |
       set -eu

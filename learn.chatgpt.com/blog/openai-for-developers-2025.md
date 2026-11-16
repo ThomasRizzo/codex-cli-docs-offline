@@ -147,8 +147,8 @@ In addition to our work on agents and related standards, we introduced the [Apps
 
 In addition to hosted APIs, OpenAI released **open-weight models** designed for transparency, research, and on-prem or self-hosted deployment while retaining strong reasoning and instruction-following capabilities.
 
-- [**gpt-oss 120b & 20b**](https://huggingface.co/collections/openai/gpt-oss) reasoning models designed for self-hosting and on-prem deployments.
-- [**gpt-oss-safeguard 120b & 20b**](https://huggingface.co/collections/openai/gpt-oss-safeguard) safety and policy models intended to run alongside gpt-oss.
+- [**gpt-oss-120b and gpt-oss-20b**](https://huggingface.co/collections/openai/gpt-oss) reasoning models designed for self-hosting and on-prem deployments.
+- [**gpt-oss-safeguard-120b and gpt-oss-safeguard-20b**](https://huggingface.co/collections/openai/gpt-oss-safeguard) safety and policy models intended to run alongside gpt-oss.
 
 ## Evaluation, tuning, and shipping safely
 

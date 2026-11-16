@@ -387,7 +387,7 @@ history
 
 Below, you can see how the trimming session works for max_turns=3.
 
-![Context Trimming in Session](https://developers.openai.com/cookbook/assets/images/trimingsession.jpg)
+![Context Trimming in Session](https://developers.openai.com/cookbook/assets/images/trimingSession.jpg)
 
 **What counts as a “turn”**
 
@@ -803,7 +803,7 @@ class SummarizingSession:
         return await self.summarizer.summarize(clean_prefix)
 ```
 
-![Context Trimming in Session](https://developers.openai.com/cookbook/assets/images/summarizingsession.jpg)
+![Context Trimming in Session](https://developers.openai.com/cookbook/assets/images/summarizingSession.jpg)
 
 **High‑level idea**
 

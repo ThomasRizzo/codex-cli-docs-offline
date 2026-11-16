@@ -338,7 +338,7 @@ async def extract_receipt_details(
 
 Let's evaluate just a single receipt and review it manually to see how well a smart model with a naive prompt can do.
 
-<img src="https://developers.openai.com/cookbook/assets/images/supplies_20240322_220858_raven_scan_3_jpeg.rf.50852940734939c8838819d7795e1756.jpg" alt="Walmart_image" width="400"/>
+<img src="https://developers.openai.com/cookbook/assets/images/Supplies_20240322_220858_Raven_Scan_3_jpeg.rf.50852940734939c8838819d7795e1756.jpg" alt="Walmart_image" width="400"/>
 
 ```python
 from rich import print
@@ -1527,8 +1527,6 @@ print(f"Cost using gpt-4.1-mini: ${system_cost_4_1_mini:,.0f}")
 
 This cookbook focuses on the philosophy and practicalities of evals, not the full range of model improvement techniques. For boosting or maintaining model performance (especially when moving to smaller, faster, or cheaper models), consider these steps in order—start from the top, and only proceed down if needed. For example, always optimize your prompt before resorting to fine-tuning; fine-tuning on a weak prompt can lock in bad performance even if you improve the prompt later.
 
-![Model Improvement Waterfall](https://developers.openai.com/cookbook/assets/images/partner_model_improvement_waterfall.png)
-
 1. **Model selection:** try smarter models, or increase their reasoning budget.
 2. **Prompt tuning:** clarify instructions and provide very explicit rules.
 3. **Examples and context:** add few- or many-shot examples, or more context for the
@@ -1539,20 +1537,13 @@ This cookbook focuses on the philosophy and practicalities of evals, not the ful
 5. **Accessory models:** add models to perform limited sub-tasks, to supervise and provide
    guardrails, or use a mixture of experts and aggregate solutions from multiple
    sub-models.
-6. **Fine-tuning:** use labeled training data for supervised fine tuning, eval
-   graders for reinforcement fine tuning, or different outputs for direct preference
-   optimization.
+6. **Fine-tuning:** use labeled training data for supervised fine-tuning or
+   different outputs for direct preference optimization.
 
 The above options are all tools to maximize performance. Once you're trying to optimize
 for a price:performance ratio, you'll usually have already done all of the above and
 likely don't need to repeat most steps, but you can still fine-tune smaller models or
 use your best model to train a smaller model (model distillation).
-
-> One really excellent thing about OpenAI Evals is that you can use the same graders for
-> [Reinforcement Fine-Tuning](https://developers.openai.com/cookbook/examples/reinforcement_fine_tuning)
-> to produce better model performance in an extremely sample-efficient manner. One note
-> of caution is to make sure that you use separate training data and don't leak your
-> eval datasets during RFT.
 
 ## Deploying and Post-Development
 Building and deploying an LLM application is just the beginning—the real value comes from ongoing improvement. Once your system is live, prioritize continuous monitoring: log traces, track outputs, and proactively sample real user interactions for human review using smart sampling techniques.

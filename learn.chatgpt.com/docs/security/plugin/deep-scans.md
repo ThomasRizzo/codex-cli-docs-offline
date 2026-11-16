@@ -6,19 +6,13 @@ A deep scan runs multiple independent standard scans over the same repository
 or folder and combines their findings. Use it when you want repeated review
 and can allow for the additional runtime and token use.
 
-Start with a [standard scan](scans.html) to check that the
-scope and security context match your goal. Repeated review can find issues
-missed by an earlier pass, but doesn't guarantee complete detection or identical
-results between runs.
 
-## Choose between standard and deep scans
 
-|            | Standard scan                               | Deep scan                                      |
-| ---------- | ------------------------------------------- | ---------------------------------------------- |
-| Review     | One standard scan                           | Multiple standard scans with combined findings |
-| Use it for | A first scan or a review of a defined scope | Additional independent reviews of that scope   |
-| Scope      | Repository or folder                        | Repository or folder                           |
-| Changes    | Use the change-review workflow              | Not supported                                  |
+
+Start with a [standard scan](scans.html) to check the scope
+and security context. A deep scan can find issues an earlier pass missed, but
+results can still vary and coverage can remain incomplete. For a diff, use
+[Review code changes](code-changes.html).
 
 ## Start the deep scan
 
@@ -65,6 +59,10 @@ to limit concurrency or duration.
 
 ## Review the result
 
+The scan is complete only after finalization succeeds and generates
+`report.md`. A message that aggregation finished or a `scan-manifest.json`
+file alone doesn't confirm completion.
+
 Deep scans use the same saved scan details and complete scan directory as
 standard scans. Open the completed scan in **Scans** or review its findings in
 **Findings**. The generated `report.md` links to detailed vulnerability reports
@@ -72,13 +70,9 @@ or structural hardening guidance when you request those outputs.
 Keep any linked `findings/` and `hardening/` directories with the report when
 sharing or archiving the result.
 
-Review the coverage summary before the findings. Even a deep scan has limits,
-so check deferred surfaces and remaining proof gaps before drawing a
-conclusion. For a finding you accept, continue with [Fix and verify a
+Check the coverage summary for deferred areas and the findings for unresolved
+questions. For a finding you accept, continue with [Fix and verify a
 finding](fix-findings.html).
-
-To review a pull request, commit, branch range, or local patch, use [Review code
-changes](code-changes.html). Deep scans don't accept diff targets.
 
 ## Configure deep-scan runtime
 
@@ -116,3 +110,22 @@ coverage.
 
 The `max_time_hours` setting requires plugin version `0.1.19` or later. See the
 [plugin changelog](changelog.html) for release details.
+
+## Handle an interruption or failure
+
+Check the saved scan's status before starting another scan. In the desktop
+app, open the scan in **Scans**. In a Codex conversation, ask Codex to check the
+existing scan.
+
+- If a wait ends while the scan is still active, return to
+  the same scan or conversation and ask Codex to continue it. A response ending
+  or a wait timing out doesn't cancel the scan.
+- If the scan reports a terminal failure or was canceled, keep the error and
+  saved scan directory. Review saved findings separately from pending
+  candidates, which haven't been confirmed. Coverage is incomplete, so an
+  empty findings list doesn't establish that the code has no vulnerabilities.
+
+When asking for help, include the Codex CLI or desktop app and plugin versions
+used for the failed run, plus the provider, model, scan status, and exact error.
+Versions checked after an update may differ. See [Check versions and
+updates](../plugin.html#check-versions-and-updates).

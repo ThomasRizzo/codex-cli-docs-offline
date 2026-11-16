@@ -28,9 +28,9 @@ Local capabilities depend on the supported desktop app, operating system, worksp
 
 Local execution accesses approved resources through the desktop app on the user's computer. With Local computer access with Work Cloud enabled, OpenAI's cloud coordinates the task and calls the connected computer when a step needs local execution. The computer must be online and connected for those steps.
 
-Local computer access with Work Cloud applies only to tasks created after you enable sync. Existing tasks, including tasks in projects, keep their original mode: locally only, or in the cloud without access to local files. Start a new task to use this feature.
-
-If the computer is unavailable when a new turn starts, an existing eligible task using local computer access with Work Cloud can continue in a cloud container. The cloud container cannot access files or tools on the unavailable computer. It also does not enforce enterprise requirements from local execution. A task cannot switch from local execution to the cloud during a turn.
+Device requirements apply to local execution. If a new turn runs in a cloud
+container while the computer is offline, the container uses its own policies
+and cannot reach local files or tools. See [Continue Work across devices](../get-started-with-work.html#continue-work-across-devices).
 
 Local files can remain on the device, but relevant file excerpts, prompts, screenshots, browser content, or tool results may be sent to OpenAI services to complete a task. Local execution does not mean offline or device-only model inference.
 
@@ -104,9 +104,7 @@ Before enabling sync, review these requirements:
 
 - **Policies delivered only through MDM. MDM delivers policy to devices. Create an Agent Security baseline for supported local execution requirements before enabling sync.**
 
-- **Enterprise hooks.** Where enabled for your workspace, Local computer access with Work Cloud supports admin-defined MCP hooks that run on the cloud coordinator (orchestrator) for supported lifecycle and tool events. Command hooks and hooks from local configuration or plugins are not supported with cloud orchestration, even when tools execute locally. When both orchestration and execution are local, existing supported hooks continue to work in local-only Work and Codex threads. Admins can still configure supported managed hooks in Agent Security for those workflows.
-
-- **Auditing.** Before relying on these hooks, test the callback connection, confirm the events it receives, and check how failures affect the task. MCP hooks do not provide a complete Compliance API audit trail.
+- **Enterprise hooks.** If a local-only workflow depends on scripts or plugin hooks, check [which hooks the cloud orchestrator supports](../hooks.html#hooks-with-cloud-orchestration) before enabling local computer access. Test the required events and review [audit coverage](compliance-api.html#audit-records-for-local-computer-access-with-work-cloud).
 
 Review the Work controls available in **Workspace settings** > **Permissions & roles**. Whether local and hosted Work appear as distinct permissions depends on the workspace configuration and rollout. For more guidance, see the [Work administrator FAQ](work-admin-faq.html).
 
@@ -117,8 +115,6 @@ Workspace permissions determine who can use Work. Administrators can also restri
 Enforced requirements cannot be overridden by individual users. Managed defaults, by contrast, establish initial settings that users may be able to change. Neither replaces workspace roles or operating-system permissions.
 
 For local clients that use the existing local configuration path, managed requirements load during configuration loading. A background refresh can prepare cloud requirements for a later load, and macOS MDM changes are read at the next client launch. Restart and verify the applicable local client after a local policy change.
-
-Turning off Local computer access with Work Cloud interrupts currently running turns. Users can start a new turn in an existing cloud conversation. That turn automatically uses Work Cloud without access to local files.
 
 This local loading behavior does not establish when a cloud policy change takes effect in a running task using Local computer access with Work Cloud. Verify the task's effective controls before relying on the update.
 
@@ -150,7 +146,7 @@ Review the connection, signed-in account, destination, and action required by th
 
 For Local computer access with Work Cloud, cloud coordination is part of the workflow even when a step runs on the computer. Review conversation data and task context separately from the local files used by a tool. Do not infer that local execution means device-only storage or that every file in a folder is uploaded.
 
-Local computer access with Work Cloud does not provide strict zero data retention. Data residency and inference residency cover only eligible content and supported workloads, regions, and configurations. Enterprise Key Management (EKM) covers supported stored content in eligible workspaces. Work is not supported with UAE inference residency. Confirm the workspace's storage, retention, and audit coverage before rollout. If your organization requires ZDR, do not enable this feature. If `enforce_residency` is enabled in any cloud policy, **Allow local computer access** is disabled for both Work and dots. This safeguard does not configure workspace residency or, by itself, disable Work Cloud or dots.
+Local computer access with Work Cloud does not provide strict zero data retention. For current regional availability and coverage requirements, consult the Help Center’s [Data residency and inference residency for ChatGPT](https://help.openai.com/en/articles/9903489-data-residency-and-inference-residency-for-chatgpt). Confirm the workspace's storage, retention, and audit coverage before rollout. If your organization requires ZDR, do not enable this feature. If `enforce_residency` is enabled in any cloud policy, **Allow local computer access** is disabled for both Work and dots. This safeguard does not configure workspace residency or, by itself, disable Work Cloud or dots.
 
 Apply your organization's endpoint, file-access, proxy, and data-loss-prevention controls to the specific device and workflow. Confirm whether those controls can prevent sensitive information from entering the task before processing. Audit logs and compliance exports help with monitoring and investigation but do not block processing on their own.
 

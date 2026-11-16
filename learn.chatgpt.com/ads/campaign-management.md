@@ -140,7 +140,7 @@ Use `/activate`, `/pause`, and `/archive` on the ad-group URL to change its stat
 
 ## Ads & Creative
 
-An ad supplies the content and destination shown to the user. A standard `chat_card` uses your title, body, image, and landing-page URL.
+An ad supplies the content and destination shown to the user. A standard `chat_card` uses your title, body, one or more images, and landing-page URL.
 
 ### Upload an image
 
@@ -175,6 +175,54 @@ curl -X POST "https://api.ads.openai.com/v1/ads" \
 
 Use a title of 3–50 characters and a body no longer than 100 characters. The destination must be an HTTP or HTTPS URL no longer than 2,048 characters and accessible to OpenAI's ad crawlers. The file and ad group must belong to the selected account.
 
+### Create an ad with multiple images
+
+An ad can include 4–6 images using `creative.file_ids`. Use the same
+`chat_card` creative type, with one title, body, and destination URL shared by
+all images.
+
+Your account must be enabled for ads with multiple images. Use an ad group in
+a standard Reach, Clicks, or Conversions campaign. Use fixed bidding unless
+your account is also enabled for multiple images with automatic bidding.
+
+1. Upload each square (1:1) image with `POST /v1/upload`, as shown in
+   [Upload an image](#upload-an-image). Use the same account's API key for the
+   uploads and the ad.
+2. Save each returned `file_id`.
+3. List the distinct file IDs in `creative.file_ids` in the order you want the images to appear:
+
+```bash
+curl -X POST "https://api.ads.openai.com/v1/ads" \
+  -H "Authorization: Bearer ${OPENAI_ADS_API_KEY}" \
+  -H "Idempotency-Key: ad-multiple-images-001" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "ad_group_id": "adgrp_123",
+    "name": "Trail shoe highlights",
+    "status": "paused",
+    "creative": {
+      "type": "chat_card",
+      "title": "Find your next trail shoe",
+      "body": "Explore shoes made for your next outdoor run.",
+      "target_url": "https://example.com/trail-shoes",
+      "file_ids": ["file_123", "file_124", "file_125", "file_126"]
+    }
+  }'
+```
+
+Use `file_id` for one image or `file_ids` for 4–6 images; don't send both.
+Ads with multiple images don't accept `image_crop`, `price`, or
+`business_agent_id`. Prepare square images before uploading them.
+
+The response keeps `creative.type: "chat_card"` and includes an ordered
+`creative.images` array. Each item has an `item_id`, `file_id`, and `image_url`.
+The `file_id` and `image_url` fields can be `null`. Retrieve the ad with
+`GET /v1/ads/{ad_id}` to resolve image URLs.
+Use uploaded file IDs, not response image URLs, when creating the ad.
+
+The example creates a paused ad. Creation doesn't mean the ad has passed
+review or is ready to serve.
+
 ### Review and update
 
 ```bash
@@ -182,7 +230,9 @@ curl -G "https://api.ads.openai.com/v1/ads/ad_123" \
   -H "Authorization: Bearer ${OPENAI_ADS_API_KEY}"
 ```
 
-Inspect `status`, `review_status`, and `review`. Updating creative creates a new submitted version and starts another review:
+Inspect `status`, `review_status`, and `review`. Updating creative creates a new submitted version and starts another review.
+
+This example updates an ad with one image:
 
 ```bash
 curl -X POST "https://api.ads.openai.com/v1/ads/ad_123" \
@@ -200,6 +250,14 @@ curl -X POST "https://api.ads.openai.com/v1/ads/ad_123" \
 ```
 
 The example sends the complete intended creative. The ad cannot be moved to another ad group.
+
+For an ad with multiple images, include `type`, `title`, and `body` when
+updating `creative`. Omitting `file_ids` preserves the images. To replace them,
+send the complete new array of 4–6 distinct uploaded file IDs. Omitting
+`target_url` preserves the saved destination; an explicit value applies to
+every image. Don't send a singular `file_id` when editing an ad with multiple
+images. Create a new ad to change an existing single-image ad into an ad with
+multiple images.
 
 Use `/activate`, `/pause`, and `/archive` on the ad to change its state. An active ad still depends on its campaign and ad group.
 

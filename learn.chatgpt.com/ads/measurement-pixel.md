@@ -51,6 +51,7 @@ conversions. Put the script near the top of your `<head>` to ensure early conver
 </script>
 ```
 
+
 `pixelId` is required. Create a new Pixel ID in the conversions tab of Ads Manager. `debug` is optional and logs SDK activity to the browser
 console while you test your integration.
 
@@ -59,7 +60,7 @@ console while you test your integration.
 If consent is required to track conversion events, use the Pixel's consent
 feature. Set consent before initializing the Pixel:
 
-```js
+```typescript
 oaiq("consent", false);
 oaiq("init", {
   pixelId: "<YOUR-PIXEL-ID>",
@@ -68,6 +69,7 @@ oaiq("init", {
 // Call this after the user grants measurement consent.
 oaiq("consent", true);
 ```
+
 
 The Pixel initializes consent to `true` by default unless you set it to `false`
 or the Pixel finds a stored denial. When consent is `false`, the Pixel doesn't
@@ -138,7 +140,7 @@ Encode each normalized value as UTF-8, compute its SHA-256 digest, and send the
 digest as a lowercase, 64-character hexadecimal string. Don't send raw email
 addresses, phone numbers, external IDs, first names, or last names.
 
-```js
+```typescript
 oaiq("init", {
   user: {
     email_sha256:
@@ -158,6 +160,7 @@ oaiq("init", {
   },
 });
 ```
+
 
 If these values are available when the installation snippet runs, you can
 instead include the same `user` object in the initial `oaiq("init", ...)` call
@@ -206,13 +209,14 @@ Use a standard event whenever one matches the action you want to measure.
 Use a standard event whenever one matches the action you want to measure. For
 example, send `order_created` when a purchase is completed:
 
-```js
+```typescript
 oaiq("measure", "order_created", {
   type: "contents",
   amount: 2599,
   currency: "USD",
 });
 ```
+
 
 A `measure` call accepts up to four arguments, in this order:
 
@@ -240,7 +244,7 @@ The options object supports these fields:
 Use a custom event only when none of the standard event names describe the
 action. This is the smallest valid custom event:
 
-```js
+```typescript
 oaiq(
   "measure",
   "custom",
@@ -248,6 +252,7 @@ oaiq(
   { custom_event_name: "quote_requested" }
 );
 ```
+
 
 The three custom-event values serve different purposes:
 
@@ -274,7 +279,7 @@ Use these examples as templates for common measurement patterns.
 
 ### Page and content views
 
-```js
+```typescript
 oaiq("measure", "page_viewed", {
   type: "contents",
   contents: [
@@ -298,12 +303,13 @@ oaiq("measure", "contents_viewed", {
 });
 ```
 
+
 ### Commerce flow
 
 Use the `contents` data shape for `items_added`, `checkout_started`, and
 `order_created`.
 
-```js
+```typescript
 oaiq("measure", "items_added", {
   type: "contents",
   amount: 2599,
@@ -349,12 +355,13 @@ oaiq("measure", "order_created", {
 });
 ```
 
+
 ### Lead generation and registration
 
 Use the `customer_action` data shape for `lead_created`,
 `registration_completed`, and `appointment_scheduled`.
 
-```js
+```typescript
 oaiq("measure", "lead_created", {
   type: "customer_action",
 });
@@ -370,12 +377,13 @@ oaiq("measure", "appointment_scheduled", {
 });
 ```
 
+
 ### Subscription and trial events
 
 Use the `plan_enrollment` data shape for `subscription_created` and
 `trial_started`.
 
-```js
+```typescript
 oaiq("measure", "subscription_created", {
   type: "plan_enrollment",
   plan_id: "pro_monthly",
@@ -389,12 +397,13 @@ oaiq("measure", "trial_started", {
 });
 ```
 
+
 ## Deduplicate browser and server events
 
 If you send the same conversion from both the Measurement Pixel and a
 server-side integration, reuse the same `event_id` in both places.
 
-```js
+```typescript
 oaiq(
   "measure",
   "order_created",
@@ -409,6 +418,7 @@ oaiq(
 );
 ```
 
+
 When you need deduplication across browser and server events, generate the
 `event_id` yourself and reuse it on the same pixel and server-sent event. For
 custom events, keep the same `custom_event_name` on both sides as well.
@@ -416,6 +426,31 @@ Duplicate-event matching uses your Pixel ID, the event name, and `event_id`. For
 custom events, `custom_event_name` replaces the standard event name in that
 match. OpenAI uses the first event it receives for a matching key and ignores
 later duplicates.
+
+## Test your Pixel in Ads Manager
+
+Use a Pixel test session in Ads Manager to inspect events received while you test
+your website. The filtered Event Stream shows events from your selected Pixel and
+test session, helping you check event names and details without sorting through
+unrelated traffic.
+
+1. In Ads Manager, go to **Conversions** > **Data Source**.
+2. Open the three-dot menu for your Web Pixel and select **Test**.
+3. Enter a page URL where that Pixel is installed, then select **Start testing**.
+4. Take actions on the website that opens, then return to **Event Stream** in Ads
+   Manager. Events from the session have a **Test** label. Select an event to
+   inspect its details.
+
+Test labeling lasts up to 30 minutes and applies to the selected Pixel in the
+opened tab on the same website origin. Other domains and subdomains do not
+automatically join the session.
+
+At higher test-event volumes, Event Stream may show only a sample of events.
+Events may also be delayed. Testing uses your existing consent settings, and test
+events still count in normal analytics.
+
+Select **Exit test view** to return to the ordinary Event Stream. This does not end
+test labeling on your website.
 
 ## What the SDK handles automatically
 
@@ -460,6 +495,8 @@ retention. The durations above describe browser cookie storage only.
 
 ## Troubleshooting
 
+- Use [Test Pixel in Ads Manager](#test-your-pixel-in-ads-manager) to inspect sampled
+  events from your test session.
 - Keep `debug: true` while testing so you can inspect Pixel activity in the
   browser console.
 - Use integer values for `amount` and `quantity`.

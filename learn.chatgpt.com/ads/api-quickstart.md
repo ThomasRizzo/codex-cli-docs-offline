@@ -147,6 +147,10 @@ Response:
 Create the ad with a `chat_card` creative and attach the uploaded asset by
 `file_id`.
 
+To attach multiple images to one ad, upload each image and pass its file ID in
+`creative.file_ids`. See [Create an ad with multiple images](https://developers.openai.com/ads/campaign-management#create-an-ad-with-multiple-images)
+for account requirements and the workflow for 4–6 square images.
+
 ```bash
 curl -X POST "https://api.ads.openai.com/v1/ads" \
   -H "Authorization: Bearer $OPENAI_ADS_API_KEY" \

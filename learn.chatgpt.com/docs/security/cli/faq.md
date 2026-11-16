@@ -2,9 +2,7 @@
 
 > For the complete documentation index, see [llms.txt](../../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
-Find answers to common questions about scanning repositories and managing
-security findings from the terminal. For installation and a first scan, start
-with the [CLI quickstart](../cli.html).
+For installation and a first scan, see the [CLI quickstart](../cli.html).
 
 ## Repository scans
 
@@ -65,7 +63,7 @@ Use a scan ID from the results to inspect its findings:
 npx @openai/codex-security scans show SCAN_ID
 ```
 
-Each completed scan keeps its report, findings, coverage, and supporting
+Each completed scan keeps its report, findings, manifest, and supporting
 artifacts together. See [Scan
 artifacts](reference.html#scan-artifacts) for the full layout.
 
@@ -170,9 +168,10 @@ can show how findings changed, but a missing finding alone doesn't verify a fix.
 
 ### What does incomplete coverage mean
 
-Review `coverage.json` for excluded paths, deferred surfaces, and open questions.
-New results don't include a coverage-completeness field. Check `scan.status` in
-`scan-manifest.json` for execution status.
+In `scan-manifest.json`, check `scan.status` to see whether the scan finished.
+`scan.scope` records the configured scope. `scan.review.excludedPaths` lists
+path patterns the scan excluded from review. Check `scan.scope.limitations` for recorded
+gaps, such as a deep scan reaching its deadline before any review finished.
 
 Coverage gaps don't change a completed scan's exit code. Exit `0` doesn't mean
 every file was reviewed. A later scan can't establish that an earlier finding
@@ -185,18 +184,16 @@ no longer exists when it doesn't cover that finding's original path.
 Set a worker deadline when starting a deep scan:
 
 ```bash
-npx @openai/codex-security scan . --mode deep --max-time-hours 1.5
+npx @openai/codex-security scan . --mode deep --max-time 90
 ```
 
-The default is `96` hours. Use any positive value up to `96`, including
-fractions. At the deadline, Codex Security stops unfinished workers, keeps
-completed standard-scan results, and aggregates them into the final report.
-Check the report for reviewed areas and deferred work. The deadline alone
-doesn't determine the exit code; execution status and the severity policy do.
+The default and maximum are 5,760 minutes (96 hours). You can use fractional
+minutes. At the deadline, discovery stops and the report combines results from
+completed reviews. Check the report for reviewed areas and deferred work.
 
-For persistent settings or bulk campaigns, set `max_time_hours` under
-`[deep_scan]` in the [deep-scan
-configuration](reference.html#configure-deep-scans).
+To reuse a time limit, set `scan.max_time_minutes` in your
+[project configuration](reference.html#configure-deep-scans).
+Bulk campaigns apply it to each scan attempt.
 
 ### How do scan cost limits work
 
@@ -213,15 +210,6 @@ report with a budget warning. It returns `0`, or `1` if findings meet the
 configured severity threshold. If it can't produce a valid completed result,
 it returns `2` and preserves any available output.
 
-For GitHub pull-request checks and scheduled repository scans, use the
-[Codex Security GitHub Action](ci/github.html). With
-`action-v0.3.0`, a completed scan means the configured analysis produced a
-valid result. Scope exclusions and deferred investigations do not bypass the
-severity policy. Review `coverage.json` to assess the scan's scope and
-limitations. To also reject empty diffs and dry runs, require the Action's
-`scan-status` output to be `completed`; see [Choose a severity
-policy](ci/github.html#choose-a-severity-policy).
-
-For other providers, see the [CI/CD overview](ci.html).
+To run scans in CI, see the [CI/CD overview](ci.html).
 For a check before each commit, use
 [`install-hook`](reference.html#codex-security-install-hook).

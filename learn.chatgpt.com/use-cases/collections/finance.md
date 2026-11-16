@@ -4,6 +4,19 @@
 
 Build, review, and report from financial models and operating data.
 
+## In this collection
+
+- [Prepare a business review](https://developers.openai.com/codex/use-cases/monthly-business-review-narrative)
+- [Review budget vs. actuals](https://developers.openai.com/codex/use-cases/budget-vs-actuals-review)
+- [Build a variance driver bridge](https://developers.openai.com/codex/use-cases/variance-driver-bridge)
+- [Clean and review a financial model](https://developers.openai.com/codex/use-cases/finance-model-cleanup)
+- [Model a DCF valuation](https://developers.openai.com/codex/use-cases/dcf-model)
+- [Forecast cash flow](https://developers.openai.com/codex/use-cases/cash-flow-forecast)
+- [Refresh a forecast and plan](https://developers.openai.com/codex/use-cases/refresh-forecast-and-plan)
+- [Model strategic scenarios and tradeoffs](https://developers.openai.com/codex/use-cases/scenario-tradeoff-model)
+- [Consolidate spreadsheets](https://developers.openai.com/codex/use-cases/consolidate-spreadsheets)
+- [Prepare a leadership reporting pack](https://developers.openai.com/codex/use-cases/cfo-board-reporting-pack)
+
 Use ChatGPT Work or Codex to turn approved workbooks, dashboards, models, and
 owner context into reviewable analysis and reporting artifacts. ChatGPT can
 keep formulas, sources, assumptions, and open questions visible so finance
@@ -27,6 +40,8 @@ without hiding assumptions or source gaps.
 - [Model a DCF valuation](https://developers.openai.com/codex/use-cases/dcf-model): Attach historical financials, valuation assumptions, and modeling notes, then ask ChatGPT...
 - [Forecast cash flow](https://developers.openai.com/codex/use-cases/cash-flow-forecast): Give ChatGPT cash-flow inputs and model constraints, then ask it to create an editable...
 - [Refresh a forecast and plan](https://developers.openai.com/codex/use-cases/refresh-forecast-and-plan): Give ChatGPT an operating model, latest actuals, approved assumptions, owner inputs, and...
+- [Model strategic scenarios and tradeoffs](https://developers.openai.com/codex/use-cases/scenario-tradeoff-model): Give ChatGPT a financial model, KPI dashboard, planning docs, market context, stakeholder...
+- [Consolidate spreadsheets](https://developers.openai.com/codex/use-cases/consolidate-spreadsheets): Give ChatGPT spreadsheet exports, join keys, targets, segment definitions, and reporting...
 
 ## Prepare leadership reporting
 

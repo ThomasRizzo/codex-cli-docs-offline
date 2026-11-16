@@ -89,11 +89,17 @@
           icon: "code",
         },
         {
-          title: "Codex Security Cloud setup",
-          description:
-            "Install the Cloud plugin, connect GitHub, and start a security scan.",
+          title: "Daybreak Defense Factory setup",
+          description: "Connect GitHub and scan a repository with Daybreak.",
           href: "/codex/security/setup",
           icon: "storage",
+        },
+        {
+          title: "Review findings and fixes",
+          description:
+            "Assess a finding and review its patch before opening a pull request.",
+          href: "/codex/security/findings-and-fixes",
+          icon: "code",
         },
         {
           title: "Security Review",
@@ -108,7 +114,7 @@
           icon: "webSearch",
         },
         {
-          title: "Codex Security Cloud FAQ",
+          title: "Daybreak Defense Factory FAQ",
           description:
             "Get answers about cloud scans, findings, privacy, and access.",
           href: "/codex/security/faq",

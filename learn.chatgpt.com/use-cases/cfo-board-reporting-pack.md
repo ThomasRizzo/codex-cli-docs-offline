@@ -49,7 +49,6 @@ starterPrompt:
     a source, what still needs owner input, which assumptions remain open, and
     which slides need leadership review. Render the deck and fix clipping,
     overflow, or layout issues before delivery. Do not share it.
-  suggestedModel: gpt-6-astra
   suggestedEffort: medium
 relatedLinks:
   - label: "OpenAI Academy: Business operations teams"

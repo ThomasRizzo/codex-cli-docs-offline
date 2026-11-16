@@ -47,7 +47,6 @@ starterPrompt:
 
 
     Pause before irreversible actions or scope changes.
-  suggestedModel: gpt-6.1-sol
   suggestedEffort: medium
 relatedLinks:
   - label: Plugins

@@ -49,6 +49,8 @@ curl -X GET "https://api.ads.openai.com/v1/ad_groups?campaign_id=cmpn_101&limit=
 
 Create an ad group for a campaign.
 
+For a Hotel campaign in the limited beta, use `feed_set` with the campaign's Hotel feed ID, inventory type, schema profile, and [Hotel Set filters](https://developers.openai.com/ads/hotel-feeds#choose-hotel-set-filters). Use `fixed_bid` with click billing; `product_set` and automated bidding aren't supported for Hotel groups. See the [Hotel ad group example](https://developers.openai.com/ads/hotel-feeds#2-create-the-ad-group).
+
 `POST /ad_groups`
 
 | Field                                                                    | Type     | Required              | Notes                                                                               |

@@ -1,15 +1,14 @@
-# Improve the Cloud threat model
+# Improve the repository threat model
 
 > For the complete documentation index, see [llms.txt](../llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
 Update a monitored repository's threat model when the generated version misses
-security assumptions or deployment context. This guide applies to Codex
-Security Cloud. For local plugin policy, see [Configure the
+security assumptions or deployment context. This guide applies to Daybreak Defense Factory. For local plugin policy, see [Configure the
 scan](plugin/scans.html#configure-the-scan).
 
 ## What a threat model is
 
-A threat model is a short security summary of how your repository works. Codex Security creates the first draft from the code and uses it to guide future commit scans and prioritize findings.
+A threat model is a short security summary of how your repository works. Daybreak creates the first draft from the code and uses it to guide future commit scans and prioritize findings.
 
 A threat model describes:
 
@@ -31,13 +30,21 @@ as internal-only unless that is true of the deployment you want assessed.
 
 ## Edit the threat model
 
-1. Open the Codex Security Cloud plugin. See [Cloud setup](setup.html)
-   if you haven't installed it or configured commit monitoring.
-2. Open **Repositories** and select the monitored repository.
-3. Open **Monitoring settings**.
-4. Edit **Threat model**, then select **Save**.
+1. Open **Repositories** in Daybreak and select the monitored repository.
+2. Open its **Threat model** and choose the edit control.
+3. Add the deployment details or security assumptions the scan should use, then save your changes.
 
 Changes apply to future scans.
 
 Revisit the model after changes to authentication, tenant boundaries, or exposed
 services. Keep facts about the deployment separate from priorities for the scan.
+
+## Add context for validation
+
+Select **Manage** under **Validation context** on the repository overview.
+If the repository has a `SECURITY.md` file, you can read it here. Make any changes to
+the file in the repository.
+
+Use **Additional context** for details Daybreak should consider when it checks
+future findings. For example, identify which gateway enforces tenant
+membership and which routes can bypass it. Select **Save**.

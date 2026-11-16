@@ -4,6 +4,13 @@
 
 Prototype loops, UI, and gameplay faster.
 
+## In this collection
+
+- [Create browser-based games](https://developers.openai.com/codex/use-cases/browser-games)
+- [Iterate on difficult problems](https://developers.openai.com/codex/use-cases/iterate-on-difficult-problems)
+- [Automate bug triage](https://developers.openai.com/codex/use-cases/automation-bug-triage)
+- [Review GitHub pull requests](https://developers.openai.com/codex/use-cases/github-code-reviews)
+
 Codex, combined with image generation, is particularly powerful to create browser-based and other types of games.
 These use cases will help you turn ideas into live games.
 

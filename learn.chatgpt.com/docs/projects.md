@@ -180,15 +180,50 @@ Restore archived chats from **Settings > Data Controls > Archived chats**.
 
 </ContentModeSwitch>
 
+<ContentModeSwitch group="codex-surface" ids="app,web">
+
+## Use locked chats
+
+Locked chats keep conversations out of your normal history and search. You can return to them
+with your account PIN when you're ready.
+
+For example, you might lock a chat to:
+
+- Think through a career change before you're ready to discuss it.
+- Prepare for a difficult conversation.
+- Plan a surprise gift or celebration.
+
+You can lock eligible cloud Chat and Work conversations. Local Work and Codex
+conversations aren't supported.
+
+1. Open the chat's more menu (…), select **Lock chat**, confirm, and create or enter
+   your account PIN.
+2. Go to **Projects > Locked chats** and enter your PIN for temporary
+   access.
+3. Select **Lock now** when finished. Check other devices before screen sharing;
+   titles or content can remain visible until you refresh ChatGPT on those devices.
+
+Locking a project chat removes it from the project, so the chat no longer has
+access to project instructions, files, or memory. **Unlock chat** restores normal
+history.
+
+If you forget your PIN, resetting it permanently deletes locked chats and content
+protected only by that PIN.
+
+See [Using locked chats](https://help.openai.com/en/articles/20001411-using-locked-chats-in-chatgpt)
+for availability, sharing, files, memory, and PIN settings.
+
+</ContentModeSwitch>
+
 <a id="use-local-projects-for-folders-and-codebases"></a>
 
 <ContentModeSwitch group="codex-surface" id="app">
 
 ## Use local projects for folders and codebases
 
-When sync is on, the cloud coordinates new tasks using Local computer access with Work Cloud, and you can continue them across supported desktop, mobile, and web experiences. For enterprises, the in-app Local/Cloud toggle and its default remain unchanged at launch. Existing tasks, including those in projects, stay local only or in the cloud without access to local files. Start a new task to use this feature.
-
-If your computer is unavailable when a new turn starts, an existing eligible task using Local computer access with Work Cloud can continue in a cloud container. The container can't access the computer's files or tools or enforce its enterprise execution requirements. Work can't switch from local to cloud execution during a turn.
+To use an approved project folder while you [continue Work across devices](get-started-with-work.html#continue-work-across-devices),
+start a new cloud task after your workspace enables local computer access.
+Keep the computer that holds the folder online and connected.
 
 Conversation sync and project-file access are separate:
 

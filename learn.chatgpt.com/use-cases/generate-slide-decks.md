@@ -29,7 +29,6 @@ starterPrompt:
     visuals when they make the point clearer, and check the finished slides for
     layout or formatting issues. Return the completed presentation and briefly
     flag anything that needs my review.
-  suggestedModel: gpt-6-astra
   suggestedEffort: medium
 relatedLinks:
   - label: Create and edit files with ChatGPT Work

@@ -11,10 +11,11 @@ choose whether to send each event to all pixels or only one.
 
 Call `oaiq("init", ...)` for each Pixel ID:
 
-```js
+```typescript
 oaiq("init", { pixelId: "<PIXEL-ID-A>" });
 oaiq("init", { pixelId: "<PIXEL-ID-B>" });
 ```
+
 
 Load the SDK only once, and initialize each pixel before sending events to it.
 
@@ -23,11 +24,12 @@ Load the SDK only once, and initialize each pixel before sending events to it.
 The `measure` command sends an event to every Pixel ID initialized at the time
 of the call:
 
-```js
+```typescript
 oaiq("measure", "page_viewed", {
   type: "contents",
 });
 ```
+
 
 Both `<PIXEL-ID-A>` and `<PIXEL-ID-B>` receive the event. A pixel you initialize
 later doesn't receive earlier events.
@@ -36,7 +38,7 @@ later doesn't receive earlier events.
 
 Use `measureSingle` to send an event only to a specified Pixel ID:
 
-```js
+```typescript
 oaiq("measureSingle", "<PIXEL-ID-A>", "order_created", {
   type: "contents",
   amount: 2599,
@@ -44,14 +46,16 @@ oaiq("measureSingle", "<PIXEL-ID-A>", "order_created", {
 });
 ```
 
+
 Only `<PIXEL-ID-A>` receives this event. `<PIXEL-ID-B>` doesn't receive it.
 
 `measureSingle` accepts the same event data and optional event options as
 `measure`, with the Pixel ID inserted before the event name:
 
-```js
+```typescript
 oaiq("measureSingle", pixelId, eventName, eventData, eventOptions);
 ```
+
 
 Initialize the target Pixel ID before calling `measureSingle`. The SDK doesn't
 send events for an unknown Pixel ID to another pixel.

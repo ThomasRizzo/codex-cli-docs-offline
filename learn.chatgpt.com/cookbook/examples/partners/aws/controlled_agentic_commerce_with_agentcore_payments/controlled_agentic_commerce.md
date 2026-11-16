@@ -31,7 +31,7 @@ The local example simulates the AgentCore Payments step. The connected AWS workf
 
 The application is the boundary between the model and the payment infrastructure. The model receives the resource URL and research purpose, while approval records, spending limits, payment credentials, and audit state remain outside its control.
 
-![An agent requests a paid supplier report through application controls and AgentCore Payments](https://developers.openai.com/cookbook/assets/images/partners/aws/controlled-agentic-commerce-overview.png)
+![An agent requests a paid supplier report through application controls and AgentCore Payments](https://developers.openai.com/cookbook/assets/images/partners/AWS/controlled-agentic-commerce-overview.png)
 
 *The application controls approval and spending, while AgentCore Payments provides a bounded payment session for the connected AWS workflow.*
 
@@ -183,7 +183,7 @@ x402 uses the HTTP `402 Payment Required` response to communicate the terms of a
 
 The application checks those terms against its approved policy. If the merchant, price, request purpose, and human approval are valid, AgentCore Payments creates one bounded proof in the connected AWS workflow. The local example uses a synthetic proof to demonstrate the same sequence. The application retries the request with the proof, and the merchant returns the supplier report with HTTP `200`.
 
-![The x402 request sequence between the agent, application, merchant, and AgentCore Payments](https://developers.openai.com/cookbook/assets/images/partners/aws/controlled-agentic-commerce-x402-sequence.png)
+![The x402 request sequence between the agent, application, merchant, and AgentCore Payments](https://developers.openai.com/cookbook/assets/images/partners/AWS/controlled-agentic-commerce-x402-sequence.png)
 
 *The merchant's 402 response supplies payment terms. Application approval occurs before a payment proof is requested.*
 
@@ -464,7 +464,7 @@ negative_result
 
 The connected supplier research workflow uses a Bedrock-hosted OpenAI model, AgentCore Payments, and an approved x402 merchant on Base Sepolia. The application keeps the same merchant policy, spending approval, request identity, and receipt checks demonstrated in the local simulation. AgentCore Payments creates a short-lived session with its own maximum spending limit.
 
-![Local supplier research and an AWS testnet request share the same application approval and spending controls](https://developers.openai.com/cookbook/assets/images/partners/aws/controlled-agentic-commerce-local-and-testnet.png)
+![Local supplier research and an AWS testnet request share the same application approval and spending controls](https://developers.openai.com/cookbook/assets/images/partners/AWS/controlled-agentic-commerce-local-and-testnet.png)
 
 *The local simulation and AWS testnet workflow share the same application controls. AgentCore Payments provides bounded payment sessions in the connected environment.*
 

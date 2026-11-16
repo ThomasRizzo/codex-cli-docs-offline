@@ -1,0 +1,1 @@
+import{t as e}from"./WorkChatGPTLinks.react.BgeEkV4N.js?dpl=dpl_8EjqTSkciJVtPYS3Mq9rqVypqAkG";e(),document.addEventListener(`astro:page-load`,e);

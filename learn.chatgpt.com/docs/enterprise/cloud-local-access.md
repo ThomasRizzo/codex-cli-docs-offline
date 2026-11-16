@@ -19,11 +19,9 @@ Enabling local computer access in these features helps teams continue work acros
 
 ### Work
 
-- **Continue one Work conversation across devices.** Start on a computer, then review results or give follow-up instructions from the web or mobile app. Tasks using local computer access with Work Cloud use cloud coordination.
-
-- **Use approved resources on your computer.** A task using this feature can use permitted local files and tools through a connected computer while you follow along from another device. Keep that computer online and connected for steps that need it.
-
-- **Manage local execution requirements centrally.** Set supported enterprise requirements in Agent Security for local execution. Review Work Cloud policies separately for cloud execution.
+Members can [continue Work across devices](../get-started-with-work.html#continue-work-across-devices) and use approved local
+resources through a connected computer. Administrators can manage local
+execution requirements in Agent Security and review cloud execution separately.
 
 ### Dots
 
@@ -40,14 +38,14 @@ Enabling local computer access in these features helps teams continue work acros
 
 A task has two parts: coordination and execution. Coordination decides which steps to take and keeps the conversation moving. Execution is the work performed by a tool, such as running a shell command. This feature moves coordination into OpenAI’s cloud. It does not move every tool or file off the computer.
 
-| **Area**                                                           | **Before you enable this feature**                                                     | **After you enable this feature**                                                                                                                                                                                                                                                               |
-| ------------------------------------------------------------------ | -------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Continuing a local Work conversation                               | Members choose a local or cloud Work thread, where available.                          | When members select Cloud, eligible new conversations use cloud coordination and can continue across devices. When members select Local, both coordination and execution continue to happen locally. For enterprises, the in-app Local/Cloud toggle and its default remain unchanged at launch. |
-| Task coordination                                                  | The existing local or cloud workflow applies.                                          | OpenAI’s cloud coordinates the Work task.                                                                                                                                                                                                                                                       |
-| Steps that need the user’s computer                                | Local Work can use the computer’s tools and files. Cloud Work cannot use the computer. | The computer still provides those tools and files and must be online and connected.                                                                                                                                                                                                             |
-| [Enterprise requirements](managed-configuration.html) | Existing local requirements and precedence apply to local Work.                        | Local execution requirements govern the connected computer. Supported Global policy applies to cloud orchestration when managed policy is enabled; Work cloud containers use their own execution configuration and requirements.                                                                |
-| Local execution controls                                           | Supported device and operating-system controls apply.                                  | For local execution, MDM and legacy managed-device requirements rank above Agent Security. The system requirements file ranks below it.                                                                                                                                                         |
-| Codex                                                              | Existing Codex behavior applies.                                                       | Codex behavior and conversation history remain separate.                                                                                                                                                                                                                                        |
+| **Area**                                                           | **Before you enable this feature**                                                     | **After you enable this feature**                                                                                                                                                                                                |
+| ------------------------------------------------------------------ | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Continuing a local Work conversation                               | Members choose a local or cloud Work thread, where available.                          | When members select Cloud, eligible new conversations use cloud coordination and can continue across devices. When members select Local, both coordination and execution continue to happen locally.                             |
+| Task coordination                                                  | The existing local or cloud workflow applies.                                          | OpenAI’s cloud coordinates the Work task.                                                                                                                                                                                        |
+| Steps that need the user’s computer                                | Local Work can use the computer’s tools and files. Cloud Work cannot use the computer. | The computer still provides those tools and files and must be online and connected.                                                                                                                                              |
+| [Enterprise requirements](managed-configuration.html) | Existing local requirements and precedence apply to local Work.                        | Local execution requirements govern the connected computer. Supported Global policy applies to cloud orchestration when managed policy is enabled; Work cloud containers use their own execution configuration and requirements. |
+| Local execution controls                                           | Supported device and operating-system controls apply.                                  | For local execution, MDM and legacy managed-device requirements rank above Agent Security. The system requirements file ranks below it.                                                                                          |
+| Codex                                                              | Existing Codex behavior applies.                                                       | Codex behavior and conversation history remain separate.                                                                                                                                                                         |
 
 
 
@@ -104,17 +102,18 @@ Review eligibility, data coverage, and the controls your organization relies on 
 
 #### Review Work and dots eligibility
 
-- **Work:** Residency applies only to eligible content and supported workloads, regions, and configurations. EKM covers supported stored content in eligible workspaces. Confirm coverage for your workflow rather than assuming every local-access step or connected integration is covered. Work is not supported with UAE inference residency. See [Data residency and inference residency](https://help.openai.com/en/articles/9903489-data-residency-and-inference-residency-for-chatgpt) and [Work cloud security](chatgpt-work-cloud-security.html#data-handling-and-retention).
+Use the Help Center as the source of truth for current eligibility, regional availability, and data requirements:
 
-- **Dots residency:** During the Enterprise beta, dots do not support data residency or inference residency. Eligible workspaces can opt in after acknowledging those limitations; enabling dots does not make their data or processing residency-compliant.
+- **Work:** Review [Data residency and inference residency for ChatGPT](https://help.openai.com/en/articles/9903489-data-residency-and-inference-residency-for-chatgpt) and [Work cloud security](chatgpt-work-cloud-security.html#data-handling-and-retention).
+- **Dots:** Review [Getting started with your dot](https://help.openai.com/en/articles/20001530-getting-started-with-your-dot) and [Data residency and inference residency for ChatGPT](https://help.openai.com/en/articles/9903489-data-residency-and-inference-residency-for-chatgpt), along with the workspace notices shown during setup.
 
-- **Dots exclusions:** Dots are unavailable for FedRAMP workspaces, workspaces with EKM, and workspaces with inference residency set to AE (UAE). HIPAA workspaces can participate if they meet the other eligibility requirements.
+Confirm that your workspace configuration, agreement, and intended workflow meet your organization’s requirements before enabling access.
 
 #### Check data handling and the local-access safeguard
 
 - **Cloud processing:** Work with local access and dots still use cloud coordination. Conversations, tool results, and other task context do not stay exclusively on the connected computer.
 
-- **Residency safeguard:** If any cloud policy enables `enforce_residency`, **Allow local computer access** is unavailable for both Work and dots. This safeguard does not set workspace residency or, by itself, disable Work Cloud or dots. Eligible workspaces can still opt in to dots after acknowledging the beta residency limitations; local access remains blocked.
+- **Residency safeguard:** If any cloud policy enables `enforce_residency`, **Allow local computer access** is unavailable for both Work and dots. This safeguard does not set workspace residency or, by itself, disable Work Cloud or dots.
 
 - **Retention and access to data:** Neither experience provides strict zero data retention. API Zero Data Retention is a separate API control. “Eyes-off” commitments and abuse-monitoring controls are also distinct from zero retention. If a workflow requires no retained data, do not enable it for these experiences.
 
@@ -122,13 +121,9 @@ Review retention, deletion, and audit coverage for the actual data and tools inv
 
 #### Check hooks and network compatibility
 
-- **Supported enterprise hooks:** When managed policy and remote hooks are enabled, Work Cloud with local access and dots use admin-managed remote MCP hooks. The cloud orchestrator calls your connected MCP service at supported task and tool events. Configure `mcp_tool` handlers in Global `requirements.toml`. Work Cloud without local access does not use these hooks; these enterprise hooks are not available for personal accounts.
+- **Hook compatibility:** Before enabling local access, review any compatibility warnings in the workspace setting and Agent Security. Compare the hooks your workflow needs with the [hooks supported with cloud orchestration](../hooks.html#hooks-with-cloud-orchestration). If you depend on a local command or plugin hook, keep that workflow local-only.
 
-- **Work Cloud and dots with local access:** Command/shell, prompt, and agent handlers; hooks from local configuration, plugins, or local directories; environment-scoped hooks; and `SessionEnd` MCP hooks are not supported with cloud orchestration, even when the task executes tools on your computer. If your workflow depends on one of these hooks, continue using a local-only workflow that supports it until you have reviewed an alternative.
-
-- **Local-only threads in Work and Codex:** When both orchestration and execution are local, existing supported hooks continue to work. Admins can still configure supported managed hooks in Agent Security for this workflow.
-
-- **Failure and audit coverage:** Test callback connectivity, required events, and failure behavior. An explicit supported denial can block an action, but a `PreToolUse` callback error, timeout, or malformed response can fail the hook without blocking the tool. Hooks do not provide a complete [Compliance API](compliance-api.html#audit-records-for-local-computer-access-with-work-cloud) audit trail or cover every internal subagent path.
+- **Failure and audit coverage:** Test the callback connection, required events, and tool behavior after a callback error or timeout. A failed `PreToolUse` hook can let the tool run. Hooks do not cover every internal subagent path. Review the [available audit records](compliance-api.html#audit-records-for-local-computer-access-with-work-cloud) separately.
 
 - **Network and app controls:** Verify the field, delivery path, and execution surface in the [Configuration Reference](../config-file/config-reference.html). App- or device-enforced controls may still apply when the cloud orchestrator does not consume a setting. Managed HTTP/SOCKS listener ports and non-loopback proxy listeners are unsupported by the cloud runtime; socket-rule support depends on the execution path. Review [Network policy precedence and runtime limits](managed-configuration.html#network-policy-precedence-and-runtime-limits), then test allowed and blocked actions and required connectivity.
 
@@ -192,17 +187,11 @@ For both Work and dots, local steps require the relevant computer to be online a
 
 ### Work
 
-- **Eligible tasks.** Eligible new tasks started in the ChatGPT desktop app with **Cloud** selected can use that computer’s local executor while it is connected and local access is enabled.
-
-- **Sign-in.** Use Sign in with ChatGPT in the intended workspace. API keys and Codex access tokens do not enable local computer access with Work Cloud.
-
-- **Computer unavailable.** If the computer is unavailable when a new turn begins, an existing eligible task can continue in a cloud container without that computer’s local files or tools. The container does not enforce enterprise requirements from local execution. A task cannot switch from local execution to the cloud during a turn.
-
-- **Access turned off.** Turning off local computer access with Work Cloud interrupts currently running turns. Users can start a new turn in an existing cloud conversation; it uses Work Cloud without access to local files.
-
-- **Existing chats and projects.** Tasks created before this feature is enabled keep their original mode: locally only, or in the cloud without local file access. Start a new task after enabling the feature to use local computer access with Work Cloud.
-
-- **Local/Cloud setting.** For enterprises, the in-app Local/Cloud toggle and its default remain unchanged at launch. Eligible tasks with **Cloud** selected use cloud coordination and the connected computer for local steps.
+Members must sign in with ChatGPT to the intended workspace. API keys and Codex
+access tokens cannot enable this feature. Share [Continue Work across devices](../get-started-with-work.html#continue-work-across-devices)
+for instructions on starting an eligible task and continuing when the computer
+is offline. Before disabling the feature, review the
+[rollback instructions](admin-setup.html#if-you-need-to-turn-local-computer-access-off).
 
 
 

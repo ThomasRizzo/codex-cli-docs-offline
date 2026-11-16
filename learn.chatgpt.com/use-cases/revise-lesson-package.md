@@ -27,7 +27,6 @@ starterPrompt:
     - list unresolved questions
 
     Do not change files outside the approved list.
-  suggestedModel: gpt-6-astra
   suggestedEffort: medium
 relatedLinks:
   - label: Plugins

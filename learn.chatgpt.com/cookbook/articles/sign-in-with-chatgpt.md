@@ -1,4 +1,4 @@
-# Integrating Sign in with ChatGPT in your Opensource App
+# Integrating Sign in with ChatGPT in your open-source app
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
@@ -32,7 +32,7 @@ Paste Perfect is an Electron desktop app with a React interface for accounts, se
 
 Before you get started, you will need two things:
 
-- The [devkit repository](https://github.com/openai/sign-in-with-chatgpt-devkit#readme), downloaded and set up using its instructions for the Paste Perfect desktop app.
+- The [development kit repository](https://github.com/openai/sign-in-with-chatgpt-devkit#readme), downloaded and set up using its instructions for the Paste Perfect desktop app.
 - A ChatGPT Plus or Pro account to test sign-in and ChatGPT plan usage.
 
 ## 1. Prepare the app’s host ID
@@ -55,41 +55,52 @@ Your app now sends the same saved host ID on later sign-ins. **The app generates
 
 ## 2. Register the client during sign-in
 
-Connect the sign-in button to [`chatgpt.signIn()`](https://github.com/openai/sign-in-with-chatgpt-devkit/blob/main/packages/local/src/index.ts#L156), the SDK method that runs browser sign-in and returns the connection state. The devkit’s [`@siwc/react` components](https://github.com/openai/sign-in-with-chatgpt-devkit/tree/main/packages/react) provide the button, connection card, and usage links. In Paste Perfect, the card’s `onConnect` callback reaches the main process through the [preload bridge](https://github.com/openai/sign-in-with-chatgpt-devkit/blob/main/examples/paste-perfect/electron/preload.ts); the existing sign-in handler calls `chatgpt.signIn()`. You can reuse this wiring while the SDK handles OAuth and credential storage.
+Connect the sign-in button to [`chatgpt.signIn()`](https://github.com/openai/sign-in-with-chatgpt-devkit/blob/main/packages/local/src/index.ts#L156), the SDK method that runs browser sign-in and returns the connection state. The development kit’s [`@siwc/react` components](https://github.com/openai/sign-in-with-chatgpt-devkit/tree/main/packages/react) provide the button, connection card, and usage links. In Paste Perfect, the card’s `onConnect` callback reaches the main process through the [desktop bridge](https://github.com/openai/sign-in-with-chatgpt-devkit/blob/main/examples/paste-perfect/electron/preload.ts); the existing sign-in handler calls `chatgpt.signIn()`. You can reuse this wiring while the SDK handles OAuth and credential storage.
 
 The runtime starts a callback listener on `127.0.0.1` and opens the system browser with fresh state, nonce, and PKCE values. For a new profile, it sends `client_id=dynamic_agent_client`, `agent_name_hint=Paste Perfect`, and the saved `ext_agent_host_id`. The user signs in, selects a workspace, and reviews the requested permissions. OpenAI registers the client during this flow, so you don’t need a client secret or an API key.
 
 The request includes identity scopes to identify the account, `offline_access` to request a refresh token, and `resource.invoke` with `chatgpt.tokens.use.direct` to request API access using the user’s ChatGPT plan. The resource is `https://api.openai.com/v1`. After approval, the SDK exchanges the authorization code for tokens and checks the permissions OpenAI actually granted.
 
-The [registration and sign-in guide](https://developers.openai.com/siwc/token-sharing-open-source/sign-in) covers the full authorization flow. The SDK handles three steps when the browser returns; these excerpts from the [authorization implementation](https://github.com/openai/sign-in-with-chatgpt-devkit/blob/main/packages/local/src/oauth.ts) show what happens inside `chatgpt.signIn()`:
+The [registration and sign-in guide](https://developers.openai.com/siwc/token-sharing-open-source/sign-in) covers the full authorization flow. The SDK handles three steps when the browser returns; the following named regions of one complete sign-in example show what happens inside `chatgpt.signIn()`. The example uses the [pinned authorization implementation](https://github.com/openai/sign-in-with-chatgpt-devkit/blob/0a36fefeb913055c8c7a1a29b63d82b96b2e841a/packages/local/src/oauth.ts) with the development kit’s browser and credential-storage flow. To run the complete sign-in flow, follow the public [Paste Perfect setup instructions](https://github.com/openai/sign-in-with-chatgpt-devkit#running-the-example-paste-perfect-app-with-sign-in-with-chatgpt) and choose **Continue with ChatGPT** in the app:
 
 1. **Save the issued client ID.** The callback returns the authorization code and `client_id`. Before exchanging the code, the runtime saves the registration in `chatgpt-auth.json`. If the code expires, a later attempt can reuse the issued client ID.
 
-   <!-- prettier-ignore -->
-   ```ts
+   ```typescript
    const callback = await listener.result;
+   // A one-time code can fail or expire after registration succeeds. Retain the
+   // issued client ID so a fresh authorization does not register another app.
    await options.onRegistration?.(callback.clientId);
    ```
 
 2. **Exchange the code for tokens.** The SDK sends the code, issued client ID, and PKCE verifier to the token endpoint. The response supplies the identity and credentials needed to complete sign-in.
 
-   <!-- prettier-ignore -->
-   ```ts
-   const data = await tokenRequest(new URLSearchParams({
-     grant_type: "authorization_code",
-     client_id: callback.clientId,
-     code: callback.code,
-     code_verifier: verifier,
-     redirect_uri: listener.redirectUri,
-     resource: RESOURCE,
-   }), signal);
+   ```typescript
+   const data = await tokenRequest(
+     new URLSearchParams({
+       grant_type: "authorization_code",
+       client_id: callback.clientId,
+       code: callback.code,
+       code_verifier: verifier,
+       redirect_uri: listener.redirectUri,
+       resource: RESOURCE,
+     }),
+     signal
+   );
    ```
 
 3. **Verify identity and permission.** The SDK checks that an ID token is present, then verifies its signature, issuer, audience, and nonce before saving the profile.
 
-   <!-- prettier-ignore -->
-   ```ts
-   const identity = await verifyIdentity(data.id_token, callback.clientId, nonce);
+   ```typescript
+   if (typeof data.id_token !== "string")
+     throw new ChatGPTError(
+       "invalid_id_token",
+       "ChatGPT did not return a verifiable identity. Please try signing in again."
+     );
+   const identity = await verifyIdentity(
+     data.id_token,
+     callback.clientId,
+     nonce
+   );
    ```
 
    The returned session’s `sharing` flag is true only when the profile is connected, has credentials, and includes the granted `chatgpt.tokens.use.direct` scope. Use that flag to enable AI requests; a successful identity sign-in alone does not grant permission to use the user’s ChatGPT plan.
@@ -106,8 +117,7 @@ A login profile is a saved ChatGPT connection that a user can return to or switc
 
 Use `chatgpt.listProfiles()` to populate your account picker. When the user chooses a saved connection, pass its ID to `chatgpt.selectProfile()` and refresh the model picker. Run this code in the main process with your existing `chatgpt` instance; the returned profile list contains display information, not credentials.
 
-<!-- prettier-ignore -->
-```ts
+```typescript
 const profiles = await chatgpt.listProfiles();
 
 async function selectAccount(profileId: string) {
@@ -121,8 +131,7 @@ See the SDK’s [profile listing and selection methods](https://github.com/opena
 
 If a saved connection needs a new sign-in, pass that profile’s ID to `chatgpt.signIn()`. The SDK opens the browser using its saved client ID and the installation’s host ID, then updates the same profile after verifying the returned identity.
 
-<!-- prettier-ignore -->
-```ts
+```typescript
 async function reconnectAccount(profileId: string) {
   return chatgpt.signIn({ profileId });
 }
@@ -134,14 +143,13 @@ The runtime keeps the registration through logout and refreshes tokens when need
 
 We need a way to show users which models are available for their selected connection. Call `chatgpt.listModels()` to populate the model picker. Pass the selected model’s `slug`, the copied text, and Paste Perfect’s existing recipe instruction to `chatgpt.streamResponse()`:
 
-<!-- prettier-ignore -->
-```ts
+```typescript
 const models = await chatgpt.listModels();
 
 async function rewriteText(
   modelSlug: string,
   copiedText: string,
-  instructions: string,
+  instructions: string
 ) {
   const result = await chatgpt.streamResponse({
     model: modelSlug,
@@ -160,7 +168,6 @@ Paste Perfect’s [transformation handler](https://github.com/openai/sign-in-wit
 
 Now we need to verify that the app can complete a request using the user’s ChatGPT plan. Run a small request through the same runtime with this helper, which accepts the app’s existing `chatgpt` instance:
 
-<!-- prettier-ignore -->
 ```typescript
 import type { ChatGPTClient } from "@siwc/local";
 

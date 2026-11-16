@@ -128,7 +128,7 @@ Use the [runnable incident sample](https://developers.openai.com/codex/use-cases
 
 The service receives an `order.created` webhook, writes an order, and records that the event has been processed. During an incident, a retry appears to create a second order. The team has already stabilized the service and wants a patch for review.
 
-The sample uses JavaScript, Node.js's test runner, and PostgreSQL. Its disposable fixture has an `event_receipts` table with non-null identity columns and a non-deferrable unique key on `(provider, account_id, event_id)`.
+The sample uses TypeScript, Node.js's test runner, and PostgreSQL. Its disposable fixture has an `event_receipts` table with non-null identity columns and a non-deferrable unique key on `(provider, account_id, event_id)`.
 
 The schema permits a receipt claim before the order exists and retains the canonical payload fingerprint needed to detect conflicting reuse of the same event key.
 
@@ -150,8 +150,8 @@ Extract the ZIP, open its directory, and use Docker with Compose:
 
 ```bash
 docker compose -p codex-incident-rehearsal up -d --wait postgres
-docker compose -p codex-incident-rehearsal run --rm runner node main.mjs baseline
-docker compose -p codex-incident-rehearsal run --rm runner node main.mjs regression
+docker compose -p codex-incident-rehearsal run --rm runner node --experimental-strip-types main.ts baseline
+docker compose -p codex-incident-rehearsal run --rm runner node --experimental-strip-types main.ts regression
 docker compose -p codex-incident-rehearsal run --rm runner
 docker compose -p codex-incident-rehearsal down --volumes
 ```
@@ -164,12 +164,25 @@ If your installation provides `docker-compose`, use that spelling in place of `d
 
 ### Inspect the transaction handler
 
-This excerpt comes from `main.mjs` in the download. Run the complete files after extracting the ZIP; the tests and fixture setup are included there.
+This excerpt comes from `main.ts` in the download. Run the complete files after extracting the ZIP; the tests and fixture setup are included there.
 
 <details>
   <summary>Receipt claim and order transaction</summary>
-```javascript
-async function fixed(client, input, hook = async (_boundary) => {}) {
+```typescript
+import type { Client } from "pg";
+
+type IncidentEvent = {
+  provider: string;
+  accountId: string;
+  eventId: string;
+  payload: { type: string; orderId: string; amountCents: number };
+};
+
+async function fixed(
+  client: Client,
+  input: IncidentEvent,
+  hook = async (_boundary: string) => {}
+) {
   await assertNotHeld(client, input);
   await hook("beforeClaim");
   await client.query("BEGIN ISOLATION LEVEL READ COMMITTED");
@@ -295,7 +308,7 @@ Ask for both the original failure and the post-fix result. Use test-only hooks a
 
 Coordinate concurrency with barriers/latches and bounded timeouts, not sleeps or a bare pair of promises. Release blocked workers in test cleanup and use disposable fixtures. An exception test alone does not prove abrupt process death, transport loss, or production concurrency behavior.
 
-The sample uses `node main.mjs baseline`, `node main.mjs regression`, and `node main.mjs` inside the pinned runner. Its structured output records transaction boundaries, committed row counts, acknowledgment status/body, and observed blocking backend IDs.
+The sample uses `node --experimental-strip-types main.ts baseline`, `node --experimental-strip-types main.ts regression`, and `node --experimental-strip-types main.ts` inside the pinned runner. Its structured output records transaction boundaries, committed row counts, acknowledgment status/body, and observed blocking backend IDs.
 
 When adapting the workflow, use the commands actually defined by your repository and report their real results. A skipped check or unavailable dependency belongs in the handoff, with its impact on confidence.
 

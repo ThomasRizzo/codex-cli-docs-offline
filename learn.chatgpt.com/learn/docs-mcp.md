@@ -43,7 +43,7 @@ url = "https://developers.openai.com/mcp"
 
     To have Codex reliably use the MCP server, add this snippet to your `AGENTS.md`:
 
-```
+```text
 Always use the OpenAI developer documentation MCP server if you need to work with the OpenAI API, plugins, ChatGPT, Codex,… without me having to explicitly ask.
 ```
 
@@ -71,7 +71,7 @@ Always use the OpenAI developer documentation MCP server if you need to work wit
 
     To have VS Code reliably use the MCP server, add this snippet to your `AGENTS.md`:
 
-```
+```text
 Always use the OpenAI developer documentation MCP server if you need to work with the OpenAI API, plugins, ChatGPT, Codex,… without me having to explicitly ask.
 ```
 
@@ -102,7 +102,7 @@ Always use the OpenAI developer documentation MCP server if you need to work wit
 
     To have Cursor reliably use the MCP server, add this snippet to your `AGENTS.md`:
 
-```
+```text
 Always use the OpenAI developer documentation MCP server if you need to work with the OpenAI API, plugins, ChatGPT, Codex,… without me having to explicitly ask.
 ```
 

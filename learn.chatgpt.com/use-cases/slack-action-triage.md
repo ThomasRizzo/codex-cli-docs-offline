@@ -101,25 +101,19 @@ You should expect to see something like this:
 
 
 **Top action item:** Priya is asking for concrete customer
-    examples, not just more ideas.
-  
+examples, not just more ideas.
 
-  
 
-    **Why it matters:** the launch update needs real people the
-    team can contact this week.
-  
+**Why it matters:** the launch update needs real people the
+team can contact this week.
 
-  
 
-    **Evidence:** the original channel message asked for use cases,
-    but the thread later says "please DM me if you have leads."
-  
+**Evidence:** the original channel message asked for use cases,
+but the thread later says "please DM me if you have leads."
 
-  
 
-    **Next step:** reply with two named leads, or say you can be
-    the example if that is more useful.
+**Next step:** reply with two named leads, or say you can be
+the example if that is more useful.
 
 
 

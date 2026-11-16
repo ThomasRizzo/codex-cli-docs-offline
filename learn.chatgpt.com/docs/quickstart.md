@@ -16,13 +16,12 @@ the option that fits your work.
 
 If you're a developer and want to use Codex in your terminal or code editor,
   try [Codex CLI](codex/cli.html) or the [Codex IDE extension](codex/ide.html). For remote
-  coding work, create a reusable [Codex Cloud
-  environment](environments/cloud-environments.html) on the web or in the
-  desktop app. In a new task, choose **Work in** > **Cloud**, open **Select
-  environment**, then select **Create environment**. Codex inspects your
-  repositories and helps prepare and test the setup before you publish it.
-  You can then start and continue cloud tasks on the web, on mobile, or in the
-  desktop app. On mobile, open **Codex** and select the published environment.
+  work, choose **Work in** > **Cloud** on the web or in the desktop app, or
+  open **Codex** on mobile. If the default environment is available, select
+  it and submit a task without choosing a repository. You can also select a
+  published environment. To prepare repositories and tools for future tasks,
+  [create and publish a reusable environment](environments/cloud-environments.html#create-and-publish-an-environment)
+  on the web or in the desktop app.
 
 ## Setup
 
@@ -190,19 +189,11 @@ Help me plan my event. Ask me about the occasion, guests, date, location, budget
 
 
 ## Next steps
-[Learn more about the ChatGPT desktop app
+[Learn more about the ChatGPT desktop app](app.html)
+
+Use the ChatGPT desktop app to work with your local projects.
 
 
+[Import your setup](import.html)
 
-      <OpenBook />
-    
-
-    Use the ChatGPT desktop app to work with your local projects.](app.html)
-[Import your setup
-
-
-
-      <CompareArrows />
-    
-
-    Bring supported setup, projects, and recent work into ChatGPT.](import.html)
+Bring supported setup, projects, and recent work into ChatGPT.

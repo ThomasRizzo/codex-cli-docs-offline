@@ -19,6 +19,7 @@ provider-specific secret names you choose yourself with
 
 For more about the files stored under `CODEX_HOME`, see
 [Config and state locations](config-advanced.html#config-and-state-locations).
+If multiple Linux hosts open the same databases, see [Run Codex with an NFS home directory](../environments/network-file-systems.html).
 
 ## Installer variables
 

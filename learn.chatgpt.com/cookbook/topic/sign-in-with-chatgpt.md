@@ -4,4 +4,4 @@
 
 > Integrate ChatGPT sign-in and optional ChatGPT plan usage into your app.
 
-- [Integrating Sign in with ChatGPT in your Opensource App](/cookbook/articles/sign-in-with-chatgpt.md): Add ChatGPT sign-in and ChatGPT plan usage to an existing open-source desktop app.
+- [Integrating Sign in with ChatGPT in your open-source app](/cookbook/articles/sign-in-with-chatgpt.md): Add ChatGPT sign-in and ChatGPT plan usage to an existing open-source desktop app.

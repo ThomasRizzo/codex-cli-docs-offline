@@ -34,12 +34,56 @@
       "";
   }
 
+  function createStatus() {
+    const status = document.createElement("span");
+    status.classList.add("sr-only");
+    status.setAttribute("role", "status");
+    status.setAttribute("aria-live", "polite");
+    status.setAttribute("aria-atomic", "true");
+    return status;
+  }
+
+  function bindStaticSample(pre) {
+    const sample = pre.closest(".code-sample");
+    if (!sample || sample.closest("astro-island")) return;
+    // Older server-rendered samples expose only the CSS module's copyButton name.
+    const button = sample.querySelector('button[class*="_copyButton_"]');
+    const icon = button?.querySelector("svg");
+    if (
+      !icon ||
+      button.closest(".code-sample") !== sample ||
+      button.closest("astro-island") ||
+      button.hasAttribute("data-static-code-copy")
+    )
+      return;
+
+    button.setAttribute("data-static-code-copy", "");
+    const status = createStatus();
+    button.after(status);
+    button.addEventListener("click", (event) => {
+      const visible = Array.from(
+        sample.querySelectorAll("pre[data-copy-ignore] > code")
+      ).filter(
+        (code) =>
+          code.closest(".code-sample") === sample &&
+          !code.closest(".hidden, [hidden], astro-island")
+      );
+      if (visible.length !== 1) return;
+      const code = visible[0].cloneNode(true);
+      code.querySelector(".syntax-highlighter-line-numbers")?.remove();
+      return copyCode(event, icon, status, code.textContent);
+    });
+  }
+
   function initCopyButtons(root = document) {
     const preBlocks = root.querySelectorAll("pre");
 
     preBlocks.forEach((pre) => {
       if (pre.querySelector(".copy-btn")) return;
-      if (pre.hasAttribute("data-copy-ignore")) return;
+      if (pre.hasAttribute("data-copy-ignore")) {
+        bindStaticSample(pre);
+        return;
+      }
 
       // Prefer the code that belongs to this <pre> over any nested code node.
       const directCodeChild = pre.querySelector(":scope > code");
@@ -63,12 +107,7 @@
         document.body?.dataset?.codexCopyLabel || "Copy code to clipboard"
       );
 
-      const status = document.createElement("span");
-      status.classList.add("sr-only");
-      status.setAttribute("role", "status");
-      status.setAttribute("aria-live", "polite");
-      status.setAttribute("aria-atomic", "true");
-
+      const status = createStatus();
       btn.addEventListener("click", (event) => copyCode(event, svg, status));
 
       const container = document.createElement("div");
@@ -91,12 +130,14 @@
    * @param {MouseEvent} event
    * @param {SVGSVGElement} icon
    * @param {HTMLSpanElement} status
+   * @param {string} [sampleText]
    */
-  async function copyCode(event, icon, status) {
+  async function copyCode(event, icon, status, sampleText) {
     const button = event.currentTarget;
     const pre = button.parentElement?.parentElement;
     const codeBlock = pre ? getChildByTagName(pre, "CODE") : null;
-    if (!codeBlock) return;
+    const text = sampleText ?? codeBlock?.innerText;
+    if (text == null) return;
 
     const resetTimer = resetTimers.get(status);
     if (resetTimer) {
@@ -111,9 +152,9 @@
     let feedback = "success";
     try {
       if (navigator.clipboard?.writeText) {
-        await navigator.clipboard.writeText(codeBlock.innerText);
+        await navigator.clipboard.writeText(text);
       } else {
-        fallbackCopy(codeBlock.innerText, button);
+        fallbackCopy(text, button);
       }
     } catch {
       feedback = "error";

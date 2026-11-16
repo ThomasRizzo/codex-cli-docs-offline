@@ -4,6 +4,15 @@
 
 Turn account context and deal signals into pipeline actions.
 
+## In this collection
+
+- [Prioritize accounts](https://developers.openai.com/codex/use-cases/prioritize-accounts)
+- [Review forecast risk](https://developers.openai.com/codex/use-cases/forecast-risk-review)
+- [Prepare meeting briefs](https://developers.openai.com/codex/use-cases/meeting-prep-briefs)
+- [Turn meetings into follow-ups](https://developers.openai.com/codex/use-cases/zoom-meeting-follow-ups)
+- [Refresh a strategic account plan](https://developers.openai.com/codex/use-cases/strategic-account-plan)
+- [Diagnose a stalled deal](https://developers.openai.com/codex/use-cases/stalled-deal-diagnosis)
+
 Use ChatGPT Work or Codex to bring together account records, customer
 conversations, pipeline signals, and open risks. ChatGPT can turn approved
 context into briefs, follow-ups, forecast reviews, and account plans while

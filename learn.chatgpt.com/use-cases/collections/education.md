@@ -4,6 +4,28 @@
 
 Turn teaching, learning, and academic work into review-ready artifacts.
 
+## In this collection
+
+- [Refresh course materials](https://developers.openai.com/codex/use-cases/refresh-course-materials)
+- [Calibrate assessments](https://developers.openai.com/codex/use-cases/calibrate-assessments)
+- [Audit course section consistency](https://developers.openai.com/codex/use-cases/audit-course-section-consistency)
+- [Track course engagement](https://developers.openai.com/codex/use-cases/track-course-engagement)
+- [Synthesize research evidence](https://developers.openai.com/codex/use-cases/synthesize-research-evidence)
+- [Prepare a committee packet](https://developers.openai.com/codex/use-cases/prepare-committee-packet)
+- [Organize a semester workspace](https://developers.openai.com/codex/use-cases/organize-semester-workspace)
+- [Build an exam study system](https://developers.openai.com/codex/use-cases/build-exam-study-system)
+- [Run a student club project](https://developers.openai.com/codex/use-cases/run-student-club-project)
+- [Plan a budget and schedule](https://developers.openai.com/codex/use-cases/plan-budget-and-schedule)
+- [Build a student website](https://developers.openai.com/codex/use-cases/build-student-website)
+- [Track job applications](https://developers.openai.com/codex/use-cases/track-job-applications)
+- [Learn a new concept](https://developers.openai.com/codex/use-cases/learn-a-new-concept)
+- [Organize a lesson or unit folder](https://developers.openai.com/codex/use-cases/organize-lesson-unit-folder)
+- [Build a unit plan from source files](https://developers.openai.com/codex/use-cases/build-unit-plan-from-sources)
+- [Create a lesson deck](https://developers.openai.com/codex/use-cases/create-lesson-deck)
+- [Create a classroom materials pack](https://developers.openai.com/codex/use-cases/create-classroom-materials-pack)
+- [Revise a lesson package](https://developers.openai.com/codex/use-cases/revise-lesson-package)
+- [Build an interactive lesson resource](https://developers.openai.com/codex/use-cases/build-interactive-lesson-resource)
+
 Use ChatGPT Work or Codex to turn distributed course materials, academic
 requirements, schedules, feedback, and project context into editable,
 review-ready work. ChatGPT can preserve source evidence, make uncertainty
@@ -33,6 +55,7 @@ time and money, build a website, and manage job or internship applications.
 - [Plan a budget and schedule](https://developers.openai.com/codex/use-cases/plan-budget-and-schedule): Use ChatGPT with course calendars, work shifts, recurring commitments, income, expenses, and...
 - [Build a student website](https://developers.openai.com/codex/use-cases/build-student-website): Use Sites to scope, build, and test a simple website from student project content, design...
 - [Track job applications](https://developers.openai.com/codex/use-cases/track-job-applications): Use ChatGPT with verified experience notes, a resume, portfolio, role descriptions, career...
+- [Learn a new concept](https://developers.openai.com/codex/use-cases/learn-a-new-concept): Use ChatGPT to study material such as research papers or courses, split the reading across...
 
 ## K–12 teachers
 

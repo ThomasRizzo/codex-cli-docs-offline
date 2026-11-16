@@ -11,7 +11,7 @@ An alert starts an investigation. It does not prove wrongdoing. The model propos
 
 The notebook keeps deterministic evidence, model proposals, application controls, and human authority in separate boundaries.
 
-![Four boundaries for the regulated-investigation workflow](https://developers.openai.com/cookbook/assets/images/partners/aws/evidence-grounded-four-boundaries.png)
+![Four boundaries for the regulated-investigation workflow](https://developers.openai.com/cookbook/assets/images/partners/AWS/evidence-grounded-four-boundaries.png)
 
 
 ## 1. Start the notebook

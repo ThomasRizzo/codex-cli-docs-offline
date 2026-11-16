@@ -8891,6 +8891,12 @@
       },
       "ConversationalBottomOtmSpecBody": {
         "properties": {
+          "images": {
+            "items": {
+              "$ref": "#/components/schemas/AdCollectionImageBody"
+            },
+            "type": "array"
+          },
           "type": {
             "$ref": "#/components/schemas/AdSpecType"
           },
@@ -9153,6 +9159,14 @@
       },
       "CreateAdCreativeParams": {
         "properties": {
+          "file_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "maxItems": 6,
+            "minItems": 4
+          },
           "type": {
             "$ref": "#/components/schemas/AdCreativeTypeParam"
           },
@@ -9218,6 +9232,14 @@
       },
       "UpdateAdCreativeParams": {
         "properties": {
+          "file_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "maxItems": 6,
+            "minItems": 4
+          },
           "type": {
             "$ref": "#/components/schemas/AdCreativeTypeParam"
           },
@@ -10946,6 +10968,36 @@
             }
           }
         ]
+      },
+      "AdCollectionImageBody": {
+        "properties": {
+          "item_id": {
+            "type": "string"
+          },
+          "file_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "image_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": ["item_id", "file_id", "image_url"],
+        "x-openai-class-name": "sofa.api.resources.ads.AdCollectionImageBody"
       }
     }
   }

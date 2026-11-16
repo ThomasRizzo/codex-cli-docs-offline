@@ -68,7 +68,7 @@ Where measurement requires consent, configure the [Pixel's consent controls](htt
 
 After installing and initializing the Pixel, call `measure` when a purchase completes:
 
-```javascript
+```typescript
 oaiq(
   "measure",
   "order_created",
@@ -80,6 +80,7 @@ oaiq(
   { event_id: "order_12345" }
 );
 ```
+
 
 This example records an $89.00 purchase. Event amounts use the currency's standard minor unit: `8900` for USD 89.00, or `8900` for JPY 8,900.
 
@@ -194,7 +195,7 @@ Save the returned setting `id` and use it in place of `ces_123` when connecting 
 
 Send the custom event through your integration before checking that it arrives. For example, after initializing the Pixel:
 
-```javascript
+```typescript
 oaiq(
   "measure",
   "custom",
@@ -205,6 +206,7 @@ oaiq(
   }
 );
 ```
+
 
 Create a setting with the same custom event name:
 

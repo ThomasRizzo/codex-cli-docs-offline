@@ -192,7 +192,7 @@ The Knowledge Base contains two public CMS Medicare Coverage Database pages for 
 
 The prior authorization case uses a sample payer named Northstar Health and a synthetic member. The request contains the policy ID and version but not the policy criteria. The generated application loads those criteria from its own configuration so that a caller cannot replace them.
 
-The repository includes a [sample room-air oximetry and arterial blood gas report](https://developers.openai.com/cookbook/assets/examples/partners/aws/data/policy_to_review/pa-oxy-2088-room-air-oximetry-abg.pdf). The notebook extracts the text, checks expected report fields, records the file checksum, and adds the text to the case as `OXY-TEST-1`. The PDF is clinical evidence and is not uploaded to the policy Knowledge Base.
+The repository includes a [sample room-air oximetry and arterial blood gas report](https://developers.openai.com/cookbook/assets/examples/partners/AWS/data/policy_to_review/PA-OXY-2088-room-air-oximetry-abg.pdf). The notebook extracts the text, checks expected report fields, records the file checksum, and adds the text to the case as `OXY-TEST-1`. The PDF is clinical evidence and is not uploaded to the policy Knowledge Base.
 
 
 ```python

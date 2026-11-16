@@ -8,8 +8,8 @@ report with evidence and remediation guidance.
 
 This page covers the Codex Security plugin in the desktop app or Codex CLI. To
   scan a connected GitHub repository in Codex cloud, install the separate
-  **Codex Security Cloud** plugin from the plugin marketplace. See [Cloud
-  setup](setup.html).
+  **Daybreak Defense Factory (Preview)** plugin from the plugin marketplace. See
+  [Cloud setup](setup.html).
 
 ## Install the plugin
 
@@ -20,15 +20,7 @@ This page covers the Codex Security plugin in the desktop app or Codex CLI. To
 
    
 
-     <ButtonLink
-       href="codex://plugins/install/codex-security?marketplace=openai-curated"
-       color="primary"
-       variant="solid"
-       size="lg"
-       pill
-     >
-       Install the Codex Security plugin
-     </ButtonLink>
+     [Install the Codex Security plugin](codex://plugins/install/codex-security?marketplace=openai-curated)
    
 
 
@@ -44,9 +36,10 @@ For a personal account, see [plugin and app troubleshooting](https://help.openai
 
 1. In your terminal, go to the repository you want to assess and start Codex:
 
-```bash
+   ```bash
    codex
-```
+   ```
+
 
 2. Enter `/plugins`, search for **Codex Security**, and select **Install
    plugin**.
@@ -59,6 +52,35 @@ For a personal account, see [plugin and app troubleshooting](https://help.openai
 If **Security** doesn't appear in the desktop-app sidebar, confirm that
   **Codex** is selected and the plugin is enabled. Update the app and plugin if
   needed, and check whether your workspace administrator allows the plugin.
+
+### Check versions and updates
+
+Check the [plugin changelog](plugin/changelog.html) before a long
+scan. Manage your installation in **Plugins** in the desktop app or `/plugins`
+in Codex CLI. See the [plugin guide](../plugins.html) for details. After updating
+the plugin, start a new chat to load its skills and tools. In Codex CLI, enter
+`/new`.
+
+Codex and the Codex Security plugin have separate versions. In Codex CLI, check
+the host version and installed plugin versions with:
+
+```bash
+codex --version
+codex plugin list --json
+```
+
+
+Find Codex Security in the `installed` list. Record both versions when you
+start a scan so you can include them when reporting a failure.
+
+The standalone `@openai/codex-security` package has its own bundled plugin.
+Updating that package doesn't update the marketplace plugin used in Codex.
+For package installation and version checks, see the [CLI
+quickstart](cli.html).
+
+For Amazon Bedrock, configure the Codex host using the [Codex Bedrock
+guide](../amazon-bedrock.html). The standalone package uses the separate
+[Security CLI provider settings](cli/reference.html#use-amazon-bedrock).
 
 ## Run your first scan
 
@@ -145,9 +167,10 @@ with `xhigh` reasoning effort.
 
    Send this prompt in the new chat:
 
-```text
+   ```text
    Run a Codex Security scan on this repository.
-```
+   ```
+
 
 2. Let the scan finish
 

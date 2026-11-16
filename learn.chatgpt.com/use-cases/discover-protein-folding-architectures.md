@@ -63,6 +63,7 @@ starterPrompt:
 
     Do not claim generalization gains from smoke tests or single-chain overfit
     diagnostics. Prefer matched comparisons and preserve the evidence boundary.
+  suggestedModel: gpt-6-astra
   suggestedEffort: high
 relatedLinks:
   - label: Follow a goal

@@ -4,6 +4,13 @@
 
 Use GPT-Rosalind to accelerate scientific research and drug discovery.
 
+## In this collection
+
+- [Prioritize drug targets](https://developers.openai.com/codex/use-cases/target-prioritization)
+- [Validate bulk RNA-seq inputs](https://developers.openai.com/codex/use-cases/bulk-rna-seq-fastq-qc)
+- [Annotate scRNA-seq data](https://developers.openai.com/codex/use-cases/scrna-seq-post-count-qc)
+- [Discover protein folding models](https://developers.openai.com/codex/use-cases/discover-protein-folding-architectures)
+
 GPT-Rosalind, our frontier reasoning model, is built to support research across
 biology, drug discovery, and translational medicine. This life sciences model
 series is optimized for scientific workflows, combining improved tool use with

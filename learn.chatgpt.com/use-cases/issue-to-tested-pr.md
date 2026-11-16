@@ -120,7 +120,7 @@ If required checks cannot run, finish setup before using this workflow.
 
 Choose a feature with a written contract and a clear stopping point: a new API endpoint, a validation rule, or a small addition to an existing service. The issue should fit in one pull request and have checks that can run without production access.
 
-The example adds pagination to a project's activity feed. The runnable Node.js sample includes authentication, project access, signed cursors, and an existing project-detail route. It uses fixed test records in memory, so you can check the pagination contract without a database or external service.
+The example adds pagination to a project's activity feed. The runnable TypeScript sample includes authentication, project access, signed cursors, and an existing project-detail route. It uses fixed test records in memory, so you can check the pagination contract without a database or external service.
 
 ## Try the runnable sample
 
@@ -128,13 +128,13 @@ The example adds pagination to a project's activity feed. The runnable Node.js s
 
 ```bash
 node --version
-node api.mjs
-node test.mjs --seeded
-node test.mjs
-node reproduce.mjs ./evidence
+node --experimental-strip-types api.ts
+node --experimental-strip-types test.ts --seeded
+node --experimental-strip-types test.ts
+node --experimental-strip-types reproduce.ts ./evidence
 ```
 
-`node api.mjs` starts a local HTTP server, requests the first page, prints its public IDs, and closes the server.
+`node --experimental-strip-types api.ts` starts a local HTTP server, requests the first page, prints its public IDs, and closes the server.
 
 The `--seeded` test run deliberately exits nonzero: its timestamp-only continuation skips two events tied at the first page boundary. The same tests pass with the corrected timestamp-and-ID tuple continuation.
 
@@ -156,7 +156,7 @@ A successful run passes all 36 tests in the corrected state. The seeded state fa
 
 To verify your environment, put the files in your selected repository, prepare and publish an environment with a supported Node runtime, then run the commands in a new Cloud task and record its results.
 
-`reproduce.mjs` saves `red.log`, `green.log`, `observed-http.json`, and `run-manifest.json` in the requested evidence directory. The manifest identifies the runtime, commands, exit codes, seeded defect, correction, and SHA-256 source hashes.
+`reproduce.ts` saves `red.log`, `green.log`, `observed-http.json`, and `run-manifest.json` in the requested evidence directory. The manifest identifies the runtime, commands, exit codes, seeded defect, correction, and SHA-256 source hashes.
 
 It does not record session tokens or the signing key. Read `README.md` and `openapi.json` for the sample's setup and public contract.
 
@@ -166,20 +166,24 @@ These excerpts come from the files in the download. Run the complete files after
 
 <details>
   <summary>Cursor and ordering implementation</summary>
-```javascript
+```typescript
+import { createFixtures } from "./fixtures.ts";
+type Fixtures = ReturnType<typeof createFixtures>;
+type EventKey = { created_at: string; id: string };
+
 export function createApi({
   sessions,
   projects,
   events,
   signingKey,
   seededBug = false,
-}) {
+}: Fixtures & { seededBug?: boolean }) {
   return createServer((request, response) => {
-    const send = (status, body) => {
+    const send = (status: number, body: unknown) => {
       response.writeHead(status, { "content-type": "application/json" });
       response.end(JSON.stringify(body));
     };
-    const fail = (code) => {
+    const fail = (code: string) => {
       const [status, message] = errors[code];
       send(status, { error: { code, message } });
     };
@@ -200,6 +204,7 @@ export function createApi({
     const project = projectId ? projects.get(projectId) : undefined;
     if (
       request.method !== "GET" ||
+      !route ||
       !project ||
       project.tenant_id !== tenantId
     ) {
@@ -219,7 +224,7 @@ export function createApi({
     ) {
       return fail("invalid_limit");
     }
-    let cursor;
+    let cursor: EventKey | undefined;
     if (url.searchParams.has("cursor")) {
       try {
         if (url.searchParams.getAll("cursor").length !== 1)
@@ -259,13 +264,21 @@ export function createApi({
     }));
     const nextCursor =
       matching.length > limit
-        ? encodeCursor(selected.at(-1), tenantId, projectId, signingKey)
+        ? encodeCursor(
+            selected[selected.length - 1],
+            tenantId,
+            projectId,
+            signingKey
+          )
         : null;
     return send(200, { items, next_cursor: nextCursor });
   });
 }
 
-export async function startApi(fixtures, options = {}) {
+export async function startApi(
+  fixtures: Fixtures,
+  options: { seededBug?: boolean } = {}
+) {
   const server = createApi({ ...fixtures, ...options });
   await new Promise((resolve, reject) => {
     server.once("error", reject);
@@ -288,7 +301,7 @@ export async function startApi(fixtures, options = {}) {
 
 <details>
   <summary>Seeded records and project access fixtures</summary>
-```javascript
+```typescript
 export function createFixtures() {
   const tokenA = randomBytes(24).toString("base64url");
   const tokenB = randomBytes(24).toString("base64url");
@@ -305,7 +318,12 @@ export function createFixtures() {
     ["other", { tenant_id: "tenant_a", name: "Another project" }],
     ["private", { tenant_id: "tenant_b", name: "Private project" }],
   ]);
-  const event = (id, created_at, project_id, tenant_id = "tenant_a") => ({
+  const event = (
+    id: string,
+    created_at: string,
+    project_id: string,
+    tenant_id = "tenant_a"
+  ) => ({
     id,
     created_at,
     project_id,
@@ -357,7 +375,7 @@ export function createFixtures() {
 
 <details>
   <summary>HTTP contract and regression tests</summary>
-```javascript
+```typescript
 test("five-event traversal crosses a timestamp tie and replays the same continuation", async () => {
   const expected = ["evt_105", "evt_104", "evt_103", "evt_102", "evt_101"];
   const pages = await traverse("feed", 2, expected);
@@ -416,7 +434,7 @@ test("omitted, minimum, and maximum limits return 25, 1, and 100 of 105 events",
     [{}, 25],
     [{ limit: "1" }, 1],
     [{ limit: "100" }, 100],
-  ]) {
+  ] as [Record<string, string>, number][]) {
     const result = await request("large", parameters);
     assert.equal(result.status, 200);
     assert.equal(result.body.items.length, expected);
@@ -501,7 +519,7 @@ test("authentication precedes malformed and wrong-scope cursor or limit validati
       { cursor: "broken" },
       { cursor: privateCursor },
       { limit: "0", cursor: "broken" },
-    ]) {
+    ] as Record<string, string>[]) {
       const result = await request("feed", parameters, token);
       assert.equal(result.status, 401);
       assert.deepEqual(result.body, unauthenticated);
@@ -517,7 +535,7 @@ test("inaccessible and nonexistent projects return identical 404 before cursor v
       { cursor: "broken" },
       { cursor: ownCursor },
       { limit: "0", cursor: "broken" },
-    ]) {
+    ] as Record<string, string>[]) {
       const result = await request(project, parameters);
       assert.equal(result.status, 404);
       assert.deepEqual(result.body, notFound);
@@ -574,9 +592,9 @@ test("signed structurally invalid payloads and unsupported versions are rejected
     created_at: "2026-01-15T12:00:02.123456Z",
     id: "evt_104",
   };
-  const missing = { ...valid };
+  const missing: Partial<typeof valid> = { ...valid };
   delete missing.id;
-  const cases = [
+  const cases: [string, unknown][] = [
     ["missing ID", missing],
     ["number ID", { ...valid, id: 104 }],
     ["empty ID", { ...valid, id: "" }],
@@ -689,7 +707,7 @@ test("OpenAPI declares operation, limit boundaries, signed cursor, and response 
   const operation = specification.paths["/v1/projects/{project_id}/events"].get;
   assert.equal(operation.operationId, "listProjectEvents");
   const limit = operation.parameters.find(
-    (parameter) => parameter.name === "limit"
+    (parameter: { name: string }) => parameter.name === "limit"
   ).schema;
   assert.deepEqual(limit, {
     type: "integer",
@@ -714,7 +732,7 @@ test("OpenAPI declares operation, limit boundaries, signed cursor, and response 
 
 <details>
   <summary>Evidence capture</summary>
-```javascript
+```typescript
 mkdirSync(output, { recursive: true });
 const states = [];
 for (const [name, arguments_] of [
@@ -723,7 +741,11 @@ for (const [name, arguments_] of [
 ]) {
   const result = spawnSync(
     process.execPath,
-    [resolve(directory, "test.mjs"), ...arguments_],
+    [
+      "--experimental-strip-types",
+      resolve(directory, "test.ts"),
+      ...arguments_,
+    ],
     {
       cwd: directory,
       encoding: "utf8",
@@ -736,7 +758,7 @@ for (const [name, arguments_] of [
   );
   states.push({
     name,
-    command: `node test.mjs${arguments_.length ? " --seeded" : ""}`,
+    command: `node --experimental-strip-types test.ts${arguments_.length ? " --seeded" : ""}`,
     exit_code: result.status,
     signal: result.signal,
     error: result.error?.message ?? null,
@@ -783,7 +805,7 @@ console.log(
       red_exit: states[0].exit_code,
       green_exit: states[1].exit_code,
       green_pages: observed.green.pages.map((page) =>
-        page.body.items.map((item) => item.id)
+        page.body.items.map((item: { id: string }) => item.id)
       ),
       evidence_directory: output,
     },
@@ -799,16 +821,16 @@ console.log(
 
 An issue link is useful only if Codex can read it. Paste or attach the relevant content when the source is unavailable. Include the following information with the starter prompt.
 
-| Input               | Sample issue                                                                                                                                                                                                                                |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Issue and outcome   | `API-142`: Add `GET /v1/projects/{project_id}/events` so customers can page through an activity feed.                                                                                                                                       |
-| Repository and base | Put the sample folder in your chosen repository, then record the branch and exact commit selected for the task.                                                                                                                             |
-| Relevant code       | The sample's `api.mjs`, `fixtures.mjs`, `test.mjs`, and `openapi.json`, plus your repository's `AGENTS.md`.                                                                                                                                 |
-| Existing patterns   | Keep authentication and project authorization before pagination validation. Use signed cursors and the documented public error envelope. When adapting the issue, follow your repository's existing helpers.                                |
-| Test setup          | Fixed in-memory test projects for two tenants, six tenant-A projects, a timestamp tie split across a page boundary, timestamps with fractional precision, empty and exactly full final pages, and 105 events for limit checks.              |
-| Validation          | `node test.mjs --seeded` (expected failure), `node test.mjs` (corrected state), and `node reproduce.mjs ./evidence`. Run `node --check` for each `.mjs` file. For your own service, add its actual type, lint, regression, and CI commands. |
-| Scope               | Endpoint, focused tests, and its OpenAPI documentation. No new dependencies, database migration, frontend, deployment, or auth redesign.                                                                                                    |
-| Handoff             | A draft PR when the available repository integration supports it and you have authorized creation; otherwise a diff and draft PR description.                                                                                               |
+| Input               | Sample issue                                                                                                                                                                                                                                                                     |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Issue and outcome   | `API-142`: Add `GET /v1/projects/{project_id}/events` so customers can page through an activity feed.                                                                                                                                                                            |
+| Repository and base | Put the sample folder in your chosen repository, then record the branch and exact commit selected for the task.                                                                                                                                                                  |
+| Relevant code       | The sample's `api.ts`, `fixtures.ts`, `test.ts`, and `openapi.json`, plus your repository's `AGENTS.md`.                                                                                                                                                                         |
+| Existing patterns   | Keep authentication and project authorization before pagination validation. Use signed cursors and the documented public error envelope. When adapting the issue, follow your repository's existing helpers.                                                                     |
+| Test setup          | Fixed in-memory test projects for two tenants, six tenant-A projects, a timestamp tie split across a page boundary, timestamps with fractional precision, empty and exactly full final pages, and 105 events for limit checks.                                                   |
+| Validation          | `node --experimental-strip-types test.ts --seeded` (expected failure), `node --experimental-strip-types test.ts` (corrected state), and `node --experimental-strip-types reproduce.ts ./evidence`. For your own service, add its actual type, lint, regression, and CI commands. |
+| Scope               | Endpoint, focused tests, and its OpenAPI documentation. No new dependencies, database migration, frontend, deployment, or auth redesign.                                                                                                                                         |
+| Handoff             | A draft PR when the available repository integration supports it and you have authorized creation; otherwise a diff and draft PR description.                                                                                                                                    |
 
 For the sample, prepare Node 22.6 or later; the tests create their own test sessions and cursor-signing key and bind a temporary HTTP server to the loopback interface. For your own service, also prepare its dependencies, test configuration, and isolated services. Verify that its cursor helper can bind a cursor to the authenticated tenant and requested project before assigning this issue.
 
@@ -857,7 +879,7 @@ This contract does not promise single-use cursors, snapshot pagination, or ident
 2. **Run the starter prompt.** Replace its bracketed inputs with your repository, issue packet, boundaries, and checks. Choose whether Codex should return a diff or create an authorized draft PR. The starter prompt on this page contains the full handoff instructions.
 3. **Establish the baseline.** Codex should read repository instructions and run the approved baseline checks before editing.
 
-   For the sample, run `node test.mjs` and the syntax checks in `README.md`; `--seeded` is a separate deliberate failure demonstration.
+   For the sample, run `node --experimental-strip-types test.ts`; `--seeded` is a separate deliberate failure demonstration.
 
    For your own service, run its existing regression, type, and lint checks. A new endpoint's focused test file may not exist yet; record that as a test to create. Resolve failing existing checks or unavailable test services before attributing later results to the feature.
 
@@ -913,7 +935,7 @@ Cover unsupported versions or expired tokens if the shared helper supports those
 
 ### Existing behavior
 
-The sample checks the existing project-detail route with authorized, unauthorized, and inaccessible-project requests. Run syntax checks for its `.mjs` files. In your service, run its established regression suite, type check, and lint.
+The sample checks the existing project-detail route with authorized, unauthorized, and inaccessible-project requests. In your service, run its established regression suite, type check, and lint.
 
 ### Public response schema
 

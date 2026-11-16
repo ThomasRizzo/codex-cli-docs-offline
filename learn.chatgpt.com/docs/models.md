@@ -2,24 +2,14 @@
 
 > For the complete documentation index, see [llms.txt](llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
-## GPT-5.5 retirement
+Choosing a model is about finding the right balance of speed, cost, and capability
+for your task. Sometimes you need a quick first draft. Other times, a complex
+problem calls for more careful reasoning. This guide introduces our latest
+models, shows where each one shines, and helps you find a starting point for
+your work.
 
-Effective October 14, 2026, at noon PDT (19:00 UTC), GPT-5.5 retires from
-Codex for users signed in with ChatGPT. The OpenAI API and Codex sessions
-authenticated with an API key aren't affected.
-
-For Codex with ChatGPT sign-in, choose an available replacement:
-
-- On Plus, Pro, Business, Enterprise, and Edu plans, choose **GPT-6.1 Sol**
-  (`gpt-6.1-sol`) when available.
-- On Free and Go plans, choose **GPT-6 Luna** (`gpt-6-luna`) in the desktop app
-  when available.
-
-Replace `gpt-5.5` in workspace defaults, saved model settings, managed
-configurations, custom agents, scheduled tasks, and scripts that select a model.
-
-See [workspace model availability](enterprise/workspace-model-availability.html#prepare-for-the-gpt-55-retirement)
-for administrator guidance.
+GPT-5.5 retirement: [See replacement models and migration
+  steps](#gpt-55-retirement).
 
 <ContentModeSwitch group="codex-surface" id="app">
 
@@ -33,7 +23,8 @@ for administrator guidance.
 In Work or Codex in the ChatGPT desktop app, use the model and reasoning control
 beneath the composer to choose an available model and adjust its reasoning effort.
 
-Higher reasoning effort can improve results for complex tasks, but it takes
+**Reasoning effort** guides how much work the model puts into thinking through
+your request. Higher effort can improve results for complex tasks, but it takes
 longer and uses more tokens. Start with the default effort and increase it when
 the task needs deeper planning or analysis.
 
@@ -63,7 +54,8 @@ These recommendations apply to **ChatGPT Work** on the web. Use the
 model and reasoning control beneath the composer to choose an available model
 and adjust its reasoning effort.
 
-Higher reasoning effort can improve results for complex tasks, but it takes
+**Reasoning effort** guides how much work the model puts into thinking through
+your request. Higher effort can improve results for complex tasks, but it takes
 longer and uses more tokens. Start with the default effort and increase it when
 the task needs deeper planning or analysis.
 
@@ -84,6 +76,9 @@ making it useful for larger tasks that can be split across subagents.
 
 ## Choose a model
 
+GPT-6.1 Terra requires Codex CLI 0.159.0 or later. To use it, run
+`codex -m gpt-6.1-terra`.
+
 In an interactive CLI session, use `/model` to switch models or adjust
 reasoning effort. You can also choose a model when you launch Codex with
 `--model` or its `-m` alias:
@@ -100,7 +95,8 @@ codex exec -m gpt-6.1-sol "Review the current changes"
 ```
 
 
-Higher reasoning effort can improve results for complex tasks, but it takes
+**Reasoning effort** guides how much work the model puts into thinking through
+your request. Higher effort can improve results for complex tasks, but it takes
 longer and uses more tokens. Start with the default effort and increase it when
 the task needs deeper planning or analysis.
 
@@ -123,7 +119,8 @@ making it useful for larger tasks that can be split across subagents.
 Use the model switcher below the composer to choose an available model and
 reasoning effort.
 
-Higher reasoning effort can improve results for complex tasks, but it takes
+**Reasoning effort** guides how much work the model puts into thinking through
+your request. Higher effort can improve results for complex tasks, but it takes
 longer and uses more tokens. Start with the default effort and increase it when
 the task needs deeper planning or analysis.
 
@@ -140,6 +137,21 @@ making it useful for larger tasks that can be split across subagents.
 
 </ContentModeSwitch>
 
+<ContentModeSwitch group="codex-surface" ids="app,web">
+
+In the ChatGPT desktop app and ChatGPT Work on the web, start with the default
+  Power setting available to your account. Move toward **Smarter** for deeper
+  reasoning or **Faster** for faster, lower-cost work. Open **Advanced** to
+  choose a specific model, reasoning effort, or speed. To try GPT-6.1 Terra in
+  this example, open **Advanced** and choose it from the model list.
+
+The six Power presets shown are Luna High, GPT-6 Sol Light (selected
+in this example), GPT-6 Sol Medium, Astra Light, Astra Medium, and Astra Extra
+High. Some paid plans omit Astra Extra High. Advanced controls are illustrative;
+available options and defaults vary by plan, client, workspace settings, and rollout.
+
+</ContentModeSwitch>
+
 <a id="recommended-models"></a>
 <a id="other-models"></a>
 <a id="deprecated-codex-models"></a>
@@ -151,21 +163,12 @@ making it useful for larger tasks that can be split across subagents.
 
 ## Recommended models
 
-For complex coding and agentic workflows, use GPT-6.1 Sol when available to your
-account and client. Use Luna for focused, repeatable tasks. Select `gpt-6.1-sol`
-or `gpt-6-luna` in your model picker or saved configuration when available.
+Start with the kind of work you want to do. Astra suits the most demanding
+workflows. GPT-6.1 Sol offers near-Astra performance at a lower cost than Astra.
+GPT-6.1 Terra is a fast, efficient choice for writing, visual understanding, and
+computer use. Luna suits focused, repeatable tasks.
 
-GPT-6.1 Sol offers near-Astra performance for complex work at a lower cost
-than Astra. See [GPT-6.1 Sol](#gpt-61-sol) for its separate rollout.
-
-In ChatGPT, GPT-6.1 Sol, GPT-6 Sol, and GPT-6 Luna are available in Work and
-Codex. They aren't available in Chat.
-
-GPT-5.6 Sol, GPT-5.6 Terra, and GPT-5.6 Luna remain available during the rollout. Selecting a
-new model doesn't change workspace permissions or grant access to it.
-
-For Ultrafast mode availability and credit usage on Pro $500 and eligible
-Enterprise and Edu plans, see [Speed](agent-configuration/speed.html#ultrafast-mode).
+These recommendations apply to ChatGPT Work and Codex. For Chat, see [models in ChatGPT](https://help.openai.com/en/articles/20001354-gpt-6-and-other-models-in-chatgpt) in the Help Center.
 
 <a id="app-compare-models"></a>
 
@@ -241,6 +244,52 @@ Enterprise and Edu plans, see [Speed](agent-configuration/speed.html#ultrafast-m
   }}
 />
 
+
+
+
+<a
+  id="gpt-61-terra"
+  data-codex-legacy-anchor
+  className="block scroll-mt-24"
+></a>
+
+<ModelDetails
+  client:load
+  name="gpt-6.1-terra"
+  slug="gpt-6.1-terra"
+  imageLabel="6.1 Terra"
+  wallpaperUrl="/images/api/models/gpt-6.1-terra-block.webp"
+  description="A fast, efficient model for clear writing, visual understanding, and computer use. Try it for drafting proposals, interpreting charts, or working with information in an app."
+  data={{
+    features: [
+      {
+        title: "Capability",
+        value: "",
+        icons: [
+          "openai.SparklesFilled",
+          "openai.SparklesFilled",
+          "openai.SparklesFilled",
+          "openai.SparklesFilled",
+          "openai.SparklesFilled",
+        ],
+      },
+      {
+        title: "Speed",
+        value: "",
+        icons: ["openai.Flash", "openai.Flash", "openai.Flash", "openai.Flash"],
+      },
+      { title: "Work and Codex in the desktop app", value: true },
+      { title: "ChatGPT Work on the web", value: true },
+      { title: "Codex CLI", value: true },
+      { title: "ChatGPT Credits", value: true },
+      { title: "API Access", value: true },
+    ],
+  }}
+/>
+
+
+
+
 <ModelDetails
   client:load
   name="gpt-6-luna"
@@ -277,53 +326,17 @@ Enterprise and Edu plans, see [Speed](agent-configuration/speed.html#ultrafast-m
 
 
 
-Availability depends on the rollout, your sign-in method, and your client.
-See [pricing](pricing.html) for plan access and usage, and
-[workspace model availability](enterprise/workspace-model-availability.html)
-for Enterprise access.
-
 </ContentModeSwitch>
 
+<a id="gpt-61-sol"></a>
 <a id="gpt-6.1-sol"></a>
 
-### GPT-6.1 Sol
+GPT-6.1 Sol uses a default context window of 500,000 tokens in Codex and
+ChatGPT Work. See [pricing](pricing.html) for subscription usage and credit rates.
 
-The GPT-6.1 Sol launch rollout includes Plus, Pro, Business, Enterprise, and Edu
-in Codex in the desktop app and CLI, and ChatGPT Work on the web and mobile.
-For Enterprise and Edu, the plan keeps GPT-6.1 Sol off by default until an
-administrator enables it.
-Free and Go are not included at launch.
-
-Standard and Fast modes are available where supported. Ultrafast is available
-on Pro $500 and eligible Enterprise and Edu plans. See
-[Ultrafast mode](agent-configuration/speed.html#ultrafast-mode) for plan and
-workspace requirements.
-
-Use `gpt-6.1-sol`. Available controls depend on your plan, client, and workspace
-settings.
-Reasoning effort ranges from Light to Ultra. Max and Ultra depend on your settings.
-
-See [pricing](pricing.html) for credit usage and
-[model selection](https://developers.openai.com/api/docs/guides/model-selection#when-to-consider-gpt-61-sol)
-for guidance on comparing it with Astra and Luna. To see how its API
-specifications differ from the previous Sol model, [compare GPT-6.1 Sol and
-GPT-6 Sol](https://developers.openai.com/api/docs/models/compare?model=gpt-6.1-sol&model2=gpt-6-sol).
-
-In the ChatGPT desktop app and ChatGPT Work on the web, start with the default
-  Power setting available to your account. Move toward **Smarter** for deeper
-  reasoning or **Faster** for faster, lower-cost work. Open **Advanced** to
-  choose a specific model, reasoning effort, or speed.
+For model availability, pricing, and usage limits, see [ChatGPT Work and Codex](https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex) in the Help Center.
 
 <ContentModeSwitch group="codex-surface" ids="app,web,cli,ide">
-
-<ContentModeSwitch group="codex-surface" ids="app,web">
-
-The six Power presets shown are Luna High, GPT-6 Sol Light (selected
-in this example), GPT-6 Sol Medium, Astra Light, Astra Medium, and Astra Extra
-High. Some paid plans omit Astra Extra High. Advanced controls are illustrative;
-available options and defaults vary by plan, client, workspace settings, and rollout.
-
-</ContentModeSwitch>
 
 <a id="choosing-sol-terra-and-luna"></a>
 
@@ -335,10 +348,10 @@ available options and defaults vary by plan, client, workspace settings, and rol
 
 ## Choosing a model
 
-Choose **Astra** when a task needs the strongest capability across steps and
-tools. **GPT-6.1 Sol** offers near-Astra performance at a lower cost
-than Astra. Use **GPT-6.1 Sol** when available to your account and client, and
-**Luna** for clear, repeatable tasks.
+Start with a task you know well and compare the result with what you need.
+Consider how long you're willing to wait, how much usage the task requires,
+and the level of detail or judgment involved. You can change models as your
+work changes.
 
 ### Where each model shines
 
@@ -350,11 +363,35 @@ than Astra. Use **GPT-6.1 Sol** when available to your account and client, and
 - **GPT-6.1 Sol, for repeated, long-running work.** Consider GPT-6.1 Sol for
   work across code, apps, and documents when cost matters. Keep Astra for your
   most demanding work.
+- **GPT-6.1 Terra, for everyday writing and visual work.** Choose Terra for clear
+  communication, interpreting images and screens, and completing tasks across
+  supported apps. Try it for drafting proposals, reviewing visual materials,
+  or filling out forms from source documents.
 - **Luna, for clear, repeatable tasks.** Choose Luna for specific, high-volume
   tasks when you know what a good result looks like, such as extraction,
   classification, transformation, and structured summaries.
 
+### Try an example
+
+Use your own materials with these prompts, and tell ChatGPT what a useful
+result should include.
+
+| Model         | Task                                           | Example prompt                                                                                                                                                                        |
+| ------------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Astra         | Work through a complex decision.               | "Compare these three vendor proposals against our requirements. Explain the tradeoffs, recommend an option, and list the questions we should resolve before deciding."                |
+| GPT-6.1 Sol   | Bring several sources into a working document. | "Use this project brief, meeting notes, and timeline to draft an implementation plan. Identify dependencies, flag conflicting details, and list the decisions we still need to make." |
+| GPT-6.1 Terra | Make sense of visual information.              | "Review these dashboard screenshots and summarize the main changes. Refer to the chart labels and values, and flag anything you can't read confidently."                              |
+| Luna          | Organize information into a consistent format. | "Turn these meeting notes into a table of action items, owners, and due dates. Mark any missing owner or date as unspecified."                                                        |
+
+Review the result against your source materials, especially names, numbers,
+and details taken from images. For tasks on websites or in desktop apps, check
+the [browser use](browser.html) and [computer use](computer-use.html) setup
+requirements first.
+
 ### Pick a reasoning effort
+
+For example, you might use a lower effort to rewrite a short email and a higher
+effort to compare several proposals with competing requirements.
 
 For GPT-6.1 Sol, start with the reasoning effort available by default in your
 client and adjust based on the task. Start with **High** for Luna or **Light**
@@ -391,6 +428,25 @@ slider, go to **Settings** > **Configuration**, then turn on
 **Ultra in model picker slider**.
 
 </ContentModeSwitch>
+
+## GPT-5.5 retirement
+
+Effective October 14, 2026, at noon PDT (19:00 UTC), GPT-5.5 retires from
+Codex for users signed in with ChatGPT. The OpenAI API and Codex sessions
+authenticated with an API key aren't affected.
+
+For Codex with ChatGPT sign-in, choose an available replacement:
+
+- On Plus, Pro, Business, Enterprise, and Edu plans, choose **GPT-6.1 Sol**
+  (`gpt-6.1-sol`) when available.
+- On Free and Go plans, choose **GPT-6 Luna** (`gpt-6-luna`) in the desktop app
+  when available.
+
+Replace `gpt-5.5` in workspace defaults, saved model settings, managed
+configurations, custom agents, scheduled tasks, and scripts that select a model.
+
+See [workspace model availability](enterprise/workspace-model-availability.html#prepare-for-the-gpt-55-retirement)
+for administrator guidance.
 
 <ContentModeSwitch group="codex-surface" ids="app,cli,ide">
 

@@ -38,6 +38,7 @@ starterPrompt:
     Create a research landscape or grant evidence brief with source links and
     claims that require faculty verification. Do not invent citations or
     overstate the evidence.
+  suggestedModel: gpt-6-astra
   suggestedEffort: high
 relatedLinks:
   - label: Plugins

@@ -112,7 +112,7 @@ The `detail` parameter controls the resolution the model uses when processing an
 
 This example intentionally includes small email and phone fields, not just the larger handwritten names. Those are the kinds of details that tend to degrade first when the image is downsampled.
 
-<img src="https://developers.openai.com/cookbook/assets/images/3c_insurance_form.png" alt="Handwritten insurance form" style="max-width: 100%; width: 720px;" />
+<img src="https://developers.openai.com/cookbook/assets/images/3C_insurance_form.png" alt="Handwritten insurance form" style="max-width: 100%; width: 720px;" />
 
 
 ````python
@@ -133,7 +133,7 @@ Read the handwritten earthquake insurance application and return JSON with these
 - year_of_construction
 """
 
-handwritten_form_path = "/cookbook/assets/images/3C_insurance_form.png"
+handwritten_form_path = "../../images/3C_insurance_form.png"
 handwriting_response = client.responses.create(
     model="gpt-5.4",
     input=[
@@ -191,7 +191,7 @@ The example below  `Ticket To The Arts` panel, asking for a full transcription o
 ````python
 section_prompt = "Transcribe everything in the Ticket To The Arts section. Do not summarize or paraphrase. Do not add any additional text."
 
-newspaper_path = "../../examples/multimodal//cookbook/assets/examples/multimodal/images/newspaper.png"
+newspaper_path = "../../examples/multimodal/images/newspaper.png"
 section_response = client.responses.create(
     model="gpt-5.4",
     input=[
@@ -313,7 +313,7 @@ Rules:
 - Return JSON only.
 """
 
-floorplan_path = "../../examples/multimodal//cookbook/assets/examples/multimodal/images/apartment_floorplan.png"
+floorplan_path = "../../examples/multimodal/images/apartment_floorplan.png"
 floorplan_response = client.responses.create(
     model="gpt-5.4",
     input=[
@@ -354,7 +354,7 @@ display(Markdown(f"### Floorplan reasoning result\n\n```json\n{json.dumps(floorp
 
 The same pattern shows up in chart understanding. If the task is simply to read a title or identify one plotted value, default settings may be enough. But if the answer depends on comparing multiple series, tracking changes across adjacent intervals, or estimating trends over time, reasoning becomes the limiting factor.
 
-<img src="https://developers.openai.com/cookbook/assets/images/notrealcorp_chart.png" alt="Line chart" style="max-width: 100%; width: 720px;" />
+<img src="https://developers.openai.com/cookbook/assets/images/NotRealCorp_chart.png" alt="Line chart" style="max-width: 100%; width: 720px;" />
 
 
 ````python
@@ -370,7 +370,7 @@ Rules:
 - Return JSON only.
 """
 
-chart_path = "/cookbook/assets/images/NotRealCorp_chart.png"
+chart_path = "../../images/NotRealCorp_chart.png"
 chart_response = client.responses.create(
     model="gpt-5.4",
     input=[
@@ -437,7 +437,7 @@ Rules:
 - Return JSON only.
 """
 
-bracket_path = "../../examples/multimodal//cookbook/assets/examples/multimodal/images/bracket.png"
+bracket_path = "../../examples/multimodal/images/bracket.png"
 bracket_response = client.responses.create(
     model="gpt-5.4",
     input=[
@@ -508,7 +508,7 @@ Use discrete normalized coordinates between 0 and 999.
 Return JSON only.
 """
 
-police_form_path = "../../examples/multimodal//cookbook/assets/examples/multimodal/images/police_form.png"
+police_form_path = "../../examples/multimodal/images/police_form.png"
 with Path(police_form_path).open("rb") as asset_file:
     uploaded_file = client.files.create(file=asset_file, purpose="user_data")
 

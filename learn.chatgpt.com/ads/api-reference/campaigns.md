@@ -54,9 +54,11 @@ Create a campaign for the current ad account. The Ads belonging to a campaign wi
 
 For location, platform, and custom audience targeting, see [Campaign Targeting](https://developers.openai.com/ads/campaign-targeting).
 
+For the limited Hotel beta, use `feed_selection` with `inventory_type: "hotel"` and `schema_profile: "hotel_property_v1"`; omit `mode` and `product_feed_id`. Hotel campaigns require Clicks with manual CPC bidding and audience targeting for the entire United States. Omitted Hotel targeting defaults to the United States. See [Create Hotel ads](https://developers.openai.com/ads/hotel-feeds#create-hotel-ads) for the complete request and current restrictions.
+
 ### Defaults
 
-If you omit `start_time`, the campaign will begin delivering immediately. If you omit location targeting, the campaign can target all available locations.
+If you omit `start_time`, the campaign has no delayed start. Delivery still requires active objects and the usual eligibility checks. Except for Hotel campaigns, omitting location targeting lets the campaign target all available locations.
 
 Omitting `targeting.platforms` or setting it to `null` adds no platform restriction.
 

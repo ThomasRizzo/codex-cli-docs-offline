@@ -50,7 +50,6 @@ Slash commands let you control Codex without leaving the composer. Use them to c
 | `/mcp`               | Open MCP status to view connected servers.                                              |
 | `/memories`          | Configure whether the chat can use or generate memories, when Memories is available.    |
 | `/model`             | Choose the model for the current chat.                                                  |
-| `/personality`       | Choose how Codex responds, when the current model supports personalities.               |
 | `/plan`              | Toggle plan mode for multi-step planning.                                               |
 | `/project`           | Choose a project for new chats.                                                         |
 | `/reasoning`         | Choose the reasoning effort for the current chat.                                       |

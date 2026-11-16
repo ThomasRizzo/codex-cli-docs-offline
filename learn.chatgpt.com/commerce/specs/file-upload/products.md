@@ -1,4 +1,4 @@
-# Products
+# Product feed schema
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
@@ -20,8 +20,9 @@ add the fields required for your Ads or checkout integration.
 ### Start with discovery
 
 Submit one row per purchasable item or variant. Include the nine required
-fields in [Basic product data](#basic-product-data), then add the optional data
-that describes your products. Ads and checkout have separate requirements.
+fields in [Basic product data](#basic-product-data) and the required
+`target_countries` and `store_country` fields in [Geo tagging](#geo-tagging),
+then add the optional data that describes your products. Ads and checkout have separate requirements.
 
 - [Basic product data](#basic-product-data) and [minimal example](#minimal-example)
 - [Identity and variants](#variants)
@@ -46,7 +47,7 @@ Use UTF-8 text and absolute HTTP or HTTPS URLs; prefer HTTPS. Product and image
 URLs must be publicly accessible. Keep identifiers as strings to preserve
 leading zeros. In CSV, quote a cell containing commas, quotes, or newlines, and
 double each embedded quote. JSON objects in CSV or TSV cells must be serialized
-as JSON. Use the [file upload guide](https://developers.openai.com/commerce/specs/file-upload/overview) for delivery.
+as JSON. See [Submit product feeds](https://developers.openai.com/commerce/guides/submit-product-feeds#implementation-steps) for delivery instructions.
 
 ### Basic product data
 
@@ -71,8 +72,8 @@ text; aim for at most 150 and 5,000 characters, respectively.
 This JSONL record describes one item. Search defaults to enabled and checkout
 to disabled. Ads defaults to disabled unless your feed has an Ads default configured.
 Replace the example URLs with your public product and image URLs.
-```jsonl
-{"item_id":"MUG-350-BLUE","title":"Blue ceramic mug, 350 mL","description":"Dishwasher-safe glazed ceramic mug with a handle.","url":"https://example.com/products/mug-blue","brand":"Northline","seller_name":"Northline Home","image_url":"https://example.com/images/mug-blue.jpg","price":"18.00 USD","availability":"in_stock"}
+```jsonl snippet=reference reason="Minimal product feed record for schema reference, not an executable upload program."
+{"item_id":"MUG-350-BLUE","title":"Blue ceramic mug, 350 mL","description":"Dishwasher-safe glazed ceramic mug with a handle.","url":"https://example.com/products/mug-blue","brand":"Northline","seller_name":"Northline Home","image_url":"https://example.com/images/mug-blue.jpg","price":"18.00 USD","availability":"in_stock","target_countries":["US"],"store_country":"US"}
 ```
 
 Use an explicit availability value. `unknown` does not assert that the item is
@@ -306,10 +307,10 @@ columns do not change that default. Use additional markets only after OpenAI
 confirms the integration and its allowed countries and currencies. A currency,
 product URL, or sizing system does not select a destination market.
 
-| Attribute          | Data type        | Requirement                     | Description                                                                                                                                                                                                                                             | Example  |
-| :----------------- | :--------------- | :------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :------- |
-| `target_countries` | Array of strings | Optional; requires market setup | Destination countries. Use uppercase ISO 3166-1 alpha-2 codes configured for your feed; the shared format currently represents `US`, `CA`, and `MX`. Standard uploads use `["US"]` regardless of this column. Omitted or empty does not mean worldwide. | `["US"]` |
-| `store_country`    | String           | Optional; requires market setup | Country of the seller's store. Standard uploads use `US` regardless of this column. It is not a regional price or stock override. Omitted or empty does not select another market.                                                                      | `US`     |
+| Attribute          | Data type        | Requirement | Description                                                                                                                                                                                                                                             | Example  |
+| :----------------- | :--------------- | :---------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :------- |
+| `target_countries` | Array of strings | Required    | Destination countries. Use uppercase ISO 3166-1 alpha-2 codes configured for your feed; the shared format currently represents `US`, `CA`, and `MX`. Standard uploads use `["US"]` regardless of this column. Omitted or empty does not mean worldwide. | `["US"]` |
+| `store_country`    | String           | Required    | Country of the seller's store. Standard uploads use `US` regardless of this column. It is not a regional price or stock override. Omitted or empty does not select another market.                                                                      | `US`     |
 
 Confirm multi-country support for your integration; do not rely on list order
 to choose a market.

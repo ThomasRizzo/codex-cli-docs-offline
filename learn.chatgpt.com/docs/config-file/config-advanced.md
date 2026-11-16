@@ -180,12 +180,11 @@ Set `project_root_markers = []` to skip searching parent directories and treat t
 ## Custom model providers
 
 If your organization provides a model gateway, follow
-[Sign in with ChatGPT through a gateway](../enterprise/sign-in-with-chatgpt-through-a-gateway.html)
-or [Use API/provider credentials](../enterprise/connect-to-a-gateway.html)
+[Connect to a gateway](../enterprise/connect-to-a-gateway.html)
 for client setup and verification. For organization-wide deployment, see
 [Roll out a gateway](../enterprise/roll-out-a-gateway.html).
 
-A model provider defines how Codex connects to a model (base URL, wire API, authentication, and optional HTTP headers). Custom providers can't reuse the reserved built-in provider IDs: `openai`, `ollama`, and `lmstudio`.
+A model provider defines how Codex connects to a model (base URL, wire API, authentication, and optional HTTP headers). Choose a unique ID for custom providers. Codex reserves `openai`, `ollama`, `lmstudio`, `amazon-bedrock`, `amazon-bedrock-runtime`, and `gcp` for its built-in providers.
 
 Define more providers and point `model_provider` at them:
 
@@ -232,6 +231,12 @@ http_headers = { "X-Example-Header" = "example-value" }
 env_http_headers = { "X-Example-Features" = "EXAMPLE_FEATURES" }
 ```
 
+To sign in through your organization's identity provider, use
+[native gateway OAuth](../enterprise/connect-to-a-gateway.html#use-native-gateway-oauth).
+Configure `[model_providers.<id>.gateway_oauth]` with the authorization and token
+URLs and the public client ID. If the gateway supports device-code sign-in,
+set `device_authorization_url` so CLI users can sign in over SSH.
+
 Use command-backed authentication when a provider needs Codex to fetch bearer tokens from an external credential helper:
 
 ```toml
@@ -251,9 +256,9 @@ The auth command receives no `stdin` and must print the token to stdout. Codex t
 
 ### Amazon Bedrock provider
 
-Codex includes a built-in `amazon-bedrock` model provider. Set it directly as
-`model_provider`; unlike custom providers, this built-in provider supports only
-the nested AWS profile and region overrides.
+Set `model_provider` to `amazon-bedrock` for the Bedrock Mantle endpoint or
+`amazon-bedrock-runtime` for the Runtime endpoint. To select the AWS credentials
+and region for Mantle, configure its `aws` table.
 
 ```toml
 model_provider = "amazon-bedrock"
@@ -270,6 +275,34 @@ If you omit `profile`, Codex uses the standard AWS credential chain. Set
 For the full setup flow, authentication options, supported models, and feature
 availability, see [Use ChatGPT Work and Codex with Amazon
 Bedrock](../amazon-bedrock.html).
+
+### Google Cloud Vertex AI provider
+
+To use a model your project can access on Vertex AI, set the built-in provider in `config.toml`.
+
+```toml
+model_provider = "gcp"
+
+[model_providers.gcp]
+project_id = "my-project"
+location = "global"
+```
+
+If you omit `project_id` or `location`, Codex reads `GOOGLE_CLOUD_PROJECT` or
+`GOOGLE_CLOUD_LOCATION`, respectively. The location defaults to `global`.
+
+To use default authentication, install the Google Cloud CLI on the machine
+running Codex. To sign in locally, run `gcloud auth application-default login`.
+Codex runs `gcloud auth application-default print-access-token` to obtain
+access tokens.
+
+To use a specific ADC file, set `credential_file` to its absolute path under
+`[model_providers.gcp]`. Codex sets `GOOGLE_APPLICATION_CREDENTIALS` to that
+path for the authentication command.
+
+If your deployment uses a different endpoint, token command, or static
+headers, configure `base_url`, `auth`, or `http_headers` under
+`[model_providers.gcp]`.
 
 ## OSS mode (local providers)
 
@@ -301,7 +334,7 @@ To change the base URL for the built-in OpenAI provider, use `openai_base_url`; 
 
 ## API organizations using data residency
 
-Projects created with [data residency](https://help.openai.com/en/articles/9903489-data-residency-and-inference-residency-for-chatgpt) enabled can create a model provider to update the `base_url` with the [correct prefix](https://developers.openai.com/api/docs/guides/your-data#which-models-and-features-are-eligible-for-data-residency). For ChatGPT workspaces with data residency, a custom provider isn't required; Codex respects workspace residency settings when you sign in with ChatGPT.
+Projects created with [data residency](https://help.openai.com/en/articles/9903489-data-residency-and-inference-residency-for-chatgpt) enabled can create a model provider to update the `base_url` with the [correct prefix](https://developers.openai.com/api/docs/guides/data-residency#which-models-and-features-are-eligible-for-data-residency). For ChatGPT workspaces with data residency, a custom provider isn't required; Codex respects workspace residency settings when you sign in with ChatGPT.
 
 ```toml
 model_provider = "openaidr"
@@ -313,10 +346,9 @@ base_url = "https://us.api.openai.com/v1" # Replace 'us' with domain prefix
 ## Model reasoning, verbosity, and limits
 
 ```toml
-model_reasoning_summary = "none"          # Disable summaries
-model_verbosity = "low"                   # Shorten responses
-model_supports_reasoning_summaries = true # Force reasoning
-model_context_window = 128000             # Context window size
+model_reasoning_summary = "none" # Disable summaries
+model_verbosity = "low"          # Shorten responses
+model_context_window = 128000    # Context window size
 ```
 
 `model_verbosity` applies only to providers using the Responses API. Chat Completions providers will ignore the setting.
@@ -336,15 +368,12 @@ For beta permission profiles that configure filesystem and network access togeth
 You can also use a granular approval policy (`approval_policy = { granular = { ... } }`) to allow or auto-reject individual prompt categories. This is useful when you want normal interactive approvals for some cases but want others, such as `request_permissions` or skill-script prompts, to fail closed automatically.
 
 Set `approvals_reviewer = "auto_review"` to route eligible interactive approval
-requests through automatic review. This changes the reviewer, not the sandbox
-boundary.
-
-Use `[auto_review].policy` for local reviewer policy instructions. Managed
-`guardian_policy_config` takes precedence.
+requests through Auto-review. To replace the reviewer policy, see
+[Auto-review configuration](../sandboxing/auto-review.html#configuration).
 
 ```toml
 approval_policy = "on-request"  # Other options: never or { granular = { ... } }
-approvals_reviewer = "user"     # Or "auto_review" for automatic review
+approvals_reviewer = "user"     # Or "auto_review" for Auto-review
 sandbox_mode = "workspace-write"
 allow_login_shell = false       # Optional hardening: disallow login shells for shell tools
 
@@ -362,11 +391,6 @@ exclude_tmpdir_env_var = false  # Allow $TMPDIR
 exclude_slash_tmp = false       # Allow /tmp
 writable_roots = ["/Users/YOU/.pyenv/shims"]
 network_access = false          # Opt in to outbound network
-
-[auto_review]
-policy = """
-Use your organization's automatic review policy.
-"""
 ```
 
 ### Named permission profiles
@@ -444,6 +468,9 @@ exporter = "none"         # set to otlp-http or otlp-grpc to send events
 log_user_prompt = false   # redact user prompts unless explicitly enabled
 ```
 
+Administrators can enforce the exporters and individual logging settings in
+[`requirements.toml`](../enterprise/managed-configuration.html#enforce-opentelemetry-settings).
+
 Choose an exporter:
 
 ```toml
@@ -474,6 +501,8 @@ Codex emits structured log events for runs and tool usage. Representative event 
 - `codex.sse_event` (stream event kind, success/failure, duration, plus token counts on `response.completed`)
 - `codex.websocket_request` and `codex.websocket_event` (request duration plus per-message kind/success/error)
 - `codex.user_prompt` (length; content redacted unless explicitly enabled)
+- `codex.agent_response` (final answers from the main agent and spawned subagents when `otel.log_agent_responses = true`)
+- `codex.guardian_assessment` (completed automatic approval reviews when `otel.log_guardian_assessments = true`)
 - `codex.tool_decision` (approved/denied and whether the decision came from config vs user)
 - `codex.tool_result` (duration, success, output snippet)
 
@@ -502,14 +531,14 @@ For more security and privacy guidance around telemetry, see [Security](../agent
 
 By default, Codex periodically sends a small amount of anonymous usage and health data back to OpenAI. This helps detect when Codex isn't working correctly and shows what features and configuration options are being used, so the Codex team can focus on what matters most. These metrics don't contain any personally identifiable information (PII). Metrics collection is independent of OTel log/trace export.
 
-To disable analytics and metrics collection in Codex CLI, set the analytics flag in your config:
+To disable analytics and the built-in `statsig` metrics exporter, set the analytics flag in your config:
 
 ```toml
 [analytics]
 enabled = false
 ```
 
-This also disables custom OTLP metrics exporters in Codex CLI.
+To disable a custom OTLP metrics exporter as well, set `otel.metrics_exporter = "none"`.
 
 Each metric includes its own fields plus the default context fields below.
 
@@ -658,14 +687,14 @@ The elevated setup failure metrics include `code` and `message` when Windows set
 
 ### Feedback controls
 
-By default, local clients let users send feedback from `/feedback`. To disable feedback collection across the ChatGPT desktop app, Codex CLI, and IDE extension on a machine, update your config:
+By default, local clients let users send feedback from `/feedback`. To disable feedback uploads across the ChatGPT desktop app, Codex CLI, and IDE extension on a machine, update your config:
 
 ```toml
 [feedback]
 enabled = false
 ```
 
-When disabled, `/feedback` shows a disabled message and Codex rejects feedback submissions.
+If your local app server supports diagnostic archives, press <kbd>Ctrl</kbd>+<kbd>&nbsp;S&nbsp;</kbd> in the CLI `/feedback` editor to save a ZIP locally, even when uploads are off.
 
 ### Hide or surface reasoning events
 
@@ -695,26 +724,42 @@ Example `notify.py` (truncated) that reacts to `agent-turn-complete`:
 
 ```python
 #!/usr/bin/env python3
-import json, subprocess, sys
+import argparse
+import json
+import subprocess
+import sys
+
 
 def main() -> int:
-    notification = json.loads(sys.argv[1])
+    parser = argparse.ArgumentParser(
+        description="Show a Codex turn-completion notification on macOS."
+    )
+    parser.add_argument("notification", type=json.loads, help="Codex notification JSON")
+    notification = parser.parse_args().notification
     if notification.get("type") != "agent-turn-complete":
         return 0
     title = f"Codex: {notification.get('last-assistant-message', 'Turn Complete!')}"
     message = " ".join(notification.get("input-messages", []))
-    subprocess.check_output([
-        "terminal-notifier",
-        "-title", title,
-        "-message", message,
-        "-group", "codex-" + notification.get("thread-id", ""),
-        "-activate", "com.googlecode.iterm2",
-    ])
+    subprocess.check_output(
+        [
+            "terminal-notifier",
+            "-title",
+            title,
+            "-message",
+            message,
+            "-group",
+            "codex-" + notification.get("thread-id", ""),
+            "-activate",
+            "com.googlecode.iterm2",
+        ]
+    )
     return 0
+
 
 if __name__ == "__main__":
     sys.exit(main())
 ```
+
 
 The script receives a single JSON argument. Common fields include:
 

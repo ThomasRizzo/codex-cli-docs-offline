@@ -52,7 +52,6 @@ starterPrompt:
     Do not send emails, post Slack messages, create docs, update CRM records,
     assign owners, or expose private data until I review and approve each
     action.
-  suggestedModel: gpt-6-astra
   suggestedEffort: low
 relatedLinks:
   - label: Plugins

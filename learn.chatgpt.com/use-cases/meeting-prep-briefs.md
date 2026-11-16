@@ -106,25 +106,19 @@ Ask for the smallest output that will help. You should get something like this:
 
 
 **Objective:** decide whether the launch plan has enough owner
-    coverage for the next two weeks.
-  
+coverage for the next two weeks.
 
-  
 
-    **Context:** the pre-read has a draft owner map, but two
-    follow-up items in Slack still need dates.
-  
+**Context:** the pre-read has a draft owner map, but two
+follow-up items in Slack still need dates.
 
-  
 
-    **Questions:** who owns partner review, and what is the latest
-    date for the public copy freeze?
-  
+**Questions:** who owns partner review, and what is the latest
+date for the public copy freeze?
 
-  
 
-    **Notes template:** decisions, owners, dates, risks, and
-    follow-ups.
+**Notes template:** decisions, owners, dates, risks, and
+follow-ups.
 
 
 

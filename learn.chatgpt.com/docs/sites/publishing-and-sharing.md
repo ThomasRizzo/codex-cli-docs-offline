@@ -90,7 +90,9 @@ External invitations let you share a site with named viewers without making it p
 
 External invitations are rolling out to sites users on Plus, Pro, Business,
   and Enterprise plans. If the invitation option is missing, check the selected
-  account, site ownership, workspace permissions, and rollout availability.
+  account, site ownership, and rollout availability. In Enterprise and Business
+  workspaces, ask your admin to check the [workspace settings for
+  Sites](../enterprise/sites.html#workspace-admin-controls).
 
 <WorkflowSteps>
 
@@ -108,8 +110,6 @@ External invitations are rolling out to sites users on Plus, Pro, Business,
 External viewers can open and use the site. They don't become workspace
 members or site editors, and can't edit or publish the site. The invitation
 grants access to this site; review its content and connected data before sharing.
-
-In Enterprise, admins manage **Allow members to invite external visitors to sites** under **Workspace settings > Permissions & roles**. This permission is separate from permission to publish sites publicly. Business workspaces don't have a separate external-invitation toggle; sites must be enabled and the feature must be available to the account.
 
 To remove a viewer, open the site's sharing controls and remove their access.
 Also check the remaining audience settings: removing one invitation doesn't
@@ -146,5 +146,13 @@ site before editors can publish later updates.
 Editor access is separate from visitor access. The steps above first add the
 person as a visitor, then grant editing access. Promoting a visitor to editor
 doesn't change the site's audience setting.
+
+### Adapt a site for another team
+
+Co-editing helps you maintain one site together. If another team needs its own version for a different project or purpose, **Remix** offers an alternative.
+
+For example, a project team can co-edit one hub to keep its milestones current. Another team can remix that hub to use its layout with their own milestones and resources. Follow the [Remix walkthrough](creating-a-site.html#start-from-an-existing-site-with-remix) to adapt a site, then review the result for its new audience before sharing it.
+
+For current sharing and editor permissions, see [Creating and using ChatGPT Sites](https://help.openai.com/en/articles/20001339-creating-and-using-chatgpt-sites) in the Help Center.
 
 <SitesReferenceNavigation />

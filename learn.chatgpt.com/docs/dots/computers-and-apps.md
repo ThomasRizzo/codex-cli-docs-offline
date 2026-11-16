@@ -24,6 +24,14 @@ keep its state between periods of use. It has its own files, software, and
 browser sessions. Signing in to a website on your computer doesn't sign your
 dot in to that website.
 
+## Annotate a browser page or file
+
+Browser and file annotations are rolling out in the ChatGPT desktop app for Pro, Business Premium, and Enterprise. Use an annotation to show your dot which part of a page or file you want it to work on.
+
+For a browser page, use the annotation tool in the in-app browser toolbar. Select the part of the page you want to discuss, add a comment, and send it to your dot.
+
+For a file, open a PDF, document, presentation, or spreadsheet in your own dot. Select the part you want to discuss, add a comment, and select **Send** in the file viewer.
+
 ## Cloud threads
 
 Your dot can start separate threads for cloud work. These appear in your desktop, web, and mobile apps, where you can review results and give further instructions while your dot continues coordinating. For coding work, it can use a Codex cloud environment you’ve set up with the repository and configuration it needs.
@@ -59,16 +67,22 @@ A saved login and an active website session are different. Your dot can continue
 using a valid session without signing in again. Reusing a saved login to sign in
 requires your confirmation.
 
-## Connect your computer
+
+
+
+
+## Connect your computers
 
 Connect your computer once to make its local files, code, and apps available
 for your dot’s work:
 
 1. Open your dot's profile in the ChatGPT app on that computer.
-2. Under **Computers**, find **Your computer** and select **Allow access**.
+2. Under **Computers**, find the computer you’re using and select **Allow**.
 3. Review the confirmation and select **Allow access** to connect it.
 
-You can connect only one personal computer at a time. Your dot’s cloud computer stays connected. Access to your computer applies
+To connect another computer, repeat these steps in the ChatGPT app on that computer. Ask your dot to start a separate thread on each computer for independent tasks. Each thread uses one computer at a time.
+
+Your dot’s cloud computer stays connected. Access to your computer applies
 wherever you message the same dot, including from your phone.
 
 Your dot can create local Work or Codex tasks and continue existing local Codex
@@ -93,7 +107,7 @@ enabling Work Sync. Neither connection alone gives your dot access.
 
 Your dot can use supported [plugins](../plugins.html) installed and enabled for your account. Access depends on the plugin’s connected account, permissions, and the environment where the work runs. Local skills require a connected computer.
 
-For example, connect Gmail to find relevant email, Google Drive to read and update documents, or GitHub to investigate an issue and prepare a pull request. Install and connect each plugin you want your dot to use.
+For example, connect Gmail to find relevant email, Google Drive to read and update documents, or GitHub to investigate an issue and prepare a pull request. Install and connect each plugin you want your dot to use. On iOS, supported Gmail message links from your dot open the referenced email in the Gmail app when available, or in your browser.
 
 Review
 the connected account and its allowed actions. Your existing ChatGPT app

@@ -6,9 +6,13 @@
 
 Create a Hotel feed in Ads Manager or through the Ads API, then upload a full snapshot of your properties. Each row describes one property, not a room, offer, or dated stay. This is the `hotel_property_v1` format; don't use the [Product feed schema](https://developers.openai.com/commerce/specs/file-upload/products) for a Hotel feed.
 
+After ingestion, [query the properties](#query-hotel-items), [create Hotel ads](#create-hotel-ads), and [request an ad preview](#preview-a-hotel-ad) through the public Ads API.
+
 ## Before you start
 
 You need an ad account approved for the limited beta and permission to manage its feeds. SFTP setup also requires permission to manage feed credentials. Prepare a UTF-8 CSV or tab-delimited TXT file using the [submission format](#submission-format), and replace example URLs with your property pages and images.
+
+We strongly recommend including a [starting price](#pricing-and-categorization) (`base_price`) and complete [guest ratings](#guest-ratings) whenever available. These details help people assess price and guest experience, making your ad more informative and compelling.
 
 Choose a setup method:
 
@@ -97,6 +101,202 @@ put /path/to/hotels.csv hotels.csv
 ```
 
 Place the file directly in the SFTP root, not a nested folder. File transfer and ingestion are separate: a successful upload doesn't mean that every property was accepted or can serve in an ad. Check the Hotel feed's **Upload History** in Ads Manager for processing results and diagnostics.
+
+### 4. List Hotel feeds and uploads
+
+Specify `inventory_type=hotel` when listing feeds or upload history. Both lists default to Product inventory when you omit this parameter.
+
+```bash
+curl -G "https://api.ads.openai.com/v1/feeds" \
+  -H "Authorization: Bearer ${OPENAI_ADS_API_KEY}" \
+  --data-urlencode "inventory_type=hotel"
+
+curl -G "https://api.ads.openai.com/v1/feeds/uploads" \
+  -H "Authorization: Bearer ${OPENAI_ADS_API_KEY}" \
+  --data-urlencode "inventory_type=hotel" \
+  --data-urlencode "feed_id=fd_123"
+```
+
+The upload-history request returns uploads for that feed. Omit `feed_id` to list Hotel uploads across the account.
+
+## Query Hotel items
+
+Use `POST /v1/feeds/{feed_id}/items/query` to inspect properties and try the filters you plan to save in an ad group. This endpoint supports Product and Hotel feeds and returns each inventory type's native fields. The existing `/products/query` endpoint is Product-specific.
+
+```bash
+curl -X POST "https://api.ads.openai.com/v1/feeds/fd_123/items/query" \
+  -H "Authorization: Bearer ${OPENAI_ADS_API_KEY}" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "filters": [
+      {"field": "country", "operator": "in", "values": ["US"]}
+    ],
+    "limit": 20
+  }'
+```
+
+The query returns current, non-deleted, non-expired items that are eligible for ads and match the filters. Review approval isn't required. A returned item might still be unavailable for an ad preview or ad delivery.
+
+Example response, with property fields abbreviated:
+
+```json
+{
+  "object": "list",
+  "feed_id": "fd_123",
+  "inventory_type": "hotel",
+  "schema_profile": "hotel_property_v1",
+  "data": [
+    {
+      "item_id": "hotel_001",
+      "hotel_id": "hotel_001",
+      "name": "Harbor House Hotel",
+      "base_price": "149.00 USD"
+    }
+  ],
+  "total_count": 3,
+  "matched_count": 1,
+  "first_id": "hotel_001",
+  "last_id": "hotel_001",
+  "has_more": false
+}
+```
+
+Hotel records also include native fields such as `url`, `images`, `location`, `guest_ratings`, and `ads_metadata`. The JSON response uses nested objects and arrays; the [submission format](#submission-format) describes the flattened columns used in uploaded CSV and TXT files.
+
+`total_count` counts eligible items before applying your filters; `matched_count` counts those matching the filters. Both counts cover the full result, before pagination. `limit` defaults to `20` and accepts values from `1` through `500`. When `has_more` is `true`, repeat the request with the same filters and pass the returned `last_id` unchanged as `after`. For `hotel_property_v1`, `item_id` equals `hotel_id`; IDs are scoped to a feed.
+
+### Choose Hotel Set filters
+
+A Hotel Set selects the properties an ad group can use from its campaign's feed. Use the same filters in `items/query` and the ad group's `feed_set.filters`.
+
+| Field                | Operators                                                 | Example `values`                                |
+| -------------------- | --------------------------------------------------------- | ----------------------------------------------- |
+| `country`            | `in`, `not_in`                                            | `["US"]`                                        |
+| `region`             | `in`, `not_in`                                            | `["[\"US\",\"California\"]"]`                   |
+| `city`               | `in`, `not_in`                                            | `["[\"US\",\"California\",\"San Francisco\"]"]` |
+| `category`           | `in`, `not_in`, `contains`, `not_contains`, `starts_with` | `["Hotel & Hospitality"]`                       |
+| `ads_metadata.<key>` | `in`, `not_in`, `contains`, `not_contains`, `starts_with` | `["waterfront"]`                                |
+
+Region and city values are JSON-encoded location paths. For a city without a region, use `null` for the middle element, such as `["US",null,"Example City"]`, then encode that array as a string in `values`.
+
+All filter clauses must match. For `in`, any value within the clause can match. Matching is case-insensitive. Missing fields don't match negative filters. Use each field at most once; `contains`, `not_contains`, and `starts_with` each take one value. Send `"filters": []` to select the whole eligible feed.
+
+Hotel filters support the fields in this table, rather than Product-only fields such as `brand` or `price`. Filtering by `hotel_id` isn't supported; use `ads_metadata` labels to define property groups. These filters select properties, not the audience locations where your campaign can deliver.
+
+## Create Hotel ads
+
+Create a campaign that selects the Hotel feed, an ad group that selects a Hotel Set, and one ad template for that group. Replace `fd_123`, `cmpn_123`, `adgrp_123`, and `ad_123` with the IDs returned by your requests.
+
+The examples create paused objects with a $100 lifetime budget and a $1 click bid for a USD account. Use amounts appropriate to your account's currency and advertising plan. Replace the example idempotency keys for new operations, and reuse each key only when retrying the same request body.
+
+### 1. Create the campaign
+
+Use `feed_selection` with the Hotel inventory type and schema profile. Don't combine it with the legacy `mode` or `product_feed_id` fields.
+
+```bash
+curl -X POST "https://api.ads.openai.com/v1/campaigns" \
+  -H "Authorization: Bearer ${OPENAI_ADS_API_KEY}" \
+  -H "Content-Type: application/json" \
+  -H "Idempotency-Key: hotel-campaign-001" \
+  -d '{
+    "name": "Harbor House hotels",
+    "status": "paused",
+    "enable_dynamic_creative": false,
+    "budget": {"lifetime_spend_limit_micros": 100000000},
+    "bidding_type": "clicks",
+    "objective": "clicks",
+    "billing_event_type": "click",
+    "feed_selection": {
+      "feed_id": "fd_123",
+      "inventory_type": "hotel",
+      "schema_profile": "hotel_property_v1"
+    }
+  }'
+```
+
+Save the returned campaign `id`. Hotel campaigns currently support the Clicks objective with manual cost-per-click (CPC) bidding and audience targeting for the entire United States. Omitting targeting on creation selects the United States. Geographic exclusions, narrower audience locations, and restrictive platform targeting aren't supported. You can omit `start_time` and `end_time`, or send `null`, when you don't need a schedule.
+
+### 2. Create the ad group
+
+Use `feed_set` for a Hotel Set and keep its feed ID equal to the campaign's selected feed. Don't use `product_set` for Hotel inventory. This example reuses the `country` filter from the item query to select properties in the United States.
+
+```bash
+curl -X POST "https://api.ads.openai.com/v1/ad_groups" \
+  -H "Authorization: Bearer ${OPENAI_ADS_API_KEY}" \
+  -H "Content-Type: application/json" \
+  -H "Idempotency-Key: hotel-ad-group-001" \
+  -d '{
+    "campaign_id": "cmpn_123",
+    "name": "US hotels",
+    "status": "paused",
+    "bidding_config": {
+      "billing_event_type": "click",
+      "strategy": "fixed_bid",
+      "max_bid_micros": 1000000
+    },
+    "feed_set": {
+      "feed_id": "fd_123",
+      "inventory_type": "hotel",
+      "schema_profile": "hotel_property_v1",
+      "filters": [
+        {"field": "country", "operator": "in", "values": ["US"]}
+      ]
+    }
+  }'
+```
+
+Save the returned ad group `id`. Hotel ad groups require `fixed_bid`; automated bidding isn't supported. Use an empty `filters` array to select the feed without additional property filters.
+
+### 3. Create the ad template
+
+Hotel ads use `product_ad_template` and the existing `{{product.*}}` template names. Set `body` to `{{product.body}}` and `price` to `{{product.price}}`. The selected property supplies the image and destination, so omit `creative.file_id` and `creative.target_url`.
+
+```bash
+curl -X POST "https://api.ads.openai.com/v1/ads" \
+  -H "Authorization: Bearer ${OPENAI_ADS_API_KEY}" \
+  -H "Content-Type: application/json" \
+  -H "Idempotency-Key: hotel-ad-001" \
+  -d '{
+    "ad_group_id": "adgrp_123",
+    "name": "US hotel ad",
+    "status": "paused",
+    "creative": {
+      "type": "product_ad_template",
+      "title": "Stay at {{product.title}}",
+      "body": "{{product.body}}",
+      "price": "{{product.price}}"
+    }
+  }'
+```
+
+Save the returned ad `id`. Each feed ad group supports one template ad. A paused, submitted ad can be previewed; a draft-only ad can't.
+
+Pausing is an example choice, not a Hotel requirement. To create active objects, set `"status": "active"` in all three creation requests. To activate these paused examples later, use `POST /ads/{ad_id}/activate`, `POST /ad_groups/{ad_group_id}/activate`, and `POST /campaigns/{campaign_id}/activate`. Active status doesn't bypass review, account readiness, or other delivery requirements.
+
+## Preview a Hotel ad
+
+Call `POST /v1/ads/{ad_id}/preview` without a request body. The server selects one property matching the ad group's saved Hotel Set; you can't pass a property ID or different filters to this endpoint.
+
+```bash
+curl -X POST "https://api.ads.openai.com/v1/ads/ad_123/preview" \
+  -H "Authorization: Bearer ${OPENAI_ADS_API_KEY}"
+```
+
+Embed the returned `data[0].body` HTML. For example:
+
+```json
+{
+  "data": [
+    {
+      "body": "<iframe src=\"https://ads.openai.com/previews/adprev_123?token=PREVIEW_TOKEN\" width=\"390\" height=\"320\" scrolling=\"no\" style=\"border: none;\"></iframe>"
+    }
+  ]
+}
+```
+
+Hotel previews require a current, active, ads-eligible, review-approved property matching the saved Hotel Set. If no such property is available, the request returns HTTP `422`, even if `items/query` returns records. The card shows the property's starting price and guest rating when present; missing optional values are omitted. Property stars aren't guest review scores.
+
+The signed link allows viewing without signing in and expires 24 hours after the snapshot is created. Repeated requests can reuse a snapshot without resetting its expiration. Keep the link private, and request a new preview after changing the ad or feed data. A saved preview doesn't check stay-date availability or guarantee ad delivery.
 
 ## Submission format
 
@@ -192,7 +392,7 @@ These fields describe the property independently of travel dates. `base_price` i
 | `category`     | No       | One scalar hotel category; up to 200 characters.                                                                                                                                       |
 | `ads_metadata` | No       | JSON object with up to 50 string-valued entries. Nonempty keys can have up to 80 characters; nonempty values can have up to 200. Keys must be unique without regard to capitalization. |
 
-For example, an `ads_metadata` value before CSV escaping is `{"custom_label_0":"waterfront"}`. Keep metadata inside this JSON object; a top-level `custom_label_0` column isn't part of the Hotel schema. Confirm supported Hotel Set filters with your OpenAI account team; this reference defines the feed format, not campaign targeting.
+For example, an `ads_metadata` value before CSV escaping is `{"custom_label_0":"waterfront"}`. Keep metadata inside this JSON object; a top-level `custom_label_0` column isn't part of the Hotel schema. Use [Hotel Set filters](#choose-hotel-set-filters) to select properties by these labels; property selection is separate from campaign audience targeting.
 
 ## Guest ratings
 

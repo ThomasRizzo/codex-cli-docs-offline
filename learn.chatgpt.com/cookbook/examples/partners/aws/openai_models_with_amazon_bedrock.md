@@ -408,7 +408,7 @@ def require(condition: Any, message: str) -> None:
 def warn_or_raise(condition: bool, message: str) -> bool:
     if condition:
         return True
-    display(HTML(f"<div style=\"border-left:4px solid #d29922; padding:6px 10px; background:#fff8c5;\"><strong>Warning:</strong> {html.escape(message)}</div>"))
+    display(HTML(f"<div style=\"border-left:4px solid #d29922; padding:6px 10px;\"><strong>Warning:</strong> {html.escape(message)}</div>"))
     if FAIL_ON_CHECK_FAILURE:
         raise AssertionError(message)
     return False
@@ -419,7 +419,7 @@ def display_text_block(label: str, text: Any, *, limit: int = MAX_DISPLAY_TEXT_C
     safe_text = html.escape(truncate_display_text(text, limit=limit))
     display(HTML(f"""
     <div style="border:1px solid #d0d7de; border-radius:6px; margin:8px 0; overflow:hidden; font-size:13px;">
-      <div style="background:#f6f8fa; padding:6px 8px; font-weight:600;">{safe_label}</div>
+      <div style="padding:6px 8px; font-weight:600;">{safe_label}</div>
       <div style="padding:8px; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.45;">{safe_text}</div>
     </div>
     """))
@@ -544,7 +544,7 @@ def print_response_summary(response_or_summary: Any) -> None:
 
 
 def print_key_takeaway(text: str) -> None:
-    display(HTML(f"<div style=\"border-left:4px solid #1f6feb; padding:6px 10px; background:#f6f8fa; margin:8px 0;\"><strong>Key takeaway:</strong> {html.escape(text)}</div>"))
+    display(HTML(f"<div style=\"border-left:4px solid #1f6feb; padding:6px 10px; margin:8px 0;\"><strong>Key takeaway:</strong> {html.escape(text)}</div>"))
 
 
 def redact_payload(payload: dict[str, Any]) -> dict[str, Any]:
@@ -831,7 +831,7 @@ except Exception as exc:
 </table>
 
 <div style="border:1px solid #d0d7de; border-radius:6px; margin:8px 0; overflow:hidden; font-size:13px;">
-      <div style="background:#f6f8fa; padding:6px 8px; font-weight:600;">Result</div>
+      <div style="padding:6px 8px; font-weight:600;">Result</div>
       <div style="padding:8px; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.45;">ok</div>
     </div>
 
@@ -888,7 +888,7 @@ except Exception as exc:
   </tbody>
 </table>
 
-<div style="border-left:4px solid #1f6feb; padding:6px 10px; background:#f6f8fa; margin:8px 0;"><strong>Key takeaway:</strong> A tiny response confirms that the endpoint, key, model, and request shape are working.</div>
+<div style="border-left:4px solid #1f6feb; padding:6px 10px; margin:8px 0;"><strong>Key takeaway:</strong> A tiny response confirms that the endpoint, key, model, and request shape are working.</div>
 
 ### 1.7 Normalize API Errors
 
@@ -907,7 +907,7 @@ print_json(error_taxonomy_example)
 ```
 
 <div style="border:1px solid #d0d7de; border-radius:6px; margin:8px 0; overflow:hidden; font-size:13px;">
-      <div style="background:#f6f8fa; padding:6px 8px; font-weight:600;">JSON</div>
+      <div style="padding:6px 8px; font-weight:600;">JSON</div>
       <div style="padding:8px; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.45;">{
   "normalized_fields": [
     "exception_class",
@@ -983,11 +983,11 @@ print_key_takeaway('The curl command shows the raw HTTPS shape behind the SDK ca
 </table>
 
 <div style="border:1px solid #d0d7de; border-radius:6px; margin:8px 0; overflow:hidden; font-size:13px;">
-      <div style="background:#f6f8fa; padding:6px 8px; font-weight:600;">Result</div>
+      <div style="padding:6px 8px; font-weight:600;">Result</div>
       <div style="padding:8px; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.45;">curl -sS https://bedrock-mantle.us-west-2.api.aws/openai/v1/responses -H 'Content-Type: application/json' -H 'Authorization: Bearer $AWS_BEARER_TOKEN_BEDROCK' -d '{"model": "openai.gpt-5.4", "input": "BrightCart customer Maya asks why replacement order ORDER-8831 is delayed. Write two labeled plain-text lines for the support agent. Do not use leading hyphens or bold text.", "max_output_tokens": 1024, "store": false}'</div>
     </div>
 
-<div style="border-left:4px solid #1f6feb; padding:6px 10px; background:#f6f8fa; margin:8px 0;"><strong>Key takeaway:</strong> The curl command shows the raw HTTPS shape behind the SDK call.</div>
+<div style="border-left:4px solid #1f6feb; padding:6px 10px; margin:8px 0;"><strong>Key takeaway:</strong> The curl command shows the raw HTTPS shape behind the SDK call.</div>
 
 ### 2.2 Send the Raw HTTPS Request
 
@@ -1049,13 +1049,13 @@ except Exception as exc:
 </table>
 
 <div style="border:1px solid #d0d7de; border-radius:6px; margin:8px 0; overflow:hidden; font-size:13px;">
-      <div style="background:#f6f8fa; padding:6px 8px; font-weight:600;">Result</div>
+      <div style="padding:6px 8px; font-weight:600;">Result</div>
       <div style="padding:8px; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.45;">Empathy: I’m sorry, Maya — your replacement order ORDER-8831 is delayed because the carrier reported a temporary transit hold at the regional sorting facility.
 Action: We’re monitoring the shipment closely and will send you an updated delivery estimate within 24 hours; if there’s no movement by then, we’ll review the next replacement or refund options with you.</div>
     </div>
 
 <div style="border:1px solid #d0d7de; border-radius:6px; margin:8px 0; overflow:hidden; font-size:13px;">
-      <div style="background:#f6f8fa; padding:6px 8px; font-weight:600;">Response summary</div>
+      <div style="padding:6px 8px; font-weight:600;">Response summary</div>
       <div style="padding:8px; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.45;">{
   "id": "resp_naythl6fvzhoctlsdogd4vpr673q5ibagqqpiujbast3sy6viroa",
   "model": "openai.gpt-5.4",
@@ -1063,7 +1063,7 @@ Action: We’re monitoring the shipment closely and will send you an updated del
 }</div>
     </div>
 
-<div style="border-left:4px solid #1f6feb; padding:6px 10px; background:#f6f8fa; margin:8px 0;"><strong>Key takeaway:</strong> The response body contains message output that application code can extract as text.</div>
+<div style="border-left:4px solid #1f6feb; padding:6px 10px; margin:8px 0;"><strong>Key takeaway:</strong> The response body contains message output that application code can extract as text.</div>
 
 ### 2.3 Use the OpenAI SDK
 
@@ -1131,7 +1131,7 @@ except Exception as exc:
 </table>
 
 <div style="border:1px solid #d0d7de; border-radius:6px; margin:8px 0; overflow:hidden; font-size:13px;">
-      <div style="background:#f6f8fa; padding:6px 8px; font-weight:600;">Result</div>
+      <div style="padding:6px 8px; font-weight:600;">Result</div>
       <div style="padding:8px; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.45;">Use the Responses API to build a BrightCart support assistant that can answer customer questions, summarize policies, and guide users through common workflows like order tracking, refunds, and account updates. Ground the assistant in BrightCart documentation and connect it to relevant backend tools or APIs so it can retrieve live order data, check account status, and provide accurate, context-aware support responses. Design the experience around clear system instructions, structured tool calling, and conversation state management so the assistant stays on-brand, reliable, and safe when handling customer issues.</div>
     </div>
 
@@ -1188,7 +1188,7 @@ except Exception as exc:
   </tbody>
 </table>
 
-<div style="border-left:4px solid #1f6feb; padding:6px 10px; background:#f6f8fa; margin:8px 0;"><strong>Key takeaway:</strong> The SDK returns a response object with text, status, token usage, and output item metadata.</div>
+<div style="border-left:4px solid #1f6feb; padding:6px 10px; margin:8px 0;"><strong>Key takeaway:</strong> The SDK returns a response object with text, status, token usage, and output item metadata.</div>
 
 ### 2.4 Create and Retrieve a Response
 
@@ -1262,14 +1262,14 @@ except Exception as exc:
 </table>
 
 <div style="border:1px solid #d0d7de; border-radius:6px; margin:8px 0; overflow:hidden; font-size:13px;">
-      <div style="background:#f6f8fa; padding:6px 8px; font-weight:600;">Result</div>
+      <div style="padding:6px 8px; font-weight:600;">Result</div>
       <div style="padding:8px; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.45;">goal: Help support agents explain delayed replacement orders, set expectations, and suggest next steps.
 data needed: Order ID, replacement order status, shipment/tracking events, delay reason, estimated ship/delivery date, customer contact history, inventory/backorder status, and applicable refund or reship policy.
 human-review rule: Escalate to a human if the delay exceeds policy thresholds, tracking is inconsistent or missing, the order appears lost, the customer is high-risk or highly upset, or any refund/reship exception is requested.</div>
     </div>
 
 <div style="border:1px solid #d0d7de; border-radius:6px; margin:8px 0; overflow:hidden; font-size:13px;">
-      <div style="background:#f6f8fa; padding:6px 8px; font-weight:600;">Created response summary</div>
+      <div style="padding:6px 8px; font-weight:600;">Created response summary</div>
       <div style="padding:8px; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.45;">{
   "id": "resp_cvhvh7y5ghwrpa35snvk4bzgcgthgxp4tgwkllmf5mrhs7dikfia",
   "model": "openai.gpt-5.4",
@@ -1339,7 +1339,7 @@ human-review rule: Escalate to a human if the delay exceeds policy thresholds, t
   </tbody>
 </table>
 
-<div style="border-left:4px solid #1f6feb; padding:6px 10px; background:#f6f8fa; margin:8px 0;"><strong>Key takeaway:</strong> store=True lets an application retrieve the response later by ID with usage metadata intact.</div>
+<div style="border-left:4px solid #1f6feb; padding:6px 10px; margin:8px 0;"><strong>Key takeaway:</strong> store=True lets an application retrieve the response later by ID with usage metadata intact.</div>
 
 ### 2.5 Add Reasoning Effort, Service Tier, and Prompt Cache Parameters
 
@@ -1428,7 +1428,7 @@ except Exception as exc:
 </table>
 
 <div style="border:1px solid #d0d7de; border-radius:6px; margin:8px 0; overflow:hidden; font-size:13px;">
-      <div style="background:#f6f8fa; padding:6px 8px; font-weight:600;">Result</div>
+      <div style="padding:6px 8px; font-weight:600;">Result</div>
       <div style="padding:8px; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.45;">Latency benefit: Prompt caching lets the BrightCart support assistant reuse previously processed context, reducing response time for repeated or similar requests.
 Consistency benefit: Prompt caching helps the BrightCart support assistant return more uniform answers by reusing the same established prompt context across interactions.</div>
     </div>
@@ -1486,7 +1486,7 @@ Consistency benefit: Prompt caching helps the BrightCart support assistant retur
   </tbody>
 </table>
 
-<div style="border-left:4px solid #1f6feb; padding:6px 10px; background:#f6f8fa; margin:8px 0;"><strong>Key takeaway:</strong> Model controls travel with the same request as normal input, while returned metadata can vary by endpoint.</div>
+<div style="border-left:4px solid #1f6feb; padding:6px 10px; margin:8px 0;"><strong>Key takeaway:</strong> Model controls travel with the same request as normal input, while returned metadata can vary by endpoint.</div>
 
 ## 3. Generate Structured JSON
 
@@ -1566,7 +1566,7 @@ print_key_takeaway('The schema is part of the request and defines the fields the
   </tbody>
 </table>
 
-<div style="border-left:4px solid #1f6feb; padding:6px 10px; background:#f6f8fa; margin:8px 0;"><strong>Key takeaway:</strong> The schema is part of the request and defines the fields the next cell validates.</div>
+<div style="border-left:4px solid #1f6feb; padding:6px 10px; margin:8px 0;"><strong>Key takeaway:</strong> The schema is part of the request and defines the fields the next cell validates.</div>
 
 ### 3.2 Validate Schema-Constrained Output
 
@@ -1640,7 +1640,7 @@ except Exception as exc:
 </table>
 
 <div style="border:1px solid #d0d7de; border-radius:6px; margin:8px 0; overflow:hidden; font-size:13px;">
-      <div style="background:#f6f8fa; padding:6px 8px; font-weight:600;">Result</div>
+      <div style="padding:6px 8px; font-weight:600;">Result</div>
       <div style="padding:8px; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.45;">{
   "ticket_id": "TICKET-7429",
   "category": "delivery_delay",
@@ -1712,7 +1712,7 @@ except Exception as exc:
   </tbody>
 </table>
 
-<div style="border-left:4px solid #1f6feb; padding:6px 10px; background:#f6f8fa; margin:8px 0;"><strong>Key takeaway:</strong> Schema-constrained output gives application code a predictable JSON object to parse and validate.</div>
+<div style="border-left:4px solid #1f6feb; padding:6px 10px; margin:8px 0;"><strong>Key takeaway:</strong> Schema-constrained output gives application code a predictable JSON object to parse and validate.</div>
 
 ### 3.3 Use JSON Mode
 
@@ -1781,7 +1781,7 @@ except Exception as exc:
 </table>
 
 <div style="border:1px solid #d0d7de; border-radius:6px; margin:8px 0; overflow:hidden; font-size:13px;">
-      <div style="background:#f6f8fa; padding:6px 8px; font-weight:600;">Result</div>
+      <div style="padding:6px 8px; font-weight:600;">Result</div>
       <div style="padding:8px; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.45;">{
   "customer_name": "Maya Chen",
   "order_id": "ORDER-8831",
@@ -1849,7 +1849,7 @@ except Exception as exc:
   </tbody>
 </table>
 
-<div style="border-left:4px solid #1f6feb; padding:6px 10px; background:#f6f8fa; margin:8px 0;"><strong>Key takeaway:</strong> JSON mode is useful when valid JSON is enough and a strict schema is not required.</div>
+<div style="border-left:4px solid #1f6feb; padding:6px 10px; margin:8px 0;"><strong>Key takeaway:</strong> JSON mode is useful when valid JSON is enough and a strict schema is not required.</div>
 
 ### 3.4 Control Verbosity from Reasoning Effort
 
@@ -1904,7 +1904,7 @@ except Exception as exc:
 ```
 
 <div style="border:1px solid #d0d7de; border-radius:6px; margin:8px 0; overflow:hidden; font-size:13px;">
-      <div style="background:#f6f8fa; padding:6px 8px; font-weight:600;">Request shape</div>
+      <div style="padding:6px 8px; font-weight:600;">Request shape</div>
       <div style="padding:8px; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.45;">{
   "compact": {
     "model": "openai.gpt-5.4",
@@ -1928,12 +1928,12 @@ except Exception as exc:
     </div>
 
 <div style="border:1px solid #d0d7de; border-radius:6px; margin:8px 0; overflow:hidden; font-size:13px;">
-      <div style="background:#f6f8fa; padding:6px 8px; font-weight:600;">Result: compact guidance</div>
+      <div style="padding:6px 8px; font-weight:600;">Result: compact guidance</div>
       <div style="padding:8px; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.45;">BrightCart’s delayed-replacement policy lets customers keep using the original item until the replacement arrives, then return the defective product within the allowed return window.</div>
     </div>
 
 <div style="border:1px solid #d0d7de; border-radius:6px; margin:8px 0; overflow:hidden; font-size:13px;">
-      <div style="background:#f6f8fa; padding:6px 8px; font-weight:600;">Result: detailed guidance</div>
+      <div style="padding:6px 8px; font-weight:600;">Result: detailed guidance</div>
       <div style="padding:8px; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.45;">1. BrightCart sends replacements after customers return the original item and warehouse receipt is confirmed.
 2. This delay prevents duplicate shipments, verifies eligibility, and reduces fraud or inventory errors.
 3. Agents should explain timelines clearly, offer return instructions, and reassure customers once receipt is logged.</div>
@@ -1987,7 +1987,7 @@ except Exception as exc:
   </tbody>
 </table>
 
-<div style="border-left:4px solid #1f6feb; padding:6px 10px; background:#f6f8fa; margin:8px 0;"><strong>Key takeaway:</strong> Verbosity controls tune the answer style while the prompt still bounds the output.</div>
+<div style="border-left:4px solid #1f6feb; padding:6px 10px; margin:8px 0;"><strong>Key takeaway:</strong> Verbosity controls tune the answer style while the prompt still bounds the output.</div>
 
 ## 4. Add Application-Managed Tools
 
@@ -2091,7 +2091,7 @@ Sample function tools:
 ```
 
 <div style="border:1px solid #d0d7de; border-radius:6px; margin:8px 0; overflow:hidden; font-size:13px;">
-      <div style="background:#f6f8fa; padding:6px 8px; font-weight:600;">JSON</div>
+      <div style="padding:6px 8px; font-weight:600;">JSON</div>
       <div style="padding:8px; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.45;">[
   "get_order_status",
   "get_customer_profile"
@@ -2104,7 +2104,7 @@ Sample order lookup:
 ```
 
 <div style="border:1px solid #d0d7de; border-radius:6px; margin:8px 0; overflow:hidden; font-size:13px;">
-      <div style="background:#f6f8fa; padding:6px 8px; font-weight:600;">JSON</div>
+      <div style="padding:6px 8px; font-weight:600;">JSON</div>
       <div style="padding:8px; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.45;">{
   "order_id": "ORDER-8831",
   "customer_id": "CUST-1042",
@@ -2235,14 +2235,14 @@ except Exception as exc:
 </table>
 
 <div style="border:1px solid #d0d7de; border-radius:6px; margin:8px 0; overflow:hidden; font-size:13px;">
-      <div style="background:#f6f8fa; padding:6px 8px; font-weight:600;">Result: tool arguments</div>
+      <div style="padding:6px 8px; font-weight:600;">Result: tool arguments</div>
       <div style="padding:8px; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.45;">{
   "order_id": "ORDER-8831"
 }</div>
     </div>
 
 <div style="border:1px solid #d0d7de; border-radius:6px; margin:8px 0; overflow:hidden; font-size:13px;">
-      <div style="background:#f6f8fa; padding:6px 8px; font-weight:600;">Result: tool output</div>
+      <div style="padding:6px 8px; font-weight:600;">Result: tool output</div>
       <div style="padding:8px; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.45;">{
   "order_id": "ORDER-8831",
   "customer_id": "CUST-1042",
@@ -2255,7 +2255,7 @@ except Exception as exc:
     </div>
 
 <div style="border:1px solid #d0d7de; border-radius:6px; margin:8px 0; overflow:hidden; font-size:13px;">
-      <div style="background:#f6f8fa; padding:6px 8px; font-weight:600;">Result: final model answer</div>
+      <div style="padding:6px 8px; font-weight:600;">Result: final model answer</div>
       <div style="padding:8px; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.45;">Status: ORDER-8831 is delayed; carrier shows no movement for 36 hours at the Denver sort center, with promised delivery on 2026-06-01.
 Next best action: Monitor until the 48-hour threshold; if no movement then, contact the customer and offer either an expedited replacement or a 15% concession with agent approval.</div>
     </div>
@@ -2313,7 +2313,7 @@ Next best action: Monitor until the 48-hour threshold; if no movement then, cont
   </tbody>
 </table>
 
-<div style="border-left:4px solid #1f6feb; padding:6px 10px; background:#f6f8fa; margin:8px 0;"><strong>Key takeaway:</strong> Function calling separates model-selected arguments from application-executed business logic.</div>
+<div style="border-left:4px solid #1f6feb; padding:6px 10px; margin:8px 0;"><strong>Key takeaway:</strong> Function calling separates model-selected arguments from application-executed business logic.</div>
 
 ### 4.3 Handle Multiple Tool Calls
 
@@ -2423,7 +2423,7 @@ except Exception as exc:
 </table>
 
 <div style="border:1px solid #d0d7de; border-radius:6px; margin:8px 0; overflow:hidden; font-size:13px;">
-      <div style="background:#f6f8fa; padding:6px 8px; font-weight:600;">Result: returned tool calls</div>
+      <div style="padding:6px 8px; font-weight:600;">Result: returned tool calls</div>
       <div style="padding:8px; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.45;">{
   "tool_call_count": 1,
   "order_ids": [
@@ -2433,7 +2433,7 @@ except Exception as exc:
     </div>
 
 <div style="border:1px solid #d0d7de; border-radius:6px; margin:8px 0; overflow:hidden; font-size:13px;">
-      <div style="background:#f6f8fa; padding:6px 8px; font-weight:600;">Result: local tool outputs</div>
+      <div style="padding:6px 8px; font-weight:600;">Result: local tool outputs</div>
       <div style="padding:8px; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.45;">[
   {
     "order_id": "ORDER-8831",
@@ -2457,7 +2457,7 @@ except Exception as exc:
     </div>
 
 <div style="border:1px solid #d0d7de; border-radius:6px; margin:8px 0; overflow:hidden; font-size:13px;">
-      <div style="background:#f6f8fa; padding:6px 8px; font-weight:600;">Result: final model answer</div>
+      <div style="padding:6px 8px; font-weight:600;">Result: final model answer</div>
       <div style="padding:8px; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.45;">Order statuses: ORDER-8831 is delayed and ORDER-2044 was delivered yesterday.
 Shipping problems: Maya has one active shipping problem, because only ORDER-8831 is currently delayed while ORDER-2044 is already delivered.</div>
     </div>
@@ -2515,7 +2515,7 @@ Shipping problems: Maya has one active shipping problem, because only ORDER-8831
   </tbody>
 </table>
 
-<div style="border-left:4px solid #1f6feb; padding:6px 10px; background:#f6f8fa; margin:8px 0;"><strong>Key takeaway:</strong> Local lookup outputs keep the parallel-tool pattern understandable if not every call is returned.</div>
+<div style="border-left:4px solid #1f6feb; padding:6px 10px; margin:8px 0;"><strong>Key takeaway:</strong> Local lookup outputs keep the parallel-tool pattern understandable if not every call is returned.</div>
 
 ### 4.4 Use a Custom Text Tool
 
@@ -2634,7 +2634,7 @@ except Exception as exc:
 </table>
 
 <div style="border:1px solid #d0d7de; border-radius:6px; margin:8px 0; overflow:hidden; font-size:13px;">
-      <div style="background:#f6f8fa; padding:6px 8px; font-weight:600;">Result: local fallback normalization</div>
+      <div style="padding:6px 8px; font-weight:600;">Result: local fallback normalization</div>
       <div style="padding:8px; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.45;">ORDER_ID: ORDER-8831
 CUSTOMER_ID: CUST-1042
 ISSUE: REPLACEMENT DELAYED
@@ -2643,19 +2643,19 @@ POLICY_OPTION: OFFER EXPEDITED REPLACEMENT OR 15% CONCESSION</div>
     </div>
 
 <div style="border:1px solid #d0d7de; border-radius:6px; margin:8px 0; overflow:hidden; font-size:13px;">
-      <div style="background:#f6f8fa; padding:6px 8px; font-weight:600;">Result: returned output item types</div>
+      <div style="padding:6px 8px; font-weight:600;">Result: returned output item types</div>
       <div style="padding:8px; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.45;">[
   "custom_tool_call"
 ]</div>
     </div>
 
 <div style="border:1px solid #d0d7de; border-radius:6px; margin:8px 0; overflow:hidden; font-size:13px;">
-      <div style="background:#f6f8fa; padding:6px 8px; font-weight:600;">Result: custom tool input</div>
+      <div style="padding:6px 8px; font-weight:600;">Result: custom tool input</div>
       <div style="padding:8px; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.45;">order-8831 | cust-1042 | replacement delayed | customer wants supervisor | offer expedited replacement or 15% concession</div>
     </div>
 
 <div style="border:1px solid #d0d7de; border-radius:6px; margin:8px 0; overflow:hidden; font-size:13px;">
-      <div style="background:#f6f8fa; padding:6px 8px; font-weight:600;">Result: application-owned normalized output</div>
+      <div style="padding:6px 8px; font-weight:600;">Result: application-owned normalized output</div>
       <div style="padding:8px; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.45;">ORDER_ID: ORDER-8831
 CUSTOMER_ID: CUST-1042
 ISSUE: REPLACEMENT DELAYED
@@ -2716,7 +2716,7 @@ POLICY_OPTION: OFFER EXPEDITED REPLACEMENT OR 15% CONCESSION</div>
   </tbody>
 </table>
 
-<div style="border-left:4px solid #1f6feb; padding:6px 10px; background:#f6f8fa; margin:8px 0;"><strong>Key takeaway:</strong> Custom tools are useful when the application owns a freeform parsing or execution step.</div>
+<div style="border-left:4px solid #1f6feb; padding:6px 10px; margin:8px 0;"><strong>Key takeaway:</strong> Custom tools are useful when the application owns a freeform parsing or execution step.</div>
 
 ## 5. Send Direct File Input
 
@@ -2853,7 +2853,7 @@ except Exception as exc:
 ```
 
 <div style="border:1px solid #d0d7de; border-radius:6px; margin:8px 0; overflow:hidden; font-size:13px;">
-      <div style="background:#f6f8fa; padding:6px 8px; font-weight:600;">Result: PDF transcript preview</div>
+      <div style="padding:6px 8px; font-weight:600;">Result: PDF transcript preview</div>
       <div style="padding:8px; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.45;">BrightCart support transcript
 Ticket: TICKET-7429
 Customer: Maya Chen
@@ -2898,7 +2898,7 @@ Policy options: expedited replacement or 15% concession with agent approval afte
 </table>
 
 <div style="border:1px solid #d0d7de; border-radius:6px; margin:8px 0; overflow:hidden; font-size:13px;">
-      <div style="background:#f6f8fa; padding:6px 8px; font-weight:600;">Result: expected fields</div>
+      <div style="padding:6px 8px; font-weight:600;">Result: expected fields</div>
       <div style="padding:8px; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.45;">{
   "ticket_id": "TICKET-7429",
   "customer": "Maya Chen",
@@ -2908,7 +2908,7 @@ Policy options: expedited replacement or 15% concession with agent approval afte
     </div>
 
 <div style="border:1px solid #d0d7de; border-radius:6px; margin:8px 0; overflow:hidden; font-size:13px;">
-      <div style="background:#f6f8fa; padding:6px 8px; font-weight:600;">Result</div>
+      <div style="padding:6px 8px; font-weight:600;">Result</div>
       <div style="padding:8px; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.45;">{"ticket_id":"TICKET-7429","customer":"Maya Chen","order_id":"ORDER-8831","product":"Standing desk replacement","issue":"Replacement for a damaged item is delayed and carrier scan has not moved","requested_resolution":"Supervisor callback and refund options","policy_options":"expedited replacement or 15% concession with agent approval after 48-hour delay"}</div>
     </div>
 
@@ -2965,7 +2965,7 @@ Policy options: expedited replacement or 15% concession with agent approval afte
   </tbody>
 </table>
 
-<div style="border-left:4px solid #1f6feb; padding:6px 10px; background:#f6f8fa; margin:8px 0;"><strong>Key takeaway:</strong> Direct file input is useful when the file should be read in the current request context.</div>
+<div style="border-left:4px solid #1f6feb; padding:6px 10px; margin:8px 0;"><strong>Key takeaway:</strong> Direct file input is useful when the file should be read in the current request context.</div>
 
 ## 6. Manage Conversation State
 
@@ -3048,7 +3048,7 @@ except Exception as exc:
 </table>
 
 <div style="border:1px solid #d0d7de; border-radius:6px; margin:8px 0; overflow:hidden; font-size:13px;">
-      <div style="background:#f6f8fa; padding:6px 8px; font-weight:600;">Result</div>
+      <div style="padding:6px 8px; font-weight:600;">Result</div>
       <div style="padding:8px; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.45;">Ticket ID: TICKET-4812
 Order ID: ORDER-8831
 Customer Name: Maya Chen
@@ -3109,7 +3109,7 @@ Next Best Action: Monitor until 48 hours without movement, then offer expedited 
   </tbody>
 </table>
 
-<div style="border-left:4px solid #1f6feb; padding:6px 10px; background:#f6f8fa; margin:8px 0;"><strong>Key takeaway:</strong> previous_response_id lets a follow-up use stored context without resending the full prior turn.</div>
+<div style="border-left:4px solid #1f6feb; padding:6px 10px; margin:8px 0;"><strong>Key takeaway:</strong> previous_response_id lets a follow-up use stored context without resending the full prior turn.</div>
 
 ### 6.2 Rebuild Stateless Context
 
@@ -3174,7 +3174,7 @@ except Exception as exc:
 </table>
 
 <div style="border:1px solid #d0d7de; border-radius:6px; margin:8px 0; overflow:hidden; font-size:13px;">
-      <div style="background:#f6f8fa; padding:6px 8px; font-weight:600;">Result</div>
+      <div style="padding:6px 8px; font-weight:600;">Result</div>
       <div style="padding:8px; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.45;">Customer: Jordan Lee reported ORDER-7718 arrived with a cracked monitor stand.
 Issue: Damaged item; monitor stand is cracked on arrival.
 Requested Resolution: Customer wants a replacement shipped this week.
@@ -3235,7 +3235,7 @@ Status: Damage claim captured and awaiting next-agent confirmation on replacemen
   </tbody>
 </table>
 
-<div style="border-left:4px solid #1f6feb; padding:6px 10px; background:#f6f8fa; margin:8px 0;"><strong>Key takeaway:</strong> Stateless continuation sends the relevant history with each request when the application owns conversation storage.</div>
+<div style="border-left:4px solid #1f6feb; padding:6px 10px; margin:8px 0;"><strong>Key takeaway:</strong> Stateless continuation sends the relevant history with each request when the application owns conversation storage.</div>
 
 ### 6.3 Carry Encrypted Reasoning Context
 
@@ -3323,7 +3323,7 @@ except Exception as exc:
 </table>
 
 <div style="border:1px solid #d0d7de; border-radius:6px; margin:8px 0; overflow:hidden; font-size:13px;">
-      <div style="background:#f6f8fa; padding:6px 8px; font-weight:600;">Result: reasoning metadata</div>
+      <div style="padding:6px 8px; font-weight:600;">Result: reasoning metadata</div>
       <div style="padding:8px; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.45;">{
   "returned_item_types": [
     "reasoning",
@@ -3334,7 +3334,7 @@ except Exception as exc:
     </div>
 
 <div style="border:1px solid #d0d7de; border-radius:6px; margin:8px 0; overflow:hidden; font-size:13px;">
-      <div style="background:#f6f8fa; padding:6px 8px; font-weight:600;">Result: follow-up answer</div>
+      <div style="padding:6px 8px; font-weight:600;">Result: follow-up answer</div>
       <div style="padding:8px; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.45;">Recommendation: Stateless continuation
 Reason: In a regulated support workflow, requiring names, order IDs, and refund context to be explicitly provided each turn improves controllability, auditability, and data-minimization, reducing the risk of unintended retention or cross-session leakage.</div>
     </div>
@@ -3392,7 +3392,7 @@ Reason: In a regulated support workflow, requiring names, order IDs, and refund 
   </tbody>
 </table>
 
-<div style="border-left:4px solid #1f6feb; padding:6px 10px; background:#f6f8fa; margin:8px 0;"><strong>Key takeaway:</strong> Encrypted reasoning content can be carried forward where supported without exposing hidden reasoning text.</div>
+<div style="border-left:4px solid #1f6feb; padding:6px 10px; margin:8px 0;"><strong>Key takeaway:</strong> Encrypted reasoning content can be carried forward where supported without exposing hidden reasoning text.</div>
 
 ## 7. Use Prompt Caching
 
@@ -3518,7 +3518,7 @@ except Exception as exc:
 </table>
 
 <div style="border:1px solid #d0d7de; border-radius:6px; margin:8px 0; overflow:hidden; font-size:13px;">
-      <div style="background:#f6f8fa; padding:6px 8px; font-weight:600;">Prompt-cache input size</div>
+      <div style="padding:6px 8px; font-weight:600;">Prompt-cache input size</div>
       <div style="padding:8px; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.45;">{
   "estimated_input_words": 3016,
   "target_minimum_tokens": 2048
@@ -3526,12 +3526,12 @@ except Exception as exc:
     </div>
 
 <div style="border:1px solid #d0d7de; border-radius:6px; margin:8px 0; overflow:hidden; font-size:13px;">
-      <div style="background:#f6f8fa; padding:6px 8px; font-weight:600;">Result</div>
+      <div style="padding:6px 8px; font-weight:600;">Result</div>
       <div style="padding:8px; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.45;">Hi Maya, I’m sorry your replacement order ORDER-8831 is delayed. I’m checking the latest replacement and carrier status now so I can confirm the best next step for you without making you wait longer than necessary.</div>
     </div>
 
 <div style="border:1px solid #d0d7de; border-radius:6px; margin:8px 0; overflow:hidden; font-size:13px;">
-      <div style="background:#f6f8fa; padding:6px 8px; font-weight:600;">First request summary</div>
+      <div style="padding:6px 8px; font-weight:600;">First request summary</div>
       <div style="padding:8px; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.45;">{
   "id": "resp_3w6r6ipbqa5z2max35awv3i23i5sjmfa33zzw3vhpgqxcvchhkgq",
   "model": "openai.gpt-5.4",
@@ -3549,7 +3549,7 @@ except Exception as exc:
     </div>
 
 <div style="border:1px solid #d0d7de; border-radius:6px; margin:8px 0; overflow:hidden; font-size:13px;">
-      <div style="background:#f6f8fa; padding:6px 8px; font-weight:600;">Second request summary</div>
+      <div style="padding:6px 8px; font-weight:600;">Second request summary</div>
       <div style="padding:8px; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.45;">{
   "id": "resp_zzjeqttoswdjdwwl56xpolvly23w4h2n5dtsdoddgxqwfbkn7npq",
   "model": "openai.gpt-5.4",
@@ -3596,7 +3596,7 @@ except Exception as exc:
   </tbody>
 </table>
 
-<div style="border-left:4px solid #1f6feb; padding:6px 10px; background:#f6f8fa; margin:8px 0;"><strong>Key takeaway:</strong> cached_input_tokens is the metadata field to inspect for prompt-cache reuse.</div>
+<div style="border-left:4px solid #1f6feb; padding:6px 10px; margin:8px 0;"><strong>Key takeaway:</strong> cached_input_tokens is the metadata field to inspect for prompt-cache reuse.</div>
 
 ## 8. Run Background Work
 
@@ -3684,7 +3684,7 @@ except Exception as exc:
 </table>
 
 <div style="border:1px solid #d0d7de; border-radius:6px; margin:8px 0; overflow:hidden; font-size:13px;">
-      <div style="background:#f6f8fa; padding:6px 8px; font-weight:600;">Result: status history</div>
+      <div style="padding:6px 8px; font-weight:600;">Result: status history</div>
       <div style="padding:8px; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.45;">[
   "in_progress",
   "completed"
@@ -3692,7 +3692,7 @@ except Exception as exc:
     </div>
 
 <div style="border:1px solid #d0d7de; border-radius:6px; margin:8px 0; overflow:hidden; font-size:13px;">
-      <div style="background:#f6f8fa; padding:6px 8px; font-weight:600;">Result: manager summary</div>
+      <div style="padding:6px 8px; font-weight:600;">Result: manager summary</div>
       <div style="padding:8px; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.45;">theme: Shipping delays dominate, especially West Coast distribution lane.
 risk: Rising dissatisfaction from delays, replacements, and return exceptions.
 next action: Escalate West Coast lane issues and review holiday return policy.</div>
@@ -3751,7 +3751,7 @@ next action: Escalate West Coast lane issues and review holiday return policy.</
   </tbody>
 </table>
 
-<div style="border-left:4px solid #1f6feb; padding:6px 10px; background:#f6f8fa; margin:8px 0;"><strong>Key takeaway:</strong> Background mode starts work asynchronously and lets the application poll by response ID.</div>
+<div style="border-left:4px solid #1f6feb; padding:6px 10px; margin:8px 0;"><strong>Key takeaway:</strong> Background mode starts work asynchronously and lets the application poll by response ID.</div>
 
 ## 9. Compact Long-Running Context
 
@@ -3777,7 +3777,7 @@ print_json(compaction_note)
 ```
 
 <div style="border:1px solid #d0d7de; border-radius:6px; margin:8px 0; overflow:hidden; font-size:13px;">
-      <div style="background:#f6f8fa; padding:6px 8px; font-weight:600;">JSON</div>
+      <div style="padding:6px 8px; font-weight:600;">JSON</div>
       <div style="padding:8px; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.45;">{
   "feature": "Compaction",
   "how_to_apply": "Summarize older support turns into durable facts, open questions, policy constraints, and next actions before continuing the workflow.",
@@ -3912,7 +3912,7 @@ else:
 </table>
 
 <div style="border:1px solid #d0d7de; border-radius:6px; margin:8px 0; overflow:hidden; font-size:13px;">
-      <div style="background:#f6f8fa; padding:6px 8px; font-weight:600;">Result</div>
+      <div style="padding:6px 8px; font-weight:600;">Result</div>
       <div style="padding:8px; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.45;">{
   "region_hint": "us-west-2",
   "base_url_host": "bedrock-mantle.us-west-2.api.aws",
@@ -3968,7 +3968,7 @@ else:
   </tbody>
 </table>
 
-<div style="border-left:4px solid #1f6feb; padding:6px 10px; background:#f6f8fa; margin:8px 0;"><strong>Key takeaway:</strong> Responsiveness samples are setup checks, not a load test or service-level measurement.</div>
+<div style="border-left:4px solid #1f6feb; padding:6px 10px; margin:8px 0;"><strong>Key takeaway:</strong> Responsiveness samples are setup checks, not a load test or service-level measurement.</div>
 
 ## 11. Clean Up and Review Results
 

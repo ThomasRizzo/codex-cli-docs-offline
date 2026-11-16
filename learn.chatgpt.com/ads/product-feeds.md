@@ -205,6 +205,19 @@ Keep the feed current as prices, stock, and product details change. Choose an up
 | Change other product fields, such as images or descriptions | Upload an updated catalog over SFTP |
 | Refresh the complete catalog                                | Upload an updated catalog over SFTP |
 
+### Replace the catalog with each full upload
+
+For eligible product feeds, you can enable catalog replacement. Each future full upload must include every product you want to keep. OpenAI deletes products missing from it within a day. This setting applies to full uploads, not partial Delta API updates.
+
+```bash
+curl -X PATCH "https://api.ads.openai.com/v1/feeds/fd_123/settings" \
+  -H "Authorization: Bearer ${OPENAI_ADS_API_KEY}" \
+  -H "Content-Type: application/json" \
+  -d '{"is_full_refresh": true}'
+```
+
+Use `GET /v1/feeds/fd_123/settings` to check the current setting. To stop pending cleanup, send the same PATCH request with `is_full_refresh` set to `false`. This does not restore products already deleted. Omitting `is_full_refresh` leaves the setting unchanged.
+
 ### Update existing products with the Delta API
 
 You need an existing feed, an initial catalog that has been processed, and the product and variant identifiers from that catalog. The account must have access to manage feed data.
@@ -316,6 +329,8 @@ A product set selects which products an ad group can use from its campaign's fee
 The campaign owns the feed selection. An ad group inherits that feed. If you omit `product_set`, the ad group uses the campaign's feed without additional product filters.
 
 ### Preview matching products
+
+The generic `POST /feeds/{feed_id}/items/query` also supports Product and Hotel inventory. It excludes deleted, expired, and ads-ineligible items without requiring review approval. See [item queries and pagination](https://developers.openai.com/ads/hotel-feeds#query-hotel-items). The Product-specific query in this section retains its existing behavior; the two queries can return different results.
 
 Before creating or updating an ad group, query the feed with the filters you plan to use. This request selects Acme products priced at 100 major currency units or less:
 

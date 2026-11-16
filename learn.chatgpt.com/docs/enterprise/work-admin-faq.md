@@ -20,16 +20,14 @@ plan, workspace settings, source permissions, and surface.
 
 <a id="what-does-work-sync-enable"></a>
 
-<span
-  id="what-does-local-computer-access-enable"
-  data-localization-body-anchor
-/>
+
+
 
 ### What does Local computer access with Work Cloud enable?
 
-Eligible members can continue a Work conversation across desktop, mobile, and web. Tasks using Local computer access with Work Cloud use cloud coordination. For enterprises, the in-app Local/Cloud toggle and its default remain unchanged at launch. Individual steps can still execute in the cloud or use approved resources on a connected computer.
-
-For example, a person can start work with an approved local folder on a laptop, then give follow-up instructions from their phone. Steps that need the laptop still require it to be online and connected.
+Members can continue an eligible cloud conversation across devices and use
+approved files or tools on a connected computer. For member instructions, see
+[Continue Work across devices](../get-started-with-work.html#continue-work-across-devices).
 
 ### How do we enable it?
 
@@ -43,10 +41,8 @@ To enable this feature for the intended users:
 
 If `enforce_residency` is enabled in any cloud policy, **Allow local computer access** is disabled for both Work and dots. This safeguard does not configure workspace residency or, by itself, disable Work Cloud or dots.
 
-<span
-  id="can-we-enable-sync-if-our-policies-are-delivered-only-through-mdm"
-  data-localization-body-anchor
-/>
+
+
 
 ### Can we use this feature if our policies are delivered only through MDM?
 
@@ -62,16 +58,12 @@ Existing policies, assignments, and ordering are preserved. Review your existing
 
 Use the policy API to manage Global settings. To manage Local or Codex Cloud settings, use the Agent Security UI. Existing Global API workflows remain available after migration. Test your scripts and Terraform integrations, and confirm that policy assignments and ordering are unchanged.
 
-<span
-  id="which-hooks-are-supported-in-synced-work"
-  data-localization-body-anchor
-/>
+
+
 
 ### Which hooks are supported in Local computer access with Work Cloud?
 
-When managed policy and remote hooks are enabled, Work Cloud with local access and dots use admin-managed remote MCP hooks on the cloud orchestrator. Configure `mcp_tool` handlers in Global `requirements.toml`. Work Cloud without local access and personal accounts do not use these enterprise hooks. Command/shell, prompt, and agent handlers; hooks from local configuration, plugins, or local directories; environment-scoped hooks; and `SessionEnd` MCP hooks are not supported with cloud orchestration, even when tools execute locally. When both orchestration and execution are local, existing supported hooks continue to work in local-only Work and Codex threads. Admins can still configure supported managed hooks in Agent Security for those workflows.
-
-Before relying on these hooks, test callback connectivity, required events, and failure behavior. An explicit supported denial can block an action, but a `PreToolUse` callback error, timeout, or malformed response can fail the hook without blocking the tool. MCP hooks do not provide a complete Compliance API audit trail.
+With managed policy and remote hooks enabled, Work with local computer access and dots support Global MCP hooks. A command hook configured on the connected computer runs only in a supported local-only workflow. See [Hooks with cloud orchestration](../hooks.html#hooks-with-cloud-orchestration) for supported handlers, events, and failure behavior.
 
 ### Which policy takes priority?
 
@@ -89,24 +81,25 @@ Keep orchestrator controls, including approvals and web search, in Global. Use t
 
 ### What happens if the local computer is unavailable?
 
-Keep the computer online and connected for steps that need its local files or tools. If the computer is unavailable when a new turn starts, an existing eligible task using local computer access with Work Cloud can continue in a cloud container. The cloud container cannot access files or tools on the unavailable computer. It also does not enforce enterprise requirements from local execution. A task cannot switch from local execution to the cloud during a turn.
+An eligible new turn can run in a cloud container with its own execution
+requirements. Local files, tools, and device policy are unavailable there. See
+[what members experience when their computer is offline](../get-started-with-work.html#continue-work-across-devices).
 
 <a id="what-happens-if-an-admin-turns-work-sync-off"></a>
 
-<span
-  id="what-happens-if-an-admin-turns-local-computer-access-off"
-  data-localization-body-anchor
-/>
+
+
 
 ### What happens if an admin turns Local computer access with Work Cloud off?
 
-Turning off sync interrupts any currently running turn. Users can send a new message to start a new turn in an existing cloud conversation. That turn automatically uses Work Cloud without access to local files.
-
-Turning off sync does not change data-retention or deletion policies.
+Disabling access interrupts running turns. Follow the
+[rollout guide's rollback instructions](admin-setup.html#if-you-need-to-turn-local-computer-access-off) to help members continue.
+Conversation retention and deletion policies still apply.
 
 ### What happens to existing chats and tasks in projects when sync is turned on?
 
-Local computer access with Work Cloud applies only to tasks created after you enable sync. Existing tasks, including tasks in projects, keep their original mode: locally only, or in the cloud without access to local files. Start a new task to use this feature.
+Existing tasks keep their original mode. Ask members to
+[start a new cloud task](../get-started-with-work.html#continue-work-across-devices) to use local computer access.
 
 ### Does this change Codex?
 
@@ -114,7 +107,7 @@ No. Local computer access with Work Cloud does not change Codex's existing confi
 
 ### Is sync suitable for a ZDR deployment?
 
-No. Local computer access with Work Cloud does not provide strict zero data retention. Data residency and inference residency cover only eligible content and supported workloads, regions, and configurations. Enterprise Key Management (EKM) covers supported stored content in eligible workspaces. Work is not supported with UAE inference residency. Running a step on a connected computer does not make the workflow a ZDR deployment.
+No. Local computer access with Work Cloud does not provide strict zero data retention. For current regional availability and coverage requirements, consult the Help Center’s [Data residency and inference residency for ChatGPT](https://help.openai.com/en/articles/9903489-data-residency-and-inference-residency-for-chatgpt). Running a step on a connected computer does not make the workflow a ZDR deployment.
 
 ## Overview
 
@@ -271,7 +264,7 @@ permissions and security controls.
 
 ChatGPT Work uses the privacy, security, and data commitments applicable to the customer's ChatGPT workspace, subject to plan, configuration, surface, feature, and region. For ChatGPT Enterprise, this includes [no training on business data by default](https://help.openai.com/en/articles/8983130-what-if-i-want-to-keep-my-history-on-but-disable-model-training), encryption in transit and at rest, workspace-level access controls, and supported audit logging.
 
-For Work with local access, residency applies only to eligible content and supported workloads, regions, and configurations; EKM covers supported stored content in eligible workspaces. Work is not supported with UAE inference residency. This experience does not provide strict zero data retention. Dots have separate beta exclusions and do not support data or inference residency. See [compatibility and data requirements](cloud-local-access.html#check-compatibility-and-data-requirements). HIPAA and Business Associate Agreement coverage depend on the features and agreement in use.
+For current regional availability and data requirements, use the Help Center as the source of truth: [Data residency and inference residency for ChatGPT](https://help.openai.com/en/articles/9903489-data-residency-and-inference-residency-for-chatgpt) and [Getting started with your dot](https://help.openai.com/en/articles/20001530-getting-started-with-your-dot). Work with local access does not provide strict zero data retention. Review [compatibility and data requirements](cloud-local-access.html#check-compatibility-and-data-requirements) before enabling local access. Confirm that the features and agreement in use meet your organization’s requirements.
 
 Connected services have their own retention, logging, access, residency, and compliance requirements. When ChatGPT Work uses plugins, repositories, or third-party systems, evaluate both the ChatGPT workspace controls and the connected system's controls.
 
@@ -296,6 +289,16 @@ classes, retention periods, and deletion paths.
 Review retention requirements across both the ChatGPT workspace and connected
 enterprise systems so your organization's data governance, compliance, and
 record-retention policies apply to each system.
+
+### How do locked chats affect workspace administration?
+
+Admins can't disable locked chats through settings or RBAC, unlock them, or reset
+a user's account PIN. Workspace policies and retention still apply. Enterprise
+and Edu conversation message logs remain available through the Compliance
+Platform.
+
+Share the [locked chat steps](../projects.html#web-use-locked-chats) with users, and check [Help Center](https://help.openai.com/en/articles/20001411-using-locked-chats-in-chatgpt)
+for availability and details.
 
 ## Observability
 

@@ -208,6 +208,10 @@ ad account. See [Bulk API limits](https://developers.openai.com/ads/bulk-api#lim
 
 ## Changelog
 
+### October 26, 2026
+
+- Enabled accounts can create ads with 4–6 square images by uploading each image and passing the returned file IDs in `creative.file_ids`. The images share one title, body, and destination URL, and are returned in `creative.images`. See [Create an ad with multiple images](https://developers.openai.com/ads/campaign-management#create-an-ad-with-multiple-images) for requirements and examples.
+
 ### September 30th, 2026
 
 - Added selectable click/view attribution windows and time basis to all four GET Insights endpoints. Omitted settings now default independently to 30-day click, 1-day view, and ad-event time. Conversion totals include click-through plus view-through goal conversions and can differ from previous reports; impressions, clicks, and spend are unchanged. See [Understand attribution](https://developers.openai.com/ads/reporting#understand-attribution).

@@ -73,15 +73,11 @@ Provider requirements differ: Gmail may need a separate user account, Drive acce
 
 
 
-<span
-  id="notion--connect-the-intended-workspace-and-content"
-  data-localization-body-anchor
-/>
 
-<span
-  id="notion-connect-the-intended-workspace-and-content"
-  data-localization-body-anchor
-/>
+
+
+
+
 
 
 
@@ -95,15 +91,11 @@ Use the method offered for your app, then configure access and test it in the in
 
 ### Google Drive
 
-<span
-  id="google-drive--authorize-a-google-account"
-  data-localization-body-anchor
-/>
 
-<span
-  id="google-drive-authorize-a-google-account"
-  data-localization-body-anchor
-/>
+
+
+
+
 
 
 
@@ -116,15 +108,11 @@ Use an approved Google account with access to the required files or shared drive
 
 2. Confirm the Google account, then name the connection in ChatGPT. If the workflow creates files, test the destination and recipients’ access.
 
-<span
-  id="google-drive--use-a-google-service-account"
-  data-localization-body-anchor
-/>
 
-<span
-  id="google-drive-use-a-google-service-account"
-  data-localization-body-anchor
-/>
+
+
+
+
 
 
 
@@ -169,15 +157,11 @@ If OAuth is offered, authorize the designated Gmail mailbox. Ask IT for a separa
 
 Google Groups are not mailboxes. A connected mailbox subscribed to a group can receive its messages but may also expose other mail. Review its contents and allowed actions before sharing.
 
-<span
-  id="google-workspace--domain-wide-delegation"
-  data-localization-body-anchor
-/>
 
-<span
-  id="google-workspace-domain-wide-delegation"
-  data-localization-body-anchor
-/>
+
+
+
+
 
 
 
@@ -201,15 +185,11 @@ For denied requests, check the requester, approved scopes, and resource access. 
 
 ### GitHub
 
-<span
-  id="github--select-an-app-installation-and-repositories"
-  data-localization-body-anchor
-/>
 
-<span
-  id="github-select-an-app-installation-and-repositories"
-  data-localization-body-anchor
-/>
+
+
+
+
 
 
 
@@ -228,7 +208,7 @@ Use an organization-approved GitHub user account, preferably dedicated to this s
 
 If a repository is missing, check the designated account’s GitHub access and the app’s allowed actions in ChatGPT.
 
-Codex Security Cloud uses a personal GitHub connection. See [Cloud setup](../security/setup.html#2-connect-github).
+Daybreak Defense Factory uses a personal GitHub connection. See [Set up Daybreak](../security/setup.html#open-daybreak-and-connect-github).
 
 
 
@@ -302,23 +282,17 @@ The connection uses that account’s Linear access. From the task or surface tha
 
 
 
-<span
-  id="slack--configure-the-chatgpt-in-slack-connection"
-  data-localization-body-anchor
-/>
-
-<span
-  id="slack-configure-the-chatgpt-in-slack-connection"
-  data-localization-body-anchor
-/>
 
 
 
 
-<span
-  id="test-an-existing-workspace-connection"
-  data-localization-body-anchor
-/>
+
+
+
+
+
+
+
 
 #### Configure the workspace connection
 
@@ -342,10 +316,8 @@ Team and workflow owners
 
 **Team or workflow owner:** Select and save the available connection where permitted, then test it in the intended workflow. If missing, have the workspace admin check access and availability.
 
-<span
-  id="configure-access-and-select-the-credential"
-  data-localization-body-anchor
-/>
+
+
 
 
 
@@ -385,10 +357,8 @@ For **@ChatGPT**, open the [surface's plugin settings](chatgpt-slack-and-teams.h
 
 For a [Team Task](teams.html#create-a-team-task), confirm the selected connection for each app. The team service account runs the task; each app’s authentication method determines its external account. Confirm that method supports the task’s run type, especially if it requires a verified employee.
 
-<span
-  id="test-access-through-the-intended-experience"
-  data-localization-body-anchor
-/>
+
+
 
 
 
@@ -461,15 +431,11 @@ Before disabling a connection, identify affected workflows with their owners. Af
 
 Revoke provider authorization separately; disabling the ChatGPT connection does not replace this step.
 
-<span
-  id="troubleshoot-by-checking-the-failed-layer"
-  data-localization-body-anchor
-/>
 
-<span
-  id="find-the-right-person-to-resolve-access"
-  data-localization-body-anchor
-/>
+
+
+
+
 
 
 

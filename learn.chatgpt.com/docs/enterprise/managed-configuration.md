@@ -21,6 +21,8 @@ Enterprise admins can control supported local client behavior with:
 
 See [Agent Security](agent-security.html) for the Global baseline, environment overrides, and orchestrator and executor field lists.
 
+If your users don't sign in to Codex with ChatGPT, you can distribute defaults and requirements to Codex CLI and the desktop app from an HTTPS endpoint you operate. See [Self-host Codex configuration for your team](configuration-server.html).
+
 ## Configure a policy in Agent security
 
 Where Agent security is enabled, workspace owners, workspace admins, and members
@@ -169,7 +171,7 @@ See [how Agent Security applies to Work Cloud](agent-security.html#how-agent-sec
 
 
 
-Disabling automatic review for browser actions sends those actions to the user for
+Disabling Auto-review for browser actions sends those actions to the user for
 approval instead. It doesn't disable model safety monitoring.
 
 When several origin patterns match, the most restrictive value wins for each
@@ -255,15 +257,16 @@ persistent_approval = false
 access_approval_lifetime = "turn"
 ```
 
-To disable automatic review for browser actions, set
+To disable Auto-review for browser actions, set
 `browser_use.disable_auto_review = true`, or set `auto_review = "deny"` on an
 origin policy to restrict it for that origin.
 
-To enable [Site tools](../webmcp.html) for an eligible Enterprise workspace,
-set `browser_use.allow_webmcp = true`. This managed opt-in applies to the
-desktop app's built-in browser. Setting it to `false` or omitting it leaves
-normal feature availability checks in place; `false` does not enforce a block.
-User preferences and site permissions still apply.
+On eligible managed plans, leave `browser_use.allow_webmcp` unset or set it to
+`true` to allow [Site tools](../webmcp.html) through workspace policy in the
+desktop app's built-in browser. Set it to `false` to turn off access through
+this policy. Users who already have access through their account rollout can
+still use site tools. Model support, browser settings, and site permissions
+also apply.
 
 This native-app example allows Calculator on macOS, denies other apps by default,
 and prevents app approvals from persisting across sessions:
@@ -414,7 +417,7 @@ Use this section to set approval behavior, permission boundaries, and starting d
 
 ### Admin-enforced requirements (requirements.toml)
 
-Requirements constrain security-sensitive settings (approval policy, approvals reviewer, automatic review policy, sandbox mode, permission profiles, web search mode, managed hooks, which MCP servers users can enable, and which plugin marketplace sources they can use). When resolving configuration (for example from `config.toml`, [profile files](../config-file/config-advanced.html#profiles), or CLI config overrides), if a value conflicts with an enforced rule, the local client falls back to a compatible value and notifies the user. If you configure an `mcp_servers` allowlist, the client enables an MCP server only when both its name and identity match an approved entry; otherwise, the client disables it.
+Requirements constrain security-sensitive settings (approval policy, approvals reviewer, Auto-review policy, sandbox mode, permission profiles, web search mode, managed hooks, which MCP servers users can enable, and which plugin marketplace sources they can use). When resolving configuration (for example from `config.toml`, [profile files](../config-file/config-advanced.html#profiles), or CLI config overrides), if a value conflicts with an enforced rule, the local client falls back to a compatible value and notifies the user. If you configure an `mcp_servers` allowlist, the client enables an MCP server only when both its name and identity match an approved entry; otherwise, the client disables it.
 
 Requirements can also constrain [feature flags](../config-file/config-basic.html#feature-flags) via the `[features]` table in `requirements.toml`. Note that features aren't always security-sensitive, but enterprises can pin values if desired. Omitted keys remain unconstrained.
 
@@ -514,38 +517,29 @@ overrides that policy. See
 [Migrate from the retired `untrusted` approval policy](../agent-approvals-security.html#migrate-from-the-retired-untrusted-approval-policy)
 for examples and security tradeoffs.
 
-### Configure automatic review policy
+<span
+  id="configure-automatic-review-policy"
+  className="block scroll-mt-[110px]"
+/>
 
-To make automatic review the default, use **Global** > **Defaults** > **Command execution** > **Approval reviewer**. A default lets users choose
-another permitted reviewer. To require automatic review or supply your
-organization's review instructions, use **Edit as TOML** and edit Global
-`requirements.toml` instead. These requirements are separate from the browser's
-automatic-review controls.
+### Configure Auto-review policy
 
-Use `allowed_approvals_reviewers` to require or allow automatic review. Set it
-to `["auto_review"]` to require automatic review, or include `"user"` when users
-can choose manual approval.
+To make Auto-review the default, select **Global** > **Defaults** > **Command execution** > **Approval reviewer**. Users can still choose another permitted
+reviewer. To require Auto-review or replace the reviewer policy, select
+**Edit as TOML** and edit Global `requirements.toml`. Browser actions have
+separate Auto-review controls.
 
-Set `guardian_policy_config` to replace the tenant-specific section of the
-automatic review policy. The local runtime still uses the built-in reviewer
-template and output contract. Managed `guardian_policy_config` takes precedence
-over local `[auto_review].policy`.
+The following example requires Auto-review for eligible approval requests.
+To also allow manual approval, include `"user"` in `allowed_approvals_reviewers`.
 
 ```toml
 allowed_approval_policies = ["on-request"]
 allowed_approvals_reviewers = ["auto_review"]
-
-guardian_policy_config = """
-## Environment Profile
-- Trusted internal destinations include github.com/my-org, artifacts.example.com,
-  and internal CI systems.
-
-## Tenant Risk Taxonomy and Allow/Deny Rules
-- Treat uploads to unapproved third-party file-sharing services as high risk.
-- Deny actions that expose credentials or private source code to untrusted
-  destinations.
-"""
 ```
+
+To replace the entire policy, use `guardian_policy_config`. See
+[Auto-review configuration](../sandboxing/auto-review.html#configuration) for
+the default policy and how to prepare a replacement.
 
 ### Control available permission profiles
 
@@ -783,14 +777,73 @@ If `mcp_servers` is present but empty, the local client disables all MCP servers
 
 Command networking and desktop-app networking use different controls. Start with **Network use controls** for supported command traffic, review the environment and runtime limits, then use the separate desktop-app requirements if needed. Browser site rules remain in [Control browser and Computer Use](#control-browser-and-computer-use).
 
+### Use the system proxy for native client requests
+
+{/* Preserve the standard technical term "proxy auto-configuration". */}
+{/* vale Microsoft.Auto = NO */}
+
+The experimental `features.respect_system_proxy` setting lets the native Codex
+runtime used by ChatGPT desktop and Codex use operating-system proxy settings
+for its own network requests. Enable it on devices that need a system proxy or
+proxy auto-configuration (PAC). The setting defaults to `false`.
+
+{/* vale Microsoft.Auto = YES */}
+
+Add the following to a supported `config.toml` defaults source or to
+[`managed_config.toml`](#locations):
+
+```toml
+[features]
+respect_system_proxy = true
+```
+
+Project-local configuration can't enable this setting. For macOS MDM, include
+the same TOML in [`config_toml_base64`](#macos-managed-preferences-mdm).
+Restart the client after changing local configuration. To turn off the opt-in,
+set it to `false` in the configuration source that enabled it.
+
+#### Sign-in and cloud defaults
+
+The separate `system_proxy_fallback` feature is enabled by default. After a
+connection failure, it can retry supported sign-in and cloud-configuration
+requests through the system proxy, even when `respect_system_proxy` is `false`.
+This fallback can let supported clients sign in and fetch cloud defaults without
+a local opt-in. Disabling `respect_system_proxy` alone doesn't disable the
+fallback.
+
+If direct access doesn't work and the fallback is unavailable, disabled, or
+unsuccessful, deploy `respect_system_proxy` locally before sign-in.
+
+#### Scope and limitations
+
+Validate sign-in and an authenticated request with the client versions and on
+the networks you plan to use. Keep these boundaries in mind:
+
+- **Request scope:** The setting applies to network clients owned by the Codex
+  runtime. It doesn't configure every ChatGPT desktop request, browser request,
+  plugin process, or shell command. It doesn't enforce a destination allowlist
+  or guarantee that direct connections are blocked. For supported traffic, see
+  the [command network requirements](#configure-network-access-requirements)
+  and [desktop app network requirements](#control-desktop-app-network-destinations).
+- **Platform support:** macOS and Windows support native system proxy discovery.
+  When system resolution is unavailable, the runtime uses explicit proxy
+  environment settings if available. Otherwise, it connects directly. Other
+  platforms use the same environment-or-direct fallback instead of native
+  system discovery.
+- **PAC routing:** The runtime selects one route from a PAC result. If that
+  connection fails, it doesn't retry later proxy or `DIRECT` entries in the result.
+- **Windows authentication:** Supported builds can respond to an HTTP `407`
+  proxy challenge during tunnel setup using the signed-in Windows user's
+  credentials with Negotiate or NTLM. HTTPS proxies that require authentication
+  tokens bound to the proxy's TLS connection aren't supported.
+
 ### Configure network access requirements
 
 <WarningTip>
-  `[experimental_network]` is experimental and may change. Do not enable these
-  requirements broadly across an enterprise deployment without validating them
-  on the local client versions and operating systems your users run. Windows
-  support is still limited; avoid applying this policy to Windows users unless
-  you have tested it in your environment.
+  Keep `[experimental_network]` in published policies until every client and
+  policy validation tool supports `[network_proxy]`. Older versions can ignore
+  or strip the new name. Test enforcement on the client versions and operating
+  systems you deploy, especially Windows, where support is limited.
 </WarningTip>
 
 Use **Requirements** > **Network use controls** to manage supported command
@@ -822,13 +875,15 @@ or runtime defaults can apply. Removing environment settings can reveal inherite
 Global rules. Use **Edit as TOML** for advanced network fields or existing legacy
 domain lists that the visual editor can't represent.
 
-Use `[experimental_network]` in `requirements.toml` when administrators should
-define network access requirements centrally. These requirements are separate
-from the user `features.network_proxy` toggle: they can configure sandbox
-networking without that feature flag, but they don't grant command network
-access when the active sandbox keeps networking off. Set
-`experimental_network.enabled = true` to activate the managed proxy; domain
-rules alone do not make the proxy active.
+In Codex 0.166.0, `[network_proxy]` is the canonical table for managed
+command networking in `requirements.toml`. Codex also accepts the older
+`[experimental_network]` name. Choose one table name per layer. If layers use
+different names, Codex applies the usual requirements precedence.
+
+Set `enabled = true` in the managed table to start the proxy independently
+of the user setting `features.network_proxy`. The active sandbox must also
+allow command network access. The example uses the name that older clients
+and policy validation layers recognize.
 
 ```toml
 [experimental_network]
@@ -869,18 +924,13 @@ Use the controls for each surface:
 - Use the managed `mcp_servers` approved list to restrict MCP servers.
 - Use feature requirements such as `browser_use`, `in_app_browser`, and
   `computer_use` to restrict browser and computer-use capabilities.
-- For supported managed Codex Cloud commands, configure Agent Security requirements and the Cloud environment internet settings separately.
+- For supported managed Codex Cloud commands, check the environment's internet settings as well as Agent Security. The environment can still block an allowed domain.
 
-A command domain allowlist does not replace these capability-specific
-controls.
+Test ordinary commands and any permitted full sandbox escalation separately. An approved full sandbox escalation can bypass the managed command proxy. See [Network isolation](../agent-approvals-security.html#network-isolation).
 
-On supported managed Codex Cloud execution paths, Agent Security requirements constrain command networking. Codex Cloud environment internet settings apply separately. An allowed domain in Agent Security does not override a restriction in the Cloud environment's internet settings. These command-network controls do not, by themselves, disable hosted web search, apps, or MCP. ChatGPT Work Cloud has separate capability permissions and does not inherit these Agent Security requirements.
+> **No effective allowed destinations:** With both **Managed networking** and **Only allow domains added by admins** enabled, ordinary managed commands need an explicit or inherited Allow entry. Check the [effective allowed destinations](agent-security.html#no-effective-allowed-destinations) before saving.
 
-A managed command allowlist applies to commands using the managed proxy. Where policy permits full sandbox escalation and it is approved, that execution can bypass the command proxy. A narrow network grant is different from full sandbox escalation. Configure enforced approval and sandbox requirements for the intended boundary, and test both ordinary and escalated commands.
-
-> **No effective allowed destinations:** When **Managed networking** and **Only allow domains added by admins** are On, ordinary managed commands need effective allowed destinations. If no Allow entries are configured or inherited, those commands have no allowed destinations. A deny-only policy does not implicitly allow the rest of the internet. Add required Allow entries and check inherited rules before saving. This restriction applies to the managed command proxy, not every tool or approved full sandbox escalation.
-
-> **Codex Cloud local/private connectivity:** An explicit Off value for local/private connectivity can prevent Codex Cloud from reaching its upstream proxy, even when the destination domain is allowed. Check the final `allow_local_binding` value and identify which policy or setting supplies it. On the supported Cloud proxy path, this defaults to true only when no applicable requirement, selected network profile, or proxy feature setting supplies a value. An inherited false still counts as an explicit setting. Where supported, set a higher-priority Cloud override to change this value for Codex Cloud without changing the Global value used by Local. This does not add domain Allow entries. Verify executor support before relying on the override. Do not apply this Cloud default to Local.
+> **Codex Cloud local/private connectivity:** Check the effective `allow_local_binding` value if a Cloud command cannot reach an allowed domain. An inherited Off value can block the upstream proxy. See [Codex Cloud local/private connectivity](agent-security.html#codex-cloud-localprivate-connectivity) for the Cloud-specific default and overrides.
 
 When environment requirements are empty, Global requirements apply. **Managed networking** set to
 **Off** is separate from the Cloud environment's Internet access setting. See
@@ -917,7 +967,7 @@ Orchestrator limits. Managed HTTP/SOCKS listener ports and non-loopback proxy li
 
 #### Other network runtime limits
 
-All field names below are under `experimental_network` in `requirements.toml`. The arrows show a Global value followed by an environment value within the same policy. These local-execution cases do not establish Orchestrator support for the same settings.
+All field names below belong to the managed `network_proxy` table (also accepted as `experimental_network`) in `requirements.toml`. The arrows show a Global value followed by an environment value within the same policy. These local-execution cases do not establish Orchestrator support for the same settings.
 
 | **Setting and attempted override**           | **Runtime behavior**                                                                                                                                                                      | **Admin action**                                                                                                   |
 | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
@@ -1045,55 +1095,9 @@ add plugins to the IDE extension.
 
 ### Enforce managed hooks from requirements
 
-Managed hooks run administrator-defined actions at supported task or tool
-events. Use **Edit as TOML** in Agent security to configure them in Global
-`requirements.toml`; the settings controls don't include a dedicated hook editor. The execution paths below determine which hook types can run.
+In Agent security, open **Global** > **Requirements** > **Edit as TOML**. For Work with local computer access and dots, configure supported `mcp_tool` handlers in Global `requirements.toml`. Before rollout, test the callback connection and what happens when the callback times out. See [Hooks with cloud orchestration](../hooks.html#hooks-with-cloud-orchestration) for supported events and failure behavior.
 
-When managed policy and remote hooks are enabled, Work Cloud with local access and dots use admin-managed remote MCP hooks on the cloud orchestrator. Configure `mcp_tool` handlers in Global `requirements.toml`. Work Cloud without local access and personal accounts do not use these enterprise hooks. Command/shell, prompt, and agent handlers; hooks from local configuration, plugins, or local directories; environment-scoped hooks; and `SessionEnd` MCP hooks are not supported with cloud orchestration, even when tools execute locally. When both orchestration and execution are local, existing supported hooks continue to work in local-only Work and Codex threads. Admins can still configure supported managed hooks in Agent Security for those workflows.
-
-Before relying on these hooks, test callback connectivity, required events, and failure behavior. An explicit supported denial can block an action, but a `PreToolUse` callback error, timeout, or malformed response can fail the hook without blocking the tool. MCP hooks do not provide a complete Compliance API audit trail. The following script and directory examples retain their Codex scope.
-
-Admins can also define managed lifecycle hooks directly in `requirements.toml`.
-Use `[hooks]` for the hook configuration itself, and point `managed_dir` at the
-directory where your MDM or endpoint-management tooling installs the referenced
-scripts.
-
-To enforce managed hooks even for users who turned hooks off locally, pin
-`[features].hooks = true` alongside `[hooks]`. To skip user, project, session,
-and plugin hooks while still allowing managed hooks, set
-`allow_managed_hooks_only = true`.
-
-```toml
-allow_managed_hooks_only = true
-
-[features]
-hooks = true
-
-[hooks]
-managed_dir = "/enterprise/hooks"
-windows_managed_dir = 'C:\enterprise\hooks'
-
-[[hooks.PreToolUse]]
-matcher = "^Bash$"
-
-[[hooks.PreToolUse.hooks]]
-type = "command"
-command = "python3 /enterprise/hooks/pre_tool_use_policy.py"
-command_windows = 'py -3 C:\enterprise\hooks\pre_tool_use_policy.py'
-timeout = 30
-statusMessage = "Checking managed Bash command"
-```
-
-Notes:
-
-- The local runtime enforces the hook configuration from `requirements.toml`,
-  but it doesn't distribute the scripts in `managed_dir`.
-- Deliver those scripts with your MDM or device-management solution.
-- Managed hook commands should reference absolute script paths under the
-  configured managed directory.
-- `allow_managed_hooks_only = true` skips hooks from user, project, session, and
-  plugin sources, but still loads hooks from `requirements.toml` and other
-  managed config layers.
+For local Codex, distribute hook scripts through your device-management tool. To enforce them even if a user disables hooks, pin `[features].hooks = true` in `requirements.toml`. See the [managed hook configuration example](../hooks.html#managed-hooks-in-local-codex) for script paths and how to allow only managed hooks.
 
 ## Understand policy scope and precedence
 
@@ -1103,10 +1107,8 @@ For Work with local access and dots, supported Global policy governs the shared 
 
 <a id="agent-security-and-work-sync"></a>
 
-<span
-  id="agent-security-and-local-computer-access"
-  data-localization-body-anchor
-/>
+
+
 
 ### Agent Security and Local computer access with Work Cloud
 
@@ -1124,7 +1126,7 @@ Policy migration does not grant local computer access for Work or dots. Reviewin
 
 Environment overrides vary supported settings within a policy. Within a given policy, the order from highest to lowest is OS-specific environment override → all-OS environment override → Global. A higher-priority policy still wins over a lower-priority policy, even when the lower-priority policy is more specific. Some requirements have field-specific merge rules. Confirm which override editors and fields are available for your workspace.
 
-When managed policy and remote hooks are enabled, Work Cloud with local access and dots use admin-managed remote MCP hooks on the cloud orchestrator. Configure `mcp_tool` handlers in Global `requirements.toml`. Work Cloud without local access and personal accounts do not use these enterprise hooks. Command/shell, prompt, and agent handlers; hooks from local configuration, plugins, or local directories; environment-scoped hooks; and `SessionEnd` MCP hooks are not supported with cloud orchestration, even when tools execute locally. When both orchestration and execution are local, existing supported hooks continue to work in local-only Work and Codex threads. Admins can still configure supported managed hooks in Agent Security for those workflows. Before relying on these hooks, test callback connectivity, required events, and failure behavior. An explicit supported denial can block an action, but a `PreToolUse` callback error, timeout, or malformed response can fail the hook without blocking the tool. MCP hooks do not provide a complete Compliance API audit trail. See the [Configuration Reference](../config-file/config-reference.html).
+Before enabling local access for a workflow that uses hooks, [check which hooks run with cloud orchestration](../hooks.html#hooks-with-cloud-orchestration).
 
 ### Locations and precedence
 
@@ -1249,6 +1251,8 @@ the allowed and blocked workflows on each relevant client and execution path.
 
 Use local system requirements or MDM for authentication restrictions and device-managed policies. The legacy `managed_config.toml` mechanism has different startup precedence from Agent security **Defaults**. The MDM workflow covers both requirements and legacy defaults.
 
+For Chrome policies that apply to browsing inside the desktop app, see [Manage desktop browser policies with MDM](desktop-browser-policies.html).
+
 ### Manage authentication locally
 
 Set `allowed_login_methods`, `allowed_chatgpt_workspaces`,
@@ -1280,6 +1284,61 @@ is available, Codex refuses to start.
 
 See the [requirements reference](../config-file/config-reference.html#requirementstoml)
 for credential storage modes and service URL configuration.
+
+### Enforce OpenTelemetry settings
+
+In Codex CLI 0.166.0, use `[otel]` in `requirements.toml` to set the log, trace, and metrics
+exporters independently, label the environment, and control which content Codex
+exports. This example sends logs to an OTLP/HTTP collector and limits the
+text logged for each tool result to 256 UTF-8 bytes. It omits prompt text, final response
+text, and automatic approval assessments.
+
+The macOS desktop app 26.1027.30824 bundles CLI `0.166.0-alpha.5.1`.
+That build doesn't support `[otel]` in `requirements.toml`, so it can't
+enforce `log_user_prompt = false` through this policy.
+
+```toml
+[otel]
+environment = "prod"
+exporter = { otlp-http = { endpoint = "https://otel.example.com/v1/logs", protocol = "binary" } }
+log_user_prompt = false
+log_agent_responses = false
+log_guardian_assessments = false
+tool_result = { max_bytes = 256 }
+span_attributes = { team = "platform" }
+tracestate = { acme = { region = "eu" } }
+```
+
+Managed values override local configuration. For `exporter`, `trace_exporter`,
+and `metrics_exporter`, the highest-priority requirement that sets the
+exporter supplies its entire definition, including headers and TLS settings.
+Scalar settings and the `tool_result` table also take the highest-priority
+value supplied for each. Omitted settings remain configurable unless another
+requirements layer supplies them.
+
+Span attributes merge by attribute name. `tracestate` fields merge by member
+and field name. Higher-priority values win for matching entries. Other
+entries remain available, and an empty metadata table doesn't clear them.
+See [Observability and telemetry](../config-file/config-advanced.html#observability-and-telemetry)
+for exporter options and log contents.
+
+### Migrate SQLite databases on NFS
+
+On Linux, Codex creates new SQLite databases on NFS in `DELETE` journal mode.
+To migrate existing databases from write-ahead logging (WAL), set
+`unsafe_enforce_sqlite_journal_mode = true` at the top level of
+`requirements.toml`. This setting is off by default. With it enabled, Codex
+migrates the databases before opening them for writes.
+
+The NFS mount must support POSIX locks across hosts. Mount options such as
+`nolock` and `local_lock=all` prevent those locks from working. On every host,
+stop all SQLite clients that use the databases, including Codex. Start
+one Codex instance and keep all other clients stopped until migration succeeds.
+The user running that instance needs write access to the database directory
+and migration lock. The replacement files retain their Unix permission bits
+and belong to that user.
+The migration doesn't copy the original owner, group, or extended access control
+lists. Codex keeps the originals in a private backup directory.
 
 ### Managed defaults (`managed_config.toml`)
 
@@ -1341,16 +1400,15 @@ network_access = false             # keep network disabled unless explicitly all
 
 [otel]
 environment = "prod"
-exporter = "otlp-http"            # point at your collector
+exporter = { otlp-http = { endpoint = "https://otel.example.com/v1/logs", protocol = "binary" } }
 log_user_prompt = false            # keep prompts redacted
-# exporter details live under exporter tables; see Monitoring and telemetry above
 ```
 
 #### Recommended guardrails
 
 - Prefer `workspace-write` with approvals for most users; reserve full access for controlled containers.
 - Keep `network_access = false` unless your security review allows a collector or domains required by your workflows.
-- Use managed configuration to pin OTel settings (exporter, environment), but keep `log_user_prompt = false` unless your policy explicitly allows storing prompt contents.
+- To enforce telemetry settings, use [OpenTelemetry requirements](#enforce-opentelemetry-settings). Keep `log_user_prompt = false` unless your policy allows storing prompt contents.
 - Periodically audit diffs between local `config.toml` and managed policy to catch drift; managed layers should win over local flags and files.
 
 ### macOS managed preferences (MDM)

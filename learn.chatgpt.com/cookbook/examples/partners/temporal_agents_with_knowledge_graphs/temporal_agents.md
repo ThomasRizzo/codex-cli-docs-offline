@@ -4926,21 +4926,13 @@ Once again, for development we recommend a “start big, then specialise” ladd
 1. **Start with o3** – ensure your retrieval logic (chaining, re-ranking, fallback prompts) is sound. o3 may also be the best choice for production if your retrieval system is working with particularly complex data such as pharmaceutical or legal data. You can test this by looking at the severity of performance degradation with smaller models. If the drop off in performance is large, consider sticking with o3
 2. **Move to o4-mini**
    * **Prompt enhancement** - optimise your prompts to push the performance of the o4-mini system as close to that of the full o3 model
-   * **Reinforcement fine-tuning (RFT)** - [OpenAI's Reinforcement Fine-Tuning](https://platform.openai.com/docs/guides/reinforcement-fine-tuning) offering enables you to fine-tune OpenAI's o-series models to improve their performance on hard reasoning tasks. With as little as ~50 golden answers you can leverage the power of reinforcement learning to fine-tune o4-mini which can help it come close or even exceed the base o3's performance on the same task
-4. **Fallback to GPT 4.1 when latency dominates** – for cases when latency is particularly important or you've tuned your prompts well enough that performance drop-off is minimal, consider moving to the GPT 4.1 series
+3. **Fallback to GPT 4.1 when latency dominates** – for cases when latency is particularly important or you've tuned your prompts well enough that performance drop-off is minimal, consider moving to the GPT 4.1 series
 
 | Model       | Relative cost | Relative latency | Intelligence | Ideal role in workflow                               |
 | ----------- | ------------- | ---------------- | - | ---------------------------------------------------- |
 | *o3* | ★★★           | ★★               | ★★★ *(highest)* | Initial prototyping, working with complex data, golden dataset generation |
-| *o4-mini*   | ★★            | ★               | ★★ | Main production engine, can push performance with RFT      |
+| *o4-mini*   | ★★            | ★               | ★★ | Main production engine      |
 | *GPT 4.1 series*   | ★ *(lowest)*          | ★ *(fastest)* | ★  | Latency-critical or large-scale background scoring   |
-
-#### Why is Reinforcement Fine-Tuning powerful for long horizon, multi-step retrieval tasks?
-RFT has a number of benefits over [Supervised Fine-Tuning](https://platform.openai.com/docs/guides/supervised-fine-tuning) or [Direct Preference Optimization](https://platform.openai.com/docs/guides/direct-preference-optimization) for this use case. 
-
-Firstly, reinforcement fine-tuning can be performed with a far small number of examples, sometimes requiring as little as 50 training examples.
-
-Additionally, RFT eliminates the necessity of providing labeled step-by-step trajectories. By supplying only the final correct answer, the system learns implicitly how to navigate the knowledge graph effectively. This feature is particularly valuable in real-world contexts where end users typically face time constraints and may struggle to curate the extensive sets of labeled examples (often numbering in the hundreds or thousands) required by traditional SFT methods.
 
 ## 4.2 Evaluating your Retrieval System
 

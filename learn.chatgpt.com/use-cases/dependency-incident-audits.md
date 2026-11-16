@@ -105,25 +105,19 @@ A useful audit result should show both how bad a finding would be and how strong
 
 
 **Confirmed exposure:** the lockfile contains an affected
-    package version in a production dependency path.
-  
+package version in a production dependency path.
 
-  
 
-    **Needs verification:** one CI job has publish permissions, but
-    the workflow does not appear to install the affected package directly.
-  
+**Needs verification:** one CI job has publish permissions, but
+the workflow does not appear to install the affected package directly.
 
-  
 
-    **Ruled out:** the package name appears in docs only and is not
-    present in manifests or lock files.
-  
+**Ruled out:** the package name appears in docs only and is not
+present in manifests or lock files.
 
-  
 
-    **Next step:** review the proposed dependency update and token
-    rotation plan before any destructive action.
+**Next step:** review the proposed dependency update and token
+rotation plan before any destructive action.
 
 
 

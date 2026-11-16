@@ -4,6 +4,8 @@
 
 > Agents are systems that independently accomplish tasks on your behalf. Agents use an LLM to execute instructions and make decisions. They have access to tools to gather context and take actions, always operating within clearly defined guardrails.
 
+- [Build a voice agent that follows an SOP](/cookbook/articles/sop_to_voice_agent_builder.md): Turn a written SOP into prompts, tools, and application checks that keep a voice agent on the right procedure when a caller changes their request or corrects an answer.
+- [Run OpenAI agents on a Databricks Sandbox](/cookbook/examples/agents_api/sandboxes/databricks/readme.md): Run agent tools in a Databricks serverless sandbox with application-managed provisioning.
 - [Run Agents API sandboxes on AWS Lambda MicroVMs](/cookbook/examples/agents_api/sandboxes/aws/readme.md): Run agent tools in AWS Lambda MicroVMs with application-managed or webhook-managed provisioning, file transfers, and suspend/resume.
 - [Optimizing Customer Support Agents for Cost and Quality](/cookbook/examples/agent_optimization/optimizing_agents_for_cost_and_quality.md): Optimize agents on cost, latency and performance.
 - [Build an SRE agent for incident response](/cookbook/examples/agents_api/apps/sev_bot/readme.md): Investigate incidents in Slack using service telemetry, GitHub, AWS, and past incident reports, with human review before recovery.

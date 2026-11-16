@@ -24,7 +24,6 @@ starterPrompt:
     - severity
 
     Keep going past non-blocking issues and end with a short triage summary.
-  suggestedModel: gpt-6.1-sol
   suggestedEffort: xhigh
 relatedLinks:
   - label: Computer Use

@@ -366,9 +366,9 @@ Key charts and images:
 ![Rolling Corr/Reg Daily 10Y](https://developers.openai.com/cookbook/assets/images/multi_agent_collab_rolling_corr_reg_daily_dgs10.png)
 ![Rolling Corr/Reg Weekly Fed Funds](https://developers.openai.com/cookbook/assets/images/multi_agent_collab_rolling_corr_reg_weekly_fedfunds.png)
 ![Rolling Corr/Reg Weekly 10Y](https://developers.openai.com/cookbook/assets/images/multi_agent_collab_rolling_corr_reg_weekly_dgs10.png)
-![GOOGL Quarterly Trends](https://developers.openai.com/cookbook/assets/images/multi_agent_collab_googl_quarterly_trends.png)
-![GOOGL Quarterly Margins](https://developers.openai.com/cookbook/assets/images/multi_agent_collab_googl_quarterly_margins.png)
-![GOOGL Analyst Recommendations Trend](https://developers.openai.com/cookbook/assets/images/multi_agent_collab_googl_analyst_recommendations_trend.png)
+![GOOGL Quarterly Trends](https://developers.openai.com/cookbook/assets/images/multi_agent_collab_GOOGL_quarterly_trends.png)
+![GOOGL Quarterly Margins](https://developers.openai.com/cookbook/assets/images/multi_agent_collab_GOOGL_quarterly_margins.png)
+![GOOGL Analyst Recommendations Trend](https://developers.openai.com/cookbook/assets/images/multi_agent_collab_GOOGL_analyst_recommendations_trend.png)
 
 The quantitative view is original in its focus on scenario analysis and the modest rate sensitivity, and is aligned with the firm vision by not simply following consensus. Limitations include the short post-pandemic data window and the fact that GOOGL's price is driven by multiple factors (AI, ad market, regulation) beyond rates.
 
