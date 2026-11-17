@@ -89,7 +89,7 @@
   </style>
 </head>
 <body><!--ob--><div id="ob" role="note" data-pagefind-ignore data-root="../../../../../../../"></div><script>(function(){var K="offline-banner:codex-cli-docs-offline",d=document.documentElement,b=document.getElementById("ob"),u=new URL(b.getAttribute("data-root")+"banner.txt",location.href).href,c=null;function put(t){b.innerHTML=t;var a=b.querySelectorAll("a[href]");for(var i=0;i<a.length;i++){var h=a[i].getAttribute("href");if(!/^([a-z][a-z0-9+.-]*:|\/|#)/i.test(h))a[i].href=new URL(h,u).href}b.title=b.textContent;d.classList.add("ob-on")}function off(){d.classList.remove("ob-on");b.innerHTML=""}try{c=localStorage.getItem(K)}catch(e){}if(c)put(c);if(!window.fetch)return;fetch(u,{cache:"no-cache",credentials:"same-origin"}).then(function(r){return r.ok?r.text():""}).then(function(t){t=(t||"").replace(/^\uFEFF/,"").trim();if(/^<(!doctype|html)/i.test(t))t="";if(t!==c){t?put(t):off();try{localStorage.setItem(K,t)}catch(e){}}},function(){if(!c)off()})})()</script><!--/ob-->
-  <main>
+  <main data-pagefind-body>
     <div class="unit-choice">
       <div><label for="unit">Budget unit</label><p id="unit-hint" class="hint">Choose the unit in your workspace's billing agreement, or compare two separate examples.</p></div>
       <select id="unit" aria-describedby="unit-hint"><option value="credit" selected>Credits</option><option value="usd">US dollars (USD)</option><option value="both">Both examples</option></select>
@@ -384,6 +384,7 @@
       else single.load(mode, savedInputs[mode]);
     });
   </script>
+<!--offline-search--><script src="../../../../../../_offline/offline-search.js" defer></script><!--/offline-search-->
 </body>
 
 </html>

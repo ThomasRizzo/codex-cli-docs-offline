@@ -70,7 +70,7 @@
     </style>
   </head>
   <body><!--ob--><div id="ob" role="note" data-pagefind-ignore data-root="../../../../../../../../../"></div><script>(function(){var K="offline-banner:codex-cli-docs-offline",d=document.documentElement,b=document.getElementById("ob"),u=new URL(b.getAttribute("data-root")+"banner.txt",location.href).href,c=null;function put(t){b.innerHTML=t;var a=b.querySelectorAll("a[href]");for(var i=0;i<a.length;i++){var h=a[i].getAttribute("href");if(!/^([a-z][a-z0-9+.-]*:|\/|#)/i.test(h))a[i].href=new URL(h,u).href}b.title=b.textContent;d.classList.add("ob-on")}function off(){d.classList.remove("ob-on");b.innerHTML=""}try{c=localStorage.getItem(K)}catch(e){}if(c)put(c);if(!window.fetch)return;fetch(u,{cache:"no-cache",credentials:"same-origin"}).then(function(r){return r.ok?r.text():""}).then(function(t){t=(t||"").replace(/^\uFEFF/,"").trim();if(/^<(!doctype|html)/i.test(t))t="";if(t!==c){t?put(t):off();try{localStorage.setItem(K,t)}catch(e){}}},function(){if(!c)off()})})()</script><!--/ob-->
-    <main aria-live="polite">
+    <main data-pagefind-body aria-live="polite">
       <header>
         <h1>Eliza Airlines flight information</h1>
         <span class="provider">Cookbook agent</span>
@@ -177,6 +177,7 @@
 
       if (window.openai?.toolOutput) render(window.openai.toolOutput);
     </script>
-  </body>
+  <!--offline-search--><script src="../../../../../../../../_offline/offline-search.js" defer></script><!--/offline-search-->
+</body>
 
 </html>
