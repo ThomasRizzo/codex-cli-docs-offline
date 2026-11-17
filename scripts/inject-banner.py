@@ -13,12 +13,15 @@ usage: inject-banner.py <mirror root> <storage key> <label> [site.css] [--tz Zon
     path => works under an IIS sub-path) and updates bar + cache; empty/missing => collapse.
 """
 import os, re, sys, json, datetime
-args = sys.argv[1:]; tz = 'UTC'
+args = sys.argv[1:]; tz = 'UTC'; keep_txt = False; only = None
 if '--tz' in args: i = args.index('--tz'); tz = args[i+1]; del args[i:i+2]
+if '--keep-banner-txt' in args: args.remove('--keep-banner-txt'); keep_txt = True
+if '--only' in args: i = args.index('--only'); only = args[i+1]; del args[i:i+2]
 root, key, label = args[:3]; site_css = open(args[3]).read().strip() if len(args) > 3 else ''
 from zoneinfo import ZoneInfo
 day = datetime.datetime.now(ZoneInfo(tz)).strftime('%Y-%m-%d')
-open(os.path.join(root, 'banner.txt'), 'w').write(f'Offline mirror of {label}, mirrored {day}\n')
+if not keep_txt:
+    open(os.path.join(root, 'banner.txt'), 'w').write(f'Offline mirror of {label}, mirrored {day}\n')
 
 H = 28
 CSS = ('#ob{display:none}'
@@ -50,6 +53,8 @@ for dp, dns, fns in os.walk(root):
     for fn in fns:
         if not fn.endswith('.html') or (dp == root and fn == '404.html'): continue
         p = os.path.join(dp, fn)
+        if only and fn != only and os.path.relpath(p, root).replace(os.sep, '/') != only:
+            continue
         s = o = open(p, encoding='utf-8', errors='surrogateescape').read()
         s = RX_LEGACY.sub('', RX_OLD.sub('', s))
         if not re.search(r'<body[^>]*>', s, re.I): continue
@@ -60,4 +65,9 @@ for dp, dns, fns in os.walk(root):
         else: s = HEAD + s
         s = re.sub(r'(<body(?:\s[^>]*)?>)', lambda m: m.group(1) + body, s, count=1, flags=re.I)
         if s != o: open(p, 'w', encoding='utf-8', errors='surrogateescape').write(s); n += 1
-print(f'inject-banner: {n} html files updated; banner.txt = {label} {day}')
+msg = f'inject-banner: {n} html files updated'
+if keep_txt:
+    msg += ' (banner.txt kept)'
+else:
+    msg += f'; banner.txt = {label} {day}'
+print(msg)

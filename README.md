@@ -7,12 +7,16 @@ Static offline snapshot of the whole [learn.chatgpt.com](https://learn.chatgpt.c
 | Path | Role |
 |------|------|
 | `index.html` | Splash page → `learn.chatgpt.com/index.html` |
+| `offline-link.html` | Target for every external link: "not available on this network" + copyable original URL (`?u=<url>`) |
 | `learn.chatgpt.com/` | HTTrack whole-site mirror (HTML + `.md` twins + `_astro` assets) |
+| `learn.chatgpt.com/pagefind/` | Local Pagefind search index (wired into the existing header search UI) |
+| `learn.chatgpt.com/_offline/` | Offline search hook (`offline-search.js`) |
 | `cdn.openai.com/` | Shared fonts referenced as `../cdn.openai.com/...` |
 | `i.ytimg.com/`, `i.vimeocdn.com/` | Video thumbnails |
 | `web.config` | IIS default document + extra MIME maps |
-| `scripts/` | Thin post-process after HTTrack (`httrack-postprocess.sh`, `fix-leftover-links.py`) |
-| `.github/workflows/assemble-mirror.yml` | Rebuild Action (`workflow_dispatch`) |
+| `scripts/` | Post-process run on every rebuild (link fix-up, external-link rewrite, Pagefind, banner) |
+| `.github/workflows/assemble-mirror.yml` | Full rebuild Action (`workflow_dispatch`) — re-crawls the live site |
+| `.github/workflows/postprocess-only.yml` | **Postprocess only (no re-scrape)**: rewrite external links + rebuild search on the already-committed mirror |
 
 ## How to browse offline
 
@@ -60,7 +64,7 @@ Point the site root at the **repo root** (not `learn.chatgpt.com/`). Keep `web.c
 - `index.html` is the default document
 - `.md`, `.woff2`, `.webp`, `.vtt`, `.webm`, `.jsonl`, `.ts`, `.py`, `.yml` get sensible MIME types
 
-Links are already relative (HTTrack + `scripts/fix-leftover-links.py`). No IIS outbound URL Rewrite module is required for Learn navigation. Paths under `/api`, `/plugins`, and `/apps-sdk` stay absolute `https://learn.chatgpt.com/...` on purpose — they 308 off-host to `developers.openai.com` and are excluded from the mirror.
+Links are already relative (HTTrack + `scripts/fix-leftover-links.py`). External URLs (including `/api`, `/plugins`, and `/apps-sdk`, which 308 off-host to `developers.openai.com` and are excluded from the crawl) are rewritten to `offline-link.html?u=<original URL>`. No IIS outbound URL Rewrite module is required for Learn navigation.
 
 ## How the mirror is built
 
@@ -68,27 +72,40 @@ GitHub Action **Build offline learn.chatgpt.com mirror** (`assemble-mirror.yml`,
 
 1. Build `seeds.txt` from site root + sitemap + `llms.txt` (and a few machine-readable files).
 2. Run **HTTrack** with host-preserving names (`-N "%h%p/%n.%t"`), no query-string crawl explosion, and exclusions for `/api`, `/plugins`, `/apps-sdk`.
-3. Thin post-process (`scripts/httrack-postprocess.sh` + `fix-leftover-links.py`): strip HTTrack junk/timestamps, rename `codex-manual-markdown` → `docs/codex-manual.md`, fetch unlinked `.md` twins, relativize leftover absolute / `data-href` / CSS `url(/_astro/…)` links, recover `_astro` files lost to Vercel deploy skew via `?dpl=`.
+3. Post-process (`scripts/httrack-postprocess.sh`):
+   - `fix-leftover-links.py`: strip HTTrack junk/timestamps, rename `codex-manual-markdown` → `docs/codex-manual.md`, fetch unlinked `.md` twins, relativize leftover absolute / `data-href` / CSS `url(/_astro/…)` links, recover `_astro` files lost to Vercel deploy skew via `?dpl=`.
+   - `rewrite-external-links.py`: every remaining external navigational `href` (and `data-href` / iframe `src`) → `offline-link.html?u=<url>`; unmirrorable external `src`/`srcset` removed. Absolute links on a mirrored host that resolve to a local file stay local (including `/codex/use-cases/<slug>` → `use-cases/<slug>.html`).
+   - `build-offline-search.py`: rebuild a local **Pagefind** index and hook it into the existing header search overlay (the live site uses a remote Algolia island, which cannot run offline).
+   - `verify-offline.py`: fails the build if any raw `https://` link remains (other than via `offline-link.html`).
 4. Commit and push the refreshed tree with `GITHUB_TOKEN`.
 
-### Re-run the Action
+### Re-run the full scrape
 
 1. Open https://github.com/ThomasRizzo/codex-cli-docs-offline/actions/workflows/assemble-mirror.yml
 2. **Run workflow** → branch `main`
-3. Wait for success (often ~30–90+ minutes; timeout is 150 minutes), then `git pull`
+3. Wait for success (often ~30–90+ minutes; timeout is 360 minutes), then `git pull`
 
-## Exclusions (left absolute / not mirrored)
+### Postprocess only (no re-scrape)
+
+To refresh external-link rewrites and the offline search index without crawling the live site:
+
+1. Open https://github.com/ThomasRizzo/codex-cli-docs-offline/actions/workflows/postprocess-only.yml
+2. **Run workflow** → branch `main`
+
+## Exclusions (not mirrored; links go to `offline-link.html`)
 
 - `learn.chatgpt.com/api*`
 - `learn.chatgpt.com/plugins*`
 - `learn.chatgpt.com/apps-sdk*`
 - Query-string page facets (`?team=`, `?site_locale=`, `?surface=`, `?export=`) — combinatorial; assets with `?v=` / `?dpl=` are still allowed
+- Other off-site hosts (GitHub, YouTube, `developers.openai.com`, …)
 
 ## Limitations
 
 - Static snapshot; live content drifts.
 - Interactive / network-only widgets may degrade offline.
-- Excluded off-host sections stay online-only links.
+- Excluded off-host sections open the local "not available on this network" page, which shows the original URL for copying.
+- Site search is a local Pagefind index of the mirrored HTML, hooked into the existing header search box. It does not call Algolia. Results are limited to pages in this snapshot.
 
 ## License / attribution
 

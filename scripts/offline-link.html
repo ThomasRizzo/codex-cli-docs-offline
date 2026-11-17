@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>External link unavailable – learn.chatgpt.com (offline mirror)</title>
+  <style>
+    body{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;max-width:44rem;margin:4rem auto;padding:0 1.25rem;line-height:1.55;color:#111;background:#fff}
+    @media (prefers-color-scheme:dark){body{color:#eee;background:#0b0b0b}input{color:#eee;background:#1a1a1a}}
+    h1{font-size:1.5rem;font-weight:600}
+    .row{display:flex;gap:.5rem;margin:1rem 0}
+    input{flex:1;font:14px ui-monospace,Menlo,Consolas,monospace;padding:.6rem .7rem;border:1px solid #8886;border-radius:8px}
+    button{padding:.6rem 1rem;border-radius:8px;border:0;background:#111;color:#fff;font-weight:600;cursor:pointer}
+    @media (prefers-color-scheme:dark){button{background:#eee;color:#111}}
+    .muted{opacity:.7;font-size:.9rem}
+    a{color:#0b57d0}
+    @media (prefers-color-scheme:dark){a{color:#8ab4f8}}
+  </style>
+</head>
+<body>
+  <h1>This link is not available on this network</h1>
+  <p>The page you clicked points to an external website. This documentation is an offline
+     mirror hosted on the internal network, and external sites can't be reached from here.</p>
+  <p>Original URL (copy it to open on a device with internet access):</p>
+  <div class="row"><input id="u" readonly aria-label="Original URL"><button id="c" type="button">Copy</button></div>
+  <p class="muted"><a href="javascript:history.back()">← Back</a> · <a href="learn.chatgpt.com/index.html">Docs home</a> · <a href="index.html">Mirror start page</a></p>
+  <script>
+  (function () {
+    var m = /[?&]u=([^&]*)/.exec(location.search), u = '';
+    try { u = m ? decodeURIComponent(m[1].replace(/\+/g, ' ')) : ''; } catch (e) { u = m ? m[1] : ''; }
+    var i = document.getElementById('u'), b = document.getElementById('c');
+    i.value = u || '(no URL given)'; i.addEventListener('focus', function () { i.select(); });
+    if (u) document.title = 'Unavailable offline: ' + u;
+    b.addEventListener('click', function () {
+      function done() { b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy'; }, 1200); }
+      if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(i.value).then(done, fb); else fb();
+      function fb() { i.focus(); i.select(); try { document.execCommand('copy'); done(); } catch (e) {} }
+    });
+  })();
+  </script>
+</body>
+</html>
