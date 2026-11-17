@@ -66,7 +66,9 @@ jobs:
         #    redirect map in hts-cache), CSS url(/...) fonts HTTrack doesn't parse,
         #    <source srcset>, and _astro files lost to Vercel deploy skew mid-crawl.
         # 2) strip per-run HTTrack timestamps, junk files, restore codex-manual.md name,
-        #    fetch the unlinked .md twins, move host dirs into the repo.
+        #    fetch the unlinked .md twins, move host dirs into the repo, inject the
+        #    banner, rewrite remaining external links to offline-link.html, build a
+        #    local Pagefind index and hook it into the header search UI, verify.
         run: |
           set -euo pipefail
           bash scripts/httrack-postprocess.sh /tmp/ht .

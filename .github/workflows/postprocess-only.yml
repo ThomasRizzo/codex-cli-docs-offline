@@ -1,0 +1,45 @@
+name: Postprocess only (no re-scrape)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  postprocess:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Rewrite external links, build offline search, verify
+        # Operates on the already-committed mirror. Does not run HTTrack or fetch the live site.
+        # Idempotent: a second run rewrites nothing (links already point at offline-link.html)
+        # and rebuilds the same Pagefind index.
+        run: |
+          set -euo pipefail
+          cp scripts/offline-link.html offline-link.html
+          python3 scripts/inject-banner.py . \
+            "offline-banner:codex-cli-docs-offline" \
+            "learn.chatgpt.com" \
+            scripts/banner-site.css \
+            --tz UTC \
+            --keep-banner-txt \
+            --only offline-link.html
+          python3 scripts/rewrite-external-links.py .
+          python3 scripts/build-offline-search.py .
+          python3 scripts/verify-offline.py .
+
+      - name: Commit and push
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"; exit 0
+          fi
+          DATE=$(TZ=America/New_York date '+%Y-%m-%d %H:%M %Z')
+          git commit -m "Rewrite external links and rebuild offline search (${DATE})"
+          git push
