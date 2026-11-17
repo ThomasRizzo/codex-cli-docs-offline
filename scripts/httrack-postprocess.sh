@@ -70,6 +70,9 @@ python3 "$(dirname "$0")/rewrite-external-links.py" "$REPO"
 echo "postprocess: local Pagefind index + hook existing search UI"
 python3 "$(dirname "$0")/build-offline-search.py" "$REPO"
 
+echo "postprocess: hook ContentModeSelector (tool/surface dropdown) to local toggle"
+python3 "$(dirname "$0")/inject-offline-content-mode.py" "$REPO"
+
 echo "postprocess: verify no leftover raw external links"
 python3 "$(dirname "$0")/verify-offline.py" "$REPO"
 

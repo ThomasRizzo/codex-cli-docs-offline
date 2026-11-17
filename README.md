@@ -10,7 +10,7 @@ Static offline snapshot of the whole [learn.chatgpt.com](https://learn.chatgpt.c
 | `offline-link.html` | Target for every external link: "not available on this network" + copyable original URL (`?u=<url>`) |
 | `learn.chatgpt.com/` | HTTrack whole-site mirror (HTML + `.md` twins + `_astro` assets) |
 | `learn.chatgpt.com/pagefind/` | Local Pagefind search index (wired into the existing header search UI) |
-| `learn.chatgpt.com/_offline/` | Offline search hook (`offline-search.js`) |
+| `learn.chatgpt.com/_offline/` | Offline hooks: search (`offline-search.js`) and the tool/surface selector (`offline-content-mode.js`) |
 | `cdn.openai.com/` | Shared fonts referenced as `../cdn.openai.com/...` |
 | `i.ytimg.com/`, `i.vimeocdn.com/` | Video thumbnails |
 | `web.config` | IIS default document + extra MIME maps |
@@ -76,6 +76,7 @@ GitHub Action **Build offline learn.chatgpt.com mirror** (`assemble-mirror.yml`,
    - `fix-leftover-links.py`: strip HTTrack junk/timestamps, rename `codex-manual-markdown` → `docs/codex-manual.md`, fetch unlinked `.md` twins, relativize leftover absolute / `data-href` / CSS `url(/_astro/…)` links, recover `_astro` files lost to Vercel deploy skew via `?dpl=`.
    - `rewrite-external-links.py`: every remaining external navigational `href` (and `data-href` / iframe `src`) → `offline-link.html?u=<url>`; unmirrorable external `src`/`srcset` removed. Absolute links on a mirrored host that resolve to a local file stay local (including `/codex/use-cases/<slug>` → `use-cases/<slug>.html`).
    - `build-offline-search.py`: rebuild a local **Pagefind** index and hook it into the existing header search overlay (the live site uses a remote Algolia island, which cannot run offline).
+   - `inject-offline-content-mode.py`: hook the “Using:” tool/surface dropdown (ChatGPT desktop app / ChatGPT web / Codex CLI / Codex IDE extension). The variant copy is already in the HTML; the live React island is not mirrored, so a small local script drives the existing show/hide logic.
    - `verify-offline.py`: fails the build if any raw `https://` link remains (other than via `offline-link.html`).
 4. Commit and push the refreshed tree with `GITHUB_TOKEN`.
 
