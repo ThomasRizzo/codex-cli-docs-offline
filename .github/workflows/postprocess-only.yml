@@ -13,10 +13,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Rewrite external links, build offline search, verify
+      - name: Rewrite external links, build offline search, hook tool selector, verify
         # Operates on the already-committed mirror. Does not run HTTrack or fetch the live site.
-        # Idempotent: a second run rewrites nothing (links already point at offline-link.html)
-        # and rebuilds the same Pagefind index.
+        # Idempotent: a second run rewrites nothing (links already point at offline-link.html),
+        # rebuilds the same Pagefind index, and re-injects the content-mode hook.
         run: |
           set -euo pipefail
           cp scripts/offline-link.html offline-link.html
@@ -29,6 +29,7 @@ jobs:
             --only offline-link.html
           python3 scripts/rewrite-external-links.py .
           python3 scripts/build-offline-search.py .
+          python3 scripts/inject-offline-content-mode.py .
           python3 scripts/verify-offline.py .
 
       - name: Commit and push
@@ -41,5 +42,5 @@ jobs:
             echo "No changes to commit"; exit 0
           fi
           DATE=$(TZ=America/New_York date '+%Y-%m-%d %H:%M %Z')
-          git commit -m "Rewrite external links and rebuild offline search (${DATE})"
+          git commit -m "Postprocess offline mirror (no re-scrape) (${DATE})"
           git push
